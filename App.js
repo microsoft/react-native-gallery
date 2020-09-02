@@ -7,12 +7,17 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
+import CheckBox from '@react-native-community/checkbox';
 
 function Screen1({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{flexDirection:'row', width:'100%', height:'100%'}}>
+    <Button title="Menu" onPress={() => navigation.openDrawer()} />
+    <View style={{ position:'absolute', width:'100%', height:'100%', alignItems: 'center'}}>
       <Text>Screen 1</Text>
+      <CheckBox/>
       <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
+    </View>
     </View>
   );
 }
@@ -31,12 +36,8 @@ function CustomDrawerContent(props) {
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <DrawerItem
-        label="Close drawer"
+        label="Close"
         onPress={() => props.navigation.closeDrawer()}
-      />
-      <DrawerItem
-        label="Toggle drawer"
-        onPress={() => props.navigation.toggleDrawer()}
       />
     </DrawerContentScrollView>
   );

@@ -8,9 +8,11 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
+    "prepare": "bob build",
     "windows": "react-native run-windows"
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.8.0",
     "@react-navigation/drawer": "^5.9.0",
@@ -32,9 +34,19 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.58.0",
-    "react-test-renderer": "16.11.0"
+    "react-test-renderer": "16.11.0",
+    "@react-native-community/bob": "^0.9.7"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   }
 }
