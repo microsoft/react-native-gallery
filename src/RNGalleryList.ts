@@ -21,7 +21,7 @@ interface IRNGalleryExample {
   
   const RNGalleryExamples: Array<IRNGalleryExample> = [
     {
-      key: 'CheckBoxExample',
-      module: require('./examples/CheckBoxExample'),
+      key: 'CheckboxExample',
+      module: require('./examples/CheckboxExample'),
     },
   ];
