@@ -1,7 +1,6 @@
 {
   "name": "rngallery",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -38,7 +37,10 @@
     "@react-native-community/bob": "^0.9.7"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
   },
   "@react-native-community/bob": {
     "source": "src",
@@ -48,5 +50,17 @@
       "module",
       "typescript"
     ]
-  }
+  },
+  "main": "src\\index.js",
+  "react-native": "src\\index.js",
+  "module": "lib\\module\\index.js",
+  "types": "lib\\typescript\\src\\index.d.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }
