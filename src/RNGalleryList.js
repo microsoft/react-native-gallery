@@ -1,8 +1,15 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-const RNGalleryExamples = [
+exports.RNGalleryList = void 0;
+const CheckBoxExamplePage = require('./examples/CheckBoxExamplePage');
+exports.RNGalleryList = [
     {
-        key: 'CheckboxExample',
-        module: require('./examples/CheckboxExample'),
+        key: 'CheckBox',
+        component: CheckBoxExamplePage,
+    },
+    {
+        key: 'CheckBox2',
+        component: CheckBoxExamplePage,
     },
 ];
+exports.default = exports.RNGalleryList;

@@ -1,27 +1,22 @@
 'use strict';
 import React from 'react';
+import { View } from 'react-native';
+const CheckBoxExamplePage = require('./examples/CheckBoxExamplePage');
 
 interface IRNGalleryExample {
-    key: string;
-    module: IRNGalleryModule;
-  }
+  key: string;
+  component: React.Component;
+}
   
-  interface IRNGalleryModule {
-    title: string;
-    description: string;
-    external: boolean;
-    examples: [IRNGalleryrModuleExample];
-  }
-  
-  interface IRNGalleryrModuleExample {
-    title: string;
-    description: string;
-    render(): React.Component;
-  }
-  
-  const RNGalleryExamples: Array<IRNGalleryExample> = [
-    {
-      key: 'CheckboxExample',
-      module: require('./examples/CheckboxExample'),
-    },
-  ];
+export const RNGalleryList: Array<IRNGalleryExample> = [
+  {
+    key: 'CheckBox',
+    component: CheckBoxExamplePage,
+  },
+  {
+    key: 'CheckBox2',
+    component: CheckBoxExamplePage,
+  },
+];
+
+export default RNGalleryList;
