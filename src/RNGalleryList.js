@@ -7,9 +7,5 @@ exports.RNGalleryList = [
         key: 'CheckBox',
         component: CheckBoxExamplePage,
     },
-    {
-        key: 'CheckBox2',
-        component: CheckBoxExamplePage,
-    },
 ];
 exports.default = exports.RNGalleryList;
