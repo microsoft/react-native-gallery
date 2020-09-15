@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 import { View } from 'react-native';
+const WelcomePage = require('./WelcomePage');
 const CheckBoxExamplePage = require('./examples/CheckBoxExamplePage');
 
 interface IRNGalleryExample {
@@ -9,6 +10,10 @@ interface IRNGalleryExample {
 }
   
 export const RNGalleryList: Array<IRNGalleryExample> = [
+  {
+    key: 'Wecome',
+    component: WelcomePage,
+  },
   {
     key: 'CheckBox',
     component: CheckBoxExamplePage,
