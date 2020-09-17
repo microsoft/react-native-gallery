@@ -1,6 +1,9 @@
 import * as React from 'react';
 import {View, Button, StyleSheet} from 'react-native';
+import {AppTheme} from 'react-native-windows';
 import {
+  DefaultTheme,
+  DarkTheme,
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
@@ -82,7 +85,8 @@ function renderScreen(i) {
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      theme={AppTheme.currentTheme === 'dark' ? DarkTheme : DefaultTheme}>
       <MyDrawer />
     </NavigationContainer>
   );
