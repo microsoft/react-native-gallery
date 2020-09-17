@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Button} from 'react-native';
+import {View, Button, StyleSheet} from 'react-native';
 import {
   NavigationContainer,
   useNavigationState,
@@ -12,19 +12,23 @@ import {
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 
+const styles = StyleSheet.create({
+  container: {flexDirection: 'row', width: '100%', height: '100%'},
+  navItem: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+  },
+});
+
 function RNGalleryScreenWrapper({navigation}) {
   const state = useNavigationState(state => state);
-  const Component = RNGalleryList[state.index].component.default;
+  const Component = RNGalleryList[state.index].component;
   return (
-    <View style={{flexDirection: 'row', width: '100%', height: '100%'}}>
+    <View style={styles.container}>
       <Button title="Menu" onPress={() => navigation.openDrawer()} />
-      <View
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          alignItems: 'center',
-        }}>
+      <View style={styles.navItem}>
         <Component />
       </View>
     </View>
