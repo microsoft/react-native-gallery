@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { View, Text, Button, useWindowDimensions  } from 'react-native';
-import { NavigationContainer, useNavigationState } from '@react-navigation/native';
+import {View, Button} from 'react-native';
+import {
+  NavigationContainer,
+  useNavigationState,
+} from '@react-navigation/native';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -9,14 +12,20 @@ import {
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 
-function RNGalleryScreenWrapper({ navigation }) {
+function RNGalleryScreenWrapper({navigation}) {
   const state = useNavigationState(state => state);
   const Component = RNGalleryList[state.index].component.default;
   return (
-    <View style={{flexDirection:'row', width:'100%', height:'100%'}}>
+    <View style={{flexDirection: 'row', width: '100%', height: '100%'}}>
       <Button title="Menu" onPress={() => navigation.openDrawer()} />
-      <View style={{ position:'absolute', width:'100%', height:'100%', alignItems: 'center'}}>
-        <Component/>
+      <View
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          alignItems: 'center',
+        }}>
+        <Component />
       </View>
     </View>
   );
@@ -39,7 +48,10 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   let screens = renderScreens();
   return (
-    <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} drawerType= 'permanent'/>}>
+    <Drawer.Navigator
+      drawerContent={props => (
+        <CustomDrawerContent {...props} drawerType="permanent" />
+      )}>
       {screens}
     </Drawer.Navigator>
   );
@@ -47,7 +59,7 @@ function MyDrawer() {
 
 function renderScreens() {
   const items = [];
-  for (var i = 0; i< RNGalleryList.length; i++) {
+  for (var i = 0; i < RNGalleryList.length; i++) {
     items.push(renderScreen(i));
   }
 
@@ -56,7 +68,11 @@ function renderScreens() {
 
 function renderScreen(i) {
   return (
-    <Drawer.Screen name={RNGalleryList[i].key} key={RNGalleryList[i].key} component={RNGalleryScreenWrapper} />
+    <Drawer.Screen
+      name={RNGalleryList[i].key}
+      key={RNGalleryList[i].key}
+      component={RNGalleryScreenWrapper}
+    />
   );
 }
 
