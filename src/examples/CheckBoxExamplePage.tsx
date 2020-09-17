@@ -3,20 +3,19 @@ import {StyleSheet, View, Text} from 'react-native';
 import React from 'react';
 import CheckBox from '@react-native-community/checkbox';
 
-class CheckBoxExamplePage extends React.Component {
-  render() {
-    return (
-      <View
-        style={{
-          height: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <Text>Sample Checkbox</Text>
-        <CheckBox />
-      </View>
-    );
-  }
-}
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
-export default CheckBoxExamplePage;
+export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
+  return (
+    <View style={styles.container}>
+      <Text>Sample Checkbox</Text>
+      <CheckBox />
+    </View>
+  );
+};

@@ -1,16 +1,16 @@
 'use strict';
 import React from 'react';
-const WelcomePage = require('./WelcomePage');
-const CheckBoxExamplePage = require('./examples/CheckBoxExamplePage');
+import {WelcomePage} from './WelcomePage';
+import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 
 interface IRNGalleryExample {
   key: string;
-  component: React.Component;
+  component: React.ElementType;
 }
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
   {
-    key: 'Wecome',
+    key: 'Welcome',
     component: WelcomePage,
   },
   {
