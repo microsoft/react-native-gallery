@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
+// @ts-ignore
 function RNGalleryScreenWrapper({navigation}) {
   const state = useNavigationState(state => state);
   const Component = RNGalleryList[state.index].component;
@@ -38,6 +39,7 @@ function RNGalleryScreenWrapper({navigation}) {
   );
 }
 
+// @ts-ignore
 function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
@@ -73,7 +75,7 @@ function renderScreens() {
   return items;
 }
 
-function renderScreen(i) {
+function renderScreen(i: number) {
   return (
     <Drawer.Screen
       name={RNGalleryList[i].key}
