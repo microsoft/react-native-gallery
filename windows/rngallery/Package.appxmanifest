@@ -11,11 +11,11 @@
     Publisher="CN=kmelmon"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="48071f82-8a63-40b3-a728-2229057a8f83" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="6fd1e4df-dd6f-4595-b9b4-571b4eb13da2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>rngallery</DisplayName>
-    <PublisherDisplayName>kmelmon</PublisherDisplayName>
+    <PublisherDisplayName>acoates</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -28,7 +28,8 @@
   </Resources>
 
   <Applications>
-    <Application Id="App"
+    <Application
+      Id="App"
       Executable="$targetnametoken$.exe"
       EntryPoint="rngallery.App">
       <uap:VisualElements
