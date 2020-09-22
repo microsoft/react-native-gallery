@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 // @ts-ignore
 function RNGalleryScreenWrapper({navigation}) {
-  const state = useNavigationState(state => state);
+  const state = useNavigationState((state) => state);
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
@@ -58,7 +58,7 @@ function MyDrawer() {
   let screens = renderScreens();
   return (
     <Drawer.Navigator
-      drawerContent={props => (
+      drawerContent={(props) => (
         <CustomDrawerContent {...props} drawerType="permanent" />
       )}>
       {screens}
