@@ -43,12 +43,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CheckboxWindows", "..\node_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DateTimePickerWindows", "..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj", "{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Clipboard", "..\node_modules\@react-native-community\clipboard\windows\Clipboard\Clipboard.vcxproj", "{99A938FA-9FF3-47A0-9256-195A06E7FDD1}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\JSI\Shared\JSI.Shared.vcxitems*{0cc28589-39e4-4288-b162-97b959f8b843}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Shared\Shared.vcxitems*{2049dbe9-8d13-42c9-ae4b-413ae38fffd0}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Mso\Mso.vcxitems*{84e05bfa-cbaf-4f0d-bfb6-4ce85742a57e}*SharedItemsImports = 9
+		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{99a938fa-9ff3-47a0-9256-195a06e7fdd1}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\JSI\Shared\JSI.Shared.vcxitems*{a62d504a-16b8-41d2-9f19-e2e86019e5e4}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Chakra\Chakra.vcxitems*{c38970c0-5fbf-4d69-90d8-cbac225ae895}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{da8b35b3-da00-4b02-bde6-6a397b3fd46b}*SharedItemsImports = 9
@@ -236,6 +239,24 @@ Global
 		{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}.Release|x64.Build.0 = Release|x64
 		{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}.Release|x86.ActiveCfg = Release|Win32
 		{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}.Release|x86.Build.0 = Release|Win32
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|ARM.ActiveCfg = Debug|ARM
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|ARM.Build.0 = Debug|ARM
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|ARM64.Build.0 = Debug|ARM64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|x64.ActiveCfg = Debug|x64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|x64.Build.0 = Debug|x64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|x86.ActiveCfg = Debug|Win32
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|x86.Build.0 = Debug|Win32
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Debug|x86.Deploy.0 = Debug|Win32
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|ARM.ActiveCfg = Release|ARM
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|ARM.Build.0 = Release|ARM
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|ARM64.ActiveCfg = Release|ARM64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|ARM64.Build.0 = Release|ARM64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|x64.ActiveCfg = Release|x64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|x64.Build.0 = Release|x64
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|x86.ActiveCfg = Release|Win32
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|x86.Build.0 = Release|Win32
+		{99A938FA-9FF3-47A0-9256-195A06E7FDD1}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
