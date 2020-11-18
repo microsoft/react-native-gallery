@@ -1,6 +1,7 @@
-name: PR
+name: CI Loop
 
-on: [ pull_request_target ]
+# Run this workflow every time a new commit pushed to your repository
+on: push
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -14,9 +15,7 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
-        uses: actions/checkout@v2        
-        with:          
-          ref: ${{ github.event.pull_request.head.sha }}
+        uses: actions/checkout@v2
 
       - run: yarn
 
