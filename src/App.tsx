@@ -16,7 +16,7 @@ import {
 import RNGalleryList from './RNGalleryList';
 
 const styles = StyleSheet.create({
-  container: {flexDirection: 'row', width: '100%', height: '100%'},
+  container: {flexDirection: 'row', width: '100%', height: '100%', backgroundColor: 'white'},
   navItem: {
     position: 'absolute',
     width: '100%',

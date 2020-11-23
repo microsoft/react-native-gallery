@@ -68,7 +68,8 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -165,6 +166,12 @@
   <ItemGroup>
     <ProjectReference Include="..\..\node_modules\@react-native-community\checkbox\windows\CheckboxWindows\CheckboxWindows.vcxproj">
       <Project>{eaf81beb-a159-4421-9b6d-e59c37828a57}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\@react-native-community\clipboard\windows\Clipboard\Clipboard.vcxproj">
+      <Project>{99a938fa-9ff3-47a0-9256-195a06e7fdd1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj">
+      <Project>{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

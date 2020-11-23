@@ -25,3 +25,5 @@
 #include <winrt/Microsoft.UI.Xaml.Media.h>
 #include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
 #include <winrt/CheckboxWindows.h>
+#include <winrt/DateTimePicker.h>
+#include <winrt/NativeClipboard.h>
