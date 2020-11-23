@@ -8,8 +8,10 @@ import styles from './ExamplePageStyleSheet';
 export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
     const [date1, setDate1] = useState(new Date());
     const [date2, setDate2] = useState(new Date());
+
     const textExample1 = "<DateTimePicker value={date} mode=\"date\">";
     const textExample2 = "<DateTimePicker value={date} mode=\"date\" dayOfWeekFormat={\'{dayofweek.abbreviated(3)}\'} firstDayOfWeek={1}\/>";
+    
     const copyExample1ToClipboard = () => {
       Clipboard.setString(textExample1);
     };
@@ -40,8 +42,10 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
           <DateTimePicker
             value={date2}
             mode="date"
+            //@ts-ignore
             dayOfWeekFormat={'{dayofweek.abbreviated(3)}'}
-            firstDayOfWeek={1} // Monday
+            //@ts-ignore
+            firstDayOfWeek={1}
           />
         </View>
         <View style={styles.exampleTextView}>

@@ -7,7 +7,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
-    const [time, setTime] = useState(undefined);
+    const [time, setTime] = useState(new Date(0));
     // Replace with string version of JSX snippet used to render component for example1
     const example1jsx = "<DateTimePicker mode=\"time\" value={time} style={{width: 300, opacity: 1, height: 30}}\/>";
     // Replace with string version of JSX snippet used to render component for example2
@@ -45,7 +45,9 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
             mode="time"
             value={time}
             style={{width: 300, opacity: 1, height: 30}}
+            //@ts-ignore
             is24Hour={true}
+            //@ts-ignore
             minuteInterval={5}
           />
         </View>

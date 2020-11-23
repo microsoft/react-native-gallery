@@ -1001,10 +1001,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@react-native-community/checkbox@^0.5.5":
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/@react-native-community/checkbox/-/checkbox-0.5.5.tgz#2d980e9df794130b57b0637a787c945f78dea711"
-  integrity sha512-EeP6w9z9sUvmaSAWQa+Wd+hTmGwxyJ5NHQ9LJ234kPNdplCNEQWPGv5BLezVICDkAw/iwHmHwBxUYKpX6LveRA==
+"@react-native-community/checkbox@^0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@react-native-community/checkbox/-/checkbox-0.5.6.tgz#0be83148e9836e164d5105bb314cae286bd64061"
+  integrity sha512-mya9hPo82M2iT30jou9FDLSafS4W2E79+0XbjbDFs3pxy3Lm1DnH0cCjzFFp7AaSBK/ShRD1ubqu6905TPaU4A==
 
 "@react-native-community/cli-debugger-ui@^4.9.0":
   version "4.9.0"
