@@ -173,6 +173,9 @@
     <ProjectReference Include="..\..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj">
       <Project>{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\@react-native-community\slider\windows\SliderWindows\SliderWindows.vcxproj">
+      <Project>{685a83ae-36bc-4e9d-bdc6-417ebf168463}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml">

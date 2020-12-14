@@ -35,9 +35,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         <DateTimePicker
           value={date2}
           mode="date"
-          //@ts-ignore
           dayOfWeekFormat={'{dayofweek.abbreviated(3)}'}
-          //@ts-ignore
           firstDayOfWeek={1}
         />
       </Example>

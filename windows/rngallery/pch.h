@@ -27,3 +27,4 @@
 #include <winrt/CheckboxWindows.h>
 #include <winrt/DateTimePicker.h>
 #include <winrt/NativeClipboard.h>
+#include <winrt/SliderWindows.h>
