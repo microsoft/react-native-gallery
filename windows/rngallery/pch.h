@@ -28,3 +28,4 @@
 #include <winrt/DateTimePicker.h>
 #include <winrt/NativeClipboard.h>
 #include <winrt/SliderWindows.h>
+#include <winrt/ReactNativePicker.h>

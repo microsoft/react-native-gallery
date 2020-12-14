@@ -1173,6 +1173,11 @@
   dependencies:
     flow-bin "0.113.0"
 
+"@react-native-picker/picker@^1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.9.4.tgz#f4392b58eab320061c71f5c9ab6f74dc3501ec9e"
+  integrity sha512-71sNPRZf/PeMKpLMuzKHLT4p4zRilWnfv61nko9HMZtjW0R0DNy2zLy6PYokTbtbUqhwCdeEIldQcjFSoNR8rg==
+
 "@react-native-windows/cli@0.63.7":
   version "0.63.7"
   resolved "https://registry.yarnpkg.com/@react-native-windows/cli/-/cli-0.63.7.tgz#5b034ff816e5a36bfa655e859adae9425a30af88"

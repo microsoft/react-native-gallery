@@ -176,6 +176,9 @@
     <ProjectReference Include="..\..\node_modules\@react-native-community\slider\windows\SliderWindows\SliderWindows.vcxproj">
       <Project>{685a83ae-36bc-4e9d-bdc6-417ebf168463}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj">
+      <Project>{bedcc600-4541-41f2-aa46-9e058202b6ad}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml">
