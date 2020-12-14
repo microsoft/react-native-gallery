@@ -9,37 +9,37 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
   // Replace with string version of JSX snippet used to render component for example1
   const example1jsx = `import Slider from '@react-native-community/slider';
   
-  <Slider 
-    style={{width: 200, height: 40}} 
-    minimumValue={0} 
-    maximumValue={100}
-    step={1}/>`;
+<Slider 
+  style={{width: 200, height: 40}} 
+  minimumValue={0} 
+  maximumValue={100}
+  step={1}/>`;
   // Replace with string version of JSX snippet used to render component for example2
   const example2jsx = `import Slider from '@react-native-community/slider';
   
-  <Slider
-    style={{width: 200, height: 40}}
-    minimumValue={500}
-    maximumValue={1000}
-    step={10}/>`;
+<Slider
+  style={{width: 200, height: 40}}
+  minimumValue={500}
+  maximumValue={1000}
+  step={10}/>`;
   const example3jsx = `import Slider from '@react-native-community/slider';
   
-  <Slider
-    style={{width: 40, height: 200}}
-    minimumValue={0}
-    maximumValue={100}
-    minimumTrackTintColor="#FF0000"
-    maximumTrackTintColor="#0000ff"
-    step={1}
-    vertical={true}/>`;
+<Slider
+  style={{width: 40, height: 200}}
+  minimumValue={0}
+  maximumValue={100}
+  minimumTrackTintColor="#FF0000"
+  maximumTrackTintColor="#0000ff"
+  step={1}
+  vertical={true}/>`;
   const example4jsx = `import Slider from '@react-native-community/slider';
 
-  <Slider 
-    style={{width: 200, height: 40}}
-    minimumValue={0}
-    maximumValue={100}
-    step={1}
-    disabled={true}/>`;
+<Slider 
+  style={{width: 200, height: 40}}
+  minimumValue={0}
+  maximumValue={100}
+  step={1}
+  disabled={true}/>`;
   return (
     <Page
       title="Slider"
