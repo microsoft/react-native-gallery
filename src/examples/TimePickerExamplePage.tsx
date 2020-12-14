@@ -46,9 +46,7 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
           mode="time"
           value={time}
           style={{width: 300, opacity: 1, height: 30}}
-          //@ts-ignore
           is24Hour={true}
-          //@ts-ignore
           minuteInterval={5}
         />
       </Example>

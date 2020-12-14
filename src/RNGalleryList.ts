@@ -5,6 +5,7 @@ import {TemplateExamplePage} from './examples/TemplateExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
+import {SliderExamplePage} from './examples/SliderExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -31,7 +32,11 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TimePicker',
     component: TimePickerExamplePage,
-  }
+  },
+  {
+    key: 'Slider',
+    component: SliderExamplePage,
+  },
 ];
 
 export default RNGalleryList;

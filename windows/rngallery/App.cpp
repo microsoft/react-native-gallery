@@ -43,6 +43,7 @@ App::App() noexcept
     PackageProviders().Append(winrt::CheckboxWindows::ReactPackageProvider());
     PackageProviders().Append(winrt::DateTimePicker::ReactPackageProvider());
     PackageProviders().Append(winrt::NativeClipboard::ReactPackageProvider());
+    PackageProviders().Append(winrt::SliderWindows::ReactPackageProvider());
     InitializeComponent();
 }
 
