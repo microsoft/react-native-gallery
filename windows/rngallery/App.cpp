@@ -44,6 +44,7 @@ App::App() noexcept
     PackageProviders().Append(winrt::DateTimePicker::ReactPackageProvider());
     PackageProviders().Append(winrt::NativeClipboard::ReactPackageProvider());
     PackageProviders().Append(winrt::SliderWindows::ReactPackageProvider());
+    PackageProviders().Append(winrt::ReactNativePicker::ReactPackageProvider());
     InitializeComponent();
 }
 
