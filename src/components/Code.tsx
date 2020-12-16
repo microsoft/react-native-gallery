@@ -272,7 +272,6 @@ export function Code(props: {children: string}) {
   const tree = low.highlight('typescript', props.children).value;
   //@ts-ignore
   const [theme, setTheme] = useGlobal('theme');
-  console.log(theme);
   const themeStyles =
     theme === 'system'
       ? AppTheme.currentTheme === 'dark'
@@ -281,7 +280,6 @@ export function Code(props: {children: string}) {
       : theme === 'dark'
       ? 1
       : 0;
-  console.log(themeStyles);
   return (
     <View
       style={
