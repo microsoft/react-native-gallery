@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import low from 'lowlight';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -195,7 +196,7 @@ const lightStyles = StyleSheet.create({
 });
 
 function renderLowLightNode(node: lowlight.AST.Unist.Node) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  //@ts-ignore
   const [theme, setTheme] = useGlobal('theme');
   const themeStyles =
     theme === 'system'

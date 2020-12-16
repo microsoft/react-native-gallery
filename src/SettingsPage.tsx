@@ -3,8 +3,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useGlobal} from 'reactn';
 import {Picker} from '@react-native-picker/picker';
-import {Page} from '../components/Page';
-import {Hyperlink} from '../components/Hyperlink';
+import {Page} from './components/Page';
+import {Hyperlink} from './components/Hyperlink';
 
 const styles = StyleSheet.create({
   heading: {
