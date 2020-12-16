@@ -1,9 +1,12 @@
 'use strict';
 import {Linking, StyleSheet, Text, View} from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import DeviceInfo, { getIpAddress, useDeviceName } from 'react-native-device-info';
+import DeviceInfo, {
+  getIpAddress,
+  useDeviceName,
+} from 'react-native-device-info';
 
 export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
   const exampleSysInfo = `import DeviceInfo from 'react-native-device-info';
@@ -22,7 +25,7 @@ function Example() {
 function Example() {
   const deviceName = useDeviceName();
   return <Text>Device Name: {JSON.stringify(deviceName, null, '  ')}</Text>;
-}`
+}`;
 
   const exampleNetworkInfo = `import DeviceInfo, { getIpAddress } from 'react-native-device-info';
 
@@ -41,7 +44,7 @@ function Example() {
   };
 
   return <Text>IP address: {ipAddress}</Text>;
-}`
+}`;
 
   const deviceName = useDeviceName();
 
@@ -62,14 +65,20 @@ function Example() {
     <Page
       title="Device Info"
       description="Shows available device information via the react-native-device-info module.">
-
-      <View >
-        <Text>For more information about each platform's supported APIs, check out the{' '}
-          <Text style={{color: 'blue'}} onPress={() =>
-             Linking.openURL('https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api')}>
-          documentation
+      <View>
+        <Text>
+          For more information about each platform's supported APIs, check out
+          the{' '}
+          <Text
+            style={{color: 'blue'}}
+            onPress={() =>
+              Linking.openURL(
+                'https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api',
+              )
+            }>
+            documentation
           </Text>
-        .
+          .
         </Text>
       </View>
 

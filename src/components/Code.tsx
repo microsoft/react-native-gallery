@@ -1,6 +1,8 @@
 import low from 'lowlight';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {useGlobal} from 'reactn';
+import {AppTheme} from 'react-native-windows';
 
 const darkColors = {
   background: '#1E1E1E',
@@ -14,6 +16,20 @@ const darkColors = {
   jsxBrackets: '#80807a',
   types: '#4ec9b0',
   regexp: '#d16969',
+};
+
+const lightColors = {
+  background: '#E6E6E6',
+  text: '#000000',
+  comment: '#000000',
+  keyword: '#FF0000',
+  tag: '#000000',
+  number: '#000000',
+  string: '#0000FF',
+  jsxTags: '#A31515',
+  jsxBrackets: '#0000FF',
+  types: '#A31515',
+  regexp: '#000000',
 };
 
 const darkStyles = StyleSheet.create({
@@ -97,27 +113,147 @@ const darkStyles = StyleSheet.create({
   'hljs-attr': {color: darkColors.text}, // Attributes within JSX Tags
 });
 
+const lightStyles = StyleSheet.create({
+  'hljs-container': {
+    backgroundColor: lightColors.background,
+    flexGrow: 1,
+    padding: 5,
+  },
+  'hljs-global': {
+    color: lightColors.text,
+    fontFamily: 'Consolas',
+  },
+  'hljs-comment': {
+    color: lightColors.comment,
+    fontStyle: 'italic',
+  },
+  'hljs-quote': {
+    color: lightColors.comment,
+    fontStyle: 'italic',
+  },
+  'hljs-keyword': {
+    color: lightColors.keyword,
+  },
+  'hljs-selector-tag': {
+    color: lightColors.keyword,
+  },
+  'hljs-literal': {
+    color: lightColors.keyword,
+  },
+  'hljs-type': {
+    color: lightColors.keyword,
+  },
+  'hljs-addition': {
+    color: lightColors.keyword,
+  },
+  'hljs-number': {
+    color: lightColors.number,
+  },
+  'hljs-selector-attr': {
+    color: lightColors.number,
+  },
+  'hljs-symbol': {
+    color: lightColors.number,
+  },
+  'hljs-bullet': {
+    color: lightColors.number,
+  },
+  'hljs-subst': {
+    color: lightColors.number,
+  },
+  'hljs-meta': {
+    color: lightColors.number,
+  },
+  'hljs-link': {
+    color: lightColors.number,
+  },
+  'hljs-string': {
+    color: lightColors.string,
+  },
+  'hljs-doctag': {
+    color: lightColors.string,
+  },
+  'hljs-regexp': {
+    color: lightColors.regexp,
+  },
+  'hljs-emphasis': {
+    fontStyle: 'italic',
+  },
+  'hljs-function': {}, // Apply to whole function
+  'hljs-params': {}, // Apply to the parameters of a function
+  'hljs-built_in': {
+    color: lightColors.types,
+  },
+  'hljs-class': {},
+  'hljs-title': {
+    color: lightColors.jsxTags, //darkColors.classTypes,
+  },
+  xml: {}, // Apply to text within XML sections of JSX
+  'hljs-tag': {color: lightColors.jsxBrackets},
+  'hljs-name': {color: lightColors.jsxTags}, // Name within Component JSX Tags
+  'hljs-attr': {color: lightColors.text}, // Attributes within JSX Tags
+});
+
 function renderLowLightNode(node: lowlight.AST.Unist.Node) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [theme, setTheme] = useGlobal('theme');
+  const themeStyles =
+    theme === 'system'
+      ? AppTheme.currentTheme === 'dark'
+        ? 1
+        : 0
+      : theme === 'dark'
+      ? 1
+      : 0;
   if (node.type === 'text') {
     return <Text>{(node as lowlight.AST.Text).value}</Text>;
   } else if (node.type === 'element') {
     const elementNode = node as lowlight.AST.Element;
-    if (
-      elementNode.properties.className &&
-      !darkStyles[elementNode.properties.className as keyof typeof darkStyles]
-    ) {
-      throw new Error(
-        `Missing code style for ${elementNode.properties.className}`,
+    if (themeStyles === 0) {
+      if (
+        elementNode.properties.className &&
+        !lightStyles[
+          elementNode.properties.className as keyof typeof lightStyles
+        ]
+      ) {
+        throw new Error(
+          `Missing code style for ${elementNode.properties.className}`,
+        );
+      }
+      const style = lightStyles[
+        elementNode.properties.className as keyof typeof lightStyles
+      ]
+        ? lightStyles[
+            elementNode.properties.className as keyof typeof lightStyles
+          ]
+        : {};
+      return (
+        <Text style={style}>
+          {elementNode.children.map(renderLowLightNode)}
+        </Text>
+      );
+    } else {
+      if (
+        elementNode.properties.className &&
+        !darkStyles[elementNode.properties.className as keyof typeof darkStyles]
+      ) {
+        throw new Error(
+          `Missing code style for ${elementNode.properties.className}`,
+        );
+      }
+      const style = darkStyles[
+        elementNode.properties.className as keyof typeof darkStyles
+      ]
+        ? darkStyles[
+            elementNode.properties.className as keyof typeof darkStyles
+          ]
+        : {};
+      return (
+        <Text style={style}>
+          {elementNode.children.map(renderLowLightNode)}
+        </Text>
       );
     }
-    const style = darkStyles[
-      elementNode.properties.className as keyof typeof darkStyles
-    ]
-      ? darkStyles[elementNode.properties.className as keyof typeof darkStyles]
-      : {};
-    return (
-      <Text style={style}>{elementNode.children.map(renderLowLightNode)}</Text>
-    );
   }
 
   return <Text>{JSON.stringify(node)}</Text>;
@@ -133,9 +269,33 @@ function renderLowLightTree(tree: lowlight.HastNode[]) {
 
 export function Code(props: {children: string}) {
   const tree = low.highlight('typescript', props.children).value;
+  //@ts-ignore
+  const [theme, setTheme] = useGlobal('theme');
+  console.log(theme);
+  const themeStyles =
+    theme === 'system'
+      ? AppTheme.currentTheme === 'dark'
+        ? 1
+        : 0
+      : theme === 'dark'
+      ? 1
+      : 0;
+  console.log(themeStyles);
   return (
-    <View style={darkStyles['hljs-container']}>
-      <Text style={darkStyles['hljs-global']}>{renderLowLightTree(tree)}</Text>
+    <View
+      style={
+        themeStyles === 0
+          ? lightStyles['hljs-container']
+          : darkStyles['hljs-container']
+      }>
+      <Text
+        style={
+          themeStyles === 0
+            ? lightStyles['hljs-global']
+            : darkStyles['hljs-global']
+        }>
+        {renderLowLightTree(tree, themeStyles)}
+      </Text>
     </View>
   );
 }
