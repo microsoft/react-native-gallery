@@ -9,6 +9,9 @@
 // Includes from react-native-device-info
 #include <winrt/RNDeviceInfoCPP.h>
 
+// Includes from @terrylinla/react-native-sketch-canvas
+#include <winrt/RNSketchCanvas.h>
+
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -18,6 +21,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
+    packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
 }
 
 }

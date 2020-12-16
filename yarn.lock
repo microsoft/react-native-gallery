@@ -1265,6 +1265,10 @@
   dependencies:
     type-detect "4.0.8"
 
+"@terrylinla/react-native-sketch-canvas@creambyemute/react-native-sketch-canvas":
+  version "0.8.1"
+  resolved "https://codeload.github.com/creambyemute/react-native-sketch-canvas/tar.gz/41877111daeab2af4d493ec7a7239b8d48f0f229"
+
 "@types/babel__core@^7.1.7":
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.9.tgz#77e59d438522a6fb898fa43dc3455c6e72f3963d"
