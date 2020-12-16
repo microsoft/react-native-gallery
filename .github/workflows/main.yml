@@ -6,19 +6,47 @@ on: push
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  lint:
-    # Name the Job
-    name: Basic Checks
-    # Set the type of machine to run on
+  build:
+    name: Basic Checks and Build
+
     runs-on: ubuntu-latest
 
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
-      - run: yarn
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.9.1'
 
-      - run: yarn tsc
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.0
+        with:
+          vs-version: 16.5
 
-      - run: yarn lint
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.2
+
+      - name: Check node modules cache
+        uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install node modules
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn --pure-lockfile
+
+      - name: yarn build
+        if: steps.yarn-cache.outputs.cache-hit == 'true'
+        run: |
+          yarn build
+          yarn tsc
+          yarn lint
+
+      - name: Run Windows x64 release
+        run: npx react-native run-windows --arch x64 --release --no-packager --logging
