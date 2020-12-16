@@ -1,10 +1,11 @@
 'use strict';
 import {StyleSheet, Text, View} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {useGlobal} from 'reactn';
 import {Picker} from '@react-native-picker/picker';
 import {Page} from '../components/Page';
 import {Hyperlink} from '../components/Hyperlink';
+
 const styles = StyleSheet.create({
   heading: {
     marginTop: 30,

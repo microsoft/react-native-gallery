@@ -293,8 +293,9 @@ export function Code(props: {children: string}) {
           themeStyles === 0
             ? lightStyles['hljs-global']
             : darkStyles['hljs-global']
-        }>
-        {renderLowLightTree(tree, themeStyles)}
+        }
+        selectable={true}>
+        {renderLowLightTree(tree)}
       </Text>
     </View>
   );

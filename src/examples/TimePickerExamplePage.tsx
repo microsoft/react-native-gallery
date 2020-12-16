@@ -4,10 +4,8 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
-// Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
   const [time, _setTime] = useState(new Date(0));
-  // Replace with string version of JSX snippet used to render component for example1
   const example1jsx = `import DateTimePicker from '@react-native-community/datetimepicker';
 
 <DateTimePicker
@@ -15,7 +13,6 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
   value={time}
   style={{width: 300, opacity: 1, height: 30}}
 />`;
-  // Replace with string version of JSX snippet used to render component for example2
   const example2jsx = `import DateTimePicker from '@react-native-community/datetimepicker';
 
 <DateTimePicker
