@@ -4,6 +4,7 @@ import {WelcomePage} from './WelcomePage';
 import {SettingsPage} from './SettingsPage';
 import {TemplateExamplePage} from './examples/TemplateExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
+import {ConfigExamplePage} from './examples/ConfigExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
@@ -32,6 +33,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'CheckBox',
     component: CheckBoxExamplePage,
+  },
+  {
+    key: 'Config',
+    component: ConfigExamplePage,
   },
   {
     key: 'DatePicker',
