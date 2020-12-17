@@ -11,6 +11,7 @@ import {SketchExamplePage} from './examples/SketchExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
 import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
+import {PrintExamplePage} from './examples/PrintExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
@@ -63,6 +64,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Picker',
     component: PickerExamplePage,
+  },
+  {
+    key: 'Print',
+    component: PrintExamplePage,
   },
   {
     key: 'Text',

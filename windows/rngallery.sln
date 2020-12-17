@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNDeviceInfoCPP", "..\node_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNCConfig", "..\node_modules\react-native-config\windows\RNCConfig\RNCConfig.vcxproj", "{F1F427C9-66A2-4ED5-B482-3D583B6B20C7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPrint", "..\node_modules\react-native-print\windows\RNPrint\RNPrint.vcxproj", "{6F9AC236-D97D-4C75-971B-91AC99D7C23B}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNSketchCanvas", "..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj", "{F96593A0-46B4-47DA-A15A-7A135934CE1F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPermissions", "..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj", "{99677B9D-A27B-4239-930E-C36C8D339C54}"
