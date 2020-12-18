@@ -15,7 +15,7 @@ function Example() {
       <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
     </>
   );
-}`
+}`;
 
   const exampleDeviceInfo = `import { useDeviceName } from 'react-native-device-info';
 
@@ -62,6 +62,7 @@ function Example() {
     <Page
       title="Device Info"
       description="Shows available device information via the react-native-device-info module.">
+
       <View>
         <Text>
           For more information about each platform's supported APIs, check out the{' '}
