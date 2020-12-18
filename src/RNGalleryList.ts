@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 import {WelcomePage} from './WelcomePage';
+import {SettingsPage} from './SettingsPage';
 import {TemplateExamplePage} from './examples/TemplateExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
@@ -18,6 +19,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Welcome',
     component: WelcomePage,
+  },
+  {
+    key: 'Settings',
+    component: SettingsPage,
   },
   {
     key: 'Template',
