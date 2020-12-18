@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import low from 'lowlight';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -105,25 +104,17 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node) {
     const elementNode = node as lowlight.AST.Element;
     if (
       elementNode.properties.className &&
-      !darkStyles[
-        elementNode.properties.className as keyof typeof darkStyles
-      ]
+      !darkStyles[elementNode.properties.className as keyof typeof darkStyles]
     ) {
       throw new Error(
         `Missing code style for ${elementNode.properties.className}`,
       );
     }
-    const style = darkStyles[
-      elementNode.properties.className as keyof typeof darkStyles
-    ]
-      ? darkStyles[
-          elementNode.properties.className as keyof typeof darkStyles
-        ]
+    const style = darkStyles[elementNode.properties.className as keyof typeof darkStyles]
+      ? darkStyles[elementNode.properties.className as keyof typeof darkStyles]
       : {};
     return (
-      <Text style={style}>
-        {elementNode.children.map(renderLowLightNode)}
-      </Text>
+      <Text style={style}>{elementNode.children.map(renderLowLightNode)}</Text>
     );
   }
 

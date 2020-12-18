@@ -15,8 +15,8 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   <Picker.Item label="Option 2" value="Option 2"/>
   <Picker.Item label="Option 3" value="Option 3"/>
 </Picker>`;
-// Replace with string version of JSX snippet used to render component for example2  
-const example2jsx = `import {Picker} from '@react-native-picker/picker';
+  // Replace with string version of JSX snippet used to render component for example2
+  const example2jsx = `import {Picker} from '@react-native-picker/picker';
   
 <Picker style={{height: 50, width: 100}} enabled={false}>
   <Picker.Item label="Option 1" value="Option 1"/>

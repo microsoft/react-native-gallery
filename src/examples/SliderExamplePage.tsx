@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 'use strict';
 import React from 'react';
 import {Example} from '../components/Example';

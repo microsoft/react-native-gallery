@@ -15,8 +15,8 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
   value={time}
   style={{width: 300, opacity: 1, height: 30}}
 />`;
-// Replace with string version of JSX snippet used to render component for example2  
-const example2jsx = `import DateTimePicker from '@react-native-community/datetimepicker';
+  // Replace with string version of JSX snippet used to render component for example2
+  const example2jsx = `import DateTimePicker from '@react-native-community/datetimepicker';
 
 <DateTimePicker
   mode="time"
