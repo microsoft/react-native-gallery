@@ -64,8 +64,7 @@ function Example() {
       description="Shows available device information via the react-native-device-info module.">
 
       <View>
-        <Text>
-          For more information about each platform's supported APIs, check out the{' '}
+        <Text>For more information about each platform's supported APIs, check out the{' '}
           <Text style={{color: 'blue'}} onPress={() => 
             Linking.openURL('https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api')}>
           documentation
