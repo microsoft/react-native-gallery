@@ -5,6 +5,7 @@ import {Page} from '../components/Page';
 import Slider from '@react-native-community/slider';
 
 export const SliderExamplePage: React.FunctionComponent<{}> = () => {
+  // Replace with string version of JSX snippet used to render component for example1
   const example1jsx = `import Slider from '@react-native-community/slider';
   
 <Slider 
@@ -12,6 +13,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
   minimumValue={0} 
   maximumValue={100}
   step={1}/>`;
+  // Replace with string version of JSX snippet used to render component for example2
   const example2jsx = `import Slider from '@react-native-community/slider';
   
 <Slider
@@ -46,8 +48,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
           style={{width: 200, height: 40}}
           minimumValue={0}
           maximumValue={100}
-          step={1}
-        />
+          step={1}/>
       </Example>
       <Example
         title="A Slider with range and steps specified."
@@ -56,8 +57,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
           style={{width: 200, height: 40}}
           minimumValue={500}
           maximumValue={1000}
-          step={10}
-        />
+          step={10}/>
       </Example>
       <Example title="A vertical Slider with colored track." code={example3jsx}>
         <Slider
@@ -76,8 +76,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
           minimumValue={0}
           maximumValue={100}
           step={1}
-          disabled={true}
-        />
+          disabled={true}/>
       </Example>
     </Page>
   );

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 30,
     marginBottom: 10,
-    fontSize: 23,
+    fontSize: 20,
   },
   box: {
     borderRadius: 2,
