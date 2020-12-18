@@ -110,7 +110,9 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node) {
         `Missing code style for ${elementNode.properties.className}`,
       );
     }
-    const style = darkStyles[elementNode.properties.className as keyof typeof darkStyles]
+    const style = darkStyles[
+      elementNode.properties.className as keyof typeof darkStyles
+    ]
       ? darkStyles[elementNode.properties.className as keyof typeof darkStyles]
       : {};
     return (
