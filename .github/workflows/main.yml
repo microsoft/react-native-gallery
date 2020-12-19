@@ -54,10 +54,3 @@ jobs:
 
       - name: Run Windows x64 release
         run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(BuildLogDirectory)
-
-      - task: PublishPipelineArtifact@1
-        name: 'Publish Artifact:react-native-gallery'
-        inputs:
-          artifactName: react-native-gallery-BuildLog-$(System.JobAttempt)
-          targetPath: $(BuildLogDirectory)
-        condition: succeededOrFailed()
