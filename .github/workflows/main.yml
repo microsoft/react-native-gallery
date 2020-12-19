@@ -36,6 +36,7 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
       - name: Install node modules
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
@@ -47,15 +48,15 @@ jobs:
           yarn tsc
           yarn lint
 
-      - powershell: |
+      - name: Set BuildLogDirectory
+        run: |
           Write-Host "##vso[task.setvariable variable=BuildLogDirectory]$(Build.BinariesDirectory)\x64\BuildLogs"
-        displayName: Set BuildLogDirectory
 
       - name: Run Windows x64 release
         run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(BuildLogDirectory)
 
       - task: PublishPipelineArtifact@1
-        displayName: 'Publish Artifact:react-native-gallery'
+        name: 'Publish Artifact:react-native-gallery'
         inputs:
           artifactName: react-native-gallery-BuildLog-$(System.JobAttempt)
           targetPath: $(BuildLogDirectory)
