@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   heading: {
     marginTop: 30,
     marginBottom: 10,
-    fontSize: 23,
+    fontSize: 20,
   },
   text: {
     paddingTop: 5,
