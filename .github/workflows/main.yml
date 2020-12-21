@@ -49,4 +49,7 @@ jobs:
           yarn lint
 
       - name: Run Windows x64 release
-        run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory \BuildLogs\x64
+        run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64
+
+      - publish: $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64
+        artifact: react-native-gallery-BuildLog
