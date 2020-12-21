@@ -49,7 +49,7 @@ jobs:
           yarn lint
 
       - name: Run Windows x64 release
-        run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64
+        run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory \react-native-gallery\BuildLogs\x64
 
       - name: Publish Build Log
-        run: az pipelines runs artifact upload --artifact-name 'RN Gallery Build Log' --path $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64 --run-id '1'
+        run: az pipelines runs artifact upload --artifact-name 'RN Gallery Build Log' --path \react-native-gallery\BuildLogs\x64 --run-id '1'
