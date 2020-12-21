@@ -10,6 +10,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-device-info\windows\RNDeviceInfoCPP\RNDeviceInfoCPP.vcxproj">
       <Project>{3e3931f2-4735-4417-8cb0-33668a7314d6}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-permissions -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj">
+      <Project>{99677b9d-a27b-4239-930e-c36c8d339c54}</Project>
+    </ProjectReference>
     <!-- Projects from @terrylinla/react-native-sketch-canvas -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
       <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
