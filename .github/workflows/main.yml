@@ -48,9 +48,5 @@ jobs:
           yarn tsc
           yarn lint
 
-      - name: Set BuildLogDirectory
-        run: |
-          Write-Host "##vso[task.setvariable variable=BuildLogDirectory]BuildLogs\x64"
-
       - name: Run Windows x64 release
-        run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(BuildLogDirectory)
+        run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory \BuildLogs\x64
