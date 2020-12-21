@@ -50,7 +50,7 @@ jobs:
 
       - name: Set BuildLogDirectory
         run: |
-          Write-Host "##vso[task.setvariable variable=BuildLogDirectory]$(Build.BinariesDirectory)\x64\BuildLogs"
+          Write-Host "##vso[task.setvariable variable=BuildLogDirectory]BuildLogs\x64"
 
       - name: Run Windows x64 release
         run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(BuildLogDirectory)
