@@ -51,5 +51,5 @@ jobs:
       - name: Run Windows x64 release
         run: npx react-native run-windows --arch x64 --release --no-packager --no-deploy --logging --buildLogDirectory $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64
 
-      - publish: $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64
-        artifact: react-native-gallery-BuildLog
+      - name: Publish Build Log
+        run: az pipelines runs artifact upload --artifact-name 'RN Gallery Build Log' --path $(System.DefaultWorkingDirectory)\react-native-gallery\BuildLogs\x64 --run-id '1'
