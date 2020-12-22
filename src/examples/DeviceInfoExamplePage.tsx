@@ -1,12 +1,9 @@
 'use strict';
 import {Linking, StyleSheet, Text, View} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import DeviceInfo, {
-  getIpAddress,
-  useDeviceName,
-} from 'react-native-device-info';
+import DeviceInfo, { getIpAddress, useDeviceName } from 'react-native-device-info';
 import {LinkContainer} from '../components/LinkContainer';
 
 export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
@@ -19,7 +16,7 @@ function Example() {
       <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
     </>
   );
-}`;
+}`
 
   const exampleDeviceInfo = `import { useDeviceName } from 'react-native-device-info';
 
@@ -45,7 +42,7 @@ function Example() {
   };
 
   return <Text>IP address: {ipAddress}</Text>;
-}`;
+}`
 
   const deviceName = useDeviceName();
 
@@ -66,20 +63,14 @@ function Example() {
     <Page
       title="Device Info"
       description="Shows available device information via the react-native-device-info module.">
+      
       <View>
-        <Text>
-          For more information about each platform's supported APIs, check out
-          the{' '}
-          <Text
-            style={{color: 'blue'}}
-            onPress={() =>
-              Linking.openURL(
-                'https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api',
-              )
-            }>
-            documentation
+        <Text>For more information about each platform's supported APIs, check out the{' '}
+          <Text style={{color: 'blue'}} onPress={() =>
+            Linking.openURL('https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api')}>
+          documentation
           </Text>
-          .
+        .
         </Text>
       </View>
 
