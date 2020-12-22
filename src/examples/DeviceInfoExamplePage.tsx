@@ -16,14 +16,14 @@ function Example() {
       <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
     </>
   );
-}`
+}`;
 
   const exampleDeviceInfo = `import { useDeviceName } from 'react-native-device-info';
 
 function Example() {
   const deviceName = useDeviceName();
   return <Text>Device Name: {JSON.stringify(deviceName, null, '  ')}</Text>;
-}`;
+}`
 
   const exampleNetworkInfo = `import DeviceInfo, { getIpAddress } from 'react-native-device-info';
 
