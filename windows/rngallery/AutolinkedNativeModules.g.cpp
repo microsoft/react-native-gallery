@@ -18,6 +18,9 @@
 // Includes from react-native-print
 #include <winrt/RNPrint.h>
 
+// Includes from react-native-sensitive-info
+#include <winrt/RNSensitiveInfoCPP.h>
+
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -33,6 +36,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print
     packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
+    // IReactPackageProviders from react-native-sensitive-info
+    packageProviders.Append(winrt::RNSensitiveInfoCPP::ReactPackageProvider());
 }
 
 }

@@ -31,6 +31,7 @@
     "react-native-print": "christopherdro/react-native-print",
     "react-native-reanimated": "^1.10.0",
     "react-native-safe-area-context": "^3.1.0",
+    "react-native-sensitive-info": "6.0.0-alpha.9",
     "react-native-screens": "^2.9.0",
     "react-native-webview": "^11.2.3",
     "react-native-windows": "^0.63.2",
