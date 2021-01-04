@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {LinkContainer} from '../components/LinkContainer';
 
 export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
   const [date1, _setDate1] = useState(new Date());
@@ -39,6 +40,17 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
           firstDayOfWeek={1}
         />
       </Example>
+      <LinkContainer
+        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/DatePickerExamplePage.tsx"
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={[
+          {
+            label: 'DateTimePicker',
+            url:
+              'https://github.com/react-native-datetimepicker/datetimepicker',
+          },
+        ]}
+      />
     </Page>
   );
 };

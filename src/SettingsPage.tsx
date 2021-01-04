@@ -1,6 +1,7 @@
 'use strict';
 import {StyleSheet, Text, View} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
+import {useGlobal} from 'reactn';
 import {Picker} from '@react-native-picker/picker';
 import {Page} from './components/Page';
 import {Hyperlink} from './components/Hyperlink';
@@ -31,7 +32,7 @@ const SettingContainer = (props: {
 
 export const SettingsPage: React.FunctionComponent<{}> = () => {
   //@ts-ignore
-  const [theme, setTheme] = useState('system');
+  const [theme, setTheme] = useGlobal('theme');
   const PickerValueChanged = (value: string | number, position: number) => {
     //@ts-ignore
     setTheme(value);

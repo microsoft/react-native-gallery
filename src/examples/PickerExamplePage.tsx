@@ -3,6 +3,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Picker} from '@react-native-picker/picker';
+import {LinkContainer} from '../components/LinkContainer';
 
 export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {Picker} from '@react-native-picker/picker';
@@ -53,6 +54,16 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
           <Picker.Item label="Option 3" value="Option 3" />
         </Picker>
       </Example>
+      <LinkContainer
+        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PickerExamplePage.tsx"
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={[
+          {
+            label: 'Picker',
+            url: 'https://github.com/react-native-picker/picker',
+          },
+        ]}
+      />
     </Page>
   );
 };

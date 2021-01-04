@@ -3,6 +3,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Slider from '@react-native-community/slider';
+import {LinkContainer} from '../components/LinkContainer';
 
 export const SliderExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import Slider from '@react-native-community/slider';
@@ -79,6 +80,16 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
           disabled={true}
         />
       </Example>
+      <LinkContainer
+        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SliderExamplePage.tsx"
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={[
+          {
+            label: 'Slider',
+            url: 'https://github.com/callstack/react-native-slider',
+          },
+        ]}
+      />
     </Page>
   );
 };

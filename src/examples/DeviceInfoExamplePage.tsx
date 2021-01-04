@@ -7,6 +7,7 @@ import DeviceInfo, {
   getIpAddress,
   useDeviceName,
 } from 'react-native-device-info';
+import {LinkContainer} from '../components/LinkContainer';
 
 export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
   const exampleSysInfo = `import DeviceInfo from 'react-native-device-info';
@@ -94,6 +95,17 @@ function Example() {
       <Example title="Network Information" code={exampleNetworkInfo}>
         <Text>IP address: {ipAddress}</Text>
       </Example>
+      <LinkContainer
+        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/DeviceInfoExamplePage.tsx"
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={[
+          {
+            label: 'DeviceInfo',
+            url:
+              'https://github.com/react-native-device-info/react-native-device-info',
+          },
+        ]}
+      />
     </Page>
   );
 };
