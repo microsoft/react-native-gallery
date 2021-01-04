@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {LinkContainer} from '../components/LinkContainer';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
@@ -50,6 +51,17 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
           minuteInterval={5}
         />
       </Example>
+      <LinkContainer
+        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TemplateExamplePage.tsx"
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={[
+          {
+            label: 'DateTimePicker',
+            url:
+              'https://github.com/react-native-datetimepicker/datetimepicker',
+          },
+        ]}
+      />
     </Page>
   );
 };
