@@ -13,12 +13,24 @@ const styles = StyleSheet.create({
   },
 });
 
-export function LinkContainer(props: {pageCodeUrl: string; feedbackUrl: string; documentation: [{label: string, url: string}]}) {
+export function LinkContainer(props: {
+  pageCodeUrl: string;
+  feedbackUrl: string;
+  documentation: {label: string; url: string}[];
+}) {
   return (
     <View style={styles.hyperlinkContainer}>
       <View style={styles.hyperlinkRow}>
-        <LinkTile title="View page code on Github" links={[{label: "Source Code", url: props.pageCodeUrl}]} />
-        <LinkTile title="Feedback" links={[{label: "Send feedback about this page", url: props.feedbackUrl}]} />
+        <LinkTile
+          title="View page code on Github"
+          links={[{label: 'Source Code', url: props.pageCodeUrl}]}
+        />
+        <LinkTile
+          title="Feedback"
+          links={[
+            {label: 'Send feedback about this page', url: props.feedbackUrl},
+          ]}
+        />
       </View>
       <LinkTile title="Documentation" links={props.documentation} />
     </View>
