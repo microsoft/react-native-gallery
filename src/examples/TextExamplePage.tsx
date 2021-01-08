@@ -28,6 +28,17 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
   exists beyond two lines it will be truncated and an ellipses will
   appear.
 </Text>`;
+  const example5jsx = `import {Text} from 'react-native';
+  
+<Text style={{fontWeight: '600'}}>
+  This is bolded
+  <Text style={{color: 'blue'}}>
+    &nbsp;and blue
+    <Text style={{textDecorationLine: 'underline'}}>
+      &nbsp;and underlined text.
+    </Text>
+  </Text>
+</Text>`;
 
   return (
     <Page
@@ -53,6 +64,19 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
           block of text will never exceed more that two lines. If more text
           exists beyond two lines it will be truncated and an ellipses will
           appear.
+        </Text>
+      </Example>
+      <Example
+        title="A nested block of Text with additional style at each level."
+        code={example5jsx}>
+        <Text style={{fontWeight: '600'}}>
+          This is bolded
+          <Text style={{color: 'blue'}}>
+            &nbsp;and blue
+            <Text style={{textDecorationLine: 'underline'}}>
+              &nbsp;and underlined text.
+            </Text>
+          </Text>
         </Text>
       </Example>
       <LinkContainer
