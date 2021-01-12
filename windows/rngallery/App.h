@@ -16,5 +16,3 @@ namespace winrt::rngallery::implementation
         using super = AppT<App>;
     };
 } // namespace winrt::rngallery::implementation
-
-
