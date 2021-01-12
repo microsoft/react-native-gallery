@@ -42,7 +42,7 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Switch"
-      description="Use the Switch component to present users with exactly two mutually exclusive options (like on/off), where choosing an option results in an immediate commit. A Switch should have a single label.">
+      description="Use the Switch component to present users with exactly two mutually exclusive options (like on/off), where choosing an option results in an immediate commit.">
       <Example title="A simple Switch." code={example1jsx}>
         <Switch value={switch1} onValueChange={onSwitchChange1} />
       </Example>
