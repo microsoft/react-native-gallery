@@ -6,16 +6,16 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
- <Identity
-    Name="48071f82-8a63-40b3-a728-2229057a8f83"
-    Publisher="CN=kmelmon"
+  <Identity
+    Name="e5911cd2-72b4-4c29-b5ca-92f3b9d43db3"
+    Publisher="CN=chiaramooney"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="48071f82-8a63-40b3-a728-2229057a8f83" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="e5911cd2-72b4-4c29-b5ca-92f3b9d43db3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>rngallery</DisplayName>
-    <PublisherDisplayName>kmelmon</PublisherDisplayName>
+    <PublisherDisplayName>chiaramooney</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
