@@ -46,10 +46,10 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Switch." code={example1jsx}>
         <Switch value={switch1} onValueChange={onSwitchChange1} />
       </Example>
-      <Example title="A disabled Switch" code={example2jsx}>
+      <Example title="A disabled Switch." code={example2jsx}>
         <Switch value={switch2} onValueChange={onSwitchChange2} disabled />
       </Example>
-      <Example title="A colorful Switch" code={example3jsx}>
+      <Example title="A colorful Switch." code={example3jsx}>
         <Switch
           value={switch3}
           onValueChange={onSwitchChange3}
