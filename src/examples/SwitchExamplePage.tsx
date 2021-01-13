@@ -15,10 +15,10 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
     setSwitch1(!switch1);
   };
   const onSwitchChange2 = () => {
-    setSwitch1(!switch2);
+    setSwitch2(!switch2);
   };
   const onSwitchChange3 = () => {
-    setSwitch1(!switch3);
+    setSwitch3(!switch3);
   };
 
   const example1jsx = `import {Switch} from 'react-native';
