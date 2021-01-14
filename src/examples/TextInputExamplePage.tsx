@@ -24,14 +24,12 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
     setText4(text);
   };
 
-  // Replace with string version of JSX snippet used to render component for example1
   const example1jsx = `import {TextInput} from 'react-native';
 
 <TextInput
   style={{height: 40, borderColor: 'gray', borderWidth: 1}}
   onChangeText={onChangeText1}
   value={text1}/>`;
-  // Replace with string version of JSX snippet used to render component for example2
   const example2jsx = `import {TextInput} from 'react-native';
 
 <TextInput
