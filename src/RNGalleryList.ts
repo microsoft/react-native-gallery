@@ -11,6 +11,7 @@ import {PickerExamplePage} from './examples/PickerExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
+import {ViewExamplePage} from './examples/ViewExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -61,6 +62,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Switch',
     component: SwitchExamplePage,
+  },
+  {
+    key: 'View',
+    component: ViewExamplePage,
   },
 ];
 
