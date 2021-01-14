@@ -10,6 +10,7 @@ import {SliderExamplePage} from './examples/SliderExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
+import {TextInputExamplePage} from './examples/TextInputExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -48,6 +49,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Text',
     component: TextExamplePage,
+  },
+  {
+    key: 'TextInput',
+    component: TextInputExamplePage,
   },
   {
     key: 'TimePicker',
