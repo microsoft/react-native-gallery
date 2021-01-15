@@ -1,10 +1,10 @@
 'use strict';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import Config from 'react-native-config';
 import {LinkContainer} from '../components/LinkContainer';
+import Config from 'react-native-config';
 
 export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
   const example = `import Config from 'react-native-config';
@@ -26,12 +26,7 @@ SERVICE_API_KEY=74970b3d-0bfb-4611-ba1d-dff7209ecc39`;
   return (
     <Page
       title="Config Variables"
-      description="Shows exposed config variables via the react-native-config module.">
-
-      <View >
-        <Text>Keep in mind this module doesn't obfuscate or encrypt secrets for packaging, so do not store sensitive keys in .env.</Text>
-      </View>
-
+      description="Shows exposed config variables via the react-native-config module. Keep in mind this module doesn't obfuscate or encrypt secrets for packaging, so do not store sensitive keys in .env.">
       <Example title="Config Information" code={example}>
         <Text>Service URL: {Config.SERVICE_URL}</Text>
         <Text>Service port: {Config.SERVICE_PORT}</Text>
