@@ -40,7 +40,8 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         <Image
           style={{width: 50, height: 50}}
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri:
+              'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
           }}
         />
       </Example>
@@ -50,7 +51,8 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         <Image
           style={{width: 75, height: 50, resizeMode: 'stretch'}}
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri:
+              'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
           }}
         />
       </Example>
