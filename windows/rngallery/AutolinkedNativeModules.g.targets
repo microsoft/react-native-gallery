@@ -10,5 +10,9 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-device-info\windows\RNDeviceInfoCPP\RNDeviceInfoCPP.vcxproj">
       <Project>{3e3931f2-4735-4417-8cb0-33668a7314d6}</Project>
     </ProjectReference>
+    <!-- Projects from @terrylinla/react-native-sketch-canvas -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
+      <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
+    </ProjectReference>
   </ItemGroup>
 </Project>

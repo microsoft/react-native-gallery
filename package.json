@@ -20,6 +20,7 @@
     "@react-navigation/drawer": "^5.9.0",
     "@react-navigation/native": "^5.7.3",
     "@react-navigation/stack": "^5.9.0",
+    "@terrylinla/react-native-sketch-canvas": "creambyemute/react-native-sketch-canvas",
     "lowlight": "^1.17.0",
     "react": "16.13.1",
     "react-native": "0.63.2",
