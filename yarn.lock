@@ -6183,6 +6183,10 @@ react-native-sensitive-info@6.0.0-alpha.9:
   resolved "https://registry.yarnpkg.com/react-native-sensitive-info/-/react-native-sensitive-info-6.0.0-alpha.9.tgz#b488fab715d36efdf80b377a21545cfe888ab8d2"
   integrity sha512-W2R1gUHgBAmy+wVl0BvA7s01SqqTitnG4Sdj2zmck0OS5a54kq+pTnXRqDljMa2NQs4Mue2IHyvd+Tf0X1ZL6Q==
 
+react-native-tts@ak1394/react-native-tts:
+  version "4.0.0"
+  resolved "https://codeload.github.com/ak1394/react-native-tts/tar.gz/0d0ae9467f9efbae7af4c2e97f6824d39615d699"
+
 react-native-webview@^11.3.1:
   version "11.3.1"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.3.1.tgz#acc87db56eca568fd561edecbd990e8252b882a5"

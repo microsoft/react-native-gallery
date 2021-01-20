@@ -34,6 +34,7 @@
     "react-native-safe-area-context": "^3.1.0",
     "react-native-screens": "^2.9.0",
     "react-native-sensitive-info": "6.0.0-alpha.9",
+    "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.3.1",
     "react-native-windows": "^0.64.0",
     "react-native-xaml": "^0.0.16",

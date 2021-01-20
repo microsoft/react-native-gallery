@@ -15,6 +15,7 @@ import {PrintExamplePage} from './examples/PrintExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
+import {TTSExamplePage} from './examples/TTSExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
@@ -114,6 +115,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TimePicker',
     component: TimePickerExamplePage,
+  },
+  {
+    key: 'TextToSpeech',
+    component: TTSExamplePage,
   },
   {
     key: 'ScrollView',
