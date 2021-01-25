@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #define NOMINMAX
 
@@ -24,11 +24,8 @@
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
 #include <winrt/Microsoft.UI.Xaml.Media.h>
 #include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
-using namespace winrt::Windows::Foundation;
-
 #include <winrt/CheckboxWindows.h>
 #include <winrt/DateTimePicker.h>
 #include <winrt/NativeClipboard.h>
 #include <winrt/SliderWindows.h>
 #include <winrt/ReactNativePicker.h>
-#include <winrt/RNDeviceInfoCPP.h>

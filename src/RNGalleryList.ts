@@ -4,12 +4,18 @@ import {WelcomePage} from './WelcomePage';
 import {SettingsPage} from './SettingsPage';
 import {TemplateExamplePage} from './examples/TemplateExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
+import {ConfigExamplePage} from './examples/ConfigExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
+import {SketchExamplePage} from './examples/SketchExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
+import {TextInputExamplePage} from './examples/TextInputExamplePage';
+import {SwitchExamplePage} from './examples/SwitchExamplePage';
+import {ViewExamplePage} from './examples/ViewExamplePage';
+import {ImageExamplePage} from './examples/ImageExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -34,12 +40,20 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: CheckBoxExamplePage,
   },
   {
+    key: 'Config',
+    component: ConfigExamplePage,
+  },
+  {
     key: 'DatePicker',
     component: DatePickerExamplePage,
   },
   {
     key: 'DeviceInfo',
     component: DeviceInfoExamplePage,
+  },
+  {
+    key: 'Image',
+    component: ImageExamplePage,
   },
   {
     key: 'Picker',
@@ -50,12 +64,28 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: TextExamplePage,
   },
   {
+    key: 'TextInput',
+    component: TextInputExamplePage,
+  },
+  {
     key: 'TimePicker',
     component: TimePickerExamplePage,
   },
   {
     key: 'Slider',
     component: SliderExamplePage,
+  },
+  {
+    key: 'Sketch',
+    component: SketchExamplePage,
+  },
+  {
+    key: 'Switch',
+    component: SwitchExamplePage,
+  },
+  {
+    key: 'View',
+    component: ViewExamplePage,
   },
 ];
 
