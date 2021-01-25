@@ -5,6 +5,7 @@
 #include "AutolinkedNativeModules.g.h"
 #include "ReactPackageProvider.h"
 
+
 using namespace winrt::rngallery;
 using namespace winrt::rngallery::implementation;
 using namespace winrt;
@@ -25,7 +26,7 @@ App::App() noexcept
     InstanceSettings().UseWebDebugger(false);
     InstanceSettings().UseFastRefresh(false);
 #else
-    JavaScriptBundleFile(L"index");
+    JavaScriptMainModuleName(L"index");
     InstanceSettings().UseWebDebugger(true);
     InstanceSettings().UseFastRefresh(true);
 #endif
@@ -44,8 +45,6 @@ App::App() noexcept
     PackageProviders().Append(winrt::NativeClipboard::ReactPackageProvider());
     PackageProviders().Append(winrt::SliderWindows::ReactPackageProvider());
     PackageProviders().Append(winrt::ReactNativePicker::ReactPackageProvider());
-    PackageProviders().Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
-
     InitializeComponent();
 }
 
