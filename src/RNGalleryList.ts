@@ -16,6 +16,7 @@ import {TextInputExamplePage} from './examples/TextInputExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
+import {WebViewExamplePage} from './examples/WebViewExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -86,6 +87,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'View',
     component: ViewExamplePage,
+  },
+  {
+    key: 'WebView',
+    component: WebViewExamplePage,
   },
 ];
 
