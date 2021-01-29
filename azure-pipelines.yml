@@ -16,7 +16,6 @@ variables:
   # AgentPool.Large: windevbuildagents
 
 pool: windevbuildagents
-  vmImage: 'windows-latest'
 
 steps:
 - checkout: self
