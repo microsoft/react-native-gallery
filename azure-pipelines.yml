@@ -15,6 +15,9 @@ variables:
   # AgentPool.Medium: rnw-pool-4
   # AgentPool.Large: windevbuildagents
 
+pool:
+  vmImage: 'windows-latest'
+
 steps:
 - checkout: self
   clean: false
