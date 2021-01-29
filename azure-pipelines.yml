@@ -14,8 +14,6 @@ variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
   # AgentPool.Medium: rnw-pool-4
   # AgentPool.Large: windevbuildagents
-  
-image: windows-2019
 
 steps:
 - checkout: self
