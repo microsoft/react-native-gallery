@@ -12,10 +12,10 @@ pr:
 
 variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
-  AgentPool.Medium: rnw-pool-4
-  AgentPool.Large: windevbuildagents
+  # AgentPool.Medium: rnw-pool-4
+  # AgentPool.Large: windevbuildagents
 
-pool: $(AgentPool.Medium)
+pool: windows-latest
 
 steps:
 - checkout: self
