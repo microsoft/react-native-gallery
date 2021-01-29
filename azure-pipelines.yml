@@ -31,10 +31,10 @@ steps:
   inputs:
     versionSpec: '14.x' 
 
-- task: MSBuild@1
-  displayName: Installing MsBuild
-  inputs:
-    msbuildVersion: "16.0"
+#- task: MSBuild@1
+#  displayName: Installing MsBuild
+#  inputs:
+#    msbuildVersion: "16.0"
 
 - task: CmdLine@2
   displayName: Installing Yarm
