@@ -1217,6 +1217,10 @@
   dependencies:
     type-detect "4.0.8"
 
+"@terrylinla/react-native-sketch-canvas@creambyemute/react-native-sketch-canvas":
+  version "0.8.1"
+  resolved "https://codeload.github.com/creambyemute/react-native-sketch-canvas/tar.gz/41877111daeab2af4d493ec7a7239b8d48f0f229"
+
 "@types/babel__core@^7.1.7":
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.9.tgz#77e59d438522a6fb898fa43dc3455c6e72f3963d"
@@ -5580,6 +5584,10 @@ react-is@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
+
+react-native-config@luggit/react-native-config:
+  version "1.4.1"
+  resolved "https://codeload.github.com/luggit/react-native-config/tar.gz/601814f6066c8fb57ce138c1ca15d078ecb3befd"
 
 react-native-device-info@^7.3.1:
   version "7.3.1"
