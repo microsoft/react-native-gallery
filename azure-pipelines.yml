@@ -15,7 +15,7 @@ variables:
   # AgentPool.Medium: rnw-pool-4
   # AgentPool.Large: windevbuildagents
 
-pool: windows-latest
+pool: windows-2019
 
 steps:
 - checkout: self
