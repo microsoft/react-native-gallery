@@ -61,13 +61,13 @@ steps:
   displayName: Build project (Release)
   timeoutInMinutes: 60
   inputs:
-    script: npx --no-install react-native run-windows --arch $buildPlatform --no-launch --logging --buildLogDirectory $BuildLogDirectory\Release --release
+    script: npx --no-install react-native run-windows --arch x64 --no-launch --logging --buildLogDirectory $BuildLogDirectory\Release --release
 
 - task: CmdLine@2
   displayName: Build project (Debug)
   timeoutInMinutes: 60
   inputs:
-    script: npx --no-install react-native run-windows --arch $buildPlatform --no-launch --logging --buildLogDirectory $BuildLogDirectory\Debug
+    script: npx react-native run-windows --arch x64 --no-launch --logging --buildLogDirectory $BuildLogDirectory\Debug --debug
 
 - task: PublishBuildArtifacts@1
   displayName: Upload build logs
