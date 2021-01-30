@@ -56,7 +56,7 @@ steps:
   displayName: Build project (Release)
   timeoutInMinutes: 60
   inputs:
-    script: npx --no-deploy react-native run-windows --arch x64 --no-launch --logging --buildLogDirectory $BuildLogDirectory\Release --release
+    script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --release
 
 - task: CmdLine@2
   displayName: Build project (Debug)
