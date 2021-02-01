@@ -62,7 +62,7 @@ steps:
   displayName: Build project (Debug)
   timeoutInMinutes: 60
   inputs:
-    script: npx react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Debug --debug
+    script: npx react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Debug
 
 - task: PublishBuildArtifacts@1
   displayName: Upload build logs
