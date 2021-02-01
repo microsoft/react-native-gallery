@@ -14,7 +14,6 @@
     "@react-native-community/clipboard": "^1.5.1",
     "@react-native-community/datetimepicker": "^3.0.8",
     "@react-native-community/masked-view": "^0.1.10",
-    "@react-native-community/progress-view": "^1.2.3",
     "@react-native-community/slider": "4.0.0-rc.2",
     "@react-native-picker/picker": "^1.9.4",
     "@react-navigation/bottom-tabs": "^5.8.0",
