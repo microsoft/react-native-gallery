@@ -1,8 +1,0 @@
-name: CI Loop
-
-# Run this workflow every time a new commit pushed to your repository
-on: push
-
-jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
