@@ -55,6 +55,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNCConfig", "..\node_module
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNSketchCanvas", "..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj", "{F96593A0-46B4-47DA-A15A-7A135934CE1F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "progress-view", "..\node_modules\@react-native-community\progress-view\windows\progress-view\progress-view.vcxproj", "{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}*SharedItemsImports = 4
@@ -66,6 +68,7 @@ Global
 		..\node_modules\react-native-windows\JSI\Shared\JSI.Shared.vcxitems*{a62d504a-16b8-41d2-9f19-e2e86019e5e4}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{bedcc600-4541-41f2-aa46-9e058202b6ad}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Chakra\Chakra.vcxitems*{c38970c0-5fbf-4d69-90d8-cbac225ae895}*SharedItemsImports = 9
+		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{ca54a654-5e81-44dc-af3f-cf55ef5b493a}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{da8b35b3-da00-4b02-bde6-6a397b3fd46b}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{eaf81beb-a159-4421-9b6d-e59c37828a57}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\include\Include.vcxitems*{ef074ba1-2d54-4d49-a28e-5e040b47cd2e}*SharedItemsImports = 9
@@ -335,22 +338,42 @@ Global
 		{F1F427C9-66A2-4ED5-B482-3D583B6B20C7}.Release|x64.Build.0 = Release|x64
 		{F1F427C9-66A2-4ED5-B482-3D583B6B20C7}.Release|x86.ActiveCfg = Release|Win32
 		{F1F427C9-66A2-4ED5-B482-3D583B6B20C7}.Release|x86.Build.0 = Release|Win32
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|ARM.ActiveCfg = Debug|ARM
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|ARM.Build.0 = Debug|ARM
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|ARM64.Build.0 = Debug|ARM64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|x64.ActiveCfg = Debug|x64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|x64.Build.0 = Debug|x64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|x86.ActiveCfg = Debug|Win32
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Debug|x86.Build.0 = Debug|Win32
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|ARM.ActiveCfg = Release|ARM
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|ARM.Build.0 = Release|ARM
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|ARM64.ActiveCfg = Release|ARM64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|ARM64.Build.0 = Release|ARM64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|x64.ActiveCfg = Release|x64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|x64.Build.0 = Release|x64
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|x86.ActiveCfg = Release|Win32
-		{6F9AC236-D97D-4C75-971B-91AC99D7C23B}.Release|x86.Build.0 = Release|Win32
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|ARM.Build.0 = Debug|ARM
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|x64.ActiveCfg = Debug|x64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|x64.Build.0 = Debug|x64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|x86.ActiveCfg = Debug|Win32
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|x86.Build.0 = Debug|Win32
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Debug|x86.Deploy.0 = Debug|Win32
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|ARM.ActiveCfg = Release|ARM
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|ARM.Build.0 = Release|ARM
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|ARM64.Build.0 = Release|ARM64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|x64.ActiveCfg = Release|x64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|x64.Build.0 = Release|x64
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|x86.ActiveCfg = Release|Win32
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|x86.Build.0 = Release|Win32
+		{F96593A0-46B4-47DA-A15A-7A135934CE1F}.Release|x86.Deploy.0 = Release|Win32
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|ARM.Build.0 = Debug|ARM
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|ARM64.Build.0 = Debug|ARM64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|x64.ActiveCfg = Debug|x64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|x64.Build.0 = Debug|x64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|x86.ActiveCfg = Debug|Win32
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|x86.Build.0 = Debug|Win32
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Debug|x86.Deploy.0 = Debug|Win32
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|ARM.ActiveCfg = Release|ARM
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|ARM.Build.0 = Release|ARM
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|ARM64.ActiveCfg = Release|ARM64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|ARM64.Build.0 = Release|ARM64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|x64.ActiveCfg = Release|x64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|x64.Build.0 = Release|x64
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|x86.ActiveCfg = Release|Win32
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|x86.Build.0 = Release|Win32
+		{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
