@@ -1,7 +1,18 @@
+# React Native Gallery
+
+Welocome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support.
+
+# Building React Native Gallery
+
+If you wish to build React Native Gallery on your computer locally, follow the following steps:
+
+1. Clone the repository.
+2. In the root directory of the repository on your device, run `yarn`.
+3. In the same directory run `npx react-native run-windows`.
 
 # Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
@@ -13,12 +24,14 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+For addtional information about contributing to React Native Gallery visit [here](https://github.com/microsoft/react-native-gallery/wiki/Contributing-to-React-Native-Gallery).
+
 # Adding Sample Pages
 
-To add a sample page:  
+To add a sample page:
 
-1) Author your page as a standard RN component and export the component.  See https://github.com/microsoft/RNGallery/tree/main/src/examples for existing sample pages
-2) Add an entry to the array in the [RNGalleryList](https://github.com/microsoft/RNGallery/blob/f592dac5969f054dad4837929d214c2fd63495a5/src/RNGalleryList.ts#L1)  
+1. Author your page as a standard RN component and export the component. See https://github.com/microsoft/RNGallery/tree/main/src/examples for existing sample pages
+2. Add an entry to the array in the [RNGalleryList](https://github.com/microsoft/RNGallery/blob/f592dac5969f054dad4837929d214c2fd63495a5/src/RNGalleryList.ts#L1)
 
 ```
 import {FooExamplePage} from './examples/FooExamplePage';
@@ -32,5 +45,4 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
 ];
 ```
 
-It's that simple!  The app will pick up your new sample page, add an item in the navigation draw for it, and navigate to your page when the user clicks on it.
-
+It's that simple! The app will pick up your new sample page, add an item in the navigation draw for it, and navigate to your page when the user clicks on it. If you want a more detailed set of instructions on how to add a page visit [here](https://github.com/microsoft/react-native-gallery/wiki/Add-a-Component-Page).

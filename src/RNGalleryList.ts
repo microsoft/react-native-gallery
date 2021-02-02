@@ -9,6 +9,7 @@ import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
 import {SketchExamplePage} from './examples/SketchExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
+import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
@@ -59,6 +60,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Image',
     component: ImageExamplePage,
+  },
+  {
+    key: 'Permissions',
+    component: PermissionsExamplePage,
   },
   {
     key: 'Picker',
