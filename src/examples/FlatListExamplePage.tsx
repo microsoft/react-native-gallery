@@ -140,10 +140,6 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
           numColumns={3}
         />
       </Example>
-      {/*pageCodeUrl link should be link to source code for the page in react-native-gallery repo*/}
-      {/*feedbackUrl link should be link to issues page in react-native-gallery repo*/}
-      {/*entries in the documentation prop should be labels and urls that point to the Github repo for the component
-        and any other applicable documentation for the component such as information on facebook's react native website.*/}
       <LinkContainer
         pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/FlatListExamplePage.tsx"
         feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
