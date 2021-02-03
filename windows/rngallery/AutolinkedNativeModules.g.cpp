@@ -12,6 +12,9 @@
 // Includes from react-native-permissions
 #include <winrt/RNPermissions.h>
 
+// Includes from react-native-print
+#include <winrt/RNPrint.h>
+
 // Includes from @terrylinla/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
 
@@ -26,6 +29,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
     // IReactPackageProviders from react-native-permissions
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
+    // IReactPackageProviders from react-native-print
+    packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
 }

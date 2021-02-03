@@ -14,6 +14,11 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj">
       <Project>{99677b9d-a27b-4239-930e-c36c8d339c54}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-print -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-print\windows\RNPrint\RNPrint.vcxproj">
+      <Project>{6f9ac236-d97d-4c75-971b-91ac99d7c23b}</Project>
+    </ProjectReference>
+    <!-- Projects from @terrylin
     <!-- Projects from @terrylinla/react-native-sketch-canvas -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
       <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
