@@ -10,6 +10,16 @@ If you wish to build React Native Gallery on your computer locally, follow the f
 2. In the root directory of the repository on your device, run `yarn`.
 3. In the same directory run `npx react-native run-windows`.
 
+# Installing React Native Gallery
+
+If you would prefer to avoid building the project from scratch, you can install and run the .appx for the app. Follow the following steps:
+
+1. Clone the repository.
+2. Checkout the v0.64.0-preview.5 branch.
+3. Run `yarn start`.
+4. Open windows/rngallery_1.0.2.0_Win32_Test/rngallery_1.0.2.0_Win32.appx.
+5. Install app and launch.
+
 # Contributing
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a
