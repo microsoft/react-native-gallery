@@ -19,6 +19,7 @@ import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
+import {OrientationLockerExamplePage} from './examples/OrientationLockerExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -61,6 +62,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Image',
     component: ImageExamplePage,
+  },
+  {
+    key: 'OrientationLocker',
+    component: OrientationLockerExamplePage,
   },
   {
     key: 'Permissions',
