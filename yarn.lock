@@ -5866,6 +5866,10 @@ react-native-permissions@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.0.0.tgz#d9d107700741d41f8392f202f35a61f481fb0e68"
   integrity sha512-zBvf+o3NhgKmBk1I06GzZXaDfc9SUyO4M5TMcaCF1pwG1h4sI+XAv3gWSbryl6WnaZQc1zA+g7SocSoYcpJN5g==
 
+react-native-print@christopherdro/react-native-print:
+  version "0.7.0"
+  resolved "https://codeload.github.com/christopherdro/react-native-print/tar.gz/f51d0d1a60bf404bee08e48d68bd4c6ec65e8e65"
+
 react-native-reanimated@^1.10.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.13.0.tgz#1ee5d27d34bd2cee7dfad4ae9a3673300872c917"
