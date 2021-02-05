@@ -7,7 +7,7 @@ import {LinkContainer} from '../components/LinkContainer';
 
 export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   const [pressed, setPressed] = useState(false);
-  const [timesPressed, setTimesPressed] = useState(0);
+  const [timesPressed, setTimesPressed] = useState(1);
   const [currEvent, setCurrEvent] = useState('');
 
   const example1jsx = `import {Pressable} from 'react-native';
@@ -20,20 +20,23 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
 
   const example2jsx = `import {Pressable} from 'react-native';
   
-<Pressable style={{
-    borderColor: 'black',
-    width:140,
-    borderRadius: 8,
-    height: 25,
-    backgroundColor: 'rgb(210, 230, 255)', 
-    opacity: 0.5,
-  }} 
-  disabled={true} onPress={() => {setPressed(true)
+<Pressable 
+    style={{
+      width:140,
+      height: 50, 
+      borderRadius: 2, 
+      backgroundColor: 'lightgrey', 
+      opacity: 0.5,
+    }} 
+    disabled={true} 
+    onPress={() => {setPressed(true)
   }}>
   {({pressed}) => (
-    <Text style={{
-      textAlign: 'center',
-    }}>
+    <Text 
+      style={{
+        textAlign: 'center',
+        paddingVertical: 15,
+      }}>
       {pressed ? 'This will never be triggered.' : 'Disabled Pressable'}
     </Text>
   )}
@@ -49,13 +52,14 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
     {
       backgroundColor: pressed
         ? 'rgb(210, 230, 255)'
-        : 'rgb(242, 242, 242)',
-      
-      width: 120
+        : 'lightgrey',
+      width: 140, 
+      height: 50, 
+      borderRadius: 2,
     }
   ]}>
   {({ pressed }) => (
-    <Text>
+    <Text style={{textAlign: 'center', paddingVertical: 15,}}>
       {pressed ? \`Pressed \${timesPressed} times!\` : 'Press Me'}
     </Text>
   )}
@@ -63,12 +67,12 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
 
   const example4jsx = `import {Pressable} from 'react-native';
   
-<Pressable
+<Pressable style={{width:200, height: 50, borderRadius: 2, backgroundColor: 'lightgrey',}}
   onPress={() => setCurrEvent('press')}
   onPressIn={() => setCurrEvent('pressIn')}
   onPressOut={() => setCurrEvent('pressOut')}
   onLongPress={() => setCurrEvent('longPress')}>
-  <Text>Most recent event: {currEvent}</Text>
+  <Text style={{textAlign: 'center', paddingVertical: 15,}}>Most recent event: {currEvent}</Text>
 </Pressable>`
 
 
@@ -99,24 +103,26 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             {
               backgroundColor: pressed
                 ? 'rgb(210, 230, 255)'
-                : 'rgb(242, 242, 242)',
-              width: 120
+                : 'lightgrey',
+              width: 140, 
+              height: 50, 
+              borderRadius: 2,
             }
           ]}>
           {({ pressed }) => (
-            <Text>
+            <Text style={{textAlign: 'center', paddingVertical: 15,}}>
               {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
             </Text>
           )}
         </Pressable>
       </Example>
       <Example title="A Pressable component displaying feedback events." code={example4jsx}>
-        <Pressable
+        <Pressable style={{width:200, height: 50, borderRadius: 2, backgroundColor: 'lightgrey',}}
             onPress={() => setCurrEvent('press')}
             onPressIn={() => setCurrEvent('pressIn')}
             onPressOut={() => setCurrEvent('pressOut')}
             onLongPress={() => setCurrEvent('longPress')}>
-            <Text>Most recent event: {currEvent}</Text>
+            <Text style={{textAlign: 'center', paddingVertical: 15,}}>Most recent event: {currEvent}</Text>
         </Pressable>
       </Example>
       <LinkContainer
