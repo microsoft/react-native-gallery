@@ -4,6 +4,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {LinkContainer} from '../components/LinkContainer';
+import {useRef} from 'reactn';
 
 export const TextExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {Text} from 'react-native';
@@ -43,7 +44,8 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Text"
-      description="Text is a component for displaying read-only text in your app.">
+      description="Text is a component for displaying read-only text in your app."
+      wrappedNativeControl={true}>
       <Example title="A simple line of Text." code={example1jsx}>
         <Text>Here is a line of text.</Text>
       </Example>
@@ -91,6 +93,11 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
             label: 'Text Source Code',
             url:
               'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
+          },
+          {
+            label: 'Wrapped XAML Control: TextBlock',
+            url:
+              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textblock?view=winrt-19041',
           },
         ]}
       />

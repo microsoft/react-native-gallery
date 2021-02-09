@@ -26,7 +26,8 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
       title="DatePicker"
       description={
         'Use a DatePicker to let users set a date in your app, for example to schedule an appointment. The DatePicker displays three controls for month, date, and year. These controls are easy to use with touch or mouse, and they can be styled and configured in several different ways.'
-      }>
+      }
+      wrappedNativeControl={true}>
       <Example title="A simple DatePicker." code={textExample1}>
         <DateTimePicker value={date1} mode="date" />
       </Example>
@@ -48,6 +49,11 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
             label: 'DateTimePicker',
             url:
               'https://github.com/react-native-datetimepicker/datetimepicker',
+          },
+          {
+            label: 'Wrapped XAML Control: CalendarDatePicker',
+            url:
+              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.calendardatepicker?view=winrt-19041',
           },
         ]}
       />

@@ -17,7 +17,9 @@ export const TemplateExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Template"
-      description="Add component description here. See XAML Controls Gallery for description contents if available.">
+      description="Add component description here. See XAML Controls Gallery for description contents if available."
+      wrappedNativeControl={false}>
+      {/*If component is a wrapped XAML control, set this prop to true. Otherwise, remove this prop specification.*/}
       <Example title="Example 1" code={example1jsx}>
         <Text>Add Example 1 instance of component here.</Text>
       </Example>

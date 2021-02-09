@@ -120,7 +120,8 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="View"
-      description="View is a container that maps directly to the native view equivalent on the platform React Native is running on. View is designed to be nested and can have zero to many children of any component type.">
+      description="View is a container that maps directly to the native view equivalent on the platform React Native is running on. View is designed to be nested and can have zero to many children of any component type."
+      wrappedNativeControl={true}>
       <Example title="A simple View." code={example1jsx}>
         <View />
       </Example>
@@ -252,6 +253,11 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             label: 'View Source Code',
             url:
               'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewViewManager.h',
+          },
+          {
+            label: 'Wrapped Native Control: ViewPanel',
+            url:
+              'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewPanel.h',
           },
         ]}
       />

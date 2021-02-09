@@ -29,7 +29,8 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
       title="TimePicker"
       description={
         'Use a TimePicker to let users set a time in your app, for example to set a reminder. The TimePicker displays three controls month, day, and AM/PM. These controls are easy to use with touch or mouse, and they can be styled and configured in several different ways.'
-      }>
+      }
+      wrappedNativeControl={true}>
       <Example title="A simple TimePicker." code={example1jsx}>
         <DateTimePicker
           mode="time"
@@ -56,6 +57,11 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
             label: 'DateTimePicker',
             url:
               'https://github.com/react-native-datetimepicker/datetimepicker',
+          },
+          {
+            label: 'Wrapped XAML Control: TimePicker',
+            url:
+              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.timepicker?view=winrt-19041',
           },
         ]}
       />

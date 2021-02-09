@@ -35,7 +35,8 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Image"
-      description="A component which scales and displays images.">
+      description="A component which scales and displays images."
+      wrappedNativeControl={true}>
       <Example title="A simple Image from web source." code={example1jsx}>
         <Image
           style={{width: 50, height: 50}}
@@ -84,6 +85,11 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
             label: 'Image Source Code',
             url:
               'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
+          },
+          {
+            label: 'Wrapped XAML Control: Grid',
+            url:
+              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid?view=winrt-19041',
           },
         ]}
       />

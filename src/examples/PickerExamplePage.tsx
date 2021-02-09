@@ -30,7 +30,8 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Picker"
-      description="A picker control that drops down a flyout of choices from which one can be chosen.">
+      description="A picker control that drops down a flyout of choices from which one can be chosen."
+      wrappedNativeControl={true}>
       <Example title="A simple Picker." code={example1jsx}>
         <Picker style={{height: 50, width: 100}}>
           <Picker.Item label="Option 1" value="Option 1" />
@@ -61,6 +62,11 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
           {
             label: 'Picker',
             url: 'https://github.com/react-native-picker/picker',
+          },
+          {
+            label: 'Wrapped XAML Control: ComboBox',
+            url:
+              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox?view=winrt-19041',
           },
         ]}
       />
