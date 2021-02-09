@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, Image, Pressable, Alert} from 'react-native';
+import {StyleSheet, View, Text, Image} from 'react-native';
 
 const styles = StyleSheet.create({
   badgeContainer: {
@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#E6E6E6',
   },
   badgeText: {
     fontSize: 14,
@@ -22,29 +23,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const badgeInfoAlert = () =>
-  Alert.alert(
-    'Wrapped Windows Control',
-    'This badge marks that this component has been built by wrapping a native Windows XAML control resulting in the UI of the component matching its native Windows couterpart.',
-    [{text: 'OK'}],
-    {cancelable: false},
-  );
-
 export function NativeControlBadge() {
   return (
-    <Pressable
-      style={({pressed}) => [
-        {
-          backgroundColor: pressed ? 'white' : '#E6E6E6',
-        },
-        styles.badgeContainer,
-      ]}
-      onPress={badgeInfoAlert}>
+    <View
+      style={styles.badgeContainer}
+      tooltip="This badge marks that this component has been built by wrapping a native Windows XAML control resulting in the UI of the component matching its native Windows couterpart.">
       <Text style={styles.badgeText}>Wrapped Windows Control</Text>
       <Image
         style={styles.badgeIcon}
         source={require('../assets/monitor_icon.png')}
       />
-    </Pressable>
+    </View>
   );
 }
