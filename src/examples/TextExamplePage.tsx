@@ -4,7 +4,6 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {LinkContainer} from '../components/LinkContainer';
-import {useRef} from 'reactn';
 
 export const TextExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {Text} from 'react-native';
