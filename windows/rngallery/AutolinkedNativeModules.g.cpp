@@ -12,9 +12,6 @@
 // Includes from react-native-device-info
 #include <winrt/RNDeviceInfoCPP.h>
 
-// Includes from react-native-orientation-locker
-#include <winrt/OrientationWindows.h>
-
 // Includes from react-native-permissions
 #include <winrt/RNPermissions.h>
 
@@ -32,8 +29,6 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
-    // IReactPackageProviders from react-native-orientation-locker
-    packageProviders.Append(winrt::OrientationWindows::ReactPackageProvider());
     // IReactPackageProviders from react-native-permissions
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print
