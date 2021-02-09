@@ -12,7 +12,8 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="ScrollView"
-      description="ScrollView is a scrollable view which can display content outside of the initial viewing window by scrolling down the page.">
+      description="ScrollView is a scrollable view which can display content outside of the initial viewing window by scrolling down the page."
+      wrappedNativeControl={true}>
       <Example title="A simple ScrollView with text." code={example1jsx}>
         <ScrollView style={{height: 40}}>
           <Text>
@@ -106,6 +107,11 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
             label: 'ScrollView Source Code',
             url:
               'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ScrollViewManager.h',
+          },
+          {
+            label: 'Wrapped XAML Control: ScrollViewer',
+            url:
+              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-19041',
           },
         ]}
       />
