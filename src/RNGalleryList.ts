@@ -18,7 +18,9 @@ import {TextInputExamplePage} from './examples/TextInputExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
+import {PressableExamplePage} from './examples/PressableExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
+import {ScrollViewExamplePage} from './examples/ScrollViewExample';
 
 interface IRNGalleryExample {
   key: string;
@@ -71,6 +73,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: PickerExamplePage,
   },
   {
+    key: 'Pressable',
+    component: PressableExamplePage,
+  },
+  {
     key: 'Print',
     component: PrintExamplePage,
   },
@@ -85,6 +91,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TimePicker',
     component: TimePickerExamplePage,
+  },
+  {
+    key: 'ScrollView',
+    component: ScrollViewExamplePage,
   },
   {
     key: 'Slider',
