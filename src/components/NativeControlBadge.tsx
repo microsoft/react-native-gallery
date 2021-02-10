@@ -27,7 +27,7 @@ export function NativeControlBadge() {
   return (
     <View
       style={styles.badgeContainer}
-      tooltip="This badge marks that this component has been built by wrapping a native Windows XAML control resulting in the UI of the component matching its native Windows couterpart.">
+      tooltip="This component wraps a native Windows XAML control: its visual appearance, animations, etc. will always match its native Windows counterpart.">
       <Text style={styles.badgeText}>Wrapped Windows Control</Text>
       <Image
         style={styles.badgeIcon}
