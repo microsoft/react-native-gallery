@@ -3,7 +3,6 @@ import {Text} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const TextExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {Text} from 'react-native';
@@ -43,7 +42,24 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Text"
-      description="Text is a component for displaying read-only text in your app.">
+      description="Text is a component for displaying read-only text in your app."
+      wrappedNativeControl={{
+        control: 'TextBlock',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textblock?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Text',
+          url: 'https://reactnative.dev/docs/text',
+        },
+        {
+          label: 'Text Source Code',
+          url:
+            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
+        },
+      ]}>
       <Example title="A simple line of Text." code={example1jsx}>
         <Text>Here is a line of text.</Text>
       </Example>
@@ -79,21 +95,6 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
           </Text>
         </Text>
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Text',
-            url: 'https://reactnative.dev/docs/text',
-          },
-          {
-            label: 'Text Source Code',
-            url:
-              'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
-          },
-        ]}
-      />
     </Page>
   );
 };
