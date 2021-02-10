@@ -3,7 +3,6 @@ import {Text, Switch} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
@@ -43,7 +42,23 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Switch"
       description="Use the Switch component to present users with exactly two mutually exclusive options (like on/off), where choosing an option results in an immediate commit."
-      wrappedNativeControl={true}>
+      wrappedNativeControl={{
+        control: 'ToggleSwitch',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.toggleswitch?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SwitchExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Switch',
+          url: 'https://reactnative.dev/docs/switch',
+        },
+        {
+          label: 'Switch Source Code',
+          url:
+            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/SwitchViewManager.h',
+        },
+      ]}>
       <Example title="A simple Switch." code={example1jsx}>
         <Switch value={switch1} onValueChange={onSwitchChange1} />
       </Example>
@@ -58,26 +73,6 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
           trackColor={{false: 'blue', true: 'lightskyblue'}}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SwitchExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Switch',
-            url: 'https://reactnative.dev/docs/switch',
-          },
-          {
-            label: 'Switch Source Code',
-            url:
-              'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/SwitchViewManager.h',
-          },
-          {
-            label: 'Wrapped XAML Control: ToggleSwitch',
-            url:
-              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.toggleswitch?view=winrt-19041',
-          },
-        ]}
-      />
     </Page>
   );
 };

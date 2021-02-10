@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
+import {LinkContainer} from './LinkContainer';
 
 const styles = StyleSheet.create({
   container: {
@@ -28,18 +29,49 @@ const styles = StyleSheet.create({
   },
 });
 
-const DisplayBadge = (wrappedNativeControl: boolean | undefined) => {
+const DisplayBadge = (
+  wrappedNativeControl: {control: string; url: string} | undefined,
+) => {
   if (wrappedNativeControl) {
     return <NativeControlBadge />;
   } else {
-    return <View />;
+    return;
+  }
+};
+
+const DisplayLinks = (
+  wrappedNativeControl: {control: string; url: string} | undefined,
+  pageCodeUrl: string,
+  documentation: {label: string; url: string}[],
+) => {
+  if (wrappedNativeControl) {
+    return (
+      <LinkContainer
+        pageCodeUrl={pageCodeUrl}
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={documentation.concat({
+          label: 'Wrapped XAML Control: ' + wrappedNativeControl.control,
+          url: wrappedNativeControl.url,
+        })}
+      />
+    );
+  } else {
+    return (
+      <LinkContainer
+        pageCodeUrl={pageCodeUrl}
+        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
+        documentation={documentation}
+      />
+    );
   }
 };
 
 export function Page(props: {
   title: string;
   description?: string;
-  wrappedNativeControl?: boolean;
+  wrappedNativeControl?: {control: string; url: string};
+  pageCodeUrl?: string;
+  documentation?: {label: string; url: string}[];
   children: React.ReactNode;
 }) {
   return (
@@ -51,7 +83,14 @@ export function Page(props: {
 
       {props.description && <Text>{props.description}</Text>}
 
-      <ScrollView style={styles.scrollView}>{props.children}</ScrollView>
+      <ScrollView style={styles.scrollView}>
+        {props.children}
+        {DisplayLinks(
+          props.wrappedNativeControl,
+          props.pageCodeUrl,
+          props.documentation,
+        )}
+      </ScrollView>
     </View>
   );
 }

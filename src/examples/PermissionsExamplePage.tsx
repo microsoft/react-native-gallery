@@ -3,7 +3,6 @@ import {Button, FlatList, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 import {check, Permission, PERMISSIONS, PermissionStatus, request, RESULTS, WindowsPermission} from 'react-native-permissions';
 import {AndroidPermissionMap} from 'react-native-permissions/dist/typescript/permissions.android';
 import {IOSPermissionMap} from 'react-native-permissions/dist/typescript/permissions.ios';
@@ -100,7 +99,15 @@ function Example() {
   return (
     <Page
       title="Permissions"
-      description="Allows requesting and showing available system permissions via the react-native-permissions module.">
+      description="Allows requesting and showing available system permissions via the react-native-permissions module."
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Permissions',
+          url:
+            'https://github.com/zoontek/react-native-permissions',
+        },
+      ]}>
       <Example title="Windows Permissions" code={exampleJsx}>
         <FlatList
           data={entries}
@@ -108,17 +115,6 @@ function Example() {
           keyExtractor={item => item[0]}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Permissions',
-            url:
-              'https://github.com/zoontek/react-native-permissions',
-          },
-        ]}
-      />
     </Page>
   );
 };

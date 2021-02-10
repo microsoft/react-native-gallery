@@ -3,7 +3,6 @@ import {Text, FlatList, View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 const Data = [
   {
@@ -85,7 +84,19 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="FlatList"
-      description="A component for rendering flat lists in React Native which supports horizontal mode, headers, footers, separators, scroll loading, and more. ">
+      description="A component for rendering flat lists in React Native which supports horizontal mode, headers, footers, separators, scroll loading, and more. "
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/FlatListExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Flat List',
+          url: 'https://reactnative.dev/docs/flatlist',
+        },
+        {
+          label: 'Flat List Source Code',
+          url:
+            'https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js',
+        },
+      ]}>
       <Example title="A simple FlatList." code={example1jsx}>
         <FlatList
           data={Data}
@@ -140,21 +151,6 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
           numColumns={3}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/FlatListExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Flat List',
-            url: 'https://reactnative.dev/docs/flatlist',
-          },
-          {
-            label: 'Flat List Source Code',
-            url:
-              'https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js',
-          },
-        ]}
-      />
     </Page>
   );
 };

@@ -3,14 +3,24 @@ import React from 'react';
 import CheckBox from '@react-native-community/checkbox';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Checkbox"
       description="This is a page showing how to use a CheckBox"
-      wrappedNativeControl={true}>
+      wrappedNativeControl={{
+        control: 'CheckBox',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.checkbox?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/CheckBoxExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Checkbox',
+          url: 'https://github.com/react-native-checkbox/react-native-checkbox',
+        },
+      ]}>
       <Example
         title="Simple Checkbox"
         code={`import CheckBox from '@react-native-community/checkbox';
@@ -83,22 +93,6 @@ function Example() {
 }`}>
         <CheckBox tintColor="red" />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/CheckBoxExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Checkbox',
-            url:
-              'https://github.com/react-native-checkbox/react-native-checkbox',
-          },
-          {
-            label: 'Wrapped XAML Control: CheckBox',
-            url:
-              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.checkbox?view=winrt-19041',
-          },
-        ]}
-      />
     </Page>
   );
 };

@@ -3,7 +3,6 @@ import {Text, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   const [timesPressed, setTimesPressed] = useState(1);
@@ -75,7 +74,19 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Pressable"
-      description="A component that detects various touch interactions.">
+      description="A component that detects various touch interactions."
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PressableExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Pressable',
+          url: 'https://reactnative.dev/docs/pressable',
+        },
+        {
+          label: 'Pressable Source Code',
+          url:
+            'https://github.com/microsoft/react-native-windows/blob/master/vnext/src/Libraries/Components/Pressable/Pressable.windows.js',
+        },
+      ]}>
       <Example title="A simple Pressable component." code={example1jsx}>
         <Pressable>
           {({pressed}) => <Text>{pressed ? 'Pressed!' : 'Press Me'}</Text>}
@@ -137,21 +148,6 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           </Text>
         </Pressable>
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PressableExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Pressable',
-            url: 'https://reactnative.dev/docs/pressable',
-          },
-          {
-            label: 'Pressable Source Code',
-            url:
-              'https://github.com/microsoft/react-native-windows/blob/master/vnext/src/Libraries/Components/Pressable/Pressable.windows.js',
-          },
-        ]}
-      />
     </Page>
   );
 };

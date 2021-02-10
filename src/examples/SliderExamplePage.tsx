@@ -3,7 +3,6 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Slider from '@react-native-community/slider';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const SliderExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import Slider from '@react-native-community/slider';
@@ -42,7 +41,18 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Slider"
       description="Use a Slider when you want your users to be able to set defined, contiguous values (such as volume or brightness) or a range of discrete values (such as screen resolution settings)."
-      wrappedNativeControl={true}>
+      wrappedNativeControl={{
+        control: 'Slider',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.slider?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SliderExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Slider',
+          url: 'https://github.com/callstack/react-native-slider',
+        },
+      ]}>
       <Example title="A simple Slider." code={example1jsx}>
         <Slider
           style={{width: 200, height: 40}}
@@ -81,21 +91,6 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
           disabled={true}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SliderExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Slider',
-            url: 'https://github.com/callstack/react-native-slider',
-          },
-          {
-            label: 'Wrapped XAML Control: Slider',
-            url:
-              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.slider?view=winrt-19041',
-          },
-        ]}
-      />
     </Page>
   );
 };

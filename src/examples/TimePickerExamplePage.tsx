@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
   const [time, _setTime] = useState(new Date(0));
@@ -30,7 +29,18 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
       description={
         'Use a TimePicker to let users set a time in your app, for example to set a reminder. The TimePicker displays three controls month, day, and AM/PM. These controls are easy to use with touch or mouse, and they can be styled and configured in several different ways.'
       }
-      wrappedNativeControl={true}>
+      wrappedNativeControl={{
+        control: 'TimePicker',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.timepicker?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TemplateExamplePage.tsx"
+      documentation={[
+        {
+          label: 'DateTimePicker',
+          url: 'https://github.com/react-native-datetimepicker/datetimepicker',
+        },
+      ]}>
       <Example title="A simple TimePicker." code={example1jsx}>
         <DateTimePicker
           mode="time"
@@ -49,22 +59,6 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
           minuteInterval={5}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TemplateExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'DateTimePicker',
-            url:
-              'https://github.com/react-native-datetimepicker/datetimepicker',
-          },
-          {
-            label: 'Wrapped XAML Control: TimePicker',
-            url:
-              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.timepicker?view=winrt-19041',
-          },
-        ]}
-      />
     </Page>
   );
 };

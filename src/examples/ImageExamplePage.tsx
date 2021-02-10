@@ -3,7 +3,6 @@ import {Image} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const ImageExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {Image} from 'react-native';
@@ -36,7 +35,23 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Image"
       description="A component which scales and displays images."
-      wrappedNativeControl={true}>
+      wrappedNativeControl={{
+        control: 'Grid',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ImageExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Image',
+          url: 'https://reactnative.dev/docs/image',
+        },
+        {
+          label: 'Image Source Code',
+          url:
+            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
+        },
+      ]}>
       <Example title="A simple Image from web source." code={example1jsx}>
         <Image
           style={{width: 50, height: 50}}
@@ -73,26 +88,6 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
           source={require('../assets/tiny_logo.png')}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ImageExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Image',
-            url: 'https://reactnative.dev/docs/image',
-          },
-          {
-            label: 'Image Source Code',
-            url:
-              'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
-          },
-          {
-            label: 'Wrapped XAML Control: Grid',
-            url:
-              'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid?view=winrt-19041',
-          },
-        ]}
-      />
     </Page>
   );
 };
