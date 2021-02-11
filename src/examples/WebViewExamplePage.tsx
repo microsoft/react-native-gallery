@@ -5,9 +5,7 @@ import {Page} from '../components/Page';
 import {WebView} from 'react-native-webview';
 
 export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
-  const example1jsx = `import {WebView} from 'react-native-webview';
-  
-<WebView
+  const example1jsx = `<WebView
   source={{
     uri: 'https://github.com/microsoft/react-native-gallery',
   }}
