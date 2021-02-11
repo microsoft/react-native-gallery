@@ -12,6 +12,12 @@
 // Includes from react-native-device-info
 #include <winrt/RNDeviceInfoCPP.h>
 
+// Includes from react-native-permissions
+#include <winrt/RNPermissions.h>
+
+// Includes from react-native-print
+#include <winrt/RNPrint.h>
+
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -23,6 +29,10 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from react-native-permissions
+    packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
+    // IReactPackageProviders from react-native-print
+    packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
 }
 
 }

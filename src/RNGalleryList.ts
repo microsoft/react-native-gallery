@@ -9,7 +9,9 @@ import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
 import {SketchExamplePage} from './examples/SketchExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
+import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
+import {PrintExamplePage} from './examples/PrintExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
@@ -17,6 +19,9 @@ import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
 import {WebViewExamplePage} from './examples/WebViewExamplePage';
+import {PressableExamplePage} from './examples/PressableExamplePage';
+import {FlatListExamplePage} from './examples/FlatListExamplePage';
+import {ScrollViewExamplePage} from './examples/ScrollViewExample';
 
 interface IRNGalleryExample {
   key: string;
@@ -53,12 +58,28 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: DeviceInfoExamplePage,
   },
   {
+    key: 'FlatList ',
+    component: FlatListExamplePage,
+  },
+  {
     key: 'Image',
     component: ImageExamplePage,
   },
   {
+    key: 'Permissions',
+    component: PermissionsExamplePage,
+  },
+  {
     key: 'Picker',
     component: PickerExamplePage,
+  },
+  {
+    key: 'Pressable',
+    component: PressableExamplePage,
+  },
+  {
+    key: 'Print',
+    component: PrintExamplePage,
   },
   {
     key: 'Text',
@@ -71,6 +92,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TimePicker',
     component: TimePickerExamplePage,
+  },
+  {
+    key: 'ScrollView',
+    component: ScrollViewExamplePage,
   },
   {
     key: 'Slider',

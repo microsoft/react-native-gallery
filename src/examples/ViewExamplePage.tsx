@@ -3,7 +3,6 @@ import {View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const ViewExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {View} from 'react-native';
@@ -120,7 +119,24 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="View"
-      description="View is a container that maps directly to the native view equivalent on the platform React Native is running on. View is designed to be nested and can have zero to many children of any component type.">
+      description="View is a container that maps directly to the native view equivalent on the platform React Native is running on. View is designed to be nested and can have zero to many children of any component type."
+      wrappedNativeControl={{
+        control: 'ViewPanel',
+        url:
+          'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewPanel.',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ViewExamplePage.tsx"
+      documentation={[
+        {
+          label: 'View',
+          url: 'https://reactnative.dev/docs/view',
+        },
+        {
+          label: 'View Source Code',
+          url:
+            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewViewManager.h',
+        },
+      ]}>
       <Example title="A simple View." code={example1jsx}>
         <View />
       </Example>
@@ -240,21 +256,6 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
           />
         </View>
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ViewExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'View',
-            url: 'https://reactnative.dev/docs/view',
-          },
-          {
-            label: 'View Source Code',
-            url:
-              'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewViewManager.h',
-          },
-        ]}
-      />
     </Page>
   );
 };

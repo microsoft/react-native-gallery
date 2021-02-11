@@ -3,7 +3,6 @@ import {TextInput} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   const [text1, setText1] = React.useState('');
@@ -64,7 +63,29 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="TextInput"
-      description="A foundational component for inputting text into the app via a keyboard.">
+      description="A foundational component for inputting text into the app via a keyboard."
+      wrappedNativeControl={{
+        control: 'TextBox',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextInputExamplePage.tsx"
+      documentation={[
+        {
+          label: 'TextInput',
+          url: 'https://reactnative.dev/docs/textinput',
+        },
+        {
+          label: 'TextInput Source Code',
+          url:
+            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextInputViewManager.h',
+        },
+        {
+          label: 'Wrapped XAML Control: PasswordBox',
+          url:
+            'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.passwordbox?view=winrt-19041',
+        },
+      ]}>
       <Example title="A simple TextInput." code={example1jsx}>
         <TextInput
           style={{height: 40, borderColor: 'gray', borderWidth: 1}}
@@ -111,21 +132,6 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
           placeholderTextColor="red"
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextInputExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'TextInput',
-            url: 'https://reactnative.dev/docs/textinput',
-          },
-          {
-            label: 'TextInput Source Code',
-            url:
-              'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextInputViewManager.h',
-          },
-        ]}
-      />
     </Page>
   );
 };
