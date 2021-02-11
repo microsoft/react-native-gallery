@@ -93,7 +93,8 @@ function Example() {
 
     return (
         <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          <Button onPress={() => requestPermission(perm)} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />
+          {status == 'granted' ? <Button onPress={() => {}} color='#008000' title="Granted" />
+                               : <Button onPress={() => requestPermission(perm)} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />}
           <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
           <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
         </View>
