@@ -3,8 +3,7 @@ import {Button, FlatList, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {LinkContainer} from '../components/LinkContainer';
-import {check, Permission, PERMISSIONS, PermissionStatus, request, RESULTS, WindowsPermission} from 'react-native-permissions';
+import {check, Permission, PERMISSIONS, PermissionStatus, request, RESULTS} from 'react-native-permissions';
 import {AndroidPermissionMap} from 'react-native-permissions/dist/typescript/permissions.android';
 import {IOSPermissionMap} from 'react-native-permissions/dist/typescript/permissions.ios';
 import {WindowsPermissionMap} from 'react-native-permissions/dist/typescript/permissions.windows';
@@ -28,7 +27,7 @@ type PermissionsMap = AndroidPermissionMap | IOSPermissionMap | WindowsPermissio
 
 export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
   const exampleJsx = `import React, { useEffect, useState } from 'react';
-import { Text } from 'react-native';
+import {Text} from 'react-native';
 import {check, Permission, PERMISSIONS, PermissionStatus, RESULTS} from 'react-native-permissions';
 
 function Example() {
@@ -36,18 +35,18 @@ function Example() {
 
   useEffect(() => {
     if (status == '') {
-      getPermissionAsync(PERMISSIONS.WINDOWS.USB);
+      getPermissionAsync(PERMISSIONS.WINDOWS.BLUETOOTH);
     }
   }, []);
 
-  const getPermissionAsync = async (perms: Permission) => {
+  const getPermissionAsync = async (perm: Permission) => {
     const results = new Map<Permission, PermissionStatus>();
-    const result = await check(k as Permission);
+    const result = await check(perm as Permission);
     setStatus(result);
   };
 
   return (
-    <Text>USB permission: {status}</Text>
+    <Text>Bluetooth permission: {status}</Text>
   );
 }
 `;
@@ -62,9 +61,15 @@ function Example() {
 
   const getPermissionsAsync = async (perms: PermissionsMap) => {
     const results = new Map<Permission, PermissionStatus>();
-    for(const k in perms) {
-      const result = await check(k as Permission);
-      results.set(k as Permission, result);
+    for(const [k, v] of Object.entries(perms)) {
+      // The following capabilities throw an exception in UWP are not available under
+      // the AppManifest editor in VS.
+      if (v == PERMISSIONS.WINDOWS.HUMANINTERFACEDEVICE ||
+          v == PERMISSIONS.WINDOWS.SERIALCOMMUNICATION ||
+          v == PERMISSIONS.WINDOWS.USB)
+        continue;
+      const result = await check(v as Permission);
+      results.set(v as Permission, result);
     }
     setPerms(results);
   };
@@ -88,7 +93,8 @@ function Example() {
 
     return (
         <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          <Button onPress={() => requestPermission(perm)} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />
+          {status == 'granted' ? <Button onPress={() => {}} color='#008000' title="Granted" />
+                               : <Button onPress={() => requestPermission(perm)} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />}
           <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
           <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
         </View>
@@ -100,7 +106,15 @@ function Example() {
   return (
     <Page
       title="Permissions"
-      description="Allows requesting and showing available system permissions via the react-native-permissions module.">
+      description="Allows requesting and showing available system permissions via the react-native-permissions module."
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Permissions',
+          url:
+            'https://github.com/zoontek/react-native-permissions',
+        },
+      ]}>
       <Example title="Windows Permissions" code={exampleJsx}>
         <FlatList
           data={entries}
@@ -108,17 +122,6 @@ function Example() {
           keyExtractor={item => item[0]}
         />
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Permissions',
-            url:
-              'https://github.com/zoontek/react-native-permissions',
-          },
-        ]}
-      />
     </Page>
   );
 };

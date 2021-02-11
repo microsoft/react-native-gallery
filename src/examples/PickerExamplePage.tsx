@@ -3,7 +3,6 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Picker} from '@react-native-picker/picker';
-import {LinkContainer} from '../components/LinkContainer';
 
 export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `import {Picker} from '@react-native-picker/picker';
@@ -30,7 +29,19 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Picker"
-      description="A picker control that drops down a flyout of choices from which one can be chosen.">
+      description="A picker control that drops down a flyout of choices from which one can be chosen."
+      wrappedNativeControl={{
+        control: 'ComboBox',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox?view=winrt-19041',
+      }}
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PickerExamplePage.tsx"
+      documentation={[
+        {
+          label: 'Picker',
+          url: 'https://github.com/react-native-picker/picker',
+        },
+      ]}>
       <Example title="A simple Picker." code={example1jsx}>
         <Picker style={{height: 50, width: 100}}>
           <Picker.Item label="Option 1" value="Option 1" />
@@ -54,16 +65,6 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
           <Picker.Item label="Option 3" value="Option 3" />
         </Picker>
       </Example>
-      <LinkContainer
-        pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PickerExamplePage.tsx"
-        feedbackUrl="https://github.com/microsoft/react-native-gallery/issues/new"
-        documentation={[
-          {
-            label: 'Picker',
-            url: 'https://github.com/react-native-picker/picker',
-          },
-        ]}
-      />
     </Page>
   );
 };
