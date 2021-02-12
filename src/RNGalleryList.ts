@@ -18,7 +18,6 @@ import {TextInputExamplePage} from './examples/TextInputExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
-import {WebViewExamplePage} from './examples/WebViewExamplePage';
 import {PressableExamplePage} from './examples/PressableExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
