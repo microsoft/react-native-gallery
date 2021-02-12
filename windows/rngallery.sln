@@ -62,6 +62,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPermissions", "..\node_mo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Microsoft.ReactNative", "..\node_modules\react-native-windows\Microsoft.ReactNative\Microsoft.ReactNative.vcxproj", "{F7D32BD0-2749-483E-9A0D-1635EF7E3136}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWebView", "..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj", "{729D9AF8-CD9E-4427-9F6C-FB757E287729}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebViewBridgeComponent", "..\node_modules\react-native-webview\windows\WebViewBridgeComponent\WebViewBridgeComponent.vcxproj", "{FCB612AD-FACC-410C-828C-24B5940B2762}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}*SharedItemsImports = 4
@@ -427,6 +431,40 @@ Global
 		{F7D32BD0-2749-483E-9A0D-1635EF7E3136}.Release|x86.ActiveCfg = Release|Win32
 		{F7D32BD0-2749-483E-9A0D-1635EF7E3136}.Release|x86.Build.0 = Release|Win32
 		{F7D32BD0-2749-483E-9A0D-1635EF7E3136}.Release|x86.Deploy.0 = Release|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|ARM.ActiveCfg = Debug|ARM
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|ARM.Build.0 = Debug|ARM
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|x64.ActiveCfg = Debug|x64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|x64.Build.0 = Debug|x64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|x86.ActiveCfg = Debug|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|x86.Build.0 = Debug|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|x86.Deploy.0 = Debug|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM.ActiveCfg = Release|ARM
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM.Build.0 = Release|ARM
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM64.ActiveCfg = Release|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x64.ActiveCfg = Release|x64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x64.Build.0 = Release|x64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.ActiveCfg = Release|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.Build.0 = Release|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.Deploy.0 = Release|Win32
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|ARM.Build.0 = Debug|ARM
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|ARM64.Build.0 = Debug|ARM64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x64.ActiveCfg = Debug|x64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x64.Build.0 = Debug|x64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x86.ActiveCfg = Debug|Win32
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x86.Build.0 = Debug|Win32
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x86.Deploy.0 = Debug|Win32
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|ARM.ActiveCfg = Release|ARM
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|ARM.Build.0 = Release|ARM
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|ARM64.ActiveCfg = Release|ARM64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|ARM64.Build.0 = Release|ARM64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x64.ActiveCfg = Release|x64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x64.Build.0 = Release|x64
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.ActiveCfg = Release|Win32
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.Build.0 = Release|Win32
+		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

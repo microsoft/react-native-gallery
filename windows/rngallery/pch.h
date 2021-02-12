@@ -30,4 +30,3 @@
 #include <winrt/SliderWindows.h>
 #include <winrt/ReactNativePicker.h>
 #include <winrt/ReactNativeWebView.h>
-#include <winrt/WebViewBridgeComponent.h>

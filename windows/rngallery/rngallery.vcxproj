@@ -182,9 +182,6 @@
     <ProjectReference Include="..\..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj">
       <Project>{729d9af8-cd9e-4427-9f6c-fb757e287729}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\node_modules\react-native-webview\windows\WebViewBridgeComponent\WebViewBridgeComponent.vcxproj">
-      <Project>{fcb612ad-facc-410c-828c-24b5940b2762}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml">
