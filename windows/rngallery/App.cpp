@@ -45,6 +45,7 @@ App::App() noexcept
     PackageProviders().Append(winrt::NativeClipboard::ReactPackageProvider());
     PackageProviders().Append(winrt::SliderWindows::ReactPackageProvider());
     PackageProviders().Append(winrt::ReactNativePicker::ReactPackageProvider());
+    PackageProviders().Append(winrt::ReactNativeWebView::ReactPackageProvider());
     InitializeComponent();
 }
 
