@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNSketchCanvas", "..\node_m
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPermissions", "..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj", "{99677B9D-A27B-4239-930E-C36C8D339C54}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNSensitiveInfoCPP", "..\node_modules\react-native-sensitive-info\windows\RNSensitiveInfoCPP\RNSensitiveInfoCPP.vcxproj", "{471024F1-CD6D-4F1E-A6C7-0037152C850E}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Microsoft.ReactNative", "..\node_modules\react-native-windows\Microsoft.ReactNative\Microsoft.ReactNative.vcxproj", "{F7D32BD0-2749-483E-9A0D-1635EF7E3136}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWebView", "..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj", "{729D9AF8-CD9E-4427-9F6C-FB757E287729}"
@@ -428,6 +430,22 @@ Global
 		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.ActiveCfg = Release|Win32
 		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.Build.0 = Release|Win32
 		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.Deploy.0 = Release|Win32
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|ARM.Build.0 = Debug|ARM
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|x64.ActiveCfg = Debug|x64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|x64.Build.0 = Debug|x64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|x86.ActiveCfg = Debug|Win32
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Debug|x86.Build.0 = Debug|Win32
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|ARM.ActiveCfg = Release|ARM
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|ARM.Build.0 = Release|ARM
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|ARM64.Build.0 = Release|ARM64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|x64.ActiveCfg = Release|x64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|x64.Build.0 = Release|x64
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|x86.ActiveCfg = Release|Win32
+		{471024F1-CD6D-4F1E-A6C7-0037152C850E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
