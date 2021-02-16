@@ -70,8 +70,8 @@ export function Page(props: {
   title: string;
   description?: string;
   wrappedNativeControl?: {control: string; url: string};
-  pageCodeUrl?: string;
-  documentation?: {label: string; url: string}[];
+  pageCodeUrl: string;
+  documentation: {label: string; url: string}[];
   children: React.ReactNode;
 }) {
   return (
