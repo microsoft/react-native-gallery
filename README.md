@@ -2,6 +2,8 @@
 
 Welocome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support.
 
+![gallery_welcome](https://user-images.githubusercontent.com/34109996/108123249-68a5dc80-705a-11eb-8135-c8687dcd0d5c.PNG)
+
 # Building React Native Gallery
 
 If you wish to build React Native Gallery on your computer locally, follow the following steps:
@@ -37,6 +39,8 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 For addtional information about contributing to React Native Gallery visit [here](https://github.com/microsoft/react-native-gallery/wiki/Contributing-to-React-Native-Gallery).
 
 # Adding Sample Pages
+
+![gallery_datepicker](https://user-images.githubusercontent.com/34109996/108123330-86734180-705a-11eb-8bea-409f017ab781.PNG)
 
 To add a sample page:
 
