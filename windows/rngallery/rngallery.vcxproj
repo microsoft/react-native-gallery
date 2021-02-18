@@ -179,6 +179,9 @@
     <ProjectReference Include="..\..\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj">
       <Project>{bedcc600-4541-41f2-aa46-9e058202b6ad}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj">
+      <Project>{729d9af8-cd9e-4427-9f6c-fb757e287729}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml">

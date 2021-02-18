@@ -21,6 +21,8 @@ import {ImageExamplePage} from './examples/ImageExamplePage';
 import {PressableExamplePage} from './examples/PressableExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
+import {WebViewExamplePage} from './examples/WebViewExamplePage';
+import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -97,6 +99,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ScrollViewExamplePage,
   },
   {
+    key: 'SensitiveInfo',
+    component: SensitiveInfoExamplePage,
+  },
+  {
     key: 'Slider',
     component: SliderExamplePage,
   },
@@ -111,6 +117,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'View',
     component: ViewExamplePage,
+  },
+  {
+    key: 'WebView',
+    component: WebViewExamplePage,
   },
 ];
 
