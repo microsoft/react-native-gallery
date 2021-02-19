@@ -26,30 +26,25 @@ const getResultString = (result: PermissionStatus) => {
 type PermissionsMap = AndroidPermissionMap | IOSPermissionMap | WindowsPermissionMap
 
 export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
-  const exampleJsx = `import React, { useEffect, useState } from 'react';
-import {Text} from 'react-native';
-import {check, Permission, PERMISSIONS, PermissionStatus, RESULTS} from 'react-native-permissions';
+  const exampleJsx = `<FlatList
+  data={entries}
+  renderItem={({item}) => {
+    const perm = item[0]
+    const status = item[1];
 
-function Example() {
-  const [status, setStatus] = useState('');
-
-  useEffect(() => {
-    if (status == '') {
-      getPermissionAsync(PERMISSIONS.WINDOWS.BLUETOOTH);
-    }
-  }, []);
-
-  const getPermissionAsync = async (perm: Permission) => {
-    const results = new Map<Permission, PermissionStatus>();
-    const result = await check(perm as Permission);
-    setStatus(result);
-  };
-
-  return (
-    <Text>Bluetooth permission: {status}</Text>
-  );
-}
-`;
+    return (
+        <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
+          {status == 'granted' ? <Button onPress={() => {}} color='#008000' title="Granted" />
+                               : <Button 
+                                   onPress={() => requestPermission(perm)} 
+                                   title="Request" 
+                                   disabled={status == 'unavailable' || status == 'blocked'} />}
+          <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
+          <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
+        </View>
+    );
+  }}
+  keyExtractor={item => item[0]}/>`;
 
   const [perms, setPerms] = useState(() => new Map<Permission, PermissionStatus>());
 

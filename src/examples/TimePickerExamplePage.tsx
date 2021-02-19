@@ -6,22 +6,16 @@ import {Page} from '../components/Page';
 
 export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
   const [time, _setTime] = useState(new Date(0));
-  const example1jsx = `import DateTimePicker from '@react-native-community/datetimepicker';
-
-<DateTimePicker
+  const example1jsx = `<DateTimePicker
   mode="time"
   value={time}
-  style={{width: 300, opacity: 1, height: 30}}
-/>`;
-  const example2jsx = `import DateTimePicker from '@react-native-community/datetimepicker';
-
-<DateTimePicker
+  style={{width: 300, opacity: 1, height: 30}} />`;
+  const example2jsx = `<DateTimePicker
   mode="time"
   value={time}
   style={{width: 300, opacity: 1, height: 30}}
   is24Hour={true}
-  minuteInterval={5}
-/>`;
+  minuteInterval={5} />`;
 
   return (
     <Page

@@ -8,17 +8,12 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
   const [date1, _setDate1] = useState(new Date());
   const [date2, _setDate2] = useState(new Date());
 
-  const textExample1 = `import DateTimePicker from '@react-native-community/datetimepicker';
-
-<DateTimePicker value={date} mode="date">`;
-  const textExample2 = `import DateTimePicker from '@react-native-community/datetimepicker';
-    
-<DateTimePicker
+  const textExample1 = '<DateTimePicker value={date} mode="date" />';
+  const textExample2 = `<DateTimePicker
   value={date2}
   mode="date"
   dayOfWeekFormat={'{dayofweek.abbreviated(3)}'}
-  firstDayOfWeek={1}
-/>`;
+  firstDayOfWeek={1} />`;
 
   return (
     <Page

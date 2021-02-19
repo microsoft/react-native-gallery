@@ -8,15 +8,11 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   const [timesPressed, setTimesPressed] = useState(1);
   const [currEvent, setCurrEvent] = useState('');
 
-  const example1jsx = `import {Pressable} from 'react-native';
-
-<Pressable>
+  const example1jsx = `<Pressable>
   {({pressed}) => <Text>{pressed ? 'Pressed!' : 'Press Me'}</Text>}
 </Pressable>`;
 
-  const example2jsx = `import {Pressable} from 'react-native';
-  
-<Pressable
+  const example2jsx = `<Pressable
   style={{
     width: 140,
     height: 50,
@@ -32,9 +28,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   )}
 </Pressable>`;
 
-  const example3jsx = `import {Pressable} from 'react-native';
-
-<Pressable
+  const example3jsx = `<Pressable
   onPress={() => {
     setTimesPressed((current) => current + 1);
   }}
@@ -53,9 +47,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   )}
 </Pressable>`;
 
-  const example4jsx = `import {Pressable} from 'react-native';
-  
-<Pressable
+  const example4jsx = `<Pressable
   style={{
     width: 200,
     height: 50,
