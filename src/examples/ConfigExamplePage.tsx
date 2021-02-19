@@ -6,21 +6,11 @@ import {Page} from '../components/Page';
 import Config from 'react-native-config';
 
 export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
-  const example = `import Config from 'react-native-config';
-
-function Example() {
-  return (
-    <>
-      <Text>Service URL: {Config.SERVICE_URL}</Text>
-      <Text>Service port: {Config.SERVICE_PORT}</Text>
-      <Text>Service API key: {Config.SERVICE_API_KEY}</Text>
-    </>
-  );
-}`;
-
-  const dotenv = `SERVICE_URL=https://example.com
-SERVICE_PORT=8080
-SERVICE_API_KEY=74970b3d-0bfb-4611-ba1d-dff7209ecc39`;
+  const example = `<>
+  <Text>Service URL: {Config.SERVICE_URL}</Text>
+  <Text>Service port: {Config.SERVICE_PORT}</Text>
+  <Text>Service API key: {Config.SERVICE_API_KEY}</Text>
+</>`;
 
   return (
     <Page
@@ -38,7 +28,6 @@ SERVICE_API_KEY=74970b3d-0bfb-4611-ba1d-dff7209ecc39`;
         <Text>Service port: {Config.SERVICE_PORT}</Text>
         <Text>Service API key: {Config.SERVICE_API_KEY}</Text>
       </Example>
-      <Example title=".env file" code={dotenv} />
     </Page>
   );
 };

@@ -9,44 +9,15 @@ import DeviceInfo, {
 } from 'react-native-device-info';
 
 export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
-  const exampleSysInfo = `import DeviceInfo from 'react-native-device-info';
+  const exampleSysInfo = `<>
+  <Text>System Name: {DeviceInfo.getSystemName()}</Text>
+  <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
+</>`;
 
-function Example() {
-  return (
-    <>
-      <Text>System Name: {DeviceInfo.getSystemName()}</Text>
-      <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
-    </>
-  );
-}`;
+  const exampleDeviceInfo =
+    "<Text>Device Name: {JSON.stringify(useDeviceName(), null, '  ')}</Text>";
 
-  const exampleDeviceInfo = `import { useDeviceName } from 'react-native-device-info';
-
-function Example() {
-  const deviceName = useDeviceName();
-  return <Text>Device Name: {JSON.stringify(deviceName, null, '  ')}</Text>;
-}`;
-
-  const exampleNetworkInfo = `import DeviceInfo, { getIpAddress } from 'react-native-device-info';
-
-function Example() {
-  const [ipAddress, setIpAddress] = useState('');
-
-  useEffect(() => {
-    if (!ipAddress) {
-      getIpAddressAsync();
-    }
-  }, []);
-
-  const getIpAddressAsync = async () => {
-    const address = await getIpAddress();
-    setIpAddress(address);
-  };
-
-  return <Text>IP address: {ipAddress}</Text>;
-}`;
-
-  const deviceName = useDeviceName();
+  const exampleNetworkInfo = '<Text>IP address: {ipAddress}</Text>';
 
   const [ipAddress, setIpAddress] = useState('');
 
@@ -96,7 +67,7 @@ function Example() {
       </Example>
 
       <Example title="Device Information" code={exampleDeviceInfo}>
-        <Text>Device Name: {JSON.stringify(deviceName, null, '  ')}</Text>
+        <Text>Device Name: {JSON.stringify(useDeviceName(), null, '  ')}</Text>
       </Example>
 
       <Example title="Network Information" code={exampleNetworkInfo}>

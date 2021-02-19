@@ -29,15 +29,11 @@ const Data = [
 ];
 
 export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
-  const example1jsx = `import {Text, FlatList, View} from 'react-native';
-  
-<FlatList
+  const example1jsx = `<FlatList
   data={Data}
   renderItem={renderItem}
   keyExtractor={(item) => item.id}/>`;
-  const example2jsx = `import {Text, FlatList, View} from 'react-native';
-  
-<FlatList
+  const example2jsx = `<FlatList
   data={Data}
   renderItem={renderItem}
   keyExtractor={(item) => item.id}
@@ -51,25 +47,19 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
       This is a footer at the end of the list.
     </Text>
   }/>`;
-  const example3jsx = `import {Text, FlatList, View} from 'react-native';
-  
-<FlatList
+  const example3jsx = `<FlatList
   data={Data}
   renderItem={renderItem}
   keyExtractor={(item) => item.id}
   horizontal={true}
   inverted={true}/>`;
-  const example4jsx = `import {Text, FlatList, View} from 'react-native';
-  
-<FlatList
+  const example4jsx = `<FlatList
   data={Data}
   renderItem={renderItem}
   keyExtractor={(item) => item.id}
   initialNumToRender={3}
   style={{height: 50}}/>`;
-  const example5jsx = `import {Text, FlatList, View} from 'react-native';
-  
-<FlatList
+  const example5jsx = `<FlatList
   data={Data}
   renderItem={renderItem}
   keyExtractor={(item) => item.id}

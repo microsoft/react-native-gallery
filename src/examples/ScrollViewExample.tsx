@@ -5,8 +5,77 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
 export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
-  const example1jsx = '';
-  const example2jsx = '';
+  const example1jsx = `<ScrollView style={{height: 40}}>
+  <Text>
+    Here is a very long snippet of text. The goal is for this text to be
+    too long to fit inside this view which has a height restriction.
+    Thus, scrolling will be necessary to see all of the content. This is
+    an example of a simple ScrollView. We just have text inside this
+    view, but you can add any type of ReactNode inside of of a
+    ScrollView. Let's repeat this text again to grow its length. Here is
+    a very long snippet of text. The goal is for this text to be too
+    long to fit inside this view which has a height restriction. Thus,
+    scrolling will be necessary to see all of the content. This is an
+    example of a simple ScrollView. We just have text inside this view,
+    but you can add any type of ReactNode inside of of a ScrollView.
+  </Text>
+</ScrollView>`;
+  const example2jsx = `<ScrollView style={{height: 40}} horizontal={true}>
+  <Text>
+    Here is a very long snippet of text. The goal is for this text to be
+    too long to fit inside this view which has a height restriction.
+    Thus, scrolling will be necessary to see all of the content. This is
+    an example of a simple ScrollView. We just have text inside this
+    view, but you can add any type of ReactNode inside of of a
+    ScrollView.
+  </Text>
+</ScrollView>`;
+  const example3jsx = `<ScrollView style={{height: 40}} scrollEnabled={false}>
+  <Text>
+    Here is a very long snippet of text. The goal is for this text to be
+    too long to fit inside this view which has a height restriction.
+    Thus, scrolling will be necessary to see all of the content. This is
+    an example of a simple ScrollView. We just have text inside this
+    view, but you can add any type of ReactNode inside of of a
+    ScrollView. Let's repeat this text again to grow its length. Here is
+    a very long snippet of text. The goal is for this text to be too
+    long to fit inside this view which has a height restriction. Thus,
+    scrolling will be necessary to see all of the content. This is an
+    example of a simple ScrollView. We just have text inside this view,
+    but you can add any type of ReactNode inside of of a ScrollView.
+  </Text>
+</ScrollView>`;
+  const example4jsx = `<ScrollView style={{height: 50, padding: 10}}>
+  <Text numberOfLines={5}>
+    Here is a very long snippet of text. The goal is for this text to be
+    too long to fit inside this view which has a height restriction.
+    Thus, scrolling will be necessary to see all of the content. This is
+    an example of a simple ScrollView. We just have text inside this
+    view, but you can add any type of ReactNode inside of of a
+    ScrollView. Let's repeat this text again to grow its length. Here is
+    a very long snippet of text. The goal is for this text to be too
+    long to fit inside this view which has a height restriction. Thus,
+    scrolling will be necessary to see all of the content. This is an
+    example of a simple ScrollView. We just have text inside this view,
+    but you can add any type of ReactNode inside of of a ScrollView.
+  </Text>
+  <ScrollView style={{height: 40}} horizontal={true}>
+    <Text style={{fontStyle: 'italic', fontWeight: '600'}}>
+      Here is a very long snippet of text. The goal is for this text to
+      be too long to fit inside this view which has a height
+      restriction. Thus, scrolling will be necessary to see all of the
+      content. This is an example of a simple ScrollView. We just have
+      text inside this view, but you can add any type of ReactNode
+      inside of of a ScrollView. Let's repeat this text again to grow
+      its length. Here is a very long snippet of text. The goal is for
+      this text to be too long to fit inside this view which has a
+      height restriction. Thus, scrolling will be necessary to see all
+      of the content. This is an example of a simple ScrollView. We just
+      have text inside this view, but you can add any type of ReactNode
+      inside of of a ScrollView.
+    </Text>
+  </ScrollView>
+</ScrollView>`;
 
   return (
     <Page
@@ -58,7 +127,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
           </Text>
         </ScrollView>
       </Example>
-      <Example title="A disabled ScrollView." code={example1jsx}>
+      <Example title="A disabled ScrollView." code={example3jsx}>
         <ScrollView style={{height: 40}} scrollEnabled={false}>
           <Text>
             Here is a very long snippet of text. The goal is for this text to be
@@ -77,7 +146,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example
         title="Nested ScrollViews with opposite scroll direction."
-        code={example1jsx}>
+        code={example4jsx}>
         <ScrollView style={{height: 50, padding: 10}}>
           <Text numberOfLines={5}>
             Here is a very long snippet of text. The goal is for this text to be

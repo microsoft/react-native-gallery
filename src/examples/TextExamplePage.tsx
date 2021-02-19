@@ -5,31 +5,21 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
 export const TextExamplePage: React.FunctionComponent<{}> = () => {
-  const example1jsx = `import {Text} from 'react-native';
-  
-<Text>Here is a line of text.</Text>`;
-  const example2jsx = `import {Text} from 'react-native';
-  
-<Text style={{fontWeight: '600', fontStyle: 'italic'}}>
+  const example1jsx = '<Text>Here is a line of text.</Text>';
+  const example2jsx = `<Text style={{fontWeight: '600', fontStyle: 'italic'}}>
   Here is a line of bold and italicized text.
 </Text>`;
-  const example3jsx = `import {Text} from 'react-native';
-  
-<Text style={{color: 'red'}} selectable>
+  const example3jsx = `<Text style={{color: 'red'}} selectable>
   Here is a line of bold and italicized text.
 </Text>`;
-  const example4jsx = `import {Text} from 'react-native';
-  
-<Text style={{textAlign: 'center'}} numberOfLines={2}>
+  const example4jsx = `<Text style={{textAlign: 'center'}} numberOfLines={2}>
   Here is a sample section of longer text. This sample may take up more
   that one line if the window width is short enough. Notice that the
   block of text will never exceed more that two lines. If more text
   exists beyond two lines it will be truncated and an ellipses will
   appear.
 </Text>`;
-  const example5jsx = `import {Text} from 'react-native';
-  
-<Text style={{fontWeight: '600'}}>
+  const example5jsx = `<Text style={{fontWeight: '600'}}>
   This is bolded
   <Text style={{color: 'blue'}}>
     &nbsp;and blue

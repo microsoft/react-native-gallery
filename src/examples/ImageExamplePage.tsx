@@ -5,29 +5,20 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
 export const ImageExamplePage: React.FunctionComponent<{}> = () => {
-  const example1jsx = `import {Image} from 'react-native';
-  
-<Image
+  const example1jsx = `<Image
   style={{width: 50, height: 50}}
   source={{
     uri: 'https://reactnative.dev/img/tiny_logo.png',
   }}/>`;
-  const example2jsx = `import {Image} from 'react-native';
-  
-<Image
+  const example2jsx = `<Image
   style={{width: 75, height: 50, resizeMode: 'stretch'}}
   source={{
     uri: 'https://reactnative.dev/img/tiny_logo.png',
   }}/>`;
-  const example3jsx = `import {Image} from 'react-native';
-  
-<Image
+  const example3jsx = `<Image
   style={{width: 300, height: 50, resizeMode: 'repeat'}}
-  source={require('../assets/tiny_logo.png')}
-/>`;
-  const example4jsx = `import {Image} from 'react-native';
-  
-<Image
+  source={require('../assets/tiny_logo.png')}/>`;
+  const example4jsx = `<Image
   style={{width: 75, height: 50, resizeMode: 'cover'}}
   source={require('../assets/tiny_logo.png')}/>`;
 

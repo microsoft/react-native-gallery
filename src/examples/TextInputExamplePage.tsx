@@ -23,23 +23,17 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
     setText4(text);
   };
 
-  const example1jsx = `import {TextInput} from 'react-native';
-
-<TextInput
+  const example1jsx = `<TextInput
   style={{height: 40, borderColor: 'gray', borderWidth: 1}}
   onChangeText={onChangeText1}
   value={text1}/>`;
-  const example2jsx = `import {TextInput} from 'react-native';
-
-<TextInput
+  const example2jsx = `<TextInput
   style={{height: 80, borderColor: 'gray', borderWidth: 1}}
   onChangeText={onChangeText2}
   value={text2}
   multiline
   placeholder="Enter multiline text input here..."/>`;
-  const example3jsx = `import {TextInput} from 'react-native';
-
-<TextInput
+  const example3jsx = `<TextInput
   style={{
     height: 40,
     borderColor: 'gray',
@@ -50,9 +44,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   }}
   onChangeText={onChangeText3}
   value={text3}/>`;
-  const example4jsx = `import {TextInput} from 'react-native';
-  
-<TextInput
+  const example4jsx = `<TextInput
   style={{height: 40, borderColor: 'gray', borderWidth: 1}}
   onChangeText={onChangeText4}
   value={text4}
