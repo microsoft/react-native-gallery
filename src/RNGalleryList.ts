@@ -23,6 +23,7 @@ import {FlatListExamplePage} from './examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
 import {WebViewExamplePage} from './examples/WebViewExamplePage';
 import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
+import {PopupExamplePage} from './examples/PopupExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -73,6 +74,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Picker',
     component: PickerExamplePage,
+  },
+  {
+    key: 'Popup',
+    component: PopupExamplePage,
   },
   {
     key: 'Pressable',

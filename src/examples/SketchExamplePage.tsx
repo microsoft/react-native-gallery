@@ -6,28 +6,15 @@ import {Page} from '../components/Page';
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {
-  const exampleJsx = `import { SketchCanvas } from '@terrylinla/react-native-sketch-canvas';
-  
-function Example() {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5FCFF',
-    },
-  });
-
-  return (
-    <View style={styles.container}>
-      <View style={{ flex: 1, flexDirection: 'row' }}>
-        <SketchCanvas
-          style={{ flex: 1 }}
-          strokeColor={'red'}
-          strokeWidth={5}
-        />
-      </View>
-    </View>
-  );
-}
-`;
+  const exampleJsx = `<View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5FCFF'}}>
+  <View style={{ flex: 1, flexDirection: 'row' }}>
+    <SketchCanvas
+      style={{ flex: 1 }}
+      strokeColor={'red'}
+      strokeWidth={5}
+    />
+  </View>
+</View>`;
 
   const undoComponent = (
     <View style={styles.functionButton}>

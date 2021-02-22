@@ -5,23 +5,17 @@ import {Page} from '../components/Page';
 import {Picker} from '@react-native-picker/picker';
 
 export const PickerExamplePage: React.FunctionComponent<{}> = () => {
-  const example1jsx = `import {Picker} from '@react-native-picker/picker';
-  
-<Picker style={{height: 50, width: 100}}>
+  const example1jsx = `<Picker style={{height: 50, width: 100}}>
   <Picker.Item label="Option 1" value="Option 1"/>
   <Picker.Item label="Option 2" value="Option 2"/>
   <Picker.Item label="Option 3" value="Option 3"/>
 </Picker>`;
-  const example2jsx = `import {Picker} from '@react-native-picker/picker';
-  
-<Picker style={{height: 50, width: 100}} enabled={false}>
+  const example2jsx = `<Picker style={{height: 50, width: 100}} enabled={false}>
   <Picker.Item label="Option 1" value="Option 1"/>
   <Picker.Item label="Option 2" value="Option 2"/>
   <Picker.Item label="Option 3" value="Option 3"/>
 </Picker>`;
-  const example3jsx = `import {Picker} from '@react-native-picker/picker';
-  
-<Picker style={{height: 50, width: 100}}>
+  const example3jsx = `<Picker style={{height: 50, width: 100}}>
   <Picker.Item label="Option 1" value="Option 1"/>
   <Picker.Item label="Option 2" value="Option 2"/>
   <Picker.Item label="Option 3" value="Option 3"/>

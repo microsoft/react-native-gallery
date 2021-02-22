@@ -20,24 +20,18 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
     setSwitch3(!switch3);
   };
 
-  const example1jsx = `import {Switch} from 'react-native';
-  
-<Switch
+  const example1jsx = `<Switch
   value={switch1}
-  onValueChange={onSwitchChange1}/>`;
-  const example2jsx = `import {Switch} from 'react-native';
-  
-<Switch
+  onValueChange={onSwitchChange1} />`;
+  const example2jsx = `<Switch
   value={switch2}
   onValueChange={onSwitchChange2}
-  disabled/>`;
-  const example3jsx = `import {Switch} from 'react-native';
-  
-<Switch
+  disabled />`;
+  const example3jsx = `<Switch
   value={switch3}
   onValueChange={onSwitchChange3}
   thumbColor="red"
-  trackColor={{false: 'blue', true: 'lightskyblue'}}/>`;
+  trackColor={{false: 'blue', true: 'lightskyblue'}} />`;
   return (
     <Page
       title="Switch"

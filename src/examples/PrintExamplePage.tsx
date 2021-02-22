@@ -6,17 +6,13 @@ import {Page} from '../components/Page';
 import RNPrint from 'react-native-print';
 
 export const PrintExamplePage: React.FunctionComponent<{}> = () => {
-  const example = `import RNPrint from 'react-native-print';
-
-function Example() {
-  const printRemotePDF = async() => {
-    await RNPrint.print({ filePath: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' })
-  }
-
-  return (
-    <Button onPress={printRemotePDF} title="Print PDF" />
-  );
-}`;
+  const example = `<Button onPress={async () => {
+    await RNPrint.print({
+      filePath:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    });
+  }}
+  title="Print PDF" />`;
 
   const printRemotePDF = async () => {
     await RNPrint.print({

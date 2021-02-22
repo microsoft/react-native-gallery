@@ -9,7 +9,7 @@ export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
   source={{
     uri: 'https://github.com/microsoft/react-native-gallery',
   }}
-  style={{height: 500}}/>`;
+  style={{height: 500}} />`;
 
   return (
     <Page
