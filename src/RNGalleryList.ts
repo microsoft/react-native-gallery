@@ -24,6 +24,7 @@ import {ScrollViewExamplePage} from './examples/ScrollViewExample';
 import {WebViewExamplePage} from './examples/WebViewExamplePage';
 import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 import {PopupExamplePage} from './examples/PopupExamplePage';
+import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -62,6 +63,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'FlatList ',
     component: FlatListExamplePage,
+  },
+  {
+    key: 'Flyout',
+    component: FlyoutExamplePage,
   },
   {
     key: 'Image',
