@@ -195,6 +195,10 @@ const lightStyles = StyleSheet.create({
   'hljs-attr': {color: lightColors.text}, // Attributes within JSX Tags
 });
 
+function createKey(value: string) {
+  return `${value}_${new Date().getTime()}`;
+}
+
 function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
   //@ts-ignore
   const [theme, setTheme] = useGlobal('theme');
@@ -207,7 +211,11 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
       ? 1
       : 0;
   if (node.type === 'text') {
-    return <Text key={index}>{(node as lowlight.AST.Text).value}</Text>;
+    return (
+      <Text key={createKey(index.toString())}>
+        {(node as lowlight.AST.Text).value}
+      </Text>
+    );
   } else if (node.type === 'element') {
     const elementNode = node as lowlight.AST.Element;
     if (themeStyles === 0) {
@@ -229,7 +237,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
           ]
         : {};
       return (
-        <Text key={index} style={style}>
+        <Text key={createKey(index.toString())} style={style}>
           {elementNode.children.map(renderLowLightNode)}
         </Text>
       );
@@ -250,7 +258,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
           ]
         : {};
       return (
-        <Text key={index} style={style}>
+        <Text key={createKey(index.toString())} style={style}>
           {elementNode.children.map(renderLowLightNode)}
         </Text>
       );
