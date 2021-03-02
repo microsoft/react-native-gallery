@@ -207,7 +207,8 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node) {
       ? 1
       : 0;
   if (node.type === 'text') {
-    return <Text>{(node as lowlight.AST.Text).value}</Text>;
+    let text = (node as lowlight.AST.Text).value;
+    return <Text key={text}>{text}</Text>;
   } else if (node.type === 'element') {
     const elementNode = node as lowlight.AST.Element;
     if (themeStyles === 0) {
@@ -229,7 +230,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node) {
           ]
         : {};
       return (
-        <Text style={style}>
+        <Text key={elementNode.tagName} style={style}>
           {elementNode.children.map(renderLowLightNode)}
         </Text>
       );
@@ -250,7 +251,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node) {
           ]
         : {};
       return (
-        <Text style={style}>
+        <Text key={elementNode.tagName} style={style}>
           {elementNode.children.map(renderLowLightNode)}
         </Text>
       );

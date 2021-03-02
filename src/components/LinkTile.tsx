@@ -22,7 +22,7 @@ export function LinkTile(props: {
     <View style={styles.hyperlinkTile}>
       <Text style={styles.hyperlinkTileTitle}>{props.title}</Text>
       {props.links.map((hyp) => (
-        <Hyperlink label={hyp.label} url={hyp.url} />
+        <Hyperlink key={hyp.label} label={hyp.label} url={hyp.url} />
       ))}
     </View>
   );
