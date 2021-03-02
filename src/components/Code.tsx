@@ -196,7 +196,7 @@ const lightStyles = StyleSheet.create({
 });
 
 function createKey(index: string, value: string) {
-  return `${index}_${value}`;
+  return `${value}`;
 }
 
 function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
@@ -212,8 +212,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
       : 0;
   if (node.type === 'text') {
     return (
-      <Text
-        key={createKey(index.toString(), (node as lowlight.AST.Text).value)}>
+      <Text key={(node as lowlight.AST.Text).value}>
         {(node as lowlight.AST.Text).value}
       </Text>
     );
@@ -238,9 +237,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
           ]
         : {};
       return (
-        <Text
-          key={createKey(index.toString(), elementNode.tagName)}
-          style={style}>
+        <Text key={elementNode.tagName} style={style}>
           {elementNode.children.map(renderLowLightNode)}
         </Text>
       );
@@ -261,9 +258,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
           ]
         : {};
       return (
-        <Text
-          key={createKey(index.toString(), elementNode.tagName)}
-          style={style}>
+        <Text key={elementNode.tagName} style={style}>
           {elementNode.children.map(renderLowLightNode)}
         </Text>
       );
