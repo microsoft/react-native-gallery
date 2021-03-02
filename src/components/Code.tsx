@@ -195,10 +195,6 @@ const lightStyles = StyleSheet.create({
   'hljs-attr': {color: lightColors.text}, // Attributes within JSX Tags
 });
 
-function createKey(index: string, value: string) {
-  return `${value}`;
-}
-
 function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
   //@ts-ignore
   const [theme, setTheme] = useGlobal('theme');
