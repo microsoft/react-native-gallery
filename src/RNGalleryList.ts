@@ -25,6 +25,7 @@ import {WebViewExamplePage} from './examples/WebViewExamplePage';
 import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 import {PopupExamplePage} from './examples/PopupExamplePage';
 import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
+import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -91,6 +92,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Print',
     component: PrintExamplePage,
+  },
+  {
+    key: 'ProgressView',
+    component: ProgressViewExamplePage,
   },
   {
     key: 'Text',
