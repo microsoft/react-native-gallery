@@ -75,9 +75,9 @@ steps:
     artifactName: 'App Packages - $(Agents.JobName)-$(System.JobAttempt)'
 
 - task: CmdLine@2
-    displayName: Remove the Pfx
-    inputs:
-      script: del /f .\windows\rngallery\rngallery_Key.pfx
+  displayName: Remove the Pfx
+  inputs:
+    script: del /f .\windows\rngallery\rngallery_Key.pfx
 
 - task: CmdLine@2
   displayName: Build project (Debug)
