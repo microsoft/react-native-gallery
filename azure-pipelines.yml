@@ -17,10 +17,6 @@ variables:
 
 pool: windevbuildagents
 
-env: 
-  SigningCertificate: 'rngallery_Key.pfx'
-  WindowsBuildDirectory: '.\windows\rngallery'
-
 steps:
 - checkout: self
   clean: false
@@ -56,13 +52,13 @@ steps:
   inputs:
     script: yarn tsc | yarn lint
 
--task: CmdLine@2
+- task: CmdLine@2
   displayName: Decode Pfx
   inputs:
     script: |
       $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.rngallery_EncodedKey }}")
       $currentDirectory = Get-Location
-      $certificatePath = $currentDirectory\$env:WindowsBuildDirectory\$env:SigningCertificate
+      $certificatePath = "$currentDirectory\windows\rngallery\rngallery_Key.pfx"
       [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
 
 - task: CmdLine@2
@@ -81,7 +77,7 @@ steps:
  - task: CmdLine@2
     displayName: Remove the Pfx
     inputs:
-      script: del /f $env:WindowsBuildDirectory\$env:SigningCertificate
+      script: del /f .\windows\rngallery\rngallery_Key.pfx
 
 - task: CmdLine@2
   displayName: Build project (Debug)
