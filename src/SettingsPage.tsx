@@ -66,7 +66,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
         </SettingContainer>
         <SettingContainer heading="About">
           <Text style={styles.text}>
-            Soure code:{' '}
+            Source code:{' '}
             <Hyperlink
               label="GitHub"
               url="https://github.com/microsoft/react-native-gallery"
