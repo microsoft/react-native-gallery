@@ -195,10 +195,14 @@ const lightStyles = StyleSheet.create({
   'hljs-attr': {color: lightColors.text}, // Attributes within JSX Tags
 });
 
+// Text alone does not generate a unique key. Index alone could result in stale UI. Use both to create unique
+// keys that will always ensure up to date UI.
 function createTextKey(text: string, index: number) {
   return `${index}_${text}`;
 }
 
+// Node alone does not generate a unique key. Index alone could result in stale UI. Use both to create unique
+// keys that will always ensure up to date UI.
 function createElementKey(node: lowlight.AST.Element, index: number) {
   return `${index}_${node}`;
 }
