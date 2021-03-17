@@ -66,7 +66,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
         </SettingContainer>
         <SettingContainer heading="About">
           <Text style={styles.text}>
-            Soure code:{' '}
+            Source code:{' '}
             <Hyperlink
               label="GitHub"
               url="https://github.com/microsoft/react-native-gallery"
@@ -80,7 +80,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
         </SettingContainer>
         <SettingContainer heading="Found a bug? Want a new sample?">
           <Text style={styles.text}>
-            If you have found a bug within the Xaml Controls Gallery, please
+            If you have found a bug within the React Native Gallery app, please
             file an issue on GitHub:
           </Text>
           <Hyperlink

@@ -19,7 +19,7 @@
   <mp:PhoneIdentity PhoneProductId="48071f82-8a63-40b3-a728-2229057a8f83" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>rngallery</DisplayName>
+    <DisplayName>React Native Gallery</DisplayName>
     <PublisherDisplayName>kmelmon</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
