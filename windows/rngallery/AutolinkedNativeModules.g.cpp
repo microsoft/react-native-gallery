@@ -3,6 +3,12 @@
 #include "pch.h"
 #include "AutolinkedNativeModules.g.h"
 
+// Includes from @react-native-community/checkbox
+#include <winrt/CheckboxWindows.h>
+
+// Includes from @react-native-community/slider
+#include <winrt/SliderWindows.h>
+
 // Includes from @terrylinla/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
 
@@ -26,6 +32,10 @@ namespace winrt::Microsoft::ReactNative
 
 void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::ReactNative::IReactPackageProvider> const& packageProviders)
 { 
+    // IReactPackageProviders from @react-native-community/checkbox
+    packageProviders.Append(winrt::CheckboxWindows::ReactPackageProvider());
+    // IReactPackageProviders from @react-native-community/slider
+    packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
     // IReactPackageProviders from react-native-config

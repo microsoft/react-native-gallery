@@ -4,23 +4,18 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
-  xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
-  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
-  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
-  IgnorableNamespaces="uap mp uap3 uap6 uap4 uap2 iot">
+  IgnorableNamespaces="uap mp">
 
- <Identity
-    Name="48071f82-8a63-40b3-a728-2229057a8f83"
-    Publisher="CN=kmelmon"
+  <Identity
+    Name="92a2ad66-6238-420f-9f50-a5bd0955913f"
+    Publisher="CN=chiaramooney"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="48071f82-8a63-40b3-a728-2229057a8f83" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="92a2ad66-6238-420f-9f50-a5bd0955913f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>React Native Gallery</DisplayName>
-    <PublisherDisplayName>kmelmon</PublisherDisplayName>
+    <DisplayName>rngallery</DisplayName>
+    <PublisherDisplayName>chiaramooney</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -51,41 +46,5 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
-    <Capability Name="allJoyn"/>
-    <uap:Capability Name="appointments"/>
-    <uap3:Capability Name="backgroundMediaPlayback"/>
-    <uap:Capability Name="blockedChatMessages"/>
-    <uap:Capability Name="chat"/>
-    <Capability Name="codeGeneration"/>
-    <uap:Capability Name="contacts"/>
-    <uap:Capability Name="enterpriseAuthentication"/>
-    <Capability Name="internetClientServer"/>
-    <uap6:Capability Name="graphicsCapture"/>
-    <uap:Capability Name="musicLibrary"/>
-    <uap:Capability Name="objects3D"/>
-    <uap:Capability Name="phoneCall"/>
-    <uap4:Capability Name="offlineMapsManagement"/>
-    <uap2:Capability Name="phoneCallHistoryPublic"/>
-    <iot:Capability Name="lowLevelDevices"/>
-    <uap:Capability Name="picturesLibrary"/>
-    <uap3:Capability Name="remoteSystem"/>
-    <Capability Name="privateNetworkClientServer"/>
-    <uap:Capability Name="removableStorage"/>
-    <uap:Capability Name="sharedUserCertificates"/>
-    <uap2:Capability Name="spatialPerception"/>
-    <iot:Capability Name="systemManagement"/>
-    <uap:Capability Name="userAccountInformation"/>
-    <uap4:Capability Name="userDataTasks"/>
-    <uap3:Capability Name="userNotificationListener"/>
-    <uap:Capability Name="videosLibrary"/>
-    <uap:Capability Name="voipCall"/>
-    <DeviceCapability Name="bluetooth"/>
-    <DeviceCapability Name="gazeInput"/>
-    <DeviceCapability Name="location"/>
-    <DeviceCapability Name="lowLevel"/>
-    <DeviceCapability Name="microphone"/>
-    <DeviceCapability Name="proximity"/>
-    <DeviceCapability Name="pointOfService"/>
-    <DeviceCapability Name="webcam"/>
   </Capabilities>
 </Package>
