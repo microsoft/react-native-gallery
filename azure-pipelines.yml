@@ -1,19 +1,9 @@
-# Universal Windows Platform
-# Build a Universal Windows Platform project using Visual Studio.
-# Add steps that test and distribute an app, save build artifacts, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
 pr:
   - main
   - "v*"
 
 variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
-  # AgentPool.Medium: rnw-pool-4
-  # AgentPool.Large: windevbuildagents
 
 pool: windevbuildagents
 
@@ -51,47 +41,6 @@ steps:
   displayName: Lint and Type Checks
   inputs:
     script: yarn tsc | yarn lint
-
-- task: DownloadSecureFile@1
-  name: signingCert
-  displayName: 'Download CA certificate'
-  inputs:
-    secureFile: 'rngallery_TemporaryKey.pfx'
-
-#- task: CmdLine@2
-#  displayName: Move Cert to Windows Build Directory
-#  inputs:
-#    script: |
-#      move $(signingCert.secureFilePath) .\windows\rngallery\
-
-- task: CopyFiles@2
-  displayName: 'Copy Certificate to Windows Build Directory'
-  inputs:
-    SourceFolder: '$(signingCert.secureFilePath)'
-    Contents: 'rngallery_TemporaryKey.pfx'
-    TargetFolder: '.\windows\rngallery\'
-
-#- task: CmdLine@2
-#  displayName: Decode Pfx
-#  inputs:
-#    script: |
-#      $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.rngallery_EncodedKey }}")
-#      $currentDirectory = Get-Location
-#      $certificatePath = "$currentDirectory\windows\rngallery\rngallery_Key.pfx"
-#      [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
-
-- task: CmdLine@2
-  displayName: Build project (Release)
-  timeoutInMinutes: 60
-  inputs:
-    script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --release
-
-- task: PublishBuildArtifacts@1
-  displayName: Upload RN Gallery Release
-  condition:  succeededOrFailed()
-  inputs:
-    pathtoPublish: .\windows\AppPackages\rngallery\
-    artifactName: 'App Packages - $(Agents.JobName)-$(System.JobAttempt)'
 
 - task: CmdLine@2
   displayName: Remove the Pfx
