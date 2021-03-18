@@ -52,14 +52,33 @@ steps:
   inputs:
     script: yarn tsc | yarn lint
 
-- task: CmdLine@2
-  displayName: Decode Pfx
+- task: DownloadSecureFile@1
+  name: signingCert
+  displayName: 'Download CA certificate'
   inputs:
-    script: |
-      $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.rngallery_EncodedKey }}")
-      $currentDirectory = Get-Location
-      $certificatePath = "$currentDirectory\windows\rngallery\rngallery_Key.pfx"
-      [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
+    secureFile: 'rngallery_TemporaryKey.pfx'
+
+#- task: CmdLine@2
+#  displayName: Move Cert to Windows Build Directory
+#  inputs:
+#    script: |
+#      move $(signingCert.secureFilePath) .\windows\rngallery\
+
+- task: CopyFiles@2
+  displayName: 'Copy Certificate to Windows Build Directory'
+  inputs:
+    SourceFolder: '$(signingCert.secureFilePath)'
+    Contents: 'rngallery_TemporaryKey.pfx'
+    TargetFolder: '.\windows\rngallery\'
+
+#- task: CmdLine@2
+#  displayName: Decode Pfx
+#  inputs:
+#    script: |
+#      $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.rngallery_EncodedKey }}")
+#      $currentDirectory = Get-Location
+#      $certificatePath = "$currentDirectory\windows\rngallery\rngallery_Key.pfx"
+#      [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
 
 - task: CmdLine@2
   displayName: Build project (Release)
