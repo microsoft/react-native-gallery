@@ -13,7 +13,7 @@
 
  <Identity
     Name="48071f82-8a63-40b3-a728-2229057a8f83"
-    Publisher="CN=kmelmon"
+    Publisher="CN=chiaramooney"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="48071f82-8a63-40b3-a728-2229057a8f83" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
