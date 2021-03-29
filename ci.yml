@@ -7,7 +7,9 @@ schedules:
     batch: true
 
 variables:
-  BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
+  - group: rngallery_Variables
+  - name: BuildLogDirectory
+    value: $(Build.BinariesDirectory)\x64\BuildLogs
 
 pool: windevbuildagents
 
@@ -50,7 +52,7 @@ steps:
   name: signingCert
   displayName: 'Download CA certificate'
   inputs:
-    secureFile: 'rngallery_TemporaryKey.pfx'
+    secureFile: 'rngallery_Key.pfx'
 
 - task: CopyFiles@2
   displayName: 'Copy Certificate to Windows Build Directory'
@@ -63,7 +65,7 @@ steps:
   displayName: Build project (Release)
   timeoutInMinutes: 60
   inputs:
-    script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --msbuildprops PackageCertificateKeyFile=$(signingCert.secureFilePath) --release
+    script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --msbuildprops PackageCertificateKeyFile=rngallery_Key.pfx, PackageCertificatePassword=$(rngalleryPassword) --release
 
 - task: CmdLine@2
   displayName: Remove the Pfx
