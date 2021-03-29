@@ -1,0 +1,78 @@
+schedules:
+  - cron: "0 0 * * *"
+    displayName: Nightly Build
+    branches:
+      include:
+      - main
+    batch: true
+
+variables:
+  BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
+
+pool: windevbuildagents
+
+steps:
+- checkout: self
+  clean: false
+
+- task: NuGetToolInstaller@0
+  inputs:
+    versionSpec: ">=5.8.0"
+
+- task: NodeTool@0
+  displayName: Installing Node
+  inputs:
+    versionSpec: '14.x'
+
+- task: CmdLine@2
+  displayName: Installing Yarm
+  inputs:
+    script: npm install -g yarn
+
+- task: NuGetCommand@2
+  displayName: NuGet restore
+  inputs:
+    command: restore
+    restoreSolution: windows/rngallery.sln
+    verbosityRestore: Detailed
+
+- task: CmdLine@2
+  displayName: midgard-yarn (faster yarn install)
+  inputs:
+    script: npx midgard-yarn@1.23.14 --pure-lockfile
+
+- task: CmdLine@2
+  displayName: Lint and Type Checks
+  inputs:
+    script: yarn tsc | yarn lint
+
+- task: DownloadSecureFile@1
+  name: signingCert
+  displayName: 'Download CA certificate'
+  inputs:
+    secureFile: 'rngallery_TemporaryKey.pfx'
+
+- task: CopyFiles@2
+  displayName: 'Copy Certificate to Windows Build Directory'
+  inputs:
+    SourceFolder: '$(signingCert.secureFilePath)'
+    Contents: 'rngallery_TemporaryKey.pfx'
+    TargetFolder: '.\windows\rngallery\'
+
+- task: CmdLine@2
+  displayName: Build project (Release)
+  timeoutInMinutes: 60
+  inputs:
+    script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --release
+
+- task: CmdLine@2
+  displayName: Remove the Pfx
+  inputs:
+    script: del /f .\windows\rngallery\rngallery_Key.pfx
+
+- task: PublishBuildArtifacts@1
+  displayName: Upload App
+  condition:  succeededOrFailed()
+  inputs:
+    pathtoPublish: .\windows\AppPackages\rngallery
+    artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
