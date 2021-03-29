@@ -15,6 +15,9 @@
 // Includes from react-native-device-info
 #include <winrt/RNDeviceInfoCPP.h>
 
+// Includes from react-native-gesture-handler
+#include <winrt/RNGestureHandler.h>
+
 // Includes from react-native-permissions
 #include <winrt/RNPermissions.h>
 
@@ -37,6 +40,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from react-native-gesture-handler
+    packageProviders.Append(winrt::RNGestureHandler::ReactPackageProvider());
     // IReactPackageProviders from react-native-permissions
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print
