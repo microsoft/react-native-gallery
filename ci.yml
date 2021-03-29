@@ -58,7 +58,7 @@ steps:
   displayName: 'Copy Certificate to Windows Build Directory'
   inputs:
     SourceFolder: '$(signingCert.secureFilePath)'
-    Contents: 'rngallery_TemporaryKey.pfx'
+    Contents: 'rngallery_Key.pfx'
     TargetFolder: '.\windows\rngallery\'
 
 - task: CmdLine@2
