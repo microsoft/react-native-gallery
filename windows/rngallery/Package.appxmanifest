@@ -6,8 +6,8 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity
-    Name="92a2ad66-6238-420f-9f50-a5bd0955913f"
+ <Identity
+    Name="48071f82-8a63-40b3-a728-2229057a8f83"
     Publisher="CN=chiaramooney"
     Version="1.0.0.0" />
 

@@ -3,6 +3,9 @@
 #include "pch.h"
 #include "AutolinkedNativeModules.g.h"
 
+// Includes from @react-native-community/progress-view
+#include <winrt/progress_view.h>
+
 // Includes from @react-native-community/checkbox
 #include <winrt/CheckboxWindows.h>
 
@@ -18,6 +21,9 @@
 // Includes from react-native-device-info
 #include <winrt/RNDeviceInfoCPP.h>
 
+// Includes from react-native-gesture-handler
+#include <winrt/RNGestureHandler.h>
+
 // Includes from react-native-permissions
 #include <winrt/RNPermissions.h>
 
@@ -32,6 +38,8 @@ namespace winrt::Microsoft::ReactNative
 
 void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::ReactNative::IReactPackageProvider> const& packageProviders)
 { 
+    // IReactPackageProviders from @react-native-community/progress-view
+    packageProviders.Append(winrt::progress_view::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/checkbox
     packageProviders.Append(winrt::CheckboxWindows::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/slider
@@ -42,6 +50,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from react-native-gesture-handler
+    packageProviders.Append(winrt::RNGestureHandler::ReactPackageProvider());
     // IReactPackageProviders from react-native-permissions
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print
