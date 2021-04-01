@@ -14,9 +14,9 @@
     "@react-native-community/clipboard": "^1.5.1",
     "@react-native-community/datetimepicker": "^3.3.0",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/progress-view": "^1.2.4",
     "@react-native-community/slider": "^4.0.0-rc.3",
     "@react-native-picker/picker": "^1.9.12",
-    "@react-native-community/progress-view": "^1.2.4",
     "@react-navigation/bottom-tabs": "^5.8.0",
     "@react-navigation/drawer": "^5.9.0",
     "@react-navigation/native": "^5.7.3",
@@ -36,6 +36,7 @@
     "react-native-sensitive-info": "6.0.0-alpha.9",
     "react-native-webview": "^11.3.1",
     "react-native-windows": "0.64.0",
+    "react-native-xaml": "^0.0.16",
     "reactn": "^2.2.7"
   },
   "devDependencies": {
