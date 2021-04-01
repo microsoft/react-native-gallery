@@ -1,19 +1,9 @@
-# Universal Windows Platform
-# Build a Universal Windows Platform project using Visual Studio.
-# Add steps that test and distribute an app, save build artifacts, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
 pr:
   - main
   - "v*"
 
 variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
-  # AgentPool.Medium: rnw-pool-4
-  # AgentPool.Large: windevbuildagents
 
 pool: windevbuildagents
 
@@ -51,12 +41,6 @@ steps:
   displayName: Lint and Type Checks
   inputs:
     script: yarn tsc | yarn lint
-
-- task: CmdLine@2
-  displayName: Build project (Release)
-  timeoutInMinutes: 60
-  inputs:
-    script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --release
 
 - task: CmdLine@2
   displayName: Build project (Debug)
