@@ -3,6 +3,12 @@
 #include "pch.h"
 #include "AutolinkedNativeModules.g.h"
 
+// Includes from @react-native-community/checkbox
+#include <winrt/CheckboxWindows.h>
+
+// Includes from @react-native-community/slider
+#include <winrt/SliderWindows.h>
+
 // Includes from @react-native-community/progress-view
 #include <winrt/progress_view.h>
 
@@ -32,6 +38,10 @@ namespace winrt::Microsoft::ReactNative
 
 void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::ReactNative::IReactPackageProvider> const& packageProviders)
 { 
+    // IReactPackageProviders from @react-native-community/checkbox
+    packageProviders.Append(winrt::CheckboxWindows::ReactPackageProvider());
+    // IReactPackageProviders from @react-native-community/slider
+    packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/progress-view
     packageProviders.Append(winrt::progress_view::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas

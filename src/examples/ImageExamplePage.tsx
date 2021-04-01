@@ -8,19 +8,22 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `<Image
   style={{width: 50, height: 50}}
   source={{
-    uri: 'https://reactnative.dev/img/tiny_logo.png',
+    uri: 'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
   }}/>`;
   const example2jsx = `<Image
-  style={{width: 75, height: 50, resizeMode: 'stretch'}}
+  style={{width: 75, height: 50}}
   source={{
-    uri: 'https://reactnative.dev/img/tiny_logo.png',
-  }}/>`;
+    uri: 'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
+  }}
+  resizeMode='stretch'/>`;
   const example3jsx = `<Image
-  style={{width: 300, height: 50, resizeMode: 'repeat'}}
-  source={require('../assets/tiny_logo.png')}/>`;
+  style={{width: 300, height: 50}}
+  source={require('../assets/tiny_logo.png')}
+  resizeMode='repeat'/>`;
   const example4jsx = `<Image
-  style={{width: 75, height: 50, resizeMode: 'cover'}}
-  source={require('../assets/tiny_logo.png')}/>`;
+  style={{width: 75, height: 50}}
+  source={require('../assets/tiny_logo.png')}
+  resizeMode='cover'/>`;
 
   return (
     <Page
@@ -56,27 +59,30 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         title="An Image from web source stretched to fill view."
         code={example2jsx}>
         <Image
-          style={{width: 75, height: 50, resizeMode: 'stretch'}}
+          style={{width: 75, height: 50}}
           source={{
             uri:
               'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
           }}
+          resizeMode='stretch'
         />
       </Example>
       <Example
         title="An Image from file source repeated to fill view."
         code={example3jsx}>
         <Image
-          style={{width: 300, height: 50, resizeMode: 'repeat'}}
+          style={{width: 300, height: 50}}
           source={require('../assets/tiny_logo.png')}
+          resizeMode='repeat'
         />
       </Example>
       <Example
         title="An Image from file source scaled uniformly to fill view."
         code={example4jsx}>
         <Image
-          style={{width: 75, height: 50, resizeMode: 'cover'}}
+          style={{width: 75, height: 50}}
           source={require('../assets/tiny_logo.png')}
+          resizeMode='cover'
         />
       </Example>
     </Page>
