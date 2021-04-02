@@ -1,6 +1,6 @@
 'use strict';
-import {Text} from 'react-native';
-import React from 'react';
+import {Text, View} from 'react-native';
+import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {
@@ -12,9 +12,19 @@ import {
   ComboBox,
   ComboBoxItem,
   TextBox,
+  MenuFlyout,
+  MenuFlyoutItem,
+  NavigationView,
+  NavigationViewItem,
+  FontIcon,
 } from 'react-native-xaml';
 
 export const XamlExamplePage: React.FunctionComponent<{}> = () => {
+  const [menuFlyout, setMenuFlyout] = useState(false);
+  const [menuFlyoutOption, setMenuFlyoutOption] = useState(
+    'MenuFlyout Option 1',
+  );
+
   const example1jsx = '<TextBlock text="I am a XAML TextBlock." />';
   const example2jsx =
     "<Button content={{string: 'XAML Button'}} onClick={() => {}} />";
@@ -31,7 +41,42 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
   <ComboBoxItem content={{string: 'ComboBoxItem 2'}} />
   <ComboBoxItem content={{string: 'ComboBoxItem 3'}} />
 </ComboBox>`;
-  const example6jsx = '<TextBox />';
+  const example6jsx = '<TextBox foreground="blue" />';
+  const example7jsx = `<Button
+  content={{string: 'Open Menu Flyout'}}
+  onClick={() => {
+    setMenuFlyout(true);
+  }}>
+  <MenuFlyout
+    isOpen={menuFlyout}
+    onClosed={() => {
+      setMenuFlyout(false);
+    }}>
+    <MenuFlyoutItem
+      text="MenuFlyout Option 1"
+      onClick={() => {
+        setMenuFlyoutOption('MenuFlyout Option 1');
+      }}
+    />
+    <MenuFlyoutItem
+      text="MenuFlyout Option 2"
+      onClick={() => {
+        setMenuFlyoutOption('MenuFlyout Option 2');
+      }}
+    />
+  </MenuFlyout>
+</Button>
+<TextBlock
+  text={\`$\{menuFlyoutOption\} is selected.\`}
+/>`;
+  const example8jsx = `<NavigationView style={{height: 200, width: 180}}>
+  <NavigationViewItem content={{string: 'Navigation Item 1'}}>
+    <FontIcon glyph="&#xE790;" />
+  </NavigationViewItem>
+  <NavigationViewItem content={{string: 'Navigation Item 2'}}>
+    <FontIcon glyph="&#xE790;" />
+  </NavigationViewItem>
+</NavigationView>`;
 
   return (
     <Page
@@ -74,8 +119,48 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
           <ComboBoxItem content={{string: 'ComboBoxItem 3'}} />
         </ComboBox>
       </Example>
-      <Example title="A simple TextBox." code={example6jsx}>
-        <TextBox />
+      <Example
+        title="A simple TextBox with lightweight styling."
+        code={example6jsx}>
+        <TextBox foreground="blue" />
+      </Example>
+      <Example title="A simple MenuFlyout." code={example7jsx}>
+        <Button
+          content={{string: 'Open Menu Flyout'}}
+          onClick={() => {
+            setMenuFlyout(true);
+          }}>
+          <MenuFlyout
+            isOpen={menuFlyout}
+            onClosed={() => {
+              setMenuFlyout(false);
+            }}>
+            <MenuFlyoutItem
+              text="MenuFlyout Option 1"
+              onClick={() => {
+                setMenuFlyoutOption('MenuFlyout Option 1');
+              }}
+            />
+            <MenuFlyoutItem
+              text="MenuFlyout Option 2"
+              onClick={() => {
+                setMenuFlyoutOption('MenuFlyout Option 2');
+              }}
+            />
+          </MenuFlyout>
+        </Button>
+        <View style={{height: 10}} />
+        <TextBlock text={`${menuFlyoutOption} is selected.`} />
+      </Example>
+      <Example title="A simple Navigation View." code={example8jsx}>
+        <NavigationView style={{height: 200, width: 180}}>
+          <NavigationViewItem content={{string: 'Navigation Item 1'}}>
+            <FontIcon glyph="&#xE790;" />
+          </NavigationViewItem>
+          <NavigationViewItem content={{string: 'Navigation Item 2'}}>
+            <FontIcon glyph="&#xE790;" />
+          </NavigationViewItem>
+        </NavigationView>
       </Example>
     </Page>
   );
