@@ -16,5 +16,6 @@ namespace winrt::rngallery::implementation
         InitializeComponent();
         auto app = Application::Current().as<App>();
         ReactRootView().ReactNativeHost(app->Host());
+        ReactRootView().IsPerspectiveEnabled(false);
     }
 }
