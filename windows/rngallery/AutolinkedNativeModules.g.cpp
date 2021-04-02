@@ -6,11 +6,11 @@
 // Includes from @react-native-community/checkbox
 #include <winrt/CheckboxWindows.h>
 
-// Includes from @react-native-community/slider
-#include <winrt/SliderWindows.h>
-
 // Includes from @react-native-community/progress-view
 #include <winrt/progress_view.h>
+
+// Includes from @react-native-community/slider
+#include <winrt/SliderWindows.h>
 
 // Includes from @terrylinla/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
@@ -33,6 +33,9 @@
 // Includes from react-native-sensitive-info
 #include <winrt/RNSensitiveInfoCPP.h>
 
+// Includes from react-native-xaml
+#include <winrt/ReactNativeXaml.h>
+
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -40,10 +43,10 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
 { 
     // IReactPackageProviders from @react-native-community/checkbox
     packageProviders.Append(winrt::CheckboxWindows::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/slider
-    packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/progress-view
     packageProviders.Append(winrt::progress_view::ReactPackageProvider());
+    // IReactPackageProviders from @react-native-community/slider
+    packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
     // IReactPackageProviders from react-native-config
@@ -58,6 +61,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
     // IReactPackageProviders from react-native-sensitive-info
     packageProviders.Append(winrt::RNSensitiveInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from react-native-xaml
+    packageProviders.Append(winrt::ReactNativeXaml::ReactPackageProvider());
 }
 
 }

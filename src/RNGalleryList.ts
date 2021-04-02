@@ -27,6 +27,7 @@ import {PopupExamplePage} from './examples/PopupExamplePage';
 import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
 import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
+import {XamlExamplePage} from './examples/XamlExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -141,6 +142,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'WebView',
     component: WebViewExamplePage,
+  },
+  {
+    key: 'Xaml',
+    component: XamlExamplePage,
   },
 ];
 
