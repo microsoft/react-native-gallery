@@ -56,7 +56,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Sensitive Info"
-      description="Allows handling of sensitive information via the react-native-sensitive-info module."
+      description="The Sensitive Info module allows for the handling of sensitive information."
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
       documentation={[
         {
@@ -64,7 +64,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://mcodex.dev/react-native-sensitive-info',
         },
       ]}>
-      <Example title="Sensitive Information" code={example}>
+      <Example title="Sensitive Information Example." code={example}>
         <Text style={{color: 'blue'}}>Key:key1 </Text>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
@@ -77,7 +77,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             value={value}
             editable={false}
           />
-          <Button style={{margin: 20}} onPress={getItem} title="Get Item" />
+          <Button onPress={getItem} title="Get Item" />
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
