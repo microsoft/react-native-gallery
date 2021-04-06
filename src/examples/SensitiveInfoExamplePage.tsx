@@ -64,7 +64,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://mcodex.dev/react-native-sensitive-info',
         },
       ]}>
-      <Example title="Sensitive Information Example." code={example}>
+      <Example title="Sensitive Information" code={example}>
         <Text style={{color: 'blue'}}>Key:key1 </Text>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
