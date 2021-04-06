@@ -3,8 +3,10 @@ import React from 'react';
 import CheckBox from '@react-native-community/checkbox';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
   return (
     <Page
       title="Checkbox"
@@ -37,23 +39,23 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example
         title="Custom onCheckColor Checkmark"
-        code={"<CheckBox onCheckColor='red' value={true} />"}>
-        <CheckBox onCheckColor="red" value={true} />
+        code={'<CheckBox onCheckColor={colors.primary} value={true} />'}>
+        <CheckBox onCheckColor={colors.primary} value={true} />
       </Example>
       <Example
         title="Custom onTintColor Color"
-        code={"<CheckBox onTintColor='red' value={true} />"}>
-        <CheckBox onTintColor="red" value={true} />
+        code={'<CheckBox onTintColor={colors.primary} value={true} />'}>
+        <CheckBox onTintColor={colors.primary} value={true} />
       </Example>
       <Example
         title="Custom onFillColor Color"
-        code={"<CheckBox onFillColor='red' value={true} />"}>
-        <CheckBox onFillColor="red" value={true} />
+        code={'<CheckBox onFillColor={colors.primary} value={true} />'}>
+        <CheckBox onFillColor={colors.primary} value={true} />
       </Example>
       <Example
         title="Custom tintColor Color"
-        code={"<CheckBox tintColor='red' />"}>
-        <CheckBox tintColor="red" />
+        code={'<CheckBox tintColor={colors.primary} />'}>
+        <CheckBox tintColor={colors.primary} />
       </Example>
     </Page>
   );

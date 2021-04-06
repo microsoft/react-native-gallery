@@ -4,8 +4,11 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Config from 'react-native-config';
+import {useTheme} from '@react-navigation/native';
 
 export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example = `<>
   <Text>Service URL: {Config.SERVICE_URL}</Text>
   <Text>Service port: {Config.SERVICE_PORT}</Text>
@@ -24,9 +27,15 @@ export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="Config Information" code={example}>
-        <Text>Service URL: {Config.SERVICE_URL}</Text>
-        <Text>Service port: {Config.SERVICE_PORT}</Text>
-        <Text>Service API key: {Config.SERVICE_API_KEY}</Text>
+        <Text style={{color: colors.text}}>
+          Service URL: {Config.SERVICE_URL}
+        </Text>
+        <Text style={{color: colors.text}}>
+          Service port: {Config.SERVICE_PORT}
+        </Text>
+        <Text style={{color: colors.text}}>
+          Service API key: {Config.SERVICE_API_KEY}
+        </Text>
       </Example>
     </Page>
   );

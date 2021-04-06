@@ -3,8 +3,11 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Picker} from '@react-native-picker/picker';
+import {useTheme} from '@react-navigation/native';
 
 export const PickerExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = `<Picker style={{height: 50, width: 100}}>
   <Picker.Item label="Option 1" value="Option 1"/>
   <Picker.Item label="Option 2" value="Option 2"/>
@@ -15,7 +18,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   <Picker.Item label="Option 2" value="Option 2"/>
   <Picker.Item label="Option 3" value="Option 3"/>
 </Picker>`;
-  const example3jsx = `<Picker style={{height: 50, width: 100}}>
+  const example3jsx = `<Picker style={{height: 50, width: 100}} itemStyle={{color: colors.primary}}>
   <Picker.Item label="Option 1" value="Option 1"/>
   <Picker.Item label="Option 2" value="Option 2"/>
   <Picker.Item label="Option 3" value="Option 3"/>
@@ -37,14 +40,19 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple Picker." code={example1jsx}>
-        <Picker style={{height: 50, width: 100}}>
+        <Picker
+          style={{height: 50, width: 100}}
+          itemStyle={{color: colors.text}}>
           <Picker.Item label="Option 1" value="Option 1" />
           <Picker.Item label="Option 2" value="Option 2" />
           <Picker.Item label="Option 3" value="Option 3" />
         </Picker>
       </Example>
       <Example title="A disabled Picker." code={example2jsx}>
-        <Picker style={{height: 50, width: 100}} enabled={false}>
+        <Picker
+          style={{height: 50, width: 100}}
+          enabled={false}
+          itemStyle={{color: colors.text}}>
           <Picker.Item label="Option 1" value="Option 1" />
           <Picker.Item label="Option 2" value="Option 2" />
           <Picker.Item label="Option 3" value="Option 3" />
@@ -53,7 +61,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A colorful Picker." code={example3jsx}>
         <Picker
           style={{height: 50, width: 100}}
-          itemStyle={{fontStyle: 'italic', color: '#FF0000'}}>
+          itemStyle={{color: colors.primary}}>
           <Picker.Item label="Option 1" value="Option 1" />
           <Picker.Item label="Option 2" value="Option 2" />
           <Picker.Item label="Option 3" value="Option 3" />

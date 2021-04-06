@@ -3,8 +3,11 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Slider from '@react-native-community/slider';
+import {useTheme} from '@react-navigation/native';
 
 export const SliderExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = `<Slider 
   style={{width: 200, height: 40}} 
   minimumValue={0} 
@@ -19,8 +22,8 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
   style={{width: 40, height: 200}}
   minimumValue={0}
   maximumValue={100}
-  minimumTrackTintColor="#FF0000"
-  maximumTrackTintColor="#0000ff"
+  minimumTrackTintColor={colors.primary}
+  maximumTrackTintColor={colors.border}
   step={1}
   vertical={true} />`;
   const example4jsx = `<Slider 
@@ -68,8 +71,8 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
           style={{width: 40, height: 200}}
           minimumValue={0}
           maximumValue={100}
-          minimumTrackTintColor="#FF0000"
-          maximumTrackTintColor="#0000ff"
+          minimumTrackTintColor={colors.primary}
+          maximumTrackTintColor={colors.border}
           step={1}
           vertical={true}
         />

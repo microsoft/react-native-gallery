@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {View, Button, StyleSheet} from 'react-native';
+import {View, Button, StyleSheet, useColorScheme} from 'react-native';
 import {AppTheme} from 'react-native-windows';
 import {
-  DefaultTheme,
-  DarkTheme,
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
@@ -14,6 +12,8 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
+import LightTheme from './themes/LightTheme';
+import DarkTheme from './themes/DarkTheme';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,7 +35,11 @@ function RNGalleryScreenWrapper({navigation}) {
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
-      <Button title="Menu" onPress={() => navigation.openDrawer()} />
+      <Button
+        title="Menu"
+        color="#0066cc"
+        onPress={() => navigation.openDrawer()}
+      />
       <View style={styles.navItem}>
         <Component />
       </View>
@@ -92,7 +96,7 @@ function renderScreen(i: number) {
 export default function App() {
   return (
     <NavigationContainer
-      theme={AppTheme.currentTheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={useColorScheme() === 'dark' ? DarkTheme : LightTheme}>
       <MyDrawer />
     </NavigationContainer>
   );

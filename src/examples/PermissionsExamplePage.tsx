@@ -7,6 +7,7 @@ import {check, Permission, PERMISSIONS, PermissionStatus, request, RESULTS} from
 import {AndroidPermissionMap} from 'react-native-permissions/dist/typescript/permissions.android';
 import {IOSPermissionMap} from 'react-native-permissions/dist/typescript/permissions.ios';
 import {WindowsPermissionMap} from 'react-native-permissions/dist/typescript/permissions.windows';
+import {useTheme} from '@react-navigation/native';
 
 const getResultString = (result: PermissionStatus) => {
   switch (result) {
@@ -26,6 +27,8 @@ const getResultString = (result: PermissionStatus) => {
 type PermissionsMap = AndroidPermissionMap | IOSPermissionMap | WindowsPermissionMap
 
 export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+  
   const exampleJsx = `<FlatList
   data={entries}
   renderItem={({item}) => {
@@ -34,10 +37,11 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
 
     return (
         <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          {status == 'granted' ? <Button onPress={() => {}} color='#008000' title="Granted" />
+          {status == 'granted' ? <Button onPress={() => {}} color='#737373' title="Granted" />
                                : <Button 
                                    onPress={() => requestPermission(perm)} 
-                                   title="Request" 
+                                   title="Request"
+                                   colors={colors.primary}
                                    disabled={status == 'unavailable' || status == 'blocked'} />}
           <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
           <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
@@ -88,10 +92,10 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
 
     return (
         <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          {status == 'granted' ? <Button onPress={() => {}} color='#008000' title="Granted" />
-                               : <Button onPress={() => requestPermission(perm)} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />}
-          <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
-          <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
+          {status == 'granted' ? <Button onPress={() => {}} color='#737373' title="Granted" />
+                               : <Button onPress={() => requestPermission(perm)} color={colors.primary} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />}
+          <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>{item[0]}</Text>
+          <Text style={{paddingLeft: 10, color: colors.text}}>{getResultString(status)}</Text>
         </View>
     );
   }

@@ -3,13 +3,16 @@ import {Text} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const TextExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = '<Text>Here is a line of text.</Text>';
   const example2jsx = `<Text style={{fontWeight: '600', fontStyle: 'italic'}}>
   Here is a line of bold and italicized text.
 </Text>`;
-  const example3jsx = `<Text style={{color: 'red'}} selectable>
+  const example3jsx = `<Text style={{color: colors.primary}} selectable>
   Here is a line of bold and italicized text.
 </Text>`;
   const example4jsx = `<Text style={{textAlign: 'center'}} numberOfLines={2}>
@@ -21,7 +24,7 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
 </Text>`;
   const example5jsx = `<Text style={{fontWeight: '600'}}>
   This is bolded
-  <Text style={{color: 'blue'}}>
+  <Text style={{color: colors.primary}}>
     &nbsp;and blue
     <Text style={{textDecorationLine: 'underline'}}>
       &nbsp;and underlined text.
@@ -51,20 +54,23 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple line of Text." code={example1jsx}>
-        <Text>Here is a line of text.</Text>
+        <Text style={{color: colors.text}}>Here is a line of text.</Text>
       </Example>
       <Example title="A line of bolded and italicized Text." code={example2jsx}>
-        <Text style={{fontWeight: '600', fontStyle: 'italic'}}>
+        <Text
+          style={{fontWeight: '600', fontStyle: 'italic', color: colors.text}}>
           Here is a line of bold and italicized text.
         </Text>
       </Example>
       <Example title="A selectable line of colored Text." code={example3jsx}>
-        <Text style={{color: 'red'}} selectable>
+        <Text style={{color: colors.primary}} selectable>
           Here is a line of bold and italicized text.
         </Text>
       </Example>
       <Example title="A 2-line centered block of Text." code={example4jsx}>
-        <Text style={{textAlign: 'center'}} numberOfLines={2}>
+        <Text
+          style={{textAlign: 'center', color: colors.text}}
+          numberOfLines={2}>
           Here is a sample section of longer text. This sample may take up more
           that one line if the window width is short enough. Notice that the
           block of text will never exceed more that two lines. If more text
@@ -75,9 +81,9 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
       <Example
         title="A nested block of Text with additional style at each level."
         code={example5jsx}>
-        <Text style={{fontWeight: '600'}}>
+        <Text style={{fontWeight: '600', color: colors.text}}>
           This is bolded
-          <Text style={{color: 'blue'}}>
+          <Text style={{color: colors.primary}}>
             &nbsp;and blue
             <Text style={{textDecorationLine: 'underline'}}>
               &nbsp;and underlined text.

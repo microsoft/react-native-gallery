@@ -3,8 +3,11 @@ import {TextInput} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const [text1, setText1] = React.useState('');
   const [text2, setText2] = React.useState('');
   const [text3, setText3] = React.useState('');
@@ -24,11 +27,11 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   };
 
   const example1jsx = `<TextInput
-  style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+  style={{height: 40, borderColor: colors.border, borderWidth: 1}}
   onChangeText={onChangeText1}
   value={text1}/>`;
   const example2jsx = `<TextInput
-  style={{height: 80, borderColor: 'gray', borderWidth: 1}}
+  style={{height: 80, borderColor: colors.border, borderWidth: 1}}
   onChangeText={onChangeText2}
   value={text2}
   multiline
@@ -36,21 +39,22 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   const example3jsx = `<TextInput
   style={{
     height: 40,
-    borderColor: 'gray',
+    borderColor: colors.border,
     borderWidth: 1,
-    backgroundColor: 'lightgrey',
+    backgroundColor: colors.primary,
     fontStyle: 'italic',
     fontWeight: '700',
+    color: colors.card
   }}
   onChangeText={onChangeText3}
   value={text3}/>`;
   const example4jsx = `<TextInput
-  style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+  style={{height: 40, borderColor: colors.border, borderWidth: 1}}
   onChangeText={onChangeText4}
   value={text4}
   editable={false}
   placeholder="Disabled TextInput..."
-  placeholderTextColor="red"/>`;
+  placeholderTextColor={colors.primary}/>`;
 
   return (
     <Page
@@ -80,7 +84,12 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple TextInput." code={example1jsx}>
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{
+            height: 40,
+            borderColor: colors.border,
+            borderWidth: 1,
+            color: colors.text,
+          }}
           onChangeText={onChangeText1}
           value={text1}
         />
@@ -89,7 +98,12 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A multiline TextInput with placeholder text."
         code={example2jsx}>
         <TextInput
-          style={{height: 80, borderColor: 'gray', borderWidth: 1}}
+          style={{
+            height: 80,
+            borderColor: colors.border,
+            borderWidth: 1,
+            color: colors.text,
+          }}
           onChangeText={onChangeText2}
           value={text2}
           multiline
@@ -102,11 +116,12 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         <TextInput
           style={{
             height: 40,
-            borderColor: 'gray',
+            borderColor: colors.border,
             borderWidth: 1,
-            backgroundColor: 'lightgrey',
+            backgroundColor: colors.primary,
             fontStyle: 'italic',
             fontWeight: '700',
+            color: colors.card,
           }}
           onChangeText={onChangeText3}
           value={text3}
@@ -116,12 +131,12 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A disabled TextInput with colored placeholder text."
         code={example4jsx}>
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, borderColor: colors.border, borderWidth: 1}}
           onChangeText={onChangeText4}
           value={text4}
           editable={false}
           placeholder="Disabled TextInput..."
-          placeholderTextColor="red"
+          placeholderTextColor={colors.primary}
         />
       </Example>
     </Page>

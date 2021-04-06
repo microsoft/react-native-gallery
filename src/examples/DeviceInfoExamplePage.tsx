@@ -7,8 +7,11 @@ import DeviceInfo, {
   getIpAddress,
   useDeviceName,
 } from 'react-native-device-info';
+import {useTheme} from '@react-navigation/native';
 
 export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const exampleSysInfo = `<>
   <Text>System Name: {DeviceInfo.getSystemName()}</Text>
   <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
@@ -45,11 +48,11 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <View>
-        <Text>
+        <Text style={{color: colors.text}}>
           For more information about each platform's supported APIs, check out
           the{' '}
           <Text
-            style={{color: 'blue'}}
+            style={{color: colors.primary}}
             onPress={() =>
               Linking.openURL(
                 'https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api',
@@ -62,16 +65,22 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
       </View>
 
       <Example title="System Information" code={exampleSysInfo}>
-        <Text>System Name: {DeviceInfo.getSystemName()}</Text>
-        <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
+        <Text style={{color: colors.text}}>
+          System Name: {DeviceInfo.getSystemName()}
+        </Text>
+        <Text style={{color: colors.text}}>
+          System Version: {DeviceInfo.getSystemVersion()}
+        </Text>
       </Example>
 
       <Example title="Device Information" code={exampleDeviceInfo}>
-        <Text>Device Name: {JSON.stringify(useDeviceName(), null, '  ')}</Text>
+        <Text style={{color: colors.text}}>
+          Device Name: {JSON.stringify(useDeviceName(), null, '  ')}
+        </Text>
       </Example>
 
       <Example title="Network Information" code={exampleNetworkInfo}>
-        <Text>IP address: {ipAddress}</Text>
+        <Text style={{color: colors.text}}>IP address: {ipAddress}</Text>
       </Example>
     </Page>
   );

@@ -3,6 +3,7 @@ import {Text, FlatList, View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 const Data = [
   {
@@ -29,6 +30,8 @@ const Data = [
 ];
 
 export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = `<FlatList
   data={Data}
   renderItem={renderItem}
@@ -67,7 +70,7 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
 
   const renderItem = ({item}) => (
     <View style={{padding: 5}}>
-      <Text>{item.title}</Text>
+      <Text style={{color: colors.text}}>{item.title}</Text>
     </View>
   );
 
@@ -100,12 +103,12 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
-            <Text style={{fontStyle: 'italic'}}>
+            <Text style={{fontStyle: 'italic', color: colors.text}}>
               This is a header at the start of the list.
             </Text>
           }
           ListFooterComponent={
-            <Text style={{fontStyle: 'italic'}}>
+            <Text style={{fontStyle: 'italic', color: colors.text}}>
               This is a footer at the end of the list.
             </Text>
           }

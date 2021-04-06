@@ -2,6 +2,7 @@ import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {LinkContainer} from './LinkContainer';
+import {useTheme} from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   container: {
@@ -74,14 +75,19 @@ export function Page(props: {
   documentation: {label: string; url: string}[];
   children: React.ReactNode;
 }) {
+  const {colors} = useTheme();
   return (
     <View style={styles.container}>
       <View style={styles.titlePane}>
-        <Text style={styles.title}>{props.title}</Text>
+        <Text style={[styles.title, {color: colors.text}]}>{props.title}</Text>
         {DisplayBadge(props.wrappedNativeControl)}
       </View>
 
-      {props.description && <Text>{props.description}</Text>}
+      {props.description && (
+        <Text style={[styles.description, {color: colors.text}]}>
+          {props.description}
+        </Text>
+      )}
 
       <ScrollView style={styles.scrollView}>
         {props.children}
