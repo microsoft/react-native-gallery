@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   menu: {
-    margin: 15,
+    margin: 10,
     height: 34,
     width: 38,
     borderRadius: 3,
