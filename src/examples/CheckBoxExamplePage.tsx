@@ -8,7 +8,7 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Checkbox"
-      description="This is a page showing how to use a CheckBox"
+      description="The Checkbox component lets the user select a combination of binary options."
       wrappedNativeControl={{
         control: 'CheckBox',
         url:
