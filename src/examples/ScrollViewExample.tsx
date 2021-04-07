@@ -115,7 +115,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
           </Text>
         </ScrollView>
       </Example>
-      <Example title="A horizontal ScrollView" code={example2jsx}>
+      <Example title="A horizontal ScrollView." code={example2jsx}>
         <ScrollView style={{height: 40}} horizontal={true}>
           <Text>
             Here is a very long snippet of text. The goal is for this text to be
