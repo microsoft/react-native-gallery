@@ -21,37 +21,37 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/react-native-checkbox/react-native-checkbox',
         },
       ]}>
-      <Example title="Simple Checkbox" code={'<CheckBox />'}>
+      <Example title="A simple Checkbox." code={'<CheckBox />'}>
         <CheckBox />
       </Example>
-      <Example title="Checked Checkbox" code={'<CheckBox value={true}/>'}>
+      <Example title="A checked Checkbox." code={'<CheckBox value={true}/>'}>
         <CheckBox value={true} />
       </Example>
-      <Example title="Disabled Checkbox" code={'<CheckBox disabled />'}>
+      <Example title="A disabled Checkbox." code={'<CheckBox disabled />'}>
         <CheckBox disabled />
       </Example>
       <Example
-        title="Disabled Checked Checkbox"
+        title="A disabled checked Checkbox."
         code={'<CheckBox disabled value={true} />'}>
         <CheckBox disabled value={true} />
       </Example>
       <Example
-        title="Custom onCheckColor Checkmark"
+        title="A colored check Checkbox."
         code={"<CheckBox onCheckColor='red' value={true} />"}>
         <CheckBox onCheckColor="red" value={true} />
       </Example>
       <Example
-        title="Custom onTintColor Color"
+        title="A Checkbox with colored border when checked and focused."
         code={"<CheckBox onTintColor='red' value={true} />"}>
         <CheckBox onTintColor="red" value={true} />
       </Example>
       <Example
-        title="Custom onFillColor Color"
+        title="A Checkbox colored when checked."
         code={"<CheckBox onFillColor='red' value={true} />"}>
         <CheckBox onFillColor="red" value={true} />
       </Example>
       <Example
-        title="Custom tintColor Color"
+        title="A Checkbox colored when unchecked."
         code={"<CheckBox tintColor='red' />"}>
         <CheckBox tintColor="red" />
       </Example>
