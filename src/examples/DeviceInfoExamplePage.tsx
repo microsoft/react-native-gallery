@@ -35,7 +35,7 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Device Info"
-      description="Shows available device information via the react-native-device-info module."
+      description="The DeviceInfo module shows available device information."
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/DeviceInfoExamplePage.tsx"
       documentation={[
         {
@@ -44,23 +44,6 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
             'https://github.com/react-native-device-info/react-native-device-info',
         },
       ]}>
-      <View>
-        <Text>
-          For more information about each platform's supported APIs, check out
-          the{' '}
-          <Text
-            style={{color: 'blue'}}
-            onPress={() =>
-              Linking.openURL(
-                'https://github.com/react-native-device-info/react-native-device-info/blob/master/README.md#api',
-              )
-            }>
-            documentation
-          </Text>
-          .
-        </Text>
-      </View>
-
       <Example title="System Information" code={exampleSysInfo}>
         <Text>System Name: {DeviceInfo.getSystemName()}</Text>
         <Text>System Version: {DeviceInfo.getSystemVersion()}</Text>
