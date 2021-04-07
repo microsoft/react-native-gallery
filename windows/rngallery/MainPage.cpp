@@ -16,5 +16,7 @@ namespace winrt::rngallery::implementation
         InitializeComponent();
         auto app = Application::Current().as<App>();
         ReactRootView().ReactNativeHost(app->Host());
+        // Workaround for https://github.com/microsoft/react-native-windows/issues/6287
+        ReactRootView().IsPerspectiveEnabled(false);
     }
 }
