@@ -55,7 +55,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="TextInput"
-      description="A foundational component for inputting text into the app via a keyboard."
+      description="TextInput is a foundational component for inputting text into an app via a keyboard."
       wrappedNativeControl={{
         control: 'TextBox',
         url:
@@ -80,7 +80,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple TextInput." code={example1jsx}>
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 32, borderColor: 'gray', borderWidth: 1}}
           onChangeText={onChangeText1}
           value={text1}
         />
@@ -89,7 +89,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A multiline TextInput with placeholder text."
         code={example2jsx}>
         <TextInput
-          style={{height: 80, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 64, borderColor: 'gray', borderWidth: 1}}
           onChangeText={onChangeText2}
           value={text2}
           multiline
@@ -101,7 +101,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         code={example3jsx}>
         <TextInput
           style={{
-            height: 40,
+            height: 32,
             borderColor: 'gray',
             borderWidth: 1,
             backgroundColor: 'lightgrey',
@@ -116,7 +116,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A disabled TextInput with colored placeholder text."
         code={example4jsx}>
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 32, borderColor: 'gray', borderWidth: 1}}
           onChangeText={onChangeText4}
           value={text4}
           editable={false}
