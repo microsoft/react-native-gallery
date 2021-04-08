@@ -115,7 +115,21 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
           />
         </SettingContainer>
         <SettingContainer heading="Disclaimer">
-          <Text style={styles.text}>INSERT DISCLAIMER INFORMATION</Text>
+          <Text style={styles.text}>
+            THIS CODE AND INFORMATION IS PROVIDED ‘AS IS’ WITHOUT WARRANTY OF
+            ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+            THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+            PARTICULAR PURPOSE.{'\n\n'}Copyright (c) Microsoft Corporation. All
+            rights reserved.
+          </Text>
+          <Hyperlink
+            label="Microsoft Services Agreement"
+            url="https://www.microsoft.com/en-us/servicesagreement/default.aspx"
+          />
+          <Hyperlink
+            label="Microsoft Privacy Statement"
+            url="https://privacy.microsoft.com/en-us/privacystatement"
+          />
         </SettingContainer>
       </ScrollView>
     </View>
