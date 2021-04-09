@@ -13,8 +13,8 @@ export const WelcomePage: React.FunctionComponent<{}> = () => {
       <Text style={styles.title}>Welcome to the RN Gallery!</Text>
       <Text />
       <Text>
-        To view an example page, click the Menu button and choose from the list
-        in the drawer.
+        To view an example page, click the navigation button and choose from the
+        list in the drawer.
       </Text>
     </View>
   );

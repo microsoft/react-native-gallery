@@ -5,7 +5,7 @@ import {LinkContainer} from './LinkContainer';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
+    paddingBottom: 10,
     alignSelf: 'stretch',
     height: '100%',
   },
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
   },
   titlePane: {
-    marginTop: 20,
+    marginTop: 44,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
