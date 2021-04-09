@@ -14,7 +14,7 @@ export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="WebView"
-      description="The WebView compoenent renders web content within a native view."
+      description="The WebView component renders web content within a native view."
       wrappedNativeControl={{
         control: 'WebView',
         url: 'https://github.com/react-native-webview/react-native-webview',

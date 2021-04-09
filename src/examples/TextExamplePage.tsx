@@ -13,7 +13,7 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
   Here is a line of bold and italicized text.
 </Text>`;
   const example3jsx = `<Text style={{color: colors.primary}} selectable>
-  Here is a line of bold and italicized text.
+  Here is a line of colored text.
 </Text>`;
   const example4jsx = `<Text style={{textAlign: 'center'}} numberOfLines={2}>
   Here is a sample section of longer text. This sample may take up more
@@ -64,7 +64,7 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A selectable line of colored Text." code={example3jsx}>
         <Text style={{color: colors.primary}} selectable>
-          Here is a line of bold and italicized text.
+          Here is a line of colored text.
         </Text>
       </Example>
       <Example title="A 2-line centered block of Text." code={example4jsx}>

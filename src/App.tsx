@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {View, Button, StyleSheet, useColorScheme} from 'react-native';
-import {AppTheme} from 'react-native-windows';
 import {
   NavigationContainer,
   useNavigationState,

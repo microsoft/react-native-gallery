@@ -10,7 +10,7 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Checkbox"
-      description="This is a page showing how to use a CheckBox"
+      description="The Checkbox component lets the user select a combination of binary options."
       wrappedNativeControl={{
         control: 'CheckBox',
         url:
@@ -23,37 +23,37 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/react-native-checkbox/react-native-checkbox',
         },
       ]}>
-      <Example title="Simple Checkbox" code={'<CheckBox />'}>
+      <Example title="A simple Checkbox." code={'<CheckBox />'}>
         <CheckBox />
       </Example>
-      <Example title="Checked Checkbox" code={'<CheckBox value={true}/>'}>
+      <Example title="A checked Checkbox." code={'<CheckBox value={true}/>'}>
         <CheckBox value={true} />
       </Example>
-      <Example title="Disabled Checkbox" code={'<CheckBox disabled />'}>
+      <Example title="A disabled Checkbox." code={'<CheckBox disabled />'}>
         <CheckBox disabled />
       </Example>
       <Example
-        title="Disabled Checked Checkbox"
+        title="A disabled checked Checkbox."
         code={'<CheckBox disabled value={true} />'}>
         <CheckBox disabled value={true} />
       </Example>
       <Example
-        title="Custom onCheckColor Checkmark"
+        title="A colored check Checkbox."
         code={'<CheckBox onCheckColor={colors.primary} value={true} />'}>
         <CheckBox onCheckColor={colors.primary} value={true} />
       </Example>
       <Example
-        title="Custom onTintColor Color"
+        title="A Checkbox with colored border when checked and focused."
         code={'<CheckBox onTintColor={colors.primary} value={true} />'}>
         <CheckBox onTintColor={colors.primary} value={true} />
       </Example>
       <Example
-        title="Custom onFillColor Color"
+        title="A Checkbox colored when checked."
         code={'<CheckBox onFillColor={colors.primary} value={true} />'}>
         <CheckBox onFillColor={colors.primary} value={true} />
       </Example>
       <Example
-        title="Custom tintColor Color"
+        title="A Checkbox colored when unchecked."
         code={'<CheckBox tintColor={colors.primary} />'}>
         <CheckBox tintColor={colors.primary} />
       </Example>
