@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 5,
   },
-});
+});*/

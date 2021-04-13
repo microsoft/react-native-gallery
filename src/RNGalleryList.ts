@@ -7,7 +7,7 @@ import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from './examples/ConfigExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
-import {SketchExamplePage} from './examples/SketchExamplePage';
+//import {SketchExamplePage} from './examples/SketchExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
 import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
@@ -127,10 +127,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Slider',
     component: SliderExamplePage,
   },
-  {
+  /*{
     key: 'Sketch',
     component: SketchExamplePage,
-  },
+  },*/
   {
     key: 'Switch',
     component: SwitchExamplePage,
