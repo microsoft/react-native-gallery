@@ -3,8 +3,10 @@ import {Text, ScrollView} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
   const example1jsx = `<ScrollView style={{height: 40}}>
   <Text>
     Here is a very long snippet of text. The goal is for this text to be
@@ -100,7 +102,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple ScrollView with text." code={example1jsx}>
         <ScrollView style={{height: 40}}>
-          <Text>
+          <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
             Thus, scrolling will be necessary to see all of the content. This is
@@ -117,7 +119,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A horizontal ScrollView." code={example2jsx}>
         <ScrollView style={{height: 40}} horizontal={true}>
-          <Text>
+          <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
             Thus, scrolling will be necessary to see all of the content. This is
@@ -129,7 +131,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A disabled ScrollView." code={example3jsx}>
         <ScrollView style={{height: 40}} scrollEnabled={false}>
-          <Text>
+          <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
             Thus, scrolling will be necessary to see all of the content. This is
@@ -148,7 +150,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
         title="Nested ScrollViews with opposite scroll direction."
         code={example4jsx}>
         <ScrollView style={{height: 50, padding: 10}}>
-          <Text numberOfLines={5}>
+          <Text numberOfLines={5} style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
             Thus, scrolling will be necessary to see all of the content. This is
@@ -162,7 +164,12 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
             but you can add any type of ReactNode inside of of a ScrollView.
           </Text>
           <ScrollView style={{height: 40}} horizontal={true}>
-            <Text style={{fontStyle: 'italic', fontWeight: '600'}}>
+            <Text
+              style={{
+                fontStyle: 'italic',
+                fontWeight: '600',
+                color: colors.text,
+              }}>
               Here is a very long snippet of text. The goal is for this text to
               be too long to fit inside this view which has a height
               restriction. Thus, scrolling will be necessary to see all of the

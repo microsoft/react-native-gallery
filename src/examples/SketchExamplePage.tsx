@@ -1,11 +1,14 @@
-'use strict';
+/*'use strict';
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
+import {useTheme} from '@react-navigation/native';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const exampleJsx = `<View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5FCFF'}}>
   <View style={{ flex: 1, flexDirection: 'row' }}>
     <SketchCanvas
@@ -17,17 +20,17 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
 </View>`;
 
   const undoComponent = (
-    <View style={styles.functionButton}>
+    <View style={[styles.functionButton, {backgroundColor: colors.primary}]}>
       <Text style={{color: 'white'}}>Undo</Text>
     </View>
   );
   const clearComponent = (
-    <View style={styles.functionButton}>
+    <View style={[styles.functionButton, {backgroundColor: colors.primary}]}>
       <Text style={{color: 'white'}}>Clear</Text>
     </View>
   );
   const eraseComponent = (
-    <View style={styles.functionButton}>
+    <View style={[styles.functionButton, {backgroundColor: colors.primary}]}>
       <Text style={{color: 'white'}}>Eraser</Text>
     </View>
   );
@@ -92,9 +95,8 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     height: 30,
     width: 60,
-    backgroundColor: '#39579A',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
   },
-});
+});*/

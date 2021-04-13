@@ -1,9 +1,12 @@
 import * as React from 'react';
-import {View, Button, StyleSheet} from 'react-native';
-import {AppTheme} from 'react-native-windows';
 import {
-  DefaultTheme,
-  DarkTheme,
+  View,
+  StyleSheet,
+  TouchableHighlight,
+  Text,
+  useColorScheme,
+} from 'react-native';
+import {
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
@@ -14,6 +17,8 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
+import LightTheme from './themes/LightTheme';
+import DarkTheme from './themes/DarkTheme';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,6 +32,18 @@ const styles = StyleSheet.create({
     height: '100%',
     alignSelf: 'stretch',
   },
+  menu: {
+    margin: 10,
+    height: 34,
+    width: 38,
+    borderRadius: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    fontFamily: 'Segoe MDL2 Assets',
+    fontSize: 16,
+  },
 });
 
 // @ts-ignore
@@ -35,7 +52,13 @@ function RNGalleryScreenWrapper({navigation}) {
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
-      <Button title="Menu" onPress={() => navigation.openDrawer()} />
+      <TouchableHighlight
+        style={styles.menu}
+        onPress={() => navigation.openDrawer()}
+        activeOpacity={0.5783}
+        underlayColor="rgba(0, 0, 0, 0.0241);">
+        <Text style={styles.icon}>&#xE700;</Text>
+      </TouchableHighlight>
       <View style={styles.navItem}>
         <Component />
       </View>
@@ -92,7 +115,7 @@ function renderScreen(i: number) {
 export default function App() {
   return (
     <NavigationContainer
-      theme={AppTheme.currentTheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={useColorScheme() === 'dark' ? DarkTheme : LightTheme}>
       <MyDrawer />
     </NavigationContainer>
   );

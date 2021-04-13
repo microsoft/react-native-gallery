@@ -4,9 +4,14 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import RNPrint from 'react-native-print';
+import {useTheme} from '@react-navigation/native';
 
 export const PrintExamplePage: React.FunctionComponent<{}> = () => {
-  const example = `<Button onPress={async () => {
+  const {colors} = useTheme();
+
+  const example = `<Button
+  color={colors.primary}
+  onPress={async () => {
     await RNPrint.print({
       filePath:
         'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
@@ -33,7 +38,11 @@ export const PrintExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="Print PDF document" code={example}>
-        <Button onPress={printRemotePDF} title="Print PDF" />
+        <Button
+          color={colors.primary}
+          onPress={printRemotePDF}
+          title="Print PDF"
+        />
       </Example>
     </Page>
   );

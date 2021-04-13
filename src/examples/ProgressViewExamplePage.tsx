@@ -3,14 +3,17 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {ProgressView} from '@react-native-community/progress-view';
+import {useTheme} from '@react-navigation/native';
 
 export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = '<ProgressView progress={0.5}/>';
 
   const example2jsx = "<ProgressView isIndeterminate='true'/>";
   const example3jsx = `<ProgressView
-    progressTintColor="orange"
-    trackTintColor="blue"
+    progressTintColor={colors.primary}
+    trackTintColor={colors.border}
     progress={0.7} />`;
 
   return (
@@ -24,20 +27,20 @@ export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/react-native-progress-view/progress-view',
         },
       ]}>
-      <Example title="Simple ProgressView with 50% progress" code={example1jsx}>
+      <Example
+        title="A simple ProgressView with 50% progress."
+        code={example1jsx}>
         <ProgressView progress={0.5} />
       </Example>
-      <Example
-        title="Indeterminate ProgressView - Windows only"
-        code={example2jsx}>
+      <Example title="An indeterminate ProgressView." code={example2jsx}>
         <ProgressView isIndeterminate="true" />
       </Example>
       <Example
-        title="ProgressView with different colors and 70% progress"
+        title="A colored ProgressView with 70% progress."
         code={example3jsx}>
         <ProgressView
-          progressTintColor="orange"
-          trackTintColor="blue"
+          progressTintColor={colors.primary}
+          trackTintColor={colors.border}
           progress={0.7}
         />
       </Example>

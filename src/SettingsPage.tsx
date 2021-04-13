@@ -4,37 +4,44 @@ import React from 'react';
 import {useGlobal} from 'reactn';
 import {Picker} from '@react-native-picker/picker';
 import {Hyperlink} from './components/Hyperlink';
+import {useTheme} from '@react-navigation/native';
 
-const styles = StyleSheet.create({
-  heading: {
-    marginTop: 30,
-    marginBottom: 10,
-    fontSize: 23,
-  },
-  text: {
-    paddingTop: 5,
-    paddingBottom: 5,
-  },
-  container: {
-    padding: 10,
-    alignSelf: 'stretch',
-    height: '100%',
-  },
-  title: {
-    fontWeight: '200',
-    fontSize: 26,
-    marginTop: 20,
-    marginBottom: 10,
-  },
-  scrollView: {
-    paddingRight: 20,
-  },
-});
+const createStyles = (colors: any) =>
+  StyleSheet.create({
+    heading: {
+      marginTop: 30,
+      marginBottom: 10,
+      fontSize: 23,
+      color: colors.text,
+    },
+    text: {
+      paddingTop: 5,
+      paddingBottom: 5,
+      color: colors.text,
+    },
+    container: {
+      padding: 10,
+      alignSelf: 'stretch',
+      height: '100%',
+    },
+    title: {
+      fontWeight: '200',
+      fontSize: 26,
+      marginTop: 20,
+      marginBottom: 10,
+      color: colors.text,
+    },
+    scrollView: {
+      paddingRight: 20,
+    },
+  });
 
 const SettingContainer = (props: {
   heading: string;
   children: React.ReactNode;
 }) => {
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   return (
     <View>
       <Text style={styles.heading}>{props.heading}</Text>
@@ -46,6 +53,8 @@ const SettingContainer = (props: {
 export const SettingsPage: React.FunctionComponent<{}> = () => {
   //@ts-ignore
   const [theme, setTheme] = useGlobal('theme');
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   const PickerValueChanged = (value: string | number, position: number) => {
     //@ts-ignore
     setTheme(value);
@@ -58,7 +67,8 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
           <Picker
             style={{height: 50, width: 200}}
             onValueChange={PickerValueChanged}
-            selectedValue={theme}>
+            selectedValue={theme}
+            itemStyle={{color: colors.text}}>
             <Picker.Item label="Light" value="light" />
             <Picker.Item label="Dark" value="dark" />
             <Picker.Item label="Use System Setting" value="system" />
@@ -115,7 +125,21 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
           />
         </SettingContainer>
         <SettingContainer heading="Disclaimer">
-          <Text style={styles.text}>INSERT DISCLAIMER INFORMATION</Text>
+          <Text style={styles.text}>
+            THIS CODE AND INFORMATION IS PROVIDED ‘AS IS’ WITHOUT WARRANTY OF
+            ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+            THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+            PARTICULAR PURPOSE.{'\n\n'}Copyright (c) Microsoft Corporation. All
+            rights reserved.
+          </Text>
+          <Hyperlink
+            label="Microsoft Services Agreement"
+            url="https://www.microsoft.com/en-us/servicesagreement/default.aspx"
+          />
+          <Hyperlink
+            label="Microsoft Privacy Statement"
+            url="https://privacy.microsoft.com/en-us/privacystatement"
+          />
         </SettingContainer>
       </ScrollView>
     </View>

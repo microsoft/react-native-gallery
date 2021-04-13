@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import SInfo, {RNSensitiveInfoOptions} from 'react-native-sensitive-info';
+import {useTheme} from '@react-navigation/native';
 
 const SensitiveCredentials: RNSensitiveInfoOptions = {
   sharedPreferencesName: 'mySharedPrefs',
@@ -11,32 +12,34 @@ const SensitiveCredentials: RNSensitiveInfoOptions = {
 };
 
 export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
-  const example = `<Text style={{color: 'blue'}}>Key:key1 </Text>
+  const {colors} = useTheme();
+
+  const example = `<Text style={{color: colors.primary}}>Key:key1 </Text>
   <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
     <TextInput
       style={{
         width: 200,
         height: 36,
-        borderColor: 'gray',
+        borderColor: colors.border,
         borderWidth: 1,
       }}
       value={value}
       editable={false}
     />
-    <Button style={{margin: 20}} onPress={getItem} title="Get Item" />
+    <Button style={{margin: 20}} color={colors.primary} onPress={getItem} title="Get Item" />
   </View>
   <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
     <TextInput
       style={{
         width: 200,
         height: 36,
-        borderColor: 'gray',
+        borderColor: colors.border,
         borderWidth: 1,
       }}
       onChangeText={(text) => setNewValue(text)}
       value={newValue}
     />
-    <Button onPress={setItem} title="Set Item" />
+    <Button color={colors.primary} onPress={setItem} title="Set Item" />
   </View>`;
 
   const [value, setValue] = useState('');
@@ -65,32 +68,32 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="Sensitive Information" code={example}>
-        <Text style={{color: 'blue'}}>Key:key1 </Text>
+        <Text style={{color: colors.text, fontWeight: '500'}}>Key:key1 </Text>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
             style={{
               width: 200,
               height: 36,
-              borderColor: 'gray',
+              borderColor: colors.border,
               borderWidth: 1,
             }}
             value={value}
             editable={false}
           />
-          <Button onPress={getItem} title="Get Item" />
+          <Button color={colors.primary} onPress={getItem} title="Get Item" />
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
             style={{
               width: 200,
               height: 36,
-              borderColor: 'gray',
+              borderColor: colors.border,
               borderWidth: 1,
             }}
             onChangeText={(text) => setNewValue(text)}
             value={newValue}
           />
-          <Button onPress={setItem} title="Set Item" />
+          <Button color={colors.primary} onPress={setItem} title="Set Item" />
         </View>
       </Example>
     </Page>
