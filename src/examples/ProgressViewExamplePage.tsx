@@ -3,14 +3,17 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {ProgressView} from '@react-native-community/progress-view';
+import {useTheme} from '@react-navigation/native';
 
 export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = '<ProgressView progress={0.5}/>';
 
   const example2jsx = "<ProgressView isIndeterminate='true'/>";
   const example3jsx = `<ProgressView
-    progressTintColor="orange"
-    trackTintColor="blue"
+    progressTintColor={colors.primary}
+    trackTintColor={colors.border}
     progress={0.7} />`;
 
   return (
@@ -36,8 +39,8 @@ export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
         title="A colored ProgressView with 70% progress."
         code={example3jsx}>
         <ProgressView
-          progressTintColor="orange"
-          trackTintColor="blue"
+          progressTintColor={colors.primary}
+          trackTintColor={colors.border}
           progress={0.7}
         />
       </Example>

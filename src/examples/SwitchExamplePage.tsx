@@ -3,9 +3,12 @@ import {Text, Switch} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(false);
   const [switch3, setSwitch3] = useState(false);
@@ -30,8 +33,8 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
   const example3jsx = `<Switch
   value={switch3}
   onValueChange={onSwitchChange3}
-  thumbColor="red"
-  trackColor={{false: 'blue', true: 'lightskyblue'}} />`;
+  thumbColor="#FFFFFF"
+  trackColor={{false: colors.text, true: colors.primary}} />`;
   return (
     <Page
       title="Switch"
@@ -63,8 +66,8 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
         <Switch
           value={switch3}
           onValueChange={onSwitchChange3}
-          thumbColor="red"
-          trackColor={{false: 'blue', true: 'lightskyblue'}}
+          thumbColor="#FFFFFF"
+          trackColor={{false: colors.text, true: colors.primary}}
         />
       </Example>
     </Page>

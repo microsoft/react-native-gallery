@@ -3,14 +3,17 @@ import {View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const ViewExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = '<View />';
   const example2jsx = `<View
   style={{
     height: 50,
     width: 100,
-    backgroundColor: 'lightgrey',
+    backgroundColor: colors.text,
     borderRadius: 2,
   }} />`;
   const example3jsx = `<View
@@ -18,9 +21,9 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     height: 50,
     width: 100,
   }}>
-  <View style={{flex: 1, backgroundColor: 'red', borderRadius: 2}} />
+  <View style={{flex: 1, backgroundColor: colros.text, borderRadius: 2}} />
   <View
-    style={{flex: 2, backgroundColor: 'steelblue', borderRadius: 2}} />
+    style={{flex: 2, backgroundColor: colors.primary, borderRadius: 2}} />
 </View>`;
   const example4jsx = `<View
   style={{
@@ -31,13 +34,13 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
   <View
     style={{
       width: 50,
-      backgroundColor: 'red',
+      backgroundColor: colors.text,
       borderRadius: 2,
     }} />
   <View
     style={{
       width: 50,
-      backgroundColor: 'steelblue',
+      backgroundColor: colors.primary,
       borderRadius: 2,
     }} />
 </View>`;
@@ -50,7 +53,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     style={{
       height: 30,
       width: 30,
-      backgroundColor: 'red',
+      backgroundColor: colors.text,
       borderRadius: 2,
       alignSelf: 'flex-start',
     }} />
@@ -58,7 +61,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     style={{
       height: 30,
       width: 60,
-      backgroundColor: 'steelblue',
+      backgroundColor: colors.primary,
       borderRadius: 2,
       alignSelf: 'center',
     }} />
@@ -66,7 +69,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     style={{
       height: 30,
       width: 100,
-      backgroundColor: 'lightgrey',
+      backgroundColor: colors.border,
       borderRadius: 2,
       alignSelf: 'flex-end',
     }} />
@@ -79,7 +82,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     style={{
       height: 30,
       width: 30,
-      backgroundColor: 'red',
+      backgroundColor: colors.text,
       borderRadius: 2,
       position: 'relative',
       left: 5,
@@ -88,7 +91,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     style={{
       height: 30,
       width: 30,
-      backgroundColor: 'steelblue',
+      backgroundColor: colors.primary,
       borderRadius: 2,
       position: 'relative',
       left: 15,
@@ -127,7 +130,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 50,
             width: 100,
-            backgroundColor: 'lightgrey',
+            backgroundColor: colors.text,
             borderRadius: 2,
           }}
         />
@@ -138,9 +141,11 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             height: 50,
             width: 100,
           }}>
-          <View style={{flex: 1, backgroundColor: 'red', borderRadius: 2}} />
           <View
-            style={{flex: 2, backgroundColor: 'steelblue', borderRadius: 2}}
+            style={{flex: 1, backgroundColor: colors.text, borderRadius: 2}}
+          />
+          <View
+            style={{flex: 2, backgroundColor: colors.primary, borderRadius: 2}}
           />
         </View>
       </Example>
@@ -156,14 +161,14 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
           <View
             style={{
               width: 50,
-              backgroundColor: 'red',
+              backgroundColor: colors.text,
               borderRadius: 2,
             }}
           />
           <View
             style={{
               width: 50,
-              backgroundColor: 'steelblue',
+              backgroundColor: colors.primary,
               borderRadius: 2,
             }}
           />
@@ -181,7 +186,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             style={{
               height: 30,
               width: 30,
-              backgroundColor: 'red',
+              backgroundColor: colors.text,
               borderRadius: 2,
               alignSelf: 'flex-start',
             }}
@@ -190,7 +195,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             style={{
               height: 30,
               width: 60,
-              backgroundColor: 'steelblue',
+              backgroundColor: colors.primary,
               borderRadius: 2,
               alignSelf: 'center',
             }}
@@ -199,7 +204,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             style={{
               height: 30,
               width: 100,
-              backgroundColor: 'lightgrey',
+              backgroundColor: colors.border,
               borderRadius: 2,
               alignSelf: 'flex-end',
             }}
@@ -217,7 +222,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             style={{
               height: 30,
               width: 30,
-              backgroundColor: 'red',
+              backgroundColor: colors.text,
               borderRadius: 2,
               position: 'relative',
               left: 5,
@@ -227,7 +232,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             style={{
               height: 30,
               width: 30,
-              backgroundColor: 'steelblue',
+              backgroundColor: colors.primary,
               borderRadius: 2,
               position: 'relative',
               left: 15,

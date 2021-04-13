@@ -3,8 +3,11 @@ import {Text, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const PressableExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const [timesPressed, setTimesPressed] = useState(1);
   const [currEvent, setCurrEvent] = useState('');
 
@@ -17,7 +20,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
     width: 140,
     height: 50,
     borderRadius: 2,
-    backgroundColor: 'lightgrey',
+    backgroundColor: colors.border,
     opacity: 0.5,
   }}
   disabled={true}>
@@ -34,14 +37,19 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   }}
   style={({pressed}) => [
     {
-      backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'lightgrey',
+      backgroundColor: pressed ? colors.primary : colors.border,
       width: 140,
       height: 50,
       borderRadius: 2,
     },
   ]}>
   {({pressed}) => (
-    <Text style={{textAlign: 'center', paddingVertical: 15}}>
+    <Text
+      style={{
+        textAlign: 'center',
+        paddingVertical: 15,
+        color: pressed ? colors.background : color.text,
+      }}>
       {pressed ? \`Pressed \${timesPressed} times!\` : 'Press Me'}
     </Text>
   )}
@@ -52,7 +60,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
     width: 200,
     height: 50,
     borderRadius: 2,
-    backgroundColor: 'lightgrey',
+    backgroundColor: colors.border,
   }}
   onPress={() => setCurrEvent('press')}
   onPressIn={() => setCurrEvent('pressIn')}
@@ -81,7 +89,11 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Pressable component." code={example1jsx}>
         <Pressable>
-          {({pressed}) => <Text>{pressed ? 'Pressed!' : 'Press Me'}</Text>}
+          {({pressed}) => (
+            <Text style={{color: colors.text}}>
+              {pressed ? 'Pressed!' : 'Press Me'}
+            </Text>
+          )}
         </Pressable>
       </Example>
       <Example title="A disabled Pressable component." code={example2jsx}>
@@ -90,12 +102,17 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             width: 140,
             height: 50,
             borderRadius: 2,
-            backgroundColor: 'lightgrey',
+            backgroundColor: colors.border,
             opacity: 0.5,
           }}
           disabled={true}>
           {({pressed}) => (
-            <Text style={{textAlign: 'center', paddingVertical: 15}}>
+            <Text
+              style={{
+                textAlign: 'center',
+                paddingVertical: 15,
+                color: colors.text,
+              }}>
               {pressed ? 'This will never be triggered.' : 'Disabled Pressable'}
             </Text>
           )}
@@ -108,14 +125,19 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           }}
           style={({pressed}) => [
             {
-              backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'lightgrey',
+              backgroundColor: pressed ? colors.primary : colors.border,
               width: 140,
               height: 50,
               borderRadius: 2,
             },
           ]}>
           {({pressed}) => (
-            <Text style={{textAlign: 'center', paddingVertical: 15}}>
+            <Text
+              style={{
+                textAlign: 'center',
+                paddingVertical: 15,
+                color: pressed ? '#FFFFFF' : colors.text,
+              }}>
               {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
             </Text>
           )}
@@ -129,13 +151,18 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             width: 200,
             height: 50,
             borderRadius: 2,
-            backgroundColor: 'lightgrey',
+            backgroundColor: colors.border,
           }}
           onPress={() => setCurrEvent('press')}
           onPressIn={() => setCurrEvent('pressIn')}
           onPressOut={() => setCurrEvent('pressOut')}
           onLongPress={() => setCurrEvent('longPress')}>
-          <Text style={{textAlign: 'center', paddingVertical: 15}}>
+          <Text
+            style={{
+              textAlign: 'center',
+              paddingVertical: 15,
+              color: colors.text,
+            }}>
             Most recent event: {currEvent}
           </Text>
         </Pressable>

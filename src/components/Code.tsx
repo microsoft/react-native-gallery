@@ -220,7 +220,7 @@ function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
       : 0;
   if (node.type === 'text') {
     let text = (node as lowlight.AST.Text).value;
-    return <Text key={createTextKey(text, index)} >{text}</Text>;
+    return <Text key={createTextKey(text, index)}>{text}</Text>;
   } else if (node.type === 'element') {
     const elementNode = node as lowlight.AST.Element;
     if (themeStyles === 0) {

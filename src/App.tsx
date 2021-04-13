@@ -1,9 +1,12 @@
 import * as React from 'react';
-import {View, StyleSheet, TouchableHighlight, Text} from 'react-native';
-import {AppTheme} from 'react-native-windows';
 import {
-  DefaultTheme,
-  DarkTheme,
+  View,
+  StyleSheet,
+  TouchableHighlight,
+  Text,
+  useColorScheme,
+} from 'react-native';
+import {
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
@@ -14,6 +17,8 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
+import LightTheme from './themes/LightTheme';
+import DarkTheme from './themes/DarkTheme';
 
 const styles = StyleSheet.create({
   container: {
@@ -110,7 +115,7 @@ function renderScreen(i: number) {
 export default function App() {
   return (
     <NavigationContainer
-      theme={AppTheme.currentTheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={useColorScheme() === 'dark' ? DarkTheme : LightTheme}>
       <MyDrawer />
     </NavigationContainer>
   );

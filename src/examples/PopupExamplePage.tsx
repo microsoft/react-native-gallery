@@ -4,8 +4,11 @@ import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Popup} from 'react-native-windows';
+import {useTheme} from '@react-navigation/native';
 
 export const PopupExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const [showPopup1, setShowPopup1] = useState(false);
   const [showPopup2, setShowPopup2] = useState(false);
   const [showPopup3, setShowPopup3] = useState(false);
@@ -16,7 +19,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `<TouchableHighlight
   onPress={() => {
     setShowPopup1(true);
-  }}>
+  }}
+  activeOpacity={0.2}
+  underlayColor={color.border}>
   <Text>Open Popup</Text>
 </TouchableHighlight>
 <Popup isOpen={showPopup1}>
@@ -25,7 +30,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
     <TouchableHighlight
       onPress={() => {
         setShowPopup1(false);
-      }}>
+      }}
+      activeOpacity={0.2}
+      underlayColor={color.border}>
       <Text>Close Popup</Text>
     </TouchableHighlight>
   </View>
@@ -33,7 +40,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const example2jsx = `<TouchableHighlight
   onPress={() => {
     setShowPopup2(true);
-  }}>
+  }}
+  activeOpacity={0.2}
+  underlayColor={color.border}>
   <Text>Open Popup</Text>
 </TouchableHighlight>
 <Popup
@@ -47,7 +56,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
     <TouchableHighlight
       onPress={() => {
         setShowPopup2(false);
-      }}>
+      }}
+      activeOpacity={0.2}
+      underlayColor={color.border}>
       <Text>Close Popup</Text>
     </TouchableHighlight>
   </View>
@@ -55,7 +66,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const example3jsx = `<TouchableHighlight
   onPress={() => {
     setShowPopup3(true);
-  }}>
+  }}
+  activeOpacity={0.2}
+  underlayColor={color.border}>
   <Text>Open Popup</Text>
 </TouchableHighlight>
 <Popup
@@ -70,7 +83,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
     <TouchableHighlight
       onPress={() => {
         setShowPopup3(false);
-      }}>
+      }}
+      activeOpacity={0.2}
+      underlayColor={color.border}>
       <Text>Close Popup</Text>
     </TouchableHighlight>
   </View>
@@ -79,7 +94,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   onPress={() => {
     setShowPopup4(true);
   }}
-  ref={myRef}>
+  ref={myRef}
+  activeOpacity={0.2}
+  underlayColor={color.border}>
   <Text>Open Popup</Text>
 </TouchableHighlight>
 <Popup
@@ -93,7 +110,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
     <TouchableHighlight
       onPress={() => {
         setShowPopup4(false);
-      }}>
+      }}
+      activeOpacity={0.2}
+      underlayColor={color.border}>
       <Text>Close Popup</Text>
     </TouchableHighlight>
   </View>
@@ -126,40 +145,44 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: '#E6E6E6',
+            backgroundColor: colors.border,
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
           }}
           onPress={() => {
             setShowPopup1(true);
-          }}>
-          <Text>Open Popup</Text>
+          }}
+          activeOpacity={0.2}
+          underlayColor={colors.border}>
+          <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup isOpen={showPopup1}>
           <View
             style={{
-              backgroundColor: 'white',
+              backgroundColor: colors.background,
               width: 200,
               height: 125,
               borderRadius: 3,
               alignItems: 'center',
               justifyContent: 'space-around',
             }}>
-            <Text>This is a popup.</Text>
+            <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
               style={{
                 height: 40,
                 width: 150,
-                backgroundColor: '#E6E6E6',
+                backgroundColor: colors.border,
                 borderRadius: 3,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
               onPress={() => {
                 setShowPopup1(false);
-              }}>
-              <Text>Close Popup</Text>
+              }}
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text style={{color: colors.text}}>Close Popup</Text>
             </TouchableHighlight>
           </View>
         </Popup>
@@ -171,15 +194,17 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: '#E6E6E6',
+            backgroundColor: colors.border,
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
           }}
           onPress={() => {
             setShowPopup2(true);
-          }}>
-          <Text>Open Popup</Text>
+          }}
+          activeOpacity={0.2}
+          underlayColor={colors.border}>
+          <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup
           isOpen={showPopup2}
@@ -189,27 +214,29 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           }}>
           <View
             style={{
-              backgroundColor: 'white',
+              backgroundColor: colors.background,
               width: 200,
               height: 125,
               borderRadius: 3,
               alignItems: 'center',
               justifyContent: 'space-around',
             }}>
-            <Text>This is a popup.</Text>
+            <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
               style={{
                 height: 40,
                 width: 150,
-                backgroundColor: '#E6E6E6',
+                backgroundColor: colors.border,
                 borderRadius: 3,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
               onPress={() => {
                 setShowPopup2(false);
-              }}>
-              <Text>Close Popup</Text>
+              }}
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text style={{color: colors.text}}>Close Popup</Text>
             </TouchableHighlight>
           </View>
         </Popup>
@@ -219,15 +246,17 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: '#E6E6E6',
+            backgroundColor: colors.border,
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
           }}
           onPress={() => {
             setShowPopup3(true);
-          }}>
-          <Text>Open Popup</Text>
+          }}
+          activeOpacity={0.2}
+          underlayColor={colors.border}>
+          <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup
           isOpen={showPopup3}
@@ -238,27 +267,29 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           verticalOffset={200}>
           <View
             style={{
-              backgroundColor: 'white',
+              backgroundColor: colors.background,
               width: 200,
               height: 125,
               borderRadius: 3,
               alignItems: 'center',
               justifyContent: 'space-around',
             }}>
-            <Text>This is a popup.</Text>
+            <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
               style={{
                 height: 40,
                 width: 150,
-                backgroundColor: '#E6E6E6',
+                backgroundColor: colors.border,
                 borderRadius: 3,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
               onPress={() => {
                 setShowPopup3(false);
-              }}>
-              <Text>Close Popup</Text>
+              }}
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text style={{color: colors.text}}>Close Popup</Text>
             </TouchableHighlight>
           </View>
         </Popup>
@@ -270,7 +301,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: '#E6E6E6',
+            backgroundColor: colors.border,
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -278,8 +309,10 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowPopup4(true);
           }}
-          ref={myRef}>
-          <Text>Open Popup</Text>
+          ref={myRef}
+          activeOpacity={0.2}
+          underlayColor={colors.border}>
+          <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup
           isOpen={showPopup4}
@@ -289,27 +322,29 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           target={myRef.current}>
           <View
             style={{
-              backgroundColor: 'white',
+              backgroundColor: colors.background,
               width: 200,
               height: 125,
               borderRadius: 3,
               alignItems: 'center',
               justifyContent: 'space-around',
             }}>
-            <Text>This is a popup.</Text>
+            <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
               style={{
                 height: 40,
                 width: 150,
-                backgroundColor: '#E6E6E6',
+                backgroundColor: colors.border,
                 borderRadius: 3,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
               onPress={() => {
                 setShowPopup4(false);
-              }}>
-              <Text>Close Popup</Text>
+              }}
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text style={{color: colors.text}}>Close Popup</Text>
             </TouchableHighlight>
           </View>
         </Popup>
