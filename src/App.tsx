@@ -1,5 +1,11 @@
 import * as React from 'react';
-import {View, Button, StyleSheet, useColorScheme} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  TouchableHighlight,
+  Text,
+  useColorScheme,
+} from 'react-native';
 import {
   NavigationContainer,
   useNavigationState,
@@ -26,6 +32,18 @@ const styles = StyleSheet.create({
     height: '100%',
     alignSelf: 'stretch',
   },
+  menu: {
+    margin: 10,
+    height: 34,
+    width: 38,
+    borderRadius: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    fontFamily: 'Segoe MDL2 Assets',
+    fontSize: 16,
+  },
 });
 
 // @ts-ignore
@@ -34,11 +52,13 @@ function RNGalleryScreenWrapper({navigation}) {
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
-      <Button
-        title="Menu"
-        color="#0066cc"
+      <TouchableHighlight
+        style={styles.menu}
         onPress={() => navigation.openDrawer()}
-      />
+        activeOpacity={0.5783}
+        underlayColor="rgba(0, 0, 0, 0.0241);">
+        <Text style={styles.icon}>&#xE700;</Text>
+      </TouchableHighlight>
       <View style={styles.navItem}>
         <Component />
       </View>
