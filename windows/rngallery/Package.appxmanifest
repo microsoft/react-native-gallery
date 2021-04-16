@@ -12,15 +12,15 @@
   IgnorableNamespaces="uap mp uap3 uap6 uap4 uap2 iot">
 
  <Identity
-    Name="48071f82-8a63-40b3-a728-2229057a8f83"
-    Publisher="CN=chiaramooney"
+    Name="Microsoft.ReactNativeGallery"
+    Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="92a2ad66-6238-420f-9f50-a5bd0955913f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>React Native Gallery</DisplayName>
-    <PublisherDisplayName>chiaramooney</PublisherDisplayName>
+    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -43,7 +43,7 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="React Native Gallery"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

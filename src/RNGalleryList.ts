@@ -26,7 +26,7 @@ import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 import {PopupExamplePage} from './examples/PopupExamplePage';
 import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
 import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
-import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
+//import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 
 interface IRNGalleryExample {
@@ -71,10 +71,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Flyout',
     component: FlyoutExamplePage,
   },
-  {
+  /*{
     key: 'GestureHandler',
     component: GestureHandlerExamplePage,
-  },
+  },*/
   {
     key: 'Image',
     component: ImageExamplePage,
