@@ -1,8 +1,8 @@
 # React Native Gallery
 
-Welocome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support.
+Welocome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support. React Native Gallery is currently live in the Microsoft Store! Follow the link to [download](https://www.microsoft.com/en-us/p/react-native-gallery/9npg0b292h4r).
 
-![gallery_welcome](https://user-images.githubusercontent.com/34109996/108123249-68a5dc80-705a-11eb-8135-c8687dcd0d5c.PNG)
+![gallery_welcome](https://user-images.githubusercontent.com/34109996/115446025-777c4d00-a1cb-11eb-8a8f-c1758613c09f.png)
 
 # Building React Native Gallery
 
@@ -11,16 +11,6 @@ If you wish to build React Native Gallery on your computer locally, follow the f
 1. Clone the repository.
 2. In the root directory of the repository on your device, run `yarn`.
 3. In the same directory run `npx react-native run-windows`.
-
-# Installing React Native Gallery
-
-If you would prefer to avoid building the project from scratch, you can install and run the .appx for the app. Follow the following steps:
-
-1. Clone the repository.
-2. Checkout the v0.64.0-preview.5 branch.
-3. Run `yarn start`.
-4. Open windows/rngallery_1.0.2.0_Win32_Test/rngallery_1.0.2.0_Win32.appx.
-5. Install app and launch.
 
 # Contributing
 
