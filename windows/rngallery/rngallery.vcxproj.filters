@@ -182,7 +182,6 @@
   <ItemGroup>
     <None Include="PropertySheet.props" />
     <None Include="packages.config" />
-    <None Include="testcert.pfx" />
     <None Include="rngallery_Key.pfx" />
   </ItemGroup>
   <ItemGroup>

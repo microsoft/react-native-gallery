@@ -210,7 +210,6 @@
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
     <None Include="rngallery_Key.pfx" />
-    <None Include="testcert.pfx" />
     <Text Include="readme.txt">
       <DeploymentContent>false</DeploymentContent>
     </Text>
