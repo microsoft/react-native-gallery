@@ -1,4 +1,4 @@
-/*'use strict';
+'use strict';
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {
@@ -293,4 +293,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#76a21e',
     justifyContent: 'center',
   },
-});*/
+});
