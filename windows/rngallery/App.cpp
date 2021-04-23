@@ -5,14 +5,13 @@
 #include "AutolinkedNativeModules.g.h"
 #include "ReactPackageProvider.h"
 
-using namespace winrt::rngallery;
-using namespace winrt::rngallery::implementation;
 using namespace winrt;
 using namespace Windows::UI::Xaml;
 using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Navigation;
 using namespace Windows::ApplicationModel;
-
+namespace winrt::rngallery::implementation
+{
 /// <summary>
 /// Initializes the singleton application object.  This is the first line of
 /// authored code executed, and as such is the logical equivalent of main() or
@@ -39,12 +38,12 @@ App::App() noexcept
     RegisterAutolinkedNativeModulePackages(PackageProviders()); // Includes any autolinked modules
 
     PackageProviders().Append(make<ReactPackageProvider>()); // Includes all modules in this project
-
+    
     PackageProviders().Append(winrt::NativeClipboard::ReactPackageProvider());
     PackageProviders().Append(winrt::ReactNativePicker::ReactPackageProvider());
     PackageProviders().Append(winrt::ReactNativeWebView::ReactPackageProvider());
     PackageProviders().Append(winrt::DateTimePicker::ReactPackageProvider());
-
+    
     InitializeComponent();
 }
 
@@ -58,7 +57,19 @@ void App::OnLaunched(activation::LaunchActivatedEventArgs const& e)
     super::OnLaunched(e);
 
     Frame rootFrame = Window::Current().Content().as<Frame>();
-    rootFrame.Navigate(xaml_typename<rngallery::MainPage>(), box_value(e.Arguments()));
+    rootFrame.Navigate(xaml_typename<MainPage>(), box_value(e.Arguments()));
+}
+
+/// <summary>
+/// Invoked when the application is activated by some means other than normal launching.
+/// </summary>
+void App::OnActivated(Activation::IActivatedEventArgs const &e) {
+  auto preActivationContent = Window::Current().Content();
+  super::OnActivated(e);
+  if (!preActivationContent && Window::Current()) {
+    Frame rootFrame = Window::Current().Content().as<Frame>();
+    rootFrame.Navigate(xaml_typename<MainPage>(), nullptr);
+  }
 }
 
 /// <summary>
@@ -82,3 +93,5 @@ void App::OnNavigationFailed(IInspectable const&, NavigationFailedEventArgs cons
 {
     throw hresult_error(E_FAIL, hstring(L"Failed to load Page ") + e.SourcePageType().Name);
 }
+
+} // namespace winrt::rngallery::implementation
