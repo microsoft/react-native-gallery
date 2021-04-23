@@ -1406,10 +1406,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.9.12.tgz#627a865d759be4062bc41b50cb614972c1d66634"
   integrity sha512-Fyvpu7+VLheC+Y2D21DJ6SCpx8WG3xSEBmgR+7SDcAuc6wqMEeIFUxtIjlGoSQXyGIsOoDUsuZ17pbbQnw/MeA==
 
-"@react-native-windows/cli@0.64.2":
-  version "0.64.2"
-  resolved "https://registry.yarnpkg.com/@react-native-windows/cli/-/cli-0.64.2.tgz#1fe49a6e812c6c2bc1523a70db4ce292576fd606"
-  integrity sha512-cjDMnfhb1QArUBgzeXuvxi7aYhn80KM/aVG9xIgvAxYMg/lSP0kInhZjalf6VE38R1iZvUJ84OZT7JprSC42WQ==
+"@react-native-windows/cli@0.64.3":
+  version "0.64.3"
+  resolved "https://registry.yarnpkg.com/@react-native-windows/cli/-/cli-0.64.3.tgz#67aa58f6ac6ecaf61ca8c7f8894ec5fea0d2c311"
+  integrity sha512-NEHrajEeZHxWVyTIKxU1cvB/KZMXvN5fNV5PZzYAof05ktscOe6r4b6o4n2XSdx0+YIudPNh7HVq1btrUhaYNQ==
   dependencies:
     "@react-native-windows/package-utils" "0.64.0"
     "@react-native-windows/telemetry" "0.64.0"
@@ -6191,17 +6191,17 @@ react-native-webview@^11.3.1:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
 
-react-native-windows@^0.64.0:
-  version "0.64.2"
-  resolved "https://registry.yarnpkg.com/react-native-windows/-/react-native-windows-0.64.2.tgz#00ebd7a3c10031552653ce1a3ad4af4da597a15a"
-  integrity sha512-WHxq5MKAEf7PJHoBui0a7eIzGNRvFK80ri1wROlxymykVlP6jFamGFRQgDquDp9bIF5/EdcUuvoeO0gftfd7EQ==
+react-native-windows@0.64.4:
+  version "0.64.4"
+  resolved "https://registry.yarnpkg.com/react-native-windows/-/react-native-windows-0.64.4.tgz#457b8c07fef14724dafba300d2d26b7736edd0a1"
+  integrity sha512-0w3qRJ/gK8e5kBdBOStGmzUmkbJZvD+ndGkM82OJhLsjJsaDq4qQIORTaMKcLtXFKmolBLvwho7yGr29qUOxEA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@jest/create-cache-key-function" "^26.5.0"
     "@react-native-community/cli" "^5.0.1-alpha.0"
     "@react-native-community/cli-platform-android" "^5.0.1-alpha.0"
     "@react-native-community/cli-platform-ios" "^5.0.1-alpha.0"
-    "@react-native-windows/cli" "0.64.2"
+    "@react-native-windows/cli" "0.64.3"
     "@react-native/assets" "1.0.0"
     "@react-native/normalize-color" "1.0.0"
     "@react-native/polyfills" "1.0.0"
