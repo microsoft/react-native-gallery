@@ -7,9 +7,11 @@ import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from './examples/ConfigExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
+// Disabled waiting for RNW #7537
 //import {SketchExamplePage} from './examples/SketchExamplePage';
 import {SliderExamplePage} from './examples/SliderExamplePage';
-import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
+// Disabled from #121
+//import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
 import {PickerExamplePage} from './examples/PickerExamplePage';
 import {PrintExamplePage} from './examples/PrintExamplePage';
 import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
@@ -26,7 +28,8 @@ import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 import {PopupExamplePage} from './examples/PopupExamplePage';
 import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
 import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
-import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
+// Disabled from #125
+//import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 
 interface IRNGalleryExample {
@@ -71,18 +74,18 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Flyout',
     component: FlyoutExamplePage,
   },
-  {
+  /*{
     key: 'GestureHandler',
     component: GestureHandlerExamplePage,
-  },
+  },*/
   {
     key: 'Image',
     component: ImageExamplePage,
   },
-  {
+  /*{
     key: 'Permissions',
     component: PermissionsExamplePage,
-  },
+  },*/
   {
     key: 'Picker',
     component: PickerExamplePage,
