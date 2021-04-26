@@ -1544,7 +1544,7 @@
 
 "@terrylinla/react-native-sketch-canvas@creambyemute/react-native-sketch-canvas":
   version "0.8.1"
-  resolved "https://codeload.github.com/creambyemute/react-native-sketch-canvas/tar.gz/41877111daeab2af4d493ec7a7239b8d48f0f229"
+  resolved "https://codeload.github.com/creambyemute/react-native-sketch-canvas/tar.gz/f381c467dfd153a1bf3255eba30a960ae89cea56"
 
 "@types/babel__core@^7.1.7":
   version "7.1.9"
