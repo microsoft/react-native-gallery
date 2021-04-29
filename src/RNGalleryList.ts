@@ -34,6 +34,7 @@ import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 // Disabled from #125
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
+import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -156,6 +157,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Switch',
     component: SwitchExamplePage,
+  },
+  {
+    key: 'TrackPlayer',
+    component: TrackPlayerExamplePage,
   },
   {
     key: 'View',
