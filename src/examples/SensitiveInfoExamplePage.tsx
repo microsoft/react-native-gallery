@@ -68,20 +68,10 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="Sensitive Information" code={example}>
+        <Text style={{color: colors.text, marginBottom: 10}}>This example works just like a key-value store.</Text>
+        <Text style={{color: colors.text, marginBottom: 10}}>Data can be stored by inputting some text in the input box and pressing the "Set Item" button.</Text>
+        <Text style={{color: colors.text, marginBottom: 10}}>Retrieving the data can be done by pressing the "Get Item" button afterwards.</Text>
         <Text style={{color: colors.text, fontWeight: '500'}}>Key:key1 </Text>
-        <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
-          <TextInput
-            style={{
-              width: 200,
-              height: 36,
-              borderColor: colors.border,
-              borderWidth: 1,
-            }}
-            value={value}
-            editable={false}
-          />
-          <Button color={colors.primary} onPress={getItem} title="Get Item" />
-        </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
             style={{
@@ -94,6 +84,19 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             value={newValue}
           />
           <Button color={colors.primary} onPress={setItem} title="Set Item" />
+        </View>
+        <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
+          <TextInput
+            style={{
+              width: 200,
+              height: 36,
+              borderColor: colors.border,
+              borderWidth: 1,
+            }}
+            value={value}
+            editable={false}
+          />
+          <Button color={colors.primary} onPress={getItem} title="Get Item" />
         </View>
       </Example>
     </Page>
