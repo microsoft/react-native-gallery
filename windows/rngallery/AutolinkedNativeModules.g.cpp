@@ -33,6 +33,9 @@
 // Includes from react-native-sensitive-info
 #include <winrt/RNSensitiveInfoCPP.h>
 
+// Includes from react-native-tts
+#include <winrt/RNTTS.h>
+
 // Includes from react-native-xaml
 #include <winrt/ReactNativeXaml.h>
 
@@ -61,6 +64,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
     // IReactPackageProviders from react-native-sensitive-info
     packageProviders.Append(winrt::RNSensitiveInfoCPP::ReactPackageProvider());
+    // IReactPackageProviders from react-native-tts
+    packageProviders.Append(winrt::RNTTS::ReactPackageProvider());
     // IReactPackageProviders from react-native-xaml
     packageProviders.Append(winrt::ReactNativeXaml::ReactPackageProvider());
 }
