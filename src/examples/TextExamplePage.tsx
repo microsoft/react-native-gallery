@@ -84,9 +84,9 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
         <Text style={{fontWeight: '600', color: colors.text}}>
           This is bolded
           <Text style={{color: colors.primary}}>
-            &nbsp;and blue
+            &nbsp;and blue&nbsp;
             <Text style={{textDecorationLine: 'underline'}}>
-              &nbsp;and underlined text.
+              and underlined text.
             </Text>
           </Text>
         </Text>
