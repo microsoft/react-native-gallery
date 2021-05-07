@@ -71,10 +71,6 @@ function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
-      <DrawerItem
-        label="Close"
-        onPress={() => props.navigation.closeDrawer()}
-      />
     </DrawerContentScrollView>
   );
 }
