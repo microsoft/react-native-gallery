@@ -106,7 +106,7 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Hyperlink." code={example4jsx}>
         <TextBlock>
           <Run text="Here is a hyperlink to the " />
-          <Hyperlink navigateUri="https://github.com/microsoft/react-native-gallery.com">
+          <Hyperlink navigateUri="https://github.com/microsoft/react-native-gallery">
             <Run text="React Native Gallery" />
           </Hyperlink>
           <Run text=" repository." />
