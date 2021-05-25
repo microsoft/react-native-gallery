@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Hyperlink} from '../components/Hyperlink';
 import {useTheme} from '@react-navigation/native';
+import {HyperlinkButton} from 'react-native-xaml';
 
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -9,6 +9,7 @@ const createStyles = (colors: any) =>
       marginTop: 30,
       marginBottom: 10,
       marginRight: 30,
+      alignItems: 'flex-start',
     },
     hyperlinkTileTitle: {
       marginBottom: 10,
@@ -27,7 +28,11 @@ export function LinkTile(props: {
     <View style={styles.hyperlinkTile}>
       <Text style={styles.hyperlinkTileTitle}>{props.title}</Text>
       {props.links.map((hyp) => (
-        <Hyperlink key={hyp.label} label={hyp.label} url={hyp.url} />
+        <HyperlinkButton
+          key={hyp.label}
+          content={{string: hyp.label}}
+          navigateUri={hyp.url}
+        />
       ))}
     </View>
   );
