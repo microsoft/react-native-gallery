@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import {useGlobal} from 'reactn';
 import {Picker} from '@react-native-picker/picker';
-import {Hyperlink} from './components/Hyperlink';
+import {HyperlinkButton} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
 
 const createStyles = (colors: any) =>
@@ -23,6 +23,7 @@ const createStyles = (colors: any) =>
       padding: 10,
       alignSelf: 'stretch',
       height: '100%',
+      alignContent: 'flex-start',
     },
     title: {
       fontWeight: '200',
@@ -33,6 +34,9 @@ const createStyles = (colors: any) =>
     },
     scrollView: {
       paddingRight: 20,
+    },
+    settingContainer: {
+      alignItems: 'flex-start',
     },
   });
 
@@ -45,7 +49,7 @@ const SettingContainer = (props: {
   return (
     <View>
       <Text style={styles.heading}>{props.heading}</Text>
-      <View>{props.children}</View>
+      <View style={styles.settingContainer}>{props.children}</View>
     </View>
   );
 };
@@ -77,9 +81,9 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
         <SettingContainer heading="About">
           <Text style={styles.text}>
             Source code:{' '}
-            <Hyperlink
-              label="GitHub"
-              url="https://github.com/microsoft/react-native-gallery"
+            <HyperlinkButton
+              content={{string: 'GitHub'}}
+              navigateUri="https://github.com/microsoft/react-native-gallery"
             />
           </Text>
           <Text style={styles.text}>
@@ -93,35 +97,35 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             If you have found a bug within the React Native Gallery app, please
             file an issue on GitHub:
           </Text>
-          <Hyperlink
-            label="New React Native Gallery Bug Report"
-            url="https://github.com/microsoft/react-native-gallery/issues/new"
+          <HyperlinkButton
+            content={{string: 'New React Native Gallery Bug Report'}}
+            navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
           />
           <Text style={styles.text}>
             If you would like a new sample, request it on Github:
           </Text>
-          <Hyperlink
-            label="New Sample Request"
-            url="https://github.com/microsoft/react-native-gallery/issues/new"
+          <HyperlinkButton
+            content={{string: 'New Sample Request'}}
+            navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
           />
           <Text style={styles.text}>
             If you have found a bug in your React Native Windows app (not in the
             React Native Gallery) and need help, file an issue on the React
             Native Windows GitHub:
           </Text>
-          <Hyperlink
-            label="New React Native Windows Bug Report"
-            url="https://github.com/microsoft/react-native-windows/issues/new?assignees=&labels=bug&template=bug-report.md&title=Describe+the+problem"
+          <HyperlinkButton
+            content={{string: 'New React Native Windows Bug Report'}}
+            navigateUri="https://github.com/microsoft/react-native-windows/issues/new?assignees=&labels=bug&template=bug-report.md&title=Describe+the+problem"
           />
         </SettingContainer>
         <SettingContainer heading="Dependencies and References">
-          <Hyperlink
-            label="React Native for Windows and MacOS Website"
-            url="https://microsoft.github.io/react-native-windows/"
+          <HyperlinkButton
+            content={{string: 'React Native for Windows and MacOS Website'}}
+            navigateUri="https://microsoft.github.io/react-native-windows/"
           />
-          <Hyperlink
-            label="React Native Windows GitHub"
-            url="https://github.com/microsoft/react-native-windows"
+          <HyperlinkButton
+            content={{string: 'React Native Windows GitHub'}}
+            navigateUri="https://github.com/microsoft/react-native-windows"
           />
         </SettingContainer>
         <SettingContainer heading="Disclaimer">
@@ -132,13 +136,13 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             PARTICULAR PURPOSE.{'\n\n'}Copyright (c) Microsoft Corporation. All
             rights reserved.
           </Text>
-          <Hyperlink
-            label="Microsoft Services Agreement"
-            url="https://www.microsoft.com/en-us/servicesagreement/default.aspx"
+          <HyperlinkButton
+            content={{string: 'Microsoft Services Agreement'}}
+            navigateUri="https://www.microsoft.com/en-us/servicesagreement/default.aspx"
           />
-          <Hyperlink
-            label="Microsoft Privacy Statement"
-            url="https://privacy.microsoft.com/en-us/privacystatement"
+          <HyperlinkButton
+            content={{string: 'Microsoft Privacy Statement'}}
+            navigateUri="https://privacy.microsoft.com/en-us/privacystatement"
           />
         </SettingContainer>
       </ScrollView>
