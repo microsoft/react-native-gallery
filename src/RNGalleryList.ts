@@ -3,6 +3,7 @@ import React from 'react';
 import {WelcomePage} from './WelcomePage';
 import {SettingsPage} from './SettingsPage';
 import {TemplateExamplePage} from './examples/TemplateExamplePage';
+import {Button, ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from './examples/ConfigExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
@@ -49,6 +50,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Template',
     component: TemplateExamplePage,
+  },
+  {
+    key: 'Button',
+    component: ButtonExamplePage,
   },
   {
     key: 'CheckBox',
