@@ -18,6 +18,7 @@ import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
 import {TTSExamplePage} from './examples/TTSExamplePage';
+import {TouchableHighlightExamplePage} from './examples/TouchableHighlightExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
@@ -126,6 +127,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TextToSpeech',
     component: TTSExamplePage,
+  },
+  {
+    key: 'TouchableHighlight',
+    component: TouchableHighlightExamplePage,
   },
   {
     key: 'ScrollView',
