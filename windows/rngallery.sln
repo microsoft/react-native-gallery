@@ -640,6 +640,10 @@ Global
 		{B250B404-D1A2-4171-851E-E80BA031DAF0}.Release|x64.Build.0 = Release|x64
 		{B250B404-D1A2-4171-851E-E80BA031DAF0}.Release|x86.ActiveCfg = Release|Win32
 		{B250B404-D1A2-4171-851E-E80BA031DAF0}.Release|x86.Build.0 = Release|Win32
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|ARM64.Build.0 = Debug|ARM64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM64.ActiveCfg = Release|ARM64
+		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM64.Build.0 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
