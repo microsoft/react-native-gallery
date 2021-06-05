@@ -64,7 +64,7 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
             uri:
               'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
           }}
-          resizeMode='stretch'
+          resizeMode="stretch"
         />
       </Example>
       <Example
@@ -73,7 +73,7 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         <Image
           style={{width: 300, height: 50}}
           source={require('../assets/tiny_logo.png')}
-          resizeMode='repeat'
+          resizeMode="repeat"
         />
       </Example>
       <Example
@@ -82,7 +82,7 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         <Image
           style={{width: 75, height: 50}}
           source={require('../assets/tiny_logo.png')}
-          resizeMode='cover'
+          resizeMode="cover"
         />
       </Example>
     </Page>

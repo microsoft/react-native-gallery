@@ -43,10 +43,10 @@ const RnPanGestureHandler = () => {
   let [color, setColor] = React.useState(StateColors[State.UNDETERMINED]);
   let [state, setState] = React.useState(State.UNDETERMINED);
   const onHandlerStateChange = (evt) => {
-    let state: number = evt.nativeEvent.state;
-    setState(state);
-    setColor(StateColors[state]);
-    if (state == State.END) {
+    let newState: number = evt.nativeEvent.state;
+    setState(newState);
+    setColor(StateColors[newState]);
+    if (newState === State.END) {
       setAbsoluteXY([
         absoluteXY[0] + translateXY[0],
         absoluteXY[1] + translateXY[1],
@@ -85,9 +85,9 @@ const RnTapGestureHandler = () => {
   let [color, setColor] = React.useState(StateColors[State.UNDETERMINED]);
   let [state, setState] = React.useState(State.UNDETERMINED);
   const onHandlerStateChange = (evt) => {
-    let state: number = evt.nativeEvent.state;
-    setState(state);
-    setColor(StateColors[state]);
+    let newState: number = evt.nativeEvent.state;
+    setState(newState);
+    setColor(StateColors[newState]);
   };
   return (
     <View style={[styles.container]}>
@@ -104,9 +104,9 @@ const RnLongPressGestureHandler = () => {
   let [color, setColor] = React.useState(StateColors[State.UNDETERMINED]);
   let [state, setState] = React.useState(State.UNDETERMINED);
   const onHandlerStateChange = (evt) => {
-    let state: number = evt.nativeEvent.state;
-    setState(state);
-    setColor(StateColors[state]);
+    let newState: number = evt.nativeEvent.state;
+    setState(newState);
+    setColor(StateColors[newState]);
   };
   return (
     <View style={[styles.container]}>
@@ -125,16 +125,15 @@ const RnRotationGestureHandler = () => {
   let [color, setColor] = React.useState(StateColors[State.UNDETERMINED]);
   let [state, setState] = React.useState(State.UNDETERMINED);
   const onHandlerStateChange = (evt) => {
-    let state: number = evt.nativeEvent.state;
-    setState(state);
-    setColor(StateColors[state]);
-    if (state == State.END) {
+    let newState: number = evt.nativeEvent.state;
+    setState(newState);
+    setColor(StateColors[newState]);
+    if (newState === State.END) {
       setAbsoluteRotation(absoluteRotation + translateRotation);
       setTranslateRotation(0);
     }
   };
   const onGestureEvent = (evt) => {
-    const {colors} = useTheme();
     setTranslateRotation(evt.nativeEvent.rotation);
   };
   let transformStyle = {
@@ -161,16 +160,15 @@ const RnPinchGestureHandler = () => {
   let [color, setColor] = React.useState(StateColors[State.UNDETERMINED]);
   let [state, setState] = React.useState(State.UNDETERMINED);
   const onHandlerStateChange = (evt) => {
-    let state: number = evt.nativeEvent.state;
-    setState(state);
-    setColor(StateColors[state]);
-    if (state == State.END) {
+    let newState: number = evt.nativeEvent.state;
+    setState(newState);
+    setColor(StateColors[newState]);
+    if (newState === State.END) {
       setAbsoluteScale(absoluteScale * translateScale);
       setTranslateScale(1);
     }
   };
   const onGestureEvent = (evt) => {
-    const {colors} = useTheme();
     setTranslateScale(evt.nativeEvent.scale);
     console.log(evt.nativeEvent);
   };
@@ -194,9 +192,9 @@ const RnFlingGestureHandler = () => {
   let [color, setColor] = React.useState(StateColors[State.UNDETERMINED]);
   let [state, setState] = React.useState(State.UNDETERMINED);
   const onHandlerStateChange = (evt) => {
-    let state: number = evt.nativeEvent.state;
-    setState(state);
-    setColor(StateColors[state]);
+    let newState: number = evt.nativeEvent.state;
+    setState(newState);
+    setColor(StateColors[newState]);
   };
   return (
     <View style={[styles.container]}>

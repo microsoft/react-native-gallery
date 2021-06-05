@@ -41,8 +41,8 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
 
   const strokeSelectedComponent = (
     color: string,
-    index: number,
-    changed: boolean,
+    _index: number,
+    _changed: boolean,
   ) => (
     <View
       style={[

@@ -1,10 +1,9 @@
 'use strict';
-import {Text, Button} from 'react-native';
+import {Button} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '@react-navigation/native';
-import {color} from 'react-native-reanimated';
 
 export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
   const [title, setTitle] = useState(0);

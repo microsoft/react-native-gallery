@@ -1,5 +1,5 @@
 'use strict';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -67,7 +67,7 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
   </MenuFlyout>
 </Button>
 <TextBlock
-  text={\`$\{menuFlyoutOption\} is selected.\`}
+  text={\`$\{menuFlyoutOption} is selected.\`}
 />`;
   const example8jsx = `<NavigationView style={{height: 200, width: 180}}>
   <NavigationViewItem content={{string: 'Navigation Item 1'}}>
