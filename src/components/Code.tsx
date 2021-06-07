@@ -2,8 +2,7 @@
 import low from 'lowlight';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {useGlobal} from 'reactn';
-import {AppTheme} from 'react-native-windows';
+import {ThemeContext} from '../themes/Theme';
 
 const darkColors = {
   background: '#1E1E1E',
@@ -208,66 +207,38 @@ function createElementKey(node: lowlight.AST.Element, index: number) {
 }
 
 function renderLowLightNode(node: lowlight.AST.Unist.Node, index: number) {
-  //@ts-ignore
-  const [theme, setTheme] = useGlobal('theme');
-  const themeStyles =
-    theme === 'system'
-      ? AppTheme.currentTheme === 'dark'
-        ? 1
-        : 0
-      : theme === 'dark'
-      ? 1
-      : 0;
+  const theme = React.useContext(ThemeContext);
   if (node.type === 'text') {
     let text = (node as lowlight.AST.Text).value;
     return <Text key={createTextKey(text, index)}>{text}</Text>;
   } else if (node.type === 'element') {
     const elementNode = node as lowlight.AST.Element;
-    if (themeStyles === 0) {
-      if (
-        elementNode.properties.className &&
-        !lightStyles[
-          elementNode.properties.className as keyof typeof lightStyles
-        ]
-      ) {
-        throw new Error(
-          `Missing code style for ${elementNode.properties.className}`,
-        );
-      }
-      const style = lightStyles[
+
+    if (
+      elementNode.properties.className &&
+      (!lightStyles[
         elementNode.properties.className as keyof typeof lightStyles
-      ]
-        ? lightStyles[
-            elementNode.properties.className as keyof typeof lightStyles
-          ]
-        : {};
-      return (
-        <Text key={createElementKey(elementNode, index)} style={style}>
-          {elementNode.children.map(renderLowLightNode)}
-        </Text>
-      );
-    } else {
-      if (
-        elementNode.properties.className &&
-        !darkStyles[elementNode.properties.className as keyof typeof darkStyles]
-      ) {
-        throw new Error(
-          `Missing code style for ${elementNode.properties.className}`,
-        );
-      }
-      const style = darkStyles[
-        elementNode.properties.className as keyof typeof darkStyles
-      ]
-        ? darkStyles[
-            elementNode.properties.className as keyof typeof darkStyles
-          ]
-        : {};
-      return (
-        <Text key={createElementKey(elementNode, index)} style={style}>
-          {elementNode.children.map(renderLowLightNode)}
-        </Text>
+      ] ||
+        !darkStyles[
+          elementNode.properties.className as keyof typeof darkStyles
+        ])
+    ) {
+      throw new Error(
+        `Missing code style for ${elementNode.properties.className}`,
       );
     }
+
+    const styles = theme === 'light' ? lightStyles : darkStyles;
+    const style = styles[
+      elementNode.properties.className as keyof typeof styles
+    ]
+      ? styles[elementNode.properties.className as keyof typeof styles]
+      : {};
+    return (
+      <Text key={createElementKey(elementNode, index)} style={style}>
+        {elementNode.children.map(renderLowLightNode)}
+      </Text>
+    );
   }
 
   return <Text>{JSON.stringify(node)}</Text>;
@@ -283,30 +254,11 @@ function renderLowLightTree(tree: lowlight.HastNode[]) {
 
 export function Code(props: {children: string}) {
   const tree = low.highlight('typescript', props.children).value;
-  //@ts-ignore
-  const [theme, setTheme] = useGlobal('theme');
-  const themeStyles =
-    theme === 'system'
-      ? AppTheme.currentTheme === 'dark'
-        ? 1
-        : 0
-      : theme === 'dark'
-      ? 1
-      : 0;
+  const theme = React.useContext(ThemeContext);
+  const styles = theme === 'light' ? lightStyles : darkStyles;
   return (
-    <View
-      style={
-        themeStyles === 0
-          ? lightStyles['hljs-container']
-          : darkStyles['hljs-container']
-      }>
-      <Text
-        style={
-          themeStyles === 0
-            ? lightStyles['hljs-global']
-            : darkStyles['hljs-global']
-        }
-        selectable={true}>
+    <View style={styles['hljs-container']}>
+      <Text style={styles['hljs-global']} selectable={true}>
         {renderLowLightTree(tree)}
       </Text>
     </View>
