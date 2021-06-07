@@ -34,7 +34,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple DatePicker." code={textExample1}>
-        <DateTimePicker value={date1} onChange={} mode="date" />
+        <DateTimePicker value={date1} onChange={() => {}} mode="date" />
       </Example>
       <Example
         title="A DatePicker with day of week formatted and first day of week adjusted."
