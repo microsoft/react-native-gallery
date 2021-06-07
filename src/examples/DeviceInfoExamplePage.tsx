@@ -1,5 +1,5 @@
 'use strict';
-import {Linking, Text, View} from 'react-native';
+import {Text} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -28,7 +28,7 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
     if (!ipAddress) {
       getIpAddressAsync();
     }
-  }, []);
+  });
 
   const getIpAddressAsync = async () => {
     const address = await getIpAddress();

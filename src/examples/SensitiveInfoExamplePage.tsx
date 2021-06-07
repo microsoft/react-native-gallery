@@ -68,9 +68,17 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="Sensitive Information" code={example}>
-        <Text style={{color: colors.text, marginBottom: 10}}>This example works just like a key-value store.</Text>
-        <Text style={{color: colors.text, marginBottom: 10}}>Data can be stored by inputting some text in the input box and pressing the "Set Item" button.</Text>
-        <Text style={{color: colors.text, marginBottom: 10}}>Retrieving the data can be done by pressing the "Get Item" button afterwards.</Text>
+        <Text style={{color: colors.text, marginBottom: 10}}>
+          This example works just like a key-value store.
+        </Text>
+        <Text style={{color: colors.text, marginBottom: 10}}>
+          Data can be stored by inputting some text in the input box and
+          pressing the "Set Item" button.
+        </Text>
+        <Text style={{color: colors.text, marginBottom: 10}}>
+          Retrieving the data can be done by pressing the "Get Item" button
+          afterwards.
+        </Text>
         <Text style={{color: colors.text, fontWeight: '500'}}>Key:key1 </Text>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput

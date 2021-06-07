@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 
 // @ts-ignore
 function RNGalleryScreenWrapper({navigation}) {
-  const state = useNavigationState((state) => state);
+  const state = useNavigationState((newState) => newState);
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
