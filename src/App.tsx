@@ -14,11 +14,16 @@ import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
-  DrawerItem,
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
+import {
+  ThemeMode,
+  RawThemeContext,
+  ThemeContext,
+  ThemeSetterContext,
+} from './themes/Theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -48,7 +53,7 @@ const styles = StyleSheet.create({
 
 // @ts-ignore
 function RNGalleryScreenWrapper({navigation}) {
-  const state = useNavigationState((state) => state);
+  const state = useNavigationState((newState) => newState);
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
@@ -109,10 +114,20 @@ function renderScreen(i: number) {
 }
 
 export default function App() {
+  const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
+  const colorScheme = useColorScheme();
+  const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
+
   return (
-    <NavigationContainer
-      theme={useColorScheme() === 'dark' ? DarkTheme : LightTheme}>
-      <MyDrawer />
-    </NavigationContainer>
+    <ThemeSetterContext.Provider value={setRawTheme}>
+      <RawThemeContext.Provider value={rawtheme}>
+        <ThemeContext.Provider value={theme}>
+          <NavigationContainer
+            theme={theme === 'dark' ? DarkTheme : LightTheme}>
+            <MyDrawer />
+          </NavigationContainer>
+        </ThemeContext.Provider>
+      </RawThemeContext.Provider>
+    </ThemeSetterContext.Provider>
   );
 }

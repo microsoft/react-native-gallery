@@ -1,7 +1,7 @@
 'use strict';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
-import {useGlobal} from 'reactn';
+import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
 import {Picker} from '@react-native-picker/picker';
 import {HyperlinkButton} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
@@ -55,12 +55,12 @@ const SettingContainer = (props: {
 };
 
 export const SettingsPage: React.FunctionComponent<{}> = () => {
-  //@ts-ignore
-  const [theme, setTheme] = useGlobal('theme');
+  const theme = React.useContext(RawThemeContext);
+  const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();
   const styles = createStyles(colors);
-  const PickerValueChanged = (value: string | number, position: number) => {
-    //@ts-ignore
+  const PickerValueChanged = (value: ThemeMode) => {
+    console.log('Setting theme to: ' + value);
     setTheme(value);
   };
   return (

@@ -3,8 +3,11 @@ import {Image} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {useTheme} from '@react-navigation/native';
 
 export const ImageExamplePage: React.FunctionComponent<{}> = () => {
+  const {colors} = useTheme();
+
   const example1jsx = `<Image
   style={{width: 50, height: 50}}
   source={{
@@ -21,9 +24,20 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
   source={require('../assets/tiny_logo.png')}
   resizeMode='repeat'/>`;
   const example4jsx = `<Image
-  style={{width: 75, height: 50}}
+  style={{width: 75, height: 50, opacity: 0.5}}
   source={require('../assets/tiny_logo.png')}
   resizeMode='cover'/>`;
+  const example5jsx = `<Image
+  style={{
+    width: 75,
+    height: 50,
+    borderBottomRightRadius: 20,
+    borderTopLeftRadius: 20,
+    borderColor: colors.primary,
+    borderWidth: 3,
+  }}
+  source={require('../assets/tiny_logo.png')}
+/>`;
 
   return (
     <Page
@@ -77,12 +91,25 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         />
       </Example>
       <Example
-        title="An Image from file source scaled uniformly to fill view."
+        title="An translucent Image from file source scaled uniformly to fill view."
         code={example4jsx}>
         <Image
-          style={{width: 75, height: 50}}
+          style={{width: 75, height: 50, opacity: 0.5}}
           source={require('../assets/tiny_logo.png')}
           resizeMode="cover"
+        />
+      </Example>
+      <Example title="An Image with border styling." code={example5jsx}>
+        <Image
+          style={{
+            width: 75,
+            height: 50,
+            borderBottomRightRadius: 20,
+            borderTopLeftRadius: 20,
+            borderColor: colors.primary,
+            borderWidth: 3,
+          }}
+          source={require('../assets/tiny_logo.png')}
         />
       </Example>
     </Page>
