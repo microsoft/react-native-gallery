@@ -99,6 +99,30 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     }} />
 </View>`;
 
+  const example7jsx = `<View
+style={{
+  height: 50,
+  width: 100,
+  borderColor: colors.primary,
+  backgroundColor: colors.border,
+  borderRightWidth: 10,
+  borderLeftWidth: 10,
+  borderWidth: 5,
+}}
+/>`;
+
+  const example8jsx = `<View
+style={{
+  height: 50,
+  width: 100,
+  borderTopLeftRadius: 4,
+  borderBottomRightRadius: 4,
+  borderColor: colors.text,
+  borderWidth: 5,
+  backgroundColor: colors.border,
+}}
+/>`;
+
   return (
     <Page
       title="View"
@@ -240,6 +264,32 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
             }}
           />
         </View>
+      </Example>
+      <Example title="A View with border styling." code={example7jsx}>
+        <View
+          style={{
+            height: 50,
+            width: 100,
+            borderColor: colors.primary,
+            backgroundColor: colors.border,
+            borderRightWidth: 10,
+            borderLeftWidth: 10,
+            borderWidth: 5,
+          }}
+        />
+      </Example>
+      <Example title="A View with varied border radius." code={example8jsx}>
+        <View
+          style={{
+            height: 50,
+            width: 100,
+            borderTopLeftRadius: 4,
+            borderBottomRightRadius: 4,
+            borderColor: colors.text,
+            borderWidth: 5,
+            backgroundColor: colors.border,
+          }}
+        />
       </Example>
     </Page>
   );
