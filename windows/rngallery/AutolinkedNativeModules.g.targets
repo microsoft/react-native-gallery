@@ -46,6 +46,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-tts\windows\RNTTS\RNTTS.vcxproj">
       <Project>{B250B404-D1A2-4171-851E-E80BA031DAF0}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-webview -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj">
+      <Project>{729d9af8-cd9e-4427-9f6c-fb757e287729}</Project>
+    </ProjectReference>
     <!-- Projects from react-native-xaml -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj">
       <Project>{0ff7027a-222c-4ffb-8f17-91d18bbaf7a8}</Project>

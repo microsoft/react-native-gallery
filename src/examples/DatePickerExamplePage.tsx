@@ -5,8 +5,8 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
 export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
-  const [date1, _setDate1] = useState(new Date());
-  const [date2, _setDate2] = useState(new Date());
+  const [date1] = useState(new Date());
+  const [date2] = useState(new Date());
 
   const textExample1 = '<DateTimePicker value={date} mode="date" />';
   const textExample2 = `<DateTimePicker
@@ -34,7 +34,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple DatePicker." code={textExample1}>
-        <DateTimePicker value={date1} mode="date" />
+        <DateTimePicker value={date1} onChange={() => {}} mode="date" />
       </Example>
       <Example
         title="A DatePicker with day of week formatted and first day of week adjusted."

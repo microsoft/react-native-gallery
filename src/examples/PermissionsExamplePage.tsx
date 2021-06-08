@@ -3,7 +3,14 @@ import {Button, FlatList, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {check, Permission, PERMISSIONS, PermissionStatus, request, RESULTS} from 'react-native-permissions';
+import {
+  check,
+  Permission,
+  PERMISSIONS,
+  PermissionStatus,
+  request,
+  RESULTS,
+} from 'react-native-permissions';
 import {AndroidPermissionMap} from 'react-native-permissions/dist/typescript/permissions.android';
 import {IOSPermissionMap} from 'react-native-permissions/dist/typescript/permissions.ios';
 import {WindowsPermissionMap} from 'react-native-permissions/dist/typescript/permissions.windows';
@@ -22,13 +29,16 @@ const getResultString = (result: PermissionStatus) => {
     case RESULTS.BLOCKED:
       return 'permission is denied and not requestable';
   }
-}
+};
 
-type PermissionsMap = AndroidPermissionMap | IOSPermissionMap | WindowsPermissionMap
+type PermissionsMap =
+  | AndroidPermissionMap
+  | IOSPermissionMap
+  | WindowsPermissionMap;
 
 export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
-  
+
   const exampleJsx = `<FlatList
   data={entries}
   renderItem={({item}) => {
@@ -50,23 +60,28 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
   }}
   keyExtractor={item => item[0]}/>`;
 
-  const [perms, setPerms] = useState(() => new Map<Permission, PermissionStatus>());
+  const [perms, setPerms] = useState(
+    () => new Map<Permission, PermissionStatus>(),
+  );
 
   useEffect(() => {
-    if (perms.size == 0) {
+    if (perms.size === 0) {
       getPermissionsAsync(PERMISSIONS.WINDOWS);
     }
-  }, []);
+  });
 
-  const getPermissionsAsync = async (perms: PermissionsMap) => {
+  const getPermissionsAsync = async (permissions: PermissionsMap) => {
     const results = new Map<Permission, PermissionStatus>();
-    for(const [k, v] of Object.entries(perms)) {
+    for (const [, v] of Object.entries(permissions)) {
       // The following capabilities throw an exception in UWP are not available under
       // the AppManifest editor in VS.
-      if (v == PERMISSIONS.WINDOWS.HUMANINTERFACEDEVICE ||
-          v == PERMISSIONS.WINDOWS.SERIALCOMMUNICATION ||
-          v == PERMISSIONS.WINDOWS.USB)
+      if (
+        v === PERMISSIONS.WINDOWS.HUMANINTERFACEDEVICE ||
+        v === PERMISSIONS.WINDOWS.SERIALCOMMUNICATION ||
+        v === PERMISSIONS.WINDOWS.USB
+      ) {
         continue;
+      }
       const result = await check(v as Permission);
       results.set(v as Permission, result);
     }
@@ -78,27 +93,46 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
       try {
         const result = await request(perm);
         const newPerms = new Map(perms);
-        newPerms.set(perm, result); 
+        newPerms.set(perm, result);
         setPerms(newPerms);
-      } catch(err) {
-        console.log(err)
+      } catch (err) {
+        console.log(err);
       }
     })();
   };
 
-  const getListItem = (item: [Permission, PermissionStatus]) => {
-    const perm = item[0]
+  const getListItem = (item /*: [Permission, PermissionStatus]*/) => {
+    const perm = item[0];
     const status = item[1];
 
     return (
-        <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          {status == 'granted' ? <Button onPress={() => {}} color='#737373' title="Granted" />
-                               : <Button onPress={() => requestPermission(perm)} color={colors.primary} title="Request" disabled={status == 'unavailable' || status == 'blocked'} />}
-          <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>{item[0]}</Text>
-          <Text style={{paddingLeft: 10, color: colors.text}}>{getResultString(status)}</Text>
-        </View>
+      <View
+        key={status}
+        style={{
+          flex: 1,
+          flexDirection: 'row',
+          alignItems: 'center',
+          paddingBottom: 10,
+        }}>
+        {status === 'granted' ? (
+          <Button onPress={() => {}} color="#737373" title="Granted" />
+        ) : (
+          <Button
+            onPress={() => requestPermission(perm)}
+            color={colors.primary}
+            title="Request"
+            disabled={status === 'unavailable' || status === 'blocked'}
+          />
+        )}
+        <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>
+          {item[0]}
+        </Text>
+        <Text style={{paddingLeft: 10, color: colors.text}}>
+          {getResultString(status)}
+        </Text>
+      </View>
     );
-  }
+  };
 
   const entries = Array.from(perms.entries());
 
@@ -110,15 +144,14 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
       documentation={[
         {
           label: 'Permissions',
-          url:
-            'https://github.com/zoontek/react-native-permissions',
+          url: 'https://github.com/zoontek/react-native-permissions',
         },
       ]}>
       <Example title="Windows Permissions" code={exampleJsx}>
         <FlatList
           data={entries}
           renderItem={({item}) => getListItem(item)}
-          keyExtractor={item => item[0]}
+          keyExtractor={(item) => item[0]}
         />
       </Example>
     </Page>

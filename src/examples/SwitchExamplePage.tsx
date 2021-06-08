@@ -1,5 +1,5 @@
 'use strict';
-import {Text, Switch} from 'react-native';
+import {Switch} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';

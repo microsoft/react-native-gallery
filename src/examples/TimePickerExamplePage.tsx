@@ -5,7 +5,7 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
 export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
-  const [time, _setTime] = useState(new Date(0));
+  const [time] = useState(new Date(0));
   const example1jsx = `<DateTimePicker
   mode="time"
   value={time}
