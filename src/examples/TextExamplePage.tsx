@@ -32,6 +32,26 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
   </Text>
 </Text>`;
 
+  const example6jsx = `<Text 
+  style={{fontSize: 30, fontFamily: 'Consolas'}>
+  Here is a line of enlarged Consolas text.
+</Text>`;
+  const example7jsx = `<Text
+  style={{
+    lineHeight: 100,
+    textAlign: 'right',
+  }}>
+  Here is a right-aligned line of Text with customized line height.
+</Text>`;
+  const example8jsx = `<Text
+style={{
+  textTransform: 'uppercase',
+  backgroundColor: colors.border,
+  writingDirection: 'rtl',
+}}>
+Here is a line of capitalized text with Right-to-Left writing direction and background color.
+</Text>`;
+
   return (
     <Page
       title="Text"
@@ -89,6 +109,35 @@ export const TextExamplePage: React.FunctionComponent<{}> = () => {
               and underlined text.
             </Text>
           </Text>
+        </Text>
+      </Example>
+      <Example title="An line of enlarged Consolas Text." code={example6jsx}>
+        <Text style={{fontSize: 30, fontFamily: 'Consolas'}}>
+          Here is a line of enlarged Consolas text.
+        </Text>
+      </Example>
+      <Example
+        title="A right-aligned line of Text with customized line height."
+        code={example7jsx}>
+        <Text
+          style={{
+            lineHeight: 100,
+            textAlign: 'right',
+          }}>
+          Here is a right-aligned line of Text with customized line height.
+        </Text>
+      </Example>
+      <Example
+        title="A line of capitalized Text with Right-to-Left writing direction and background color."
+        code={example8jsx}>
+        <Text
+          style={{
+            textTransform: 'uppercase',
+            backgroundColor: colors.border,
+            writingDirection: 'rtl',
+          }}>
+          Here is a line of capitalized text with Right-to-Left writing
+          direction and background color.
         </Text>
       </Example>
     </Page>
