@@ -15,6 +15,9 @@
 // Includes from @terrylinla/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
 
+// Includes from react-native-blob-util
+#include <winrt/ReactNativeBlobUtil.h>
+
 // Includes from react-native-config
 #include <winrt/RNCConfig.h>
 
@@ -23,6 +26,9 @@
 
 // Includes from react-native-gesture-handler
 #include <winrt/RNGestureHandler.h>
+
+// Includes from react-native-pdf
+#include <winrt/RCTPdf.h>
 
 // Includes from react-native-permissions
 #include <winrt/RNPermissions.h>
@@ -55,12 +61,16 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
+    // IReactPackageProviders from react-native-blob-util
+    packageProviders.Append(winrt::ReactNativeBlobUtil::ReactPackageProvider());
     // IReactPackageProviders from react-native-config
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
     // IReactPackageProviders from react-native-gesture-handler
     packageProviders.Append(winrt::RNGestureHandler::ReactPackageProvider());
+    // IReactPackageProviders from react-native-pdf
+    packageProviders.Append(winrt::RCTPdf::ReactPackageProvider());
     // IReactPackageProviders from react-native-permissions
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print

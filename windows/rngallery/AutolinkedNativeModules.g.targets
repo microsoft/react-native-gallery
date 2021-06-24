@@ -18,6 +18,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
       <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-blob-util -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-blob-util\windows\ReactNativeBlobUtil\ReactNativeBlobUtil.vcxproj">
+      <Project>{EE3DB09D-4115-43D1-986A-6C5D33040AC3}</Project>
+    </ProjectReference>
     <!-- Projects from react-native-config -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-config\windows\RNCConfig\RNCConfig.vcxproj">
       <Project>{f1f427c9-66a2-4ed5-b482-3d583b6b20c7}</Project>
@@ -29,6 +33,10 @@
     <!-- Projects from react-native-gesture-handler -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-gesture-handler\windows\RNGestureHandler\RNGestureHandler\RNGestureHandler.vcxproj">
       <Project>{5fe08a9d-cacb-4309-b75a-2578c7dc786a}</Project>
+    </ProjectReference>
+    <!-- Projects from react-native-pdf -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-pdf\windows\RCTPdf\RCTPdf.vcxproj">
+      <Project>{03b8503f-f40d-4013-829c-71b304537d90}</Project>
     </ProjectReference>
     <!-- Projects from react-native-permissions -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj">

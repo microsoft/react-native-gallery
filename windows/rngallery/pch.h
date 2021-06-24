@@ -28,4 +28,6 @@
 #include <winrt/NativeClipboard.h>
 #include <winrt/ReactNativePicker.h>
 #include <winrt/ReactNativeWebView.h>
+#include <winrt/RCTPdf.h>
+
 using namespace winrt::Windows::Foundation;

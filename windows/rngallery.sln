@@ -70,6 +70,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNTTS", "..\node_modules\react-native-tts\windows\RNTTS\RNTTS.vcxproj", "{B250B404-D1A2-4171-851E-E80BA031DAF0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeBlobUtil", "..\node_modules\react-native-blob-util\windows\ReactNativeBlobUtil\ReactNativeBlobUtil.vcxproj", "{EE3DB09D-4115-43D1-986A-6C5D33040AC3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RCTPdf", "..\node_modules\react-native-pdf\windows\RCTPdf\RCTPdf.vcxproj", "{03B8503F-F40D-4013-829C-71B304537D90}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}*SharedItemsImports = 4
@@ -644,6 +648,38 @@ Global
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Debug|ARM64.Build.0 = Debug|ARM64
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM64.ActiveCfg = Release|ARM64
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|ARM64.Build.0 = Release|ARM64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|ARM.Build.0 = Debug|ARM
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|ARM64.Build.0 = Debug|ARM64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|x64.ActiveCfg = Debug|x64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|x64.Build.0 = Debug|x64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|x86.ActiveCfg = Debug|Win32
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Debug|x86.Build.0 = Debug|Win32
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|ARM.ActiveCfg = Release|ARM
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|ARM.Build.0 = Release|ARM
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|ARM64.ActiveCfg = Release|ARM64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|ARM64.Build.0 = Release|ARM64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|x64.ActiveCfg = Release|x64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|x64.Build.0 = Release|x64
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|x86.ActiveCfg = Release|Win32
+		{EE3DB09D-4115-43D1-986A-6C5D33040AC3}.Release|x86.Build.0 = Release|Win32
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|ARM.ActiveCfg = Debug|ARM
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|ARM.Build.0 = Debug|ARM
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|ARM64.Build.0 = Debug|ARM64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|x64.ActiveCfg = Debug|x64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|x64.Build.0 = Debug|x64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|x86.ActiveCfg = Debug|Win32
+		{03B8503F-F40D-4013-829C-71B304537D90}.Debug|x86.Build.0 = Debug|Win32
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|ARM.ActiveCfg = Release|ARM
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|ARM.Build.0 = Release|ARM
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|ARM64.ActiveCfg = Release|ARM64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|ARM64.Build.0 = Release|ARM64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|x64.ActiveCfg = Release|x64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|x64.Build.0 = Release|x64
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|x86.ActiveCfg = Release|Win32
+		{03B8503F-F40D-4013-829C-71B304537D90}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
