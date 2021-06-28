@@ -25,11 +25,10 @@
     "lowlight": "^1.17.0",
     "react": "17.0.1",
     "react-native": "^0.64.1",
-    "react-native-blob-util": "^0.13.7",
     "react-native-config": "luggit/react-native-config",
     "react-native-device-info": "^7.3.1",
     "react-native-gesture-handler": "JaneaSystems/react-native-gesture-handler#windows",
-    "react-native-pdf": "wonday/react-native-pdf#pull/578/head",
+    "react-native-pdf": "wonday/react-native-pdf#93d2890bb25fbea96173d14ea6828bf54388d7f1",
     "react-native-permissions": "^3.0.0",
     "react-native-print": "0.8.0",
     "react-native-reanimated": "^1.10.0",
@@ -39,7 +38,8 @@
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.6.2",
     "react-native-windows": "^0.64.10",
-    "react-native-xaml": "^0.0.18"
+    "react-native-xaml": "^0.0.18",
+    "rn-fetch-blob": "JaneaSystems/rn-fetch-blob#e9ec5ab32b49e5310294d17f425c4886822f886a"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

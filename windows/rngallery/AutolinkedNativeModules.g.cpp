@@ -15,9 +15,6 @@
 // Includes from @terrylinla/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
 
-// Includes from react-native-blob-util
-#include <winrt/ReactNativeBlobUtil.h>
-
 // Includes from react-native-config
 #include <winrt/RNCConfig.h>
 
@@ -48,6 +45,9 @@
 // Includes from react-native-xaml
 #include <winrt/ReactNativeXaml.h>
 
+// Includes from rn-fetch-blob
+#include <winrt/RNFetchBlob.h>
+
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -61,8 +61,6 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
-    // IReactPackageProviders from react-native-blob-util
-    packageProviders.Append(winrt::ReactNativeBlobUtil::ReactPackageProvider());
     // IReactPackageProviders from react-native-config
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
     // IReactPackageProviders from react-native-device-info
@@ -83,6 +81,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::ReactNativeWebView::ReactPackageProvider());
     // IReactPackageProviders from react-native-xaml
     packageProviders.Append(winrt::ReactNativeXaml::ReactPackageProvider());
+    // IReactPackageProviders from rn-fetch-blob
+    packageProviders.Append(winrt::RNFetchBlob::ReactPackageProvider());
 }
 
 }

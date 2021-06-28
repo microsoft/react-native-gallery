@@ -18,10 +18,6 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
       <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
     </ProjectReference>
-    <!-- Projects from react-native-blob-util -->
-    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-blob-util\windows\ReactNativeBlobUtil\ReactNativeBlobUtil.vcxproj">
-      <Project>{EE3DB09D-4115-43D1-986A-6C5D33040AC3}</Project>
-    </ProjectReference>
     <!-- Projects from react-native-config -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-config\windows\RNCConfig\RNCConfig.vcxproj">
       <Project>{f1f427c9-66a2-4ed5-b482-3d583b6b20c7}</Project>
@@ -61,6 +57,10 @@
     <!-- Projects from react-native-xaml -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj">
       <Project>{0ff7027a-222c-4ffb-8f17-91d18bbaf7a8}</Project>
+    </ProjectReference>
+    <!-- Projects from rn-fetch-blob -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\rn-fetch-blob\windows\RNFetchBlob\RNFetchBlob.vcxproj">
+      <Project>{cdde3311-efd2-462d-8551-93637a7fae92}</Project>
     </ProjectReference>
   </ItemGroup>
 </Project>
