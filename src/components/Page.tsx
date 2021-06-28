@@ -1,6 +1,8 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
+import {CoreComponentBadge} from './CoreComponentBadge';
+import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
 import {useTheme} from '@react-navigation/native';
 
@@ -30,11 +32,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const DisplayBadge = (
+const DisplayNativeControlBadge = (
   wrappedNativeControl: {control: string; url: string} | undefined,
 ) => {
   if (wrappedNativeControl) {
     return <NativeControlBadge />;
+  } else {
+    return;
+  }
+};
+
+const DisplayComponentTypeBadge = (componentType: string) => {
+  if (componentType === 'Core') {
+    return <CoreComponentBadge />;
+  } else if (componentType === 'Community') {
+    return <CommunityModuleBadge />;
   } else {
     return;
   }
@@ -71,6 +83,7 @@ export function Page(props: {
   title: string;
   description?: string;
   wrappedNativeControl?: {control: string; url: string};
+  componentType: string;
   pageCodeUrl: string;
   documentation: {label: string; url: string}[];
   children: React.ReactNode;
@@ -80,7 +93,10 @@ export function Page(props: {
     <View style={styles.container}>
       <View style={styles.titlePane}>
         <Text style={[styles.title, {color: colors.text}]}>{props.title}</Text>
-        {DisplayBadge(props.wrappedNativeControl)}
+        <View>
+          {DisplayNativeControlBadge(props.wrappedNativeControl)}
+          {DisplayComponentTypeBadge(props.componentType)}
+        </View>
       </View>
 
       {props.description && (

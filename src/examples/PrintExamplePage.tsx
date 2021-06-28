@@ -30,6 +30,7 @@ export const PrintExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Print"
       description="Print documents via the react-native-print module."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PrintExamplePage.tsx"
       documentation={[
         {

@@ -60,6 +60,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
     <Page
       title="Touchable Highlight"
       description="A customizable View responsive to touch. The opacity of the View is decreased when pressed, revealing an underlay color."
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TouchableHighlightExamplePage.tsx"
       documentation={[
         {

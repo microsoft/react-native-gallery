@@ -44,6 +44,7 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
         url:
           'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.toggleswitch?view=winrt-19041',
       }}
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SwitchExamplePage.tsx"
       documentation={[
         {

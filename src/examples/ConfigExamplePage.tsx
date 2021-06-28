@@ -19,6 +19,7 @@ export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Config Variables"
       description="Shows exposed config variables via the react-native-config module. Keep in mind this module doesn't obfuscate or encrypt secrets for packaging, so do not store sensitive keys in .env."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ConfigExamplePage.tsx"
       documentation={[
         {

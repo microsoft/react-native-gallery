@@ -20,6 +20,7 @@ export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="ProgressView"
       description="ProgressView is a component for displaying progress bars in your app."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ProgressViewExamplePage.tsx"
       documentation={[
         {

@@ -78,6 +78,7 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="FlatList"
       description="A component for rendering flat lists in React Native which supports horizontal mode, headers, footers, separators, scroll loading, and more. "
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/FlatListExamplePage.tsx"
       documentation={[
         {

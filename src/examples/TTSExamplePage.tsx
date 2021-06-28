@@ -57,6 +57,7 @@ export const TTSExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Text-to-Speech"
       description="Provides text-to-speech services using the OS native text-to-speech APIs."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TTSExamplePage.tsx"
       documentation={[
         {

@@ -39,6 +39,7 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Device Info"
       description="The DeviceInfo module shows available device information."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/DeviceInfoExamplePage.tsx"
       documentation={[
         {

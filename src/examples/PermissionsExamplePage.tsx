@@ -140,6 +140,7 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Permissions"
       description="Allows requesting and showing available system permissions via the react-native-permissions module."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
       documentation={[
         {
