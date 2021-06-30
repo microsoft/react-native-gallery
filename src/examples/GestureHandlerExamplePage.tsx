@@ -224,6 +224,7 @@ export const GestureHandlerExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Gesture Handler"
       description="Declarative API exposing platform native touch and gesture system to React Native."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/GestureHandlerExamplePage.tsx"
       documentation={[
         {

@@ -97,6 +97,7 @@ onPress={() => {}}>
     <Page
       title="Touchable Opacity"
       description="A customizable View responsive to touch. The opacity of the View is decreased when pressed, dimming it."
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TouchableOpacityExamplePage.tsx"
       documentation={[
         {

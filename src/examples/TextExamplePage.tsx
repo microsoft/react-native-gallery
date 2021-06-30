@@ -61,6 +61,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
         url:
           'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textblock?view=winrt-19041',
       }}
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextExamplePage.tsx"
       documentation={[
         {

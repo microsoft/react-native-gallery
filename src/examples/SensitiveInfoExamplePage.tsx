@@ -60,6 +60,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Sensitive Info"
       description="The Sensitive Info module allows for the handling of sensitive information."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PermissionsExamplePage.tsx"
       documentation={[
         {

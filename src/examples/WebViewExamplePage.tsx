@@ -19,6 +19,7 @@ export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
         control: 'WebView',
         url: 'https://github.com/react-native-webview/react-native-webview',
       }}
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/WebViewExamplePage.tsx"
       documentation={[
         {

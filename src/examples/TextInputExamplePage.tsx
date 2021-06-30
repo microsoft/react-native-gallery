@@ -65,6 +65,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         url:
           'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox?view=winrt-19041',
       }}
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextInputExamplePage.tsx"
       documentation={[
         {

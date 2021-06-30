@@ -82,6 +82,7 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Xaml"
       description="A React Native Windows view manager that allows direct use of the Windows XAML framework."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/XamlExamplePage.tsx"
       documentation={[
         {

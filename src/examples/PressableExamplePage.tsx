@@ -75,6 +75,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Pressable"
       description="A component that detects various touch interactions."
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PressableExamplePage.tsx"
       documentation={[
         {

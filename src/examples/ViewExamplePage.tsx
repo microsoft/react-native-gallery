@@ -132,6 +132,7 @@ style={{
         url:
           'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewPanel.',
       }}
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ViewExamplePage.tsx"
       documentation={[
         {

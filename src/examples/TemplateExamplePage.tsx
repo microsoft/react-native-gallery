@@ -23,7 +23,8 @@ export const TemplateExamplePage: React.FunctionComponent<{}> = () => {
       wrappedNativeControl={{
         control: 'Template',
         url: 'https://github.com/microsoft/react-native-windows',
-      }}
+      }} // Remove if component is non-native.
+      componentType="Core" // Remove if component is not a core component
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TemplateExamplePage.tsx"
       documentation={[
         {

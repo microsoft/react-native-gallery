@@ -41,6 +41,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
         url:
           'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.slider?view=winrt-19041',
       }}
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SliderExamplePage.tsx"
       documentation={[
         {

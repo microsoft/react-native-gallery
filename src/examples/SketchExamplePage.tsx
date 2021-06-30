@@ -56,6 +56,7 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Sketch Canvas"
       description="Shows an example of the react-native-sketch-canvas component for sketching."
+      componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SketchExamplePage.tsx"
       documentation={[
         {

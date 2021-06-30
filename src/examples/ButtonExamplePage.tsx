@@ -25,6 +25,7 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
     <Page
       title="Button"
       description="A basic button component with a minimal level of customization. If you are looking for a more customizable, pressable component, see Touchable and Pressable."
+      componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ButtonExamplePage.tsx"
       documentation={[
         {
