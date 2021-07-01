@@ -24,6 +24,9 @@
 // Includes from react-native-gesture-handler
 #include <winrt/RNGestureHandler.h>
 
+// Includes from react-native-pdf
+#include <winrt/RCTPdf.h>
+
 // Includes from react-native-permissions
 #include <winrt/RNPermissions.h>
 
@@ -41,6 +44,9 @@
 
 // Includes from react-native-xaml
 #include <winrt/ReactNativeXaml.h>
+
+// Includes from rn-fetch-blob
+#include <winrt/RNFetchBlob.h>
 
 namespace winrt::Microsoft::ReactNative
 {
@@ -61,6 +67,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
     // IReactPackageProviders from react-native-gesture-handler
     packageProviders.Append(winrt::RNGestureHandler::ReactPackageProvider());
+    // IReactPackageProviders from react-native-pdf
+    packageProviders.Append(winrt::RCTPdf::ReactPackageProvider());
     // IReactPackageProviders from react-native-permissions
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print
@@ -73,6 +81,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::ReactNativeWebView::ReactPackageProvider());
     // IReactPackageProviders from react-native-xaml
     packageProviders.Append(winrt::ReactNativeXaml::ReactPackageProvider());
+    // IReactPackageProviders from rn-fetch-blob
+    packageProviders.Append(winrt::RNFetchBlob::ReactPackageProvider());
 }
 
 }

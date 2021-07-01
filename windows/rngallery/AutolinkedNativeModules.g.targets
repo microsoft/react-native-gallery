@@ -30,6 +30,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-gesture-handler\windows\RNGestureHandler\RNGestureHandler\RNGestureHandler.vcxproj">
       <Project>{5fe08a9d-cacb-4309-b75a-2578c7dc786a}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-pdf -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-pdf\windows\RCTPdf\RCTPdf.vcxproj">
+      <Project>{03b8503f-f40d-4013-829c-71b304537d90}</Project>
+    </ProjectReference>
     <!-- Projects from react-native-permissions -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj">
       <Project>{99677b9d-a27b-4239-930e-c36c8d339c54}</Project>
@@ -53,6 +57,10 @@
     <!-- Projects from react-native-xaml -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj">
       <Project>{0ff7027a-222c-4ffb-8f17-91d18bbaf7a8}</Project>
+    </ProjectReference>
+    <!-- Projects from rn-fetch-blob -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\rn-fetch-blob\windows\RNFetchBlob\RNFetchBlob.vcxproj">
+      <Project>{cdde3311-efd2-462d-8551-93637a7fae92}</Project>
     </ProjectReference>
   </ItemGroup>
 </Project>
