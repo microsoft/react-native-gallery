@@ -82,7 +82,7 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
       ) {
         continue;
       }
-      const result = await check(v as Permission);
+      const result = check(v as Permission);
       results.set(v as Permission, result);
     }
     setPerms(results);
@@ -149,8 +149,20 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="Windows Permissions" code={exampleJsx}>
+        <View style={{paddingBottom: 20}}>
+          <Text>
+            Even though all available permissions are listed in this sample, for
+            testing purposes only the microphone and internetClientServer
+            capabilities are available.
+          </Text>
+          <Text>
+            Other permissions can be enabled by editing the app capabilities
+            inside the Package.appxmanifest file under Visual Studio.
+          </Text>
+        </View>
         <FlatList
           data={entries}
+          extraData={entries}
           renderItem={({item}) => getListItem(item)}
           keyExtractor={(item) => item[0]}
         />
