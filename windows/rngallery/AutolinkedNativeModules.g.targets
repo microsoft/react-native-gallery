@@ -42,6 +42,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-sensitive-info\windows\RNSensitiveInfoCPP\RNSensitiveInfoCPP.vcxproj">
       <Project>{471024f1-cd6d-4f1e-a6c7-0037152c850e}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-track-player -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-track-player\windows\RNTrackPlayer\RNTrackPlayer.vcxproj">
+      <Project>{CC51D49E-7FAB-42D2-825D-5E93AC57262C}</Project>
+    </ProjectReference>
     <!-- Projects from react-native-tts -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-tts\windows\RNTTS\RNTTS.vcxproj">
       <Project>{B250B404-D1A2-4171-851E-E80BA031DAF0}</Project>
