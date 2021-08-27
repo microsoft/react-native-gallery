@@ -90,7 +90,8 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
           </Text>
-          <Text style={styles.text}>Version: 1.0.0.0</Text>
+          <Text style={styles.text}>Version: 1.0.4.0</Text>
+          <Text style={styles.text}>React Native Windows Version: 0.65.0</Text>
         </SettingContainer>
         <SettingContainer heading="Found a bug? Want a new sample?">
           <Text style={styles.text}>

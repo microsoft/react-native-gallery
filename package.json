@@ -24,7 +24,7 @@
     "@terrylinla/react-native-sketch-canvas": "git+https://github.com/creambyemute/react-native-sketch-canvas#1db88fa3cc6e8124b0baab3cb04bce0540900a33",
     "lowlight": "^1.17.0",
     "react": "17.0.1",
-    "react-native": "^0.64.1",
+    "react-native": "^0.65.0",
     "react-native-config": "luggit/react-native-config",
     "react-native-device-info": "^7.3.1",
     "react-native-gesture-handler": "JaneaSystems/react-native-gesture-handler#windows",
@@ -37,7 +37,7 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.6.2",
-    "react-native-windows": "^0.64.10",
+    "react-native-windows": "0.65",
     "react-native-xaml": "^0.0.18"
   },
   "devDependencies": {
