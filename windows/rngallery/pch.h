@@ -24,4 +24,5 @@
 #include <winrt/NativeClipboard.h>
 #include <winrt/ReactNativePicker.h>
 #include <winrt/ReactNativeWebView.h>
+#include <winrt/Windows.ApplicationModel.Core.h>;
 using namespace winrt::Windows::Foundation;

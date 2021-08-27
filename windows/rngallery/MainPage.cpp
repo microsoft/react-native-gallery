@@ -8,6 +8,7 @@
 
 using namespace winrt;
 using namespace xaml;
+using namespace Microsoft::ReactNative;
 
 namespace winrt::rngallery::implementation
 {

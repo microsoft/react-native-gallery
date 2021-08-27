@@ -5,7 +5,7 @@ import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
 import {Picker} from '@react-native-picker/picker';
 import {HyperlinkButton} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
-
+var pkg = require('../package.json');
 const createStyles = (colors: any) =>
   StyleSheet.create({
     heading: {
@@ -90,8 +90,11 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
           </Text>
-          <Text style={styles.text}>Version: 1.0.5.0</Text>
-          <Text style={styles.text}>React Native Windows Version: 0.65.0</Text>
+          <Text style={styles.text}>Version: {pkg.version}</Text>
+          <Text style={styles.text}>
+            React Native Windows Version:{' '}
+            {pkg.dependencies['react-native-windows']}
+          </Text>
         </SettingContainer>
         <SettingContainer heading="Found a bug? Want a new sample?">
           <Text style={styles.text}>
