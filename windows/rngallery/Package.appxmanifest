@@ -14,7 +14,7 @@
  <Identity
     Name="Microsoft.ReactNativeGallery"
     Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
-    Version="1.0.4.0" />
+    Version="1.0.5.0" />
 
   <mp:PhoneIdentity PhoneProductId="92a2ad66-6238-420f-9f50-a5bd0955913f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
