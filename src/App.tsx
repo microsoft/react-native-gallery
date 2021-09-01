@@ -119,14 +119,7 @@ export default function App(props) {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
-  appVersion =
-    props.MajorVersion +
-    '.' +
-    props.MinorVersion +
-    '.' +
-    props.BuildVersion +
-    '.' +
-    props.RevisionVersion;
+  appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
 
   return (
     <ThemeSetterContext.Provider value={setRawTheme}>

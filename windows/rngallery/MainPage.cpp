@@ -23,13 +23,13 @@ namespace winrt::rngallery::implementation
         ReactRootView().InitialProps([&](const IJSValueWriter& writer) {
             writer.WriteObjectBegin();
             writer.WritePropertyName(L"MajorVersion");
-            writer.WriteInt64(int(version.Major));
+            writer.WriteInt64(static_cast<int>(version.Major));
             writer.WritePropertyName(L"MinorVersion");
-            writer.WriteInt64(int(version.Minor));
+            writer.WriteInt64(static_cast<int>(version.Minor));
             writer.WritePropertyName(L"BuildVersion");
-            writer.WriteInt64(int(version.Build));
+            writer.WriteInt64(static_cast<int>(version.Build));
             writer.WritePropertyName(L"RevisionVersion");
-            writer.WriteInt64(int(version.Revision));
+            writer.WriteInt64(static_cast<int>(version.Revision));
             writer.WriteObjectEnd(); });
     }
 }
