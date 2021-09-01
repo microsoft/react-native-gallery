@@ -25,6 +25,8 @@ import {
   ThemeSetterContext,
 } from './themes/Theme';
 
+let appVersion = '';
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -65,7 +67,7 @@ function RNGalleryScreenWrapper({navigation}) {
         <Text style={styles.icon}>&#xE700;</Text>
       </TouchableHighlight>
       <View style={styles.navItem}>
-        <Component />
+        <Component appVersion={appVersion} />
       </View>
     </View>
   );
@@ -113,10 +115,18 @@ function renderScreen(i: number) {
   );
 }
 
-export default function App() {
+export default function App(props) {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
+  appVersion =
+    props.MajorVersion +
+    '.' +
+    props.MinorVersion +
+    '.' +
+    props.BuildVersion +
+    '.' +
+    props.RevisionVersion;
 
   return (
     <ThemeSetterContext.Provider value={setRawTheme}>

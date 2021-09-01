@@ -54,7 +54,7 @@ const SettingContainer = (props: {
   );
 };
 
-export const SettingsPage: React.FunctionComponent<{}> = () => {
+export const SettingsPage: React.FunctionComponent<{}> = (props) => {
   const theme = React.useContext(RawThemeContext);
   const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();
@@ -90,7 +90,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
           </Text>
-          <Text style={styles.text}>Version: {pkg.version}</Text>
+          <Text style={styles.text}>Version: {props.appVersion}</Text>
           <Text style={styles.text}>
             React Native Windows Version:{' '}
             {pkg.dependencies['react-native-windows']}
