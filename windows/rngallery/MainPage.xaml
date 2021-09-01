@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
         <Canvas x:Name="RNPrintCanvas" Opacity="0" />
-        <react:ReactRootView
+        <react:ReactRootView 
             x:Name="ReactRootView"
             ComponentName="rngallery"
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
