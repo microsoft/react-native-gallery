@@ -17,14 +17,15 @@ export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
       description="The WebView component renders web content within a native view."
       wrappedNativeControl={{
         control: 'WebView',
-        url: 'https://github.com/react-native-webview/react-native-webview',
+        url:
+          'https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.WebView?view=winrt-20348',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/WebViewExamplePage.tsx"
       documentation={[
         {
           label: 'WebView',
-          url: 'https://reactnative.dev/docs/webview',
+          url: 'https://github.com/react-native-webview/react-native-webview',
         },
       ]}>
       <Example title="A Simple WebView." code={example1jsx}>
