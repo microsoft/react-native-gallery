@@ -87,10 +87,10 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
         <Expander
           collapsedHeight={50}
           expandedHeight={100}
-          headerBackground="#fabc09"
-          headerForegroundPointerOver="#FFFFFF"
-          contentBackground="#00adee"
-          contentBorderBrush="#fabc09">
+          headerBackground={colors.border}
+          headerForegroundPointerOver={colors.primary}
+          contentBackground={colors.primary}
+          contentBorderBrush={colors.background}>
           <Text>Text in the header</Text>
           <Text>Text in the content</Text>
         </Expander>
