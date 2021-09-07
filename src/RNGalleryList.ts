@@ -34,6 +34,7 @@ import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
+import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -72,6 +73,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'DeviceInfo',
     component: DeviceInfoExamplePage,
+  },
+  {
+    key: 'Expander',
+    component: ExpanderExamplePage,
   },
   {
     key: 'FlatList ',
