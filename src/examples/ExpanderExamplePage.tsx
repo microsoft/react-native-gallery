@@ -47,7 +47,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
       Click Me!
     </Text>
   </View>
-  <DateTimePicker value={date1} onChange={() => {}} mode="date" />
+  <DateTimePicker value={date1} mode="date" />
 </Expander>`;
 
   const [date1] = useState(new Date());
@@ -76,7 +76,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
           <Text>Text in the content</Text>
         </Expander>
       </Example>
-      <Example title="A Expander with multiple lines." code={example2jsx}>
+      <Example title="An Expander with multiple lines." code={example2jsx}>
         <Expander collapsedHeight={75} expandedHeight={150}>
           <View>
             <Text>Text in the header</Text>
@@ -88,7 +88,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
           </View>
         </Expander>
       </Example>
-      <Example title="A Expander that extends upwards." code={example3jsx}>
+      <Example title="An Expander that extends upwards." code={example3jsx}>
         <Expander
           collapsedHeight={50}
           expandedHeight={100}
@@ -109,7 +109,9 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
           <Text>Text in the content</Text>
         </Expander>
       </Example>
-      <Example title="A Expander with interactive controls." code={example5jsx}>
+      <Example
+        title="An Expander with interactive controls."
+        code={example5jsx}>
         <Expander collapsedHeight={50} expandedHeight={100}>
           <View
             style={{
@@ -124,7 +126,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
               Click Me!
             </Text>
           </View>
-          <DateTimePicker value={date1} onChange={() => {}} mode="date" />
+          <DateTimePicker value={date1} mode="date" />
         </Expander>
       </Example>
     </Page>
