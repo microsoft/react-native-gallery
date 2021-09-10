@@ -35,6 +35,7 @@ import {Persona} from './examples/Persona/Persona';
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
+import { PersonaGallery } from './examples/Persona/PersonaGallery';
 
 interface IRNGalleryExample {
   key: string;
@@ -49,6 +50,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Persona',
     component: Persona,
+  },
+  {
+    key: 'PersonaGallery',
+    component: PersonaGallery,
   },
   {
     key: 'Settings',
