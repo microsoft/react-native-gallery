@@ -30,6 +30,7 @@ import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 import {PopupExamplePage} from './examples/PopupExamplePage';
 import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
 import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
+import {Persona} from './examples/Persona/Persona';
 // Disabled from #125
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
@@ -44,6 +45,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Welcome',
     component: WelcomePage,
+  },
+  {
+    key: 'Persona',
+    component: Persona,
   },
   {
     key: 'Settings',
