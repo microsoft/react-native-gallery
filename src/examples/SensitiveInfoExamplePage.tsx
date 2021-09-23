@@ -1,5 +1,6 @@
 'use strict';
-import {Text, View, Button, TextInput} from 'react-native';
+import {Text, View, TextInput} from 'react-native';
+import {Button} from 'react-native-xaml';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -26,7 +27,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
       value={value}
       editable={false}
     />
-    <Button style={{margin: 20}} color={colors.primary} onPress={getItem} title="Get Item" />
+    <Button style={{margin: 20}} onClick={getItem} content={{string: "Get Item"}} />
   </View>
   <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
     <TextInput
@@ -39,7 +40,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
       onChangeText={(text) => setNewValue(text)}
       value={newValue}
     />
-    <Button color={colors.primary} onPress={setItem} title="Set Item" />
+    <Button onClick={setItem} content={{string: "Set Item"}} />
   </View>`;
 
   const [value, setValue] = useState('');
@@ -92,7 +93,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             onChangeText={(text) => setNewValue(text)}
             value={newValue}
           />
-          <Button color={colors.primary} onPress={setItem} title="Set Item" />
+          <Button onClick={setItem} content={{string: 'Set Item'}} />
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
@@ -105,7 +106,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             value={value}
             editable={false}
           />
-          <Button color={colors.primary} onPress={getItem} title="Get Item" />
+          <Button onClick={getItem} content={{string: 'Get Item'}} />
         </View>
       </Example>
     </Page>
