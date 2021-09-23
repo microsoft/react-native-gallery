@@ -1,5 +1,5 @@
 'use strict';
-import {Button, FlatList, Text, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -14,6 +14,7 @@ import {
 import {AndroidPermissionMap} from 'react-native-permissions/dist/typescript/permissions.android';
 import {IOSPermissionMap} from 'react-native-permissions/dist/typescript/permissions.ios';
 import {WindowsPermissionMap} from 'react-native-permissions/dist/typescript/permissions.windows';
+import {Button} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
 
 const getResultString = (result: PermissionStatus) => {
@@ -47,12 +48,15 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
 
     return (
         <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          {status == 'granted' ? <Button onPress={() => {}} color='#737373' title="Granted" />
-                               : <Button 
-                                   onPress={() => requestPermission(perm)} 
-                                   title="Request"
-                                   colors={colors.primary}
-                                   disabled={status == 'unavailable' || status == 'blocked'} />}
+        {status === 'granted' ? (
+          <Button onClick={() => {}} content={{string: 'Granted'}} />
+        ) : (
+          <Button
+            onClick={() => requestPermission(perm)}
+            content={{string: 'Request'}}
+            isEnabled={status === 'available'}
+          />
+        )}
           <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
           <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
         </View>
@@ -115,13 +119,12 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
           paddingBottom: 10,
         }}>
         {status === 'granted' ? (
-          <Button onPress={() => {}} color="#737373" title="Granted" />
+          <Button onClick={() => {}} content={{string: 'Granted'}} />
         ) : (
           <Button
-            onPress={() => requestPermission(perm)}
-            color={colors.primary}
-            title="Request"
-            disabled={status === 'unavailable' || status === 'blocked'}
+            onClick={() => requestPermission(perm)}
+            content={{string: 'Request'}}
+            isEnabled={status === 'available'}
           />
         )}
         <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>
