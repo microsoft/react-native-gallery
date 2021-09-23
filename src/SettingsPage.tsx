@@ -2,8 +2,7 @@
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
-import {Picker} from '@react-native-picker/picker';
-import {HyperlinkButton} from 'react-native-xaml';
+import {HyperlinkButton, ComboBoxItem, ComboBox} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
 var pkg = require('../package.json');
 const createStyles = (colors: any) =>
@@ -59,24 +58,29 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
   const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();
   const styles = createStyles(colors);
-  const PickerValueChanged = (value: ThemeMode) => {
-    console.log('Setting theme to: ' + value);
-    setTheme(value);
+  const ValueChanged = (args: any) => {
+    const value = args.nativeEvent.selectedValue.value;
+    if (value === 'Light') {
+      setTheme('light');
+    } else if (value === 'Dark') {
+      setTheme('dark');
+    } else if (value === 'Use System Setting') {
+      setTheme('system');
+    }
   };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Settings</Text>
       <ScrollView style={styles.scrollView}>
         <SettingContainer heading="Theme Mode">
-          <Picker
-            style={{height: 50, width: 200}}
-            onValueChange={PickerValueChanged}
-            selectedValue={theme}
-            itemStyle={{color: colors.text}}>
-            <Picker.Item label="Light" value="light" />
-            <Picker.Item label="Dark" value="dark" />
-            <Picker.Item label="Use System Setting" value="system" />
-          </Picker>
+          <ComboBox
+            onSelectionChanged={ValueChanged}
+            placeholderText="Select Theme"
+            width={200}>
+            <ComboBoxItem content={{string: 'Light'}} />
+            <ComboBoxItem content={{string: 'Dark'}} />
+            <ComboBoxItem content={{string: 'Use System Setting'}} />
+          </ComboBox>
         </SettingContainer>
         <SettingContainer heading="About">
           <Text style={styles.text}>
