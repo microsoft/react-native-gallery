@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebViewBridgeComponent", ".
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj", "{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeExpander", "..\node_modules\@fluentui-react-native\experimental-expander\windows\ReactNativeExpander\ReactNativeExpander.vcxproj", "{A9669358-656D-4AB1-9AE8-11EFECE2597D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}*SharedItemsImports = 4
@@ -391,6 +393,18 @@ Global
 		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x64.Build.0 = Release|x64
 		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x86.ActiveCfg = Release|Win32
 		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x86.Build.0 = Release|Win32
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|ARM64.Build.0 = Debug|ARM64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x64.ActiveCfg = Debug|x64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x64.Build.0 = Debug|x64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x86.ActiveCfg = Debug|Win32
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x86.Build.0 = Debug|Win32
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|ARM64.ActiveCfg = Release|ARM64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|ARM64.Build.0 = Release|ARM64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x64.ActiveCfg = Release|x64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x64.Build.0 = Release|x64
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x86.ActiveCfg = Release|Win32
+		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
