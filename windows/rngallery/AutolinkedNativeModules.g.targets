@@ -10,6 +10,14 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\checkbox\windows\CheckboxWindows\CheckboxWindows.vcxproj">
       <Project>{eaf81beb-a159-4421-9b6d-e59c37828a57}</Project>
     </ProjectReference>
+    <!-- Projects from @react-native-community/clipboard -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\clipboard\windows\Clipboard\Clipboard.vcxproj">
+      <Project>{99a938fa-9ff3-47a0-9256-195a06e7fdd1}</Project>
+    </ProjectReference>
+    <!-- Projects from @react-native-community/datetimepicker -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj">
+      <Project>{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}</Project>
+    </ProjectReference>
     <!-- Projects from @react-native-community/progress-view -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\progress-view\windows\progress-view\progress-view.vcxproj">
       <Project>{ca54a654-5e81-44dc-af3f-cf55ef5b493a}</Project>
@@ -17,6 +25,10 @@
     <!-- Projects from @react-native-community/slider -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\slider\windows\SliderWindows\SliderWindows.vcxproj">
       <Project>{685a83ae-36bc-4e9d-bdc6-417ebf168463}</Project>
+    </ProjectReference>
+    <!-- Projects from @react-native-picker/picker -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj">
+      <Project>{bedcc600-4541-41f2-aa46-9e058202b6ad}</Project>
     </ProjectReference>
     <!-- Projects from @terrylinla/react-native-sketch-canvas -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
