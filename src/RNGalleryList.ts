@@ -2,7 +2,6 @@
 import React from 'react';
 import {WelcomePage} from './WelcomePage';
 import {SettingsPage} from './SettingsPage';
-import {TemplateExamplePage} from './examples/TemplateExamplePage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from './examples/ConfigExamplePage';
@@ -49,10 +48,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Settings',
     component: SettingsPage,
-  },
-  {
-    key: 'Template',
-    component: TemplateExamplePage,
   },
   {
     key: 'Button',
@@ -119,6 +114,26 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ProgressViewExamplePage,
   },
   {
+    key: 'ScrollView',
+    component: ScrollViewExamplePage,
+  },
+  {
+    key: 'SensitiveInfo',
+    component: SensitiveInfoExamplePage,
+  },
+  {
+    key: 'Slider',
+    component: SliderExamplePage,
+  },
+  {
+    key: 'Sketch',
+    component: SketchExamplePage,
+  },
+  {
+    key: 'Switch',
+    component: SwitchExamplePage,
+  },
+  {
     key: 'Text',
     component: TextExamplePage,
   },
@@ -141,26 +156,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TouchableOpacity',
     component: TouchableOpacityExamplePage,
-  },
-  {
-    key: 'ScrollView',
-    component: ScrollViewExamplePage,
-  },
-  {
-    key: 'SensitiveInfo',
-    component: SensitiveInfoExamplePage,
-  },
-  {
-    key: 'Slider',
-    component: SliderExamplePage,
-  },
-  {
-    key: 'Sketch',
-    component: SketchExamplePage,
-  },
-  {
-    key: 'Switch',
-    component: SwitchExamplePage,
   },
   {
     key: 'TrackPlayer',
