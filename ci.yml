@@ -6,6 +6,15 @@ schedules:
         - main
     batch: true
 
+strategy:
+  matrix:
+    canary:
+      BUILD_CANARY: true
+      PUBLISH_APP: false
+    publish:
+      BUILD_CANARY: false
+      PUBLISH_APP: true
+
 variables:
   - group: rngallery_Variables
   - name: BuildLogDirectory
@@ -27,7 +36,13 @@ steps:
       versionSpec: '14.x'
 
   - task: CmdLine@2
-    displayName: Installing Yarm
+    displayName: Use react-native-windows@canary
+    condition: eq(variables['BUILD_CANARY'], 'true')
+    inputs:
+      script: node scripts/use-canary-version.js
+
+  - task: CmdLine@2
+    displayName: Installing Yarn
     inputs:
       script: npm install -g yarn
 
@@ -74,7 +89,7 @@ steps:
 
   - task: PublishBuildArtifacts@1
     displayName: Upload App
-    condition: succeededOrFailed()
+    condition: and(succeededOrFailed(), eq(variables['PUBLISH_APP'], 'true'))
     inputs:
       pathtoPublish: .\windows\AppPackages\rngallery
       artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
