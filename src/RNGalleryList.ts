@@ -43,12 +43,12 @@ interface IRNGalleryExample {
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
   {
-    key: 'Welcome',
-    component: WelcomePage,
-  },
-  {
     key: 'Settings',
     component: SettingsPage,
+  },
+  {
+    key: 'Welcome',
+    component: WelcomePage,
   },
   {
     key: 'Template',
