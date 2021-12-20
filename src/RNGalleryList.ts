@@ -2,7 +2,6 @@
 import React from 'react';
 import {WelcomePage} from './WelcomePage';
 import {SettingsPage} from './SettingsPage';
-import {TemplateExamplePage} from './examples/TemplateExamplePage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from './examples/ConfigExamplePage';
@@ -52,11 +51,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Welcome',
     component: WelcomePage,
     icon: '\uE80F',
-  },
-  {
-    key: 'Template',
-    component: TemplateExamplePage,
-    icon: '\u0000',
   },
   {
     key: 'Button',
@@ -138,6 +132,31 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     icon: '\uF16A',
   },
   {
+    key: 'ScrollView',
+    component: ScrollViewExamplePage,
+    icon: '\uEC8F',
+  },
+  {
+    key: 'SensitiveInfo',
+    component: SensitiveInfoExamplePage,
+    icon: '\uE72E',
+  },
+  {
+    key: 'Slider',
+    component: SliderExamplePage,
+    icon: '\uE9E9',
+  },
+  {
+    key: 'Sketch',
+    component: SketchExamplePage,
+    icon: '\uE790',
+  },
+  {
+    key: 'Switch',
+    component: SwitchExamplePage,
+    icon: '\uF19E',
+  },
+  {
     key: 'Text',
     component: TextExamplePage,
     icon: '\uE8D2',
@@ -166,31 +185,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'TouchableOpacity',
     component: TouchableOpacityExamplePage,
     icon: '\uEDA4',
-  },
-  {
-    key: 'ScrollView',
-    component: ScrollViewExamplePage,
-    icon: '\uEC8F',
-  },
-  {
-    key: 'SensitiveInfo',
-    component: SensitiveInfoExamplePage,
-    icon: '\uE72E',
-  },
-  {
-    key: 'Slider',
-    component: SliderExamplePage,
-    icon: '\uE9E9',
-  },
-  {
-    key: 'Sketch',
-    component: SketchExamplePage,
-    icon: '\uE790',
-  },
-  {
-    key: 'Switch',
-    component: SwitchExamplePage,
-    icon: '\uF19E',
   },
   {
     key: 'TrackPlayer',
