@@ -33,6 +33,9 @@
 // Includes from react-native-print
 #include <winrt/RNPrint.h>
 
+// Includes from react-native-screens
+#include <winrt/RNScreens.h>
+
 // Includes from react-native-sensitive-info
 #include <winrt/RNSensitiveInfoCPP.h>
 
@@ -73,6 +76,8 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
     // IReactPackageProviders from react-native-print
     packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
+    // IReactPackageProviders from react-native-screens
+    packageProviders.Append(winrt::RNScreens::ReactPackageProvider());
     // IReactPackageProviders from react-native-sensitive-info
     packageProviders.Append(winrt::RNSensitiveInfoCPP::ReactPackageProvider());
     // IReactPackageProviders from react-native-track-player

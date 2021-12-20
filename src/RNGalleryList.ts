@@ -39,52 +39,64 @@ import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 interface IRNGalleryExample {
   key: string;
   component: React.ElementType;
+  icon: string;
 }
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Settings',
     component: SettingsPage,
+    icon: '\uE713',
   },
   {
     key: 'Welcome',
     component: WelcomePage,
+    icon: '\uE80F',
   },
   {
     key: 'Template',
     component: TemplateExamplePage,
+    icon: '\u0000',
   },
   {
     key: 'Button',
     component: ButtonExamplePage,
+    icon: '\uE815',
   },
   {
     key: 'CheckBox',
     component: CheckBoxExamplePage,
+    icon: '\uE73A',
   },
   {
     key: 'Config',
     component: ConfigExamplePage,
+    icon: '\uE753',
   },
   {
     key: 'DatePicker',
     component: DatePickerExamplePage,
+    icon: '\uE787',
   },
   {
     key: 'DeviceInfo',
     component: DeviceInfoExamplePage,
+    icon: '\uE703',
   },
   {
     key: 'Expander',
     component: ExpanderExamplePage,
+    icon: '\uE8C4',
   },
   {
     key: 'FlatList ',
     component: FlatListExamplePage,
+    icon: '\uE8A4',
   },
   {
     key: 'Flyout',
     component: FlyoutExamplePage,
+    icon: '\uE75A',
   },
   /*{
     key: 'GestureHandler',
@@ -93,90 +105,112 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Image',
     component: ImageExamplePage,
+    icon: '\uEB9F',
   },
   {
     key: 'Permissions',
     component: PermissionsExamplePage,
+    icon: '\uED2C',
   },
   {
     key: 'Picker',
     component: PickerExamplePage,
+    icon: '\uE7B8',
   },
   {
     key: 'Popup',
     component: PopupExamplePage,
+    icon: '\uE75A',
   },
   {
     key: 'Pressable',
     component: PressableExamplePage,
+    icon: '\uE815',
   },
   {
     key: 'Print',
     component: PrintExamplePage,
+    icon: '\uE749',
   },
   {
     key: 'ProgressView',
     component: ProgressViewExamplePage,
+    icon: '\uF16A',
   },
   {
     key: 'Text',
     component: TextExamplePage,
+    icon: '\uE8D2',
   },
   {
     key: 'TextInput',
     component: TextInputExamplePage,
+    icon: '\uE90A',
   },
   {
     key: 'TimePicker',
     component: TimePickerExamplePage,
+    icon: '\uE823',
   },
   {
     key: 'TextToSpeech',
     component: TTSExamplePage,
+    icon: '\uEC43',
   },
   {
     key: 'TouchableHighlight',
     component: TouchableHighlightExamplePage,
+    icon: '\uEDA4',
   },
   {
     key: 'TouchableOpacity',
     component: TouchableOpacityExamplePage,
+    icon: '\uEDA4',
   },
   {
     key: 'ScrollView',
     component: ScrollViewExamplePage,
+    icon: '\uEC8F',
   },
   {
     key: 'SensitiveInfo',
     component: SensitiveInfoExamplePage,
+    icon: '\uE72E',
   },
   {
     key: 'Slider',
     component: SliderExamplePage,
+    icon: '\uE9E9',
   },
   {
     key: 'Sketch',
     component: SketchExamplePage,
+    icon: '\uE790',
   },
   {
     key: 'Switch',
     component: SwitchExamplePage,
+    icon: '\uF19E',
   },
   {
     key: 'TrackPlayer',
     component: TrackPlayerExamplePage,
+    icon: '\uEC4F',
   },
   {
     key: 'View',
     component: ViewExamplePage,
+    icon: '\uECA5',
   },
   {
     key: 'WebView',
     component: WebViewExamplePage,
+    icon: '\uE774',
   },
   {
     key: 'Xaml',
     component: XamlExamplePage,
+    icon: '\uE70F',
   },
 ];
 

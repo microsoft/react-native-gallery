@@ -91,6 +91,9 @@ function renderDrawerItem(props, i: number) {
       }}
       onPress={() => props.navigation.navigate(RNGalleryList[i].key)}
       styles={{height: 30}}
+      icon={() => {
+        return <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>;
+      }}
     />
   );
 }
