@@ -20,7 +20,7 @@ variables:
   - name: BuildLogDirectory
     value: $(Build.BinariesDirectory)\x64\BuildLogs
 
-pool: windevbuildagents
+pool: rnw-pool-4
 
 steps:
   - checkout: self
