@@ -11,12 +11,7 @@ import {
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
-} from '@react-navigation/drawer';
+import {createDrawerNavigator, DrawerItem} from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
@@ -69,7 +64,7 @@ function RNGalleryScreenWrapper({navigation}) {
           width: 48,
         }}>
         <TouchableHighlight
-          style={[styles.menu, {alignSelf: 'flex-end'}]}
+          style={styles.menu}
           onPress={() => navigation.openDrawer()}
           activeOpacity={0.5783}
           underlayColor="rgba(0, 0, 0, 0.0241);">
@@ -83,14 +78,13 @@ function RNGalleryScreenWrapper({navigation}) {
   );
 }
 
-function renderDrawerItem(props, i: number) {
+function RenderDrawerItem(props, i: number) {
   return (
     <DrawerItem
       label={() => {
         return <Text>{RNGalleryList[i].key}</Text>;
       }}
       onPress={() => props.navigation.navigate(RNGalleryList[i].key)}
-      styles={{height: 30}}
       icon={() => {
         return <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>;
       }}
@@ -101,7 +95,7 @@ function renderDrawerItem(props, i: number) {
 function RenderDrawer(props) {
   var items = [];
   for (var i = 1; i < RNGalleryList.length; i++) {
-    items.push(renderDrawerItem(props, i));
+    items.push(RenderDrawerItem(props, i));
   }
   return items;
 }
@@ -126,7 +120,7 @@ function CustomDrawerContent(props) {
           return <Text style={styles.icon}>&#xE713;</Text>;
         }}
       />
-      <ScrollView style={{height: '80%'}} {...props}>
+      <ScrollView style={{height: '85%'}} {...props}>
         {RenderDrawer(props)}
       </ScrollView>
     </View>
