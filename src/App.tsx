@@ -67,7 +67,7 @@ function RNGalleryScreenWrapper({navigation}) {
         <Text style={styles.icon}>&#xE700;</Text>
       </TouchableHighlight>
       <View style={styles.navItem}>
-        <Component appVersion={appVersion} />
+        <Component appVersion={appVersion} navigation={navigation} />
       </View>
     </View>
   );
