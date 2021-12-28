@@ -5,16 +5,13 @@ import {
   TouchableHighlight,
   Text,
   useColorScheme,
+  ScrollView,
 } from 'react-native';
 import {
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-} from '@react-navigation/drawer';
+import {createDrawerNavigator, DrawerItem} from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
@@ -24,6 +21,7 @@ import {
   ThemeContext,
   ThemeSetterContext,
 } from './themes/Theme';
+import {PlatformColor} from 'react-native';
 
 let appVersion = '';
 
@@ -38,9 +36,10 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     height: '100%',
     alignSelf: 'stretch',
+    paddingLeft: 10,
   },
   menu: {
-    margin: 10,
+    margin: 5,
     height: 34,
     width: 38,
     borderRadius: 3,
@@ -59,13 +58,19 @@ function RNGalleryScreenWrapper({navigation}) {
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
-      <TouchableHighlight
-        style={styles.menu}
-        onPress={() => navigation.openDrawer()}
-        activeOpacity={0.5783}
-        underlayColor="rgba(0, 0, 0, 0.0241);">
-        <Text style={styles.icon}>&#xE700;</Text>
-      </TouchableHighlight>
+      <View
+        style={{
+          backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+          width: 48,
+        }}>
+        <TouchableHighlight
+          style={styles.menu}
+          onPress={() => navigation.openDrawer()}
+          activeOpacity={0.5783}
+          underlayColor="rgba(0, 0, 0, 0.0241);">
+          <Text style={styles.icon}>&#xE700;</Text>
+        </TouchableHighlight>
+      </View>
       <View style={styles.navItem}>
         <Component appVersion={appVersion} />
       </View>
@@ -73,12 +78,52 @@ function RNGalleryScreenWrapper({navigation}) {
   );
 }
 
+function RenderDrawerItem(props, i: number) {
+  return (
+    <DrawerItem
+      label={() => {
+        return <Text>{RNGalleryList[i].key}</Text>;
+      }}
+      onPress={() => props.navigation.navigate(RNGalleryList[i].key)}
+      icon={() => {
+        return <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>;
+      }}
+    />
+  );
+}
+
+function RenderDrawer(props) {
+  var items = [];
+  for (var i = 1; i < RNGalleryList.length; i++) {
+    items.push(RenderDrawerItem(props, i));
+  }
+  return items;
+}
+
 // @ts-ignore
 function CustomDrawerContent(props) {
   return (
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-    </DrawerContentScrollView>
+    <View>
+      <TouchableHighlight
+        style={styles.menu}
+        onPress={() => props.navigation.closeDrawer()}
+        activeOpacity={0.5783}
+        underlayColor="rgba(0, 0, 0, 0.0241);">
+        <Text style={styles.icon}>&#xE700;</Text>
+      </TouchableHighlight>
+      <DrawerItem
+        label={() => {
+          return <Text>Settings</Text>;
+        }}
+        onPress={() => props.navigation.navigate('Settings')}
+        icon={() => {
+          return <Text style={styles.icon}>&#xE713;</Text>;
+        }}
+      />
+      <ScrollView style={{height: '85%'}} {...props}>
+        {RenderDrawer(props)}
+      </ScrollView>
+    </View>
   );
 }
 
