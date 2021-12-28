@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import {WelcomePage} from './WelcomePage';
+import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
@@ -50,8 +50,8 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: '',
   },
   {
-    key: 'Welcome',
-    component: WelcomePage,
+    key: 'Home',
+    component: HomePage,
     icon: '\uE80F',
     type: '',
   },

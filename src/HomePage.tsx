@@ -159,7 +159,7 @@ const RenderPageContent = ({navigation}) => {
   );
 };
 
-export const WelcomePage: React.FunctionComponent<{}> = ({navigation}) => {
+export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
 
