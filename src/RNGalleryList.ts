@@ -44,15 +44,15 @@ interface IRNGalleryExample {
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
   {
-    key: 'Settings',
-    component: SettingsPage,
-    icon: '\uE713',
-    type: '',
-  },
-  {
     key: 'Home',
     component: HomePage,
     icon: '\uE80F',
+    type: '',
+  },
+  {
+    key: 'Settings',
+    component: SettingsPage,
+    icon: '\uE713',
     type: '',
   },
   {
