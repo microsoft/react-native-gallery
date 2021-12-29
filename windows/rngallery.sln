@@ -67,8 +67,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNTTS", "..\node_modules\re
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWebView", "..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj", "{729D9AF8-CD9E-4427-9F6C-FB757E287729}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebViewBridgeComponent", "..\node_modules\react-native-webview\windows\WebViewBridgeComponent\WebViewBridgeComponent.vcxproj", "{FCB612AD-FACC-410C-828C-24B5940B2762}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj", "{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeExpander", "..\node_modules\@fluentui-react-native\experimental-expander\windows\ReactNativeExpander\ReactNativeExpander.vcxproj", "{A9669358-656D-4AB1-9AE8-11EFECE2597D}"
@@ -84,7 +82,6 @@ Global
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{729d9af8-cd9e-4427-9f6c-fb757e287729}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Mso\Mso.vcxitems*{84e05bfa-cbaf-4f0d-bfb6-4ce85742a57e}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{99a938fa-9ff3-47a0-9256-195a06e7fdd1}*SharedItemsImports = 4
-		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{bedcc600-4541-41f2-aa46-9e058202b6ad}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Chakra\Chakra.vcxitems*{c38970c0-5fbf-4d69-90d8-cbac225ae895}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{da8b35b3-da00-4b02-bde6-6a397b3fd46b}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\include\Include.vcxitems*{ef074ba1-2d54-4d49-a28e-5e040b47cd2e}*SharedItemsImports = 9
@@ -386,18 +383,6 @@ Global
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x64.Build.0 = Release|x64
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.ActiveCfg = Release|Win32
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.Build.0 = Release|Win32
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|ARM64.Build.0 = Debug|ARM64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x64.ActiveCfg = Debug|x64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x64.Build.0 = Debug|x64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x86.ActiveCfg = Debug|Win32
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Debug|x86.Build.0 = Debug|Win32
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|ARM64.ActiveCfg = Release|ARM64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|ARM64.Build.0 = Release|ARM64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x64.ActiveCfg = Release|x64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x64.Build.0 = Release|x64
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.ActiveCfg = Release|Win32
-		{FCB612AD-FACC-410C-828C-24B5940B2762}.Release|x86.Build.0 = Release|Win32
 		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|ARM64.Build.0 = Debug|ARM64
 		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|x64.ActiveCfg = Debug|x64
