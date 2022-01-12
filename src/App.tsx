@@ -72,7 +72,7 @@ function RNGalleryScreenWrapper({navigation}) {
         </TouchableHighlight>
       </View>
       <View style={styles.navItem}>
-        <Component appVersion={appVersion} />
+        <Component appVersion={appVersion} navigation={navigation} />
       </View>
     </View>
   );
@@ -81,6 +81,7 @@ function RNGalleryScreenWrapper({navigation}) {
 function RenderDrawerItem(props, i: number) {
   return (
     <DrawerItem
+      key={RNGalleryList[i].key}
       label={() => {
         return <Text>{RNGalleryList[i].key}</Text>;
       }}
@@ -94,8 +95,10 @@ function RenderDrawerItem(props, i: number) {
 
 function RenderDrawer(props) {
   var items = [];
-  for (var i = 1; i < RNGalleryList.length; i++) {
-    items.push(RenderDrawerItem(props, i));
+  for (var i = 0; i < RNGalleryList.length; i++) {
+    if (RNGalleryList[i].key !== 'Settings') {
+      items.push(RenderDrawerItem(props, i));
+    }
   }
   return items;
 }
