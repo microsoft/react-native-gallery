@@ -16,8 +16,6 @@
     "@react-native-community/datetimepicker": "^4.0.1",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-community/progress-view": "^1.2.4",
-    "@react-native-community/slider": "^4.0.0-rc.3",
-    "@react-native-picker/picker": "^2.0.0",
     "@react-navigation/bottom-tabs": "5.10.0",
     "@react-navigation/drawer": "5.10.0",
     "@react-navigation/native": "6.0.0",
@@ -39,8 +37,7 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.15.0",
-    "react-native-windows": "0.67.0-preview.4",
-    "react-native-xaml": "^0.0.45"
+    "react-native-windows": "0.67.0-preview.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

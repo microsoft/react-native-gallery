@@ -18,12 +18,6 @@
 // Includes from @react-native-community/progress-view
 #include <winrt/progress_view.h>
 
-// Includes from @react-native-community/slider
-#include <winrt/SliderWindows.h>
-
-// Includes from @react-native-picker/picker
-#include <winrt/ReactNativePicker.h>
-
 // Includes from @terrylinla/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
 
@@ -57,9 +51,6 @@
 // Includes from react-native-webview
 #include <winrt/ReactNativeWebView.h>
 
-// Includes from react-native-xaml
-#include <winrt/ReactNativeXaml.h>
-
 namespace winrt::Microsoft::ReactNative
 {
 
@@ -75,10 +66,6 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::DateTimePicker::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/progress-view
     packageProviders.Append(winrt::progress_view::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/slider
-    packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-picker/picker
-    packageProviders.Append(winrt::ReactNativePicker::ReactPackageProvider());
     // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
     // IReactPackageProviders from react-native-config
@@ -101,8 +88,6 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::RNTTS::ReactPackageProvider());
     // IReactPackageProviders from react-native-webview
     packageProviders.Append(winrt::ReactNativeWebView::ReactPackageProvider());
-    // IReactPackageProviders from react-native-xaml
-    packageProviders.Append(winrt::ReactNativeXaml::ReactPackageProvider());
 }
 
 }

@@ -22,14 +22,6 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\progress-view\windows\progress-view\progress-view.vcxproj">
       <Project>{ca54a654-5e81-44dc-af3f-cf55ef5b493a}</Project>
     </ProjectReference>
-    <!-- Projects from @react-native-community/slider -->
-    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-community\slider\windows\SliderWindows\SliderWindows.vcxproj">
-      <Project>{685a83ae-36bc-4e9d-bdc6-417ebf168463}</Project>
-    </ProjectReference>
-    <!-- Projects from @react-native-picker/picker -->
-    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj">
-      <Project>{bedcc600-4541-41f2-aa46-9e058202b6ad}</Project>
-    </ProjectReference>
     <!-- Projects from @terrylinla/react-native-sketch-canvas -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
       <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
@@ -73,10 +65,6 @@
     <!-- Projects from react-native-webview -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj">
       <Project>{729d9af8-cd9e-4427-9f6c-fb757e287729}</Project>
-    </ProjectReference>
-    <!-- Projects from react-native-xaml -->
-    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj">
-      <Project>{0ff7027a-222c-4ffb-8f17-91d18bbaf7a8}</Project>
     </ProjectReference>
   </ItemGroup>
 </Project>
