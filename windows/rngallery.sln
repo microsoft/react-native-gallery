@@ -33,8 +33,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mso", "..\node_modules\reac
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Include", "..\node_modules\react-native-windows\include\Include.vcxitems", "{EF074BA1-2D54-4D49-A28E-5E040B47CD2E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeExpander", "..\node_modules\@fluentui-react-native\experimental-expander\windows\ReactNativeExpander\ReactNativeExpander.vcxproj", "{A9669358-656D-4AB1-9AE8-11EFECE2597D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CheckboxWindows", "..\node_modules\@react-native-community\checkbox\windows\CheckboxWindows\CheckboxWindows.vcxproj", "{EAF81BEB-A159-4421-9B6D-E59C37828A57}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Clipboard", "..\node_modules\@react-native-community\clipboard\windows\Clipboard\Clipboard.vcxproj", "{99A938FA-9FF3-47A0-9256-195A06E7FDD1}"
@@ -63,15 +61,21 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNTTS", "..\node_modules\re
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWebView", "..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj", "{729D9AF8-CD9E-4427-9F6C-FB757E287729}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNScreens", "..\node_modules\react-native-screens\windows\RNScreens\RNScreens.vcxproj", "{D638F49E-29D2-4699-AC52-FACD82FA7138}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SliderWindows", "..\node_modules\@react-native-community\slider\windows\SliderWindows\SliderWindows.vcxproj", "{685A83AE-36BC-4E9D-BDC6-417EBF168463}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj", "{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativePicker", "..\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj", "{BEDCC600-4541-41F2-AA46-9E058202B6AD}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{0986a4db-8e72-4bb7-ae32-7d9df1758a9d}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Shared\Shared.vcxitems*{2049dbe9-8d13-42c9-ae4b-413ae38fffd0}*SharedItemsImports = 9
+		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{685a83ae-36bc-4e9d-bdc6-417ebf168463}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{729d9af8-cd9e-4427-9f6c-fb757e287729}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Mso\Mso.vcxitems*{84e05bfa-cbaf-4f0d-bfb6-4ce85742a57e}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{99a938fa-9ff3-47a0-9256-195a06e7fdd1}*SharedItemsImports = 4
+		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{bedcc600-4541-41f2-aa46-9e058202b6ad}*SharedItemsImports = 4
 		..\node_modules\react-native-windows\Chakra\Chakra.vcxitems*{c38970c0-5fbf-4d69-90d8-cbac225ae895}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems*{da8b35b3-da00-4b02-bde6-6a397b3fd46b}*SharedItemsImports = 9
 		..\node_modules\react-native-windows\include\Include.vcxitems*{ef074ba1-2d54-4d49-a28e-5e040b47cd2e}*SharedItemsImports = 9
@@ -169,18 +173,6 @@ Global
 		{FCA38F3C-7C73-4C47-BE4E-32F77FA8538D}.Release|x64.Build.0 = Release|x64
 		{FCA38F3C-7C73-4C47-BE4E-32F77FA8538D}.Release|x86.ActiveCfg = Release|Win32
 		{FCA38F3C-7C73-4C47-BE4E-32F77FA8538D}.Release|x86.Build.0 = Release|Win32
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|ARM64.Build.0 = Debug|ARM64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x64.ActiveCfg = Debug|x64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x64.Build.0 = Debug|x64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x86.ActiveCfg = Debug|Win32
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Debug|x86.Build.0 = Debug|Win32
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|ARM64.ActiveCfg = Release|ARM64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|ARM64.Build.0 = Release|ARM64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x64.ActiveCfg = Release|x64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x64.Build.0 = Release|x64
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x86.ActiveCfg = Release|Win32
-		{A9669358-656D-4AB1-9AE8-11EFECE2597D}.Release|x86.Build.0 = Release|Win32
 		{EAF81BEB-A159-4421-9B6D-E59C37828A57}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{EAF81BEB-A159-4421-9B6D-E59C37828A57}.Debug|ARM64.Build.0 = Debug|ARM64
 		{EAF81BEB-A159-4421-9B6D-E59C37828A57}.Debug|x64.ActiveCfg = Debug|x64
@@ -349,18 +341,42 @@ Global
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x64.Build.0 = Release|x64
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.ActiveCfg = Release|Win32
 		{729D9AF8-CD9E-4427-9F6C-FB757E287729}.Release|x86.Build.0 = Release|Win32
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Debug|ARM64.Build.0 = Debug|ARM64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Debug|x64.ActiveCfg = Debug|x64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Debug|x64.Build.0 = Debug|x64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Debug|x86.ActiveCfg = Debug|Win32
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Debug|x86.Build.0 = Debug|Win32
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Release|ARM64.ActiveCfg = Release|ARM64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Release|ARM64.Build.0 = Release|ARM64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Release|x64.ActiveCfg = Release|x64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Release|x64.Build.0 = Release|x64
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Release|x86.ActiveCfg = Release|Win32
-		{D638F49E-29D2-4699-AC52-FACD82FA7138}.Release|x86.Build.0 = Release|Win32
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Debug|ARM64.Build.0 = Debug|ARM64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Debug|x64.ActiveCfg = Debug|x64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Debug|x64.Build.0 = Debug|x64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Debug|x86.ActiveCfg = Debug|Win32
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Debug|x86.Build.0 = Debug|Win32
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Release|ARM64.ActiveCfg = Release|ARM64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Release|ARM64.Build.0 = Release|ARM64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Release|x64.ActiveCfg = Release|x64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Release|x64.Build.0 = Release|x64
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Release|x86.ActiveCfg = Release|Win32
+		{685A83AE-36BC-4E9D-BDC6-417EBF168463}.Release|x86.Build.0 = Release|Win32
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|ARM64.Build.0 = Debug|ARM64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|x64.ActiveCfg = Debug|x64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|x64.Build.0 = Debug|x64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|x86.ActiveCfg = Debug|Win32
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Debug|x86.Build.0 = Debug|Win32
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|ARM64.ActiveCfg = Release|ARM64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|ARM64.Build.0 = Release|ARM64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x64.ActiveCfg = Release|x64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x64.Build.0 = Release|x64
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x86.ActiveCfg = Release|Win32
+		{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}.Release|x86.Build.0 = Release|Win32
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Debug|ARM64.Build.0 = Debug|ARM64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Debug|x64.ActiveCfg = Debug|x64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Debug|x64.Build.0 = Debug|x64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Debug|x86.ActiveCfg = Debug|Win32
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Debug|x86.Build.0 = Debug|Win32
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Release|ARM64.ActiveCfg = Release|ARM64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Release|ARM64.Build.0 = Release|ARM64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Release|x64.ActiveCfg = Release|x64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Release|x64.Build.0 = Release|x64
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Release|x86.ActiveCfg = Release|Win32
+		{BEDCC600-4541-41F2-AA46-9E058202B6AD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
