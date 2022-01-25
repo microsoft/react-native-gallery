@@ -33,6 +33,7 @@ import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
+// Disabled from #183
 //import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 
 interface IRNGalleryExample {
@@ -85,6 +86,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     icon: '\uE703',
     type: 'Status and Info',
   },
+  // Disabled from #183
   /*{
     key: 'Expander',
     component: ExpanderExamplePage,
