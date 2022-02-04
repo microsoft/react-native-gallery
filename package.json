@@ -10,23 +10,21 @@
     "windows": "react-native run-windows"
   },
   "dependencies": {
-    "@fluentui-react-native/experimental-expander": "^0.2.10",
     "@react-native-community/checkbox": "^0.5.7",
     "@react-native-community/clipboard": "^1.5.1",
-    "@react-native-community/datetimepicker": "^3.3.0",
+    "@react-native-community/datetimepicker": "^4.0.1",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-community/progress-view": "^1.2.4",
     "@react-native-community/slider": "^4.0.0-rc.3",
     "@react-native-picker/picker": "^1.16.1",
-    "@react-navigation/bottom-tabs": "5.10.0",
-    "@react-navigation/drawer": "5.10.0",
-    "@react-navigation/native": "6.0.0",
-    "@react-navigation/native-stack": "^6.2.5",
-    "@react-navigation/stack": "5.10.0",
+    "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/drawer": "^5.9.0",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/stack": "^5.9.0",
     "@terrylinla/react-native-sketch-canvas": "git+https://github.com/creambyemute/react-native-sketch-canvas#1db88fa3cc6e8124b0baab3cb04bce0540900a33",
     "lowlight": "^1.17.0",
     "react": "17.0.2",
-    "react-native": "0.66.0",
+    "react-native": "^0.67.0",
     "react-native-config": "luggit/react-native-config",
     "react-native-device-info": "^7.3.1",
     "react-native-gesture-handler": "JaneaSystems/react-native-gesture-handler#windows",
@@ -34,13 +32,13 @@
     "react-native-print": "0.8.0",
     "react-native-reanimated": "^1.10.0",
     "react-native-safe-area-context": "^3.1.0",
-    "react-native-screens": "3.10.1",
+    "react-native-screens": "^2.9.0",
     "react-native-sensitive-info": "6.0.0-alpha.9",
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
-    "react-native-webview": "^11.6.2",
-    "react-native-windows": "0.66.1",
-    "react-native-xaml": "^0.0.45"
+    "react-native-xaml": "^0.0.45",
+    "react-native-webview": "^11.15.0",
+    "react-native-windows": "0.67.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -55,7 +53,8 @@
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "react-test-renderer": "17.0.2",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "metro-config": "^0.66.2"
   },
   "jest": {
     "preset": "react-native",
