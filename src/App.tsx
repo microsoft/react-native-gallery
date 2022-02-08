@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
   },
   drawer: {
     backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-    height: '100%'
-  }
+    height: '100%',
+  },
 });
 
 // @ts-ignore
@@ -101,6 +101,8 @@ function RenderDrawerItem(props, i: number) {
 
 function RenderDrawer(props) {
   var items = [];
+  // Begin iteration at index 2 because Home and
+  // Settings drawer items have already been manually loaded.
   for (var i = 2; i < RNGalleryList.length; i++) {
     items.push(RenderDrawerItem(props, i));
   }
