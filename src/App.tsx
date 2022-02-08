@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Segoe MDL2 Assets',
     fontSize: 16,
   },
+  drawer: {
+    backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+    height: '100%',
+  },
 });
 
 // @ts-ignore
@@ -58,11 +62,13 @@ function RNGalleryScreenWrapper({navigation}) {
   const Component = RNGalleryList[state.index].component;
   return (
     <View style={styles.container}>
-      <View
+      <TouchableHighlight
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
           width: 48,
-        }}>
+        }}
+        underlayColor={PlatformColor('NavigationViewDefaultPaneBackground')}
+        onPress={() => navigation.openDrawer()}>
         <TouchableHighlight
           style={styles.menu}
           onPress={() => navigation.openDrawer()}
@@ -70,7 +76,7 @@ function RNGalleryScreenWrapper({navigation}) {
           underlayColor="rgba(0, 0, 0, 0.0241);">
           <Text style={styles.icon}>&#xE700;</Text>
         </TouchableHighlight>
-      </View>
+      </TouchableHighlight>
       <View style={styles.navItem}>
         <Component appVersion={appVersion} navigation={navigation} />
       </View>
@@ -95,10 +101,10 @@ function RenderDrawerItem(props, i: number) {
 
 function RenderDrawer(props) {
   var items = [];
-  for (var i = 0; i < RNGalleryList.length; i++) {
-    if (RNGalleryList[i].key !== 'Settings') {
-      items.push(RenderDrawerItem(props, i));
-    }
+  // Begin iteration at index 2 because Home and
+  // Settings drawer items have already been manually loaded.
+  for (var i = 2; i < RNGalleryList.length; i++) {
+    items.push(RenderDrawerItem(props, i));
   }
   return items;
 }
@@ -106,7 +112,7 @@ function RenderDrawer(props) {
 // @ts-ignore
 function CustomDrawerContent(props) {
   return (
-    <View>
+    <View style={styles.drawer}>
       <TouchableHighlight
         style={styles.menu}
         onPress={() => props.navigation.closeDrawer()}
@@ -116,6 +122,18 @@ function CustomDrawerContent(props) {
       </TouchableHighlight>
       <DrawerItem
         label={() => {
+          return <Text>Home</Text>;
+        }}
+        onPress={() => props.navigation.navigate('Home')}
+        icon={() => {
+          return <Text style={styles.icon}>&#xE80F;</Text>;
+        }}
+      />
+      <ScrollView style={{}} {...props}>
+        {RenderDrawer(props)}
+      </ScrollView>
+      <DrawerItem
+        label={() => {
           return <Text>Settings</Text>;
         }}
         onPress={() => props.navigation.navigate('Settings')}
@@ -123,9 +141,6 @@ function CustomDrawerContent(props) {
           return <Text style={styles.icon}>&#xE713;</Text>;
         }}
       />
-      <ScrollView style={{height: '85%'}} {...props}>
-        {RenderDrawer(props)}
-      </ScrollView>
     </View>
   );
 }
