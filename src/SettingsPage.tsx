@@ -67,7 +67,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
     <View style={styles.container}>
       <Text style={styles.title}>Settings</Text>
       <ScrollView style={styles.scrollView}>
-        <SettingContainer heading="Theme Mode">
+        {/*<SettingContainer heading="Theme Mode">
           <Picker
             style={{height: 50, width: 200}}
             onValueChange={PickerValueChanged}
@@ -77,7 +77,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             <Picker.Item label="Dark" value="dark" />
             <Picker.Item label="Use System Setting" value="system" />
           </Picker>
-        </SettingContainer>
+  </SettingContainer>*/}
         <SettingContainer heading="About">
           <Text style={styles.text}>
             Source code:{' '}
