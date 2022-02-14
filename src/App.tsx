@@ -128,6 +128,11 @@ function CustomDrawerContent(props) {
         icon={() => {
           return <Text style={styles.icon}>&#xE80F;</Text>;
         }}
+        style={{
+          borderBottomWidth: 0.5,
+          borderColor: PlatformColor('TextControlForeground'),
+          borderRadius: 0,
+        }}
       />
       <ScrollView style={{}} {...props}>
         {RenderDrawer(props)}
@@ -139,6 +144,11 @@ function CustomDrawerContent(props) {
         onPress={() => props.navigation.navigate('Settings')}
         icon={() => {
           return <Text style={styles.icon}>&#xE713;</Text>;
+        }}
+        style={{
+          borderTopWidth: 0.5,
+          borderColor: PlatformColor('TextControlForeground'),
+          borderRadius: 0,
         }}
       />
     </View>
