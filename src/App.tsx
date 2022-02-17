@@ -54,6 +54,16 @@ const styles = StyleSheet.create({
     backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
     height: '100%',
   },
+  drawerTopDivider: {
+    borderTopWidth: 0.5,
+    borderColor: PlatformColor('TextControlForeground'),
+    borderRadius: 0,
+  },
+  drawerBottomDivider: {
+    borderBottomWidth: 0.5,
+    borderColor: PlatformColor('TextControlForeground'),
+    borderRadius: 0,
+  },
 });
 
 // @ts-ignore
@@ -128,10 +138,9 @@ function CustomDrawerContent(props) {
         icon={() => {
           return <Text style={styles.icon}>&#xE80F;</Text>;
         }}
+        style={styles.drawerBottomDivider}
       />
-      <ScrollView style={{}} {...props}>
-        {RenderDrawer(props)}
-      </ScrollView>
+      <ScrollView {...props}>{RenderDrawer(props)}</ScrollView>
       <DrawerItem
         label={() => {
           return <Text>Settings</Text>;
@@ -140,6 +149,7 @@ function CustomDrawerContent(props) {
         icon={() => {
           return <Text style={styles.icon}>&#xE713;</Text>;
         }}
+        style={styles.drawerTopDivider}
       />
     </View>
   );
