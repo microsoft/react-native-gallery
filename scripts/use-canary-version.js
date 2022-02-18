@@ -60,7 +60,7 @@ function fetchPackageInfo(pkg) {
   const manifest = JSON.parse(data);
 
   const canaryDependencies = {
-    react: peerDependencies['react'],
+    react: peerDependencies.react,
     'react-native': peerDependencies['react-native'],
     'react-native-windows': version,
   };

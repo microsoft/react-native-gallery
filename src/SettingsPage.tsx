@@ -1,8 +1,8 @@
 'use strict';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
-import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
-import {Picker} from '@react-native-picker/picker';
+//import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
+//import {Picker} from '@react-native-picker/picker';
 import {HyperlinkButton} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
 var pkg = require('../package.json');
@@ -55,18 +55,19 @@ const SettingContainer = (props: {
 };
 
 export const SettingsPage: React.FunctionComponent<{}> = (props) => {
-  const theme = React.useContext(RawThemeContext);
-  const setTheme = React.useContext(ThemeSetterContext);
+  //const theme = React.useContext(RawThemeContext);
+  //const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();
   const styles = createStyles(colors);
-  const PickerValueChanged = (value: ThemeMode) => {
+  /*const PickerValueChanged = (value: ThemeMode) => {
     console.log('Setting theme to: ' + value);
     setTheme(value);
-  };
+  };*/
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Settings</Text>
       <ScrollView style={styles.scrollView}>
+        {/* Tracking Issue: #17
         <SettingContainer heading="Theme Mode">
           <Picker
             style={{height: 50, width: 200}}
@@ -77,7 +78,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             <Picker.Item label="Dark" value="dark" />
             <Picker.Item label="Use System Setting" value="system" />
           </Picker>
-        </SettingContainer>
+  </SettingContainer>*/}
         <SettingContainer heading="About">
           <Text style={styles.text}>Source code: </Text>
           <HyperlinkButton
