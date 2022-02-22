@@ -36,9 +36,9 @@
     "react-native-sensitive-info": "6.0.0-alpha.9",
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
-    "react-native-xaml": "^0.0.45",
     "react-native-webview": "^11.15.0",
-    "react-native-windows": "0.67.0"
+    "react-native-windows": "0.67.0",
+    "react-native-xaml": "^0.0.45"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -52,9 +52,10 @@
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
+    "metro-config": "^0.66.2",
+    "react-native-windows-hello": "^1.1.0",
     "react-test-renderer": "17.0.2",
-    "typescript": "^4.0.2",
-    "metro-config": "^0.66.2"
+    "typescript": "^4.0.2"
   },
   "jest": {
     "preset": "react-native",
