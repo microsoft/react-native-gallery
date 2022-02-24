@@ -2,13 +2,14 @@
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import { SignIn, verificationResult, availabilityStatus } from 'react-native-windows-hello';
-import {useTheme} from '@react-navigation/native';
-import { Alert, Button, View } from 'react-native';
+import {
+  SignIn,
+  verificationResult,
+  availabilityStatus,
+} from 'react-native-windows-hello';
+import {Alert, Button, View} from 'react-native';
 
 export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
-  const {colors} = useTheme();
-
   const example1jsx = `SignIn.getDeviceStatus()
   .then(result => {
     if (result === availabilityStatus.Available) {
@@ -59,55 +60,79 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/callstack/react-native-windows-hello#readme',
         },
       ]}>
-      <Example title="Status of biometric device's availability." code={example1jsx}>
+      <Example
+        title="Status of biometric device's availability."
+        code={example1jsx}>
         <View>
-          <Button title='Check for biometric device!' onPress={() => {
-            SignIn.getDeviceStatus()
-              .then(result => {
-                if (result === availabilityStatus.Available) {
-                  Alert.alert("Biometric device available!", result.message);
-                } else {
-                  Alert.alert(`Biometric device status: ${result.value}`, result.message);
-                }
-              })
-              .catch(error => {
-                Alert.alert(error.message);
-              });
-          }}/>
+          <Button
+            title="Check for biometric device!"
+            onPress={() => {
+              SignIn.getDeviceStatus()
+                .then((result) => {
+                  if (result === availabilityStatus.Available) {
+                    Alert.alert('Biometric device available!', result.message);
+                  } else {
+                    Alert.alert(
+                      `Biometric device status: ${result.value}`,
+                      result.message,
+                    );
+                  }
+                })
+                .catch((error) => {
+                  Alert.alert(error.message);
+                });
+            }}
+          />
         </View>
       </Example>
       <Example title="Biometric scan with default message" code={example2jsx}>
         <View>
-        <Button title='Request user verification' onPress={() => {
-          SignIn.requestConsentVerification()
-            .then(result => {
-              if (result === verificationResult.Verified) {
-                Alert.alert("User verified SUCCESSFULLY!", result.message);
-              } else {
-                Alert.alert(`User verification failed: ${result.value}`, result.message);
-              }
-            })
-            .catch(error => {
-              Alert.alert(error);
-            });
-          }}/>
+          <Button
+            title="Request user verification"
+            onPress={() => {
+              SignIn.requestConsentVerification()
+                .then((result) => {
+                  if (result === verificationResult.Verified) {
+                    Alert.alert('User verified SUCCESSFULLY!', result.message);
+                  } else {
+                    Alert.alert(
+                      `User verification failed: ${result.value}`,
+                      result.message,
+                    );
+                  }
+                })
+                .catch((error) => {
+                  Alert.alert(error);
+                });
+            }}
+          />
         </View>
       </Example>
-      <Example title='Biometric scan with customized message: "Custom message displayed in verification prompt."' code={example3jsx}>
+      <Example
+        title='Biometric scan with customized message: "Custom message displayed in verification prompt."'
+        code={example3jsx}>
         <View>
-        <Button title='Request user verification' onPress={() => {
-          SignIn.requestConsentVerification("Custom message displayed in verification prompt.")
-            .then(result => {
-              if (result === verificationResult.Verified) {
-                Alert.alert("User verified SUCCESSFULLY!", result.message);
-              } else {
-                Alert.alert(`User verification failed: ${result.value}`, result.message);
-              }
-            })
-            .catch(error => {
-              Alert.alert(error);
-            });
-          }}/>
+          <Button
+            title="Request user verification"
+            onPress={() => {
+              SignIn.requestConsentVerification(
+                'Custom message displayed in verification prompt.',
+              )
+                .then((result) => {
+                  if (result === verificationResult.Verified) {
+                    Alert.alert('User verified SUCCESSFULLY!', result.message);
+                  } else {
+                    Alert.alert(
+                      `User verification failed: ${result.value}`,
+                      result.message,
+                    );
+                  }
+                })
+                .catch((error) => {
+                  Alert.alert(error);
+                });
+            }}
+          />
         </View>
       </Example>
     </Page>

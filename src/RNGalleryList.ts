@@ -33,7 +33,7 @@ import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
-import { WindowsHelloExamplePage } from './examples/WindowsHelloExamplePage';
+import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 // Disabled from #183
 //import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 
