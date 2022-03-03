@@ -5888,6 +5888,11 @@ react-native-webview@^11.15.0:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
 
+react-native-windows-hello@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-windows-hello/-/react-native-windows-hello-1.1.0.tgz#91e7a8c7ca07554b380e887549df2e828b73eae8"
+  integrity sha512-XPPYLEPG3ffwida934ZHvGwqOE3AhshbvMPxl2/GKXS6QyX4XvcTMM4uVAFU6LyT2W7h2aVBkSqaxjFVBOACww==
+
 react-native-windows@0.67.0:
   version "0.67.0"
   resolved "https://registry.yarnpkg.com/react-native-windows/-/react-native-windows-0.67.0.tgz#d678c4260a99313862b4bdf189183b9b811b346e"

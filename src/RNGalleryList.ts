@@ -33,6 +33,7 @@ import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
 //import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
+import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 // Disabled from #183
 //import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 
@@ -234,6 +235,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: WebViewExamplePage,
     icon: '\uE774',
     type: 'Media',
+  },
+  {
+    key: 'WindowsHello',
+    component: WindowsHelloExamplePage,
+    icon: '\uE890',
+    type: 'Status and Info',
   },
   {
     key: 'Xaml',
