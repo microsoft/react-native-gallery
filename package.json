@@ -16,7 +16,7 @@
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-community/progress-view": "^1.2.4",
     "@react-native-community/slider": "^4.0.0-rc.3",
-    "@react-native-picker/picker": "^1.16.1",
+    "@react-native-picker/picker": "^2.2.1",
     "@react-navigation/bottom-tabs": "^5.8.0",
     "@react-navigation/drawer": "^5.9.0",
     "@react-navigation/native": "^5.7.3",
@@ -53,6 +53,7 @@
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-config": "^0.67.0",
+    "react-native-windows-hello": "^1.1.0",
     "react-test-renderer": "17.0.2",
     "typescript": "^4.0.2"
   },

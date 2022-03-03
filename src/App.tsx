@@ -49,10 +49,24 @@ const styles = StyleSheet.create({
   icon: {
     fontFamily: 'Segoe MDL2 Assets',
     fontSize: 16,
+    color: PlatformColor('TextControlForeground'),
   },
   drawer: {
     backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
     height: '100%',
+  },
+  drawerText: {
+    color: PlatformColor('TextControlForeground'),
+  },
+  drawerTopDivider: {
+    borderTopWidth: 0.5,
+    borderColor: PlatformColor('TextControlForeground'),
+    borderRadius: 0,
+  },
+  drawerBottomDivider: {
+    borderBottomWidth: 0.5,
+    borderColor: PlatformColor('TextControlForeground'),
+    borderRadius: 0,
   },
 });
 
@@ -89,7 +103,7 @@ function RenderDrawerItem(props, i: number) {
     <DrawerItem
       key={RNGalleryList[i].key}
       label={() => {
-        return <Text>{RNGalleryList[i].key}</Text>;
+        return <Text style={styles.drawerText}>{RNGalleryList[i].key}</Text>;
       }}
       onPress={() => props.navigation.navigate(RNGalleryList[i].key)}
       icon={() => {
@@ -122,24 +136,24 @@ function CustomDrawerContent(props) {
       </TouchableHighlight>
       <DrawerItem
         label={() => {
-          return <Text>Home</Text>;
+          return <Text style={styles.drawerText}>Home</Text>;
         }}
         onPress={() => props.navigation.navigate('Home')}
         icon={() => {
           return <Text style={styles.icon}>&#xE80F;</Text>;
         }}
+        style={styles.drawerBottomDivider}
       />
-      <ScrollView style={{}} {...props}>
-        {RenderDrawer(props)}
-      </ScrollView>
+      <ScrollView {...props}>{RenderDrawer(props)}</ScrollView>
       <DrawerItem
         label={() => {
-          return <Text>Settings</Text>;
+          return <Text style={styles.drawerText}>Settings</Text>;
         }}
         onPress={() => props.navigation.navigate('Settings')}
         icon={() => {
           return <Text style={styles.icon}>&#xE713;</Text>;
         }}
+        style={styles.drawerTopDivider}
       />
     </View>
   );
