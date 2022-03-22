@@ -35,7 +35,7 @@ import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 // Disabled from #183
-//import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
+import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -88,12 +88,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'Status and Info',
   },
   // Disabled from #183
-  /*{
+  {
     key: 'Expander',
     component: ExpanderExamplePage,
     icon: '\uE8C4',
     type: 'Layout',
-  },*/
+  },
   {
     key: 'FlatList ',
     component: FlatListExamplePage,
