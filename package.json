@@ -10,6 +10,7 @@
     "windows": "react-native run-windows"
   },
   "dependencies": {
+    "@fluentui-react-native/experimental-expander": "^0.3.18",
     "@react-native-community/checkbox": "^0.5.7",
     "@react-native-community/clipboard": "^1.5.1",
     "@react-native-community/datetimepicker": "^4.0.1",
