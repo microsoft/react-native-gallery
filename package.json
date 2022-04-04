@@ -10,6 +10,7 @@
     "windows": "react-native run-windows"
   },
   "dependencies": {
+    "@fluentui-react-native/experimental-expander": "^0.3.18",
     "@react-native-community/checkbox": "^0.5.7",
     "@react-native-community/clipboard": "^1.5.1",
     "@react-native-community/datetimepicker": "^4.0.1",
@@ -24,7 +25,7 @@
     "@terrylinla/react-native-sketch-canvas": "git+https://github.com/creambyemute/react-native-sketch-canvas#1db88fa3cc6e8124b0baab3cb04bce0540900a33",
     "lowlight": "^1.17.0",
     "react": "17.0.2",
-    "react-native": "0.68.0-rc.1",
+    "react-native": "^0.68.0",
     "react-native-config": "luggit/react-native-config",
     "react-native-device-info": "^7.3.1",
     "react-native-gesture-handler": "JaneaSystems/react-native-gesture-handler#windows",
@@ -37,7 +38,7 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.15.0",
-    "react-native-windows": "0.68.0-preview.4",
+    "react-native-windows": "0.68.0",
     "react-native-xaml": "^0.0.45"
   },
   "devDependencies": {
