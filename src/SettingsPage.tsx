@@ -89,7 +89,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
           </Text>
-          <Text style={styles.text}>Version: 1.0.10.0</Text>
+          <Text style={styles.text}>Version: {props.appVersion}</Text>
           <Text style={styles.text}>
             React Native Windows Version:{' '}
             {pkg.dependencies['react-native-windows']}
