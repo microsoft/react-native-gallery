@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+param([string]$testVersion='') 
 // @ts-check
 
 /**
@@ -48,10 +49,10 @@ function fetchPackageInfo(pkg) {
  * consume it.
  */
 (async () => {
-  const canaryVersion = 'react-native-windows@canary';
-  const {version, peerDependencies} = await fetchPackageInfo(canaryVersion);
+  //const canaryVersion = 'react-native-windows@canary';
+  const {version, peerDependencies} = await fetchPackageInfo(testVersion);
   if (!version || !peerDependencies) {
-    throw new Error(`Failed to fetch info about ${canaryVersion}`);
+    throw new Error(`Failed to fetch info about ${testVersion}`);
   }
 
   const fs = require('fs/promises');
