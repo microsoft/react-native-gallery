@@ -8,11 +8,20 @@ schedules:
 
 strategy:
   matrix:
-    canary:
-      BUILD_CANARY: true
+    latest:
+      VERSION: 'react-native-windows@latest'
+      UPGRADE: true
+      PUBLISH_APP: false
+    preview:
+      VERSION: 'react-native-windows@preview'
+      UPGRADE: true
+      PUBLISH_APP: false
+    preview:
+      VERSION: 'react-native-windows@canary'
+      UPGRADE: true
       PUBLISH_APP: false
     publish:
-      BUILD_CANARY: false
+      UPGRADE: false
       PUBLISH_APP: true
 
 variables:
@@ -37,9 +46,9 @@ steps:
 
   - task: CmdLine@2
     displayName: Use react-native-windows@canary
-    condition: eq(variables['BUILD_CANARY'], 'true')
+    condition: eq(variables['UPGRADE'], 'true')
     inputs:
-      script: node scripts/use-canary-version.js
+      script: node scripts/use-canary-version.js -testVersion {{ variables['VERSION'] }}
 
   - task: CmdLine@2
     displayName: Installing Yarn
