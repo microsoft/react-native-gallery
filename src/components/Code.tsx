@@ -51,7 +51,7 @@ const darkStyles = StyleSheet.create({
     fontStyle: 'italic',
   },
   'hljs-keyword': {
-    color: darkColors.keyword,
+    color: darkColors.text,
   },
   'hljs-selector-tag': {
     color: darkColors.keyword,
@@ -101,7 +101,7 @@ const darkStyles = StyleSheet.create({
   'hljs-function': {}, // Apply to whole function
   'hljs-params': {}, // Apply to the parameters of a function
   'hljs-built_in': {
-    color: darkColors.types,
+    color: darkColors.text,
   },
   'hljs-class': {},
   'hljs-title': {
@@ -132,7 +132,7 @@ const lightStyles = StyleSheet.create({
     fontStyle: 'italic',
   },
   'hljs-keyword': {
-    color: lightColors.keyword,
+    color: lightColors.text,
   },
   'hljs-selector-tag': {
     color: lightColors.keyword,
@@ -182,7 +182,7 @@ const lightStyles = StyleSheet.create({
   'hljs-function': {}, // Apply to whole function
   'hljs-params': {}, // Apply to the parameters of a function
   'hljs-built_in': {
-    color: lightColors.types,
+    color: lightColors.text,
   },
   'hljs-class': {},
   'hljs-title': {
