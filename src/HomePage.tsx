@@ -68,6 +68,7 @@ const HomeComponentTile = (props: {index: number; navigation}) => {
   const styles = createStyles(colors);
   return (
     <Pressable
+      accessibilityRole="button"
       style={({pressed}) => [
         {
           backgroundColor: colors.background,
