@@ -6,6 +6,7 @@ import {
   Text,
   useColorScheme,
   ScrollView,
+  Touchable,
 } from 'react-native';
 import {
   NavigationContainer,
@@ -77,6 +78,8 @@ function RNGalleryScreenWrapper({navigation}) {
   return (
     <View style={styles.container}>
       <TouchableHighlight
+        accessibilityRole="button"
+        accessibilityLabel="Navigation bar expand,collapse"
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
           width: 48,
@@ -84,6 +87,8 @@ function RNGalleryScreenWrapper({navigation}) {
         underlayColor={PlatformColor('NavigationViewDefaultPaneBackground')}
         onPress={() => navigation.openDrawer()}>
         <TouchableHighlight
+          accessibilityRole="button"
+          accessibilityLabel="Navigation bar expand,collapse"
           style={styles.menu}
           onPress={() => navigation.openDrawer()}
           activeOpacity={0.5783}
@@ -128,6 +133,8 @@ function CustomDrawerContent(props) {
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
+        accessibilityRole="button"
+        accessibilityLabel="Navigation bar expand,collapse"
         style={styles.menu}
         onPress={() => props.navigation.closeDrawer()}
         activeOpacity={0.5783}
