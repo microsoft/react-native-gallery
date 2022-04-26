@@ -69,6 +69,7 @@ const HomeComponentTile = (props: {index: number; navigation}) => {
   return (
     <Pressable
       accessibilityRole="button"
+      accessibilityLabel={RNGalleryList[props.index].key}
       style={({pressed}) => [
         {
           backgroundColor: colors.background,
