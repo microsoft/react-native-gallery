@@ -1,6 +1,6 @@
 'use strict';
 import {View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '@react-navigation/native';
@@ -122,6 +122,19 @@ style={{
   backgroundColor: colors.border,
 }}
 />`;
+
+const example9jsx = `const [onHover, setOnHover] = useState(false);
+<View
+onMouseEnter={() => setOnHover(true)}
+onMouseLeave={() => setOnHover(false)}
+style={{
+   height: 50,
+   width: 100,
+   backgroundColor: onHover? colors.notification: colors.primary,
+}}
+/>`;
+
+  const [onHover, setOnHover] = useState(false);
 
   return (
     <Page
@@ -289,6 +302,17 @@ style={{
             borderColor: colors.text,
             borderWidth: 5,
             backgroundColor: colors.border,
+          }}
+        />
+      </Example>
+      <Example title="A View with onMouseEnter/onMouseLeave." code={example9jsx}>
+        <View
+          onMouseEnter={() => setOnHover(true)}
+          onMouseLeave={() => setOnHover(false)}
+          style={{
+            height: 50,
+            width: 100,
+            backgroundColor: onHover? colors.notification: colors.primary,
           }}
         />
       </Example>
