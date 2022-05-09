@@ -123,7 +123,7 @@ style={{
 }}
 />`;
 
-const example9jsx = `const [onHover, setOnHover] = useState(false);
+  const example9jsx = `const [onHover, setOnHover] = useState(false);
 <View
 onMouseEnter={() => setOnHover(true)}
 onMouseLeave={() => setOnHover(false)}
@@ -305,14 +305,16 @@ style={{
           }}
         />
       </Example>
-      <Example title="A View with onMouseEnter/onMouseLeave." code={example9jsx}>
+      <Example
+        title="A View with onMouseEnter/onMouseLeave."
+        code={example9jsx}>
         <View
           onMouseEnter={() => setOnHover(true)}
           onMouseLeave={() => setOnHover(false)}
           style={{
             height: 50,
             width: 100,
-            backgroundColor: onHover? colors.notification: colors.primary,
+            backgroundColor: onHover ? colors.notification : colors.primary,
           }}
         />
       </Example>
