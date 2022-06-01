@@ -93,6 +93,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
           }}
           onChangeText={onChangeText1}
           value={text1}
+          placeholder="A simple TextInput..."
         />
       </Example>
       <Example
@@ -127,6 +128,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
           focusable={false}
           onChangeText={onChangeText3}
           value={text3}
+          placeholder="A colored TextInput with bolded and italicized text..."
         />
       </Example>
       <Example
