@@ -90,9 +90,11 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Pressable component." code={example1jsx}>
         <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={'example pressable'}
-        accessibilityHint={'click me to change text from Pressed to Press Me'}>
+          accessibilityRole="button"
+          accessibilityLabel={'example pressable'}
+          accessibilityHint={
+            'click me to change text from Pressed to Press Me'
+          }>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
               {pressed ? 'Pressed!' : 'Press Me'}
@@ -158,7 +160,9 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={'example pressable with event feedback'}
-          accessibilityHint={'click me to see the diffrent events (press, pressIn, pressOut, longPress)'}
+          accessibilityHint={
+            'click me to see the diffrent events (press, pressIn, pressOut, longPress)'
+          }
           style={{
             width: 200,
             height: 50,

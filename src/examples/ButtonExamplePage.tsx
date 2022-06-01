@@ -39,32 +39,36 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple Button." code={example1jsx}>
-        <Button 
+        <Button
           title="Button"
           accessibilityLabel={'example simple button'}
-          onPress={() => {}} />
+          onPress={() => {}}
+        />
       </Example>
       <Example title="A colored Button." code={example2jsx}>
         <Button
-        title="Button" 
-        color={colors.primary} 
-        accessibilityLabel={'example colored button'}
-        onPress={() => {}} />
+          title="Button"
+          color={colors.primary}
+          accessibilityLabel={'example colored button'}
+          onPress={() => {}}
+        />
       </Example>
       <Example title="A disabled Button." code={example3jsx}>
-        <Button title="Button"
-        accessibilityLabel={'example disabled button'}
-        disabled={true}
-        onPress={() => {}} />
+        <Button
+          title="Button"
+          accessibilityLabel={'example disabled button'}
+          disabled={true}
+          onPress={() => {}}
+        />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
         <Button
-        accessibilityLabel={'example button counter'}
-        accessibilityHint={'click me to increase the example counter'}
-        title={String(title)}
-        onPress={() => {
-          setTitle(title + 1);
-        }}
+          accessibilityLabel={'example button counter'}
+          accessibilityHint={'click me to increase the example counter'}
+          title={String(title)}
+          onPress={() => {
+            setTitle(title + 1);
+          }}
         />
       </Example>
     </Page>
