@@ -11,6 +11,13 @@ export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
   }}
   style={{height: 500}} />`;
 
+  const example2jsx = `<WebView
+  source={{
+    uri: 'https://github.com/microsoft/react-native-gallery',
+  }}
+  style={{height: 500}}
+  useWebView2 />`;
+
   return (
     <Page
       title="WebView"
@@ -34,6 +41,15 @@ export const WebViewExamplePage: React.FunctionComponent<{}> = () => {
             uri: 'https://github.com/microsoft/react-native-gallery',
           }}
           style={{height: 500}}
+        />
+      </Example>
+      <Example title="A Simple WebView2." code={example2jsx}>
+        <WebView
+          source={{
+            uri: 'https://github.com/microsoft/react-native-gallery',
+          }}
+          style={{height: 500}}
+          useWebView2
         />
       </Example>
     </Page>

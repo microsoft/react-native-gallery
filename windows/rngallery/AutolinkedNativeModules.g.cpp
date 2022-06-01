@@ -6,11 +6,11 @@
 // Includes from @fluentui-react-native/experimental-expander
 #include <winrt/ReactNativeExpander.h>
 
+// Includes from @react-native-clipboard/clipboard
+#include <winrt/NativeClipboard.h>
+
 // Includes from @react-native-community/checkbox
 #include <winrt/CheckboxWindows.h>
-
-// Includes from @react-native-community/clipboard
-#include <winrt/NativeClipboard.h>
 
 // Includes from @react-native-community/datetimepicker
 #include <winrt/DateTimePicker.h>
@@ -67,10 +67,10 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
 { 
     // IReactPackageProviders from @fluentui-react-native/experimental-expander
     packageProviders.Append(winrt::ReactNativeExpander::ReactPackageProvider());
+    // IReactPackageProviders from @react-native-clipboard/clipboard
+    packageProviders.Append(winrt::NativeClipboard::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/checkbox
     packageProviders.Append(winrt::CheckboxWindows::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/clipboard
-    packageProviders.Append(winrt::NativeClipboard::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/datetimepicker
     packageProviders.Append(winrt::DateTimePicker::ReactPackageProvider());
     // IReactPackageProviders from @react-native-community/progress-view
