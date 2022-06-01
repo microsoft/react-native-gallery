@@ -58,14 +58,23 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple Switch." code={example1jsx}>
-        <Switch accessibilityLabel='simple switch example' value={switch1} onValueChange={onSwitchChange1} />
+        <Switch
+          accessibilityLabel="simple switch example"
+          value={switch1}
+          onValueChange={onSwitchChange1}
+        />
       </Example>
       <Example title="A disabled Switch." code={example2jsx}>
-        <Switch accessibilityLabel='disabled switch example' value={switch2} onValueChange={onSwitchChange2} disabled />
+        <Switch
+          accessibilityLabel="disabled switch example"
+          value={switch2}
+          onValueChange={onSwitchChange2}
+          disabled
+        />
       </Example>
       <Example title="A colorful Switch." code={example3jsx}>
         <Switch
-          accessibilityLabel='colorful switch example'
+          accessibilityLabel="colorful switch example"
           value={switch3}
           onValueChange={onSwitchChange3}
           thumbColor="#FFFFFF"
