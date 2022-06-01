@@ -6,7 +6,6 @@ import {
   Text,
   useColorScheme,
   ScrollView,
-  Touchable,
 } from 'react-native';
 import {
   NavigationContainer,
