@@ -125,7 +125,6 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
             fontWeight: '700',
             color: colors.card,
           }}
-          focusable={false}
           onChangeText={onChangeText3}
           value={text3}
           placeholder="A colored TextInput with bolded and italicized text..."
