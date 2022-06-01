@@ -143,6 +143,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Popup." code={example1jsx}>
         <TouchableHighlight
+          accessibilityRole="button"
+          accessibilityLabel={'example simple popup'}
+          accessibilityHint={'click me to open the popup'}
           style={{
             height: 40,
             width: 150,
@@ -170,6 +173,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
+              accessibilityLabel={'example simple popup'}
+              accessibilityHint={'click me to close the popup'}
               style={{
                 height: 40,
                 width: 150,
@@ -192,6 +198,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
         title="A Popup that is dismissed when user clicks away."
         code={example2jsx}>
         <TouchableHighlight
+          accessibilityRole="button"
+          accessibilityLabel={'example popup that is dismissed when user clicks away'}
+          accessibilityHint={'click me to open the popup'}
           style={{
             height: 40,
             width: 150,
@@ -244,6 +253,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A Popup with offset position." code={example3jsx}>
         <TouchableHighlight
+          accessibilityRole="button"
+          accessibilityLabel={'example popup with offset position'}
+          accessibilityHint={'click me to open the popup'}
           style={{
             height: 40,
             width: 150,
@@ -299,6 +311,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
         title="A Popup with the button as its target."
         code={example4jsx}>
         <TouchableHighlight
+          accessibilityRole="button"
+          accessibilityLabel={'example popup with a touchablehighlight as target'}
+          accessibilityHint={'click me to open the popup'}
           style={{
             height: 40,
             width: 150,
@@ -332,6 +347,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
+              accessibilityLabel={'example popup with touchablehighlight as target'}
+              accessibilityHint={'click me to close the popup'}
               style={{
                 height: 40,
                 width: 150,
