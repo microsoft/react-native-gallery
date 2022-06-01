@@ -79,7 +79,7 @@ function RNGalleryScreenWrapper({navigation}) {
     <View style={styles.container}>
       <TouchableHighlight
         accessibilityRole="button"
-        accessibilityLabel="Navigation bar expand,collapse"
+        accessibilityLabel="Navigation bar expand, collapse"
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
           width: 48,
