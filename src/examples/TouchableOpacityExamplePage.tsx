@@ -112,6 +112,8 @@ onPress={() => {}}>
       ]}>
       <Example title="A simple TouchableOpacity." code={example1jsx}>
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel={"simple example touchableOpacity"}
           style={{
             height: 40,
             width: 150,
@@ -127,6 +129,8 @@ onPress={() => {}}>
       </Example>
       <Example title="A colored TouchableOpacity." code={example2jsx}>
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel={"colored example TouchableOpacity"}
           style={{
             height: 40,
             width: 150,
@@ -142,6 +146,8 @@ onPress={() => {}}>
       </Example>
       <Example title="A disabled TouchableOpacity." code={example3jsx}>
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel={"disabled example TouchableOpacity"}
           style={{
             height: 40,
             width: 150,
@@ -158,6 +164,9 @@ onPress={() => {}}>
       </Example>
       <Example title="A TouchableOpacity counter." code={example4jsx}>
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel={"example TouchableOpacity counter"}
+          accessibilityHint={'click me to increase the example counter'}
           style={{
             height: 40,
             width: 150,
@@ -177,6 +186,8 @@ onPress={() => {}}>
         title="A TouchableOpacity responsive to focus."
         code={example5jsx}>
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel={"example TouchableOpacity responsive to focus"}
           style={{
             height: 40,
             width: 250,
