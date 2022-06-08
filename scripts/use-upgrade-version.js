@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-param([string]$testVersion='') 
 // @ts-check
 
 /**
@@ -48,11 +47,11 @@ function fetchPackageInfo(pkg) {
  * Fetches the latest react-native-windows@canary and modifies `package.json` to
  * consume it.
  */
-(async () => {
+(async (upgradeVersion) => {
   //const canaryVersion = 'react-native-windows@canary';
-  const {version, peerDependencies} = await fetchPackageInfo(testVersion);
+  const {version, peerDependencies} = await fetchPackageInfo(upgradeVersion);
   if (!version || !peerDependencies) {
-    throw new Error(`Failed to fetch info about ${testVersion}`);
+    throw new Error(`Failed to fetch info about ${upgradeVersion}`);
   }
 
   const fs = require('fs/promises');
@@ -60,7 +59,7 @@ function fetchPackageInfo(pkg) {
   const data = await fs.readFile('package.json', {encoding: 'utf-8'});
   const manifest = JSON.parse(data);
 
-  const canaryDependencies = {
+  const newDependencies = {
     react: peerDependencies.react,
     'react-native': peerDependencies['react-native'],
     'react-native-windows': version,
@@ -68,10 +67,10 @@ function fetchPackageInfo(pkg) {
 
   manifest.dependencies = {
     ...manifest.dependencies,
-    ...canaryDependencies,
+    ...newDependencies,
   };
 
   fs.writeFile('package.json', JSON.stringify(manifest, undefined, 2) + '\n');
 
-  console.log(canaryDependencies);
-})();
+  console.log(newDependencies);
+})(process.argv[3]);
