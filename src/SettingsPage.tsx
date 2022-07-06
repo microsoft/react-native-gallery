@@ -3,7 +3,12 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 //import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
 //import {Picker} from '@react-native-picker/picker';
-import {HyperlinkButton} from 'react-native-xaml';
+import {
+  HyperlinkButton,
+  Run,
+  TextBlock,
+  TextDecorations,
+} from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
 var pkg = require('../package.json');
 const createStyles = (colors: any) =>
@@ -81,10 +86,11 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
   </SettingContainer>*/}
         <SettingContainer heading="About">
           <Text style={styles.text}>Source code: </Text>
-          <HyperlinkButton
-            content={{string: 'React Native Gallery'}}
-            navigateUri="https://github.com/microsoft/react-native-gallery"
-          />
+          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="React Native Gallery" />
+            </TextBlock>
+          </HyperlinkButton>
           <Text style={styles.text}>
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
@@ -100,36 +106,42 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             If you have found a bug within the React Native Gallery app, please
             file an issue on GitHub:
           </Text>
-          <HyperlinkButton
-            content={{string: 'New React Native Gallery Bug Report'}}
-            navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
-          />
+          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery/issues/new">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="New React Native Gallery Bug Report" />
+            </TextBlock>
+          </HyperlinkButton>
+
           <Text style={styles.text}>
             If you would like a new sample, request it on Github:
           </Text>
-          <HyperlinkButton
-            content={{string: 'New Sample Request'}}
-            navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
-          />
+          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery/issues/new">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="New Sample Request" />
+            </TextBlock>
+          </HyperlinkButton>
           <Text style={styles.text}>
             If you have found a bug in your React Native Windows app (not in the
             React Native Gallery) and need help, file an issue on the React
             Native Windows GitHub:
           </Text>
-          <HyperlinkButton
-            content={{string: 'New React Native Windows Bug Report'}}
-            navigateUri="https://github.com/microsoft/react-native-windows/issues/new?assignees=&labels=bug&template=bug-report.md&title=Describe+the+problem"
-          />
+          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-windows/issues/new?assignees=&labels=bug&template=bug-report.md&title=Describe+the+problem">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="New React Native Windows Bug Report" />
+            </TextBlock>
+          </HyperlinkButton>
         </SettingContainer>
         <SettingContainer heading="Dependencies and References">
-          <HyperlinkButton
-            content={{string: 'React Native for Windows and MacOS Website'}}
-            navigateUri="https://microsoft.github.io/react-native-windows/"
-          />
-          <HyperlinkButton
-            content={{string: 'React Native Windows GitHub'}}
-            navigateUri="https://github.com/microsoft/react-native-windows"
-          />
+          <HyperlinkButton navigateUri="https://microsoft.github.io/react-native-windows/">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="React Native for Windows and MacOS Website" />
+            </TextBlock>
+          </HyperlinkButton>
+          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-windows">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="React Native Windows GitHub" />
+            </TextBlock>
+          </HyperlinkButton>
         </SettingContainer>
         <SettingContainer heading="Disclaimer">
           <Text style={styles.text}>
@@ -139,14 +151,16 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             PARTICULAR PURPOSE.{'\n\n'}Copyright (c) Microsoft Corporation. All
             rights reserved.
           </Text>
-          <HyperlinkButton
-            content={{string: 'Microsoft Services Agreement'}}
-            navigateUri="https://www.microsoft.com/en-us/servicesagreement/default.aspx"
-          />
-          <HyperlinkButton
-            content={{string: 'Microsoft Privacy Statement'}}
-            navigateUri="https://privacy.microsoft.com/en-us/privacystatement"
-          />
+          <HyperlinkButton navigateUri="https://www.microsoft.com/en-us/servicesagreement/default.aspx">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="Microsoft Services Agreement" />
+            </TextBlock>
+          </HyperlinkButton>
+          <HyperlinkButton navigateUri="https://privacy.microsoft.com/en-us/privacystatement">
+            <TextBlock textDecorations={TextDecorations.Underline}>
+              <Run text="Microsoft Privacy Statement" />
+            </TextBlock>
+          </HyperlinkButton>
         </SettingContainer>
       </ScrollView>
     </View>
