@@ -11,7 +11,11 @@ import {
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
-import {createDrawerNavigator, DrawerItem, getIsDrawerOpenFromState} from '@react-navigation/drawer';
+import {
+  createDrawerNavigator,
+  DrawerItem,
+  getIsDrawerOpenFromState,
+} from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
@@ -81,7 +85,7 @@ function RNGalleryScreenWrapper({navigation}) {
       <TouchableHighlight
         accessibilityRole="button"
         accessibilityLabel="Navigation bar"
-        accessibilityState={{expanded: isDrawerOpen }}
+        accessibilityState={{expanded: isDrawerOpen}}
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
           width: 48,
@@ -91,7 +95,7 @@ function RNGalleryScreenWrapper({navigation}) {
         <TouchableHighlight
           accessibilityRole="button"
           accessibilityLabel="Navigation bar hambuger icon"
-          accessibilityState={{expanded: isDrawerOpen }}
+          accessibilityState={{expanded: isDrawerOpen}}
           style={styles.menu}
           onPress={() => navigation.openDrawer()}
           activeOpacity={0.5783}
@@ -133,7 +137,6 @@ function RenderDrawer(props) {
 
 // @ts-ignore
 function CustomDrawerContent(props) {
-
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
