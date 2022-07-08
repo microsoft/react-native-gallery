@@ -88,12 +88,10 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
     setPerms(results);
   };
 
-  const renderListItems = (data:  Array<[Permission, PermissionStatus]>) => {
-    var listItems: JSX.Element[] = [];
+  const renderListItems = (data) => {
+    var listItems = [];
     data.forEach((item) => {
-      listItems.push(
-        <ListItem item={item} focusable={true}></ListItem>
-      )
+      listItems.push(<ListItem item={item} focusable={true} />);
     });
     return listItems;
   };
@@ -114,10 +112,14 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
           <Button onPress={() => {}} color="#737373" title="Granted" />
         ) : (
           <Button
-          onPress={async () => {
-            const result = await request(perm);
-            setStatus(result);
-          }}
+            onPress={async () => {
+              try {
+                const result = await request(perm);
+                setStatus(result);
+              } catch (err) {
+                console.log(err);
+              }
+            }}
             color={colors.primary}
             title="Request"
             disabled={status === 'unavailable' || status === 'blocked'}
@@ -127,10 +129,12 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
         <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>
           {perm}
         </Text>
-        <View accessibilityLabel={getResultString(status)} focusable={true}>
-        <Text accessibilityLabel={getResultString(status)} style={{paddingLeft: 10, color: colors.text}}>
-          {getResultString(status)}
-        </Text>
+        <View focusable={getResultString(status) ? true : false}>
+          <Text
+            accessibilityLabel={getResultString(status)}
+            style={{paddingLeft: 10, color: colors.text}}>
+            {getResultString(status)}
+          </Text>
         </View>
       </View>
     );
@@ -163,7 +167,6 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
           </Text>
         </View>
         {renderListItems(entries)}
-
       </Example>
     </Page>
   );
