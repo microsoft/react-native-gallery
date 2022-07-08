@@ -121,6 +121,7 @@ function RenderDrawerItem(props, i: number) {
       icon={() => {
         return <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>;
       }}
+      accessibilityLabel={RNGalleryList[i].key}
     />
   );
 }
@@ -141,7 +142,7 @@ function CustomDrawerContent(props) {
     <View style={styles.drawer}>
       <TouchableHighlight
         accessibilityRole="button"
-        accessibilityLabel="Navigation bar"
+        accessibilityLabel="Navigation bar expanded"
         style={styles.menu}
         onPress={() => props.navigation.closeDrawer()}
         activeOpacity={0.5783}
@@ -157,6 +158,7 @@ function CustomDrawerContent(props) {
           return <Text style={styles.icon}>&#xE80F;</Text>;
         }}
         style={styles.drawerBottomDivider}
+        accessibilityLabel={'home'}
       />
       <ScrollView {...props}>{RenderDrawer(props)}</ScrollView>
       <DrawerItem
@@ -168,6 +170,7 @@ function CustomDrawerContent(props) {
           return <Text style={styles.icon}>&#xE713;</Text>;
         }}
         style={styles.drawerTopDivider}
+        accessibilityLabel={'settings'}
       />
     </View>
   );

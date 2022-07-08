@@ -1,5 +1,5 @@
 'use strict';
-import {Button, FlatList, Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -88,26 +88,22 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
     setPerms(results);
   };
 
-  const requestPermission = (perm: Permission) => {
-    (async () => {
-      try {
-        const result = await request(perm);
-        const newPerms = new Map(perms);
-        newPerms.set(perm, result);
-        setPerms(newPerms);
-      } catch (err) {
-        console.log(err);
-      }
-    })();
+  const renderListItems = (data:  Array<[Permission, PermissionStatus]>) => {
+    var listItems: JSX.Element[] = [];
+    data.forEach((item) => {
+      listItems.push(
+        <ListItem item={item} focusable={true}></ListItem>
+      )
+    });
+    return listItems;
   };
 
-  const getListItem = (item /*: [Permission, PermissionStatus]*/) => {
-    const perm = item[0];
-    const status = item[1];
+  const ListItem = (props: {item}) => {
+    const perm = props.item[0];
+    const [status, setStatus] = useState(props.item[1]);
 
     return (
       <View
-        key={status}
         style={{
           flex: 1,
           flexDirection: 'row',
@@ -118,18 +114,24 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
           <Button onPress={() => {}} color="#737373" title="Granted" />
         ) : (
           <Button
-            onPress={() => requestPermission(perm)}
+          onPress={async () => {
+            const result = await request(perm);
+            setStatus(result);
+          }}
             color={colors.primary}
             title="Request"
             disabled={status === 'unavailable' || status === 'blocked'}
+            accessibilityLabel={'Request' + perm}
           />
         )}
         <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>
-          {item[0]}
+          {perm}
         </Text>
-        <Text style={{paddingLeft: 10, color: colors.text}}>
+        <View accessibilityLabel={getResultString(status)} focusable={true}>
+        <Text accessibilityLabel={getResultString(status)} style={{paddingLeft: 10, color: colors.text}}>
           {getResultString(status)}
         </Text>
+        </View>
       </View>
     );
   };
@@ -160,12 +162,8 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
             inside the Package.appxmanifest file under Visual Studio.
           </Text>
         </View>
-        <FlatList
-          data={entries}
-          extraData={entries}
-          renderItem={({item}) => getListItem(item)}
-          keyExtractor={(item) => item[0]}
-        />
+        {renderListItems(entries)}
+
       </Example>
     </Page>
   );
