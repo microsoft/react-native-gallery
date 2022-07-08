@@ -48,7 +48,7 @@ steps:
     displayName: Upgrade App Version
     condition: eq(variables['UPGRADE'], 'true')
     inputs:
-      script: node scripts/use-canary-version.js --upgradeVersion ${{ variables['VERSION'] }}
+      script: node scripts/use-upgrade-version.js --upgradeVersion ${{ variables['VERSION'] }}
 
   - task: CmdLine@2
     displayName: Installing Yarn
