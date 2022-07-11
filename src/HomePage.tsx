@@ -56,7 +56,7 @@ const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   return (
-    <View>
+    <View accessibilityLabel={props.heading + 'components'} focusable={true}>
       <Text style={styles.heading}>{props.heading}</Text>
       <View style={styles.homeContainer}>{props.children}</View>
     </View>

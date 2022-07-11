@@ -11,7 +11,11 @@ import {
   NavigationContainer,
   useNavigationState,
 } from '@react-navigation/native';
-import {createDrawerNavigator, DrawerItem} from '@react-navigation/drawer';
+import {
+  createDrawerNavigator,
+  DrawerItem,
+  getIsDrawerOpenFromState,
+} from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
@@ -74,11 +78,14 @@ const styles = StyleSheet.create({
 function RNGalleryScreenWrapper({navigation}) {
   const state = useNavigationState((newState) => newState);
   const Component = RNGalleryList[state.index].component;
+  const isDrawerOpen = getIsDrawerOpenFromState(navigation.getState());
+
   return (
     <View style={styles.container}>
       <TouchableHighlight
         accessibilityRole="button"
-        accessibilityLabel="Navigation bar expand, collapse"
+        accessibilityLabel="Navigation bar"
+        accessibilityState={{expanded: isDrawerOpen}}
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
           width: 48,
@@ -87,7 +94,8 @@ function RNGalleryScreenWrapper({navigation}) {
         onPress={() => navigation.openDrawer()}>
         <TouchableHighlight
           accessibilityRole="button"
-          accessibilityLabel="Navigation bar expand,collapse"
+          accessibilityLabel="Navigation bar hambuger icon"
+          accessibilityState={{expanded: isDrawerOpen}}
           style={styles.menu}
           onPress={() => navigation.openDrawer()}
           activeOpacity={0.5783}
@@ -113,6 +121,7 @@ function RenderDrawerItem(props, i: number) {
       icon={() => {
         return <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>;
       }}
+      accessibilityLabel={RNGalleryList[i].key}
     />
   );
 }
@@ -133,7 +142,7 @@ function CustomDrawerContent(props) {
     <View style={styles.drawer}>
       <TouchableHighlight
         accessibilityRole="button"
-        accessibilityLabel="Navigation bar expand,collapse"
+        accessibilityLabel="Navigation bar expanded"
         style={styles.menu}
         onPress={() => props.navigation.closeDrawer()}
         activeOpacity={0.5783}
@@ -149,6 +158,7 @@ function CustomDrawerContent(props) {
           return <Text style={styles.icon}>&#xE80F;</Text>;
         }}
         style={styles.drawerBottomDivider}
+        accessibilityLabel={'home'}
       />
       <ScrollView {...props}>{RenderDrawer(props)}</ScrollView>
       <DrawerItem
@@ -160,6 +170,7 @@ function CustomDrawerContent(props) {
           return <Text style={styles.icon}>&#xE713;</Text>;
         }}
         style={styles.drawerTopDivider}
+        accessibilityLabel={'settings'}
       />
     </View>
   );
