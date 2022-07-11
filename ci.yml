@@ -46,9 +46,9 @@ steps:
 
   - task: CmdLine@2
     displayName: Upgrade App Version
-    condition: eq(variables['UPGRADE'], 'true')
+    condition: eq(matrix.UPGRADE, 'true')
     inputs:
-      script: node scripts/use-upgrade-version.js --upgradeVersion ${{ variables['VERSION'] }}
+      script: node scripts/use-upgrade-version.js --upgradeVersion ${{ matrix.UPGRADE }}
 
   - task: CmdLine@2
     displayName: Installing Yarn
