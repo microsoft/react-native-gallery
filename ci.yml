@@ -46,7 +46,11 @@ steps:
 
   - task: CmdLine@2
     displayName: Upgrade App Version
+<<<<<<< HEAD
     condition: eq(${{ matrix.UPGRADE }}, 'true')
+=======
+    condition: ${{ eq(matrix.UPGRADE, 'true') }}
+>>>>>>> 102bc0758f847c66d19995a19b81dc7133a482aa
     inputs:
       script: node scripts/use-upgrade-version.js --upgradeVersion ${{ matrix.VERSION }}
 
