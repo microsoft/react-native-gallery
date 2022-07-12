@@ -19,7 +19,6 @@ jobs:
     name: Build
     runs-on: windows-2019
     strategy:
-      fail-fast: false
       matrix:
         reactNativeWindowsVersion: [current, latest, preview, canary]
     steps:
@@ -37,7 +36,7 @@ jobs:
 
       - task: CmdLine@2
         displayName: Upgrade App Version
-        condition: neq(${{ matrix.reactNativeWindowsVersion }},"current")
+        condition: ne(${{ matrix.reactNativeWindowsVersion }},"current")
         inputs:
           script: node scripts/use-upgrade-version.js --upgradeVersion "react-native-windows@${{ matrix.reactNativeWindowsVersion }}"
 
