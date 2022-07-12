@@ -1,21 +1,3 @@
-parameters:
-  - name: buildMatrix
-      type: object
-      default:
-        - Matrix:
-            - Name: current
-              Upgrade: false
-              Publish: true
-            - Name: latest
-              Upgrade: true
-              Publish: false
-            - Name: canary
-              Upgrade: true
-              Publish: false
-            - Name: preview
-              Upgrade: true
-              Publish: false
-
 schedules:
   - cron: '0 0 * * *'
     displayName: Nightly Build
@@ -24,87 +6,103 @@ schedules:
         - main
         - cm-ci-test
     batch: true
-  
+
 jobs:
   - ${{ each matrix in parameters.Matrix }}:
-    - job: Build and Publish
-      variables:
-        - group: rngallery_Variables
-        - name: BuildLogDirectory
-          value: $(Build.BinariesDirectory)\x64\BuildLogs
+      - job: Build and Publish
+        variables:
+          - group: rngallery_Variables
+          - name: BuildLogDirectory
+            value: $(Build.BinariesDirectory)\x64\BuildLogs
+          - name: buildMatrix
+            type: object
+            value:
+              - Matrix:
+                  - Name: current
+                    Upgrade: false
+                    Publish: true
+                  - Name: latest
+                    Upgrade: true
+                    Publish: false
+                  - Name: canary
+                    Upgrade: true
+                    Publish: false
+                  - Name: preview
+                    Upgrade: true
+                    Publish: false
 
-      pool: rnw-pool-4
+        pool: rnw-pool-4
 
-      steps:
-        - checkout: self
-          clean: false
+        steps:
+          - checkout: self
+            clean: false
 
-        - task: NuGetToolInstaller@0
-          inputs:
-            versionSpec: '>=5.8.0'
+          - task: NuGetToolInstaller@0
+            inputs:
+              versionSpec: '>=5.8.0'
 
-        - task: NodeTool@0
-          displayName: Installing Node
-          inputs:
-            versionSpec: '14.x'
+          - task: NodeTool@0
+            displayName: Installing Node
+            inputs:
+              versionSpec: '14.x'
 
-        - ${{ if eq(matrix.Upgrade, true) }}:
-          task: CmdLine@2
-          displayName: Upgrade App Version
-          condition: 
-          inputs:
-            script: node scripts/use-upgrade-version.js --upgradeVersion react-native-windows@${{ matrix.Name }}
+          - ${{ if eq(matrix.Upgrade, true) }}:
+            task: CmdLine@2
+            displayName: Upgrade App Version
+            condition:
+            inputs:
+              script: node scripts/use-upgrade-version.js --upgradeVersion react-native-windows@${{ matrix.Name }}
 
-        - task: CmdLine@2
-          displayName: Installing Yarn
-          inputs:
-            script: npm install -g yarn
+          - task: CmdLine@2
+            displayName: Installing Yarn
+            inputs:
+              script: npm install -g yarn
 
-        - task: NuGetCommand@2
-          displayName: NuGet restore
-          inputs:
-            command: restore
-            restoreSolution: windows/rngallery.sln
-            verbosityRestore: Detailed
+          - task: NuGetCommand@2
+            displayName: NuGet restore
+            inputs:
+              command: restore
+              restoreSolution: windows/rngallery.sln
+              verbosityRestore: Detailed
 
-        - task: CmdLine@2
-          displayName: midgard-yarn (faster yarn install)
-          inputs:
-            script: npx midgard-yarn@1.23.14 --pure-lockfile
+          - task: CmdLine@2
+            displayName: midgard-yarn (faster yarn install)
+            inputs:
+              script: npx midgard-yarn@1.23.14 --pure-lockfile
 
-        - task: CmdLine@2
-          displayName: Lint and Type Checks
-          inputs:
-            script: yarn tsc | yarn lint
+          - task: CmdLine@2
+            displayName: Lint and Type Checks
+            inputs:
+              script: yarn tsc | yarn lint
 
-        - task: DownloadSecureFile@1
-          name: signingCert
-          displayName: 'Download CA certificate'
-          inputs:
-            secureFile: 'rngallery_Key.pfx'
+          - task: DownloadSecureFile@1
+            name: signingCert
+            displayName: 'Download CA certificate'
+            inputs:
+              secureFile: 'rngallery_Key.pfx'
 
-        - task: CopyFiles@2
-          displayName: 'Copy Certificate to Windows Build Directory'
-          inputs:
-            SourceFolder: '$(signingCert.secureFilePath)'
-            Contents: 'rngallery_Key.pfx'
-            TargetFolder: '.\windows\rngallery\'
+          - task: CopyFiles@2
+            displayName: 'Copy Certificate to Windows Build Directory'
+            inputs:
+              SourceFolder: '$(signingCert.secureFilePath)'
+              Contents: 'rngallery_Key.pfx'
+              TargetFolder: '.\windows\rngallery\'
 
-        - task: CmdLine@2
-          displayName: Build project (Release)
-          timeoutInMinutes: 60
-          inputs:
-            script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --msbuildprops PackageCertificateKeyFile=$(signingCert.secureFilePath) --release
+          - task: CmdLine@2
+            displayName: Build project (Release)
+            timeoutInMinutes: 60
+            inputs:
+              script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --msbuildprops PackageCertificateKeyFile=$(signingCert.secureFilePath) --release
 
-        - task: CmdLine@2
-          displayName: Remove the Pfx
-          inputs:
-            script: del /f .\windows\rngallery\rngallery_Key.pfx
+          - task: CmdLine@2
+            displayName: Remove the Pfx
+            inputs:
+              script: del /f .\windows\rngallery\rngallery_Key.pfx
 
-        - ${{ if eq(matrix.Publish, true) }}:
-          task: PublishBuildArtifacts@1
-          displayName: Upload App
-          condition: and(succeededOrFailed(), eq(${{ matrix.reactNativeWindowsVersion }}, "current"))
-          inputs:
-            pathtoPublish: .\windows\AppPackages\rngallery
-            artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
+          - ${{ if eq(matrix.Publish, true) }}:
+            task: PublishBuildArtifacts@1
+            displayName: Upload App
+            condition: and(succeededOrFailed(), eq(${{ matrix.reactNativeWindowsVersion }}, "current"))
+            inputs:
+              pathtoPublish: .\windows\AppPackages\rngallery
+              artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
