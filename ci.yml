@@ -4,7 +4,7 @@ schedules:
     branches:
       include:
         - main
-        - ci-test
+        - cm-ci-test
     batch: true
 
 variables:
