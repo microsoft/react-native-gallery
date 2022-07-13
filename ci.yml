@@ -42,7 +42,7 @@ steps:
     displayName: Upgrade react-native-windows Version
     condition: eq(variables['BUILD_CANARY'], 'true')
     inputs:
-      script: node scripts/use-upgrade-version.js --upgradeVersion $(variables['VERSION_NAME'])
+      script: node scripts/use-upgrade-version.js --upgradeVersion $(VERSION_NAME])
 
   - task: CmdLine@2
     displayName: Installing Yarn
