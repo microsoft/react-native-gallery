@@ -4,11 +4,27 @@ schedules:
     branches:
       include:
         - main
+        - cm-ci-test
     batch: true
 
 strategy:
   matrix:
-    reactNativeWindowsVersion: [current, latest, preview, canary]
+    canary:
+      UPGRADE: true
+      PUBLISH_APP: false
+      VERSION_NAME: react-native-windows@canary
+    latest:
+      UPGRADE: true
+      PUBLISH_APP: false
+      VERSION_NAME: react-native-windows@latest
+    preview:
+      UPGRADE: true
+      PUBLISH_APP: false
+      VERSION_NAME: react-native-windows@preview
+    publish:
+      UPGRADE: false
+      PUBLISH_APP: true
+      VERSION_NAME: react-native-windows@0.69.0
 
 variables:
   - group: rngallery_Variables
@@ -31,10 +47,10 @@ steps:
       versionSpec: '14.x'
 
   - task: CmdLine@2
-    displayName: Upgrade App Version
-    condition: neq(${{ matrix.reactNativeWindowsVersion }},"current")
+    displayName: Upgrade react-native-windows Version
+    condition: eq(variables['UPGRADE'], 'true')
     inputs:
-      script: node scripts/use-upgrade-version.js --upgradeVersion "react-native-windows@${{ matrix.reactNativeWindowsVersion }}"
+      script: node scripts/use-upgrade-version.js --upgradeVersion $(VERSION_NAME)
 
   - task: CmdLine@2
     displayName: Installing Yarn
@@ -84,7 +100,7 @@ steps:
 
   - task: PublishBuildArtifacts@1
     displayName: Upload App
-    condition: and(succeededOrFailed(), eq(${{ matrix.reactNativeWindowsVersion }}, "current"))
+    condition: and(succeededOrFailed(), eq(variables['PUBLISH_APP'], 'true'))
     inputs:
       pathtoPublish: .\windows\AppPackages\rngallery
       artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
