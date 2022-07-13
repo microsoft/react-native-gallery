@@ -1,6 +1,6 @@
 parameters:
 - name: version
-    type: string
+  type: string
 
 steps:
   - ${{ if ne(parameters.version, 'current') }}
