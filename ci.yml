@@ -10,15 +10,19 @@ schedules:
 strategy:
   matrix:
     canary:
-      BUILD_CANARY: true
+      UPGRADE: true
       PUBLISH_APP: false
       VERSION_NAME: react-native-windows@canary
     latest:
-      BUILD_CANARY: true
+      UPGRADE: true
       PUBLISH_APP: false
       VERSION_NAME: react-native-windows@latest
+    preview:
+      UPGRADE: true
+      PUBLISH_APP: false
+      VERSION_NAME: react-native-windows@preview
     publish:
-      BUILD_CANARY: false
+      UPGRADE: false
       PUBLISH_APP: true
       VERSION_NAME: react-native-windows@0.69.0
 
@@ -44,7 +48,7 @@ steps:
 
   - task: CmdLine@2
     displayName: Upgrade react-native-windows Version
-    condition: eq(variables['BUILD_CANARY'], 'true')
+    condition: eq(variables['UPGRADE'], 'true')
     inputs:
       script: node scripts/use-upgrade-version.js --upgradeVersion $(VERSION_NAME)
 
