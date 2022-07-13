@@ -12,11 +12,11 @@ strategy:
     canary:
       BUILD_CANARY: true
       PUBLISH_APP: false
-      VERSION: react-native-windows@canary
+      VERSION_NAME: react-native-windows@canary
     publish:
       BUILD_CANARY: false
       PUBLISH_APP: true
-      VERSION: react-native-windows@0.69.0
+      VERSION_NAME: react-native-windows@0.69.0
 
 variables:
   - group: rngallery_Variables
@@ -42,7 +42,7 @@ steps:
     displayName: Upgrade react-native-windows Version
     condition: eq(variables['BUILD_CANARY'], 'true')
     inputs:
-      script: node scripts/use-upgrade-version.js --upgradeVersion "${{ variables['VERSION'] }}"
+      script: node scripts/use-upgrade-version.js --upgradeVersion "${{ variables['VERSION_NAME'] }}"
 
   - task: CmdLine@2
     displayName: Installing Yarn
