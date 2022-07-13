@@ -27,18 +27,46 @@ steps:
     inputs:
       versionSpec: '14.x'
 
+  - task: CmdLine@2
+    displayName: Installing Yarn
+    inputs:
+      script: npm install -g yarn
+
+  - task: NuGetCommand@2
+    displayName: NuGet restore
+    inputs:
+      command: restore
+      restoreSolution: windows/rngallery.sln
+      verbosityRestore: Detailed
+
+  - task: DownloadSecureFile@1
+    displayName: 'Download CA certificate'
+    inputs:
+      secureFile: 'rngallery_Key.pfx'
+
+  - task: CopyFiles@2
+    displayName: 'Copy Certificate to Windows Build Directory'
+    inputs:
+      SourceFolder: '$(signingCert.secureFilePath)'
+      Contents: 'rngallery_Key.pfx'
+      TargetFolder: '.\windows\rngallery\'
+
   - template: ./scripts/build.yml
     parameters:
       version: 'current'
+      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
 
   - template: ./scripts/build.yml
     parameters:
       version: 'latest'
+      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
 
   - template: ./scripts/build.yml
     parameters:
       version: 'preview'
+      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
 
   - template: ./scripts/build.yml
     parameters:
       version: 'canary'
+      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
