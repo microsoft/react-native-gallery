@@ -3,9 +3,9 @@ parameters:
     type: string
 
 steps:
-  - ${{ if ne(parameters.version, 'current') }}
   - task: CmdLine@2
     displayName: Upgrade App Version
+    condition: ne(${{ parameters.version }}, 'current')
     inputs:
       script: node scripts/use-upgrade-version.js --upgradeVersion react-native-windows@${{ parameters.version }}
 
