@@ -38,11 +38,9 @@ steps:
     inputs:
       versionSpec: '14.x'
 
-  - task: CmdLine@2
+  - script: node scripts/use-upgrade-version.js --upgradeVersion "${{ variables['VERSION'] }}"
     displayName: Use react-native-windows@canary
     condition: eq(variables['BUILD_CANARY'], 'true')
-    inputs:
-      script: node scripts/use-upgrade-version.js --upgradeVersion "${{ variables['BUILD_CANARY'] }}"
 
   - task: CmdLine@2
     displayName: Installing Yarn
