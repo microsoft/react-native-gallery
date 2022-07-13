@@ -32,7 +32,6 @@ steps:
       script: yarn tsc | yarn lint
 
   - task: DownloadSecureFile@1
-    name: signingCert
     displayName: 'Download CA certificate'
     inputs:
       secureFile: 'rngallery_Key.pfx'
