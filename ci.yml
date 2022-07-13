@@ -13,6 +13,10 @@ strategy:
       BUILD_CANARY: true
       PUBLISH_APP: false
       VERSION_NAME: react-native-windows@canary
+    latest:
+      BUILD_CANARY: true
+      PUBLISH_APP: false
+      VERSION_NAME: react-native-windows@latest
     publish:
       BUILD_CANARY: false
       PUBLISH_APP: true
