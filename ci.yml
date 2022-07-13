@@ -7,6 +7,15 @@ schedules:
         - cm-ci-test
     batch: true
 
+strategy:
+  matrix:
+    canary:
+      BUILD_CANARY: true
+      PUBLISH_APP: false
+    publish:
+      BUILD_CANARY: false
+      PUBLISH_APP: true
+
 variables:
   - group: rngallery_Variables
   - name: BuildLogDirectory
@@ -28,6 +37,12 @@ steps:
       versionSpec: '14.x'
 
   - task: CmdLine@2
+    displayName: Use react-native-windows@canary
+    condition: eq(variables['BUILD_CANARY'], 'true')
+    inputs:
+      script: node scripts/use-canary-version.js
+
+  - task: CmdLine@2
     displayName: Installing Yarn
     inputs:
       script: npm install -g yarn
@@ -39,7 +54,18 @@ steps:
       restoreSolution: windows/rngallery.sln
       verbosityRestore: Detailed
 
+  - task: CmdLine@2
+    displayName: midgard-yarn (faster yarn install)
+    inputs:
+      script: npx midgard-yarn@1.23.14 --pure-lockfile
+
+  - task: CmdLine@2
+    displayName: Lint and Type Checks
+    inputs:
+      script: yarn tsc | yarn lint
+
   - task: DownloadSecureFile@1
+    name: signingCert
     displayName: 'Download CA certificate'
     inputs:
       secureFile: 'rngallery_Key.pfx'
@@ -51,22 +77,20 @@ steps:
       Contents: 'rngallery_Key.pfx'
       TargetFolder: '.\windows\rngallery\'
 
-  - template: ./scripts/build.yml
-    parameters:
-      version: 'current'
-      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
+  - task: CmdLine@2
+    displayName: Build project (Release)
+    timeoutInMinutes: 60
+    inputs:
+      script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --msbuildprops PackageCertificateKeyFile=$(signingCert.secureFilePath) --release
 
-  - template: ./scripts/build.yml
-    parameters:
-      version: 'latest'
-      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
+  - task: CmdLine@2
+    displayName: Remove the Pfx
+    inputs:
+      script: del /f .\windows\rngallery\rngallery_Key.pfx
 
-  - template: ./scripts/build.yml
-    parameters:
-      version: 'preview'
-      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
-
-  - template: ./scripts/build.yml
-    parameters:
-      version: 'canary'
-      buildLogDirectory: ${{ variables['BuildLogDirectory'] }}
+  - task: PublishBuildArtifacts@1
+    displayName: Upload App
+    condition: and(succeededOrFailed(), eq(variables['PUBLISH_APP'], 'true'))
+    inputs:
+      pathtoPublish: .\windows\AppPackages\rngallery
+      artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
