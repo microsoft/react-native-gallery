@@ -30,8 +30,8 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-picker\picker\windows\ReactNativePicker\ReactNativePicker.vcxproj">
       <Project>{bedcc600-4541-41f2-aa46-9e058202b6ad}</Project>
     </ProjectReference>
-    <!-- Projects from @terrylinla/react-native-sketch-canvas -->
-    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@terrylinla\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
+    <!-- Projects from @wwimmo/react-native-sketch-canvas -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\@wwimmo\react-native-sketch-canvas\windows\RNSketchCanvas\RNSketchCanvas.vcxproj">
       <Project>{f96593a0-46b4-47da-a15a-7a135934ce1f}</Project>
     </ProjectReference>
     <!-- Projects from react-native-config -->

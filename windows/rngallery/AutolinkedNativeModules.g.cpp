@@ -24,7 +24,7 @@
 // Includes from @react-native-picker/picker
 #include <winrt/ReactNativePicker.h>
 
-// Includes from @terrylinla/react-native-sketch-canvas
+// Includes from @wwimmo/react-native-sketch-canvas
 #include <winrt/RNSketchCanvas.h>
 
 // Includes from react-native-config
@@ -79,7 +79,7 @@ void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collecti
     packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
     // IReactPackageProviders from @react-native-picker/picker
     packageProviders.Append(winrt::ReactNativePicker::ReactPackageProvider());
-    // IReactPackageProviders from @terrylinla/react-native-sketch-canvas
+    // IReactPackageProviders from @wwimmo/react-native-sketch-canvas
     packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
     // IReactPackageProviders from react-native-config
     packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());

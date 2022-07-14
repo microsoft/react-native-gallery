@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
+import RNSketchCanvas from '@wwimmo/react-native-sketch-canvas';
 import {useTheme} from '@react-navigation/native';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {

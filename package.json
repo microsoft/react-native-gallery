@@ -22,10 +22,10 @@
     "@react-navigation/drawer": "^5.9.0",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.9.0",
-    "@terrylinla/react-native-sketch-canvas": "git+https://github.com/creambyemute/react-native-sketch-canvas#1db88fa3cc6e8124b0baab3cb04bce0540900a33",
+    "@wwimmo/react-native-sketch-canvas": "^0.8.5",
     "lowlight": "^1.17.0",
-    "react": "17.0.2",
-    "react-native": "^0.68.0",
+    "react": "18.0.0",
+    "react-native": "^0.69.0",
     "react-native-config": "luggit/react-native-config",
     "react-native-device-info": "^7.3.1",
     "react-native-gesture-handler": "JaneaSystems/react-native-gesture-handler#windows",
@@ -38,8 +38,8 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.18.2",
-    "react-native-windows": "0.68.0",
-    "react-native-xaml": "^0.0.45"
+    "react-native-windows": "0.69.0",
+    "react-native-xaml": "^0.0.64"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
