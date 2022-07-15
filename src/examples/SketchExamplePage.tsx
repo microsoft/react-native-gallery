@@ -94,8 +94,7 @@ const styles = StyleSheet.create({
   functionButton: {
     marginHorizontal: 2.5,
     marginVertical: 8,
-    height: 30,
-    width: 60,
+    padding: 5,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
