@@ -64,7 +64,7 @@
       "<rootDir>/lib/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print)/)"
+      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello)/)"
     ]
   },
   "main": "src\\index.js",

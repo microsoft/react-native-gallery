@@ -23,10 +23,14 @@ import {SliderExamplePage} from '../src/examples/SliderExamplePage';
 import {PickerExamplePage} from '../src/examples/PickerExamplePage';
 import {PrintExamplePage} from '../src/examples/PrintExamplePage';
 //import {DeviceInfoExamplePage} from '../src/examples/DeviceInfoExamplePage';
-import {TTSExamplePage} from './examples/TTSExamplePage';
-import {WebViewExamplePage} from './examples/WebViewExamplePage';
-import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
-import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
+//import {TTSExamplePage} from '../src/examples/TTSExamplePage';
+import {WebViewExamplePage} from '../src/examples/WebViewExamplePage';
+import {SensitiveInfoExamplePage} from '../src/examples/SensitiveInfoExamplePage';
+import {ProgressViewExamplePage} from '../src/examples/ProgressViewExamplePage';
+import {XamlExamplePage} from '../src/examples/XamlExamplePage';
+//import {TrackPlayerExamplePage} from '../src/examples/TrackPlayerExamplePage';
+import {WindowsHelloExamplePage} from '../src/examples/WindowsHelloExamplePage';
+import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
 
 test('Button Example Page', () => {
   const tree = renderer.create(<ButtonExamplePage />).toJSON();
@@ -45,6 +49,11 @@ test('Config Example Page', () => {
 
 test('DatePicker Example Page', () => {
   const tree = renderer.create(<DatePickerExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('Expander Example Page', () => {
+  const tree = renderer.create(<ExpanderExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -93,8 +102,18 @@ test('Print Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
+test('ProgressView Example Page', () => {
+  const tree = renderer.create(<ProgressViewExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
 test('ScrollView Example Page', () => {
   const tree = renderer.create(<ScrollViewExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('SensitiveInfo Example Page', () => {
+  const tree = renderer.create(<SensitiveInfoExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -128,6 +147,11 @@ test('TimePicker Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
+/*test('TextToSpeech Example Page', () => {
+  const tree = renderer.create(<TTSExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});*/
+
 test('TouchableHighlight Example Page', () => {
   const tree = renderer.create(<TouchableHighlightExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
@@ -138,7 +162,27 @@ test('TouchableOpacity Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
+/*test('TrackPlayer Example Page', () => {
+  const tree = renderer.create(<TrackPlayerExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});*/
+
 test('View Example Page', () => {
   const tree = renderer.create(<ViewExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('WebView Example Page', () => {
+  const tree = renderer.create(<WebViewExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('WindowsHello Example Page', () => {
+  const tree = renderer.create(<WindowsHelloExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('Xaml Example Page', () => {
+  const tree = renderer.create(<XamlExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
