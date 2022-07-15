@@ -8,10 +8,12 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
   const [date1] = useState(new Date());
   const [date2] = useState(new Date());
 
-  const textExample1 = '<DateTimePicker value={date} mode="date" />';
+  const textExample1 =
+    '<DateTimePicker value={date} mode="date" style={{width: 200, opacity: 1, height: 50}}/>';
   const textExample2 = `<DateTimePicker
   value={date2}
   mode="date"
+  style={{width: 200, opacity: 1, height: 50}}
   dayOfWeekFormat={'{dayofweek.abbreviated(3)}'}
   firstDayOfWeek={1} />`;
 
@@ -35,7 +37,12 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple DatePicker." code={textExample1}>
-        <DateTimePicker value={date1} onChange={() => {}} mode="date" />
+        <DateTimePicker
+          value={date1}
+          onChange={() => {}}
+          mode="date"
+          style={{width: 200, opacity: 1, height: 50}}
+        />
       </Example>
       <Example
         title="A DatePicker with day of week formatted and first day of week adjusted."
@@ -43,6 +50,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         <DateTimePicker
           value={date2}
           mode="date"
+          style={{width: 200, opacity: 1, height: 50}}
           dayOfWeekFormat={'{dayofweek.abbreviated(3)}'}
           firstDayOfWeek={1}
         />
