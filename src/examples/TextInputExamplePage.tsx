@@ -27,18 +27,17 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   };
 
   const example1jsx = `<TextInput
-  style={{height: 40, borderColor: colors.border, borderWidth: 1}}
+  style={{borderColor: colors.border, borderWidth: 1}}
   onChangeText={onChangeText1}
   value={text1}/>`;
   const example2jsx = `<TextInput
-  style={{height: 80, borderColor: colors.border, borderWidth: 1}}
+  style={{borderColor: colors.border, borderWidth: 1}}
   onChangeText={onChangeText2}
   value={text2}
   multiline
   placeholder="Enter multiline text input here..."/>`;
   const example3jsx = `<TextInput
   style={{
-    height: 40,
     borderColor: colors.border,
     borderWidth: 1,
     backgroundColor: colors.primary,
@@ -49,7 +48,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   onChangeText={onChangeText3}
   value={text3}/>`;
   const example4jsx = `<TextInput
-  style={{height: 40, borderColor: colors.border, borderWidth: 1}}
+  style={{borderColor: colors.border, borderWidth: 1}}
   onChangeText={onChangeText4}
   value={text4}
   editable={false}
@@ -86,7 +85,6 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple TextInput." code={example1jsx}>
         <TextInput
           style={{
-            height: 32,
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
@@ -101,7 +99,6 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         code={example2jsx}>
         <TextInput
           style={{
-            height: 64,
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
@@ -117,7 +114,6 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         code={example3jsx}>
         <TextInput
           style={{
-            height: 32,
             borderColor: colors.border,
             borderWidth: 1,
             backgroundColor: colors.primary,
@@ -134,7 +130,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A disabled TextInput with colored placeholder text."
         code={example4jsx}>
         <TextInput
-          style={{height: 32, borderColor: colors.border, borderWidth: 1}}
+          style={{borderColor: colors.border, borderWidth: 1}}
           onChangeText={onChangeText4}
           value={text4}
           editable={false}
