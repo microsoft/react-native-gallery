@@ -62,6 +62,9 @@
     "preset": "react-native",
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print)/)"
     ]
   },
   "main": "src\\index.js",
