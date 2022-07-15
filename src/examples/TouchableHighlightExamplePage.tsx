@@ -12,7 +12,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
   const example1jsx = `<TouchableHighlight
   style={{
     height: 40,
-    width: 150,
     backgroundColor: colors.border,
     borderRadius: 3,
     justifyContent: 'center',
@@ -27,7 +26,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
   const example2jsx = `<TouchableHighlight
   style={{
     height: 40,
-    width: 150,
     backgroundColor: colors.primary,
     borderRadius: 3,
     justifyContent: 'center',
@@ -42,7 +40,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
   const example3jsx = `<TouchableHighlight
   style={{
     height: 40,
-    width: 150,
     backgroundColor: colors.text,
     borderRadius: 3,
     justifyContent: 'center',
@@ -79,7 +76,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityLabel={'example TouchableHighlight'}
           style={{
             height: 40,
-            width: 150,
             backgroundColor: colors.border,
             borderRadius: 3,
             justifyContent: 'center',
@@ -97,7 +93,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityLabel={'example colored TouchableHighlight'}
           style={{
             height: 40,
-            width: 150,
             backgroundColor: colors.primary,
             borderRadius: 3,
             justifyContent: 'center',
@@ -116,7 +111,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityHint={'click me to increase the example counter'}
           style={{
             height: 40,
-            width: 150,
             backgroundColor: colors.text,
             borderRadius: 3,
             justifyContent: 'center',
