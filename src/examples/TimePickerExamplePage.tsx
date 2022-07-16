@@ -9,11 +9,11 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
   const example1jsx = `<DateTimePicker
   mode="time"
   value={time}
-  style={{width: 300, opacity: 1, height: 30}} />`;
+  style={{width: 300, opacity: 1, height: 50}} />`;
   const example2jsx = `<DateTimePicker
   mode="time"
   value={time}
-  style={{width: 300, opacity: 1, height: 30}}
+  style={{width: 300, opacity: 1, height: 50}}
   is24Hour={true}
   minuteInterval={5} />`;
 
@@ -40,7 +40,7 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
         <DateTimePicker
           mode="time"
           value={time}
-          style={{width: 300, opacity: 1, height: 30}}
+          style={{width: 300, opacity: 1, height: 50}}
         />
       </Example>
       <Example
@@ -49,7 +49,7 @@ export const TimePickerExamplePage: React.FunctionComponent<{}> = () => {
         <DateTimePicker
           mode="time"
           value={time}
-          style={{width: 300, opacity: 1, height: 30}}
+          style={{width: 300, opacity: 1, height: 50}}
           is24Hour={true}
           minuteInterval={5}
         />
