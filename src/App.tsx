@@ -143,6 +143,7 @@ function CustomDrawerContent(props) {
       <TouchableHighlight
         accessibilityRole="button"
         accessibilityLabel="Navigation bar expanded"
+        {...{tooltip: 'Expand/Collapse'}}
         style={styles.menu}
         onPress={() => props.navigation.closeDrawer()}
         activeOpacity={0.5783}
