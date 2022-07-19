@@ -95,6 +95,7 @@ function RNGalleryScreenWrapper({navigation}) {
         <TouchableHighlight
           accessibilityRole="button"
           accessibilityLabel="Navigation bar hambuger icon"
+          {...{tooltip: 'Expand Menu'}}
           accessibilityState={{expanded: isDrawerOpen}}
           style={styles.menu}
           onPress={() => navigation.openDrawer()}
@@ -143,6 +144,7 @@ function CustomDrawerContent(props) {
       <TouchableHighlight
         accessibilityRole="button"
         accessibilityLabel="Navigation bar expanded"
+        {...{tooltip: 'Collapse Menu'}}
         style={styles.menu}
         onPress={() => props.navigation.closeDrawer()}
         activeOpacity={0.5783}
