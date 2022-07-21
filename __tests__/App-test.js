@@ -19,11 +19,11 @@ import {DatePickerExamplePage} from '../src/examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from '../src/examples/TimePickerExamplePage';
 //import {SketchExamplePage} from '../src/examples/SketchExamplePage';
 import {SliderExamplePage} from '../src/examples/SliderExamplePage';
-//import {PermissionsExamplePage} from '../src/examples/PermissionsExamplePage';
+import {PermissionsExamplePage} from '../src/examples/PermissionsExamplePage';
 import {PickerExamplePage} from '../src/examples/PickerExamplePage';
 import {PrintExamplePage} from '../src/examples/PrintExamplePage';
-//import {DeviceInfoExamplePage} from '../src/examples/DeviceInfoExamplePage';
-//import {TTSExamplePage} from '../src/examples/TTSExamplePage';
+import {DeviceInfoExamplePage} from '../src/examples/DeviceInfoExamplePage';
+import {TTSExamplePage} from '../src/examples/TTSExamplePage';
 import {WebViewExamplePage} from '../src/examples/WebViewExamplePage';
 import {SensitiveInfoExamplePage} from '../src/examples/SensitiveInfoExamplePage';
 import {ProgressViewExamplePage} from '../src/examples/ProgressViewExamplePage';
@@ -52,15 +52,15 @@ test('DatePicker Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
+test('DeviceInfo Example Page', () => {
+  const tree = renderer.create(<DeviceInfoExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
 test('Expander Example Page', () => {
   const tree = renderer.create(<ExpanderExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-
-/*test('DeviceInfo Example Page', () => {
-  const tree = renderer.create(<DeviceInfoExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
-});*/
 
 test('FlatList Example Page', () => {
   const tree = renderer.create(<FlatListExamplePage />).toJSON();
@@ -77,10 +77,10 @@ test('Image Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-/*test('Permissions Example Page', () => {
+test('Permissions Example Page', () => {
   const tree = renderer.create(<PermissionsExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
-});*/
+});
 
 test('Picker Example Page', () => {
   const tree = renderer.create(<PickerExamplePage />).toJSON();
@@ -147,10 +147,10 @@ test('TimePicker Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-/*test('TextToSpeech Example Page', () => {
+test('TextToSpeech Example Page', () => {
   const tree = renderer.create(<TTSExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
-});*/
+});
 
 test('TouchableHighlight Example Page', () => {
   const tree = renderer.create(<TouchableHighlightExamplePage />).toJSON();
