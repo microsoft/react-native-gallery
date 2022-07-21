@@ -1,6 +1,6 @@
 pr:
   - main
-  - "v*"
+  - 'v*'
 
 variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
@@ -8,49 +8,54 @@ variables:
 pool: rnw-pool-4
 
 steps:
-- checkout: self
-  clean: false
+  - checkout: self
+    clean: false
 
-- task: NuGetToolInstaller@0
-  inputs:
-    versionSpec: ">=5.8.0"
+  - task: NuGetToolInstaller@0
+    inputs:
+      versionSpec: '>=5.8.0'
 
-- task: NodeTool@0
-  displayName: Installing Node
-  inputs:
-    versionSpec: '14.x'
+  - task: NodeTool@0
+    displayName: Installing Node
+    inputs:
+      versionSpec: '14.x'
 
-- task: CmdLine@2
-  displayName: Installing Yarm
-  inputs:
-    script: npm install -g yarn
+  - task: CmdLine@2
+    displayName: Installing Yarm
+    inputs:
+      script: npm install -g yarn
 
-- task: NuGetCommand@2
-  displayName: NuGet restore
-  inputs:
-    command: restore
-    restoreSolution: windows/rngallery.sln
-    verbosityRestore: Detailed
+  - task: NuGetCommand@2
+    displayName: NuGet restore
+    inputs:
+      command: restore
+      restoreSolution: windows/rngallery.sln
+      verbosityRestore: Detailed
 
-- task: CmdLine@2
-  displayName: midgard-yarn (faster yarn install)
-  inputs:
-    script: npx midgard-yarn@1.23.14 --pure-lockfile
+  - task: CmdLine@2
+    displayName: midgard-yarn (faster yarn install)
+    inputs:
+      script: npx midgard-yarn@1.23.14 --pure-lockfile
 
-- task: CmdLine@2
-  displayName: Lint and Type Checks
-  inputs:
-    script: yarn tsc | yarn lint
+  - task: CmdLine@2
+    displayName: Lint and Type Checks
+    inputs:
+      script: yarn tsc | yarn lint
 
-- task: CmdLine@2
-  displayName: Build project (Debug)
-  timeoutInMinutes: 60
-  inputs:
-    script: npx react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Debug
+  - task: CmdLine@2
+    displayName: Build project (Debug)
+    timeoutInMinutes: 60
+    inputs:
+      script: npx react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Debug
 
-- task: PublishBuildArtifacts@1
-  displayName: Upload build logs
-  condition:  succeededOrFailed()
-  inputs:
-    pathtoPublish: $BuildLogDirectory
-    artifactName: 'Build logs - $(Agent.JobName)-$(System.JobAttempt)'
+  - task: CmdLine@2
+    displayName: Snapshot Tests
+    inputs:
+      script: yarn test
+
+  - task: PublishBuildArtifacts@1
+    displayName: Upload build logs
+    condition: succeededOrFailed()
+    inputs:
+      pathtoPublish: $BuildLogDirectory
+      artifactName: 'Build logs - $(Agent.JobName)-$(System.JobAttempt)'
