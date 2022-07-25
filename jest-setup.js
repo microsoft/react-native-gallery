@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {NativeModules} from 'react-native';
 jest.mock('react-native-permissions', () =>
   require('react-native-permissions/mock'),
