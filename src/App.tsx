@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -26,6 +27,8 @@ import {
   ThemeSetterContext,
 } from './themes/Theme';
 import {PlatformColor} from 'react-native';
+import {AppTheme} from 'react-native-windows';
+import HighContrastTheme from './themes/HighContrastTheme';
 
 let appVersion = '';
 
@@ -217,12 +220,31 @@ export default function App(props) {
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
   appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
 
+  const [isHighContrast, setHighContrast] = useState(AppTheme.isHighContrast);
+  const [highContrastColorValues, sethighContrastColorValues] = useState(
+    AppTheme.currentHighContrastColors,
+  );
+
+  React.useEffect(() => {
+    const subscription = AppTheme.addListener('highContrastChanged', () => {
+      setHighContrast(AppTheme.isHighContrast);
+    });
+
+    return () => subscription.remove();
+  });
+
   return (
     <ThemeSetterContext.Provider value={setRawTheme}>
       <RawThemeContext.Provider value={rawtheme}>
         <ThemeContext.Provider value={theme}>
           <NavigationContainer
-            theme={theme === 'dark' ? DarkTheme : LightTheme}>
+            theme={
+              isHighContrast
+                ? HighContrastTheme
+                : theme === 'dark'
+                ? DarkTheme
+                : LightTheme
+            }>
             <MyDrawer />
           </NavigationContainer>
         </ThemeContext.Provider>
