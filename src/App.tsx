@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -220,14 +219,14 @@ export default function App(props) {
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
   appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
 
-  const [isHighContrast, setHighContrast] = useState(AppTheme.isHighContrast);
-  const [highContrastColorValues, sethighContrastColorValues] = useState(
-    AppTheme.currentHighContrastColors,
+  const [isHighContrast, setHighContrast] = React.useState(
+    AppTheme.isHighContrast,
   );
 
   React.useEffect(() => {
     const subscription = AppTheme.addListener('highContrastChanged', () => {
       setHighContrast(AppTheme.isHighContrast);
+      setHighContrastColorValues(AppTheme.currentHighContrastColors);
     });
 
     return () => subscription.remove();
