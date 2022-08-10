@@ -1,20 +1,15 @@
 import {Theme} from '@react-navigation/native';
 import {AppTheme} from 'react-native-windows';
 
-
-const [highContrastColorValues, setHighContrastColorValues] = React.useState(
-  AppTheme.currentHighContrastColors,
-);
-
 const HighContrastTheme: Theme = {
   dark: false,
   colors: {
-    primary: '#FFFFFF',
-    background: '#FFFFFF',
-    card: '#FFFFFF',
-    text: '#FFFFFF',
-    border: '#FFFFFF',
-    notification: '#FFFFFF',
+    primary: AppTheme.currentHighContrastColors.ButtonFaceColor,
+    background: AppTheme.currentHighContrastColors.WindowColor,
+    card: AppTheme.currentHighContrastColors.WindowColor,
+    text: AppTheme.currentHighContrastColors.WindowTextColor,
+    border: AppTheme.currentHighContrastColors.HighlightColor,
+    notification: AppTheme.currentHighContrastColors.HotlightColor,
   },
 };
 

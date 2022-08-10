@@ -219,31 +219,32 @@ export default function App(props) {
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
   appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
 
-  const [isHighContrast, setHighContrast] = React.useState(
-    AppTheme.isHighContrast,
-  );
+  // const [isHighContrast, setHighContrast] = React.useState(
+  //   AppTheme.isHighContrast,
+  // );
 
-  React.useEffect(() => {
-    const subscription = AppTheme.addListener('highContrastChanged', () => {
-      setHighContrast(AppTheme.isHighContrast);
-      setHighContrastColorValues(AppTheme.currentHighContrastColors);
-    });
+  // React.useEffect(() => {
+  //   const subscription = AppTheme.addListener('highContrastChanged', () => {
+  //     setHighContrast(AppTheme.isHighContrast);
+  //     setHighContrastColorValues(AppTheme.currentHighContrastColors);
+  //   });
 
-    return () => subscription.remove();
-  });
+  //   return () => subscription.remove();
+  // });
+
+  // theme={
+  //   isHighContrast
+  //     ? HighContrastTheme
+  //     : theme === 'dark'
+  //     ? DarkTheme
+  //     : LightTheme
+  // }>
 
   return (
     <ThemeSetterContext.Provider value={setRawTheme}>
       <RawThemeContext.Provider value={rawtheme}>
         <ThemeContext.Provider value={theme}>
-          <NavigationContainer
-            theme={
-              isHighContrast
-                ? HighContrastTheme
-                : theme === 'dark'
-                ? DarkTheme
-                : LightTheme
-            }>
+          <NavigationContainer theme={HighContrastTheme}>
             <MyDrawer />
           </NavigationContainer>
         </ThemeContext.Provider>
