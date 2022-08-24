@@ -177,7 +177,7 @@ test('WebView Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('WindowsHello Example Page', () => {
+test('Hello Example Page', () => {
   const tree = renderer.create(<WindowsHelloExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
