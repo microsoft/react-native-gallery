@@ -45,11 +45,12 @@ exports[`Button Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -845,11 +846,12 @@ exports[`CheckBox Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -887,11 +889,12 @@ exports[`CheckBox Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -1859,11 +1862,12 @@ exports[`Config Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -2310,6 +2314,8 @@ exports[`Config Example Page 1`] = `
 </View>
 `;
 
+exports[`Control 1`] = `<View />`;
+
 exports[`DatePicker Example Page 1`] = `
 <View
   style={
@@ -2355,11 +2361,12 @@ exports[`DatePicker Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -2397,11 +2404,12 @@ exports[`DatePicker Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -2527,7 +2535,91 @@ exports[`DatePicker Example Page 1`] = `
                   </Text>
                 </Text>
                 <Text>
-                   /&gt;
+                   style={{
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    width
+                  </Text>
+                </Text>
+                <Text>
+                  : 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  <Text>
+                    200
+                  </Text>
+                </Text>
+                <Text>
+                  , 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    opacity
+                  </Text>
+                </Text>
+                <Text>
+                  : 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  <Text>
+                    1
+                  </Text>
+                </Text>
+                <Text>
+                  , 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    height
+                  </Text>
+                </Text>
+                <Text>
+                  : 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  <Text>
+                    50
+                  </Text>
+                </Text>
+                <Text>
+                  }}/&gt;
                 </Text>
               </Text>
             </View>
@@ -2608,6 +2700,91 @@ exports[`DatePicker Example Page 1`] = `
                 </Text>
                 <Text>
                   
+  style={{
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    width
+                  </Text>
+                </Text>
+                <Text>
+                  : 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  <Text>
+                    200
+                  </Text>
+                </Text>
+                <Text>
+                  , 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    opacity
+                  </Text>
+                </Text>
+                <Text>
+                  : 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  <Text>
+                    1
+                  </Text>
+                </Text>
+                <Text>
+                  , 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    height
+                  </Text>
+                </Text>
+                <Text>
+                  : 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  <Text>
+                    50
+                  </Text>
+                </Text>
+                <Text>
+                  }}
   dayOfWeekFormat={
                 </Text>
                 <Text
@@ -2814,11 +2991,12 @@ exports[`DeviceInfo Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -3238,7 +3416,6 @@ exports[`DeviceInfo Example Page 1`] = `
               }
             >
               IP address: 
-              
             </Text>
           </View>
           <View
@@ -3437,11 +3614,12 @@ exports[`Expander Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -3479,11 +3657,12 @@ exports[`Expander Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -3569,7 +3748,7 @@ exports[`Expander Example Page 1`] = `
           >
             <ExpanderView
               collapsedHeight={50}
-              expandedHeight={100}
+              expandedHeight={125}
               height={50}
               onCollapsing={[Function]}
               onExpanding={[Function]}
@@ -3634,7 +3813,7 @@ exports[`Expander Example Page 1`] = `
                   }
                 >
                   <Text>
-                    100
+                    125
                   </Text>
                 </Text>
                 <Text>
@@ -3799,7 +3978,7 @@ exports[`Expander Example Page 1`] = `
           >
             <ExpanderView
               collapsedHeight={75}
-              expandedHeight={150}
+              expandedHeight={200}
               height={75}
               onCollapsing={[Function]}
               onExpanding={[Function]}
@@ -3874,7 +4053,7 @@ exports[`Expander Example Page 1`] = `
                   }
                 >
                   <Text>
-                    150
+                    200
                   </Text>
                 </Text>
                 <Text>
@@ -4270,7 +4449,7 @@ exports[`Expander Example Page 1`] = `
             <ExpanderView
               collapsedHeight={50}
               expandDirection="up"
-              expandedHeight={100}
+              expandedHeight={125}
               height={50}
               onCollapsing={[Function]}
               onExpanding={[Function]}
@@ -4335,7 +4514,7 @@ exports[`Expander Example Page 1`] = `
                   }
                 >
                   <Text>
-                    100
+                    125
                   </Text>
                 </Text>
                 <Text>
@@ -4516,7 +4695,7 @@ exports[`Expander Example Page 1`] = `
               collapsedHeight={50}
               contentBackground="rgb(0, 122, 255)"
               contentBorderBrush="rgb(242, 242, 242)"
-              expandedHeight={100}
+              expandedHeight={125}
               headerBackground="rgb(216, 216, 216)"
               headerForegroundPointerOver="rgb(0, 122, 255)"
               height={50}
@@ -4585,7 +4764,7 @@ exports[`Expander Example Page 1`] = `
                   }
                 >
                   <Text>
-                    100
+                    125
                   </Text>
                 </Text>
                 <Text>
@@ -4810,7 +4989,7 @@ exports[`Expander Example Page 1`] = `
           >
             <ExpanderView
               collapsedHeight={50}
-              expandedHeight={100}
+              expandedHeight={125}
               height={50}
               onCollapsing={[Function]}
               onExpanding={[Function]}
@@ -5001,7 +5180,7 @@ exports[`Expander Example Page 1`] = `
                       }
                     >
                       <Text>
-                        {100}
+                        {125}
                       </Text>
                     </Text>
                     <Text>
@@ -5612,11 +5791,12 @@ exports[`FlatList Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -7456,11 +7636,12 @@ exports[`Flyout Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -7498,11 +7679,12 @@ exports[`Flyout Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -10292,6 +10474,959 @@ exports[`Flyout Example Page 1`] = `
 </View>
 `;
 
+exports[`Hello Example Page 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "height": "100%",
+      "paddingBottom": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 10,
+        "marginTop": 44,
+        "paddingRight": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 26,
+            "fontWeight": "200",
+          },
+          Object {
+            "color": "rgb(28, 28, 30)",
+          },
+        ]
+      }
+    >
+      Windows Hello
+    </Text>
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 3,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "margin": 2,
+              "paddingBottom": 5,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 5,
+            },
+            Object {
+              "backgroundColor": "rgb(216, 216, 216)",
+            },
+          ]
+        }
+        tooltip="This component wraps a native Windows XAML control: its visual appearance, animations, etc. will always match its native Windows counterpart."
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "fontSize": 15,
+                "fontWeight": "400",
+                "paddingRight": 4,
+              },
+              Object {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Wrapped Windows Control
+        </Text>
+        <XamlControl
+          foreground="rgb(28, 28, 30)"
+          symbol={57828}
+          type="Windows.UI.Xaml.Controls.SymbolIcon"
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 3,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "margin": 2,
+              "paddingBottom": 5,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 5,
+            },
+            Object {
+              "backgroundColor": "rgb(28, 28, 30)",
+            },
+          ]
+        }
+        tooltip="This component is not a part of React Native core. The package for this component must be explicitly added in order to have access to this component in a React Native project."
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "fontSize": 15,
+                "fontWeight": "400",
+                "paddingRight": 4,
+              },
+              Object {
+                "color": "rgb(216, 216, 216)",
+              },
+            ]
+          }
+        >
+          Community Module
+        </Text>
+        <XamlControl
+          foreground="rgb(216, 216, 216)"
+          symbol={57637}
+          type="Windows.UI.Xaml.Controls.SymbolIcon"
+        />
+      </View>
+    </View>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "paddingRight": 20,
+        },
+        Object {
+          "color": "rgb(28, 28, 30)",
+        },
+      ]
+    }
+  >
+    Use a Windows Hello features when you want to authenticate users of your app and allow them to log in using their biometrics data defined for their Windows account.
+  </Text>
+  <RCTScrollView
+    style={
+      Object {
+        "paddingRight": 20,
+      }
+    }
+  >
+    <View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "rgb(28, 28, 30)",
+              "fontSize": 20,
+              "marginBottom": 10,
+              "marginTop": 30,
+            }
+          }
+        >
+          Status of biometric device's availability.
+        </Text>
+        <View
+          style={
+            Object {
+              "borderColor": "rgb(216, 216, 216)",
+              "borderRadius": 2,
+              "borderWidth": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "padding": 15,
+              }
+            }
+          >
+            <View>
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#007AFF",
+                          "fontSize": 18,
+                          "margin": 8,
+                          "textAlign": "center",
+                        },
+                      ]
+                    }
+                  >
+                    Check for biometric device!
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderTopWidth": 1,
+                "borderWidth": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#E6E6E6",
+                  "flexGrow": 1,
+                  "padding": 5,
+                }
+              }
+            >
+              <Text
+                selectable={true}
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "Consolas",
+                  }
+                }
+              >
+                <Text>
+                  SignIn.getDeviceStatus()
+  .then(
+                </Text>
+                <Text
+                  style={Object {}}
+                >
+                  <Text
+                    style={Object {}}
+                  >
+                    <Text>
+                      result
+                    </Text>
+                  </Text>
+                  <Text>
+                     =&gt;
+                  </Text>
+                </Text>
+                <Text>
+                   {
+    
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    if
+                  </Text>
+                </Text>
+                <Text>
+                   (result === availabilityStatus.Available) {
+      Alert.alert(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    "Biometric device available!"
+                  </Text>
+                </Text>
+                <Text>
+                  , result.message);
+    } 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    else
+                  </Text>
+                </Text>
+                <Text>
+                   {
+      Alert.alert(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    \`Biometric device status: 
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      \${result.value}
+                    </Text>
+                  </Text>
+                  <Text>
+                    \`
+                  </Text>
+                </Text>
+                <Text>
+                  , result.message);
+    }
+  })
+  .catch(
+                </Text>
+                <Text
+                  style={Object {}}
+                >
+                  <Text
+                    style={Object {}}
+                  >
+                    <Text>
+                      error
+                    </Text>
+                  </Text>
+                  <Text>
+                     =&gt;
+                  </Text>
+                </Text>
+                <Text>
+                   {
+    Alert.alert(error.message);
+  });
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "rgb(28, 28, 30)",
+              "fontSize": 20,
+              "marginBottom": 10,
+              "marginTop": 30,
+            }
+          }
+        >
+          Biometric scan with default message
+        </Text>
+        <View
+          style={
+            Object {
+              "borderColor": "rgb(216, 216, 216)",
+              "borderRadius": 2,
+              "borderWidth": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "padding": 15,
+              }
+            }
+          >
+            <View>
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#007AFF",
+                          "fontSize": 18,
+                          "margin": 8,
+                          "textAlign": "center",
+                        },
+                      ]
+                    }
+                  >
+                    Request user verification
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderTopWidth": 1,
+                "borderWidth": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#E6E6E6",
+                  "flexGrow": 1,
+                  "padding": 5,
+                }
+              }
+            >
+              <Text
+                selectable={true}
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "Consolas",
+                  }
+                }
+              >
+                <Text>
+                  SignIn.requestConsentVerification()
+  .then(
+                </Text>
+                <Text
+                  style={Object {}}
+                >
+                  <Text
+                    style={Object {}}
+                  >
+                    <Text>
+                      result
+                    </Text>
+                  </Text>
+                  <Text>
+                     =&gt;
+                  </Text>
+                </Text>
+                <Text>
+                   {
+    
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    if
+                  </Text>
+                </Text>
+                <Text>
+                   (result === verificationResult.Verified) {
+      Alert.alert(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    "User verified SUCCESSFULLY!"
+                  </Text>
+                </Text>
+                <Text>
+                  , result.message);
+    } 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    else
+                  </Text>
+                </Text>
+                <Text>
+                   {
+      Alert.alert(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    \`User verification failed: 
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      \${result.value}
+                    </Text>
+                  </Text>
+                  <Text>
+                    \`
+                  </Text>
+                </Text>
+                <Text>
+                  , result.message);
+    }
+  })
+  .catch(
+                </Text>
+                <Text
+                  style={Object {}}
+                >
+                  <Text
+                    style={Object {}}
+                  >
+                    <Text>
+                      error
+                    </Text>
+                  </Text>
+                  <Text>
+                     =&gt;
+                  </Text>
+                </Text>
+                <Text>
+                   {
+    Alert.alert(error);
+  });
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "rgb(28, 28, 30)",
+              "fontSize": 20,
+              "marginBottom": 10,
+              "marginTop": 30,
+            }
+          }
+        >
+          Biometric scan with customized message: "Custom message displayed in verification prompt."
+        </Text>
+        <View
+          style={
+            Object {
+              "borderColor": "rgb(216, 216, 216)",
+              "borderRadius": 2,
+              "borderWidth": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "padding": 15,
+              }
+            }
+          >
+            <View>
+              <View
+                accessibilityRole="button"
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#007AFF",
+                          "fontSize": 18,
+                          "margin": 8,
+                          "textAlign": "center",
+                        },
+                      ]
+                    }
+                  >
+                    Request user verification
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderTopWidth": 1,
+                "borderWidth": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#E6E6E6",
+                  "flexGrow": 1,
+                  "padding": 5,
+                }
+              }
+            >
+              <Text
+                selectable={true}
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "Consolas",
+                  }
+                }
+              >
+                <Text>
+                  SignIn.requestConsentVerification(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    "Custom message displayed in verification prompt."
+                  </Text>
+                </Text>
+                <Text>
+                  )
+  .then(
+                </Text>
+                <Text
+                  style={Object {}}
+                >
+                  <Text
+                    style={Object {}}
+                  >
+                    <Text>
+                      result
+                    </Text>
+                  </Text>
+                  <Text>
+                     =&gt;
+                  </Text>
+                </Text>
+                <Text>
+                   {
+    
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    if
+                  </Text>
+                </Text>
+                <Text>
+                   (result === verificationResult.Verified) {
+      Alert.alert(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    "User verified SUCCESSFULLY!"
+                  </Text>
+                </Text>
+                <Text>
+                  , result.message);
+    } 
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                >
+                  <Text>
+                    else
+                  </Text>
+                </Text>
+                <Text>
+                   {
+      Alert.alert(
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#0000FF",
+                    }
+                  }
+                >
+                  <Text>
+                    \`User verification failed: 
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      \${result.value}
+                    </Text>
+                  </Text>
+                  <Text>
+                    \`
+                  </Text>
+                </Text>
+                <Text>
+                  , result.message);
+    }
+  })
+  .catch(
+                </Text>
+                <Text
+                  style={Object {}}
+                >
+                  <Text
+                    style={Object {}}
+                  >
+                    <Text>
+                      error
+                    </Text>
+                  </Text>
+                  <Text>
+                     =&gt;
+                  </Text>
+                </Text>
+                <Text>
+                   {
+    Alert.alert(error);
+  });
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "column",
+            "marginRight": 90,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "marginBottom": 10,
+                "marginRight": 30,
+                "marginTop": 30,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontSize": 20,
+                  "marginBottom": 10,
+                }
+              }
+            >
+              View page code on Github
+            </Text>
+            <XamlControl
+              content={
+                Object {
+                  "string": "Source Code",
+                }
+              }
+              navigateUri="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/WindowsHelloExamplePage.tsx"
+              type="Windows.UI.Xaml.Controls.HyperlinkButton"
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "marginBottom": 10,
+                "marginRight": 30,
+                "marginTop": 30,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgb(28, 28, 30)",
+                  "fontSize": 20,
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Feedback
+            </Text>
+            <XamlControl
+              content={
+                Object {
+                  "string": "Send feedback about this page",
+                }
+              }
+              navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
+              type="Windows.UI.Xaml.Controls.HyperlinkButton"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "marginBottom": 10,
+              "marginRight": 30,
+              "marginTop": 30,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+              }
+            }
+          >
+            Documentation
+          </Text>
+          <XamlControl
+            content={
+              Object {
+                "string": "React Native Windows Hello",
+              }
+            }
+            navigateUri="https://github.com/callstack/react-native-windows-hello#readme"
+            type="Windows.UI.Xaml.Controls.HyperlinkButton"
+          />
+          <XamlControl
+            content={
+              Object {
+                "string": "Wrapped XAML Control: Windows Hello",
+              }
+            }
+            navigateUri="https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0"
+            type="Windows.UI.Xaml.Controls.HyperlinkButton"
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
 exports[`Image Example Page 1`] = `
 <View
   style={
@@ -10337,11 +11472,12 @@ exports[`Image Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -10379,11 +11515,12 @@ exports[`Image Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -11628,11 +12765,12 @@ exports[`Permissions Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -12617,11 +13755,12 @@ exports[`Picker Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -12659,11 +13798,12 @@ exports[`Picker Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -12750,7 +13890,7 @@ exports[`Picker Example Page 1`] = `
             <View
               style={
                 Object {
-                  "height": 32,
+                  "height": 50,
                   "width": 200,
                 }
               }
@@ -12874,7 +14014,7 @@ exports[`Picker Example Page 1`] = `
                   }
                 >
                   <Text>
-                    100
+                    200
                   </Text>
                 </Text>
                 <Text>
@@ -13185,7 +14325,7 @@ exports[`Picker Example Page 1`] = `
             <View
               style={
                 Object {
-                  "height": 32,
+                  "height": 50,
                   "width": 200,
                 }
               }
@@ -13309,7 +14449,7 @@ exports[`Picker Example Page 1`] = `
                   }
                 >
                   <Text>
-                    100
+                    200
                   </Text>
                 </Text>
                 <Text>
@@ -13634,7 +14774,7 @@ exports[`Picker Example Page 1`] = `
             <View
               style={
                 Object {
-                  "height": 32,
+                  "height": 50,
                   "width": 200,
                 }
               }
@@ -13758,7 +14898,7 @@ exports[`Picker Example Page 1`] = `
                   }
                 >
                   <Text>
-                    100
+                    200
                   </Text>
                 </Text>
                 <Text>
@@ -14221,11 +15361,12 @@ exports[`Popup Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -14263,11 +15404,12 @@ exports[`Popup Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -17122,11 +18264,12 @@ exports[`Pressable Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -18352,7 +19495,6 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 Most recent event: 
-                
               </Text>
             </View>
           </View>
@@ -18899,11 +20041,12 @@ exports[`Print Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -19306,11 +20449,12 @@ exports[`ProgressView Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -19801,11 +20945,12 @@ exports[`ScrollView Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -19843,11 +20988,12 @@ exports[`ScrollView Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -21202,11 +22348,12 @@ exports[`SensitiveInfo Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -22698,11 +23845,12 @@ exports[`Slider Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -22740,11 +23888,12 @@ exports[`Slider Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -23784,11 +24933,12 @@ exports[`Switch Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -23826,11 +24976,12 @@ exports[`Switch Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -24356,11 +25507,12 @@ exports[`Text Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -24398,11 +25550,12 @@ exports[`Text Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -25836,11 +26989,12 @@ exports[`TextInput Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -25878,11 +27032,12 @@ exports[`TextInput Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -25974,7 +27129,6 @@ exports[`TextInput Example Page 1`] = `
                   "borderColor": "rgb(216, 216, 216)",
                   "borderWidth": 1,
                   "color": "rgb(28, 28, 30)",
-                  "height": 32,
                 }
               }
               value=""
@@ -26010,34 +27164,6 @@ exports[`TextInput Example Page 1`] = `
                 <Text>
                   &lt;TextInput
   style={{
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    height
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    40
-                  </Text>
-                </Text>
-                <Text>
-                  , 
                 </Text>
                 <Text
                   style={
@@ -26126,7 +27252,6 @@ exports[`TextInput Example Page 1`] = `
                   "borderColor": "rgb(216, 216, 216)",
                   "borderWidth": 1,
                   "color": "rgb(28, 28, 30)",
-                  "height": 64,
                 }
               }
               value=""
@@ -26162,34 +27287,6 @@ exports[`TextInput Example Page 1`] = `
                 <Text>
                   &lt;TextInput
   style={{
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    height
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    80
-                  </Text>
-                </Text>
-                <Text>
-                  , 
                 </Text>
                 <Text
                   style={
@@ -26296,7 +27393,6 @@ exports[`TextInput Example Page 1`] = `
                   "color": "rgb(255, 255, 255)",
                   "fontStyle": "italic",
                   "fontWeight": "700",
-                  "height": 32,
                 }
               }
               value=""
@@ -26332,35 +27428,6 @@ exports[`TextInput Example Page 1`] = `
                 <Text>
                   &lt;TextInput
   style={{
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    height
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    40
-                  </Text>
-                </Text>
-                <Text>
-                  ,
     
                 </Text>
                 <Text
@@ -26540,7 +27607,6 @@ exports[`TextInput Example Page 1`] = `
                 Object {
                   "borderColor": "rgb(216, 216, 216)",
                   "borderWidth": 1,
-                  "height": 32,
                 }
               }
               value=""
@@ -26576,34 +27642,6 @@ exports[`TextInput Example Page 1`] = `
                 <Text>
                   &lt;TextInput
   style={{
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    height
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    40
-                  </Text>
-                </Text>
-                <Text>
-                  , 
                 </Text>
                 <Text
                   style={
@@ -26873,11 +27911,12 @@ exports[`TextToSpeech Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -27303,11 +28342,12 @@ exports[`TimePicker Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -27345,11 +28385,12 @@ exports[`TimePicker Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -27558,7 +28599,7 @@ exports[`TimePicker Example Page 1`] = `
                   }
                 >
                   <Text>
-                    30
+                    50
                   </Text>
                 </Text>
                 <Text>
@@ -27723,7 +28764,7 @@ exports[`TimePicker Example Page 1`] = `
                   }
                 >
                   <Text>
-                    30
+                    50
                   </Text>
                 </Text>
                 <Text>
@@ -27934,11 +28975,12 @@ exports[`TouchableHighlight Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -28041,7 +29083,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                   "borderRadius": 3,
                   "height": 40,
                   "justifyContent": "center",
-                  "width": 150,
                 }
               }
             >
@@ -28111,35 +29152,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                 >
                   <Text>
                     40
-                  </Text>
-                </Text>
-                <Text>
-                  ,
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    width
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    150
                   </Text>
                 </Text>
                 <Text>
@@ -28432,7 +29444,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                   "borderRadius": 3,
                   "height": 40,
                   "justifyContent": "center",
-                  "width": 150,
                 }
               }
             >
@@ -28502,35 +29513,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                 >
                   <Text>
                     40
-                  </Text>
-                </Text>
-                <Text>
-                  ,
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    width
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    150
                   </Text>
                 </Text>
                 <Text>
@@ -28824,7 +29806,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                   "borderRadius": 3,
                   "height": 40,
                   "justifyContent": "center",
-                  "width": 150,
                 }
               }
             >
@@ -28894,35 +29875,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                 >
                   <Text>
                     40
-                  </Text>
-                </Text>
-                <Text>
-                  ,
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    width
-                  </Text>
-                </Text>
-                <Text>
-                  : 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#FF0000",
-                    }
-                  }
-                >
-                  <Text>
-                    150
                   </Text>
                 </Text>
                 <Text>
@@ -29353,11 +30305,12 @@ exports[`TouchableOpacity Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -31637,11 +32590,12 @@ exports[`View Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -31679,11 +32633,12 @@ exports[`View Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(0, 122, 255)",
@@ -35168,11 +36123,12 @@ exports[`WebView Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(216, 216, 216)",
@@ -35210,11 +36166,12 @@ exports[`WebView Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
@@ -35742,957 +36699,6 @@ exports[`WebView Example Page 1`] = `
 </View>
 `;
 
-exports[`WindowsHello Example Page 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "height": "100%",
-      "paddingBottom": 10,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "marginBottom": 10,
-        "marginTop": 44,
-        "paddingRight": 20,
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "fontSize": 26,
-            "fontWeight": "200",
-          },
-          Object {
-            "color": "rgb(28, 28, 30)",
-          },
-        ]
-      }
-    >
-      Windows Hello
-    </Text>
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "borderRadius": 3,
-              "flexDirection": "row",
-              "height": 28,
-              "justifyContent": "center",
-              "margin": 2,
-              "paddingLeft": 10,
-              "paddingRight": 10,
-            },
-            Object {
-              "backgroundColor": "rgb(216, 216, 216)",
-            },
-          ]
-        }
-        tooltip="This component wraps a native Windows XAML control: its visual appearance, animations, etc. will always match its native Windows counterpart."
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontSize": 15,
-                "fontWeight": "400",
-                "paddingRight": 4,
-              },
-              Object {
-                "color": "rgb(28, 28, 30)",
-              },
-            ]
-          }
-        >
-          Wrapped Windows Control
-        </Text>
-        <XamlControl
-          foreground="rgb(28, 28, 30)"
-          symbol={57828}
-          type="Windows.UI.Xaml.Controls.SymbolIcon"
-        />
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "borderRadius": 3,
-              "flexDirection": "row",
-              "height": 28,
-              "justifyContent": "center",
-              "margin": 2,
-              "paddingLeft": 10,
-              "paddingRight": 10,
-            },
-            Object {
-              "backgroundColor": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-        tooltip="This component is not a part of React Native core. The package for this component must be explicitly added in order to have access to this component in a React Native project."
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontSize": 15,
-                "fontWeight": "400",
-                "paddingRight": 4,
-              },
-              Object {
-                "color": "rgb(216, 216, 216)",
-              },
-            ]
-          }
-        >
-          Community Module
-        </Text>
-        <XamlControl
-          foreground="rgb(216, 216, 216)"
-          symbol={57637}
-          type="Windows.UI.Xaml.Controls.SymbolIcon"
-        />
-      </View>
-    </View>
-  </View>
-  <Text
-    style={
-      Array [
-        Object {
-          "paddingRight": 20,
-        },
-        Object {
-          "color": "rgb(28, 28, 30)",
-        },
-      ]
-    }
-  >
-    Use a Windows Hello features when you want to authenticate users of your app and allow them to log in using their biometrics data defined for their Windows account.
-  </Text>
-  <RCTScrollView
-    style={
-      Object {
-        "paddingRight": 20,
-      }
-    }
-  >
-    <View>
-      <View>
-        <Text
-          style={
-            Object {
-              "color": "rgb(28, 28, 30)",
-              "fontSize": 20,
-              "marginBottom": 10,
-              "marginTop": 30,
-            }
-          }
-        >
-          Status of biometric device's availability.
-        </Text>
-        <View
-          style={
-            Object {
-              "borderColor": "rgb(216, 216, 216)",
-              "borderRadius": 2,
-              "borderWidth": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "padding": 15,
-              }
-            }
-          >
-            <View>
-              <View
-                accessibilityRole="button"
-                accessible={true}
-                collapsable={false}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                    ]
-                  }
-                >
-                  <Text
-                    style={
-                      Array [
-                        Object {
-                          "color": "#007AFF",
-                          "fontSize": 18,
-                          "margin": 8,
-                          "textAlign": "center",
-                        },
-                      ]
-                    }
-                  >
-                    Check for biometric device!
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderTopWidth": 1,
-                "borderWidth": 0,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#E6E6E6",
-                  "flexGrow": 1,
-                  "padding": 5,
-                }
-              }
-            >
-              <Text
-                selectable={true}
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "Consolas",
-                  }
-                }
-              >
-                <Text>
-                  SignIn.getDeviceStatus()
-  .then(
-                </Text>
-                <Text
-                  style={Object {}}
-                >
-                  <Text
-                    style={Object {}}
-                  >
-                    <Text>
-                      result
-                    </Text>
-                  </Text>
-                  <Text>
-                     =&gt;
-                  </Text>
-                </Text>
-                <Text>
-                   {
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    if
-                  </Text>
-                </Text>
-                <Text>
-                   (result === availabilityStatus.Available) {
-      Alert.alert(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    "Biometric device available!"
-                  </Text>
-                </Text>
-                <Text>
-                  , result.message);
-    } 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    else
-                  </Text>
-                </Text>
-                <Text>
-                   {
-      Alert.alert(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    \`Biometric device status: 
-                  </Text>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      \${result.value}
-                    </Text>
-                  </Text>
-                  <Text>
-                    \`
-                  </Text>
-                </Text>
-                <Text>
-                  , result.message);
-    }
-  })
-  .catch(
-                </Text>
-                <Text
-                  style={Object {}}
-                >
-                  <Text
-                    style={Object {}}
-                  >
-                    <Text>
-                      error
-                    </Text>
-                  </Text>
-                  <Text>
-                     =&gt;
-                  </Text>
-                </Text>
-                <Text>
-                   {
-    Alert.alert(error.message);
-  });
-                </Text>
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View>
-        <Text
-          style={
-            Object {
-              "color": "rgb(28, 28, 30)",
-              "fontSize": 20,
-              "marginBottom": 10,
-              "marginTop": 30,
-            }
-          }
-        >
-          Biometric scan with default message
-        </Text>
-        <View
-          style={
-            Object {
-              "borderColor": "rgb(216, 216, 216)",
-              "borderRadius": 2,
-              "borderWidth": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "padding": 15,
-              }
-            }
-          >
-            <View>
-              <View
-                accessibilityRole="button"
-                accessible={true}
-                collapsable={false}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                    ]
-                  }
-                >
-                  <Text
-                    style={
-                      Array [
-                        Object {
-                          "color": "#007AFF",
-                          "fontSize": 18,
-                          "margin": 8,
-                          "textAlign": "center",
-                        },
-                      ]
-                    }
-                  >
-                    Request user verification
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderTopWidth": 1,
-                "borderWidth": 0,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#E6E6E6",
-                  "flexGrow": 1,
-                  "padding": 5,
-                }
-              }
-            >
-              <Text
-                selectable={true}
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "Consolas",
-                  }
-                }
-              >
-                <Text>
-                  SignIn.requestConsentVerification()
-  .then(
-                </Text>
-                <Text
-                  style={Object {}}
-                >
-                  <Text
-                    style={Object {}}
-                  >
-                    <Text>
-                      result
-                    </Text>
-                  </Text>
-                  <Text>
-                     =&gt;
-                  </Text>
-                </Text>
-                <Text>
-                   {
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    if
-                  </Text>
-                </Text>
-                <Text>
-                   (result === verificationResult.Verified) {
-      Alert.alert(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    "User verified SUCCESSFULLY!"
-                  </Text>
-                </Text>
-                <Text>
-                  , result.message);
-    } 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    else
-                  </Text>
-                </Text>
-                <Text>
-                   {
-      Alert.alert(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    \`User verification failed: 
-                  </Text>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      \${result.value}
-                    </Text>
-                  </Text>
-                  <Text>
-                    \`
-                  </Text>
-                </Text>
-                <Text>
-                  , result.message);
-    }
-  })
-  .catch(
-                </Text>
-                <Text
-                  style={Object {}}
-                >
-                  <Text
-                    style={Object {}}
-                  >
-                    <Text>
-                      error
-                    </Text>
-                  </Text>
-                  <Text>
-                     =&gt;
-                  </Text>
-                </Text>
-                <Text>
-                   {
-    Alert.alert(error);
-  });
-                </Text>
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View>
-        <Text
-          style={
-            Object {
-              "color": "rgb(28, 28, 30)",
-              "fontSize": 20,
-              "marginBottom": 10,
-              "marginTop": 30,
-            }
-          }
-        >
-          Biometric scan with customized message: "Custom message displayed in verification prompt."
-        </Text>
-        <View
-          style={
-            Object {
-              "borderColor": "rgb(216, 216, 216)",
-              "borderRadius": 2,
-              "borderWidth": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "padding": 15,
-              }
-            }
-          >
-            <View>
-              <View
-                accessibilityRole="button"
-                accessible={true}
-                collapsable={false}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {},
-                    ]
-                  }
-                >
-                  <Text
-                    style={
-                      Array [
-                        Object {
-                          "color": "#007AFF",
-                          "fontSize": 18,
-                          "margin": 8,
-                          "textAlign": "center",
-                        },
-                      ]
-                    }
-                  >
-                    Request user verification
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderTopWidth": 1,
-                "borderWidth": 0,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#E6E6E6",
-                  "flexGrow": 1,
-                  "padding": 5,
-                }
-              }
-            >
-              <Text
-                selectable={true}
-                style={
-                  Object {
-                    "color": "#000000",
-                    "fontFamily": "Consolas",
-                  }
-                }
-              >
-                <Text>
-                  SignIn.requestConsentVerification(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    "Custom message displayed in verification prompt."
-                  </Text>
-                </Text>
-                <Text>
-                  )
-  .then(
-                </Text>
-                <Text
-                  style={Object {}}
-                >
-                  <Text
-                    style={Object {}}
-                  >
-                    <Text>
-                      result
-                    </Text>
-                  </Text>
-                  <Text>
-                     =&gt;
-                  </Text>
-                </Text>
-                <Text>
-                   {
-    
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    if
-                  </Text>
-                </Text>
-                <Text>
-                   (result === verificationResult.Verified) {
-      Alert.alert(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    "User verified SUCCESSFULLY!"
-                  </Text>
-                </Text>
-                <Text>
-                  , result.message);
-    } 
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#000000",
-                    }
-                  }
-                >
-                  <Text>
-                    else
-                  </Text>
-                </Text>
-                <Text>
-                   {
-      Alert.alert(
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#0000FF",
-                    }
-                  }
-                >
-                  <Text>
-                    \`User verification failed: 
-                  </Text>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      \${result.value}
-                    </Text>
-                  </Text>
-                  <Text>
-                    \`
-                  </Text>
-                </Text>
-                <Text>
-                  , result.message);
-    }
-  })
-  .catch(
-                </Text>
-                <Text
-                  style={Object {}}
-                >
-                  <Text
-                    style={Object {}}
-                  >
-                    <Text>
-                      error
-                    </Text>
-                  </Text>
-                  <Text>
-                     =&gt;
-                  </Text>
-                </Text>
-                <Text>
-                   {
-    Alert.alert(error);
-  });
-                </Text>
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "flexDirection": "column",
-            "marginRight": 90,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "alignItems": "flex-start",
-                "marginBottom": 10,
-                "marginRight": 30,
-                "marginTop": 30,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "rgb(28, 28, 30)",
-                  "fontSize": 20,
-                  "marginBottom": 10,
-                }
-              }
-            >
-              View page code on Github
-            </Text>
-            <XamlControl
-              content={
-                Object {
-                  "string": "Source Code",
-                }
-              }
-              navigateUri="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/WindowsHelloExamplePage.tsx"
-              type="Windows.UI.Xaml.Controls.HyperlinkButton"
-            />
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "flex-start",
-                "marginBottom": 10,
-                "marginRight": 30,
-                "marginTop": 30,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "rgb(28, 28, 30)",
-                  "fontSize": 20,
-                  "marginBottom": 10,
-                }
-              }
-            >
-              Feedback
-            </Text>
-            <XamlControl
-              content={
-                Object {
-                  "string": "Send feedback about this page",
-                }
-              }
-              navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
-              type="Windows.UI.Xaml.Controls.HyperlinkButton"
-            />
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "marginBottom": 10,
-              "marginRight": 30,
-              "marginTop": 30,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "rgb(28, 28, 30)",
-                "fontSize": 20,
-                "marginBottom": 10,
-              }
-            }
-          >
-            Documentation
-          </Text>
-          <XamlControl
-            content={
-              Object {
-                "string": "React Native Windows Hello",
-              }
-            }
-            navigateUri="https://github.com/callstack/react-native-windows-hello#readme"
-            type="Windows.UI.Xaml.Controls.HyperlinkButton"
-          />
-          <XamlControl
-            content={
-              Object {
-                "string": "Wrapped XAML Control: Windows Hello",
-              }
-            }
-            navigateUri="https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0"
-            type="Windows.UI.Xaml.Controls.HyperlinkButton"
-          />
-        </View>
-      </View>
-    </View>
-  </RCTScrollView>
-</View>
-`;
-
 exports[`Xaml Example Page 1`] = `
 <View
   style={
@@ -36738,11 +36744,12 @@ exports[`Xaml Example Page 1`] = `
               "alignItems": "center",
               "borderRadius": 3,
               "flexDirection": "row",
-              "height": 28,
               "justifyContent": "center",
               "margin": 2,
+              "paddingBottom": 5,
               "paddingLeft": 10,
               "paddingRight": 10,
+              "paddingTop": 5,
             },
             Object {
               "backgroundColor": "rgb(28, 28, 30)",
