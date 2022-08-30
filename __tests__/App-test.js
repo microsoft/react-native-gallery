@@ -1,5 +1,5 @@
 import React from 'react';
-import {create} from 'react-test-renderer';
+import {create, act} from 'react-test-renderer';
 import {ButtonExamplePage} from '../src/examples/ButtonExamplePage';
 import {TextExamplePage} from '../src/examples/TextExamplePage';
 import {TextInputExamplePage} from '../src/examples/TextInputExamplePage';
@@ -56,20 +56,37 @@ test('Config Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('DatePicker Example Page', () => {
-  const tree = create(<DatePickerExamplePage />).toJSON();
+test('DatePicker Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<DatePickerExamplePage />).toJSON();
+  });
   expect(tree).toMatchSnapshot();
 });
 
-test('DeviceInfo Example Page', () => {
-  const tree = create(<DeviceInfoExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('DeviceInfo Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<DeviceInfoExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Expander Example Page', () => {
-  const tree = create(<ExpanderExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Expander Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<ExpanderExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
+
+/*test('Permissions Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<PermissionsExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
+});*/
 
 test('FlatList Example Page', () => {
   const tree = create(<FlatListExamplePage />).toJSON();
@@ -83,11 +100,6 @@ test('Flyout Example Page', () => {
 
 test('Image Example Page', () => {
   const tree = create(<ImageExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
-
-test('Permissions Example Page', () => {
-  const tree = create(<PermissionsExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -151,14 +163,20 @@ test('TextInput Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('TimePicker Example Page', () => {
-  const tree = create(<TimePickerExamplePage />).toJSON();
+test('TimePicker Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<TimePickerExamplePage />).toJSON();
+  });
   expect(tree).toMatchSnapshot();
 });
 
-test('TextToSpeech Example Page', () => {
-  const tree = create(<TTSExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('TextToSpeech Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<TTSExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 test('TouchableHighlight Example Page', () => {
