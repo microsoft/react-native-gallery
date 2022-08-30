@@ -4405,7 +4405,7 @@ exports[`Expander Example Page 1`] = `
                 </Text>
               </View>
               <RNDateTimePicker
-                date={1661898750619}
+                date={0}
                 displayIOS="default"
                 enabled={true}
                 mode="date"
