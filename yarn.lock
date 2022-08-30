@@ -7417,10 +7417,10 @@ react-native-windows@0.69.0:
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
 
-react-native-xaml@^0.0.64:
-  version "0.0.64"
-  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.64.tgz#edb0ec5227e89f6f3f9fce033d87751fde6c9a83"
-  integrity sha512-QqHoj1zP0aIRlmqtz8UxxUOzsqbN98NHTET5RPLQr4KnDHqNtGL8JAbrtvoIgP0h7ZFTpC+tKdxlOIWaBdEpHg==
+react-native-xaml@^0.0.66:
+  version "0.0.66"
+  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.66.tgz#a01018cc0b4e6f0773bf71f7b35c508d176de3f7"
+  integrity sha512-qp8JOSDtf6bz0n0F17RdVDOoTedfYLpONKjZnoONU/iWEoIinFkcJ2zvw3lHFziVISkJzFqbH2ar8hHt2ncVOw==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
