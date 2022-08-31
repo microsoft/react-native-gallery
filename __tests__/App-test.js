@@ -17,6 +17,7 @@ import {CheckBoxExamplePage} from '../src/examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from '../src/examples/ConfigExamplePage';
 import {DatePickerExamplePage} from '../src/examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from '../src/examples/TimePickerExamplePage';
+// Issue: Usage of UIManager.getViewManangerConfig returning undefined
 //import {SketchExamplePage} from '../src/examples/SketchExamplePage';
 import {SliderExamplePage} from '../src/examples/SliderExamplePage';
 import {PermissionsExamplePage} from '../src/examples/PermissionsExamplePage';
@@ -28,6 +29,7 @@ import {WebViewExamplePage} from '../src/examples/WebViewExamplePage';
 import {SensitiveInfoExamplePage} from '../src/examples/SensitiveInfoExamplePage';
 import {ProgressViewExamplePage} from '../src/examples/ProgressViewExamplePage';
 import {XamlExamplePage} from '../src/examples/XamlExamplePage';
+// Issue: Usage of UIManager.getViewManangerConfig returning undefined
 //import {TrackPlayerExamplePage} from '../src/examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from '../src/examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
@@ -80,6 +82,7 @@ test('Expander Example Page', async () => {
   expect(tree.toJSON()).toMatchSnapshot();
 });
 
+// Issue: Tests hang when this test is enabled
 /*test('Permissions Example Page', async () => {
   let tree;
   await act(() => {
