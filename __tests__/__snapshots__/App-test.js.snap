@@ -27580,7 +27580,6 @@ exports[`TouchableHighlight Example Page 1`] = `
               }
             >
               <Text
-                accessibilityValue="0"
                 style={
                   Object {
                     "color": "white",
@@ -28168,6 +28167,7 @@ exports[`TouchableOpacity Example Page 1`] = `
             <View
               accessibilityLabel="simple example touchableOpacity"
               accessibilityRole="button"
+              accessibilityValue="0"
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -29388,7 +29388,6 @@ exports[`TouchableOpacity Example Page 1`] = `
               }
             >
               <Text
-                accessibilityValue="0"
                 style={
                   Object {
                     "color": "white",

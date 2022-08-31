@@ -109,7 +109,6 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityRole="button"
           accessibilityLabel={'example TouchableHighlight counter'}
           accessibilityHint={'click me to increase the example counter'}
-          accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
             backgroundColor: colors.text,
@@ -121,8 +120,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
             setTitle(title + 1);
           }}
           activeOpacity={0.2}
-          underlayColor={colors.text}
-          accessibilityValue={String(title)}>
+          underlayColor={colors.text}>
           <Text style={{color: 'white'}}>{String(title)}</Text>
         </TouchableHighlight>
       </Example>
