@@ -6,6 +6,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "test:update": "jest -u",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "windows": "react-native run-windows"
   },
@@ -39,7 +40,7 @@
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.18.2",
     "react-native-windows": "0.69.0",
-    "react-native-xaml": "^0.0.64"
+    "react-native-xaml": "^0.0.66"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -47,22 +48,26 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@types/jest": "^26.0.13",
     "@types/lowlight": "^0.0.1",
-    "@types/react": "^17.0.37",
-    "@types/react-native": "^0.66.8",
-    "@types/react-test-renderer": "^17.0.1",
-    "babel-jest": "^25.1.0",
+    "@types/react": "^18.0.17",
+    "@types/react-native": "^0.69.5",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^26.6.3",
     "eslint": "^6.5.1",
-    "jest": "^25.1.0",
-    "metro-config": "^0.67.0",
+    "jest": "^26.6.3",
+    "metro-config": "^0.72.1",
     "react-native-windows-hello": "^1.1.0",
-    "react-test-renderer": "17.0.2",
+    "react-test-renderer": "18.1.0",
     "typescript": "^4.0.2"
   },
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/"
-    ]
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts)/)"
+    ],
+    "setupFiles": ["<rootDir>/jest-setup.js"]
   },
   "main": "src\\index.js",
   "react-native": "src\\index.js",

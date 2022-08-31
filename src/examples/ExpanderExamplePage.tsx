@@ -50,7 +50,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
   <DateTimePicker value={date1} mode="date" />
 </Expander>`;
 
-  const [date1] = useState(new Date());
+  const [date1] = useState(new Date(0));
 
   return (
     <Page
