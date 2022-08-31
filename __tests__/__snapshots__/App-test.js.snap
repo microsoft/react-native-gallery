@@ -27560,6 +27560,11 @@ exports[`TouchableHighlight Example Page 1`] = `
               accessibilityHint="click me to increase the example counter"
               accessibilityLabel="example TouchableHighlight counter"
               accessibilityRole="button"
+              accessibilityValue={
+                Object {
+                  "text": "0",
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -28167,7 +28172,6 @@ exports[`TouchableOpacity Example Page 1`] = `
             <View
               accessibilityLabel="simple example touchableOpacity"
               accessibilityRole="button"
-              accessibilityValue="0"
               accessible={true}
               collapsable={false}
               focusable={true}
@@ -29365,6 +29369,11 @@ exports[`TouchableOpacity Example Page 1`] = `
               accessibilityHint="click me to increase the example counter"
               accessibilityLabel="example TouchableOpacity counter"
               accessibilityRole="button"
+              accessibilityValue={
+                Object {
+                  "text": "0",
+                }
+              }
               accessible={true}
               collapsable={false}
               focusable={true}
