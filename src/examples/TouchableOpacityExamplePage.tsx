@@ -123,7 +123,8 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
-          activeOpacity={0.5}>
+          activeOpacity={0.5}
+          accessibilityValue={String(title)}>
           <Text style={{color: colors.text}}>TouchableOpacity</Text>
         </TouchableOpacity>
       </Example>
@@ -179,9 +180,7 @@ onPress={() => {}}>
             setTitle(title + 1);
           }}
           activeOpacity={0.8}>
-          <Text style={{color: 'white'}} accessibilityValue={String(title)}>
-            {String(title)}
-          </Text>
+          <Text style={{color: 'white'}}>{String(title)}</Text>
         </TouchableOpacity>
       </Example>
       <Example

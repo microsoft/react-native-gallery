@@ -120,7 +120,8 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
             setTitle(title + 1);
           }}
           activeOpacity={0.2}
-          underlayColor={colors.text}>
+          underlayColor={colors.text}
+          accessibilityValue={String(title)}>
           <Text style={{color: 'white'}} accessibilityValue={String(title)}>
             {String(title)}
           </Text>
