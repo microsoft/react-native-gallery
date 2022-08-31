@@ -179,7 +179,9 @@ onPress={() => {}}>
             setTitle(title + 1);
           }}
           activeOpacity={0.8}>
-          <Text style={{color: 'white'}}>{String(title)}</Text>
+          <Text style={{color: 'white'}} accessibilityValue={String(title)}>
+            {String(title)}
+          </Text>
         </TouchableOpacity>
       </Example>
       <Example
