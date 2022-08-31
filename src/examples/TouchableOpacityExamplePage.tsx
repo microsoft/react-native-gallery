@@ -123,8 +123,7 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
-          activeOpacity={0.5}
-          accessibilityValue={String(title)}>
+          activeOpacity={0.5}>
           <Text style={{color: colors.text}}>TouchableOpacity</Text>
         </TouchableOpacity>
       </Example>
@@ -168,6 +167,7 @@ onPress={() => {}}>
           accessibilityRole="button"
           accessibilityLabel={'example TouchableOpacity counter'}
           accessibilityHint={'click me to increase the example counter'}
+          accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
             width: 150,
