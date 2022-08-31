@@ -109,6 +109,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityRole="button"
           accessibilityLabel={'example TouchableHighlight counter'}
           accessibilityHint={'click me to increase the example counter'}
+          accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
             backgroundColor: colors.text,

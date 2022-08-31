@@ -168,6 +168,7 @@ onPress={() => {}}>
           accessibilityRole="button"
           accessibilityLabel={'example TouchableOpacity counter'}
           accessibilityHint={'click me to increase the example counter'}
+          accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
             width: 150,
