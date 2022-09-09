@@ -1,5 +1,5 @@
 'use strict';
-import {View} from 'react-native';
+import {TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -21,7 +21,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     height: 50,
     width: 100,
   }}>
-  <View style={{flex: 1, backgroundColor: colros.text, borderRadius: 2}} />
+  <View style={{flex: 1, backgroundColor: colors.text, borderRadius: 2}} />
   <View
     style={{flex: 2, backgroundColor: colors.primary, borderRadius: 2}} />
 </View>`;
@@ -171,7 +171,10 @@ style={{
             backgroundColor: colors.text,
             borderRadius: 2,
           }}
-        />
+          accessible={true}
+          focusable={true}>
+          <TextInput />
+        </View>
       </Example>
       <Example title="Nested Views with flexbox styling." code={example3jsx}>
         <View

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -6,6 +6,7 @@ import {
   Text,
   useColorScheme,
   ScrollView,
+  Pressable,
 } from 'react-native';
 import {
   NavigationContainer,
@@ -15,7 +16,10 @@ import {
   createDrawerNavigator,
   DrawerItem,
   getIsDrawerOpenFromState,
+  DrawerContentScrollView,
+  DrawerItemList,
 } from '@react-navigation/drawer';
+import {createStackNavigator} from '@react-navigation/stack';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
@@ -61,8 +65,15 @@ const styles = StyleSheet.create({
     backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
     height: '100%',
   },
+  drawerItem: {
+    padding: 10,
+    height: 40,
+    flexDirection: 'row',
+    paddingLeft: 15,
+  },
   drawerText: {
     color: PlatformColor('TextControlForeground'),
+    paddingLeft: 10,
   },
   drawerTopDivider: {
     borderTopWidth: 0.5,
@@ -78,34 +89,37 @@ const styles = StyleSheet.create({
 
 // @ts-ignore
 function RNGalleryScreenWrapper({navigation}) {
-  const state = useNavigationState((newState) => newState);
-  const Component = RNGalleryList[state.index].component;
-  const isDrawerOpen = getIsDrawerOpenFromState(navigation.getState());
-
   return (
     <View style={styles.container}>
-      <TouchableHighlight
+      <Pressable
         accessibilityRole="button"
         accessibilityLabel="Navigation bar"
         accessibilityState={{expanded: isDrawerOpen}}
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-          width: 48,
+          width: isDrawerOpen ? 200 : 48,
+          height: '100%',
         }}
-        underlayColor={PlatformColor('NavigationViewDefaultPaneBackground')}
-        onPress={() => navigation.openDrawer()}>
-        <TouchableHighlight
-          accessibilityRole="button"
-          accessibilityLabel="Navigation bar hambuger icon"
-          {...{tooltip: 'Expand Menu'}}
-          accessibilityState={{expanded: isDrawerOpen}}
-          style={styles.menu}
-          onPress={() => navigation.openDrawer()}
-          activeOpacity={0.5783}
-          underlayColor="rgba(0, 0, 0, 0.0241);">
-          <Text style={styles.icon}>&#xE700;</Text>
-        </TouchableHighlight>
-      </TouchableHighlight>
+        onPress={() => {
+          isDrawerOpen ? setIsDrawerOpen(false) : setIsDrawerOpen(true);
+        }}>
+        <View>
+          <TouchableHighlight
+            accessibilityRole="button"
+            accessibilityLabel="Navigation bar hamburger icon"
+            {...{tooltip: 'Expand Menu'}}
+            accessibilityState={{expanded: isDrawerOpen}}
+            style={styles.menu}
+            onPress={() =>
+              isDrawerOpen ? setIsDrawerOpen(false) : setIsDrawerOpen(true)
+            }
+            activeOpacity={0.5783}
+            underlayColor="rgba(0, 0, 0, 0.0241);">
+            <Text style={styles.icon}>&#xE700;</Text>
+          </TouchableHighlight>
+          {RenderDrawer({navigation}, isDrawerOpen)}
+        </View>
+      </Pressable>
       <View style={styles.navItem}>
         <Component appVersion={appVersion} navigation={navigation} />
       </View>
@@ -113,99 +127,41 @@ function RNGalleryScreenWrapper({navigation}) {
   );
 }
 
-function RenderDrawerItem(props, i: number) {
-  const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
+function RenderDrawerItem({navigation}, i: number) {
+  //const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
   return (
-    <DrawerItem
-      importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
+    <Pressable
+      //importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
       key={RNGalleryList[i].key}
-      label={() => {
-        return <Text style={styles.drawerText}>{RNGalleryList[i].key}</Text>;
-      }}
-      onPress={() => props.navigation.navigate(RNGalleryList[i].key)}
-      icon={() => {
-        return <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>;
-      }}
+      onPress={() => navigation.navigate(RNGalleryList[i].key)}
       accessibilityLabel={RNGalleryList[i].key}
-    />
+      style={styles.drawerItem}>
+      <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>
+      <Text style={styles.drawerText}>{RNGalleryList[i].key}</Text>
+    </Pressable>
   );
 }
 
-function RenderDrawer(props) {
+function RenderDrawer({navigation}, isDrawerOpen: boolean) {
+  if (!isDrawerOpen) {
+    return [];
+  }
   var items = [];
   // Begin iteration at index 2 because Home and
   // Settings drawer items have already been manually loaded.
   for (var i = 2; i < RNGalleryList.length; i++) {
-    items.push(RenderDrawerItem(props, i));
+    items.push(RenderDrawerItem({navigation}, i));
   }
-  return items;
-}
-
-// @ts-ignore
-function CustomDrawerContent(props) {
-  const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
-
   return (
-    <View style={styles.drawer}>
-      <TouchableHighlight
-        importantForAccessibility={
-          isDrawerOpen ? 'auto' : 'no-hide-descendants'
-        }
-        accessibilityRole="button"
-        accessibilityLabel="Navigation bar expanded"
-        {...{tooltip: 'Collapse Menu'}}
-        style={styles.menu}
-        onPress={() => props.navigation.closeDrawer()}
-        activeOpacity={0.5783}
-        underlayColor="rgba(0, 0, 0, 0.0241);">
-        <Text style={styles.icon}>&#xE700;</Text>
-      </TouchableHighlight>
-      <DrawerItem
-        importantForAccessibility={
-          isDrawerOpen ? 'auto' : 'no-hide-descendants'
-        }
-        label={() => {
-          return <Text style={styles.drawerText}>Home</Text>;
-        }}
-        onPress={() => props.navigation.navigate('Home')}
-        icon={() => {
-          return <Text style={styles.icon}>&#xE80F;</Text>;
-        }}
-        style={styles.drawerBottomDivider}
-        accessibilityLabel={'home'}
-      />
-      <ScrollView {...props}>{RenderDrawer(props)}</ScrollView>
-      <DrawerItem
-        importantForAccessibility={
-          isDrawerOpen ? 'auto' : 'no-hide-descendants'
-        }
-        label={() => {
-          return <Text style={styles.drawerText}>Settings</Text>;
-        }}
-        onPress={() => props.navigation.navigate('Settings')}
-        icon={() => {
-          return <Text style={styles.icon}>&#xE713;</Text>;
-        }}
-        style={styles.drawerTopDivider}
-        accessibilityLabel={'settings'}
-      />
+    <View>
+      {RenderDrawerItem({navigation}, 0)}
+      <ScrollView style={styles.drawer}>{items}</ScrollView>
+      {RenderDrawerItem({navigation}, 1)}
     </View>
   );
 }
 
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
-  let screens = renderScreens();
-  return (
-    <Drawer.Navigator
-      drawerContent={(props) => (
-        <CustomDrawerContent {...props} drawerType="permanent" />
-      )}>
-      {screens}
-    </Drawer.Navigator>
-  );
-}
+const Stack = createStackNavigator();
 
 function renderScreens() {
   const items = [];
@@ -218,7 +174,7 @@ function renderScreens() {
 
 function renderScreen(i: number) {
   return (
-    <Drawer.Screen
+    <Stack.Screen
       name={RNGalleryList[i].key}
       key={RNGalleryList[i].key}
       component={RNGalleryScreenWrapper}
@@ -226,11 +182,24 @@ function renderScreen(i: number) {
   );
 }
 
+function MyStack() {
+  let screens = renderScreens();
+  return <Stack.Navigator headerMode="none">{screens}</Stack.Navigator>;
+}
+
 export default function App(props) {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
   appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
+  const state = useNavigationState((newState) => newState);
+  const entry = RNGalleryList.find(
+    (entry) => entry.key === state.routes[state.index].name,
+  );
+  console.log(state);
+  const Component = entry?.component;
+  //const Component = RNGalleryList[state.routes[state.index].name].component;
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const [isHighContrast, setHighContrast] = React.useState(
     AppTheme.isHighContrast,
@@ -256,7 +225,42 @@ export default function App(props) {
                 ? DarkTheme
                 : LightTheme
             }>
-            <MyDrawer />
+            <View style={styles.container}>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Navigation bar"
+                accessibilityState={{expanded: isDrawerOpen}}
+                style={{
+                  backgroundColor: PlatformColor(
+                    'NavigationViewDefaultPaneBackground',
+                  ),
+                  width: isDrawerOpen ? 200 : 48,
+                  height: '100%',
+                }}
+                onPress={() => {
+                  isDrawerOpen ? setIsDrawerOpen(false) : setIsDrawerOpen(true);
+                }}>
+                <View>
+                  <TouchableHighlight
+                    accessibilityRole="button"
+                    accessibilityLabel="Navigation bar hamburger icon"
+                    {...{tooltip: 'Expand Menu'}}
+                    accessibilityState={{expanded: isDrawerOpen}}
+                    style={styles.menu}
+                    onPress={() =>
+                      isDrawerOpen
+                        ? setIsDrawerOpen(false)
+                        : setIsDrawerOpen(true)
+                    }
+                    activeOpacity={0.5783}
+                    underlayColor="rgba(0, 0, 0, 0.0241);">
+                    <Text style={styles.icon}>&#xE700;</Text>
+                  </TouchableHighlight>
+                </View>
+              </Pressable>
+              <View style={styles.navItem} />
+            </View>
+            <MyStack />
           </NavigationContainer>
         </ThemeContext.Provider>
       </RawThemeContext.Provider>
