@@ -89,6 +89,15 @@ const styles = StyleSheet.create({
 
 // @ts-ignore
 function RNGalleryScreenWrapper({navigation}) {
+  const state = useNavigationState((newState) => newState);
+  const entry = RNGalleryList.find(
+    (entry) => entry.key === state.routes[state.index].name,
+  );
+  console.log(state);
+  const Component = entry?.component;
+  //const Component = RNGalleryList[state.routes[state.index].name].component;
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
     <View style={styles.container}>
       <Pressable
@@ -192,14 +201,6 @@ export default function App(props) {
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
   appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
-  const state = useNavigationState((newState) => newState);
-  const entry = RNGalleryList.find(
-    (entry) => entry.key === state.routes[state.index].name,
-  );
-  console.log(state);
-  const Component = entry?.component;
-  //const Component = RNGalleryList[state.routes[state.index].name].component;
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const [isHighContrast, setHighContrast] = React.useState(
     AppTheme.isHighContrast,
@@ -225,41 +226,6 @@ export default function App(props) {
                 ? DarkTheme
                 : LightTheme
             }>
-            <View style={styles.container}>
-              <Pressable
-                accessibilityRole="button"
-                accessibilityLabel="Navigation bar"
-                accessibilityState={{expanded: isDrawerOpen}}
-                style={{
-                  backgroundColor: PlatformColor(
-                    'NavigationViewDefaultPaneBackground',
-                  ),
-                  width: isDrawerOpen ? 200 : 48,
-                  height: '100%',
-                }}
-                onPress={() => {
-                  isDrawerOpen ? setIsDrawerOpen(false) : setIsDrawerOpen(true);
-                }}>
-                <View>
-                  <TouchableHighlight
-                    accessibilityRole="button"
-                    accessibilityLabel="Navigation bar hamburger icon"
-                    {...{tooltip: 'Expand Menu'}}
-                    accessibilityState={{expanded: isDrawerOpen}}
-                    style={styles.menu}
-                    onPress={() =>
-                      isDrawerOpen
-                        ? setIsDrawerOpen(false)
-                        : setIsDrawerOpen(true)
-                    }
-                    activeOpacity={0.5783}
-                    underlayColor="rgba(0, 0, 0, 0.0241);">
-                    <Text style={styles.icon}>&#xE700;</Text>
-                  </TouchableHighlight>
-                </View>
-              </Pressable>
-              <View style={styles.navItem} />
-            </View>
             <MyStack />
           </NavigationContainer>
         </ThemeContext.Provider>
