@@ -8,27 +8,9 @@ import {
   ScrollView,
   Pressable,
 } from 'react-native';
-import {NavigationContainer, useNavigation} from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  DrawerItem,
-  getIsDrawerOpenFromState,
-  DrawerContentScrollView,
-  DrawerItemList,
-} from '@react-navigation/drawer';
-import {createStackNavigator} from '@react-navigation/stack';
-import RNGalleryList from './RNGalleryList';
-import LightTheme from './themes/LightTheme';
-import DarkTheme from './themes/DarkTheme';
-import {
-  ThemeMode,
-  RawThemeContext,
-  ThemeContext,
-  ThemeSetterContext,
-} from './themes/Theme';
+import RNGalleryList from '../RNGalleryList';
 import {PlatformColor} from 'react-native';
-import {AppTheme} from 'react-native-windows';
-import HighContrastTheme from './themes/HighContrastTheme';
+import {useNavigation, useNavigationState} from '@react-navigation/native';
 
 let appVersion = '';
 
@@ -85,8 +67,7 @@ const styles = StyleSheet.create({
 });
 
 // @ts-ignore
-function RNGalleryScreenWrapper(i: number) {
-  const Component = RNGalleryList[i].component;
+export function ScreenWrapper({children}) {
   //const navigation = useNavigation();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -121,21 +102,21 @@ function RNGalleryScreenWrapper(i: number) {
           {RenderDrawer(isDrawerOpen)}
         </View>
       </Pressable>
-      <View style={styles.navItem}>
-        <Component appVersion={appVersion} />
-      </View>
+      <View style={styles.navItem}>{children}</View>
     </View>
   );
 }
 
 function RenderDrawerItem(i: number) {
   //const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
-  //const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <Pressable
       //importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
       key={RNGalleryList[i].key}
-      //onPress={() => navigation.navigate(RNGalleryList[i].key)}
+      onPress={() => {
+        navigation.navigate(RNGalleryList[i].key);
+      }}
       accessibilityLabel={RNGalleryList[i].key}
       style={styles.drawerItem}>
       <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>
@@ -145,7 +126,6 @@ function RenderDrawerItem(i: number) {
 }
 
 function RenderDrawer(isDrawerOpen: boolean) {
-  //const navigation = useNavigation();
   if (!isDrawerOpen) {
     return [];
   }
@@ -161,69 +141,5 @@ function RenderDrawer(isDrawerOpen: boolean) {
       <ScrollView style={styles.drawer}>{items}</ScrollView>
       {RenderDrawerItem(1)}
     </View>
-  );
-}
-
-const Stack = createStackNavigator();
-
-function renderScreens() {
-  const items = [];
-  for (var i = 0; i < RNGalleryList.length; i++) {
-    items.push(renderScreen(i));
-  }
-
-  return items;
-}
-
-function renderScreen(i: number) {
-  return (
-    <Stack.Screen
-      name={RNGalleryList[i].key}
-      key={RNGalleryList[i].key}
-      component={RNGalleryList[i].component}
-    />
-  );
-}
-
-function MyStack() {
-  let screens = renderScreens();
-  return <Stack.Navigator headerMode="none">{screens}</Stack.Navigator>;
-}
-
-export default function App(props) {
-  const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
-  const colorScheme = useColorScheme();
-  const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
-  appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
-
-  const [isHighContrast, setHighContrast] = React.useState(
-    AppTheme.isHighContrast,
-  );
-
-  React.useEffect(() => {
-    const subscription = AppTheme.addListener('highContrastChanged', () => {
-      setHighContrast(AppTheme.isHighContrast);
-    });
-
-    return () => subscription.remove();
-  });
-
-  return (
-    <ThemeSetterContext.Provider value={setRawTheme}>
-      <RawThemeContext.Provider value={rawtheme}>
-        <ThemeContext.Provider value={theme}>
-          <NavigationContainer
-            theme={
-              isHighContrast
-                ? HighContrastTheme
-                : theme === 'dark'
-                ? DarkTheme
-                : LightTheme
-            }>
-            <MyStack />
-          </NavigationContainer>
-        </ThemeContext.Provider>
-      </RawThemeContext.Provider>
-    </ThemeSetterContext.Provider>
   );
 }

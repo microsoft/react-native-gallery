@@ -4,6 +4,7 @@ import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import RNGalleryList from './RNGalleryList';
 import {ScrollView} from 'react-native';
+import {ScreenWrapper} from './components/ScreenWraper';
 
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -174,13 +175,13 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
   const styles = createStyles(colors);
 
   return (
-    <View style={styles.container}>
+    <ScreenWrapper style={styles.container}>
       <Text style={styles.title}>Welcome to React Native Gallery!</Text>
       <Text style={styles.description}>
         React Native Gallery is a React Native Windows application which
         displays the range of React Native components with Windows support.
       </Text>
       <RenderPageContent navigation={navigation} />
-    </View>
+    </ScreenWrapper>
   );
 };
