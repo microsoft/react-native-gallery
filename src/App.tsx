@@ -114,8 +114,10 @@ function RNGalleryScreenWrapper({navigation}) {
 }
 
 function RenderDrawerItem(props, i: number) {
+  const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
   return (
     <DrawerItem
+      importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
       key={RNGalleryList[i].key}
       label={() => {
         return <Text style={styles.drawerText}>{RNGalleryList[i].key}</Text>;
@@ -141,9 +143,14 @@ function RenderDrawer(props) {
 
 // @ts-ignore
 function CustomDrawerContent(props) {
+  const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
+
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
+        importantForAccessibility={
+          isDrawerOpen ? 'auto' : 'no-hide-descendants'
+        }
         accessibilityRole="button"
         accessibilityLabel="Navigation bar expanded"
         {...{tooltip: 'Collapse Menu'}}
@@ -154,6 +161,9 @@ function CustomDrawerContent(props) {
         <Text style={styles.icon}>&#xE700;</Text>
       </TouchableHighlight>
       <DrawerItem
+        importantForAccessibility={
+          isDrawerOpen ? 'auto' : 'no-hide-descendants'
+        }
         label={() => {
           return <Text style={styles.drawerText}>Home</Text>;
         }}
@@ -166,6 +176,9 @@ function CustomDrawerContent(props) {
       />
       <ScrollView {...props}>{RenderDrawer(props)}</ScrollView>
       <DrawerItem
+        importantForAccessibility={
+          isDrawerOpen ? 'auto' : 'no-hide-descendants'
+        }
         label={() => {
           return <Text style={styles.drawerText}>Settings</Text>;
         }}
