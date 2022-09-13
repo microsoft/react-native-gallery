@@ -67,7 +67,9 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts)/)"
     ],
-    "setupFiles": ["<rootDir>/jest-setup.js"]
+    "setupFiles": [
+      "<rootDir>/jest-setup.js"
+    ]
   },
   "main": "src\\index.js",
   "react-native": "src\\index.js",
