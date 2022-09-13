@@ -171,8 +171,6 @@ style={{
             backgroundColor: colors.text,
             borderRadius: 2,
           }}
-          accessible={true}
-          focusable={true}
         />
       </Example>
       <Example title="Nested Views with flexbox styling." code={example3jsx}>
