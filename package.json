@@ -1,6 +1,6 @@
 {
   "name": "rngallery",
-  "version": "1.0.5.0",
+  "version": "1.0.13.0",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",

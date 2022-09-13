@@ -1,18 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
   TouchableHighlight,
   Text,
-  useColorScheme,
-  ScrollView,
   Pressable,
 } from 'react-native';
-import RNGalleryList from '../RNGalleryList';
 import {PlatformColor} from 'react-native';
-import {useNavigation, useNavigationState} from '@react-navigation/native';
-
-let appVersion = '';
+import {
+  useNavigation,
+  DrawerActions,
+  useNavigationState,
+} from '@react-navigation/native';
+import {getIsDrawerOpenFromState} from '@react-navigation/drawer';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     height: '100%',
     alignSelf: 'stretch',
-    paddingLeft: 10,
+    paddingLeft: 15,
   },
   menu: {
     margin: 5,
@@ -40,106 +40,45 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: PlatformColor('TextControlForeground'),
   },
-  drawer: {
-    backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-    height: '100%',
-  },
-  drawerItem: {
-    padding: 10,
-    height: 40,
-    flexDirection: 'row',
-    paddingLeft: 15,
-  },
-  drawerText: {
-    color: PlatformColor('TextControlForeground'),
-    paddingLeft: 10,
-  },
-  drawerTopDivider: {
-    borderTopWidth: 0.5,
-    borderColor: PlatformColor('TextControlForeground'),
-    borderRadius: 0,
-  },
-  drawerBottomDivider: {
-    borderBottomWidth: 0.5,
-    borderColor: PlatformColor('TextControlForeground'),
-    borderRadius: 0,
-  },
 });
 
 // @ts-ignore
 export function ScreenWrapper({children}) {
-  //const navigation = useNavigation();
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const navigation = useNavigation();
+  const state = useNavigationState((state) => state);
 
   return (
     <View style={styles.container}>
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="Navigation bar"
-        accessibilityState={{expanded: isDrawerOpen}}
+        accessibilityState={{
+          expanded: getIsDrawerOpenFromState(state),
+        }}
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-          width: isDrawerOpen ? 200 : 48,
+          width: 48,
           height: '100%',
+          paddingBottom: 20,
         }}
         onPress={() => {
-          isDrawerOpen ? setIsDrawerOpen(false) : setIsDrawerOpen(true);
+          navigation.dispatch(DrawerActions.openDrawer());
         }}>
         <View>
           <TouchableHighlight
             accessibilityRole="button"
             accessibilityLabel="Navigation bar hamburger icon"
             {...{tooltip: 'Expand Menu'}}
-            accessibilityState={{expanded: isDrawerOpen}}
+            accessibilityState={{expanded: getIsDrawerOpenFromState(state)}}
             style={styles.menu}
-            onPress={() =>
-              isDrawerOpen ? setIsDrawerOpen(false) : setIsDrawerOpen(true)
-            }
+            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
             activeOpacity={0.5783}
             underlayColor="rgba(0, 0, 0, 0.0241);">
             <Text style={styles.icon}>&#xE700;</Text>
           </TouchableHighlight>
-          {RenderDrawer(isDrawerOpen)}
         </View>
       </Pressable>
       <View style={styles.navItem}>{children}</View>
-    </View>
-  );
-}
-
-function RenderDrawerItem(i: number) {
-  //const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
-  const navigation = useNavigation();
-  return (
-    <Pressable
-      //importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
-      key={RNGalleryList[i].key}
-      onPress={() => {
-        navigation.navigate(RNGalleryList[i].key);
-      }}
-      accessibilityLabel={RNGalleryList[i].key}
-      style={styles.drawerItem}>
-      <Text style={styles.icon}>{RNGalleryList[i].icon}</Text>
-      <Text style={styles.drawerText}>{RNGalleryList[i].key}</Text>
-    </Pressable>
-  );
-}
-
-function RenderDrawer(isDrawerOpen: boolean) {
-  if (!isDrawerOpen) {
-    return [];
-  }
-  var items = [];
-  // Begin iteration at index 2 because Home and
-  // Settings drawer items have already been manually loaded.
-  for (var i = 2; i < RNGalleryList.length; i++) {
-    items.push(RenderDrawerItem(i));
-  }
-  return (
-    <View>
-      {RenderDrawerItem(0)}
-      <ScrollView style={styles.drawer}>{items}</ScrollView>
-      {RenderDrawerItem(1)}
     </View>
   );
 }

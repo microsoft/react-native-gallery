@@ -10,6 +10,8 @@ import {
   TextDecorations,
 } from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
+import {ScreenWrapper} from './components/ScreenWraper';
+import {Screen} from 'react-native-screens';
 var pkg = require('../package.json');
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -69,7 +71,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
     setTheme(value);
   };*/
   return (
-    <View style={styles.container}>
+    <ScreenWrapper style={styles.container}>
       <Text style={styles.title}>Settings</Text>
       <ScrollView style={styles.scrollView}>
         {/* Tracking Issue: #17
@@ -95,7 +97,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
           </Text>
-          <Text style={styles.text}>Version: {props.appVersion}</Text>
+          <Text style={styles.text}>Version: 1.0.13.0</Text>
           <Text style={styles.text}>
             React Native Windows Version:{' '}
             {pkg.dependencies['react-native-windows']}
@@ -163,6 +165,6 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
           </HyperlinkButton>
         </SettingContainer>
       </ScrollView>
-    </View>
+    </ScreenWrapper>
   );
 };
