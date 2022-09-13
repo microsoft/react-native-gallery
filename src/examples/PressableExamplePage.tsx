@@ -97,7 +97,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           }>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
-              {pressed ? 'Pressed' : 'Press Me'}
+              {pressed ? 'Pressed!' : 'Press Me'}
             </Text>
           )}
         </Pressable>
