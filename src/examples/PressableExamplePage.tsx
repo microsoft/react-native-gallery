@@ -1,5 +1,5 @@
 'use strict';
-import {Text, Pressable, View} from 'react-native';
+import {Text, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -92,17 +92,13 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={'example pressable'}
-          accessibilityHint={'click me to change text from Pressed to Press Me'}
-          onPress={() => {
-            setTimesPressed((current) => current + 1);
-          }}>
+          accessibilityHint={
+            'click me to change text from Pressed to Press Me'
+          }>
           {({pressed}) => (
-            <View style={{backgroundColor: 'red'}}>
-              <Text style={{color: colors.text}}>
-                {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
-              </Text>
-              <Text>Extra Text</Text>
-            </View>
+            <Text style={{color: colors.text}}>
+              {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
+            </Text>
           )}
         </Pressable>
       </Example>
