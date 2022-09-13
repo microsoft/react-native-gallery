@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -87,25 +87,6 @@ function RenderDrawer(props) {
   return items;
 }
 
-function renderScreens() {
-  const items = [];
-  for (var i = 0; i < RNGalleryList.length; i++) {
-    items.push(renderScreen(i));
-  }
-
-  return items;
-}
-
-function renderScreen(i: number) {
-  return (
-    <Drawer.Screen
-      name={RNGalleryList[i].key}
-      key={RNGalleryList[i].key}
-      component={RNGalleryList[i].component}
-    />
-  );
-}
-
 function CustomDrawerContent(props) {
   const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
 
@@ -154,6 +135,25 @@ function CustomDrawerContent(props) {
         accessibilityLabel={'settings'}
       />
     </View>
+  );
+}
+
+function renderScreens() {
+  const items = [];
+  for (var i = 0; i < RNGalleryList.length; i++) {
+    items.push(renderScreen(i));
+  }
+
+  return items;
+}
+
+function renderScreen(i: number) {
+  return (
+    <Drawer.Screen
+      name={RNGalleryList[i].key}
+      key={RNGalleryList[i].key}
+      component={RNGalleryList[i].component}
+    />
   );
 }
 

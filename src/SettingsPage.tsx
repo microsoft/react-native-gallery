@@ -11,7 +11,6 @@ import {
 } from 'react-native-xaml';
 import {useTheme} from '@react-navigation/native';
 import {ScreenWrapper} from './components/ScreenWraper';
-import {Screen} from 'react-native-screens';
 var pkg = require('../package.json');
 const createStyles = (colors: any) =>
   StyleSheet.create({

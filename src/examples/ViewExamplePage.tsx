@@ -1,5 +1,5 @@
 'use strict';
-import {TextInput, View} from 'react-native';
+import {View} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -172,9 +172,8 @@ style={{
             borderRadius: 2,
           }}
           accessible={true}
-          focusable={true}>
-          <TextInput />
-        </View>
+          focusable={true}
+        />
       </Example>
       <Example title="Nested Views with flexbox styling." code={example3jsx}>
         <View
