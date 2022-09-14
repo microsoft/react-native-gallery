@@ -5,7 +5,7 @@ import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
 import {useTheme} from '@react-navigation/native';
-import {ScreenWrapper} from './ScreenWraper';
+import {ScreenWrapper} from './ScreenWrapper';
 
 const styles = StyleSheet.create({
   container: {

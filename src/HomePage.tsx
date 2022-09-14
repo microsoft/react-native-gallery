@@ -4,7 +4,7 @@ import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import RNGalleryList from './RNGalleryList';
 import {ScrollView} from 'react-native';
-import {ScreenWrapper} from './components/ScreenWraper';
+import {ScreenWrapper} from './components/ScreenWrapper';
 
 const createStyles = (colors: any) =>
   StyleSheet.create({

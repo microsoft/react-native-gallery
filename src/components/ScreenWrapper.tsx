@@ -7,12 +7,8 @@ import {
   Pressable,
 } from 'react-native';
 import {PlatformColor} from 'react-native';
-import {
-  useNavigation,
-  DrawerActions,
-  useNavigationState,
-} from '@react-navigation/native';
-import {getIsDrawerOpenFromState} from '@react-navigation/drawer';
+import {useNavigation, DrawerActions} from '@react-navigation/native';
+import {useIsDrawerOpen} from '@react-navigation/drawer';
 
 const styles = StyleSheet.create({
   container: {
@@ -45,16 +41,17 @@ const styles = StyleSheet.create({
 // @ts-ignore
 export function ScreenWrapper({children}) {
   const navigation = useNavigation();
-  const state = useNavigationState((state) => state);
 
   return (
     <View style={styles.container}>
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="Navigation bar"
-        accessibilityState={{
-          expanded: getIsDrawerOpenFromState(state),
-        }}
+        // requires react-native-gesture-handler to be imported in order to pass testing.
+        // blocked by #125
+        /*accessibilityState={{
+          expanded: useIsDrawerOpen(),
+        }}*/
         style={{
           backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
           width: 48,
@@ -69,7 +66,9 @@ export function ScreenWrapper({children}) {
             accessibilityRole="button"
             accessibilityLabel="Navigation bar hamburger icon"
             {...{tooltip: 'Expand Menu'}}
-            accessibilityState={{expanded: getIsDrawerOpenFromState(state)}}
+            // requires react-native-gesture-handler to be imported in order to pass testing.
+            // blocked by #125
+            //accessibilityState={{expanded: useIsDrawerOpen()}}
             style={styles.menu}
             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
             activeOpacity={0.5783}
