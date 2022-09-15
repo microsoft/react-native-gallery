@@ -26,20 +26,20 @@
     "@wwimmo/react-native-sketch-canvas": "^0.8.5",
     "lowlight": "^1.17.0",
     "react": "18.0.0",
-    "react-native": "^0.69.0",
+    "react-native": "^0.70.0",
     "react-native-config": "luggit/react-native-config",
     "react-native-device-info": "^7.3.1",
     "react-native-gesture-handler": "JaneaSystems/react-native-gesture-handler#windows",
     "react-native-permissions": "^3.0.0",
     "react-native-print": "0.8.0",
     "react-native-reanimated": "^1.10.0",
-    "react-native-safe-area-context": "^3.1.0",
+    "react-native-safe-area-context": "^4.3.3",
     "react-native-screens": "^2.9.0",
     "react-native-sensitive-info": "6.0.0-alpha.9",
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.18.2",
-    "react-native-windows": "0.69.0",
+    "react-native-windows": "0.70.0",
     "react-native-xaml": "^0.0.66"
   },
   "devDependencies": {
@@ -67,7 +67,9 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts)/)"
     ],
-    "setupFiles": ["<rootDir>/jest-setup.js"]
+    "setupFiles": [
+      "<rootDir>/jest-setup.js"
+    ]
   },
   "main": "src\\index.js",
   "react-native": "src\\index.js",
