@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -7,10 +7,7 @@ import {
   useColorScheme,
   ScrollView,
 } from 'react-native';
-import {
-  NavigationContainer,
-  useNavigationState,
-} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {
   createDrawerNavigator,
   DrawerItem,
@@ -29,21 +26,7 @@ import {PlatformColor} from 'react-native';
 import {AppTheme} from 'react-native-windows';
 import HighContrastTheme from './themes/HighContrastTheme';
 
-let appVersion = '';
-
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    width: '100%',
-    height: '100%',
-  },
-  navItem: {
-    flexGrow: 1,
-    flexShrink: 1,
-    height: '100%',
-    alignSelf: 'stretch',
-    paddingLeft: 10,
-  },
   menu: {
     margin: 5,
     height: 34,
@@ -76,43 +59,6 @@ const styles = StyleSheet.create({
   },
 });
 
-// @ts-ignore
-function RNGalleryScreenWrapper({navigation}) {
-  const state = useNavigationState((newState) => newState);
-  const Component = RNGalleryList[state.index].component;
-  const isDrawerOpen = getIsDrawerOpenFromState(navigation.getState());
-
-  return (
-    <View style={styles.container}>
-      <TouchableHighlight
-        accessibilityRole="button"
-        accessibilityLabel="Navigation bar"
-        accessibilityState={{expanded: isDrawerOpen}}
-        style={{
-          backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-          width: 48,
-        }}
-        underlayColor={PlatformColor('NavigationViewDefaultPaneBackground')}
-        onPress={() => navigation.openDrawer()}>
-        <TouchableHighlight
-          accessibilityRole="button"
-          accessibilityLabel="Navigation bar hambuger icon"
-          {...{tooltip: 'Expand Menu'}}
-          accessibilityState={{expanded: isDrawerOpen}}
-          style={styles.menu}
-          onPress={() => navigation.openDrawer()}
-          activeOpacity={0.5783}
-          underlayColor="rgba(0, 0, 0, 0.0241);">
-          <Text style={styles.icon}>&#xE700;</Text>
-        </TouchableHighlight>
-      </TouchableHighlight>
-      <View style={styles.navItem}>
-        <Component appVersion={appVersion} navigation={navigation} />
-      </View>
-    </View>
-  );
-}
-
 function RenderDrawerItem(props, i: number) {
   const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
   return (
@@ -141,7 +87,6 @@ function RenderDrawer(props) {
   return items;
 }
 
-// @ts-ignore
 function CustomDrawerContent(props) {
   const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
 
@@ -193,20 +138,6 @@ function CustomDrawerContent(props) {
   );
 }
 
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
-  let screens = renderScreens();
-  return (
-    <Drawer.Navigator
-      drawerContent={(props) => (
-        <CustomDrawerContent {...props} drawerType="permanent" />
-      )}>
-      {screens}
-    </Drawer.Navigator>
-  );
-}
-
 function renderScreens() {
   const items = [];
   for (var i = 0; i < RNGalleryList.length; i++) {
@@ -221,8 +152,22 @@ function renderScreen(i: number) {
     <Drawer.Screen
       name={RNGalleryList[i].key}
       key={RNGalleryList[i].key}
-      component={RNGalleryScreenWrapper}
+      component={RNGalleryList[i].component}
     />
+  );
+}
+
+const Drawer = createDrawerNavigator();
+
+function MyDrawer() {
+  let screens = renderScreens();
+  return (
+    <Drawer.Navigator
+      drawerContent={(props) => (
+        <CustomDrawerContent {...props} drawerType="permanent" />
+      )}>
+      {screens}
+    </Drawer.Navigator>
   );
 }
 
@@ -230,7 +175,6 @@ export default function App(props) {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
-  appVersion = `${props.MajorVersion}.${props.MinorVersion}.${props.BuildVersion}.${props.RevisionVersion}`;
 
   const [isHighContrast, setHighContrast] = React.useState(
     AppTheme.isHighContrast,

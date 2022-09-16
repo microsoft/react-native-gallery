@@ -21,7 +21,7 @@ export const ViewExamplePage: React.FunctionComponent<{}> = () => {
     height: 50,
     width: 100,
   }}>
-  <View style={{flex: 1, backgroundColor: colros.text, borderRadius: 2}} />
+  <View style={{flex: 1, backgroundColor: colors.text, borderRadius: 2}} />
   <View
     style={{flex: 2, backgroundColor: colors.primary, borderRadius: 2}} />
 </View>`;

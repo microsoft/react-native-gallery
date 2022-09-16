@@ -5,6 +5,7 @@ import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
 import {useTheme} from '@react-navigation/native';
+import {ScreenWrapper} from './ScreenWrapper';
 
 const styles = StyleSheet.create({
   container: {
@@ -90,7 +91,7 @@ export function Page(props: {
 }) {
   const {colors} = useTheme();
   return (
-    <View style={styles.container}>
+    <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
         <Text style={[styles.title, {color: colors.text}]}>{props.title}</Text>
         <View>
@@ -113,6 +114,6 @@ export function Page(props: {
           props.documentation,
         )}
       </ScrollView>
-    </View>
+    </ScreenWrapper>
   );
 }

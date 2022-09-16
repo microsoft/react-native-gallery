@@ -1,6 +1,6 @@
 {
   "name": "rngallery",
-  "version": "1.0.5.0",
+  "version": "1.0.13.0",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -23,6 +23,7 @@
     "@react-navigation/drawer": "^5.9.0",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.9.0",
+    "@types/": "react-navigation/drawer",
     "@wwimmo/react-native-sketch-canvas": "^0.8.5",
     "lowlight": "^1.17.0",
     "react": "18.0.0",
@@ -65,7 +66,7 @@
       "<rootDir>/lib/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts)/)"
+      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts|react-native-gesture-handler)/)"
     ],
     "setupFiles": [
       "<rootDir>/jest-setup.js"
