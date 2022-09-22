@@ -129,7 +129,7 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
         <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>
           {perm}
         </Text>
-        <View focusable={getResultString(status) ? true : false}>
+        <View focusable={getResultString(status) ? true : false} accessible={getResultString(status) ? true : false}>
           <Text
             accessibilityLabel={getResultString(status)}
             style={{paddingLeft: 10, color: colors.text}}>
