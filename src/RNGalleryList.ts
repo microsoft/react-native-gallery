@@ -35,6 +35,7 @@ import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
+import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -241,10 +242,16 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'Status and Info',
   },
   {
+    key: 'VirtualizedList',
+    component: VirtualizedListExamplePage,
+    icon: '\uE8A4',
+    type: 'Layout',
+  },
+  {
     key: 'Xaml',
     component: XamlExamplePage,
     icon: '\uE70F',
-    type: '',
+    type: 'Layout',
   },
 ];
 
