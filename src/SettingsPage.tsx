@@ -9,7 +9,7 @@ import {
   TextBlock,
   TextDecorations,
 } from 'react-native-xaml';
-import {useTheme} from '@react-navigation/native';
+import {useTheme, useIsFocused} from '@react-navigation/native';
 import {ScreenWrapper} from './components/ScreenWrapper';
 var pkg = require('../package.json');
 const createStyles = (colors: any) =>
@@ -65,11 +65,12 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
   //const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();
   const styles = createStyles(colors);
+  const isScreenFocused = useIsFocused();
   /*const PickerValueChanged = (value: ThemeMode) => {
     console.log('Setting theme to: ' + value);
     setTheme(value);
   };*/
-  return (
+  return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
       <Text style={styles.title}>Settings</Text>
       <ScrollView style={styles.scrollView}>
@@ -96,7 +97,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
           </Text>
-          <Text style={styles.text}>Version: 1.0.13.0</Text>
+          <Text style={styles.text}>Version: 1.0.14.0</Text>
           <Text style={styles.text}>
             React Native Windows Version:{' '}
             {pkg.dependencies['react-native-windows']}
@@ -165,5 +166,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
         </SettingContainer>
       </ScrollView>
     </ScreenWrapper>
+  ) : (
+    <View />
   );
 };

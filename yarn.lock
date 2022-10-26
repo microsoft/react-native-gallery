@@ -7140,10 +7140,10 @@ react-native-windows-hello@^1.1.0:
   resolved "https://registry.yarnpkg.com/react-native-windows-hello/-/react-native-windows-hello-1.1.0.tgz#91e7a8c7ca07554b380e887549df2e828b73eae8"
   integrity sha512-XPPYLEPG3ffwida934ZHvGwqOE3AhshbvMPxl2/GKXS6QyX4XvcTMM4uVAFU6LyT2W7h2aVBkSqaxjFVBOACww==
 
-react-native-windows@0.70.0:
-  version "0.70.0"
-  resolved "https://registry.yarnpkg.com/react-native-windows/-/react-native-windows-0.70.0.tgz#298783bc20ef4d03b6c590097f5c95f61dd04837"
-  integrity sha512-cjMIR3aGw1eBlkvJU97wsgBOAT4KE4gWqw7ykbwZXknoiY6gC8ZbjaCFmxc+kwdkaor6fVb39FNXmSszE5e4ow==
+react-native-windows@^0.70.0:
+  version "0.70.4"
+  resolved "https://registry.yarnpkg.com/react-native-windows/-/react-native-windows-0.70.4.tgz#46d3e47e3adff6a61ded5efdca5fad2b065c2224"
+  integrity sha512-qVMz/5BhFe3h1ZcWJlV9dZJXnaH2dXx3BaSPYuoPDiQOv0AzfBSrJkZGO1P2XW4CiwaTNco730CfFZKLHjUBLg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@jest/create-cache-key-function" "^27.0.1"

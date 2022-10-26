@@ -4,7 +4,7 @@ import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
-import {useTheme} from '@react-navigation/native';
+import {useTheme, useIsFocused} from '@react-navigation/native';
 import {ScreenWrapper} from './ScreenWrapper';
 
 const styles = StyleSheet.create({
@@ -90,7 +90,8 @@ export function Page(props: {
   children: React.ReactNode;
 }) {
   const {colors} = useTheme();
-  return (
+  const isScreenFocused = useIsFocused();
+  return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
         <Text style={[styles.title, {color: colors.text}]}>{props.title}</Text>
@@ -115,5 +116,7 @@ export function Page(props: {
         )}
       </ScrollView>
     </ScreenWrapper>
+  ) : (
+    <View />
   );
 }
