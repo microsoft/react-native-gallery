@@ -33,5 +33,6 @@ jest.mock('@react-navigation/native', () => {
       dispatch: jest.fn(),
     }),
     useNavigationState: jest.fn(),
+    useIsFocused: jest.fn(),
   };
 });
