@@ -43,12 +43,12 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> = 
     </TouchableWithoutFeedback>`;
 
   const pressableMsg =
-    'Note: it is strongly recommended to use the Pressable API instead of TouchableWithoutFeedback';
+    'Note: It is strongly recommended to use the Pressable API instead of TouchableWithoutFeedback.';
 
   return (
     <Page
       title="Touchable Without Feedback"
-      description="A View that does not provide feedback on touch"
+      description="A View that does not provide feedback on touch."
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TouchableWithoutFeedbackExamplePage.tsx"
       documentation={[
