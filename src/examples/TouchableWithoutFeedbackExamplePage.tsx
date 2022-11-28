@@ -47,7 +47,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> = 
 
   return (
     <Page
-      title="Touchable Without Feedback"
+      title="Touchable Without Feedback."
       description="A View that does not provide feedback on touch."
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TouchableWithoutFeedbackExamplePage.tsx"
