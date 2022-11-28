@@ -18,6 +18,7 @@ import {TextInputExamplePage} from './examples/TextInputExamplePage';
 import {TTSExamplePage} from './examples/TTSExamplePage';
 import {TouchableHighlightExamplePage} from './examples/TouchableHighlightExamplePage';
 import {TouchableOpacityExamplePage} from './examples/TouchableOpacityExamplePage';
+import {TouchableWithoutFeedbackExamplePage} from './examples/TouchableWithoutFeedbackExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
@@ -213,6 +214,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'TouchableOpacity',
     component: TouchableOpacityExamplePage,
+    icon: '\uEDA4',
+    type: 'Basic Input',
+  },
+  {
+    key: 'TouchableWithoutFeedback',
+    component: TouchableWithoutFeedbackExamplePage,
     icon: '\uEDA4',
     type: 'Basic Input',
   },
