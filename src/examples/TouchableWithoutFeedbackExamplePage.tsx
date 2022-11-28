@@ -12,16 +12,14 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> = 
   const [focus, setFocus] = useState(false);
   const {colors} = useTheme();
 
-  const example1jsx = `<TouchableWithoutFeedback
-    >
+  const example1jsx = `<TouchableWithoutFeedback>
     <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
   </TouchableWithoutFeedback>`;
 
   const example2jsx = `<TouchableWithoutFeedback
     accessibilityRole="button"
     accessibilityLabel={'simple example TouchableWithoutFeedback'}
-    onPress={() => {}}
-    >
+    onPress={() => {}}>
     <Text style={{color: 'white'}}>TouchableWithoutFeedback</Text>
     </TouchableWithoutFeedback>`;
 
@@ -29,8 +27,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> = 
     accessibilityRole="button"
     accessibilityLabel={'simple example TouchableWithoutFeedback'}
     onPress={() => {}}
-    disabled={true}
-    >
+    disabled={true}>
     <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
     </TouchableWithoutFeedback>`;
 
@@ -41,8 +38,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> = 
     accessibilityValue={{text: ${title}}}
     onPress={() => {
         setTitle(title + 1);
-    }}
-    >
+    }}>
     <Text style={{color: colors.text}}>{String(title)}</Text>
     </TouchableWithoutFeedback>`;
 
