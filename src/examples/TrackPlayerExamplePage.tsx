@@ -183,6 +183,7 @@ export const TrackPlayerExamplePage: React.FunctionComponent<{}> = () => {
       title="Track Player"
       description="Provides audio playback, external media controls, chromecast support, background mode and more!"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TrackPlayerExamplePage.tsx"
+      componentType="Community"
       documentation={[
         {
           label: 'Track Player',
