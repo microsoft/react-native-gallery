@@ -48,7 +48,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     keyExtractor={item => item.title}
     getItemCount={getItemCount}
     getItem={getItem}
-    style={styles.list}
   />`;
 
   const example2jsx = `
@@ -81,7 +80,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     keyExtractor={item => item.title}
     getItemCount={getItemCount}
     getItem={getItem}
-    style={styles.list}
   );`;
 
   const example3jsx = `
@@ -153,7 +151,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
               keyExtractor={(item) => item.title}
               getItemCount={getItemCount}
               getItem={getItem}
-              style={styles.list}
             />
           </View>
           <View style={styles.selectionContainer}>
@@ -224,7 +221,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       underlayColor={selectedSupport === 'None' ? '' : colors.border}
       onPress={() => {
         onPressSupport({index});
-      }}>
+      }}
+      accessibilityLabel={title}>
       <View style={styles.item}>
         <CheckBox
           value={getList.includes(index) ? true : false}
@@ -280,7 +278,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       fontSize: 20,
       color: colors.text,
     },
-    list: {},
   });
 
   const renderItem = ({item}) => {
@@ -326,7 +323,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
               keyExtractor={(item) => item.title}
               getItemCount={getItemCount}
               getItem={getItem}
-              style={styles.list}
+              accessibilityLabel={'A simple VirtualizedList'}
+              focusable={true}
             />
           </View>
         </ScrollView>
@@ -344,7 +342,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
               keyExtractor={(item) => item.title}
               getItemCount={getItemCount}
               getItem={getItem}
-              style={styles.list}
+              accessibilityLabel={
+                'A VirtualizedList with single selection support'
+              }
+              focusable={true}
             />
           </View>
         </ScrollView>
@@ -362,7 +363,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
               keyExtractor={(item) => item.title}
               getItemCount={getItemCount}
               getItem={getItem}
-              style={styles.list}
+              accessibilityLabel={
+                'A VirtualizedList with multiple selection support'
+              }
+              focusable={true}
             />
           </View>
           <View style={styles.selectionContainer}>
