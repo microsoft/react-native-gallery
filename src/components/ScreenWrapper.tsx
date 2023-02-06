@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import {PlatformColor} from 'react-native';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
-import {useIsDrawerOpen} from '@react-navigation/drawer';
 
 const styles = StyleSheet.create({
   container: {
