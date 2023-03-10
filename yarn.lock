@@ -2762,9 +2762,9 @@
     deprecated-react-native-prop-types "^2.3.0"
 
 "@xmldom/xmldom@^0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.5.tgz#09fa51e356d07d0be200642b0e4f91d8e6dd408d"
-  integrity sha512-V3BIhmY36fXZ1OtVcI9W+FxQqxVLsPKcNjWigIaa81dLC9IolJl5Mt4Cvhmr0flUnjSpTdrbMTSbXqYqV5dT6A==
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.9.tgz#7f9278a50e737920e21b297b8a35286e9942c056"
+  integrity sha512-yceMpm/xd4W2a85iqZyO09gTnHvXF6pyiWjD2jcOJs7hRoZtNNOO1eJlhHj1ixA+xip2hOyGn+LgcvLCMo5zXA==
 
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.6"
@@ -7269,10 +7269,10 @@ react-native-windows@^0.70.0:
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
 
-react-native-xaml@^0.0.71:
-  version "0.0.71"
-  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.71.tgz#546a7c4549f7ecad52324332e64f307941f0352e"
-  integrity sha512-BO7La0RKOw58aT3F/Kj+hb3O3bTDF3YL0Ttxp9FTez0srH7mjb2EJPaMM/qtSZ8AF4wCWH7ji6tfWnobiMp+ng==
+react-native-xaml@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.72.tgz#d4d77c4af19e6fab1fc4e59958d3e55978bba5c8"
+  integrity sha512-bOOINRbGPI1X2gN0wERbGENap4ggtCg8BHbTVWkFRuNneGnsw7WJKXgZ06mN8bU5tH2jSpr07oqrWRJ8fcEPuQ==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
