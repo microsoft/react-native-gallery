@@ -2009,10 +2009,10 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.0.1.tgz#9349c3860a53468fa2108b5df09aa843f22dbf94"
   integrity sha512-7XU1sfQ8uCVcXLxtAHA8r3qaLJ2oq7sKtEwzZhzuEXqYmjW+n+J4yM3kNo0HQo3Xp1eUe47UM6Wy6yuAvIyllg==
 
-"@react-native-clipboard/clipboard@^1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@react-native-clipboard/clipboard/-/clipboard-1.10.0.tgz#605e784ed5435059c9b5db52b2d112f9fd09c409"
-  integrity sha512-1L+I0vmeUJgMi8MnNsqI00391/RFLkmmxj9qAuOS2madpvce/oNqJb8Pwk2Fc/uxIJSxOckTpq+dQwyPU6s+7w==
+"@react-native-clipboard/clipboard@^1.11.0":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@react-native-clipboard/clipboard/-/clipboard-1.11.2.tgz#e826d0336b34e67294aaffa6878308900bc7d197"
+  integrity sha512-bHyZVW62TuleiZsXNHS1Pv16fWc0fh8O9WvBzl4h2fykqZRW9a+Pv/RGTH56E3X2PqzHP38K5go8zmCZUoIsoQ==
 
 "@react-native-community/checkbox@^0.5.7":
   version "0.5.7"
@@ -2303,10 +2303,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.11.tgz#2f4c6e10bee0786abff4604e39a37ded6f3980ce"
   integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
 
-"@react-native-community/progress-view@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.2.4.tgz#2293e8a683144a788a926e0ed19cbc5eb9c1192f"
-  integrity sha512-NTraRANHf51S1hXePh1CZTn35LmkHJYi1en0fTWIoFbuGOEGIYg3/Vpm6ccqigQt9+Np3l7Qu/WfAEqjOn6udQ==
+"@react-native-community/progress-view@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.4.0.tgz#6588fa718b384a249e2966177ee3a5e30220f8b8"
+  integrity sha512-8/EP3bjM3yO8RO+SqH7PIp5y68CmTGcazR90i/pAdoHBXZh7t0dmK80s4LRWsmAr+zNs3Swypmcrunw2o9vtaw==
 
 "@react-native-community/slider@^4.0.0-rc.3":
   version "4.1.12"
@@ -7991,10 +7991,10 @@ react-native-windows@^0.71.0:
     whatwg-fetch "^3.0.0"
     ws "^6.2.2"
 
-react-native-xaml@^0.0.66:
-  version "0.0.66"
-  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.66.tgz#a01018cc0b4e6f0773bf71f7b35c508d176de3f7"
-  integrity sha512-qp8JOSDtf6bz0n0F17RdVDOoTedfYLpONKjZnoONU/iWEoIinFkcJ2zvw3lHFziVISkJzFqbH2ar8hHt2ncVOw==
+react-native-xaml@^0.0.74:
+  version "0.0.74"
+  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.74.tgz#fc747308320eb1fda6dd69f5317bfeae37686b57"
+  integrity sha512-4F/kcx2//uUTOFJpePgRyu+yRje1lk9zSIhRUY5ZRIGXkkccS109uE9J+q5LqvMU8KuDEpDElE8n3UsYHZ0pKQ==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
