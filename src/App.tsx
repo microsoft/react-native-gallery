@@ -61,9 +61,7 @@ const styles = StyleSheet.create({
 
 function RenderDrawerItem(props, i: number) {
   const isDrawerOpen =
-    getDrawerStatusFromState(props.navigation.getState()) == 'open'
-      ? true
-      : false;
+    getDrawerStatusFromState(props.navigation.getState()) == 'open';
   return (
     <DrawerItem
       importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
