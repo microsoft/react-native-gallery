@@ -5,7 +5,9 @@ pr:
 variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
 
-pool: rnw-pool-4
+pool:
+  name: rnw-pool-4
+  demands: ImageOverride -equals rnw-img-vs2022
 
 steps:
   - checkout: self
