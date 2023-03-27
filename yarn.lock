@@ -1955,7 +1955,7 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.0.1.tgz#9349c3860a53468fa2108b5df09aa843f22dbf94"
   integrity sha512-7XU1sfQ8uCVcXLxtAHA8r3qaLJ2oq7sKtEwzZhzuEXqYmjW+n+J4yM3kNo0HQo3Xp1eUe47UM6Wy6yuAvIyllg==
 
-"@react-native-clipboard/clipboard@^1.10.0":
+"@react-native-clipboard/clipboard@^1.11.2":
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/@react-native-clipboard/clipboard/-/clipboard-1.11.2.tgz#e826d0336b34e67294aaffa6878308900bc7d197"
   integrity sha512-bHyZVW62TuleiZsXNHS1Pv16fWc0fh8O9WvBzl4h2fykqZRW9a+Pv/RGTH56E3X2PqzHP38K5go8zmCZUoIsoQ==
@@ -2201,7 +2201,7 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.11.tgz#2f4c6e10bee0786abff4604e39a37ded6f3980ce"
   integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
 
-"@react-native-community/progress-view@^1.2.4":
+"@react-native-community/progress-view@^1.4.0":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.4.1.tgz#05128c100d70a158490d4cf69f1078d6cc84d40c"
   integrity sha512-FvPJfh7JcicZWq1U0nxDlRE8fa/znNlWv6mQdLFxiCQNP9mM1S4Bp5pK3csXC4uYUbGaIgA4genP3FxYDi+tTQ==
@@ -7262,10 +7262,10 @@ react-native-windows@^0.70.0:
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
 
-react-native-xaml@^0.0.71:
-  version "0.0.71"
-  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.71.tgz#546a7c4549f7ecad52324332e64f307941f0352e"
-  integrity sha512-BO7La0RKOw58aT3F/Kj+hb3O3bTDF3YL0Ttxp9FTez0srH7mjb2EJPaMM/qtSZ8AF4wCWH7ji6tfWnobiMp+ng==
+react-native-xaml@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.72.tgz#d4d77c4af19e6fab1fc4e59958d3e55978bba5c8"
+  integrity sha512-bOOINRbGPI1X2gN0wERbGENap4ggtCg8BHbTVWkFRuNneGnsw7WJKXgZ06mN8bU5tH2jSpr07oqrWRJ8fcEPuQ==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
