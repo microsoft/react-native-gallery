@@ -30,8 +30,6 @@ import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 import {PopupExamplePage} from './examples/PopupExamplePage';
 import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
 import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
-// Disabled from #125
-//import {GestureHandlerExamplePage} from './examples/GestureHandlerExamplePage';
 import {XamlExamplePage} from './examples/XamlExamplePage';
 import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
@@ -106,10 +104,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     icon: '\uE75A',
     type: 'Dialogs and Flyouts',
   },
-  /*{
-    key: 'GestureHandler',
-    component: GestureHandlerExamplePage,
-  },*/
   {
     key: 'Image',
     component: ImageExamplePage,

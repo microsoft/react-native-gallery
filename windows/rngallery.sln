@@ -53,8 +53,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNCConfig", "..\node_module
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNDeviceInfoCPP", "..\node_modules\react-native-device-info\windows\RNDeviceInfoCPP\RNDeviceInfoCPP.vcxproj", "{3E3931F2-4735-4417-8CB0-33668A7314D6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNGestureHandler", "..\node_modules\react-native-gesture-handler\windows\RNGestureHandler\RNGestureHandler\RNGestureHandler.vcxproj", "{5FE08A9D-CACB-4309-B75A-2578C7DC786A}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPermissions", "..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj", "{99677B9D-A27B-4239-930E-C36C8D339C54}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPrint", "..\node_modules\react-native-print\windows\RNPrint\RNPrint.vcxproj", "{6F9AC236-D97D-4C75-971B-91AC99D7C23B}"
@@ -296,18 +294,6 @@ Global
 		{3E3931F2-4735-4417-8CB0-33668A7314D6}.Release|x64.Build.0 = Release|x64
 		{3E3931F2-4735-4417-8CB0-33668A7314D6}.Release|x86.ActiveCfg = Release|Win32
 		{3E3931F2-4735-4417-8CB0-33668A7314D6}.Release|x86.Build.0 = Release|Win32
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Debug|ARM64.Build.0 = Debug|ARM64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Debug|x64.ActiveCfg = Debug|x64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Debug|x64.Build.0 = Debug|x64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Debug|x86.ActiveCfg = Debug|Win32
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Debug|x86.Build.0 = Debug|Win32
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Release|ARM64.ActiveCfg = Release|ARM64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Release|ARM64.Build.0 = Release|ARM64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Release|x64.ActiveCfg = Release|x64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Release|x64.Build.0 = Release|x64
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Release|x86.ActiveCfg = Release|Win32
-		{5FE08A9D-CACB-4309-B75A-2578C7DC786A}.Release|x86.Build.0 = Release|Win32
 		{99677B9D-A27B-4239-930E-C36C8D339C54}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{99677B9D-A27B-4239-930E-C36C8D339C54}.Debug|ARM64.Build.0 = Debug|ARM64
 		{99677B9D-A27B-4239-930E-C36C8D339C54}.Debug|x64.ActiveCfg = Debug|x64
