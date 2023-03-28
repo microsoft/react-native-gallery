@@ -11,7 +11,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {
   createDrawerNavigator,
   DrawerItem,
-  getIsDrawerOpenFromState,
+  getDrawerStatusFromState,
 } from '@react-navigation/drawer';
 import RNGalleryList from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
 });
 
 function RenderDrawerItem(props, i: number) {
-  const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
+  const isDrawerOpen =
+    getDrawerStatusFromState(props.navigation.getState()) == 'open';
   return (
     <DrawerItem
       importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
@@ -88,8 +89,8 @@ function RenderDrawer(props) {
 }
 
 function CustomDrawerContent(props) {
-  const isDrawerOpen = getIsDrawerOpenFromState(props.navigation.getState());
-
+  const isDrawerOpen =
+    getDrawerStatusFromState(props.navigation.getState()) == 'open';
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
@@ -165,7 +166,8 @@ function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props) => (
         <CustomDrawerContent {...props} drawerType="permanent" />
-      )}>
+      )}
+      screenOptions={{headerShown: false}}>
       {screens}
     </Drawer.Navigator>
   );
