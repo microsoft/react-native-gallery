@@ -1,5 +1,5 @@
 'use strict';
-import {Text, TouchableHighlight, View} from 'react-native';
+import {AccessibilityInfo, Text, TextInput, TouchableHighlight, View, findNodeHandle} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -14,7 +14,10 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const [showPopup3, setShowPopup3] = useState(false);
   const [showPopup4, setShowPopup4] = useState(false);
 
-  const myRef = useRef();
+  const popupRef : React.RefObject<Popup> = React.createRef<Popup>();
+  const viewRef: React.RefObject<View> = React.createRef<View>();
+  const textInputRef: React.RefObject<TextInput> = React.createRef<TextInput>();
+  const textRef: React.RefObject<Text> = React.createRef<Text>();
 
   const example1jsx = `<TouchableHighlight
   onPress={() => {
@@ -156,12 +159,23 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           }}
           onPress={() => {
             setShowPopup1(true);
+            const reactTag = findNodeHandle(popupRef.current);
+            console.log('onPress')
+            if (reactTag) {
+              console.log('reactTag found')
+              console.log(reactTag)
+              AccessibilityInfo.setAccessibilityFocus(reactTag);
+            }
           }}
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
-        <Popup isOpen={showPopup1}>
+        <Popup accessible={true}
+               accessibilityHint={'this is the popup'} 
+               isOpen={showPopup1}
+               autoFocus={true}
+               ref={popupRef}>
           <View
             style={{
               backgroundColor: colors.background,
@@ -170,7 +184,10 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               borderRadius: 3,
               alignItems: 'center',
               justifyContent: 'space-around',
-            }}>
+            }}
+            accessible={true}
+            focusable={true}
+            ref={viewRef}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
             <TouchableHighlight
               accessibilityRole="button"
@@ -329,7 +346,6 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowPopup4(true);
           }}
-          ref={myRef}
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -338,8 +354,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           isOpen={showPopup4}
           onDismiss={() => {
             setShowPopup4(false);
-          }}
-          target={myRef.current}>
+          }}>
           <View
             style={{
               backgroundColor: colors.background,
