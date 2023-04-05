@@ -1,6 +1,6 @@
 'use strict';
 import {AccessibilityInfo, Text, TextInput, TouchableHighlight, View, findNodeHandle} from 'react-native';
-import React, {useState, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Popup} from 'react-native-windows';
@@ -16,8 +16,21 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
 
   const popupRef : React.RefObject<Popup> = React.createRef<Popup>();
   const viewRef: React.RefObject<View> = React.createRef<View>();
-  const textInputRef: React.RefObject<TextInput> = React.createRef<TextInput>();
-  const textRef: React.RefObject<Text> = React.createRef<Text>();
+
+  useEffect(() => {
+    console.log('useEffect called')
+    if (popupRef.current?.props.isOpen) {
+      console.log('popup is open')
+      const reactTag = findNodeHandle(viewRef.current);
+      console.log(reactTag)
+      if (reactTag) { 
+        console.log('setting focus')
+        AccessibilityInfo.setAccessibilityFocus(reactTag);
+      }
+    }
+  })
+
+  
 
   const example1jsx = `<TouchableHighlight
   onPress={() => {
