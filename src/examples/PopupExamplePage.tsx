@@ -15,13 +15,47 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const [showPopup4, setShowPopup4] = useState(false);
 
   const popupRef : React.RefObject<Popup> = React.createRef<Popup>();
+  const popup2Ref: React.RefObject<Popup> = React.createRef<Popup>();
+  const popup3Ref: React.RefObject<Popup> = React.createRef<Popup>();
+  const popup4Ref: React.RefObject<Popup> = React.createRef<Popup>();
+
+
   const viewRef: React.RefObject<View> = React.createRef<View>();
+  const view2Ref: React.RefObject<View> = React.createRef<View>();
+  const view3Ref: React.RefObject<View> = React.createRef<View>();
+  const view4Ref: React.RefObject<View> = React.createRef<View>();
+
 
   useEffect(() => {
     if (popupRef.current?.props.isOpen) {
       const reactTag = findNodeHandle(viewRef.current);
       if (reactTag) {
         AccessibilityInfo.setAccessibilityFocus(reactTag);
+        viewRef.current?.focus
+      }
+    }
+
+    if (popup2Ref.current?.props.isOpen) {
+      const reactTag = findNodeHandle(view2Ref.current);
+      if (reactTag) {
+        AccessibilityInfo.setAccessibilityFocus(reactTag);
+        view2Ref.current?.focus
+      }
+    }
+    
+    if (popup3Ref.current?.props.isOpen) {
+      const reactTag = findNodeHandle(view3Ref.current);
+      if (reactTag) {
+        AccessibilityInfo.setAccessibilityFocus(reactTag);
+        view3Ref.current?.focus
+      }
+    }
+
+    if (popup4Ref.current?.props.isOpen) {
+      const reactTag = findNodeHandle(view4Ref.current);
+      if (reactTag) {
+        AccessibilityInfo.setAccessibilityFocus(reactTag);
+        view4Ref.current?.focus
       }
     }
   })
@@ -236,12 +270,18 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup
+          accessible
+          focusable
+          ref={popup2Ref}
           isOpen={showPopup2}
           isLightDismissEnabled={true}
           onDismiss={() => {
             setShowPopup2(false);
           }}>
           <View
+            accessible
+            focusable
+            ref={view2Ref}
             style={{
               backgroundColor: colors.background,
               width: 200,
@@ -291,6 +331,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup
+          accessible
+          focusable
+          ref={popup3Ref}
           isOpen={showPopup3}
           onDismiss={() => {
             setShowPopup3(false);
@@ -298,6 +341,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           horizontalOffset={200}
           verticalOffset={200}>
           <View
+            accessible
+            focusable
+            ref={view3Ref}
             style={{
               backgroundColor: colors.background,
               width: 200,
@@ -351,11 +397,17 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
         <Popup
+          accessible
+          focusable
+          ref={popup4Ref}
           isOpen={showPopup4}
           onDismiss={() => {
             setShowPopup4(false);
           }}>
           <View
+            accessible
+            focusable
+            ref={view4Ref}
             style={{
               backgroundColor: colors.background,
               width: 200,
