@@ -18,19 +18,13 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const viewRef: React.RefObject<View> = React.createRef<View>();
 
   useEffect(() => {
-    console.log('useEffect called')
     if (popupRef.current?.props.isOpen) {
-      console.log('popup is open')
       const reactTag = findNodeHandle(viewRef.current);
-      console.log(reactTag)
-      if (reactTag) { 
-        console.log('setting focus')
+      if (reactTag) {
         AccessibilityInfo.setAccessibilityFocus(reactTag);
       }
     }
   })
-
-  
 
   const example1jsx = `<TouchableHighlight
   onPress={() => {
@@ -172,22 +166,15 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           }}
           onPress={() => {
             setShowPopup1(true);
-            const reactTag = findNodeHandle(popupRef.current);
-            console.log('onPress')
-            if (reactTag) {
-              console.log('reactTag found')
-              console.log(reactTag)
-              AccessibilityInfo.setAccessibilityFocus(reactTag);
-            }
           }}
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
-        <Popup accessible={true}
+        <Popup accessible
+               focusable
                accessibilityHint={'this is the popup'} 
                isOpen={showPopup1}
-               autoFocus={true}
                ref={popupRef}>
           <View
             style={{
