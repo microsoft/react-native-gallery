@@ -27,6 +27,10 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
 
 
   useEffect(() => {
+    setTimeout(setFocus, 100)
+  })
+
+  const setFocus = () => {
     if (popupRef.current?.props.isOpen) {
       const reactTag = findNodeHandle(viewRef.current);
       if (reactTag) {
@@ -58,7 +62,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
         view4Ref.current?.focus
       }
     }
-  })
+  }
 
   const example1jsx = `<TouchableHighlight
   onPress={() => {
