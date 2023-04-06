@@ -20,17 +20,29 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
 </View>`;
 
   const undoComponent = (
-    <View style={[styles.functionButton, {backgroundColor: colors.primary}]}>
+    <View 
+      accessible 
+      focusable 
+      accessibilityLabel={'Click to undo your last action'}
+      style={[styles.functionButton, {backgroundColor: colors.primary}]}>
       <Text style={{color: 'white'}}>Undo</Text>
     </View>
   );
   const clearComponent = (
-    <View style={[styles.functionButton, {backgroundColor: colors.primary}]}>
+    <View 
+      accessible 
+      focusable 
+      accessibilityLabel={'Click to clear the canvas'} 
+      style={[styles.functionButton, {backgroundColor: colors.primary}]}>
       <Text style={{color: 'white'}}>Clear</Text>
     </View>
   );
   const eraseComponent = (
-    <View style={[styles.functionButton, {backgroundColor: colors.primary}]}>
+    <View 
+      accessible 
+      focusable 
+      accessibilityLabel={'Click to use the eraser'}
+      style={[styles.functionButton, {backgroundColor: colors.primary}]}>
       <Text style={{color: 'white'}}>Eraser</Text>
     </View>
   );
