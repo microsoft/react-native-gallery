@@ -1,5 +1,12 @@
 'use strict';
-import {AccessibilityInfo, Text, TextInput, TouchableHighlight, View, findNodeHandle} from 'react-native';
+import {
+  AccessibilityInfo,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+  findNodeHandle,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -14,51 +21,49 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const [showPopup3, setShowPopup3] = useState(false);
   const [showPopup4, setShowPopup4] = useState(false);
 
-  const popupRef : React.RefObject<Popup> = React.createRef<Popup>();
+  const popupRef: React.RefObject<Popup> = React.createRef<Popup>();
   const popup2Ref: React.RefObject<Popup> = React.createRef<Popup>();
   const popup3Ref: React.RefObject<Popup> = React.createRef<Popup>();
   const popup4Ref: React.RefObject<Popup> = React.createRef<Popup>();
-
 
   const viewRef: React.RefObject<View> = React.createRef<View>();
   const view2Ref: React.RefObject<View> = React.createRef<View>();
   const view3Ref: React.RefObject<View> = React.createRef<View>();
   const view4Ref: React.RefObject<View> = React.createRef<View>();
 
-
   useEffect(() => {
-    setTimeout(setFocus, 50)
-  })
+    setTimeout(setFocus, 50);
+  });
 
   const setFocus = () => {
     if (popupRef.current?.props.isOpen) {
       const reactTag = findNodeHandle(viewRef.current);
       if (reactTag) {
-        viewRef.current?.focus()
+        viewRef.current?.focus();
       }
     }
 
     if (popup2Ref.current?.props.isOpen) {
       const reactTag = findNodeHandle(view2Ref.current);
       if (reactTag) {
-        view2Ref.current?.focus()
+        view2Ref.current?.focus();
       }
     }
-    
+
     if (popup3Ref.current?.props.isOpen) {
       const reactTag = findNodeHandle(view3Ref.current);
       if (reactTag) {
-        view3Ref.current?.focus()
+        view3Ref.current?.focus();
       }
     }
 
     if (popup4Ref.current?.props.isOpen) {
       const reactTag = findNodeHandle(view4Ref.current);
       if (reactTag) {
-        view4Ref.current?.focus()
+        view4Ref.current?.focus();
       }
     }
-  }
+  };
 
   const example1jsx = `<TouchableHighlight
   onPress={() => {
@@ -205,11 +210,12 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
-        <Popup accessible
-               focusable
-               accessibilityHint={'this is the popup'} 
-               isOpen={showPopup1}
-               ref={popupRef}>
+        <Popup
+          accessible
+          focusable
+          accessibilityHint={'this is the popup'}
+          isOpen={showPopup1}
+          ref={popupRef}>
           <View
             style={{
               backgroundColor: colors.background,
