@@ -20,7 +20,7 @@ import {TimePickerExamplePage} from '../src/examples/TimePickerExamplePage';
 // Issue: Usage of UIManager.getViewManangerConfig returning undefined
 //import {SketchExamplePage} from '../src/examples/SketchExamplePage';
 import {SliderExamplePage} from '../src/examples/SliderExamplePage';
-import {PermissionsExamplePage} from '../src/examples/PermissionsExamplePage';
+//import {PermissionsExamplePage} from '../src/examples/PermissionsExamplePage';
 import {PickerExamplePage} from '../src/examples/PickerExamplePage';
 import {PrintExamplePage} from '../src/examples/PrintExamplePage';
 import {DeviceInfoExamplePage} from '../src/examples/DeviceInfoExamplePage';

@@ -24,14 +24,16 @@ strategy:
     publish:
       UPGRADE: false
       PUBLISH_APP: true
-      VERSION_NAME: react-native-windows@0.69.0
+      VERSION_NAME: react-native-windows@0.71.0
 
 variables:
   - group: rngallery_Variables
   - name: BuildLogDirectory
     value: $(Build.BinariesDirectory)\x64\BuildLogs
 
-pool: rnw-pool-4
+pool:
+  name: rnw-pool-4
+  demands: ImageOverride -equals rnw-img-vs2022
 
 steps:
   - checkout: self
