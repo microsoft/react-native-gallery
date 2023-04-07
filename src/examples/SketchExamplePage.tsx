@@ -21,7 +21,8 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
 
   const undoComponent = (
     <View 
-      accessible 
+      accessible
+      accessibilityRole={'button'}
       focusable 
       accessibilityLabel={'Click to undo your last action'}
       style={[styles.functionButton, {backgroundColor: colors.primary}]}>
@@ -30,7 +31,8 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   );
   const clearComponent = (
     <View 
-      accessible 
+      accessible
+      accessibilityRole={'button'}
       focusable 
       accessibilityLabel={'Click to clear the canvas'} 
       style={[styles.functionButton, {backgroundColor: colors.primary}]}>
@@ -39,7 +41,8 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   );
   const eraseComponent = (
     <View 
-      accessible 
+      accessible
+      accessibilityRole={'button'}
       focusable 
       accessibilityLabel={'Click to use the eraser'}
       style={[styles.functionButton, {backgroundColor: colors.primary}]}>
