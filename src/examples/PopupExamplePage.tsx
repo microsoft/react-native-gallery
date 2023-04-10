@@ -1,9 +1,5 @@
 'use strict';
-import {
-  Text,
-  TouchableHighlight,
-  View,
-} from 'react-native';
+import {Text, TouchableHighlight, View} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
