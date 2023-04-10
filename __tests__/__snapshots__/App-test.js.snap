@@ -15307,6 +15307,9 @@ exports[`Popup Example Page 1`] = `
                 </Text>
               </View>
               <RCTPopup
+                accessibilityHint="this is the popup"
+                accessible={true}
+                focusable={true}
                 isOpen={false}
                 style={
                   [
@@ -15319,6 +15322,9 @@ exports[`Popup Example Page 1`] = `
                 target={null}
               >
                 <View
+                  accessibilityRole="alert"
+                  accessible={true}
+                  focusable={true}
                   style={
                     {
                       "alignItems": "center",
@@ -15946,6 +15952,8 @@ exports[`Popup Example Page 1`] = `
                 </Text>
               </View>
               <RCTPopup
+                accessible={true}
+                focusable={true}
                 isLightDismissEnabled={true}
                 isOpen={false}
                 onDismiss={[Function]}
@@ -15960,6 +15968,9 @@ exports[`Popup Example Page 1`] = `
                 target={null}
               >
                 <View
+                  accessibilityRole="alert"
+                  accessible={true}
+                  focusable={true}
                   style={
                     {
                       "alignItems": "center",
@@ -16645,6 +16656,8 @@ exports[`Popup Example Page 1`] = `
                 </Text>
               </View>
               <RCTPopup
+                accessible={true}
+                focusable={true}
                 horizontalOffset={200}
                 isOpen={false}
                 onDismiss={[Function]}
@@ -16660,6 +16673,9 @@ exports[`Popup Example Page 1`] = `
                 verticalOffset={200}
               >
                 <View
+                  accessibilityRole="alert"
+                  accessible={true}
+                  focusable={true}
                   style={
                     {
                       "alignItems": "center",
@@ -17318,6 +17334,8 @@ exports[`Popup Example Page 1`] = `
                 </Text>
               </View>
               <RCTPopup
+                accessible={true}
+                focusable={true}
                 isOpen={false}
                 onDismiss={[Function]}
                 style={
@@ -17331,6 +17349,9 @@ exports[`Popup Example Page 1`] = `
                 target={null}
               >
                 <View
+                  accessibilityRole="alert"
+                  accessible={true}
+                  focusable={true}
                   style={
                     {
                       "alignItems": "center",
