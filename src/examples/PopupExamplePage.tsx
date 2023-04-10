@@ -37,31 +37,19 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
 
   const setFocus = () => {
     if (popupRef.current?.props.isOpen) {
-      const reactTag = findNodeHandle(viewRef.current);
-      if (reactTag) {
-        viewRef.current?.focus();
-      }
+      viewRef.current?.focus();
     }
 
     if (popup2Ref.current?.props.isOpen) {
-      const reactTag = findNodeHandle(view2Ref.current);
-      if (reactTag) {
-        view2Ref.current?.focus();
-      }
+      view2Ref.current?.focus();
     }
 
     if (popup3Ref.current?.props.isOpen) {
-      const reactTag = findNodeHandle(view3Ref.current);
-      if (reactTag) {
-        view3Ref.current?.focus();
-      }
+      view3Ref.current?.focus();
     }
 
     if (popup4Ref.current?.props.isOpen) {
-      const reactTag = findNodeHandle(view4Ref.current);
-      if (reactTag) {
-        view4Ref.current?.focus();
-      }
+      view4Ref.current?.focus();
     }
   };
 
