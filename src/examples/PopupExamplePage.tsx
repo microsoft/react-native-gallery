@@ -1,11 +1,8 @@
 'use strict';
 import {
-  AccessibilityInfo,
   Text,
-  TextInput,
   TouchableHighlight,
   View,
-  findNodeHandle,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
