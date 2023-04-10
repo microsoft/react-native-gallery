@@ -15322,6 +15322,7 @@ exports[`Popup Example Page 1`] = `
                 target={null}
               >
                 <View
+                  accessibilityRole="alert"
                   accessible={true}
                   focusable={true}
                   style={
@@ -15967,6 +15968,7 @@ exports[`Popup Example Page 1`] = `
                 target={null}
               >
                 <View
+                  accessibilityRole="alert"
                   accessible={true}
                   focusable={true}
                   style={
@@ -16671,6 +16673,7 @@ exports[`Popup Example Page 1`] = `
                 verticalOffset={200}
               >
                 <View
+                  accessibilityRole="alert"
                   accessible={true}
                   focusable={true}
                   style={
@@ -17346,6 +17349,7 @@ exports[`Popup Example Page 1`] = `
                 target={null}
               >
                 <View
+                  accessibilityRole="alert"
                   accessible={true}
                   focusable={true}
                   style={
