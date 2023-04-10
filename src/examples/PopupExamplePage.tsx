@@ -207,6 +207,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}
             accessible={true}
+            accessibilityRole={'alert'}
             focusable={true}
             ref={viewRef}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
@@ -268,6 +269,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           <View
             accessible
             focusable
+            accessibilityRole={'alert'}
             ref={view2Ref}
             style={{
               backgroundColor: colors.background,
@@ -330,6 +332,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           <View
             accessible
             focusable
+            accessibilityRole={'alert'}
             ref={view3Ref}
             style={{
               backgroundColor: colors.background,
@@ -394,6 +397,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           <View
             accessible
             focusable
+            accessibilityRole={'alert'}
             ref={view4Ref}
             style={{
               backgroundColor: colors.background,
