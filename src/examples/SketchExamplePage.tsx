@@ -1,6 +1,6 @@
 'use strict';
 import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {RNSketchCanvas, SketchCanvas} from '@wwimmo/react-native-sketch-canvas';
@@ -8,6 +8,8 @@ import {useTheme} from '@react-navigation/native';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
+
+  const [canvasColor, setCanvasColor] = useState('black');
 
   const exampleJsx = `<View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5FCFF'}}>
   <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -98,18 +100,33 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
           <SketchCanvas 
             style={{backgroundColor: 'transparent', flex: 1}}
             strokeWidth={5}
-            ref={sketchRef}          />
+            strokeColor={canvasColor}
+            ref={sketchRef}/>
         </View>
         <View 
-          style={[styles.functionButton, {backgroundColor: colors.primary}]}>
+          style={{flexDirection: 'row'}}>
           <TouchableHighlight 
+            style={[styles.functionButton, {backgroundColor: colors.primary}]}
+            accessible
+            accessibilityRole={'button'} 
+            accessibilityLabel={'Clear'} 
+            onPress={() => {
+              if (sketchRef.current) {
+                setCanvasColor('white')
+              }
+            }}>
+          <Text style={{color: 'white'}}>Eraser</Text>
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={[styles.functionButton, {backgroundColor: colors.primary}]}
             accessible
             accessibilityRole={'button'} 
             accessibilityLabel={'Undo'} 
             onPress={() => {sketchRef.current?.undo()}}>
           <Text style={{color: 'white'}}>Undo</Text>
           </TouchableHighlight>
-          <TouchableHighlight 
+          <TouchableHighlight
+            style={[styles.functionButton, {backgroundColor: colors.primary}]}
             accessible
             accessibilityRole={'button'} 
             accessibilityLabel={'Clear'} 
@@ -133,7 +150,7 @@ const styles = StyleSheet.create({
   functionButton: {
     marginHorizontal: 2.5,
     marginVertical: 8,
-    padding: 5,
+    padding: 5  ,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
