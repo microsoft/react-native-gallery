@@ -1,9 +1,9 @@
 'use strict';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import RNSketchCanvas from '@wwimmo/react-native-sketch-canvas';
+import {RNSketchCanvas, SketchCanvas} from '@wwimmo/react-native-sketch-canvas';
 import {useTheme} from '@react-navigation/native';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {
@@ -19,6 +19,8 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   </View>
 </View>`;
 
+  const sketchRef : React.RefObject<SketchCanvas> = React.createRef<SketchCanvas>();
+  
   const undoComponent = (
     <View 
       accessible
@@ -67,6 +69,18 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
     />
   );
 
+{/*       <RNSketchCanvas
+            containerStyle={{backgroundColor: 'transparent', flex: 1}}
+            canvasStyle={{backgroundColor: 'transparent', flex: 1}}
+            undoComponent={undoComponent}
+            clearComponent={clearComponent}
+            eraseComponent={eraseComponent}
+            strokeComponent={strokeComponent}
+            strokeSelectedComponent={strokeSelectedComponent}
+            defaultStrokeIndex={0}
+            defaultStrokeWidth={5}
+          /> */}
+
   return (
     <Page
       title="Sketch Canvas"
@@ -81,17 +95,27 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Sketch Canvas." code={exampleJsx}>
         <View style={{flex: 1, flexDirection: 'row', height: 250}}>
-          <RNSketchCanvas
-            containerStyle={{backgroundColor: 'transparent', flex: 1}}
-            canvasStyle={{backgroundColor: 'transparent', flex: 1}}
-            undoComponent={undoComponent}
-            clearComponent={clearComponent}
-            eraseComponent={eraseComponent}
-            strokeComponent={strokeComponent}
-            strokeSelectedComponent={strokeSelectedComponent}
-            defaultStrokeIndex={0}
-            defaultStrokeWidth={5}
-          />
+          <SketchCanvas 
+            style={{backgroundColor: 'transparent', flex: 1}}
+            strokeWidth={5}
+            ref={sketchRef}          />
+        </View>
+        <View 
+          style={[styles.functionButton, {backgroundColor: colors.primary}]}>
+          <TouchableHighlight 
+            accessible
+            accessibilityRole={'button'} 
+            accessibilityLabel={'Undo'} 
+            onPress={() => {sketchRef.current?.undo()}}>
+          <Text style={{color: 'white'}}>Undo</Text>
+          </TouchableHighlight>
+          <TouchableHighlight 
+            accessible
+            accessibilityRole={'button'} 
+            accessibilityLabel={'Clear'} 
+            onPress={() => {sketchRef.current?.clear()}}>
+          <Text style={{color: 'white'}}>Clear</Text>
+          </TouchableHighlight>
         </View>
       </Example>
     </Page>
