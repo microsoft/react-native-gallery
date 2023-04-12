@@ -1,9 +1,9 @@
 'use strict';
-import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import {StyleSheet, Text, View, TouchableHighlight, Pressable} from 'react-native';
 import React, { useState } from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {RNSketchCanvas, SketchCanvas} from '@wwimmo/react-native-sketch-canvas';
+import {SketchCanvas} from '@wwimmo/react-native-sketch-canvas';
 import {useTheme} from '@react-navigation/native';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {
@@ -71,18 +71,6 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
     />
   );
 
-{/*       <RNSketchCanvas
-            containerStyle={{backgroundColor: 'transparent', flex: 1}}
-            canvasStyle={{backgroundColor: 'transparent', flex: 1}}
-            undoComponent={undoComponent}
-            clearComponent={clearComponent}
-            eraseComponent={eraseComponent}
-            strokeComponent={strokeComponent}
-            strokeSelectedComponent={strokeSelectedComponent}
-            defaultStrokeIndex={0}
-            defaultStrokeWidth={5}
-          /> */}
-
   return (
     <Page
       title="Sketch Canvas"
@@ -103,36 +91,161 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             strokeColor={canvasColor}
             ref={sketchRef}/>
         </View>
-        <View 
-          style={{flexDirection: 'row'}}>
-          <TouchableHighlight 
-            style={[styles.functionButton, {backgroundColor: colors.primary}]}
-            accessible
-            accessibilityRole={'button'} 
-            accessibilityLabel={'Clear'} 
-            onPress={() => {
-              if (sketchRef.current) {
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
+            <TouchableHighlight 
+              style={[styles.functionButton, {backgroundColor: colors.primary}]}
+              accessible
+              accessibilityRole={'button'} 
+              accessibilityLabel={'Eraser'} 
+              onPress={() => {
+                if (sketchRef.current) {
+                  setCanvasColor('white')
+                }
+              }}>
+              <Text style={{color: 'white'}}>Eraser</Text>
+            </TouchableHighlight>
+          </View>
+          <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
+            <TouchableHighlight
+              style={[styles.functionButton, {backgroundColor: colors.primary}]}
+              accessible
+              accessibilityRole={'button'} 
+              accessibilityLabel={'Undo'} 
+              onPress={() => {sketchRef.current?.undo()}}>
+            <Text style={{color: 'white'}}>Undo</Text>
+            </TouchableHighlight>
+            <TouchableHighlight
+              style={[styles.functionButton, {backgroundColor: colors.primary}]}
+              accessible
+              accessibilityRole={'button'} 
+              accessibilityLabel={'Clear'} 
+              onPress={() => {sketchRef.current?.clear()}}>
+            <Text style={{color: 'white'}}>Clear</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Black'}
+              focusable
+              style={[{backgroundColor: 'black'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('black')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Red'}
+              focusable
+              style={[{backgroundColor: 'red'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('red')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Turquoise'}
+              focusable
+              style={[{backgroundColor: 'turquoise'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('turquoise')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Blue'}
+              focusable
+              style={[{backgroundColor: 'blue'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('blue')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Navy'}
+              focusable
+              style={[{backgroundColor: 'navy'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('navy')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Maroon'}
+              focusable
+              style={[{backgroundColor: 'maroon'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('maroon')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Green'}
+              focusable
+              style={[{backgroundColor: 'green'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('green')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Fuchsia'}
+              focusable
+              style={[{backgroundColor: 'fuchsia'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('fuchsia')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'White'}
+              focusable
+              style={[{backgroundColor: 'white'}, styles.strokeColorButton]}
+              onPress={() => {
                 setCanvasColor('white')
-              }
-            }}>
-          <Text style={{color: 'white'}}>Eraser</Text>
-          </TouchableHighlight>
-          <TouchableHighlight
-            style={[styles.functionButton, {backgroundColor: colors.primary}]}
-            accessible
-            accessibilityRole={'button'} 
-            accessibilityLabel={'Undo'} 
-            onPress={() => {sketchRef.current?.undo()}}>
-          <Text style={{color: 'white'}}>Undo</Text>
-          </TouchableHighlight>
-          <TouchableHighlight
-            style={[styles.functionButton, {backgroundColor: colors.primary}]}
-            accessible
-            accessibilityRole={'button'} 
-            accessibilityLabel={'Clear'} 
-            onPress={() => {sketchRef.current?.clear()}}>
-          <Text style={{color: 'white'}}>Clear</Text>
-          </TouchableHighlight>
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Silver'}
+              focusable
+              style={[{backgroundColor: 'silver'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('silver')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Grey'}
+              focusable
+              style={[{backgroundColor: 'grey'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('grey')
+              }}
+            />
+            <Pressable
+              accessible
+              accessibilityRole={'button'}
+              accessibilityLabel={'Pink'}
+              focusable
+              style={[{backgroundColor: 'pink'}, styles.strokeColorButton]}
+              onPress={() => {
+                setCanvasColor('pink')
+              }}
+            />
         </View>
       </Example>
     </Page>
