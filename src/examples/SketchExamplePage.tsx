@@ -27,57 +27,7 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   </View>
 </View>`;
 
-  const sketchRef: React.RefObject<SketchCanvas> = React.createRef<
-    SketchCanvas
-  >();
-
-  const undoComponent = (
-    <View
-      accessible
-      accessibilityRole={'button'}
-      focusable
-      accessibilityLabel={'Click to undo your last action'}
-      style={[styles.functionButton, {backgroundColor: colors.primary}]}>
-      <Text style={{color: 'white'}}>Undo</Text>
-    </View>
-  );
-  const clearComponent = (
-    <View
-      accessible
-      accessibilityRole={'button'}
-      focusable
-      accessibilityLabel={'Click to clear the canvas'}
-      style={[styles.functionButton, {backgroundColor: colors.primary}]}>
-      <Text style={{color: 'white'}}>Clear</Text>
-    </View>
-  );
-  const eraseComponent = (
-    <View
-      accessible
-      accessibilityRole={'button'}
-      focusable
-      accessibilityLabel={'Click to use the eraser'}
-      style={[styles.functionButton, {backgroundColor: colors.primary}]}>
-      <Text style={{color: 'white'}}>Eraser</Text>
-    </View>
-  );
-
-  const strokeComponent = (color: string) => (
-    <View style={[{backgroundColor: color}, styles.strokeColorButton]} />
-  );
-
-  const strokeSelectedComponent = (
-    color: string,
-    _index: number,
-    _changed: boolean,
-  ) => (
-    <View
-      style={[
-        {backgroundColor: color, borderWidth: 2},
-        styles.strokeColorButton,
-      ]}
-    />
-  );
+  const sketchRef: React.RefObject<SketchCanvas> = React.createRef<SketchCanvas>();
 
   return (
     <Page
