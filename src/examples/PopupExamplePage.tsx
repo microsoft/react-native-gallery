@@ -1,5 +1,5 @@
 'use strict';
-import {Text, TouchableHighlight, View} from 'react-native';
+import {Button, Text, TouchableHighlight, View} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -211,25 +211,14 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             focusable={true}
             ref={viewRef}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
-            <TouchableHighlight
-              accessibilityRole="button"
-              accessibilityLabel={'example simple popup'}
-              accessibilityHint={'click me to close the popup'}
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Popup'}
+              title={'Close Popup'}
+              color={colors.border}
               onPress={() => {
                 setShowPopup1(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Popup</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Popup>
       </Example>
@@ -280,22 +269,14 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
-            <TouchableHighlight
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Popup'}
+              title={'Close Popup'}
+              color={colors.border}
               onPress={() => {
                 setShowPopup2(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Popup</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Popup>
       </Example>
@@ -343,22 +324,14 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
-            <TouchableHighlight
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Popup'}
+              title={'Close Popup'}
+              color={colors.border}
               onPress={() => {
                 setShowPopup3(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Popup</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Popup>
       </Example>
@@ -408,27 +381,14 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a popup.</Text>
-            <TouchableHighlight
-              accessibilityRole="button"
-              accessibilityLabel={
-                'example popup with touchablehighlight as target'
-              }
-              accessibilityHint={'click me to close the popup'}
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Popup'}
+              title={'Close Popup'}
+              color={colors.border}
               onPress={() => {
                 setShowPopup4(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Popup</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Popup>
       </Example>
