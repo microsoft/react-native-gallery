@@ -27,7 +27,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   </View>
 </View>`;
 
-  const sketchRef: React.RefObject<SketchCanvas> = React.createRef<SketchCanvas>();
+  const sketchRef: React.RefObject<SketchCanvas> = React.createRef<
+    SketchCanvas
+  >();
 
   return (
     <Page
