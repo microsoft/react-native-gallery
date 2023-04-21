@@ -171,6 +171,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h',
         },
       ]}>
+      <Text accessibilityRole="header">Hello</Text>
       <Example title="A simple Popup." code={example1jsx}>
         <TouchableHighlight
           accessibilityRole="button"

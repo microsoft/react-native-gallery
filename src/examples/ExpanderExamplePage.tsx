@@ -71,8 +71,14 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple Expander." code={example1jsx}>
-        <Expander collapsedHeight={50} expandedHeight={125}>
-          <Text>Text in the header</Text>
+        <Expander
+          collapsedHeight={50} 
+          expandedHeight={125}>
+          <Text
+            accessible
+            accessibilityRole="button">
+            Text in the header
+          </Text>
           <Text>Text in the content</Text>
         </Expander>
       </Example>
