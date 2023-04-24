@@ -1,5 +1,5 @@
 'use strict';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, View, TouchableHighlight, Button} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -172,22 +172,14 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <TouchableHighlight
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Flyout'}
+              title={'Close Flyout'}
+              color={colors.border}
               onPress={() => {
                 setShowFlyout1(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Flyout</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Flyout>
       </Example>
@@ -224,22 +216,14 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <TouchableHighlight
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Flyout'}
+              title={'Close Flyout'}
+              color={colors.border}
               onPress={() => {
                 setShowFlyout2(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Flyout</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Flyout>
       </Example>
@@ -277,22 +261,14 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <TouchableHighlight
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Flyout'}
+              title={'Close Flyout'}
+              color={colors.border}
               onPress={() => {
                 setShowFlyout3(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Flyout</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Flyout>
       </Example>
@@ -333,22 +309,14 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <TouchableHighlight
-              style={{
-                height: 40,
-                width: 150,
-                backgroundColor: colors.border,
-                borderRadius: 3,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <Button
+              accessibilityLabel={'Close Flyout'}
+              title={'Close Flyout'}
+              color={colors.border}
               onPress={() => {
                 setShowFlyout4(false);
               }}
-              activeOpacity={0.2}
-              underlayColor={colors.border}>
-              <Text style={{color: colors.text}}>Close Flyout</Text>
-            </TouchableHighlight>
+            />
           </View>
         </Flyout>
       </Example>
