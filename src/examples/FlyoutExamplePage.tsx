@@ -1,5 +1,5 @@
 'use strict';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, View, TouchableHighlight, Button} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -153,6 +153,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout1(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -173,6 +174,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
               style={{
                 height: 40,
                 width: 150,
@@ -225,6 +227,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
               style={{
                 height: 40,
                 width: 150,
@@ -278,6 +281,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
               style={{
                 height: 40,
                 width: 150,
@@ -334,6 +338,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
               style={{
                 height: 40,
                 width: 150,
