@@ -179,7 +179,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -234,7 +234,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -288,7 +288,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -347,7 +347,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',

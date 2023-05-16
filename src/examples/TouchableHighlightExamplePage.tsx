@@ -76,7 +76,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityLabel={'example TouchableHighlight'}
           style={{
             height: 40,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -112,7 +112,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
-            backgroundColor: colors.text,
+            backgroundColor: 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -122,7 +122,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           }}
           activeOpacity={0.2}
           underlayColor={colors.text}>
-          <Text style={{color: 'white'}}>{String(title)}</Text>
+          <Text style={{color: colors.text}}>{String(title)}</Text>
         </TouchableHighlight>
       </Example>
     </Page>

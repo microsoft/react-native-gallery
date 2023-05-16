@@ -110,7 +110,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             width: 140,
             height: 50,
             borderRadius: 2,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
             opacity: 0.5,
           }}
           disabled={true}>
@@ -136,7 +136,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           }}
           style={({pressed}) => [
             {
-              backgroundColor: pressed ? colors.primary : colors.border,
+              backgroundColor: pressed ? colors.primary : 'silver',
               width: 140,
               height: 50,
               borderRadius: 2,
@@ -167,7 +167,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             width: 200,
             height: 50,
             borderRadius: 2,
-            backgroundColor: colors.border,
+            backgroundColor: 'silver',
           }}
           onPress={() => setCurrEvent('press')}
           onPressIn={() => setCurrEvent('pressIn')}
