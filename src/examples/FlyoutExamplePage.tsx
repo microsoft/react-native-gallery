@@ -1,5 +1,5 @@
 'use strict';
-import {Text, View, TouchableHighlight, Button, PlatformColor, StyleSheet, Platform} from 'react-native';
+import {Text, View, TouchableHighlight, Button} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -121,19 +121,6 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
     </TouchableHighlight>
   </View>
 </Flyout>`;
-
-    const buttonStyles = StyleSheet.create({
-      button: Platform.select({
-        windows: {
-          height: 40,
-          width: 150,
-          backgroundColor: PlatformColor('systemTealColor'),
-          borderRadius: 3,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }
-      })
-    })
 
   return (
     <Page
