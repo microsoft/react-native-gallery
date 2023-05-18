@@ -39,7 +39,7 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^11.18.2",
-    "react-native-windows": "^0.71.0",
+    "react-native-windows": "^0.71.13",
     "react-native-xaml": "^0.0.74"
   },
   "devDependencies": {
