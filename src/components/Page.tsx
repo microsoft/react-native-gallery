@@ -95,7 +95,12 @@ export function Page(props: {
     <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
         <View>
-          <Text accessible accessibilityRole={'header'} style={[styles.title, {color: colors.text}]}>{props.title}</Text>
+          <Text
+            accessible
+            accessibilityRole={'header'}
+            style={[styles.title, {color: colors.text}]}>
+            {props.title}
+          </Text>
         </View>
         <View>
           {DisplayNativeControlBadge(props.wrappedNativeControl)}

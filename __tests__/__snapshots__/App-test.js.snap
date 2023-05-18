@@ -128,21 +128,25 @@ exports[`Button Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Button
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Button
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -1099,21 +1103,25 @@ exports[`CheckBox Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Checkbox
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Checkbox
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -2222,21 +2230,25 @@ exports[`Config Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Config Variables
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Config Variables
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -2830,21 +2842,25 @@ exports[`DeviceInfo Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Device Info
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Device Info
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -3561,21 +3577,25 @@ exports[`Expander Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Expander
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Expander
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -3723,7 +3743,10 @@ exports[`Expander Example Page 1`] = `
                 onCollapsing={[Function]}
                 onExpanding={[Function]}
               >
-                <Text>
+                <Text
+                  accessibilityRole="button"
+                  accessible={true}
+                >
                   Text in the header
                 </Text>
                 <Text>
@@ -5859,21 +5882,25 @@ exports[`FlatList Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        FlatList
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          FlatList
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -7831,21 +7858,25 @@ exports[`Flyout Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Flyout
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Flyout
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -10885,21 +10916,25 @@ exports[`Hello Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Windows Hello
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Windows Hello
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -11996,21 +12031,25 @@ exports[`Image Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Image
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Image
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -13396,21 +13435,25 @@ exports[`Picker Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Picker
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Picker
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -15109,21 +15152,25 @@ exports[`Popup Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Popup
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Popup
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -15235,6 +15282,11 @@ exports[`Popup Example Page 1`] = `
       }
     >
       <View>
+        <Text
+          accessibilityRole="header"
+        >
+          Hello
+        </Text>
         <View>
           <Text
             style={
@@ -18204,21 +18256,25 @@ exports[`Pressable Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Pressable
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Pressable
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -20151,21 +20207,25 @@ exports[`Print Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Print
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Print
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -20683,21 +20743,25 @@ exports[`ProgressView Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        ProgressView
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          ProgressView
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -21286,21 +21350,25 @@ exports[`ScrollView Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        ScrollView
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          ScrollView
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -22796,21 +22864,25 @@ exports[`SensitiveInfo Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Sensitive Info
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Sensitive Info
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -24434,21 +24506,25 @@ exports[`Slider Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Slider
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Slider
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -25629,21 +25705,25 @@ exports[`Switch Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Switch
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Switch
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -26310,21 +26390,25 @@ exports[`Text Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Text
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Text
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -27899,21 +27983,25 @@ exports[`TextInput Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        TextInput
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          TextInput
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -28928,21 +29016,25 @@ exports[`TextToSpeech Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Text-to-Speech
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Text-to-Speech
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -29489,21 +29581,25 @@ exports[`TouchableHighlight Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Touchable Highlight
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Touchable Highlight
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -30950,21 +31046,25 @@ exports[`TouchableOpacity Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Touchable Opacity
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Touchable Opacity
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -33422,21 +33522,25 @@ exports[`View Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        View
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          View
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -37062,21 +37166,25 @@ exports[`WebView Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        WebView
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          WebView
+        </Text>
+      </View>
       <View>
         <View
           style={
@@ -37790,21 +37898,25 @@ exports[`Xaml Example Page 1`] = `
         }
       }
     >
-      <Text
-        style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
-        }
-      >
-        Xaml
-      </Text>
+      <View>
+        <Text
+          accessibilityRole="header"
+          accessible={true}
+          style={
+            [
+              {
+                "fontSize": 26,
+                "fontWeight": "200",
+              },
+              {
+                "color": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+        >
+          Xaml
+        </Text>
+      </View>
       <View>
         <View
           style={
