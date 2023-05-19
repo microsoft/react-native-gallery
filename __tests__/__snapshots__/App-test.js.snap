@@ -7987,6 +7987,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -8060,6 +8061,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
+                    accessibilityRole="button"
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -8727,6 +8729,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
+                    accessibilityRole="button"
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -9396,6 +9399,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
+                    accessibilityRole="button"
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -10065,6 +10069,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
+                    accessibilityRole="button"
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -15346,9 +15351,17 @@ exports[`Popup Example Page 1`] = `
                     This is a popup.
                   </Text>
                   <View
-                    accessibilityHint="click me to close the popup"
-                    accessibilityLabel="example simple popup"
+                    accessibilityLabel="Close Popup"
                     accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -15358,6 +15371,7 @@ exports[`Popup Example Page 1`] = `
                       }
                     }
                     accessible={true}
+                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -15368,24 +15382,35 @@ exports[`Popup Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(216, 216, 216)",
-                        "borderRadius": 3,
-                        "height": 40,
-                        "justifyContent": "center",
-                        "width": 150,
+                        "opacity": 1,
                       }
                     }
                   >
-                    <Text
+                    <View
                       style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
+                        [
+                          {},
+                        ]
                       }
                     >
-                      Close Popup
-                    </Text>
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            {
+                              "color": "rgb(216, 216, 216)",
+                            },
+                          ]
+                        }
+                      >
+                        Close Popup
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </RCTPopup>
@@ -15992,6 +16017,17 @@ exports[`Popup Example Page 1`] = `
                     This is a popup.
                   </Text>
                   <View
+                    accessibilityLabel="Close Popup"
+                    accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -16001,6 +16037,7 @@ exports[`Popup Example Page 1`] = `
                       }
                     }
                     accessible={true}
+                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -16011,24 +16048,35 @@ exports[`Popup Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(216, 216, 216)",
-                        "borderRadius": 3,
-                        "height": 40,
-                        "justifyContent": "center",
-                        "width": 150,
+                        "opacity": 1,
                       }
                     }
                   >
-                    <Text
+                    <View
                       style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
+                        [
+                          {},
+                        ]
                       }
                     >
-                      Close Popup
-                    </Text>
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            {
+                              "color": "rgb(216, 216, 216)",
+                            },
+                          ]
+                        }
+                      >
+                        Close Popup
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </RCTPopup>
@@ -16697,6 +16745,17 @@ exports[`Popup Example Page 1`] = `
                     This is a popup.
                   </Text>
                   <View
+                    accessibilityLabel="Close Popup"
+                    accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -16706,6 +16765,7 @@ exports[`Popup Example Page 1`] = `
                       }
                     }
                     accessible={true}
+                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -16716,24 +16776,35 @@ exports[`Popup Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(216, 216, 216)",
-                        "borderRadius": 3,
-                        "height": 40,
-                        "justifyContent": "center",
-                        "width": 150,
+                        "opacity": 1,
                       }
                     }
                   >
-                    <Text
+                    <View
                       style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
+                        [
+                          {},
+                        ]
                       }
                     >
-                      Close Popup
-                    </Text>
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            {
+                              "color": "rgb(216, 216, 216)",
+                            },
+                          ]
+                        }
+                      >
+                        Close Popup
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </RCTPopup>
@@ -17373,9 +17444,17 @@ exports[`Popup Example Page 1`] = `
                     This is a popup.
                   </Text>
                   <View
-                    accessibilityHint="click me to close the popup"
-                    accessibilityLabel="example popup with touchablehighlight as target"
+                    accessibilityLabel="Close Popup"
                     accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -17385,6 +17464,7 @@ exports[`Popup Example Page 1`] = `
                       }
                     }
                     accessible={true}
+                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -17395,24 +17475,35 @@ exports[`Popup Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "alignItems": "center",
-                        "backgroundColor": "rgb(216, 216, 216)",
-                        "borderRadius": 3,
-                        "height": 40,
-                        "justifyContent": "center",
-                        "width": 150,
+                        "opacity": 1,
                       }
                     }
                   >
-                    <Text
+                    <View
                       style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
+                        [
+                          {},
+                        ]
                       }
                     >
-                      Close Popup
-                    </Text>
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            {
+                              "color": "rgb(216, 216, 216)",
+                            },
+                          ]
+                        }
+                      >
+                        Close Popup
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </RCTPopup>

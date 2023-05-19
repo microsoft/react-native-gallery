@@ -153,6 +153,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout1(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -173,6 +174,15 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout1(false);
               }}
@@ -217,6 +227,15 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout2(false);
               }}
@@ -262,6 +281,15 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout3(false);
               }}
@@ -310,6 +338,15 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
             <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout4(false);
               }}
