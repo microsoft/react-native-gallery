@@ -8008,7 +8008,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -8090,13 +8090,7 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                   >
-                    <Text
-                      style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
-                      }
-                    >
+                    <Text>
                       Close Flyout
                     </Text>
                   </View>
@@ -8675,7 +8669,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -8758,13 +8752,7 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                   >
-                    <Text
-                      style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
-                      }
-                    >
+                    <Text>
                       Close Flyout
                     </Text>
                   </View>
@@ -9344,7 +9332,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -9428,13 +9416,7 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                   >
-                    <Text
-                      style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
-                      }
-                    >
+                    <Text>
                       Close Flyout
                     </Text>
                   </View>
@@ -10015,7 +9997,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -10098,13 +10080,7 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                   >
-                    <Text
-                      style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                        }
-                      }
-                    >
+                    <Text>
                       Close Flyout
                     </Text>
                   </View>
@@ -15293,7 +15269,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -15958,7 +15934,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -16685,7 +16661,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -17386,7 +17362,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -18632,7 +18608,7 @@ exports[`Pressable Example Page 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   {
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 2,
                     "height": 50,
                     "opacity": 0.5,
@@ -19057,7 +19033,7 @@ exports[`Pressable Example Page 1`] = `
                 style={
                   [
                     {
-                      "backgroundColor": "rgb(216, 216, 216)",
+                      "backgroundColor": "silver",
                       "borderRadius": 2,
                       "height": 50,
                       "width": 140,
@@ -19595,7 +19571,7 @@ exports[`Pressable Example Page 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   {
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 2,
                     "height": 50,
                     "width": 200,
@@ -29715,7 +29691,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -30454,7 +30430,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(28, 28, 30)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -30464,7 +30440,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": "white",
+                      "color": "rgb(28, 28, 30)",
                     }
                   }
                 >
@@ -31186,7 +31162,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -32004,7 +31980,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -32429,7 +32405,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(28, 28, 30)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -32441,7 +32417,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": "white",
+                      "color": "rgb(28, 28, 30)",
                     }
                   }
                 >
@@ -32854,7 +32830,7 @@ activeOpacity={
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
