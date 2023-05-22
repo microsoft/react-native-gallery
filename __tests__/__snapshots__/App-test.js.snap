@@ -1130,7 +1130,7 @@ exports[`CheckBox Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -3592,7 +3592,7 @@ exports[`Expander Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -7862,7 +7862,7 @@ exports[`Flyout Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -10897,7 +10897,7 @@ exports[`Hello Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -12008,7 +12008,7 @@ exports[`Image Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -13408,7 +13408,7 @@ exports[`Picker Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -15121,7 +15121,7 @@ exports[`Popup Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -21384,7 +21384,7 @@ exports[`ScrollView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -24532,7 +24532,7 @@ exports[`Slider Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -25727,7 +25727,7 @@ exports[`Switch Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -26408,7 +26408,7 @@ exports[`Text Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -27997,7 +27997,7 @@ exports[`TextInput Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -33520,7 +33520,7 @@ exports[`View Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -37160,7 +37160,7 @@ exports[`WebView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
