@@ -1,5 +1,11 @@
 'use strict';
-import {Text, View, TouchableHighlight, Platform, PlatformColor} from 'react-native';
+import {
+  Text,
+  View,
+  TouchableHighlight,
+  Platform,
+  PlatformColor,
+} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -145,7 +151,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: (Platform.OS === 'windows') ? PlatformColor('SolidBackgroundFillColorBaseAlt') : 'silver',
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemListLowColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -198,7 +207,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: (Platform.OS === 'windows') ? PlatformColor('SolidBackgroundFillColorBaseAlt') : 'silver',
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemListLowColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -251,7 +263,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: (Platform.OS === 'windows') ? PlatformColor('SolidBackgroundFillColorBaseAlt') : 'silver',
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemListLowColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -307,7 +322,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: (Platform.OS === 'windows') ? PlatformColor('SolidBackgroundFillColorBaseAlt') : 'silver',
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemListLowColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
