@@ -1,5 +1,5 @@
 'use strict';
-import {Button, Text, TouchableHighlight, View} from 'react-native';
+import {Button, Text, TouchableHighlight, View, Platform, PlatformColor} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -179,7 +179,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: 'silver',
+            backgroundColor: PlatformColor('SolidBackgroundFillColorBaseAlt'),
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -234,7 +234,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: 'silver',
+            backgroundColor:PlatformColor('SolidBackgroundFillColorBaseAlt'),
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -288,7 +288,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: 'silver',
+            backgroundColor: PlatformColor('SolidBackgroundFillColorBaseAlt'),
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -347,7 +347,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: 'silver',
+            backgroundColor: PlatformColor('SolidBackgroundFillColorBaseAlt'),
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
