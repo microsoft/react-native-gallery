@@ -129,6 +129,8 @@ exports[`Button Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -1100,6 +1102,8 @@ exports[`CheckBox Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -2223,6 +2227,8 @@ exports[`Config Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -2831,6 +2837,8 @@ exports[`DeviceInfo Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -3562,6 +3570,8 @@ exports[`Expander Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -5860,6 +5870,8 @@ exports[`FlatList Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -7832,6 +7844,8 @@ exports[`Flyout Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -10891,6 +10905,8 @@ exports[`Hello Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -12002,6 +12018,8 @@ exports[`Image Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -13402,6 +13420,8 @@ exports[`Picker Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -15115,6 +15135,8 @@ exports[`Popup Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -18296,6 +18318,8 @@ exports[`Pressable Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -20243,6 +20267,8 @@ exports[`Print Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -20775,6 +20801,8 @@ exports[`ProgressView Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -21378,6 +21406,8 @@ exports[`ScrollView Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -22888,6 +22918,8 @@ exports[`SensitiveInfo Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -24526,6 +24558,8 @@ exports[`Slider Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -25721,6 +25755,8 @@ exports[`Switch Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -26402,6 +26438,8 @@ exports[`Text Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -27991,6 +28029,8 @@ exports[`TextInput Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -29020,6 +29060,8 @@ exports[`TextToSpeech Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -29581,6 +29623,8 @@ exports[`TouchableHighlight Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -31042,6 +31086,8 @@ exports[`TouchableOpacity Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -33514,6 +33560,8 @@ exports[`View Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -37154,6 +37202,8 @@ exports[`WebView Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -37882,6 +37932,8 @@ exports[`Xaml Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {

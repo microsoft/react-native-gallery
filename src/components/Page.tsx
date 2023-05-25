@@ -94,7 +94,12 @@ export function Page(props: {
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
-        <Text style={[styles.title, {color: colors.text}]}>{props.title}</Text>
+        <Text
+          accessible
+          accessibilityRole={'header'}
+          style={[styles.title, {color: colors.text}]}>
+          {props.title}
+        </Text>
         <View>
           {DisplayNativeControlBadge(props.wrappedNativeControl)}
           {DisplayComponentTypeBadge(props.componentType)}
