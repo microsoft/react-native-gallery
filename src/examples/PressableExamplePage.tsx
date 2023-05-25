@@ -112,7 +112,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             borderRadius: 2,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             opacity: 0.5,
           }}
@@ -142,7 +142,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
               backgroundColor: pressed
                 ? colors.primary
                 : Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
               width: 140,
               height: 50,
@@ -176,7 +176,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             borderRadius: 2,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
           }}
           onPress={() => setCurrEvent('press')}

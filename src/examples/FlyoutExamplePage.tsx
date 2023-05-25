@@ -153,7 +153,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -209,7 +209,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -265,7 +265,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -324,7 +324,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',

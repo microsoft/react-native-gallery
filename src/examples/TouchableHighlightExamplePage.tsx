@@ -78,7 +78,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
             height: 40,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -117,7 +117,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
             height: 40,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',

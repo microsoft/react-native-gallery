@@ -119,7 +119,7 @@ onPress={() => {}}>
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -156,7 +156,7 @@ onPress={() => {}}>
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -179,7 +179,7 @@ onPress={() => {}}>
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -203,7 +203,7 @@ onPress={() => {}}>
             width: 250,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemListLowColor')
+                ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
