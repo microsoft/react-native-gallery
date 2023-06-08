@@ -19,7 +19,7 @@
     "@react-native-community/progress-view": "^1.4.0",
     "@react-native-community/slider": "^4.0.0-rc.3",
     "@react-native-picker/picker": "^2.2.1",
-    "@react-navigation/drawer": "^6.4.1",
+    "@react-navigation/drawer": "^7.0.0-alpha.0",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/stack": "^6.3.12",
     "@types/": "react-navigation/drawer",
