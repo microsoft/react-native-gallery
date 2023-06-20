@@ -6,7 +6,7 @@ export function NativeControlBadge() {
   const {colors} = useTheme();
   return (
     <Badge
-      badgeColor={colors.border}
+      badgeColor={'silver'}
       textColor={colors.text}
       badgeTitle="Wrapped Windows Control"
       icon={57828}

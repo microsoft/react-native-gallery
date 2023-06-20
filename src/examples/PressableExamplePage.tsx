@@ -1,5 +1,5 @@
 'use strict';
-import {Text, Pressable} from 'react-native';
+import {Text, Pressable, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -110,7 +110,10 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             width: 140,
             height: 50,
             borderRadius: 2,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             opacity: 0.5,
           }}
           disabled={true}>
@@ -136,7 +139,11 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           }}
           style={({pressed}) => [
             {
-              backgroundColor: pressed ? colors.primary : colors.border,
+              backgroundColor: pressed
+                ? colors.primary
+                : Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
               width: 140,
               height: 50,
               borderRadius: 2,
@@ -167,7 +174,10 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             width: 200,
             height: 50,
             borderRadius: 2,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
           }}
           onPress={() => setCurrEvent('press')}
           onPressIn={() => setCurrEvent('pressIn')}

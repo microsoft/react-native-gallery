@@ -1,5 +1,5 @@
 'use strict';
-import {Text, TouchableHighlight} from 'react-native';
+import {Text, TouchableHighlight, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -76,7 +76,10 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityLabel={'example TouchableHighlight'}
           style={{
             height: 40,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -112,7 +115,10 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
-            backgroundColor: colors.text,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -122,7 +128,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           }}
           activeOpacity={0.2}
           underlayColor={colors.text}>
-          <Text style={{color: 'white'}}>{String(title)}</Text>
+          <Text style={{color: colors.text}}>{String(title)}</Text>
         </TouchableHighlight>
       </Example>
     </Page>
