@@ -218,6 +218,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout2(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -274,6 +275,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout3(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -333,6 +335,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout4(true);
           }}
+          accessibilityRole="button"
           ref={myRef}
           activeOpacity={0.2}
           underlayColor={colors.border}>

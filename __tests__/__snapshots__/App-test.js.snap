@@ -8663,6 +8663,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -9326,6 +9327,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -9991,6 +9993,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
