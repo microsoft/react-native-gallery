@@ -188,7 +188,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemColorButtonFaceColor')
+                ? PlatformColor('SystemListLowColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
