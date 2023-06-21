@@ -129,6 +129,8 @@ exports[`Button Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -1100,6 +1102,8 @@ exports[`CheckBox Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -1130,7 +1134,7 @@ exports[`CheckBox Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -2223,6 +2227,8 @@ exports[`Config Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -2831,6 +2837,8 @@ exports[`DeviceInfo Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -3562,6 +3570,8 @@ exports[`Expander Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -3592,7 +3602,7 @@ exports[`Expander Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -5860,6 +5870,8 @@ exports[`FlatList Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -7832,6 +7844,8 @@ exports[`Flyout Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -7862,7 +7876,7 @@ exports[`Flyout Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -7987,6 +8001,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -8007,7 +8022,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -8060,17 +8075,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
-                    accessibilityLabel="Close Flyout"
                     accessibilityRole="button"
-                    accessibilityState={
-                      {
-                        "busy": undefined,
-                        "checked": undefined,
-                        "disabled": undefined,
-                        "expanded": undefined,
-                        "selected": undefined,
-                      }
-                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -8080,7 +8085,6 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                     accessible={true}
-                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -8091,35 +8095,18 @@ exports[`Flyout Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "opacity": 1,
+                        "alignItems": "center",
+                        "backgroundColor": "rgb(216, 216, 216)",
+                        "borderRadius": 3,
+                        "height": 40,
+                        "justifyContent": "center",
+                        "width": 150,
                       }
                     }
                   >
-                    <View
-                      style={
-                        [
-                          {},
-                        ]
-                      }
-                    >
-                      <Text
-                        style={
-                          [
-                            {
-                              "color": "#007AFF",
-                              "fontSize": 18,
-                              "margin": 8,
-                              "textAlign": "center",
-                            },
-                            {
-                              "color": "rgb(216, 216, 216)",
-                            },
-                          ]
-                        }
-                      >
-                        Close Flyout
-                      </Text>
-                    </View>
+                    <Text>
+                      Close Flyout
+                    </Text>
                   </View>
                 </View>
               </RCTFlyout>
@@ -8676,6 +8663,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -8696,7 +8684,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -8750,17 +8738,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
-                    accessibilityLabel="Close Flyout"
                     accessibilityRole="button"
-                    accessibilityState={
-                      {
-                        "busy": undefined,
-                        "checked": undefined,
-                        "disabled": undefined,
-                        "expanded": undefined,
-                        "selected": undefined,
-                      }
-                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -8770,7 +8748,6 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                     accessible={true}
-                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -8781,35 +8758,18 @@ exports[`Flyout Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "opacity": 1,
+                        "alignItems": "center",
+                        "backgroundColor": "rgb(216, 216, 216)",
+                        "borderRadius": 3,
+                        "height": 40,
+                        "justifyContent": "center",
+                        "width": 150,
                       }
                     }
                   >
-                    <View
-                      style={
-                        [
-                          {},
-                        ]
-                      }
-                    >
-                      <Text
-                        style={
-                          [
-                            {
-                              "color": "#007AFF",
-                              "fontSize": 18,
-                              "margin": 8,
-                              "textAlign": "center",
-                            },
-                            {
-                              "color": "rgb(216, 216, 216)",
-                            },
-                          ]
-                        }
-                      >
-                        Close Flyout
-                      </Text>
-                    </View>
+                    <Text>
+                      Close Flyout
+                    </Text>
                   </View>
                 </View>
               </RCTFlyout>
@@ -9367,6 +9327,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -9387,7 +9348,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -9442,17 +9403,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
-                    accessibilityLabel="Close Flyout"
                     accessibilityRole="button"
-                    accessibilityState={
-                      {
-                        "busy": undefined,
-                        "checked": undefined,
-                        "disabled": undefined,
-                        "expanded": undefined,
-                        "selected": undefined,
-                      }
-                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -9462,7 +9413,6 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                     accessible={true}
-                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -9473,35 +9423,18 @@ exports[`Flyout Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "opacity": 1,
+                        "alignItems": "center",
+                        "backgroundColor": "rgb(216, 216, 216)",
+                        "borderRadius": 3,
+                        "height": 40,
+                        "justifyContent": "center",
+                        "width": 150,
                       }
                     }
                   >
-                    <View
-                      style={
-                        [
-                          {},
-                        ]
-                      }
-                    >
-                      <Text
-                        style={
-                          [
-                            {
-                              "color": "#007AFF",
-                              "fontSize": 18,
-                              "margin": 8,
-                              "textAlign": "center",
-                            },
-                            {
-                              "color": "rgb(216, 216, 216)",
-                            },
-                          ]
-                        }
-                      >
-                        Close Flyout
-                      </Text>
-                    </View>
+                    <Text>
+                      Close Flyout
+                    </Text>
                   </View>
                 </View>
               </RCTFlyout>
@@ -10060,6 +9993,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="button"
                 accessibilityValue={
                   {
                     "max": undefined,
@@ -10080,7 +10014,7 @@ exports[`Flyout Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -10134,17 +10068,7 @@ exports[`Flyout Example Page 1`] = `
                     This is a flyout.
                   </Text>
                   <View
-                    accessibilityLabel="Close Flyout"
                     accessibilityRole="button"
-                    accessibilityState={
-                      {
-                        "busy": undefined,
-                        "checked": undefined,
-                        "disabled": undefined,
-                        "expanded": undefined,
-                        "selected": undefined,
-                      }
-                    }
                     accessibilityValue={
                       {
                         "max": undefined,
@@ -10154,7 +10078,6 @@ exports[`Flyout Example Page 1`] = `
                       }
                     }
                     accessible={true}
-                    collapsable={false}
                     focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
@@ -10165,35 +10088,18 @@ exports[`Flyout Example Page 1`] = `
                     onStartShouldSetResponder={[Function]}
                     style={
                       {
-                        "opacity": 1,
+                        "alignItems": "center",
+                        "backgroundColor": "rgb(216, 216, 216)",
+                        "borderRadius": 3,
+                        "height": 40,
+                        "justifyContent": "center",
+                        "width": 150,
                       }
                     }
                   >
-                    <View
-                      style={
-                        [
-                          {},
-                        ]
-                      }
-                    >
-                      <Text
-                        style={
-                          [
-                            {
-                              "color": "#007AFF",
-                              "fontSize": 18,
-                              "margin": 8,
-                              "textAlign": "center",
-                            },
-                            {
-                              "color": "rgb(216, 216, 216)",
-                            },
-                          ]
-                        }
-                      >
-                        Close Flyout
-                      </Text>
-                    </View>
+                    <Text>
+                      Close Flyout
+                    </Text>
                   </View>
                 </View>
               </RCTFlyout>
@@ -10978,6 +10884,8 @@ exports[`Hello Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -11008,7 +10916,7 @@ exports[`Hello Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -12089,6 +11997,8 @@ exports[`Image Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -12119,7 +12029,7 @@ exports[`Image Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -13489,6 +13399,8 @@ exports[`Picker Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -13519,7 +13431,7 @@ exports[`Picker Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -15202,6 +15114,8 @@ exports[`Popup Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -15232,7 +15146,7 @@ exports[`Popup Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -15380,7 +15294,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -16045,7 +15959,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -16772,7 +16686,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -17473,7 +17387,7 @@ exports[`Popup Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -18383,6 +18297,8 @@ exports[`Pressable Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -18719,7 +18635,7 @@ exports[`Pressable Example Page 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   {
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 2,
                     "height": 50,
                     "opacity": 0.5,
@@ -19144,7 +19060,7 @@ exports[`Pressable Example Page 1`] = `
                 style={
                   [
                     {
-                      "backgroundColor": "rgb(216, 216, 216)",
+                      "backgroundColor": "silver",
                       "borderRadius": 2,
                       "height": 50,
                       "width": 140,
@@ -19682,7 +19598,7 @@ exports[`Pressable Example Page 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   {
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 2,
                     "height": 50,
                     "width": 200,
@@ -20330,6 +20246,8 @@ exports[`Print Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -20862,6 +20780,8 @@ exports[`ProgressView Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -21465,6 +21385,8 @@ exports[`ScrollView Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -21495,7 +21417,7 @@ exports[`ScrollView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -22975,6 +22897,8 @@ exports[`SensitiveInfo Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -24613,6 +24537,8 @@ exports[`Slider Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -24643,7 +24569,7 @@ exports[`Slider Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -25808,6 +25734,8 @@ exports[`Switch Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -25838,7 +25766,7 @@ exports[`Switch Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -26489,6 +26417,8 @@ exports[`Text Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -26519,7 +26449,7 @@ exports[`Text Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -28078,6 +28008,8 @@ exports[`TextInput Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -28108,7 +28040,7 @@ exports[`TextInput Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -29107,6 +29039,8 @@ exports[`TextToSpeech Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -29668,6 +29602,8 @@ exports[`TouchableHighlight Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -29802,7 +29738,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -30541,7 +30477,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(28, 28, 30)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -30551,7 +30487,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": "white",
+                      "color": "rgb(28, 28, 30)",
                     }
                   }
                 >
@@ -31129,6 +31065,8 @@ exports[`TouchableOpacity Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -31273,7 +31211,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -32091,7 +32029,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -32516,7 +32454,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(28, 28, 30)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -32528,7 +32466,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": "white",
+                      "color": "rgb(28, 28, 30)",
                     }
                   }
                 >
@@ -32941,7 +32879,7 @@ activeOpacity={
                 style={
                   {
                     "alignItems": "center",
-                    "backgroundColor": "rgb(216, 216, 216)",
+                    "backgroundColor": "silver",
                     "borderRadius": 3,
                     "height": 40,
                     "justifyContent": "center",
@@ -33601,6 +33539,8 @@ exports[`View Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -33631,7 +33571,7 @@ exports[`View Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -37241,6 +37181,8 @@ exports[`WebView Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {
@@ -37271,7 +37213,7 @@ exports[`WebView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(216, 216, 216)",
+                "backgroundColor": "silver",
               },
             ]
           }
@@ -37969,6 +37911,8 @@ exports[`Xaml Example Page 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
+        accessible={true}
         style={
           [
             {

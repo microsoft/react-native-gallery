@@ -1,5 +1,11 @@
 'use strict';
-import {Text, View, TouchableHighlight, Button} from 'react-native';
+import {
+  Text,
+  View,
+  TouchableHighlight,
+  Platform,
+  PlatformColor,
+} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -145,7 +151,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -153,6 +162,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout1(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -172,14 +182,23 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <Button
-              accessibilityLabel={'Close Flyout'}
-              title={'Close Flyout'}
-              color={colors.border}
+            <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout1(false);
               }}
-            />
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text>Close Flyout</Text>
+            </TouchableHighlight>
           </View>
         </Flyout>
       </Example>
@@ -188,7 +207,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -196,6 +218,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout2(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -216,14 +239,23 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <Button
-              accessibilityLabel={'Close Flyout'}
-              title={'Close Flyout'}
-              color={colors.border}
+            <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout2(false);
               }}
-            />
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text>Close Flyout</Text>
+            </TouchableHighlight>
           </View>
         </Flyout>
       </Example>
@@ -232,7 +264,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -240,6 +275,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout3(true);
           }}
+          accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
@@ -261,14 +297,23 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <Button
-              accessibilityLabel={'Close Flyout'}
-              title={'Close Flyout'}
-              color={colors.border}
+            <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout3(false);
               }}
-            />
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text>Close Flyout</Text>
+            </TouchableHighlight>
           </View>
         </Flyout>
       </Example>
@@ -279,7 +324,10 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -287,6 +335,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout4(true);
           }}
+          accessibilityRole="button"
           ref={myRef}
           activeOpacity={0.2}
           underlayColor={colors.border}>
@@ -309,14 +358,23 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
               justifyContent: 'space-around',
             }}>
             <Text style={{color: colors.text}}>This is a flyout.</Text>
-            <Button
-              accessibilityLabel={'Close Flyout'}
-              title={'Close Flyout'}
-              color={colors.border}
+            <TouchableHighlight
+              accessibilityRole="button"
+              style={{
+                height: 40,
+                width: 150,
+                backgroundColor: colors.border,
+                borderRadius: 3,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => {
                 setShowFlyout4(false);
               }}
-            />
+              activeOpacity={0.2}
+              underlayColor={colors.border}>
+              <Text>Close Flyout</Text>
+            </TouchableHighlight>
           </View>
         </Flyout>
       </Example>

@@ -1,5 +1,5 @@
 'use strict';
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -117,7 +117,10 @@ onPress={() => {}}>
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -151,7 +154,10 @@ onPress={() => {}}>
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -171,7 +177,10 @@ onPress={() => {}}>
           style={{
             height: 40,
             width: 150,
-            backgroundColor: colors.text,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
@@ -180,7 +189,7 @@ onPress={() => {}}>
             setTitle(title + 1);
           }}
           activeOpacity={0.8}>
-          <Text style={{color: 'white'}}>{String(title)}</Text>
+          <Text style={{color: colors.text}}>{String(title)}</Text>
         </TouchableOpacity>
       </Example>
       <Example
@@ -192,7 +201,10 @@ onPress={() => {}}>
           style={{
             height: 40,
             width: 250,
-            backgroundColor: colors.border,
+            backgroundColor:
+              Platform.OS === 'windows'
+                ? PlatformColor('SystemColorButtonFaceColor')
+                : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
             alignItems: 'center',
