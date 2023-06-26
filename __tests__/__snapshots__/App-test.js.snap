@@ -176,7 +176,7 @@ exports[`Button Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -184,7 +184,7 @@ exports[`Button Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -1134,7 +1134,7 @@ exports[`CheckBox Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -3602,7 +3602,7 @@ exports[`Expander Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -5917,7 +5917,7 @@ exports[`FlatList Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -5925,7 +5925,7 @@ exports[`FlatList Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -7876,7 +7876,7 @@ exports[`Flyout Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -7934,7 +7934,7 @@ exports[`Flyout Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -7942,7 +7942,7 @@ exports[`Flyout Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -10916,7 +10916,7 @@ exports[`Hello Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -12029,7 +12029,7 @@ exports[`Image Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -13431,7 +13431,7 @@ exports[`Picker Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -15146,7 +15146,7 @@ exports[`Popup Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -15204,7 +15204,7 @@ exports[`Popup Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -15212,7 +15212,7 @@ exports[`Popup Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -18344,7 +18344,7 @@ exports[`Pressable Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -18352,7 +18352,7 @@ exports[`Pressable Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -21417,7 +21417,7 @@ exports[`ScrollView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -21475,7 +21475,7 @@ exports[`ScrollView Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -21483,7 +21483,7 @@ exports[`ScrollView Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -24569,7 +24569,7 @@ exports[`Slider Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -25766,7 +25766,7 @@ exports[`Switch Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -25824,7 +25824,7 @@ exports[`Switch Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -25832,7 +25832,7 @@ exports[`Switch Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -26449,7 +26449,7 @@ exports[`Text Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -26507,7 +26507,7 @@ exports[`Text Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -26515,7 +26515,7 @@ exports[`Text Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -28040,7 +28040,7 @@ exports[`TextInput Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -28098,7 +28098,7 @@ exports[`TextInput Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -28106,7 +28106,7 @@ exports[`TextInput Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -29649,7 +29649,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -29657,7 +29657,7 @@ exports[`TouchableHighlight Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -30487,7 +30487,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": "rgb(28, 28, 30)",
+                      "color": "rgb(216, 216, 216)",
                     }
                   }
                 >
@@ -31112,7 +31112,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -31120,7 +31120,7 @@ exports[`TouchableOpacity Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -33571,7 +33571,7 @@ exports[`View Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
@@ -33629,7 +33629,7 @@ exports[`View Example Page 1`] = `
                   "paddingRight": 4,
                 },
                 {
-                  "color": "white",
+                  "color": "rgb(0, 122, 255)",
                 },
               ]
             }
@@ -33637,7 +33637,7 @@ exports[`View Example Page 1`] = `
             Core Component
           </Text>
           <XamlControl
-            foreground="white"
+            foreground="rgb(0, 122, 255)"
             symbol={57611}
             type="Windows.UI.Xaml.Controls.SymbolIcon"
           />
@@ -37213,7 +37213,7 @@ exports[`WebView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "silver",
+                "backgroundColor": "rgb(216, 216, 216)",
               },
             ]
           }
