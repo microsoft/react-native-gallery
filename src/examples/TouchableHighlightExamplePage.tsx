@@ -128,7 +128,9 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> = () => 
           }}
           activeOpacity={0.2}
           underlayColor={colors.text}>
-          <Text style={{color: colors.text}}>{String(title)}</Text>
+          <Text style={{color: Platform.OS === 'windows'
+              ? PlatformColor('SystemChromeWhiteColor')
+              : colors.border}}>{String(title)}</Text>
         </TouchableHighlight>
       </Example>
     </Page>
