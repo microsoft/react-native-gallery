@@ -25,38 +25,38 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple Checkbox." code={'<CheckBox />'}>
-        <CheckBox />
+        <CheckBox accessibilityLabel='Simple Checkbox'/>
       </Example>
       <Example title="A checked Checkbox." code={'<CheckBox value={true}/>'}>
-        <CheckBox value={true} />
+        <CheckBox accessibilityLabel='Checked Checkbox' value={true} />
       </Example>
       <Example title="A disabled Checkbox." code={'<CheckBox disabled />'}>
-        <CheckBox disabled />
+        <CheckBox accessibilityLabel='Disabled Checkbox' disabled />
       </Example>
       <Example
         title="A disabled checked Checkbox."
         code={'<CheckBox disabled value={true} />'}>
-        <CheckBox disabled value={true} />
+        <CheckBox accessibilityLabel='Disabled Checked Checkbox' disabled value={true} />
       </Example>
       <Example
         title="A colored check Checkbox."
         code={'<CheckBox onCheckColor={colors.primary} value={true} />'}>
-        <CheckBox onCheckColor={colors.primary} value={true} />
+        <CheckBox accessibilityLabel='Colored Checked Checkbox' onCheckColor={colors.primary} value={true} />
       </Example>
       <Example
         title="A Checkbox with colored border when checked and focused."
         code={'<CheckBox onTintColor={colors.primary} value={true} />'}>
-        <CheckBox onTintColor={colors.primary} value={true} />
+        <CheckBox accessibilityLabel='Checkbox with colored border' onTintColor={colors.primary} value={true} />
       </Example>
       <Example
         title="A Checkbox colored when checked."
         code={'<CheckBox onFillColor={colors.primary} value={true} />'}>
-        <CheckBox onFillColor={colors.primary} value={true} />
+        <CheckBox accessibilityLabel='Colored Checkbox when checked' onFillColor={colors.primary} value={true} />
       </Example>
       <Example
         title="A Checkbox colored when unchecked."
         code={'<CheckBox tintColor={colors.primary} />'}>
-        <CheckBox tintColor={colors.primary} />
+        <CheckBox accessibilityLabel='Colored Checkbox when unchecked' tintColor={colors.primary} />
       </Example>
     </Page>
   );
