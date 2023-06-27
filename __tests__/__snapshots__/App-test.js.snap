@@ -1267,7 +1267,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Simple Checkbox"
+                  accessibilityLabel="Simple Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1352,7 +1352,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Checked Checkbox"
+                  accessibilityLabel="Checked Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1452,7 +1452,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="none"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Disabled Checkbox"
+                  accessibilityLabel="Disabled Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1537,7 +1537,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="none"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Disabled Checked Checkbox"
+                  accessibilityLabel="Disabled Checked Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1637,7 +1637,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Colored Checked Checkbox"
+                  accessibilityLabel="Colored Checked Example"
                   forwardedRef={null}
                   onCheckColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1738,7 +1738,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Checkbox with colored border"
+                  accessibilityLabel="Example with colored border"
                   forwardedRef={null}
                   onTintColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1839,7 +1839,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Colored Checkbox when checked"
+                  accessibilityLabel="Colored Example when checked"
                   forwardedRef={null}
                   onFillColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1940,7 +1940,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
-                  accessibilityLabel="Colored Checkbox when unchecked"
+                  accessibilityLabel="Colored Example when unchecked"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -20418,7 +20418,7 @@ exports[`Print Example Page 1`] = `
               }
             >
               <View
-                accessibilityLabel="Print"
+                accessibilityLabel="Example"
                 accessibilityRole="button"
                 accessibilityState={
                   {
@@ -24766,7 +24766,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
-                accessibilityLabel="Simple Slider"
+                accessibilityLabel="Simple Example"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -24963,7 +24963,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
-                accessibilityLabel="Slider"
+                accessibilityLabel="Example"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -25160,7 +25160,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
-                accessibilityLabel="Vertical Slider"
+                accessibilityLabel="Vertical Example"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -25377,7 +25377,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
-                accessibilityLabel="Disabled Slider"
+                accessibilityLabel="Disabled Example"
                 disabled={true}
                 enabled={false}
                 inverted={false}
