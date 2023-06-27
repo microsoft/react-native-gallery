@@ -179,7 +179,7 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
   return isScreenFocused ? (
     <View>
       <ScreenWrapper style={styles.container}>
-        <Text style={styles.title}>Welcome to React Native Gallery!</Text>
+        <Text accessible accessibilityRole={'header'} style={styles.title}>Welcome to React Native Gallery!</Text>
         <Text style={styles.description}>
           React Native Gallery is a React Native Windows application which
           displays the range of React Native components with Windows support.

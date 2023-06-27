@@ -35,7 +35,7 @@ export function Example(props: {
   const styles = createStyles(colors);
   return (
     <View>
-      <Text style={styles.title}>{props.title}</Text>
+      <Text accessibilityRole={'header'} style={styles.title}>{props.title}</Text>
       {props.code ? (
         <View style={styles.box}>
           <View style={styles.exampleContainer}>{props.children}</View>
