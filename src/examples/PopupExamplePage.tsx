@@ -224,7 +224,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup1(false);
               }}
@@ -285,7 +289,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup2(false);
               }}
@@ -343,7 +351,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup3(false);
               }}
@@ -403,7 +415,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup4(false);
               }}
