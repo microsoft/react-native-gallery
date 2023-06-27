@@ -1267,6 +1267,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Simple Checkbox"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1351,6 +1352,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Checked Checkbox"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1450,6 +1452,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="none"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Disabled Checkbox"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1534,6 +1537,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="none"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Disabled Checked Checkbox"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1633,6 +1637,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Colored Checked Checkbox"
                   forwardedRef={null}
                   onCheckColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1733,6 +1738,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Checkbox with colored border"
                   forwardedRef={null}
                   onTintColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1833,6 +1839,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Colored Checkbox when checked"
                   forwardedRef={null}
                   onFillColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1933,6 +1940,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Colored Checkbox when unchecked"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -20410,6 +20418,7 @@ exports[`Print Example Page 1`] = `
               }
             >
               <View
+                accessibilityLabel="Print"
                 accessibilityRole="button"
                 accessibilityState={
                   {
@@ -23118,6 +23127,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <TextInput
+                  accessibilityLabel="Input"
                   onChangeText={[Function]}
                   style={
                     {
@@ -23130,6 +23140,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                   value=""
                 />
                 <View
+                  accessibilityLabel="Set Item"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -23201,6 +23212,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <TextInput
+                  accessibilityLabel="Input"
                   editable={false}
                   style={
                     {
@@ -23213,6 +23225,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                   value=""
                 />
                 <View
+                  accessibilityLabel="Get Item"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -24753,6 +24766,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Simple Slider"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -24949,6 +24963,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Slider"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -25145,6 +25160,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Vertical Slider"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -25361,6 +25377,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Disabled Slider"
                 disabled={true}
                 enabled={false}
                 inverted={false}
