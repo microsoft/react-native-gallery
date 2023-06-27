@@ -51,6 +51,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Slider." code={example1jsx}>
         <Slider
+          accessibilityLabel="Simple Example"
           style={{width: 200, height: 40}}
           minimumValue={0}
           maximumValue={100}
@@ -61,6 +62,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
         title="A Slider with range and steps specified."
         code={example2jsx}>
         <Slider
+          accessibilityLabel="Example"
           style={{width: 200, height: 40}}
           minimumValue={500}
           maximumValue={1000}
@@ -69,6 +71,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A vertical Slider with colored track." code={example3jsx}>
         <Slider
+          accessibilityLabel="Vertical Example"
           style={{width: 40, height: 200}}
           minimumValue={0}
           maximumValue={100}
@@ -80,6 +83,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A disabled Slider." code={example4jsx}>
         <Slider
+          accessibilityLabel="Disabled Example"
           style={{width: 200, height: 40}}
           minimumValue={0}
           maximumValue={100}

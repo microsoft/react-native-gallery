@@ -83,6 +83,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
         <Text style={{color: colors.text, fontWeight: '500'}}>Key:key1 </Text>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
+            accessibilityLabel="Input"
             style={{
               width: 200,
               height: 36,
@@ -92,10 +93,16 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             onChangeText={(text) => setNewValue(text)}
             value={newValue}
           />
-          <Button color={colors.primary} onPress={setItem} title="Set Item" />
+          <Button
+            accessibilityLabel="Set Item"
+            color={colors.primary}
+            onPress={setItem}
+            title="Set Item"
+          />
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
+            accessibilityLabel="Input"
             style={{
               width: 200,
               height: 36,
@@ -105,7 +112,12 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             value={value}
             editable={false}
           />
-          <Button color={colors.primary} onPress={getItem} title="Get Item" />
+          <Button
+            accessibilityLabel="Get Item"
+            color={colors.primary}
+            onPress={getItem}
+            title="Get Item"
+          />
         </View>
       </Example>
     </Page>

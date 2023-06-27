@@ -215,6 +215,7 @@ exports[`Button Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -363,6 +364,7 @@ exports[`Button Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -514,6 +516,7 @@ exports[`Button Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -681,6 +684,7 @@ exports[`Button Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1231,6 +1235,7 @@ exports[`CheckBox Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1262,6 +1267,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Simple Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1314,6 +1320,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1345,6 +1352,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Checked Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1412,6 +1420,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1443,6 +1452,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="none"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Disabled Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1495,6 +1505,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1526,6 +1537,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="none"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Disabled Checked Example"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -1593,6 +1605,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1624,6 +1637,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Colored Checked Example"
                   forwardedRef={null}
                   onCheckColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1692,6 +1706,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1723,6 +1738,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Example with colored border"
                   forwardedRef={null}
                   onTintColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1791,6 +1807,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1822,6 +1839,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Colored Example when checked"
                   forwardedRef={null}
                   onFillColor="rgb(0, 122, 255)"
                   onValueChange={[Function]}
@@ -1890,6 +1908,7 @@ exports[`CheckBox Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -1921,6 +1940,7 @@ exports[`CheckBox Example Page 1`] = `
                 pointerEvents="auto"
               >
                 <RNCCheckbox
+                  accessibilityLabel="Colored Example when unchecked"
                   forwardedRef={null}
                   onValueChange={[Function]}
                   style={
@@ -2313,6 +2333,7 @@ exports[`Config Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -2923,6 +2944,7 @@ exports[`DeviceInfo Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -3131,6 +3153,7 @@ exports[`DeviceInfo Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -3251,6 +3274,7 @@ exports[`DeviceInfo Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -3699,6 +3723,7 @@ exports[`Expander Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -3929,6 +3954,7 @@ exports[`Expander Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -4399,6 +4425,7 @@ exports[`Expander Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -4644,6 +4671,7 @@ exports[`Expander Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -4940,6 +4968,7 @@ exports[`Expander Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -5956,6 +5985,7 @@ exports[`FlatList Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -6203,6 +6233,7 @@ exports[`FlatList Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -6716,6 +6747,7 @@ exports[`FlatList Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -7073,6 +7105,7 @@ exports[`FlatList Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -7331,6 +7364,7 @@ exports[`FlatList Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -7973,6 +8007,7 @@ exports[`Flyout Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -8635,6 +8670,7 @@ exports[`Flyout Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -9299,6 +9335,7 @@ exports[`Flyout Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -9965,6 +10002,7 @@ exports[`Flyout Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -11013,6 +11051,7 @@ exports[`Hello Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -11252,6 +11291,7 @@ exports[`Hello Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -11491,6 +11531,7 @@ exports[`Hello Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -12126,6 +12167,7 @@ exports[`Image Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -12292,6 +12334,7 @@ exports[`Image Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -12474,6 +12517,7 @@ exports[`Image Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -12654,6 +12698,7 @@ exports[`Image Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -12863,6 +12908,7 @@ exports[`Image Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -13528,6 +13574,7 @@ exports[`Picker Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -13963,6 +14010,7 @@ exports[`Picker Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -14412,6 +14460,7 @@ exports[`Picker Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -15243,6 +15292,7 @@ exports[`Popup Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -15908,6 +15958,7 @@ exports[`Popup Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -16635,6 +16686,7 @@ exports[`Popup Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -17336,6 +17388,7 @@ exports[`Popup Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -18383,6 +18436,7 @@ exports[`Pressable Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -18574,6 +18628,7 @@ exports[`Pressable Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -18997,6 +19052,7 @@ exports[`Pressable Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -19536,6 +19592,7 @@ exports[`Pressable Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -20332,6 +20389,7 @@ exports[`Print Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -20360,6 +20418,7 @@ exports[`Print Example Page 1`] = `
               }
             >
               <View
+                accessibilityLabel="Example"
                 accessibilityRole="button"
                 accessibilityState={
                   {
@@ -20866,6 +20925,7 @@ exports[`ProgressView Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -20956,6 +21016,7 @@ exports[`ProgressView Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -21046,6 +21107,7 @@ exports[`ProgressView Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -21514,6 +21576,7 @@ exports[`ScrollView Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -21700,6 +21763,7 @@ exports[`ScrollView Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -21896,6 +21960,7 @@ exports[`ScrollView Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -22097,6 +22162,7 @@ exports[`ScrollView Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -22983,6 +23049,7 @@ exports[`SensitiveInfo Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -23060,6 +23127,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <TextInput
+                  accessibilityLabel="Input"
                   onChangeText={[Function]}
                   style={
                     {
@@ -23072,6 +23140,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                   value=""
                 />
                 <View
+                  accessibilityLabel="Set Item"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -23143,6 +23212,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <TextInput
+                  accessibilityLabel="Input"
                   editable={false}
                   style={
                     {
@@ -23155,6 +23225,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                   value=""
                 />
                 <View
+                  accessibilityLabel="Get Item"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -24666,6 +24737,7 @@ exports[`Slider Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -24694,6 +24766,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Simple Example"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -24861,6 +24934,7 @@ exports[`Slider Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -24889,6 +24963,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Example"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -25056,6 +25131,7 @@ exports[`Slider Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -25084,6 +25160,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Vertical Example"
                 disabled={false}
                 enabled={true}
                 inverted={false}
@@ -25271,6 +25348,7 @@ exports[`Slider Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -25299,6 +25377,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <RNCSlider
+                accessibilityLabel="Disabled Example"
                 disabled={true}
                 enabled={false}
                 inverted={false}
@@ -25863,6 +25942,7 @@ exports[`Switch Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -25944,6 +26024,7 @@ exports[`Switch Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -26027,6 +26108,7 @@ exports[`Switch Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -26546,6 +26628,7 @@ exports[`Text Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -26634,6 +26717,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -26782,6 +26866,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -26887,6 +26972,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -27081,6 +27167,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -27252,6 +27339,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -27400,6 +27488,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -27565,6 +27654,7 @@ exports[`Text Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -28137,6 +28227,7 @@ exports[`TextInput Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -28259,6 +28350,7 @@ exports[`TextInput Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -28398,6 +28490,7 @@ exports[`TextInput Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -28614,6 +28707,7 @@ exports[`TextInput Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -29125,6 +29219,7 @@ exports[`TextToSpeech Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -29688,6 +29783,7 @@ exports[`TouchableHighlight Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -30057,6 +30153,7 @@ exports[`TouchableHighlight Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -30426,6 +30523,7 @@ exports[`TouchableHighlight Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -31151,6 +31249,7 @@ exports[`TouchableOpacity Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -31560,6 +31659,7 @@ exports[`TouchableOpacity Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -31969,6 +32069,7 @@ exports[`TouchableOpacity Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -32393,6 +32494,7 @@ exports[`TouchableOpacity Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -32819,6 +32921,7 @@ activeOpacity={
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -33668,6 +33771,7 @@ exports[`View Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -33734,6 +33838,7 @@ exports[`View Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -33913,6 +34018,7 @@ exports[`View Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -34329,6 +34435,7 @@ exports[`View Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -34812,6 +34919,7 @@ exports[`View Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -35604,6 +35712,7 @@ exports[`View Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -36237,6 +36346,7 @@ exports[`View Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -36493,6 +36603,7 @@ style={{
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -36749,6 +36860,7 @@ style={{
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -37310,6 +37422,7 @@ exports[`WebView Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -37483,6 +37596,7 @@ exports[`WebView Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -37997,6 +38111,7 @@ exports[`Xaml Example Page 1`] = `
       <View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -38080,6 +38195,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -38192,6 +38308,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -38260,6 +38377,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -38616,6 +38734,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -38992,6 +39111,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -39075,6 +39195,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
@@ -39638,6 +39759,7 @@ exports[`Xaml Example Page 1`] = `
         </View>
         <View>
           <Text
+            accessibilityRole="header"
             style={
               {
                 "color": "rgb(28, 28, 30)",
