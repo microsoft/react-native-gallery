@@ -38,7 +38,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple DatePicker." code={textExample1}>
         <DateTimePicker
-          accessibilityLabel="Simple DatePicker"
+          accessibilityLabel="Simple Example"
           value={date1}
           onChange={() => {}}
           mode="date"
@@ -49,7 +49,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         title="A DatePicker with day of week formatted and first day of week adjusted."
         code={textExample2}>
         <DateTimePicker
-          accessibilityLabel="DatePicker"
+          accessibilityLabel="Formatted Example"
           value={date2}
           mode="date"
           style={{width: 200, opacity: 1, height: 50}}

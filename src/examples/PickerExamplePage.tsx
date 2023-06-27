@@ -42,7 +42,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Picker." code={example1jsx}>
         <Picker
-          accessibilityLabel="Picker"
+          accessibilityLabel="Simple Example"
           style={{height: 50, width: 200}}
           itemStyle={{color: colors.text}}>
           <Picker.Item label="Option 1" value="Option 1" />
@@ -52,7 +52,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A disabled Picker." code={example2jsx}>
         <Picker
-          accessibilityLabel="Picker"
+          accessibilityLabel="Disabled Example"
           style={{height: 50, width: 200}}
           enabled={false}
           itemStyle={{color: colors.text}}>
@@ -63,7 +63,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A colorful Picker." code={example3jsx}>
         <Picker
-          accessibilityLabel="Picker"
+          accessibilityLabel="Colorful Example"
           style={{height: 50, width: 200}}
           itemStyle={{color: colors.primary}}>
           <Picker.Item label="Option 1" value="Option 1" />
