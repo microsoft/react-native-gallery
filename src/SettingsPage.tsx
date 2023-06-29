@@ -54,7 +54,7 @@ const SettingContainer = (props: {
   const styles = createStyles(colors);
   return (
     <View>
-      <Text style={styles.heading}>{props.heading}</Text>
+      <Text style={styles.heading} accessibilityRole='header'>{props.heading}</Text>
       <View style={styles.settingContainer}>{props.children}</View>
     </View>
   );
@@ -72,7 +72,7 @@ export const SettingsPage: React.FunctionComponent<{}> = (props) => {
   };*/
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
-      <Text style={styles.title}>Settings</Text>
+      <Text accessibilityRole='header' style={styles.title}>Settings</Text>
       <ScrollView style={styles.scrollView}>
         {/* Tracking Issue: #17
         <SettingContainer heading="Theme Mode">
