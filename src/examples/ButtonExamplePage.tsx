@@ -1,5 +1,5 @@
 'use strict';
-import {Button, Platform, PlatformColor,} from 'react-native';
+import {Button, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -48,9 +48,11 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A colored Button." code={example2jsx}>
         <Button
           title="Button"
-          color={Platform.OS === 'windows'
-          ? PlatformColor('SystemColorButtonFaceColor')
-          : 'silver'}
+          color={
+            Platform.OS === 'windows'
+              ? PlatformColor('SystemColorButtonFaceColor')
+              : 'silver'
+          }
           accessibilityLabel={'example colored button2'}
           onPress={() => {}}
         />
