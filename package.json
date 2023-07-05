@@ -63,9 +63,6 @@
     "react-test-renderer": "18.1.0",
     "typescript": "^4.0.2"
   },
-  "engines": {
-    "node": ">= 16"
-  },
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
