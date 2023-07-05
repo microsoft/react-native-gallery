@@ -39,8 +39,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Clipboard", "..\node_module
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CheckboxWindows", "..\node_modules\@react-native-community\checkbox\windows\CheckboxWindows\CheckboxWindows.vcxproj", "{EAF81BEB-A159-4421-9B6D-E59C37828A57}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DateTimePickerWindows", "..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj", "{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "progress-view", "..\node_modules\@react-native-community\progress-view\windows\progress-view\progress-view.vcxproj", "{CA54A654-5E81-44DC-AF3F-CF55EF5B493A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SliderWindows", "..\node_modules\@react-native-community\slider\windows\SliderWindows\SliderWindows.vcxproj", "{685A83AE-36BC-4E9D-BDC6-417EBF168463}"
@@ -68,6 +66,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj", "{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWindowsHello", "..\node_modules\react-native-windows-hello\windows\ReactNativeWindowsHello\ReactNativeWindowsHello.vcxproj", "{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DateTimePicker", "..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj", "{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
