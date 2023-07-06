@@ -68,7 +68,7 @@ test('DatePicker Example Page', async () => {
 
 test('DeviceInfo Example Page', async () => {
   let tree;
-  await act(() => {
+  await act(async () => {
     tree = create(<DeviceInfoExamplePage />);
   });
   expect(tree.toJSON()).toMatchSnapshot();
@@ -176,7 +176,7 @@ test('TimePicker Example Page', async () => {
 
 test('TextToSpeech Example Page', async () => {
   let tree;
-  await act(() => {
+  await act(async () => {
     tree = create(<TTSExamplePage />);
   });
   expect(tree.toJSON()).toMatchSnapshot();
