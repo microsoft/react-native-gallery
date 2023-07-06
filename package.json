@@ -51,7 +51,7 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@types/jest": "^29.5.0",
     "@types/lowlight": "^0.0.1",
-    "@types/react": "^18.0.17",
+    "@types/react": "^18.0.18",
     "@types/react-native": "^0.71.5",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.5.0",

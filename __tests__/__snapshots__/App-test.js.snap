@@ -1264,6 +1264,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": false,
+                    "disabled": false,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "off",
+                  }
+                }
+                accessible={true}
                 pointerEvents="auto"
               >
                 <RNCCheckbox
@@ -1349,6 +1362,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": true,
+                    "disabled": false,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "on",
+                  }
+                }
+                accessible={true}
                 pointerEvents="auto"
               >
                 <RNCCheckbox
@@ -1449,6 +1475,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": false,
+                    "disabled": true,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "off",
+                  }
+                }
+                accessible={true}
                 pointerEvents="none"
               >
                 <RNCCheckbox
@@ -1534,6 +1573,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": true,
+                    "disabled": true,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "on",
+                  }
+                }
+                accessible={true}
                 pointerEvents="none"
               >
                 <RNCCheckbox
@@ -1634,6 +1686,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": true,
+                    "disabled": false,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "on",
+                  }
+                }
+                accessible={true}
                 pointerEvents="auto"
               >
                 <RNCCheckbox
@@ -1735,6 +1800,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": true,
+                    "disabled": false,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "on",
+                  }
+                }
+                accessible={true}
                 pointerEvents="auto"
               >
                 <RNCCheckbox
@@ -1836,6 +1914,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": true,
+                    "disabled": false,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "on",
+                  }
+                }
+                accessible={true}
                 pointerEvents="auto"
               >
                 <RNCCheckbox
@@ -1937,6 +2028,19 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <View
+                accessibilityRole="checkbox"
+                accessibilityState={
+                  {
+                    "checked": false,
+                    "disabled": false,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "text": "off",
+                  }
+                }
+                accessible={true}
                 pointerEvents="auto"
               >
                 <RNCCheckbox
@@ -5011,6 +5115,19 @@ exports[`Expander Example Page 1`] = `
                   }
                 >
                   <View
+                    accessibilityRole="checkbox"
+                    accessibilityState={
+                      {
+                        "checked": false,
+                        "disabled": false,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "text": "off",
+                      }
+                    }
+                    accessible={true}
                     pointerEvents="auto"
                   >
                     <RNCCheckbox
@@ -5046,13 +5163,9 @@ exports[`Expander Example Page 1`] = `
                   enabled={true}
                   mode="date"
                   onChange={[Function]}
+                  onPickerDismiss={[Function]}
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "height": 216,
-                    }
-                  }
                 />
               </ExpanderView>
             </View>
@@ -6328,6 +6441,7 @@ exports[`FlatList Example Page 1`] = `
               >
                 <View>
                   <View
+                    collapsable={false}
                     onLayout={[Function]}
                   >
                     <Text
@@ -24768,11 +24882,12 @@ exports[`Slider Example Page 1`] = `
               <RNCSlider
                 accessibilityLabel="Simple Example"
                 disabled={false}
-                enabled={true}
                 inverted={false}
+                lowerLimit={-9007199254740991}
                 maximumValue={100}
                 minimumValue={0}
                 onChange={null}
+                onRNCSliderAccessibilityAction={null}
                 onRNCSliderSlidingComplete={null}
                 onRNCSliderSlidingStart={null}
                 onRNCSliderValueChange={null}
@@ -24783,15 +24898,15 @@ exports[`Slider Example Page 1`] = `
                   [
                     {
                       "height": 40,
+                      "width": 200,
                     },
                     {
                       "height": 40,
-                      "width": 200,
                     },
                   ]
                 }
                 tapToSeek={false}
-                thumbImage={null}
+                upperLimit={9007199254740991}
                 value={0}
               />
             </View>
@@ -24965,11 +25080,12 @@ exports[`Slider Example Page 1`] = `
               <RNCSlider
                 accessibilityLabel="Example"
                 disabled={false}
-                enabled={true}
                 inverted={false}
+                lowerLimit={-9007199254740991}
                 maximumValue={1000}
                 minimumValue={500}
                 onChange={null}
+                onRNCSliderAccessibilityAction={null}
                 onRNCSliderSlidingComplete={null}
                 onRNCSliderSlidingStart={null}
                 onRNCSliderValueChange={null}
@@ -24980,15 +25096,15 @@ exports[`Slider Example Page 1`] = `
                   [
                     {
                       "height": 40,
+                      "width": 200,
                     },
                     {
                       "height": 40,
-                      "width": 200,
                     },
                   ]
                 }
                 tapToSeek={false}
-                thumbImage={null}
+                upperLimit={9007199254740991}
                 value={0}
               />
             </View>
@@ -25162,13 +25278,14 @@ exports[`Slider Example Page 1`] = `
               <RNCSlider
                 accessibilityLabel="Vertical Example"
                 disabled={false}
-                enabled={true}
                 inverted={false}
+                lowerLimit={-9007199254740991}
                 maximumTrackTintColor="rgb(216, 216, 216)"
                 maximumValue={100}
                 minimumTrackTintColor="rgb(0, 122, 255)"
                 minimumValue={0}
                 onChange={null}
+                onRNCSliderAccessibilityAction={null}
                 onRNCSliderSlidingComplete={null}
                 onRNCSliderSlidingStart={null}
                 onRNCSliderValueChange={null}
@@ -25178,16 +25295,16 @@ exports[`Slider Example Page 1`] = `
                 style={
                   [
                     {
-                      "height": 40,
-                    },
-                    {
                       "height": 200,
                       "width": 40,
+                    },
+                    {
+                      "height": 40,
                     },
                   ]
                 }
                 tapToSeek={false}
-                thumbImage={null}
+                upperLimit={9007199254740991}
                 value={0}
                 vertical={true}
               />
@@ -25378,12 +25495,18 @@ exports[`Slider Example Page 1`] = `
             >
               <RNCSlider
                 accessibilityLabel="Disabled Example"
+                accessibilityState={
+                  {
+                    "disabled": true,
+                  }
+                }
                 disabled={true}
-                enabled={false}
                 inverted={false}
+                lowerLimit={-9007199254740991}
                 maximumValue={100}
                 minimumValue={0}
                 onChange={null}
+                onRNCSliderAccessibilityAction={null}
                 onRNCSliderSlidingComplete={null}
                 onRNCSliderSlidingStart={null}
                 onRNCSliderValueChange={null}
@@ -25394,15 +25517,15 @@ exports[`Slider Example Page 1`] = `
                   [
                     {
                       "height": 40,
+                      "width": 200,
                     },
                     {
                       "height": 40,
-                      "width": 200,
                     },
                   ]
                 }
                 tapToSeek={false}
-                thumbImage={null}
+                upperLimit={9007199254740991}
                 value={0}
               />
             </View>
@@ -37463,10 +37586,18 @@ exports[`WebView Example Page 1`] = `
               >
                 <RNCWebView
                   cacheEnabled={true}
+                  fraudulentWebsiteWarningEnabled={true}
+                  hasOnFileDownload={false}
                   injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
                   injectedJavaScriptForMainFrameOnly={true}
                   javaScriptEnabled={true}
                   messagingEnabled={false}
+                  messagingModuleName=""
+                  newSource={
+                    {
+                      "uri": "https://github.com/microsoft/react-native-gallery",
+                    }
+                  }
                   onContentProcessDidTerminate={[Function]}
                   onHttpError={[Function]}
                   onLoadingError={[Function]}
@@ -37637,10 +37768,18 @@ exports[`WebView Example Page 1`] = `
               >
                 <RNCWebView
                   cacheEnabled={true}
+                  fraudulentWebsiteWarningEnabled={true}
+                  hasOnFileDownload={false}
                   injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
                   injectedJavaScriptForMainFrameOnly={true}
                   javaScriptEnabled={true}
                   messagingEnabled={false}
+                  messagingModuleName=""
+                  newSource={
+                    {
+                      "uri": "https://github.com/microsoft/react-native-gallery",
+                    }
+                  }
                   onContentProcessDidTerminate={[Function]}
                   onHttpError={[Function]}
                   onLoadingError={[Function]}
