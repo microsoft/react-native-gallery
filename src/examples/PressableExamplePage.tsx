@@ -84,8 +84,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'Pressable Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/src/Libraries/Components/Pressable/Pressable.windows.js',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/src/Libraries/Components/Pressable/Pressable.windows.js',
         },
       ]}>
       <Example title="A simple Pressable component." code={example1jsx}>

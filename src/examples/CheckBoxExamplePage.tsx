@@ -13,8 +13,7 @@ export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
       description="The Checkbox component lets the user select a combination of binary options."
       wrappedNativeControl={{
         control: 'CheckBox',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.checkbox?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.checkbox?view=winrt-19041',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/CheckBoxExamplePage.tsx"

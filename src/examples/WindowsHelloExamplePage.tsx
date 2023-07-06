@@ -49,8 +49,7 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
       description="Use a Windows Hello features when you want to authenticate users of your app and allow them to log in using their biometrics data defined for their Windows account."
       wrappedNativeControl={{
         control: 'Windows Hello',
-        url:
-          'https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0',
+        url: 'https://support.microsoft.com/en-us/windows/learn-about-windows-hello-and-set-it-up-dae28983-8242-bb2a-d3d1-87c9d265a5f0',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/WindowsHelloExamplePage.tsx"

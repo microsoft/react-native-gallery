@@ -29,8 +29,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       description="Picker is a control that drops down a flyout of choices from which one can be chosen."
       wrappedNativeControl={{
         control: 'ComboBox',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox?view=winrt-19041',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PickerExamplePage.tsx"

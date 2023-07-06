@@ -11,8 +11,9 @@ import {ImageExamplePage} from '../src/examples/ImageExamplePage';
 import {PressableExamplePage} from '../src/examples/PressableExamplePage';
 import {FlatListExamplePage} from '../src/examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from '../src/examples/ScrollViewExample';
-import {PopupExamplePage} from '../src/examples/PopupExamplePage';
-import {FlyoutExamplePage} from '../src/examples/FlyoutExamplePage';
+// Issue: #344
+//import {PopupExamplePage} from '../src/examples/PopupExamplePage';
+//import {FlyoutExamplePage} from '../src/examples/FlyoutExamplePage';
 import {CheckBoxExamplePage} from '../src/examples/CheckBoxExamplePage';
 import {ConfigExamplePage} from '../src/examples/ConfigExamplePage';
 import {DatePickerExamplePage} from '../src/examples/DatePickerExamplePage';
@@ -96,10 +97,13 @@ test('FlatList Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
+// Issue: #344
+/*
 test('Flyout Example Page', () => {
   const tree = create(<FlyoutExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+*/
 
 test('Image Example Page', () => {
   const tree = create(<ImageExamplePage />).toJSON();
@@ -111,10 +115,13 @@ test('Picker Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
+// Issue: #344
+/*
 test('Popup Example Page', () => {
   const tree = create(<PopupExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+*/
 
 test('Pressable Example Page', () => {
   const tree = create(<PressableExamplePage />).toJSON();

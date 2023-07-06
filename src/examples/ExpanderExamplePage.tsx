@@ -58,16 +58,14 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
       description="Expander is a control that displays a header and has a collapsible body that displays content."
       wrappedNativeControl={{
         control: 'Expander',
-        url:
-          'https://docs.microsoft.com/en-us/windows/winui/api/microsoft.ui.xaml.controls.expander?view=winui-2.6',
+        url: 'https://docs.microsoft.com/en-us/windows/winui/api/microsoft.ui.xaml.controls.expander?view=winui-2.6',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ExperimentalExpanderExamplePage.tsx"
       documentation={[
         {
           label: 'Expander',
-          url:
-            'https://github.com/microsoft/fluentui-react-native/blob/master/packages/experimental/Expander',
+          url: 'https://github.com/microsoft/fluentui-react-native/blob/master/packages/experimental/Expander',
         },
       ]}>
       <Example title="A simple Expander." code={example1jsx}>

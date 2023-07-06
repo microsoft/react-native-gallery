@@ -142,8 +142,7 @@ style={{
       description="View is a container that maps directly to the native view equivalent on the platform React Native is running on. View is designed to be nested and can have zero to many children of any component type."
       wrappedNativeControl={{
         control: 'ViewPanel',
-        url:
-          'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewPanel.',
+        url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewPanel.',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ViewExamplePage.tsx"
@@ -154,8 +153,7 @@ style={{
         },
         {
           label: 'View Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewViewManager.h',
         },
       ]}>
       <Example title="A simple View." code={example1jsx}>

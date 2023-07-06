@@ -161,21 +161,18 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
       description="Displays a dismissable view of content on top of existing content in the application window."
       wrappedNativeControl={{
         control: 'Popup',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.primitives.popup?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.primitives.popup?view=winrt-19041',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PopupExamplePage.tsx"
       documentation={[
         {
           label: 'Popup',
-          url:
-            'https://microsoft.github.io/react-native-windows/docs/popup-component',
+          url: 'https://microsoft.github.io/react-native-windows/docs/popup-component',
         },
         {
           label: 'Popup Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h',
         },
       ]}>
       <Example title="A simple Popup." code={example1jsx}>
