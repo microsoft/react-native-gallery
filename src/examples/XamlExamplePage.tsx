@@ -87,8 +87,7 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
       documentation={[
         {
           label: 'Xaml',
-          url:
-            'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls?view=winrt-19041',
+          url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls?view=winrt-19041',
         },
         {
           label: 'Xaml Source Code',

@@ -38,8 +38,7 @@ export const SliderExamplePage: React.FunctionComponent<{}> = () => {
       description="Use a Slider when you want your users to be able to set defined, contiguous values (such as volume or brightness) or a range of discrete values (such as screen resolution settings)."
       wrappedNativeControl={{
         control: 'Slider',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.slider?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.slider?view=winrt-19041',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SliderExamplePage.tsx"

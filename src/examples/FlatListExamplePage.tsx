@@ -87,8 +87,7 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'Flat List Source Code',
-          url:
-            'https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js',
+          url: 'https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js',
         },
       ]}>
       <Example title="A simple FlatList." code={example1jsx}>

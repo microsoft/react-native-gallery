@@ -61,8 +61,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
       description="TextInput is a foundational component for inputting text into an app via a keyboard."
       wrappedNativeControl={{
         control: 'TextBox',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox?view=winrt-19041',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextInputExamplePage.tsx"
@@ -73,13 +72,11 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'TextInput Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextInputViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextInputViewManager.h',
         },
         {
           label: 'Wrapped XAML Control: PasswordBox',
-          url:
-            'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.passwordbox?view=winrt-19041',
+          url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.passwordbox?view=winrt-19041',
         },
       ]}>
       <Example title="A simple TextInput." code={example1jsx}>

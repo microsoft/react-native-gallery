@@ -8,8 +8,7 @@ import TrackPlayer from 'react-native-track-player';
 var tracks = [
   {
     id: '1111',
-    url:
-      'https://drive.google.com/uc?export=download&id=1AjPwylDJgR8DOnmJWeRgZzjsohi-7ekj',
+    url: 'https://drive.google.com/uc?export=download&id=1AjPwylDJgR8DOnmJWeRgZzjsohi-7ekj',
     title: 'Longing',
     artist: 'David Chavez',
     artwork: 'https://i.picsum.photos/id/100/200/200.jpg',
@@ -17,8 +16,7 @@ var tracks = [
   },
   {
     id: '2222',
-    url:
-      'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+    url: 'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
     title: 'Soul Searching (Demo)',
     artist: 'David Chavez',
     artwork: 'https://i.picsum.photos/id/200/200/200.jpg',
@@ -26,8 +24,7 @@ var tracks = [
   },
   {
     id: '3333',
-    url:
-      'https://drive.google.com/uc?export=download&id=1bmvPOy2IVbkUROgm0dqiZry_miiL4OqI',
+    url: 'https://drive.google.com/uc?export=download&id=1bmvPOy2IVbkUROgm0dqiZry_miiL4OqI',
     title: 'Lullaby (Demo)',
     artist: 'David Chavez',
     artwork: 'https://i.picsum.photos/id/300/200/200.jpg',
@@ -35,8 +32,7 @@ var tracks = [
   },
   {
     id: '4444',
-    url:
-      'https://drive.google.com/uc?export=download&id=1V-c_WmanMA9i5BwfkmTs-605BQDsfyzC',
+    url: 'https://drive.google.com/uc?export=download&id=1V-c_WmanMA9i5BwfkmTs-605BQDsfyzC',
     title: 'Rhythm City (Demo)',
     artist: 'David Chavez',
     artwork: 'https://i.picsum.photos/id/400/200/200.jpg',

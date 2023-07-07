@@ -8,6 +8,22 @@ jest.mock('react-native-device-info', () =>
   require('react-native-device-info/jest/react-native-device-info-mock'),
 );
 
+// Workaround for https://github.com/react-native-webview/react-native-webview/issues/2934
+jest.mock('react-native/Libraries/TurboModule/TurboModuleRegistry', () => {
+  const turboModuleRegistry = jest.requireActual(
+    'react-native/Libraries/TurboModule/TurboModuleRegistry',
+  );
+  return {
+    ...turboModuleRegistry,
+    getEnforcing: (name) => {
+      if (name === 'RNCWebView') {
+        return null;
+      }
+      return turboModuleRegistry.getEnforcing(name);
+    },
+  };
+});
+
 NativeModules.RNDateTimePickerManager = {};
 
 NativeModules.RNDateTimePickerManager.getDefaultDisplayValue = jest.fn(() =>

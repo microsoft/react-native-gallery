@@ -309,8 +309,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'VirtualizedList Source Code',
-          url:
-            'https://github.com/facebook/react-native/blob/main/Libraries/Lists/VirtualizedList.js',
+          url: 'https://github.com/facebook/react-native/blob/main/Libraries/Lists/VirtualizedList.js',
         },
       ]}>
       <Example title="A simple VirtualizedList." code={example1jsx}>

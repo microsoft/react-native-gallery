@@ -44,8 +44,7 @@ export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
       documentation={[
         {
           label: 'DeviceInfo',
-          url:
-            'https://github.com/react-native-device-info/react-native-device-info',
+          url: 'https://github.com/react-native-device-info/react-native-device-info',
         },
       ]}>
       <Example title="System Information" code={exampleSysInfo}>
