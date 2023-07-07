@@ -162,7 +162,7 @@ configuration:
           reviewState: Changes_requested
       then:
       - addLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author feedback'
       description: 
     - if:
       - payloadType: Pull_Request
@@ -185,7 +185,7 @@ configuration:
           label: 'Needs: Author Feedback'
       then:
       - removeLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author feedback'
       description: 
     - if:
       - payloadType: Pull_Request_Review
@@ -257,7 +257,7 @@ configuration:
       - addLabel:
           label: 'Needs: Author Feedback'
       - removeLabel:
-          label: 'Needs: triage :mag:'
+          label: 'Needs: Triage :mag:'
       description: 
 onFailure: 
 onSuccess: 
