@@ -39,7 +39,7 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
   }, []);
 
   const onResume = useCallback(() => {
-    anim.current?.resume()
+    anim.current?.resume();
   }, []);
 
   const onPause = useCallback(() => {
@@ -50,12 +50,11 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
     anim.current?.reset();
   }, []);
 
-
   const handlerChangeLoop = () => {
     if (!loop) {
       anim.current?.play();
     }
-    setLoop(!loop)
+    setLoop(!loop);
   };
 
   useEffect(() => {
@@ -91,12 +90,10 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
         <LottieView
           ref={anim}
           resizeMode="contain"
-          source={
-            Platform.select({
-              windows: 'Loading Atom Colored',
-              default: require('../assets/animations/Loading-Atom-Colored.json'),
-            })
-          }
+          source={Platform.select({
+            windows: 'Loading Atom Colored',
+            default: require('../assets/animations/Loading-Atom-Colored.json'),
+          })}
           autoPlay={false}
           loop={loop}
           style={{
@@ -108,7 +105,7 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
           <Button onPress={onPlay} title={'play'} />
           <Button onPress={onPause} title={'pause'} />
           <Button onPress={onResume} title={'resume'} />
-          <Button onPress={onReset} title='reset' />
+          <Button onPress={onReset} title="reset" />
           <Button
             onPress={handlerChangeLoop}
             title={loop ? 'disable loop' : 'ative resume'}
