@@ -35,6 +35,7 @@ import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
+import { LottieAnimationsExamplePage } from './examples/LottieAnimationsExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -253,6 +254,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: XamlExamplePage,
     icon: '\uE70F',
     type: 'Layout',
+  },
+  {
+    key: 'LottieAnimations',
+    component: LottieAnimationsExamplePage,
+    icon: '\uE78A',
+    type: 'Media',
   },
 ];
 

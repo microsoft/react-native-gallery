@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-
+   <PropertyGroup>
+    <WinUIVersion>2.8.0</WinUIVersion>
+  </PropertyGroup>
   <PropertyGroup Label="NuGet" Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
     <ResolveNuGetPackages>false</ResolveNuGetPackages>
   </PropertyGroup>
-
 </Project>
