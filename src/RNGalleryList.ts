@@ -35,7 +35,7 @@ import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
-import { LottieAnimationsExamplePage } from './examples/LottieAnimationsExamplePage';
+import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage';
 
 interface IRNGalleryExample {
   key: string;
