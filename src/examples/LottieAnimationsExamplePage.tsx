@@ -1,6 +1,6 @@
 'use strict';
-import React, {useState,useEffect,useRef, useCallback} from 'react';
-import {Button, Platform, View} from 'react-native';
+import React, {useState,useEffect,useRef,useCallback} from 'react';
+import {Button,Platform,View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import LottieView, {AnimatedLottieViewProps} from 'lottie-react-native';
@@ -94,7 +94,7 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
           resizeMode='contain' 
           source={
             Platform.select({
-              windows:'Loading Atom Colored',
+              windows: 'Loading Atom Colored',
               default: require('../assets/animations/Loading-Atom-Colored.json')
             })
           } 
@@ -105,12 +105,12 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
             width: 120
           }}
         />
-       <View style={{flexDirection: 'row',gap: 12,}}>
+       <View style={{flexDirection:'row',gap: 12}}>
           <Button onPress={onPlay} title={'play'}/>
           <Button onPress={onPause} title={'pause'}/>
           <Button onPress={onResume} title={'resume'}/>
           <Button onPress={onReset} title='reset' />
-          <Button onPress={handlerChangeLoop} title={loop ? 'disable loop' :'ative resume'}/>
+          <Button onPress={handlerChangeLoop} title={loop ? 'disable loop' : 'ative resume'}/>
         </View>
       </Example>
     </Page>
