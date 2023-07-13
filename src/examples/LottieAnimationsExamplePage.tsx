@@ -64,9 +64,9 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Lottie animations"
-      description="Lottie é um ecossistema de bibliotecas para analisar animações do Adobe After Effects exportadas como JSON com bodymovin e renderizá-las nativamente!."
+      description="Lottie is a library ecosystem for parsing animations from Adobe After Effects exported as JSON with Bodymovin and rendering them natively!."
       componentType="Community"
-      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/WindowsHelloExamplePage.tsx"
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/LottieAnimationsExamplePage.tsx"
       documentation={[
         {
           label: 'Lottie React Native',
@@ -85,7 +85,7 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
         />
       </Example>
       <Example
-        title="A colored and rounded View with specified height and width."
+        title="controls in lottie animations."
         code={example2jsx}>
         <LottieView
           ref={anim}
