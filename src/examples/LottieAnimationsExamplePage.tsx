@@ -84,9 +84,7 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
           }}
         />
       </Example>
-      <Example
-        title="controls in lottie animations."
-        code={example2jsx}>
+      <Example title="controls in lottie animations." code={example2jsx}>
         <LottieView
           ref={anim}
           resizeMode="contain"
