@@ -8,6 +8,7 @@
 
 using namespace winrt;
 using namespace xaml;
+using namespace Microsoft::ReactNative;
 
 namespace winrt::rngallery::implementation
 {
@@ -16,5 +17,19 @@ namespace winrt::rngallery::implementation
         InitializeComponent();
         auto app = Application::Current().as<App>();
         ReactRootView().ReactNativeHost(app->Host());
+        // Workaround for https://github.com/microsoft/react-native-windows/issues/6287
+        ReactRootView().IsPerspectiveEnabled(false);
+        auto version = Windows::ApplicationModel::Package::Current().Id().Version();
+        ReactRootView().InitialProps([&](const IJSValueWriter& writer) {
+            writer.WriteObjectBegin();
+            writer.WritePropertyName(L"MajorVersion");
+            writer.WriteInt64(static_cast<int>(version.Major));
+            writer.WritePropertyName(L"MinorVersion");
+            writer.WriteInt64(static_cast<int>(version.Minor));
+            writer.WritePropertyName(L"BuildVersion");
+            writer.WriteInt64(static_cast<int>(version.Build));
+            writer.WritePropertyName(L"RevisionVersion");
+            writer.WriteInt64(static_cast<int>(version.Revision));
+            writer.WriteObjectEnd(); });
     }
 }
