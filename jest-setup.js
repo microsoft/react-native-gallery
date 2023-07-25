@@ -8,6 +8,8 @@ jest.mock('react-native-device-info', () =>
   require('react-native-device-info/jest/react-native-device-info-mock'),
 );
 
+process.env.NODE_ENV = 'test';
+
 // Workaround for https://github.com/react-native-webview/react-native-webview/issues/2934
 jest.mock('react-native/Libraries/TurboModule/TurboModuleRegistry', () => {
   const turboModuleRegistry = jest.requireActual(
