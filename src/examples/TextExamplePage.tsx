@@ -58,8 +58,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
       description="Text is a component for displaying read-only text in your app."
       wrappedNativeControl={{
         control: 'TextBlock',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textblock?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textblock?view=winrt-19041',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/TextExamplePage.tsx"
@@ -70,8 +69,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
         },
         {
           label: 'Text Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
         },
       ]}>
       <Example title="A simple line of Text." code={example1jsx}>

@@ -29,8 +29,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       description="Picker is a control that drops down a flyout of choices from which one can be chosen."
       wrappedNativeControl={{
         control: 'ComboBox',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.combobox?view=winrt-19041',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PickerExamplePage.tsx"
@@ -42,6 +41,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Picker." code={example1jsx}>
         <Picker
+          accessibilityLabel="Simple Example"
           style={{height: 50, width: 200}}
           itemStyle={{color: colors.text}}>
           <Picker.Item label="Option 1" value="Option 1" />
@@ -51,6 +51,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A disabled Picker." code={example2jsx}>
         <Picker
+          accessibilityLabel="Disabled Example"
           style={{height: 50, width: 200}}
           enabled={false}
           itemStyle={{color: colors.text}}>
@@ -61,6 +62,7 @@ export const PickerExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A colorful Picker." code={example3jsx}>
         <Picker
+          accessibilityLabel="Colorful Example"
           style={{height: 50, width: 200}}
           itemStyle={{color: colors.primary}}>
           <Picker.Item label="Option 1" value="Option 1" />

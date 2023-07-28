@@ -45,8 +45,7 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
       description="A component which scales and displays images."
       wrappedNativeControl={{
         control: 'Grid',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.grid?view=winrt-19041',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ImageExamplePage.tsx"
@@ -57,16 +56,14 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'Image Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
         },
       ]}>
       <Example title="A simple Image from web source." code={example1jsx}>
         <Image
           style={{width: 50, height: 50}}
           source={{
-            uri:
-              'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
+            uri: 'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
           }}
         />
       </Example>
@@ -76,8 +73,7 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
         <Image
           style={{width: 75, height: 50}}
           source={{
-            uri:
-              'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
+            uri: 'https://user-images.githubusercontent.com/33470154/104789118-fa16eb80-5748-11eb-9870-68360eca6fa6.png',
           }}
           resizeMode="stretch"
         />

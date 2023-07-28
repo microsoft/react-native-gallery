@@ -25,8 +25,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
       }
       wrappedNativeControl={{
         control: 'CalendarDatePicker',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.calendardatepicker?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.calendardatepicker?view=winrt-19041',
       }}
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/DatePickerExamplePage.tsx"
@@ -38,6 +37,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple DatePicker." code={textExample1}>
         <DateTimePicker
+          accessibilityLabel="Simple Example"
           value={date1}
           onChange={() => {}}
           mode="date"
@@ -48,6 +48,7 @@ export const DatePickerExamplePage: React.FunctionComponent<{}> = () => {
         title="A DatePicker with day of week formatted and first day of week adjusted."
         code={textExample2}>
         <DateTimePicker
+          accessibilityLabel="Formatted Example"
           value={date2}
           mode="date"
           style={{width: 200, opacity: 1, height: 50}}

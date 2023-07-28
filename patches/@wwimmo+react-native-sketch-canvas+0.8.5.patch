@@ -1,0 +1,31 @@
+diff --git a/node_modules/@wwimmo/react-native-sketch-canvas/windows/RNSketchCanvas/RNSketchCanvas.vcxproj b/node_modules/@wwimmo/react-native-sketch-canvas/windows/RNSketchCanvas/RNSketchCanvas.vcxproj
+index 4c3e271..2551062 100644
+--- a/node_modules/@wwimmo/react-native-sketch-canvas/windows/RNSketchCanvas/RNSketchCanvas.vcxproj
++++ b/node_modules/@wwimmo/react-native-sketch-canvas/windows/RNSketchCanvas/RNSketchCanvas.vcxproj
+@@ -14,7 +14,7 @@
+     <ApplicationType>Windows Store</ApplicationType>
+     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+     <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
+-    <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
++    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Label="ReactNativeWindowsProps">
+@@ -166,7 +166,7 @@
+   </Target>
+   <ImportGroup Label="ExtensionTargets">
+     <Import Project="$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200316.3\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200316.3\build\native\Microsoft.Windows.CppWinRT.targets')" />
+-    <Import Project="$(SolutionDir)\packages\Win2D.uwp.1.25.0\build\native\Win2D.uwp.targets" Condition="Exists('$(SolutionDir)\packages\Win2D.uwp.1.25.0\build\native\Win2D.uwp.targets')" />
++    <Import Project="$(SolutionDir)\packages\Win2D.uwp.1.26.0\build\native\Win2D.uwp.targets" Condition="Exists('$(SolutionDir)\packages\Win2D.uwp.1.25.0\build\native\Win2D.uwp.targets')" />
+   </ImportGroup>
+   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+     <PropertyGroup>
+@@ -174,6 +174,6 @@
+     </PropertyGroup>
+     <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200316.3\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200316.3\build\native\Microsoft.Windows.CppWinRT.props'))" />
+     <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200316.3\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.Windows.CppWinRT.2.0.200316.3\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+-    <Error Condition="!Exists('$(SolutionDir)\packages\Win2D.uwp.1.25.0\build\native\Win2D.uwp.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Win2D.uwp.1.25.0\build\native\Win2D.uwp.targets'))" />
++    <Error Condition="!Exists('$(SolutionDir)\packages\Win2D.uwp.1.26.0\build\native\Win2D.uwp.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Win2D.uwp.1.25.0\build\native\Win2D.uwp.targets'))" />
+   </Target>
+ </Project>
+\ No newline at end of file

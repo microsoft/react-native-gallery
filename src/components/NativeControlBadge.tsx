@@ -1,12 +1,17 @@
 import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import {Badge} from './Badge';
+import {Platform, PlatformColor} from 'react-native';
 
 export function NativeControlBadge() {
   const {colors} = useTheme();
   return (
     <Badge
-      badgeColor={'silver'}
+      badgeColor={
+        Platform.OS === 'windows'
+          ? PlatformColor('SystemColorHighlightTextColor')
+          : colors.border
+      }
       textColor={colors.text}
       badgeTitle="Wrapped Windows Control"
       icon={57828}

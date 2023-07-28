@@ -40,6 +40,7 @@ export const PrintExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="Print PDF document" code={example}>
         <Button
+          accessibilityLabel="Example"
           color={colors.primary}
           onPress={printRemotePDF}
           title="Print PDF"

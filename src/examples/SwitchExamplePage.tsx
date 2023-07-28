@@ -41,8 +41,7 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
       description="Use the Switch component to present users with exactly two mutually exclusive options (like on/off), where choosing an option results in an immediate commit."
       wrappedNativeControl={{
         control: 'ToggleSwitch',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.toggleswitch?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.toggleswitch?view=winrt-19041',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SwitchExamplePage.tsx"
@@ -53,8 +52,7 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'Switch Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/SwitchViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/SwitchViewManager.h',
         },
       ]}>
       <Example title="A simple Switch." code={example1jsx}>

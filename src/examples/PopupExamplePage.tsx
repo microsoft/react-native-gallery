@@ -161,21 +161,18 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
       description="Displays a dismissable view of content on top of existing content in the application window."
       wrappedNativeControl={{
         control: 'Popup',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.primitives.popup?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.primitives.popup?view=winrt-19041',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/PopupExamplePage.tsx"
       documentation={[
         {
           label: 'Popup',
-          url:
-            'https://microsoft.github.io/react-native-windows/docs/popup-component',
+          url: 'https://microsoft.github.io/react-native-windows/docs/popup-component',
         },
         {
           label: 'Popup Source Code',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h',
         },
       ]}>
       <Example title="A simple Popup." code={example1jsx}>
@@ -188,7 +185,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
-                ? PlatformColor('SystemColorButtonFaceColor')
+                ? PlatformColor('SystemListLowColor')
                 : 'silver',
             borderRadius: 3,
             justifyContent: 'center',
@@ -224,7 +221,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup1(false);
               }}
@@ -285,7 +286,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup2(false);
               }}
@@ -343,7 +348,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup3(false);
               }}
@@ -403,7 +412,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               accessibilityLabel={'Close Popup'}
               title={'Close Popup'}
-              color={colors.border}
+              color={
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemListLowColor')
+                  : colors.border
+              }
               onPress={() => {
                 setShowPopup4(false);
               }}

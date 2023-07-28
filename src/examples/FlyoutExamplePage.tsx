@@ -134,16 +134,14 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
       description="Represents a control that displays a view of information possibly requiring user interaction. Unlike a dialog, a Flyout by default can be light dismissed by clicking or tapping outside of it, pressing the device's back button, or pressing the 'Esc' key."
       wrappedNativeControl={{
         control: 'Flyout',
-        url:
-          'https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Flyout?view=winrt-19041',
+        url: 'https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Flyout?view=winrt-19041',
       }}
       componentType="Core"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/FlyoutExamplePage.tsx"
       documentation={[
         {
           label: 'Flyout',
-          url:
-            'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/FlyoutViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/FlyoutViewManager.h',
         },
       ]}>
       <Example title="A simple Flyout." code={example1jsx}>
