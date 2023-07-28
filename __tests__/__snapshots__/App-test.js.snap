@@ -478,7 +478,9 @@ exports[`Button Example Page 1`] = `
                         "borderWidth": 1,
                       },
                       {
-                        "backgroundColor": "rgb(0, 122, 255)",
+                        "backgroundColor": {
+                          "windowsbrush": "SystemColorButtonFaceColor",
+                        },
                       },
                     ]
                   }
