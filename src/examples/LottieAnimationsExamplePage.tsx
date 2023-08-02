@@ -64,7 +64,7 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
   return (
     <Page
       title="Lottie animations"
-      description="Lottie is a library ecosystem for parsing animations from Adobe After Effects exported as JSON with Bodymovin and rendering them natively!."
+      description="Lottie is a library ecosystem for parsing animations from Adobe After Effects exported as JSON with Bodymovin and rendering them natively"
       componentType="Community"
       pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/LottieAnimationsExamplePage.tsx"
       documentation={[
