@@ -978,6 +978,7 @@ exports[`Button Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -1009,6 +1010,7 @@ exports[`Button Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -1041,6 +1043,7 @@ exports[`Button Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -2103,6 +2106,7 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -2134,6 +2138,7 @@ exports[`CheckBox Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -2166,6 +2171,7 @@ exports[`CheckBox Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -2731,6 +2737,7 @@ exports[`Config Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -2762,6 +2769,7 @@ exports[`Config Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -2794,6 +2802,7 @@ exports[`Config Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -3483,6 +3492,7 @@ exports[`DeviceInfo Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -3514,6 +3524,7 @@ exports[`DeviceInfo Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -3546,6 +3557,7 @@ exports[`DeviceInfo Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -5170,7 +5182,7 @@ exports[`Expander Example Page 1`] = `
                       undefined,
                     ]
                   }
-                  timeZoneOffsetInSeconds={-0}
+                  timeZoneOffsetInSeconds={-28800}
                 />
               </ExpanderView>
             </View>
@@ -5789,6 +5801,7 @@ exports[`Expander Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -5820,6 +5833,7 @@ exports[`Expander Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -5852,6 +5866,7 @@ exports[`Expander Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -7781,6 +7796,7 @@ exports[`FlatList Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -7812,6 +7828,7 @@ exports[`FlatList Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -7844,6 +7861,7 @@ exports[`FlatList Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -10895,6 +10913,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -10926,6 +10945,7 @@ exports[`Flyout Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -10958,6 +10978,7 @@ exports[`Flyout Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -12079,6 +12100,7 @@ exports[`Hello Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -12110,6 +12132,7 @@ exports[`Hello Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -12142,6 +12165,7 @@ exports[`Hello Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -13491,6 +13515,7 @@ exports[`Image Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -13522,6 +13547,7 @@ exports[`Image Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -13554,6 +13580,7 @@ exports[`Image Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -15215,6 +15242,7 @@ exports[`Picker Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -15246,6 +15274,7 @@ exports[`Picker Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -15278,6 +15307,7 @@ exports[`Picker Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -18535,6 +18565,7 @@ exports[`Popup Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -18566,6 +18597,7 @@ exports[`Popup Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -18598,6 +18630,7 @@ exports[`Popup Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -20527,6 +20560,7 @@ exports[`Pressable Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -20558,6 +20592,7 @@ exports[`Pressable Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -20590,6 +20625,7 @@ exports[`Pressable Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -21106,6 +21142,7 @@ exports[`Print Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -21137,6 +21174,7 @@ exports[`Print Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -21169,6 +21207,7 @@ exports[`Print Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -21732,6 +21771,7 @@ exports[`ProgressView Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -21763,6 +21803,7 @@ exports[`ProgressView Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -21795,6 +21836,7 @@ exports[`ProgressView Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -23244,6 +23286,7 @@ exports[`ScrollView Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -23275,6 +23318,7 @@ exports[`ScrollView Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -23307,6 +23351,7 @@ exports[`ScrollView Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -24963,6 +25008,7 @@ exports[`SensitiveInfo Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -24994,6 +25040,7 @@ exports[`SensitiveInfo Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -25026,6 +25073,7 @@ exports[`SensitiveInfo Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -26174,6 +26222,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -26205,6 +26254,7 @@ exports[`Slider Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -26237,6 +26287,7 @@ exports[`Slider Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -26865,6 +26916,7 @@ exports[`Switch Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -26896,6 +26948,7 @@ exports[`Switch Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -26928,6 +26981,7 @@ exports[`Switch Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -28478,6 +28532,7 @@ Here is a line
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -28509,6 +28564,7 @@ Here is a line
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -28541,6 +28597,7 @@ Here is a line
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -29518,6 +29575,7 @@ exports[`TextInput Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -29549,6 +29607,7 @@ exports[`TextInput Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -29581,6 +29640,7 @@ exports[`TextInput Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -30137,6 +30197,7 @@ exports[`TextToSpeech Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -30168,6 +30229,7 @@ exports[`TextToSpeech Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -30200,6 +30262,7 @@ exports[`TextToSpeech Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -31632,6 +31695,7 @@ exports[`TouchableHighlight Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -31663,6 +31727,7 @@ exports[`TouchableHighlight Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -31695,6 +31760,7 @@ exports[`TouchableHighlight Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -34162,6 +34228,7 @@ onPress={
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -34193,6 +34260,7 @@ onPress={
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -34225,6 +34293,7 @@ onPress={
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -37818,6 +37887,7 @@ style={{
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -37849,6 +37919,7 @@ style={{
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -37881,6 +37952,7 @@ style={{
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -38560,6 +38632,7 @@ exports[`WebView Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -38591,6 +38664,7 @@ exports[`WebView Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -38623,6 +38697,7 @@ exports[`WebView Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
@@ -41124,6 +41199,7 @@ exports[`Xaml Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -41155,6 +41231,7 @@ exports[`Xaml Example Page 1`] = `
               }
             >
               <Text
+                accessibilityRole="header"
                 style={
                   {
                     "color": "rgb(28, 28, 30)",
@@ -41187,6 +41264,7 @@ exports[`Xaml Example Page 1`] = `
             }
           >
             <Text
+              accessibilityRole="header"
               style={
                 {
                   "color": "rgb(28, 28, 30)",
