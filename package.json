@@ -15,7 +15,7 @@
     "@fluentui-react-native/experimental-expander": "^0.6.1",
     "@react-native-clipboard/clipboard": "^1.11.2",
     "@react-native-community/checkbox": "^0.5.16",
-    "@react-native-community/datetimepicker": "^7.3.0",
+    "@react-native-community/datetimepicker": "^7.6.0",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-community/progress-view": "^1.4.1",
     "@react-native-community/slider": "^4.4.2",
