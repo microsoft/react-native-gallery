@@ -119,14 +119,14 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             opacity: 0.5,
           }}
           disabled={true}>
-            <Text
-              style={{
-                textAlign: 'center',
-                paddingVertical: 15,
-                color: colors.text,
-              }}>
-              Disabled Pressable
-            </Text>
+          <Text
+            style={{
+              textAlign: 'center',
+              paddingVertical: 15,
+              color: colors.text,
+            }}>
+            Disabled Pressable
+          </Text>
         </Pressable>
       </Example>
       <Example title="A Pressable component with counter." code={example3jsx}>
