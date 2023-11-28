@@ -24,11 +24,14 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
     opacity: 0.5,
   }}
   disabled={true}>
-  {({pressed}) => (
-    <Text style={{textAlign: 'center', paddingVertical: 15}}>
-      {pressed ? 'This will never be triggered.' : 'Disabled Pressable'}
-    </Text>
-  )}
+  <Text
+    style={{
+      textAlign: 'center',
+      paddingVertical: 15,
+      color: colors.text,
+    }}>
+    Disabled Pressable
+  </Text>
 </Pressable>`;
 
   const example3jsx = `<Pressable
@@ -116,16 +119,14 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             opacity: 0.5,
           }}
           disabled={true}>
-          {({pressed}) => (
             <Text
               style={{
                 textAlign: 'center',
                 paddingVertical: 15,
                 color: colors.text,
               }}>
-              {pressed ? 'This will never be triggered.' : 'Disabled Pressable'}
+              Disabled Pressable
             </Text>
-          )}
         </Pressable>
       </Example>
       <Example title="A Pressable component with counter." code={example3jsx}>

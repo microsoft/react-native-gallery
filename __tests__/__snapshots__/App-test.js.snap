@@ -19364,28 +19364,7 @@ exports[`Pressable Example Page 1`] = `
                   </Text>
                   <Text>
                     }&gt;
-  {
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text>
-                      (
-                    </Text>
-                    <Text
-                      style={{}}
-                    >
-                      <Text>
-                        {pressed}
-                      </Text>
-                    </Text>
-                    <Text>
-                      ) =&gt;
-                    </Text>
-                  </Text>
-                  <Text>
-                     (
-    
+  
                   </Text>
                   <Text
                     style={{}}
@@ -19412,7 +19391,8 @@ exports[`Pressable Example Page 1`] = `
                         </Text>
                       </Text>
                       <Text>
-                         
+                        
+    
                       </Text>
                       <Text
                         style={
@@ -19436,7 +19416,22 @@ exports[`Pressable Example Page 1`] = `
                         }
                       >
                         <Text>
-                          {{textAlign:
+                          {{
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+      
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          textAlign:
                         </Text>
                       </Text>
                       <Text>
@@ -19454,7 +19449,8 @@ exports[`Pressable Example Page 1`] = `
                         </Text>
                       </Text>
                       <Text>
-                        ', 
+                        ',
+      
                       </Text>
                       <Text
                         style={
@@ -19482,13 +19478,43 @@ exports[`Pressable Example Page 1`] = `
                         </Text>
                       </Text>
                       <Text>
-                        }}&gt;
+                        ,
+      
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          color:
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          colors.text
+                        </Text>
+                      </Text>
+                      <Text>
+                        ,
+    }}&gt;
                       </Text>
                     </Text>
                     <Text>
                       
-      {pressed ? 'This will never be triggered.' : 'Disabled Pressable'}
-    
+    Disabled Pressable
+  
                     </Text>
                     <Text
                       style={
@@ -19518,7 +19544,6 @@ exports[`Pressable Example Page 1`] = `
                   </Text>
                   <Text>
                     
-  )}
 &lt;/Pressable&gt;
                   </Text>
                 </Text>
