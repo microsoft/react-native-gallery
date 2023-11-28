@@ -6951,6 +6951,7 @@ exports[`FlatList Example Page 1`] = `
                 horizontal={true}
                 invertStickyHeaders={true}
                 inverted={true}
+                isInvertedVirtualizedList={true}
                 keyExtractor={[Function]}
                 onContentSizeChange={[Function]}
                 onLayout={[Function]}
