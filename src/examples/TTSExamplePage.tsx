@@ -40,7 +40,7 @@ export const TTSExamplePage: React.FunctionComponent<{}> = () => {
           onPress={(evt) => onVoicePress(evt, voice)}
           title={voice.name}
           color={voice.id === selectedVoice?.id ? 'steelblue' : 'red'}
-          accessibilityLabel={voice.language}
+          accessibilityLabel={voice.name + ', ' + voice.language}
         />
       </View>
     );
