@@ -23703,7 +23703,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <TextInput
-                  accessibilityLabel="Input"
+                  accessibilityLabel="Enter text to set item"
                   onChangeText={[Function]}
                   style={
                     {
@@ -23810,7 +23810,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <TextInput
-                  accessibilityLabel="Input"
+                  accessibilityLabel="Enter text to get item"
                   editable={false}
                   style={
                     {
