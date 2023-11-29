@@ -20919,7 +20919,7 @@ exports[`Print Example Page 1`] = `
               }
             >
               <View
-                accessibilityLabel="Example"
+                accessibilityLabel="Print PDF"
                 accessibilityRole="button"
                 accessibilityState={
                   {
