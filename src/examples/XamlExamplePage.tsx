@@ -101,7 +101,7 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
         <Button content={{string: 'XAML Button'}} onClick={() => {}} />
       </Example>
       <Example title="A simple XAML ToggleSwitch." code={example3jsx}>
-        <ToggleSwitch />
+        <ToggleSwitch accessibilityLabel="Simple example ToggleSwitch" />
       </Example>
       <Example title="A simple Hyperlink." code={example4jsx}>
         <TextBlock>
@@ -113,7 +113,7 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
         </TextBlock>
       </Example>
       <Example title="A simple ComboBox." code={example5jsx}>
-        <ComboBox text="ComboBox">
+        <ComboBox accessibilityLabel="Simple example ComboBox" text="ComboBox">
           <ComboBoxItem content={{string: 'ComboBoxItem 1'}} />
           <ComboBoxItem content={{string: 'ComboBoxItem 2'}} />
           <ComboBoxItem content={{string: 'ComboBoxItem 3'}} />
@@ -122,7 +122,10 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
       <Example
         title="A simple TextBox with lightweight styling."
         code={example6jsx}>
-        <TextBox foreground="blue" />
+        <TextBox
+          accessibilityLabel="Simple example TextBox"
+          foreground="blue"
+        />
       </Example>
       <Example title="A simple MenuFlyout." code={example7jsx}>
         <Button

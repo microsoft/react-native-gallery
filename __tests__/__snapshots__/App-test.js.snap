@@ -11318,6 +11318,7 @@ exports[`Hello Example Page 1`] = `
             >
               <View>
                 <View
+                  accessibilityLabel="Check for biometric device!"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -11576,6 +11577,7 @@ exports[`Hello Example Page 1`] = `
             >
               <View>
                 <View
+                  accessibilityLabel="Request user verification"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -11834,6 +11836,7 @@ exports[`Hello Example Page 1`] = `
             >
               <View>
                 <View
+                  accessibilityLabel="Request user verification"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -29959,6 +29962,7 @@ exports[`TextToSpeech Example Page 1`] = `
                 }
               >
                 <TextInput
+                  accessibilityLabel="Enter text here"
                   onChangeText={[Function]}
                   style={
                     {
@@ -29971,6 +29975,7 @@ exports[`TextToSpeech Example Page 1`] = `
                 />
               </View>
               <View
+                accessibilityLabel="Speak"
                 accessibilityRole="button"
                 accessibilityState={
                   {
@@ -39188,6 +39193,7 @@ exports[`Xaml Example Page 1`] = `
               }
             >
               <XamlControl
+                accessibilityLabel="Simple example ToggleSwitch"
                 type="Windows.UI.Xaml.Controls.ToggleSwitch"
               />
             </View>
@@ -39614,6 +39620,7 @@ exports[`Xaml Example Page 1`] = `
               }
             >
               <XamlControl
+                accessibilityLabel="Simple example ComboBox"
                 text="ComboBox"
                 type="Windows.UI.Xaml.Controls.ComboBox"
               >
@@ -39991,6 +39998,7 @@ exports[`Xaml Example Page 1`] = `
               }
             >
               <XamlControl
+                accessibilityLabel="Simple example TextBox"
                 foreground="blue"
                 type="Windows.UI.Xaml.Controls.TextBox"
               />

@@ -64,6 +64,7 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
         code={example1jsx}>
         <View>
           <Button
+            accessibilityLabel="Check for biometric device!"
             title="Check for biometric device!"
             onPress={() => {
               SignIn.getDeviceStatus()
@@ -87,6 +88,7 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Biometric scan with default message" code={example2jsx}>
         <View>
           <Button
+            accessibilityLabel="Request user verification"
             title="Request user verification"
             onPress={() => {
               SignIn.requestConsentVerification()
@@ -112,6 +114,7 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
         code={example3jsx}>
         <View>
           <Button
+            accessibilityLabel="Request user verification"
             title="Request user verification"
             onPress={() => {
               SignIn.requestConsentVerification(
