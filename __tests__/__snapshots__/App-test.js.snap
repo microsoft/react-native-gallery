@@ -4835,7 +4835,7 @@ exports[`Expander Example Page 1`] = `
             >
               <ExpanderView
                 collapsedHeight={50}
-                contentBackground="rgb(0, 122, 255)"
+                contentBackground="rgb(52, 122, 226)"
                 contentBorderBrush="rgb(242, 242, 242)"
                 expandedHeight={125}
                 headerBackground="rgb(216, 216, 216)"
@@ -20977,7 +20977,7 @@ exports[`Print Example Page 1`] = `
                         "borderWidth": 1,
                       },
                       {
-                        "backgroundColor": "rgb(0, 122, 255)",
+                        "backgroundColor": "rgb(52, 122, 226)",
                       },
                     ]
                   }
@@ -29213,9 +29213,10 @@ exports[`TextInput Example Page 1`] = `
               <TextInput
                 onChangeText={[Function]}
                 placeholder="A colored TextInput with bolded and italicized text..."
+                placeholderTextColor="rgb(0,0,0)"
                 style={
                   {
-                    "backgroundColor": "rgb(0, 122, 255)",
+                    "backgroundColor": "rgb(52, 122, 226)",
                     "borderColor": "rgb(216, 216, 216)",
                     "borderWidth": 1,
                     "color": "rgb(255, 255, 255)",

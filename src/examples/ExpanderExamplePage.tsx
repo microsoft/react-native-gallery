@@ -101,7 +101,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
           expandedHeight={125}
           headerBackground={colors.border}
           headerForegroundPointerOver={colors.primary}
-          contentBackground={colors.primary}
+          contentBackground="rgb(52, 122, 226)"
           contentBorderBrush={colors.background}>
           <Text>Text in the header</Text>
           <Text>Text in the content</Text>
