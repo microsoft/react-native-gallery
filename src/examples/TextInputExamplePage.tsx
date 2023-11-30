@@ -113,7 +113,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
           style={{
             borderColor: colors.border,
             borderWidth: 1,
-            backgroundColor: colors.primary,
+            backgroundColor: 'rgb(52, 122, 226)',
             fontStyle: 'italic',
             fontWeight: '700',
             color: colors.card,
@@ -121,6 +121,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
           onChangeText={onChangeText3}
           value={text3}
           placeholder="A colored TextInput with bolded and italicized text..."
+          placeholderTextColor='rgb(0,0,0)'
         />
       </Example>
       <Example
