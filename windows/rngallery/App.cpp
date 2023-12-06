@@ -5,6 +5,9 @@
 #include "AutolinkedNativeModules.g.h"
 #include "ReactPackageProvider.h"
 
+#include <winrt/LottieReactNative.h>
+#include <winrt/AnimatedVisuals.h>
+
 using namespace winrt;
 using namespace xaml;
 using namespace xaml::Controls;
@@ -38,6 +41,7 @@ App::App() noexcept
 
     RegisterAutolinkedNativeModulePackages(PackageProviders()); // Includes any autolinked modules
 
+    PackageProviders().Append(winrt::LottieReactNative::ReactPackageProvider(winrt::AnimatedVisuals::LottieCodegenSourceProvider()));
     PackageProviders().Append(make<ReactPackageProvider>()); // Includes all modules in this project
 
     InitializeComponent();

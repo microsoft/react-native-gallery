@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWindowsHello", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DateTimePicker", "..\node_modules\@react-native-community\datetimepicker\windows\DateTimePickerWindows\DateTimePickerWindows.vcxproj", "{0986A4DB-8E72-4BB7-AE32-7D9DF1758A9D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LottieReactNative", "..\node_modules\lottie-react-native\src\windows\cppwinrt\LottieReactNative.vcxproj", "{E5A7828D-F596-4793-80EC-4C071E575C58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -375,6 +377,18 @@ Global
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x64.Build.0 = Release|x64
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x86.ActiveCfg = Release|Win32
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x86.Build.0 = Release|Win32
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Debug|ARM64.Build.0 = Debug|ARM64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Debug|x64.ActiveCfg = Debug|x64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Debug|x64.Build.0 = Debug|x64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Debug|x86.ActiveCfg = Debug|Win32
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Debug|x86.Build.0 = Debug|Win32
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Release|ARM64.ActiveCfg = Release|ARM64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Release|ARM64.Build.0 = Release|ARM64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Release|x64.ActiveCfg = Release|x64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Release|x64.Build.0 = Release|x64
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Release|x86.ActiveCfg = Release|Win32
+		{E5A7828D-F596-4793-80EC-4C071E575C58}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
