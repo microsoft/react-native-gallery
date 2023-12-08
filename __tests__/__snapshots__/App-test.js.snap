@@ -48,7 +48,9 @@ exports[`Button Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -99,7 +101,9 @@ exports[`Button Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -183,7 +187,9 @@ exports[`Button Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -194,7 +200,9 @@ exports[`Button Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -294,11 +302,15 @@ exports[`Button Example Page 1`] = `
                   [
                     {
                       "backgroundColor": {
-                        "windowsbrush": "ButtonBackground",
+                        "windowsbrush": [
+                          "ButtonBackground",
+                        ],
                       },
                       "borderBottomWidth": 1.5,
                       "borderColor": {
-                        "windowsbrush": "ButtonBorderBrush",
+                        "windowsbrush": [
+                          "ButtonBorderBrush",
+                        ],
                       },
                       "borderRadius": 3,
                       "borderWidth": 1,
@@ -317,7 +329,9 @@ exports[`Button Example Page 1`] = `
                         [
                           {
                             "color": {
-                              "windowsbrush": "ButtonForeground",
+                              "windowsbrush": [
+                                "ButtonForeground",
+                              ],
                             },
                             "fontSize": 14,
                             "fontWeight": "400",
@@ -468,18 +482,24 @@ exports[`Button Example Page 1`] = `
                     [
                       {
                         "backgroundColor": {
-                          "windowsbrush": "ButtonBackground",
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
                         },
                         "borderBottomWidth": 1.5,
                         "borderColor": {
-                          "windowsbrush": "ButtonBorderBrush",
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
                         },
                         "borderRadius": 3,
                         "borderWidth": 1,
                       },
                       {
                         "backgroundColor": {
-                          "windowsbrush": "SystemColorButtonFaceColor",
+                          "windowsbrush": [
+                            "SystemColorButtonFaceColor",
+                          ],
                         },
                       },
                     ]
@@ -493,7 +513,9 @@ exports[`Button Example Page 1`] = `
                         [
                           {
                             "color": {
-                              "windowsbrush": "ButtonForeground",
+                              "windowsbrush": [
+                                "ButtonForeground",
+                              ],
                             },
                             "fontSize": 14,
                             "fontWeight": "400",
@@ -638,21 +660,29 @@ exports[`Button Example Page 1`] = `
                   [
                     {
                       "backgroundColor": {
-                        "windowsbrush": "ButtonBackground",
+                        "windowsbrush": [
+                          "ButtonBackground",
+                        ],
                       },
                       "borderBottomWidth": 1.5,
                       "borderColor": {
-                        "windowsbrush": "ButtonBorderBrush",
+                        "windowsbrush": [
+                          "ButtonBorderBrush",
+                        ],
                       },
                       "borderRadius": 3,
                       "borderWidth": 1,
                     },
                     {
                       "backgroundColor": {
-                        "windowsbrush": "ButtonBackgroundDisabled",
+                        "windowsbrush": [
+                          "ButtonBackgroundDisabled",
+                        ],
                       },
                       "borderColor": {
-                        "windowsbrush": "ButtonBorderBrushDisabled",
+                        "windowsbrush": [
+                          "ButtonBorderBrushDisabled",
+                        ],
                       },
                     },
                   ]
@@ -670,7 +700,9 @@ exports[`Button Example Page 1`] = `
                         [
                           {
                             "color": {
-                              "windowsbrush": "ButtonForeground",
+                              "windowsbrush": [
+                                "ButtonForeground",
+                              ],
                             },
                             "fontSize": 14,
                             "fontWeight": "400",
@@ -679,7 +711,9 @@ exports[`Button Example Page 1`] = `
                           },
                           {
                             "color": {
-                              "windowsbrush": "ButtonForegroundDisabled",
+                              "windowsbrush": [
+                                "ButtonForegroundDisabled",
+                              ],
                             },
                           },
                         ]
@@ -834,11 +868,15 @@ exports[`Button Example Page 1`] = `
                   [
                     {
                       "backgroundColor": {
-                        "windowsbrush": "ButtonBackground",
+                        "windowsbrush": [
+                          "ButtonBackground",
+                        ],
                       },
                       "borderBottomWidth": 1.5,
                       "borderColor": {
-                        "windowsbrush": "ButtonBorderBrush",
+                        "windowsbrush": [
+                          "ButtonBorderBrush",
+                        ],
                       },
                       "borderRadius": 3,
                       "borderWidth": 1,
@@ -857,7 +895,9 @@ exports[`Button Example Page 1`] = `
                         [
                           {
                             "color": {
-                              "windowsbrush": "ButtonForeground",
+                              "windowsbrush": [
+                                "ButtonForeground",
+                              ],
                             },
                             "fontSize": 14,
                             "fontWeight": "400",
@@ -1128,7 +1168,9 @@ exports[`CheckBox Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -1179,7 +1221,9 @@ exports[`CheckBox Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -1248,7 +1292,9 @@ exports[`CheckBox Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -1308,7 +1354,9 @@ exports[`CheckBox Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -1319,7 +1367,9 @@ exports[`CheckBox Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -2256,7 +2306,9 @@ exports[`Config Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -2307,7 +2359,9 @@ exports[`Config Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -2391,7 +2445,9 @@ exports[`Config Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -2402,7 +2458,9 @@ exports[`Config Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -2882,7 +2940,9 @@ exports[`DeviceInfo Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -2933,7 +2993,9 @@ exports[`DeviceInfo Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -3017,7 +3079,9 @@ exports[`DeviceInfo Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -3028,7 +3092,9 @@ exports[`DeviceInfo Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -3633,7 +3699,9 @@ exports[`Expander Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -3684,7 +3752,9 @@ exports[`Expander Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -3753,7 +3823,9 @@ exports[`Expander Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -3813,7 +3885,9 @@ exports[`Expander Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -3824,7 +3898,9 @@ exports[`Expander Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -5182,7 +5258,7 @@ exports[`Expander Example Page 1`] = `
                       undefined,
                     ]
                   }
-                  timeZoneOffsetInSeconds={-0}
+                  timeZoneOffsetInSeconds={-28800}
                 />
               </ExpanderView>
             </View>
@@ -5951,7 +6027,9 @@ exports[`FlatList Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -6002,7 +6080,9 @@ exports[`FlatList Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -6086,7 +6166,9 @@ exports[`FlatList Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -6097,7 +6179,9 @@ exports[`FlatList Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -6195,7 +6279,7 @@ exports[`FlatList Example Page 1`] = `
                 onScrollEndDrag={[Function]}
                 removeClippedSubviews={false}
                 renderItem={[Function]}
-                scrollEventThrottle={50}
+                scrollEventThrottle={0.0001}
                 stickyHeaderIndices={[]}
                 viewabilityConfigCallbackPairs={[]}
               >
@@ -6467,7 +6551,7 @@ exports[`FlatList Example Page 1`] = `
                 onScrollEndDrag={[Function]}
                 removeClippedSubviews={false}
                 renderItem={[Function]}
-                scrollEventThrottle={50}
+                scrollEventThrottle={0.0001}
                 stickyHeaderIndices={[]}
                 viewabilityConfigCallbackPairs={[]}
               >
@@ -6962,7 +7046,7 @@ exports[`FlatList Example Page 1`] = `
                 onScrollEndDrag={[Function]}
                 removeClippedSubviews={false}
                 renderItem={[Function]}
-                scrollEventThrottle={50}
+                scrollEventThrottle={0.0001}
                 stickyHeaderIndices={[]}
                 style={
                   [
@@ -7318,7 +7402,7 @@ exports[`FlatList Example Page 1`] = `
                 onScrollEndDrag={[Function]}
                 removeClippedSubviews={false}
                 renderItem={[Function]}
-                scrollEventThrottle={50}
+                scrollEventThrottle={0.0001}
                 stickyHeaderIndices={[]}
                 style={
                   {
@@ -7576,7 +7660,7 @@ exports[`FlatList Example Page 1`] = `
                 onScrollEndDrag={[Function]}
                 removeClippedSubviews={false}
                 renderItem={[Function]}
-                scrollEventThrottle={50}
+                scrollEventThrottle={0.0001}
                 stickyHeaderIndices={[]}
                 viewabilityConfigCallbackPairs={[]}
               >
@@ -7947,7 +8031,9 @@ exports[`Flyout Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -7998,7 +8084,9 @@ exports[`Flyout Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -8067,7 +8155,9 @@ exports[`Flyout Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -8127,7 +8217,9 @@ exports[`Flyout Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -8138,7 +8230,9 @@ exports[`Flyout Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -8228,7 +8322,9 @@ exports[`Flyout Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -8905,7 +9001,9 @@ exports[`Flyout Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -9584,7 +9682,9 @@ exports[`Flyout Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -10265,7 +10365,9 @@ exports[`Flyout Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -11064,7 +11166,9 @@ exports[`Hello Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -11115,7 +11219,9 @@ exports[`Hello Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -11184,7 +11290,9 @@ exports[`Hello Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -11244,7 +11352,9 @@ exports[`Hello Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -11255,7 +11365,9 @@ exports[`Hello Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -11356,11 +11468,15 @@ exports[`Hello Example Page 1`] = `
                     [
                       {
                         "backgroundColor": {
-                          "windowsbrush": "ButtonBackground",
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
                         },
                         "borderBottomWidth": 1.5,
                         "borderColor": {
-                          "windowsbrush": "ButtonBorderBrush",
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
                         },
                         "borderRadius": 3,
                         "borderWidth": 1,
@@ -11379,7 +11495,9 @@ exports[`Hello Example Page 1`] = `
                           [
                             {
                               "color": {
-                                "windowsbrush": "ButtonForeground",
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
                               },
                               "fontSize": 14,
                               "fontWeight": "400",
@@ -11615,11 +11733,15 @@ exports[`Hello Example Page 1`] = `
                     [
                       {
                         "backgroundColor": {
-                          "windowsbrush": "ButtonBackground",
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
                         },
                         "borderBottomWidth": 1.5,
                         "borderColor": {
-                          "windowsbrush": "ButtonBorderBrush",
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
                         },
                         "borderRadius": 3,
                         "borderWidth": 1,
@@ -11638,7 +11760,9 @@ exports[`Hello Example Page 1`] = `
                           [
                             {
                               "color": {
-                                "windowsbrush": "ButtonForeground",
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
                               },
                               "fontSize": 14,
                               "fontWeight": "400",
@@ -11874,11 +11998,15 @@ exports[`Hello Example Page 1`] = `
                     [
                       {
                         "backgroundColor": {
-                          "windowsbrush": "ButtonBackground",
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
                         },
                         "borderBottomWidth": 1.5,
                         "borderColor": {
-                          "windowsbrush": "ButtonBorderBrush",
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
                         },
                         "borderRadius": 3,
                         "borderWidth": 1,
@@ -11897,7 +12025,9 @@ exports[`Hello Example Page 1`] = `
                           [
                             {
                               "color": {
-                                "windowsbrush": "ButtonForeground",
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
                               },
                               "fontSize": 14,
                               "fontWeight": "400",
@@ -12254,7 +12384,9 @@ exports[`Image Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -12305,7 +12437,9 @@ exports[`Image Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -12374,7 +12508,9 @@ exports[`Image Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -12434,7 +12570,9 @@ exports[`Image Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -12445,7 +12583,9 @@ exports[`Image Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -13678,7 +13818,9 @@ exports[`Picker Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -13729,7 +13871,9 @@ exports[`Picker Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -13798,7 +13942,9 @@ exports[`Picker Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -13858,7 +14004,9 @@ exports[`Picker Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -13869,7 +14017,9 @@ exports[`Picker Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -15396,7 +15546,9 @@ exports[`Popup Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -15447,7 +15599,9 @@ exports[`Popup Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -15516,7 +15670,9 @@ exports[`Popup Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -15576,7 +15732,9 @@ exports[`Popup Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -15587,7 +15745,9 @@ exports[`Popup Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -15679,7 +15839,9 @@ exports[`Popup Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemListLowColor",
+                      "windowsbrush": [
+                        "SystemListLowColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -15783,18 +15945,24 @@ exports[`Popup Example Page 1`] = `
                         [
                           {
                             "backgroundColor": {
-                              "windowsbrush": "ButtonBackground",
+                              "windowsbrush": [
+                                "ButtonBackground",
+                              ],
                             },
                             "borderBottomWidth": 1.5,
                             "borderColor": {
-                              "windowsbrush": "ButtonBorderBrush",
+                              "windowsbrush": [
+                                "ButtonBorderBrush",
+                              ],
                             },
                             "borderRadius": 3,
                             "borderWidth": 1,
                           },
                           {
                             "backgroundColor": {
-                              "windowsbrush": "SystemListLowColor",
+                              "windowsbrush": [
+                                "SystemListLowColor",
+                              ],
                             },
                           },
                         ]
@@ -15808,7 +15976,9 @@ exports[`Popup Example Page 1`] = `
                             [
                               {
                                 "color": {
-                                  "windowsbrush": "ButtonForeground",
+                                  "windowsbrush": [
+                                    "ButtonForeground",
+                                  ],
                                 },
                                 "fontSize": 14,
                                 "fontWeight": "400",
@@ -16377,7 +16547,9 @@ exports[`Popup Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemListLowColor",
+                      "windowsbrush": [
+                        "SystemListLowColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -16482,18 +16654,24 @@ exports[`Popup Example Page 1`] = `
                         [
                           {
                             "backgroundColor": {
-                              "windowsbrush": "ButtonBackground",
+                              "windowsbrush": [
+                                "ButtonBackground",
+                              ],
                             },
                             "borderBottomWidth": 1.5,
                             "borderColor": {
-                              "windowsbrush": "ButtonBorderBrush",
+                              "windowsbrush": [
+                                "ButtonBorderBrush",
+                              ],
                             },
                             "borderRadius": 3,
                             "borderWidth": 1,
                           },
                           {
                             "backgroundColor": {
-                              "windowsbrush": "SystemListLowColor",
+                              "windowsbrush": [
+                                "SystemListLowColor",
+                              ],
                             },
                           },
                         ]
@@ -16507,7 +16685,9 @@ exports[`Popup Example Page 1`] = `
                             [
                               {
                                 "color": {
-                                  "windowsbrush": "ButtonForeground",
+                                  "windowsbrush": [
+                                    "ButtonForeground",
+                                  ],
                                 },
                                 "fontSize": 14,
                                 "fontWeight": "400",
@@ -17137,7 +17317,9 @@ exports[`Popup Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemListLowColor",
+                      "windowsbrush": [
+                        "SystemListLowColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -17243,18 +17425,24 @@ exports[`Popup Example Page 1`] = `
                         [
                           {
                             "backgroundColor": {
-                              "windowsbrush": "ButtonBackground",
+                              "windowsbrush": [
+                                "ButtonBackground",
+                              ],
                             },
                             "borderBottomWidth": 1.5,
                             "borderColor": {
-                              "windowsbrush": "ButtonBorderBrush",
+                              "windowsbrush": [
+                                "ButtonBorderBrush",
+                              ],
                             },
                             "borderRadius": 3,
                             "borderWidth": 1,
                           },
                           {
                             "backgroundColor": {
-                              "windowsbrush": "SystemListLowColor",
+                              "windowsbrush": [
+                                "SystemListLowColor",
+                              ],
                             },
                           },
                         ]
@@ -17268,7 +17456,9 @@ exports[`Popup Example Page 1`] = `
                             [
                               {
                                 "color": {
-                                  "windowsbrush": "ButtonForeground",
+                                  "windowsbrush": [
+                                    "ButtonForeground",
+                                  ],
                                 },
                                 "fontSize": 14,
                                 "fontWeight": "400",
@@ -17871,7 +18061,9 @@ exports[`Popup Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemListLowColor",
+                      "windowsbrush": [
+                        "SystemListLowColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -17975,18 +18167,24 @@ exports[`Popup Example Page 1`] = `
                         [
                           {
                             "backgroundColor": {
-                              "windowsbrush": "ButtonBackground",
+                              "windowsbrush": [
+                                "ButtonBackground",
+                              ],
                             },
                             "borderBottomWidth": 1.5,
                             "borderColor": {
-                              "windowsbrush": "ButtonBorderBrush",
+                              "windowsbrush": [
+                                "ButtonBorderBrush",
+                              ],
                             },
                             "borderRadius": 3,
                             "borderWidth": 1,
                           },
                           {
                             "backgroundColor": {
-                              "windowsbrush": "SystemListLowColor",
+                              "windowsbrush": [
+                                "SystemListLowColor",
+                              ],
                             },
                           },
                         ]
@@ -18000,7 +18198,9 @@ exports[`Popup Example Page 1`] = `
                             [
                               {
                                 "color": {
-                                  "windowsbrush": "ButtonForeground",
+                                  "windowsbrush": [
+                                    "ButtonForeground",
+                                  ],
                                 },
                                 "fontSize": 14,
                                 "fontWeight": "400",
@@ -18728,7 +18928,9 @@ exports[`Pressable Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -18779,7 +18981,9 @@ exports[`Pressable Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -18863,7 +19067,9 @@ exports[`Pressable Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -18874,7 +19080,9 @@ exports[`Pressable Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -19168,7 +19376,9 @@ exports[`Pressable Example Page 1`] = `
                 style={
                   {
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 2,
                     "height": 50,
@@ -19599,7 +19809,9 @@ exports[`Pressable Example Page 1`] = `
                   [
                     {
                       "backgroundColor": {
-                        "windowsbrush": "SystemColorButtonFaceColor",
+                        "windowsbrush": [
+                          "SystemColorButtonFaceColor",
+                        ],
                       },
                       "borderRadius": 2,
                       "height": 50,
@@ -20143,7 +20355,9 @@ exports[`Pressable Example Page 1`] = `
                 style={
                   {
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 2,
                     "height": 50,
@@ -20714,7 +20928,9 @@ exports[`Print Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -20765,7 +20981,9 @@ exports[`Print Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -20849,7 +21067,9 @@ exports[`Print Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -20860,7 +21080,9 @@ exports[`Print Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -20967,11 +21189,15 @@ exports[`Print Example Page 1`] = `
                     [
                       {
                         "backgroundColor": {
-                          "windowsbrush": "ButtonBackground",
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
                         },
                         "borderBottomWidth": 1.5,
                         "borderColor": {
-                          "windowsbrush": "ButtonBorderBrush",
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
                         },
                         "borderRadius": 3,
                         "borderWidth": 1,
@@ -20990,7 +21216,9 @@ exports[`Print Example Page 1`] = `
                         [
                           {
                             "color": {
-                              "windowsbrush": "ButtonForeground",
+                              "windowsbrush": [
+                                "ButtonForeground",
+                              ],
                             },
                             "fontSize": 14,
                             "fontWeight": "400",
@@ -21287,7 +21515,9 @@ exports[`ProgressView Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -21338,7 +21568,9 @@ exports[`ProgressView Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -21422,7 +21654,9 @@ exports[`ProgressView Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -21433,7 +21667,9 @@ exports[`ProgressView Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -21496,7 +21732,6 @@ exports[`ProgressView Example Page 1`] = `
             >
               <RNCProgressViewWindows
                 progress={0.5}
-                progressImage={null}
                 style={
                   [
                     {
@@ -21505,7 +21740,6 @@ exports[`ProgressView Example Page 1`] = `
                     undefined,
                   ]
                 }
-                trackImage={null}
               />
             </View>
             <View
@@ -21589,7 +21823,6 @@ exports[`ProgressView Example Page 1`] = `
             >
               <RNCProgressViewWindows
                 isIndeterminate="true"
-                progressImage={null}
                 style={
                   [
                     {
@@ -21598,7 +21831,6 @@ exports[`ProgressView Example Page 1`] = `
                     undefined,
                   ]
                 }
-                trackImage={null}
               />
             </View>
             <View
@@ -21682,7 +21914,6 @@ exports[`ProgressView Example Page 1`] = `
             >
               <RNCProgressViewWindows
                 progress={0.7}
-                progressImage={null}
                 progressTintColor="rgb(0, 122, 255)"
                 style={
                   [
@@ -21692,7 +21923,6 @@ exports[`ProgressView Example Page 1`] = `
                     undefined,
                   ]
                 }
-                trackImage={null}
                 trackTintColor="rgb(216, 216, 216)"
               />
             </View>
@@ -21916,7 +22146,9 @@ exports[`ScrollView Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -21967,7 +22199,9 @@ exports[`ScrollView Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -22036,7 +22270,9 @@ exports[`ScrollView Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -22096,7 +22332,9 @@ exports[`ScrollView Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -22107,7 +22345,9 @@ exports[`ScrollView Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -23449,7 +23689,9 @@ exports[`SensitiveInfo Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -23500,7 +23742,9 @@ exports[`SensitiveInfo Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -23584,7 +23828,9 @@ exports[`SensitiveInfo Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -23595,7 +23841,9 @@ exports[`SensitiveInfo Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -23764,11 +24012,15 @@ exports[`SensitiveInfo Example Page 1`] = `
                       [
                         {
                           "backgroundColor": {
-                            "windowsbrush": "ButtonBackground",
+                            "windowsbrush": [
+                              "ButtonBackground",
+                            ],
                           },
                           "borderBottomWidth": 1.5,
                           "borderColor": {
-                            "windowsbrush": "ButtonBorderBrush",
+                            "windowsbrush": [
+                              "ButtonBorderBrush",
+                            ],
                           },
                           "borderRadius": 3,
                           "borderWidth": 1,
@@ -23787,7 +24039,9 @@ exports[`SensitiveInfo Example Page 1`] = `
                           [
                             {
                               "color": {
-                                "windowsbrush": "ButtonForeground",
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
                               },
                               "fontSize": 14,
                               "fontWeight": "400",
@@ -23871,11 +24125,15 @@ exports[`SensitiveInfo Example Page 1`] = `
                       [
                         {
                           "backgroundColor": {
-                            "windowsbrush": "ButtonBackground",
+                            "windowsbrush": [
+                              "ButtonBackground",
+                            ],
                           },
                           "borderBottomWidth": 1.5,
                           "borderColor": {
-                            "windowsbrush": "ButtonBorderBrush",
+                            "windowsbrush": [
+                              "ButtonBorderBrush",
+                            ],
                           },
                           "borderRadius": 3,
                           "borderWidth": 1,
@@ -23894,7 +24152,9 @@ exports[`SensitiveInfo Example Page 1`] = `
                           [
                             {
                               "color": {
-                                "windowsbrush": "ButtonForeground",
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
                               },
                               "fontSize": 14,
                               "fontWeight": "400",
@@ -25153,7 +25413,9 @@ exports[`Slider Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -25204,7 +25466,9 @@ exports[`Slider Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -25273,7 +25537,9 @@ exports[`Slider Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -25333,7 +25599,9 @@ exports[`Slider Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -25344,7 +25612,9 @@ exports[`Slider Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -26376,7 +26646,9 @@ exports[`Switch Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -26427,7 +26699,9 @@ exports[`Switch Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -26496,7 +26770,9 @@ exports[`Switch Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -26556,7 +26832,9 @@ exports[`Switch Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -26567,7 +26845,9 @@ exports[`Switch Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -26631,6 +26911,7 @@ exports[`Switch Example Page 1`] = `
               <RCTSwitch
                 accessibilityLabel="simple switch example"
                 accessibilityRole="switch"
+                focusable={true}
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
@@ -26714,6 +26995,7 @@ exports[`Switch Example Page 1`] = `
                 accessibilityLabel="disabled switch example"
                 accessibilityRole="switch"
                 disabled={true}
+                focusable={true}
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
@@ -26797,6 +27079,7 @@ exports[`Switch Example Page 1`] = `
               <RCTSwitch
                 accessibilityLabel="colorful switch example"
                 accessibilityRole="switch"
+                focusable={true}
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
@@ -27079,7 +27362,9 @@ exports[`Text Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -27130,7 +27415,9 @@ exports[`Text Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -27199,7 +27486,9 @@ exports[`Text Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -27259,7 +27548,9 @@ exports[`Text Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -27270,7 +27561,9 @@ exports[`Text Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -28695,7 +28988,9 @@ exports[`TextInput Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -28746,7 +29041,9 @@ exports[`TextInput Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -28815,7 +29112,9 @@ exports[`TextInput Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -28875,7 +29174,9 @@ exports[`TextInput Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -28886,7 +29187,9 @@ exports[`TextInput Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -29748,7 +30051,9 @@ exports[`TextToSpeech Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -29799,7 +30104,9 @@ exports[`TextToSpeech Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -29883,7 +30190,9 @@ exports[`TextToSpeech Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -29894,7 +30203,9 @@ exports[`TextToSpeech Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -30014,11 +30325,15 @@ exports[`TextToSpeech Example Page 1`] = `
                   [
                     {
                       "backgroundColor": {
-                        "windowsbrush": "ButtonBackground",
+                        "windowsbrush": [
+                          "ButtonBackground",
+                        ],
                       },
                       "borderBottomWidth": 1.5,
                       "borderColor": {
-                        "windowsbrush": "ButtonBorderBrush",
+                        "windowsbrush": [
+                          "ButtonBorderBrush",
+                        ],
                       },
                       "borderRadius": 3,
                       "borderWidth": 1,
@@ -30037,7 +30352,9 @@ exports[`TextToSpeech Example Page 1`] = `
                         [
                           {
                             "color": {
-                              "windowsbrush": "ButtonForeground",
+                              "windowsbrush": [
+                                "ButtonForeground",
+                              ],
                             },
                             "fontSize": 14,
                             "fontWeight": "400",
@@ -30083,7 +30400,7 @@ exports[`TextToSpeech Example Page 1`] = `
                 onScrollEndDrag={[Function]}
                 removeClippedSubviews={false}
                 renderItem={[Function]}
-                scrollEventThrottle={50}
+                scrollEventThrottle={0.0001}
                 stickyHeaderIndices={[]}
                 style={{}}
                 viewabilityConfigCallbackPairs={[]}
@@ -30347,7 +30664,9 @@ exports[`TouchableHighlight Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -30398,7 +30717,9 @@ exports[`TouchableHighlight Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -30482,7 +30803,9 @@ exports[`TouchableHighlight Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -30493,7 +30816,9 @@ exports[`TouchableHighlight Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -30584,7 +30909,9 @@ exports[`TouchableHighlight Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -31339,7 +31666,9 @@ exports[`TouchableHighlight Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -31351,7 +31680,9 @@ exports[`TouchableHighlight Example Page 1`] = `
                   style={
                     {
                       "color": {
-                        "windowsbrush": "SystemChromeWhiteColor",
+                        "windowsbrush": [
+                          "SystemChromeWhiteColor",
+                        ],
                       },
                     }
                   }
@@ -31852,7 +32183,9 @@ exports[`TouchableOpacity Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -31903,7 +32236,9 @@ exports[`TouchableOpacity Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -31987,7 +32322,9 @@ exports[`TouchableOpacity Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -31998,7 +32335,9 @@ exports[`TouchableOpacity Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -32099,7 +32438,9 @@ exports[`TouchableOpacity Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -32934,7 +33275,9 @@ exports[`TouchableOpacity Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -33368,7 +33711,9 @@ exports[`TouchableOpacity Example Page 1`] = `
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -33802,7 +34147,9 @@ activeOpacity={
                   {
                     "alignItems": "center",
                     "backgroundColor": {
-                      "windowsbrush": "SystemColorButtonFaceColor",
+                      "windowsbrush": [
+                        "SystemColorButtonFaceColor",
+                      ],
                     },
                     "borderRadius": 3,
                     "height": 40,
@@ -34385,7 +34732,9 @@ exports[`View Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -34436,7 +34785,9 @@ exports[`View Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -34505,7 +34856,9 @@ exports[`View Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -34565,7 +34918,9 @@ exports[`View Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -34576,7 +34931,9 @@ exports[`View Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57611}
@@ -38053,7 +38410,9 @@ exports[`WebView Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -38104,7 +38463,9 @@ exports[`WebView Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -38173,7 +38534,9 @@ exports[`WebView Example Page 1`] = `
               },
               {
                 "backgroundColor": {
-                  "windowsbrush": "SystemColorHighlightTextColor",
+                  "windowsbrush": [
+                    "SystemColorHighlightTextColor",
+                  ],
                 },
               },
             ]
@@ -38233,7 +38596,9 @@ exports[`WebView Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -38244,7 +38609,9 @@ exports[`WebView Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
@@ -38326,11 +38693,6 @@ exports[`WebView Example Page 1`] = `
                   onLoadingStart={[Function]}
                   onMessage={[Function]}
                   onShouldStartLoadWithRequest={[Function]}
-                  source={
-                    {
-                      "uri": "https://github.com/microsoft/react-native-gallery",
-                    }
-                  }
                   style={
                     [
                       {
@@ -38494,11 +38856,6 @@ exports[`WebView Example Page 1`] = `
                   onLoadingStart={[Function]}
                   onMessage={[Function]}
                   onShouldStartLoadWithRequest={[Function]}
-                  source={
-                    {
-                      "uri": "https://github.com/microsoft/react-native-gallery",
-                    }
-                  }
                   style={
                     [
                       {
@@ -38789,7 +39146,9 @@ exports[`Xaml Example Page 1`] = `
     style={
       {
         "backgroundColor": {
-          "windowsbrush": "NavigationViewDefaultPaneBackground",
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
         },
         "height": "100%",
         "paddingBottom": 20,
@@ -38840,7 +39199,9 @@ exports[`Xaml Example Page 1`] = `
           style={
             {
               "color": {
-                "windowsbrush": "TextControlForeground",
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
               },
               "fontFamily": "Segoe MDL2 Assets",
               "fontSize": 16,
@@ -38924,7 +39285,9 @@ exports[`Xaml Example Page 1`] = `
                 },
                 {
                   "color": {
-                    "windowsbrush": "SystemColorHighlightTextColor",
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
                   },
                 },
               ]
@@ -38935,7 +39298,9 @@ exports[`Xaml Example Page 1`] = `
           <XamlControl
             foreground={
               {
-                "windowsbrush": "SystemColorHighlightTextColor",
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
               }
             }
             symbol={57637}
