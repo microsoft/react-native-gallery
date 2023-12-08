@@ -20,7 +20,7 @@ steps:
   - task: NodeTool@0
     displayName: Installing Node
     inputs:
-      versionSpec: '16.x'
+      versionSpec: '18.x'
 
   - task: CmdLine@2
     displayName: Installing Yarm
