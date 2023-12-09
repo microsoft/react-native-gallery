@@ -5258,7 +5258,7 @@ exports[`Expander Example Page 1`] = `
                       undefined,
                     ]
                   }
-                  timeZoneOffsetInSeconds={-28800}
+                  timeZoneOffsetInSeconds={-0}
                 />
               </ExpanderView>
             </View>
