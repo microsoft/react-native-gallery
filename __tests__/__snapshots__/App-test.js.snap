@@ -31679,11 +31679,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemChromeWhiteColor",
-                        ],
-                      },
+                      "color": "rgb(28, 28, 30)",
                     }
                   }
                 >
