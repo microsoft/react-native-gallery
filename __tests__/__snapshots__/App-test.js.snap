@@ -5258,7 +5258,7 @@ exports[`Expander Example Page 1`] = `
                       undefined,
                     ]
                   }
-                  timeZoneOffsetInSeconds={-0}
+                  timeZoneOffsetInSeconds={-28800}
                 />
               </ExpanderView>
             </View>
@@ -31679,11 +31679,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                 <Text
                   style={
                     {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemChromeWhiteColor",
-                        ],
-                      },
+                      "color": "rgb(28, 28, 30)",
                     }
                   }
                 >
