@@ -35,6 +35,7 @@
 *.tsx  text eol=lf
 *.ps1 text eol=lf
 *.yml text eol=lf
+*.patch  text eol=lf
 .editorconfig text eol=lf
 .gitattributes text eol=lf
 package.json text eol=lf

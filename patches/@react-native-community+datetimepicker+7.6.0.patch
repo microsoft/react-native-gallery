@@ -1,0 +1,53 @@
+diff --git a/node_modules/@react-native-community/datetimepicker/windows/DateTimePickerWindows/DateTimePickerWindows.vcxproj b/node_modules/@react-native-community/datetimepicker/windows/DateTimePickerWindows/DateTimePickerWindows.vcxproj
+index f8be8a4..3aaf05d 100644
+--- a/node_modules/@react-native-community/datetimepicker/windows/DateTimePickerWindows/DateTimePickerWindows.vcxproj
++++ b/node_modules/@react-native-community/datetimepicker/windows/DateTimePickerWindows/DateTimePickerWindows.vcxproj
+@@ -15,13 +15,16 @@
+     <AppContainerApplication>true</AppContainerApplication>
+     <ApplicationType>Windows Store</ApplicationType>
+     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+-    <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
+-    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+   </PropertyGroup>
+-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Label="ReactNativeWindowsProps">
+-    <ReactNativeWindowsDir Condition="'$(ReactNativeWindowsDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(SolutionDir), 'node_modules\react-native-windows\package.json'))\node_modules\react-native-windows\</ReactNativeWindowsDir>
++    <ReactNativeWindowsDir Condition="'$(ReactNativeWindowsDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\react-native-windows\package.json'))\node_modules\react-native-windows\</ReactNativeWindowsDir>
++  </PropertyGroup>
++  <Import Project="$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.WindowsSdk.Default.props" Condition="Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.WindowsSdk.Default.props')" />
++  <PropertyGroup Label="Fallback Windows SDK Versions">
++   <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
++   <WindowsTargetPlatformMinVersion Condition=" '$(WindowsTargetPlatformMinVersion)' == '' ">10.0.17763.0</WindowsTargetPlatformMinVersion>
+   </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|ARM">
+       <Configuration>Debug</Configuration>
+@@ -58,7 +61,7 @@
+   </ItemGroup>
+   <PropertyGroup Label="Configuration">
+     <ConfigurationType>DynamicLibrary</ConfigurationType>
+-    <PlatformToolset>v142</PlatformToolset>
++    <PlatformToolset>v143</PlatformToolset>
+     <CharacterSet>Unicode</CharacterSet>
+     <GenerateManifest>false</GenerateManifest>
+   </PropertyGroup>
+@@ -75,8 +78,7 @@
+   <ImportGroup Label="ExtensionSettings">
+   </ImportGroup>
+   <ImportGroup Label="Shared">
+-    <Import Project="..\..\..\..\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems" Label="Shared" Condition="Exists('..\..\..\..\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems')" />
+-    <Import Project="..\..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems" Label="Shared" Condition="Exists('..\..\node_modules\react-native-windows\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems')" />
++    <Import Project="$(ReactNativeWindowsDir)\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems" Label="Shared" Condition="Exists('$(ReactNativeWindowsDir)\Microsoft.ReactNative.Cxx\Microsoft.ReactNative.Cxx.vcxitems')" />
+   </ImportGroup>
+   <ImportGroup Label="PropertySheets">
+     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+@@ -169,7 +171,7 @@
+     </Text>
+   </ItemGroup>
+   <ItemGroup>
+-    <ProjectReference Include="..\..\..\..\react-native-windows\Microsoft.ReactNative\Microsoft.ReactNative.vcxproj" Condition="Exists('..\..\..\..\react-native-windows\Microsoft.ReactNative\Microsoft.ReactNative.vcxproj')">
++    <ProjectReference Include="$(ReactNativeWindowsDir)\Microsoft.ReactNative\Microsoft.ReactNative.vcxproj" Condition="Exists('$(ReactNativeWindowsDir)\Microsoft.ReactNative\Microsoft.ReactNative.vcxproj')">
+       <Project>{f7d32bd0-2749-483e-9a0d-1635ef7e3136}</Project>
+       <Private>false</Private>
+     </ProjectReference>
