@@ -6,7 +6,7 @@ import {Page} from '../components/Page';
 // import {useTheme} from '@react-navigation/native';
 
 export const ViewExamplePage: React.FunctionComponent<{}> = () => {
-//   const {colors} = useTheme();
+  //   const {colors} = useTheme();
 
   const example1jsx = '<View />';
   const example2jsx = `<View
@@ -178,10 +178,18 @@ style={{
             width: 100,
           }}>
           <View
-            style={{flex: 1, backgroundColor: 'rgb(52, 122, 226)', borderRadius: 2}}
+            style={{
+              flex: 1,
+              backgroundColor: 'rgb(52, 122, 226)',
+              borderRadius: 2,
+            }}
           />
           <View
-            style={{flex: 2, backgroundColor: 'rgb(52, 122, 226)', borderRadius: 2}}
+            style={{
+              flex: 2,
+              backgroundColor: 'rgb(52, 122, 226)',
+              borderRadius: 2,
+            }}
           />
         </View>
       </Example>

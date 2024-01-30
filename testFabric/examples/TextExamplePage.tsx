@@ -6,7 +6,7 @@ import {Page} from '../components/Page';
 // import {useTheme} from '@react-navigation/native';
 
 export const TextExamplePage: React.FunctionComponent<{}> = () => {
-//   const {colors} = useTheme();
+  //   const {colors} = useTheme();
 
   const example1jsx = '<Text>Here is a line of text.</Text>';
   const example2jsx = `<Text style={{fontWeight: '600', fontStyle: 'italic'}}>
@@ -77,7 +77,11 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
       </Example>
       <Example title="A line of bolded and italicized Text." code={example2jsx}>
         <Text
-          style={{fontWeight: '600', fontStyle: 'italic', color: 'rgb(28, 28, 30)'}}>
+          style={{
+            fontWeight: '600',
+            fontStyle: 'italic',
+            color: 'rgb(28, 28, 30)',
+          }}>
           Here is a line of bold and italicized text.
         </Text>
       </Example>

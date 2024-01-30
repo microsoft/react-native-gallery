@@ -7,7 +7,7 @@ import {Page} from '../components/Page';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
-//   const {colors} = useTheme();
+  //   const {colors} = useTheme();
 
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(false);

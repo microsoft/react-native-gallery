@@ -6,7 +6,7 @@ import {Page} from '../components/Page';
 // import {useTheme} from '@react-navigation/native';
 
 export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
-//   const {colors} = useTheme();
+  //   const {colors} = useTheme();
   const example1jsx = `<ScrollView style={{height: 40}}>
   <Text>
     Here is a very long snippet of text. The goal is for this text to be

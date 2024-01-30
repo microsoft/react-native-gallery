@@ -1,12 +1,7 @@
 import React from 'react';
-import type {
-  StyleProp,
-  ImageStyle,
-  TextStyle,
-  ViewStyle
-} from 'react-native';
-import { PlatformColor } from 'react-native';
-import { StyleSheet } from 'react-native';
+import type {StyleProp, ImageStyle, TextStyle, ViewStyle} from 'react-native';
+import {PlatformColor} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const StylesContext = React.createContext<{
   appContent: StyleProp<ViewStyle>;
@@ -110,7 +105,7 @@ const CreateStyles = (isDarkMode: boolean) => {
       backgroundColor: isDarkMode ? '#292929' : '#FFFFFF',
       padding: 12,
       borderRadius: 8,
-      minWidth: 300
+      minWidth: 300,
     },
     dialogButtons: {
       marginTop: 12,
@@ -127,17 +122,17 @@ const CreateStyles = (isDarkMode: boolean) => {
       color: isDarkMode ? 'black' : 'white',
     },
     hyperlinkIdle: {
-      color: PlatformColor("HyperlinkButtonForeground"),
+      color: PlatformColor('HyperlinkButtonForeground'),
       textDecorationLine: 'underline',
     },
     hyperlinkPressing: {
-      color: PlatformColor("HyperlinkButtonForegroundPressed"),
+      color: PlatformColor('HyperlinkButtonForegroundPressed'),
     },
     hyperlinkHovering: {
-      color: PlatformColor("HyperlinkButtonForegroundPointerOver"),
+      color: PlatformColor('HyperlinkButtonForegroundPointerOver'),
       textDecorationLine: 'underline',
     },
   });
-}
+};
 
-export { StylesContext, CreateStyles };
+export {StylesContext, CreateStyles};

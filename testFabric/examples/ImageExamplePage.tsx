@@ -6,7 +6,7 @@ import {Page} from '../components/Page';
 // import {useTheme} from '@react-navigation/native';
 
 export const ImageExamplePage: React.FunctionComponent<{}> = () => {
-//   const {colors} = useTheme();
+  //   const {colors} = useTheme();
 
   const example1jsx = `<Image
   style={{width: 50, height: 50}}

@@ -128,7 +128,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A disabled TextInput with colored placeholder text."
         code={example4jsx}>
         <TextInput
-          style={{borderColor:'silver', borderWidth: 1}}
+          style={{borderColor: 'silver', borderWidth: 1}}
           onChangeText={onChangeText4}
           value={text4}
           editable={false}

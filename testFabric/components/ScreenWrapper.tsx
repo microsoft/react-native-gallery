@@ -59,7 +59,8 @@ export function ScreenWrapper({children}) {
         }}
         /*onPress={() => {
           navigation.dispatch(DrawerActions.openDrawer());
-        }}*/>
+        }}*/
+      >
         <View>
           <TouchableHighlight
             accessibilityRole="button"

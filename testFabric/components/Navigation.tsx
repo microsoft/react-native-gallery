@@ -1,22 +1,17 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
-import type { PropsWithChildren } from 'react';
-
+import {View, Text} from 'react-native';
+import type {PropsWithChildren} from 'react';
 
 //import {NavigationContainer} from '@react-navigation/native';
 //import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-
 type NavigationContextType = {
-  push: (screen: string, parameters : any, navigateFrom: string) => void,
-  pop: () => void,
-  currentScreen: string,
-  routes: any[],
-  parameters: any,
-}
+  push: (screen: string, parameters: any, navigateFrom: string) => void;
+  pop: () => void;
+  currentScreen: string;
+  routes: any[];
+  parameters: any;
+};
 const NavigationContext = React.createContext<NavigationContextType>({
   push: () => {},
   pop: () => {},
@@ -25,18 +20,18 @@ const NavigationContext = React.createContext<NavigationContextType>({
   parameters: [],
 });
 
-
 type RouteType = {
-  name: string,
-  key: string,
-  params: any,
-}
-
+  name: string;
+  key: string;
+  params: any;
+};
 
 type NavigationContainerProps = PropsWithChildren<{}>;
 const NavigationContainer = ({children}: NavigationContainerProps) => {
   const [currentScreen, setCurrentScreen] = useState('Home');
-  const [routes, setRoutes] = useState<RouteType[]>([{name: 'Home', key: 'Home', params: {}}]);
+  const [routes, setRoutes] = useState<RouteType[]>([
+    {name: 'Home', key: 'Home', params: {}},
+  ]);
   const [parameters, setParameters] = useState({} as any);
   const navigationContext = {
     push: (screen: string, parameters: any, navigateFrom: string) => {
@@ -54,7 +49,7 @@ const NavigationContainer = ({children}: NavigationContainerProps) => {
     currentScreen: currentScreen,
     routes: routes,
     parameters: parameters,
-  }
+  };
   return (
     <NavigationContext.Provider value={navigationContext}>
       {children}
@@ -62,13 +57,11 @@ const NavigationContainer = ({children}: NavigationContainerProps) => {
   );
 };
 
-
 type StackNavigatorProps = PropsWithChildren<{
-    initialRouteName?: string;
+  initialRouteName?: string;
 }>;
 const StackNavigator = ({children, initialRouteName}: StackNavigatorProps) => {
   const navigationContext = React.useContext(NavigationContext);
-
 
   return (
     <View>
@@ -83,26 +76,42 @@ const StackNavigator = ({children, initialRouteName}: StackNavigatorProps) => {
   );
 };
 
-
 type StackScreenProps = PropsWithChildren<{
-    name: string,
-    component: ({ navigation, route }: { navigation: any; route: any; }) => JSX.Element,
-    options: ({navigation}: {navigation: any}) => any,
+  name: string;
+  component: ({
+    navigation,
+    route,
+  }: {
+    navigation: any;
+    route: any;
+  }) => JSX.Element;
+  options: ({navigation}: {navigation: any}) => any;
 }>;
-const StackScreen = ({children, name, component, options}: StackScreenProps) => {
+const StackScreen = ({
+  children,
+  name,
+  component,
+  options,
+}: StackScreenProps) => {
   const navigationContext = React.useContext(NavigationContext);
 
-
-  let myRoute = navigationContext.routes.find((route) => route.name === name);
-
+  let myRoute = navigationContext.routes.find(route => route.name === name);
 
   const navigation = {
     params: navigationContext.parameters ?? myRoute.parameters,
-    push: (screen, parameters) => {navigationContext.push(screen, parameters, name)},
-    pop: () => {navigationContext.pop()},
-    getState: () => {return {routes: navigationContext.routes, params: navigationContext.parameters}}
+    push: (screen, parameters) => {
+      navigationContext.push(screen, parameters, name);
+    },
+    pop: () => {
+      navigationContext.pop();
+    },
+    getState: () => {
+      return {
+        routes: navigationContext.routes,
+        params: navigationContext.parameters,
+      };
+    },
   };
-
 
   let header = null;
   if (options) {
@@ -110,7 +119,6 @@ const StackScreen = ({children, name, component, options}: StackScreenProps) => 
     header = optionsResult.header();
   }
   const content = component({navigation: navigation, route: navigation});
-
 
   return (
     <View>
@@ -120,11 +128,13 @@ const StackScreen = ({children, name, component, options}: StackScreenProps) => 
   );
 };
 
-
 const createNativeStackNavigator = () => {
-    return {}
+  return {};
 };
 
-
-export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator };
-
+export {
+  NavigationContainer,
+  StackNavigator,
+  StackScreen,
+  createNativeStackNavigator,
+};
