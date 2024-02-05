@@ -10,9 +10,10 @@ import {ScrollViewExamplePage} from './examples/ScrollViewExample';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {ActivityIndicatorExample} from './examples/ActivityIndicatorExamplePage';
+import { HomePage } from './HomePage';
 
 // import {useTheme} from '@react-navigation/native';
 
 export const App: React.FunctionComponent<{}> = () => {
-  return <ActivityIndicatorExample />;
+  return <HomePage />;
 };
