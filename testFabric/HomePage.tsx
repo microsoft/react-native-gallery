@@ -62,7 +62,7 @@ const createStyles = () =>
     );
   };
 
-  const HomeComponentTile = (props: {index: number}) => {
+  const HomeComponentTile = (props: {index: number; navigation: any}) => {
     const styles = createStyles();
   
     return (
@@ -91,9 +91,9 @@ const createStyles = () =>
             marginBottom: 5,
           },
         ]}
-        /*onPress={() => {
-          props.navigation.navigate(RNGalleryList[props.index].key);
-        }}*/>
+        onPress={() => {
+          props.navigation.push(RNGalleryList[props.index].key)
+        }}>
         <Text style={styles.icon}>{RNGalleryList[props.index].icon}</Text>
         <Text style={[styles.text, {paddingRight: 10}]}>
           {RNGalleryList[props.index].key}
@@ -102,20 +102,21 @@ const createStyles = () =>
     );
   };
 
-  const RenderHomeComponentTiles = (indicies: number[]) => {
+  const RenderHomeComponentTiles = (indicies: number[], navigation: any) => {
     var homeComponentTiles = [];
     for (var i = 0; i < indicies.length; i++) {
       homeComponentTiles.push(
         <HomeComponentTile
           key={indicies[i]}
           index={indicies[i]}
+          navigation={navigation}
         />,
       );
     }
     return homeComponentTiles;
   };
 
-const RenderPageContent = () => {
+const RenderPageContent = ({navigation}) => {
   var components = [];
   for (var i = 0; i < RNGalleryList.length; i++) {
     components.push(i);
@@ -123,7 +124,7 @@ const RenderPageContent = () => {
   return (
     <ScrollView>
       <HomeContainer heading="Components">
-        {RenderHomeComponentTiles(components)}
+        {RenderHomeComponentTiles(components, navigation)}
       </HomeContainer>
     </ScrollView>
   )
@@ -131,7 +132,7 @@ const RenderPageContent = () => {
 }
 
 
-export const HomePage: React.FunctionComponent<{}> = () => {
+export const HomePage: React.FunctionComponent<{navigation: any}> = ({navigation}) => {
     const styles = createStyles()
 
     return (
@@ -144,7 +145,7 @@ export const HomePage: React.FunctionComponent<{}> = () => {
             React Native Gallery is a React Native Windows application which
             displays the range of React Native components with Windows support.
             </Text>
-            <RenderPageContent />
+            <RenderPageContent navigation={navigation} />
           </ScreenWrapper>
         </View>
     )

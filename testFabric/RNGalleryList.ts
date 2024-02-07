@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 // import {HomePage} from './HomePage';
+import { ActivityIndicatorExample } from './examples/ActivityIndicatorExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
@@ -16,6 +17,12 @@ interface IRNGalleryExample {
 }
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
+  {
+    key: 'ActivityIndicator',
+    component: ActivityIndicatorExample,
+    icon: '\uEB9F',
+    type: 'Media',
+  },
   {
     key: 'Image',
     component: ImageExamplePage,
