@@ -15,5 +15,5 @@ import { HomePage } from './HomePage';
 // import {useTheme} from '@react-navigation/native';
 
 export const App: React.FunctionComponent<{}> = () => {
-  return <HomePage />;
+  return <ViewExamplePage />;
 };
