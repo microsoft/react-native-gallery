@@ -8,22 +8,23 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "windows": "react-native run-windows --no-autolink --logging"
+    "windows": "react-native run-windows",
+    "test:windows": "jest --config jest.config.windows.js"
   },
   "dependencies": {
     "lowlight": "^1.17.0",
     "react": "18.2.0",
-    "react-native": "0.73.2",
-    "react-native-windows": "^0.73.4"
+    "react-native": "0.74.0-nightly-20231201-c30f2b620",
+    "react-native-windows": "0.0.0-canary.761"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@react-native/babel-preset": "0.73.19",
-    "@react-native/eslint-config": "0.73.2",
-    "@react-native/metro-config": "0.73.3",
-    "@react-native/typescript-config": "0.73.1",
+    "@react-native/babel-preset": "0.74.0-nightly-20231201-c30f2b620",
+    "@react-native/eslint-config": "0.74.0-nightly-20231201-c30f2b620",
+    "@react-native/metro-config": "0.74.0-nightly-20231201-c30f2b620",
+    "@react-native/typescript-config": "0.74.0-nightly-20231201-c30f2b620",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
@@ -31,7 +32,8 @@
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "@rnx-kit/jest-preset": "^0.1.16"
   },
   "engines": {
     "node": ">=18"
