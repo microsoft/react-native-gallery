@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
-import type {PropsWithChildren} from 'react';
+import type {PropsWithChildren, ReactNode} from 'react';
 
 //import {NavigationContainer} from '@react-navigation/native';
 //import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -80,11 +80,9 @@ type StackScreenProps = PropsWithChildren<{
   name: string;
   component: ({
     navigation,
-    route,
   }: {
     navigation: any;
-    route: any;
-  }) => JSX.Element;
+  }) => ReactNode;
   options: ({navigation}: {navigation: any}) => any;
 }>;
 const StackScreen = ({
