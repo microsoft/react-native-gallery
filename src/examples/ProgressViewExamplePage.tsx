@@ -31,7 +31,7 @@ export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
       <Example
         title="A simple ProgressView with 50% progress."
         code={example1jsx}>
-        <ProgressView accessibilityLabel='Simple ProgressView' progress={0.5} />
+        <ProgressView accessibilityLabel="Simple ProgressView" progress={0.5} />
       </Example>
       <Example title="An indeterminate ProgressView." code={example2jsx}>
         <ProgressView
@@ -43,7 +43,7 @@ export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
         title="A colored ProgressView with 70% progress."
         code={example3jsx}>
         <ProgressView
-          accessibilityLabel='Colored ProgressView'
+          accessibilityLabel="Colored ProgressView"
           progressTintColor={colors.primary}
           trackTintColor={colors.border}
           progress={0.7}
