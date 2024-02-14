@@ -31,6 +31,11 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const view3Ref: React.RefObject<View> = React.createRef<View>();
   const view4Ref: React.RefObject<View> = React.createRef<View>();
 
+  const buttonRef: React.RefObject<Button> = React.createRef<Button>();
+  const button2Ref: React.RefObject<Button> = React.createRef<Button>();
+  const button3Ref: React.RefObject<Button> = React.createRef<Button>();
+  const button4Ref: React.RefObject<Button> = React.createRef<Button>();
+
   useEffect(() => {
     setTimeout(setFocus, 50);
   });
@@ -195,6 +200,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             setShowPopup1(true);
           }}
           activeOpacity={0.2}
+          ref={buttonRef}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
@@ -228,6 +234,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               }
               onPress={() => {
                 setShowPopup1(false);
+                buttonRef.current?.focus();
               }}
             />
           </View>
@@ -257,6 +264,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             setShowPopup2(true);
           }}
           activeOpacity={0.2}
+          ref={button2Ref}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
@@ -293,6 +301,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               }
               onPress={() => {
                 setShowPopup2(false);
+                button2Ref.current?.focus();
               }}
             />
           </View>
@@ -318,6 +327,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             setShowPopup3(true);
           }}
           activeOpacity={0.2}
+          ref={button3Ref}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
@@ -355,6 +365,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               }
               onPress={() => {
                 setShowPopup3(false);
+                button3Ref.current?.focus();
               }}
             />
           </View>
@@ -384,6 +395,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             setShowPopup4(true);
           }}
           activeOpacity={0.2}
+          ref={button4Ref}
           underlayColor={colors.border}>
           <Text style={{color: colors.text}}>Open Popup</Text>
         </TouchableHighlight>
@@ -419,6 +431,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
               }
               onPress={() => {
                 setShowPopup4(false);
+                button4Ref.current?.focus();
               }}
             />
           </View>
