@@ -48,6 +48,10 @@ const createStyles = () =>
       paddingRight: 10,
       paddingLeft: 10,
     },
+    disabledButton: {
+      color: '#007AFF',
+      opacity: 0.5,
+    }
   });
 
   const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
@@ -89,11 +93,15 @@ const createStyles = () =>
             flexDirection: 'row',
             marginRight: 5,
             marginBottom: 5,
+            opacity: RNGalleryList[props.index].component ? 1 : 0.5,
           },
         ]}
         onPress={() => {
-          props.navigation.push(RNGalleryList[props.index].key)
-        }}>
+          if (RNGalleryList[props.index].component) {
+            props.navigation.push(RNGalleryList[props.index].key)
+          }
+        }}
+        disabled={!RNGalleryList[props.index].component}>
         <Text style={styles.icon}>{RNGalleryList[props.index].icon}</Text>
         <Text style={[styles.text, {paddingRight: 10}]}>
           {RNGalleryList[props.index].key}
@@ -117,17 +125,55 @@ const createStyles = () =>
   };
 
 const RenderPageContent = ({navigation}) => {
-  var components = [];
+  var basicInput = [];
+  var dateAndTime = [];
+  var dialogsAndFlyouts = [];
+  var layout = [];
+  var text = [];
+  var statusAndInfo = [];
+  var media = [];
   for (var i = 0; i < RNGalleryList.length; i++) {
-    components.push(i);
+    if (RNGalleryList[i].type === 'Basic Input') {
+      basicInput.push(i);
+    } else if (RNGalleryList[i].type === 'Date and Time') {
+      dateAndTime.push(i);
+    } else if (RNGalleryList[i].type === 'Dialogs and Flyouts') {
+      dialogsAndFlyouts.push(i);
+    } else if (RNGalleryList[i].type === 'Layout') {
+      layout.push(i);
+    } else if (RNGalleryList[i].type === 'Text') {
+      text.push(i);
+    } else if (RNGalleryList[i].type === 'Status and Info') {
+      statusAndInfo.push(i);
+    } else if (RNGalleryList[i].type === 'Media') {
+      media.push(i);
+    }
   }
   return (
     <ScrollView>
-      <HomeContainer heading="Components">
-        {RenderHomeComponentTiles(components, navigation)}
+      <HomeContainer heading="Basic Input">
+        {RenderHomeComponentTiles(basicInput, navigation)}
+      </HomeContainer>
+      <HomeContainer heading="Date and Time">
+        {RenderHomeComponentTiles(dateAndTime, navigation)}
+      </HomeContainer>
+      <HomeContainer heading="Dialogs and Flyouts">
+        {RenderHomeComponentTiles(dialogsAndFlyouts, navigation)}
+      </HomeContainer>
+      <HomeContainer heading="Layout">
+        {RenderHomeComponentTiles(layout, navigation)}
+      </HomeContainer>
+      <HomeContainer heading="Text">
+        {RenderHomeComponentTiles(text, navigation)}
+      </HomeContainer>
+      <HomeContainer heading="Status and Info">
+        {RenderHomeComponentTiles(statusAndInfo, navigation)}
+      </HomeContainer>
+      <HomeContainer heading="Media">
+        {RenderHomeComponentTiles(media, navigation)}
       </HomeContainer>
     </ScrollView>
-  )
+  );
 
 }
 
