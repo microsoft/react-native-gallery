@@ -13,6 +13,13 @@ import {ActivityIndicatorExample} from './examples/ActivityIndicatorExamplePage'
 import { HomePage } from './HomePage';
 import {NavigationContainer, createNativeStackNavigator, StackNavigator, StackScreen} from './components/Navigation';
 import { BreadcrumbBar } from './components/BreadcrumbBar';
+import { ButtonExamplePage } from './examples/ButtonExamplePage';
+import { TouchableHighlightExamplePage } from './examples/TouchableHighlightExamplePage';
+import { TouchableOpacityExamplePage } from './examples/TouchableOpacityExamplePage';
+import { TouchableWithoutFeedbackExamplePage } from './examples/TouchableWithoutFeedbackExamplePage';
+import { PressableExamplePage } from './examples/PressableExamplePage';
+import { FlatListExamplePage } from './examples/FlatListExamplePage';
+import { VirtualizedListExamplePage } from './examples/VirtualizedListExamplePage';
 
 
 // import {useTheme} from '@react-navigation/native';
@@ -27,6 +34,16 @@ export const App: React.FunctionComponent<{}> = () => {
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
         />
         <StackScreen
+          name='Button'
+          component={ButtonExamplePage}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
+          name='FlatList'
+          component={FlatListExamplePage}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
           name='View'
           component={ViewExamplePage}
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
@@ -37,8 +54,28 @@ export const App: React.FunctionComponent<{}> = () => {
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
         />
         <StackScreen
+          name='Pressable'
+          component={PressableExamplePage}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
           name='TextInput'
           component={TextInputExamplePage}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
+          name='TouchableHighlight'
+          component={TouchableHighlightExamplePage}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
+          name='TouchableOpacity'
+          component={TouchableOpacityExamplePage}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
+          name='TouchableWithoutFeedback'
+          component={TouchableWithoutFeedbackExamplePage}
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
         />
         <StackScreen
@@ -64,6 +101,11 @@ export const App: React.FunctionComponent<{}> = () => {
         <StackScreen
           name='ActivityIndicator'
           component={ActivityIndicatorExample}
+          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
+        />
+        <StackScreen
+          name='VirtualizedList'
+          component={VirtualizedListExamplePage}
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
         />
       </StackNavigator>
