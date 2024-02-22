@@ -1,13 +1,20 @@
 'use strict';
 import React from 'react';
-import {HomePage} from './HomePage';
+// import {HomePage} from './HomePage';
 import { ActivityIndicatorExample } from './examples/ActivityIndicatorExamplePage';
+import { ButtonExamplePage } from './examples/ButtonExamplePage';
+import { FlatListExamplePage } from './examples/FlatListExamplePage';
+import { PressableExamplePage } from './examples/PressableExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
+import { TouchableHighlightExamplePage } from './examples/TouchableHighlightExamplePage';
+import { TouchableOpacityExamplePage } from './examples/TouchableOpacityExamplePage';
+import { TouchableWithoutFeedbackExamplePage } from './examples/TouchableWithoutFeedbackExamplePage';
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
+import { VirtualizedListExamplePage } from './examples/VirtualizedListExamplePage';
 
 interface IRNGalleryExample {
   key: string;
@@ -17,12 +24,12 @@ interface IRNGalleryExample {
 }
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
-  {
-    key: 'Home',
-    component: HomePage,
-    icon: '\uE80F',
-    type: '',
-  },
+  // {
+  //   key: 'Home',
+  //   component: HomePage,
+  //   icon: '\uE80F',
+  //   type: '',
+  // },
   {
     key: 'ActivityIndicator',
     component: ActivityIndicatorExample,
@@ -36,6 +43,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   },
   {
     key: 'Button',
+    component: ButtonExamplePage,
     icon: '\uE815',
     type: 'Basic Input',
   },
@@ -65,7 +73,8 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'Layout',
   },
   {
-    key: 'FlatList ',
+    key: 'FlatList',
+    component: FlatListExamplePage,
     icon: '\uE8A4',
     type: 'Layout',
   },
@@ -97,6 +106,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   },
   {
     key: 'Pressable',
+    component: PressableExamplePage,
     icon: '\uE815',
     type: 'Basic Input',
   },
@@ -161,16 +171,19 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   },
   {
     key: 'TouchableHighlight',
+    component: TouchableHighlightExamplePage,
     icon: '\uEDA4',
     type: 'Basic Input',
   },
   {
     key: 'TouchableOpacity',
+    component: TouchableOpacityExamplePage,
     icon: '\uEDA4',
     type: 'Basic Input',
   },
   {
     key: 'TouchableWithoutFeedback',
+    component: TouchableWithoutFeedbackExamplePage,
     icon: '\uEDA4',
     type: 'Basic Input',
   },
@@ -187,7 +200,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   },
   {
     key: 'WebView',
-    component: null,
     icon: '\uE774',
     type: 'Media',
   },
@@ -198,6 +210,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   },
   {
     key: 'VirtualizedList',
+    component: VirtualizedListExamplePage,
     icon: '\uE8A4',
     type: 'Layout',
   },
