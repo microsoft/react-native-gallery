@@ -175,6 +175,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   const [selectedIndex2, setSelectedIndex2] = useState();
   const [selectedSupport, setSelectedSupport] = useState('None');
   const [getList, setList] = useState([]);
+  const [checkboxRefs, setCheckboxRefs] = useState(
+    [] as React.RefObject<TouchableHighlight>[]
+  );
 
   const getItem = (data, index) => ({
     id: Math.random().toString(12).substring(0),
@@ -183,6 +186,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   });
 
   const getItemCount = (data) => 50;
+
+  const createCheckboxRefs = () => {
+    for (let i = 0; i < 50; i++) {
+      setCheckboxRefs([...checkboxRefs, React.createRef<TouchableHighlight>()]);
+    }
+  };
 
   const Item = ({title, index}) => (
     <TouchableHighlight style={styles.item}>
@@ -214,7 +223,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     </TouchableHighlight>
   );
 
-  const Item3CheckBox = ({title, index}) => (
+  const Item3CheckBox = ({title, index, innerRef}) => (
     <TouchableHighlight
       style={getList.includes(index) ? styles.itemSelected : styles.item}
       activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
@@ -222,7 +231,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       onPress={() => {
         onPressSupport({index});
       }}
-      accessibilityLabel={title}>
+      accessibilityLabel={title}
+      ref={innerRef}>
       <View style={styles.item}>
         <CheckBox
           value={getList.includes(index) ? true : false}
@@ -241,11 +251,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     } else if (selectedSupport === 'Single') {
       setSelectedIndex2(index);
     } else if (selectedSupport === 'Multiple') {
+      console.log('selected');
+      console.log(checkboxRefs[0].current?.props);
       if (getList.includes(index)) {
         setList(getList.filter((item) => item !== index));
       } else {
         setList(getList.concat([index]));
       }
+      console.log(checkboxRefs[index]);
+      checkboxRefs[index].current?.focus();
     }
   };
 
@@ -289,8 +303,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   };
 
   const renderItem3 = ({item}) => {
+    if (checkboxRefs.length === 0) {
+      createCheckboxRefs();
+    }
     return selectedSupport === 'Multiple' ? (
-      <Item3CheckBox title={item.title} index={item.index} />
+      <Item3CheckBox
+        title={item.title}
+        index={item.index}
+        innerRef={checkboxRefs[item.index]}
+      />
     ) : (
       <Item3 title={item.title} index={item.index} />
     );
