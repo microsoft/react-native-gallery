@@ -11,7 +11,7 @@ import {
   TouchableHighlight,
   ScrollView,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import CheckBox from '@react-native-community/checkbox';
@@ -175,9 +175,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   const [selectedIndex2, setSelectedIndex2] = useState();
   const [selectedSupport, setSelectedSupport] = useState('None');
   const [getList, setList] = useState([]);
-  const [checkboxRefs, setCheckboxRefs] = useState(
-    [] as React.RefObject<TouchableHighlight>[]
-  );
+  const [refs, setRefs] = useState([]);
+  
+  useEffect(() => {
+    console.log(refs.length)
+    while (refs.length < 50) {
+      console.log(refs.length)
+      refs.push(React.createRef<View>())
+    }
+  })
 
   const getItem = (data, index) => ({
     id: Math.random().toString(12).substring(0),
@@ -187,11 +193,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
 
   const getItemCount = (data) => 50;
 
-  const createCheckboxRefs = () => {
-    for (let i = 0; i < 50; i++) {
-      setCheckboxRefs([...checkboxRefs, React.createRef<TouchableHighlight>()]);
-    }
-  };
 
   const Item = ({title, index}) => (
     <TouchableHighlight style={styles.item}>
@@ -200,15 +201,18 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   );
 
   const Item2 = ({title, index}) => (
-    <TouchableHighlight
-      style={index === selectedIndex ? styles.itemSelected : styles.item}
-      activeOpacity={0.6}
-      underlayColor={colors.border}
-      onPress={() => {
-        setSelectedIndex(index);
-      }}>
-      <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
+    <View ref={refs[index]} focusable={true}>
+      <TouchableHighlight
+        style={index === selectedIndex ? styles.itemSelected : styles.item}
+        activeOpacity={0.6}
+        underlayColor={colors.border}
+        onPress={() => {
+          setSelectedIndex(index);
+          refs[index].current?.focus();
+        }}>
+        <Text style={styles.title}>{title}</Text>
+      </TouchableHighlight>
+    </View>
   );
 
   const Item3 = ({title, index}) => (
@@ -223,27 +227,30 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     </TouchableHighlight>
   );
 
-  const Item3CheckBox = ({title, index, innerRef}) => (
-    <TouchableHighlight
-      style={getList.includes(index) ? styles.itemSelected : styles.item}
-      activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
-      underlayColor={selectedSupport === 'None' ? '' : colors.border}
-      onPress={() => {
-        onPressSupport({index});
-      }}
-      accessibilityLabel={title}
-      ref={innerRef}>
-      <View style={styles.item}>
-        <CheckBox
-          value={getList.includes(index) ? true : false}
-          onValueChange={() => {
-            onPressSupport({index});
-          }}
-        />
-        <Text style={styles.title}>{title}</Text>
-      </View>
-    </TouchableHighlight>
-  );
+  const Item3CheckBox = ({title, index}) => {
+    return (
+     <View ref={refs[index]} focusable={true}>
+      <TouchableHighlight
+        style={getList.includes(index) ? styles.itemSelected : styles.item}
+        activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
+        underlayColor={selectedSupport === 'None' ? '' : colors.border}
+        onPress={() => {
+          onPressSupport({index});
+        }}
+        accessibilityLabel={title}>
+        <View style={styles.item}>
+          <CheckBox
+            value={getList.includes(index) ? true : false}
+            onValueChange={() => {
+              onPressSupport({index});
+            }}
+          />
+          <Text style={styles.title}>{title}</Text>
+        </View>
+      </TouchableHighlight>
+     </View> 
+    )
+  };
 
   const onPressSupport = ({index}) => {
     if (selectedSupport === 'None') {
@@ -251,16 +258,13 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     } else if (selectedSupport === 'Single') {
       setSelectedIndex2(index);
     } else if (selectedSupport === 'Multiple') {
-      console.log('selected');
-      console.log(checkboxRefs[0].current?.props);
       if (getList.includes(index)) {
         setList(getList.filter((item) => item !== index));
       } else {
         setList(getList.concat([index]));
       }
-      console.log(checkboxRefs[index]);
-      checkboxRefs[index].current?.focus();
     }
+    refs[index].current?.focus();
   };
 
   const styles = StyleSheet.create({
@@ -303,14 +307,11 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   };
 
   const renderItem3 = ({item}) => {
-    if (checkboxRefs.length === 0) {
-      createCheckboxRefs();
-    }
     return selectedSupport === 'Multiple' ? (
       <Item3CheckBox
         title={item.title}
         index={item.index}
-        innerRef={checkboxRefs[item.index]}
+        innerRef={refs[item.index]}
       />
     ) : (
       <Item3 title={item.title} index={item.index} />
@@ -375,7 +376,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
         title="A VirtualizedList with multiple selection support."
         code={example3jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container}>
+          <View focusable={true} style={styles.container}>
             <VirtualizedList
               data={DATA}
               initialNumToRender={10}
