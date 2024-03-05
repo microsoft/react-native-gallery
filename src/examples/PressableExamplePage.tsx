@@ -103,6 +103,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="A disabled Pressable component." code={example2jsx}>
         <Pressable
+          focusable={false}
           accessibilityRole="button"
           accessibilityLabel={'example disabled pressable'}
           style={{
