@@ -19359,7 +19359,7 @@ exports[`Pressable Example Page 1`] = `
                   }
                 }
                 accessible={true}
-                focusable={true}
+                focusable={false}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
