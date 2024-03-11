@@ -31,6 +31,7 @@ exports[`Button Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -1151,6 +1152,7 @@ exports[`CheckBox Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -2289,6 +2291,7 @@ exports[`Config Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -2923,6 +2926,7 @@ exports[`DeviceInfo Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -3682,6 +3686,7 @@ exports[`Expander Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -6010,6 +6015,7 @@ exports[`FlatList Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -8014,6 +8020,7 @@ exports[`Flyout Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -11149,6 +11156,7 @@ exports[`Hello Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -12367,6 +12375,7 @@ exports[`Image Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -13801,6 +13810,7 @@ exports[`Picker Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -15529,6 +15539,7 @@ exports[`Popup Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -18911,6 +18922,7 @@ exports[`Pressable Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -19165,6 +19177,7 @@ exports[`Pressable Example Page 1`] = `
                   }
                 }
                 accessible={true}
+                disabled={false}
                 focusable={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -19359,6 +19372,7 @@ exports[`Pressable Example Page 1`] = `
                   }
                 }
                 accessible={true}
+                disabled={true}
                 focusable={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -19791,6 +19805,7 @@ exports[`Pressable Example Page 1`] = `
                   }
                 }
                 accessible={true}
+                disabled={false}
                 focusable={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -20338,6 +20353,7 @@ exports[`Pressable Example Page 1`] = `
                   }
                 }
                 accessible={true}
+                disabled={false}
                 focusable={true}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -20911,6 +20927,7 @@ exports[`Print Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -21498,6 +21515,7 @@ exports[`ProgressView Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -22129,6 +22147,7 @@ exports[`ScrollView Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -23672,6 +23691,7 @@ exports[`SensitiveInfo Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -25396,6 +25416,7 @@ exports[`Slider Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -26629,6 +26650,7 @@ exports[`Switch Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -27345,6 +27367,7 @@ exports[`Text Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -28971,6 +28994,7 @@ exports[`TextInput Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -30034,6 +30058,7 @@ exports[`TextToSpeech Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -30647,6 +30672,7 @@ exports[`TouchableHighlight Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -32162,6 +32188,7 @@ exports[`TouchableOpacity Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -34711,6 +34738,7 @@ exports[`View Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -38389,6 +38417,7 @@ exports[`WebView Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -39125,6 +39154,7 @@ exports[`Xaml Example Page 1`] = `
       }
     }
     accessible={true}
+    disabled={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
