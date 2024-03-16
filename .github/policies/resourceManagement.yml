@@ -16,7 +16,7 @@ configuration:
       - isIssue
       - isOpen
       - hasLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author Feedback'
       - hasLabel:
           label: 'Status: no recent activity'
       - noActivitySince:
@@ -31,7 +31,7 @@ configuration:
       - isIssue
       - isOpen
       - hasLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author Feedback'
       - noActivitySince:
           days: 7
       - isNotLabeledWith:
@@ -64,7 +64,7 @@ configuration:
       - isPullRequest
       - isOpen
       - hasLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author Feedback'
       - hasLabel:
           label: 'Status: no recent activity'
       - noActivitySince:
@@ -79,7 +79,7 @@ configuration:
       - isPullRequest
       - isOpen
       - hasLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author Feedback'
       - noActivitySince:
           days: 7
       - isNotLabeledWith:
@@ -96,7 +96,7 @@ configuration:
           action: Opened
       then:
       - addLabel:
-          label: 'Needs: triage :mag:'
+          label: 'Needs: Triage :mag:'
       description: 
     - if:
       - payloadType: Issue_Comment
@@ -105,13 +105,13 @@ configuration:
       - isActivitySender:
           issueAuthor: True
       - hasLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author Feedback'
       - isOpen
       then:
       - addLabel:
-          label: 'Needs: attention :wave:'
+          label: 'Needs: Attention :wave:'
       - removeLabel:
-          label: 'Needs: author feedback'
+          label: 'Needs: Author Feedback'
       description: 
     - if:
       - payloadType: Issues
@@ -133,79 +133,9 @@ configuration:
           label: 'Status: no recent activity'
       description: 
     - if:
-      - payloadType: Pull_Request_Review
-      - isAction:
-          action: Submitted
-      - isReviewState:
-          reviewState: Changes_requested
-      then:
-      - addLabel:
-          label: 'Needs: author feedback'
-      description: 
-    - if:
-      - payloadType: Pull_Request
-      - isActivitySender:
-          issueAuthor: True
-      - not:
-          isAction:
-            action: Closed
-      - hasLabel:
-          label: 'Needs: author feedback'
-      then:
-      - removeLabel:
-          label: 'Needs: author feedback'
-      description: 
-    - if:
-      - payloadType: Issue_Comment
-      - isActivitySender:
-          issueAuthor: True
-      - hasLabel:
-          label: 'Needs: author feedback'
-      then:
-      - removeLabel:
-          label: 'Needs: author feedback'
-      description: 
-    - if:
-      - payloadType: Pull_Request_Review
-      - isActivitySender:
-          issueAuthor: True
-      - hasLabel:
-          label: 'Needs: author feedback'
-      then:
-      - removeLabel:
-          label: 'Needs: author feedback'
-      description: 
-    - if:
-      - payloadType: Pull_Request
-      - not:
-          isAction:
-            action: Closed
-      - hasLabel:
-          label: 'Status: no recent activity'
-      then:
-      - removeLabel:
-          label: 'Status: no recent activity'
-      description: 
-    - if:
-      - payloadType: Issue_Comment
-      - hasLabel:
-          label: 'Status: no recent activity'
-      then:
-      - removeLabel:
-          label: 'Status: no recent activity'
-      description: 
-    - if:
-      - payloadType: Pull_Request_Review
-      - hasLabel:
-          label: 'Status: no recent activity'
-      then:
-      - removeLabel:
-          label: 'Status: no recent activity'
-      description: 
-    - if:
       - payloadType: Pull_Request
       - hasLabel:
-          label: auto merge
+          label: AutoMerge
       then:
       - enableAutoMerge:
           mergeMethod: Squash
@@ -213,9 +143,121 @@ configuration:
     - if:
       - payloadType: Pull_Request
       - labelRemoved:
-          label: auto merge
+          label: AutoMerge
       then:
       - disableAutoMerge
+      description: 
+    - if:
+      - payloadType: Pull_Request
+      - isAction:
+          action: Opened
+      then:
+      - addCodeFlowLink
+      description: 
+    - if:
+      - payloadType: Pull_Request_Review
+      - isAction:
+          action: Submitted
+      - isReviewState:
+          reviewState: Changes_requested
+      then:
+      - addLabel:
+          label: 'Needs: Author feedback'
+      description: 
+    - if:
+      - payloadType: Pull_Request
+      - isActivitySender:
+          issueAuthor: True
+      - not:
+          isAction:
+            action: Closed
+      - hasLabel:
+          label: 'Needs: Author Feedback'
+      then:
+      - removeLabel:
+          label: 'Needs: Author Feedback'
+      description: 
+    - if:
+      - payloadType: Issue_Comment
+      - isActivitySender:
+          issueAuthor: True
+      - hasLabel:
+          label: 'Needs: Author Feedback'
+      then:
+      - removeLabel:
+          label: 'Needs: Author feedback'
+      description: 
+    - if:
+      - payloadType: Pull_Request_Review
+      - isActivitySender:
+          issueAuthor: True
+      - hasLabel:
+          label: 'Needs: Author Feedback'
+      then:
+      - removeLabel:
+          label: 'Needs: Author Feedback'
+      description: 
+    - if:
+      - payloadType: Pull_Request
+      - not:
+          isAction:
+            action: Closed
+      - hasLabel:
+          label: 'Status: no recent activity'
+      then:
+      - removeLabel:
+          label: 'Status: no recent activity'
+      description: 
+    - if:
+      - payloadType: Issue_Comment
+      - hasLabel:
+          label: 'Status: no recent activity'
+      then:
+      - removeLabel:
+          label: 'Status: no recent activity'
+      description: 
+    - if:
+      - payloadType: Pull_Request_Review
+      - hasLabel:
+          label: 'Status: no recent activity'
+      then:
+      - removeLabel:
+          label: 'Status: no recent activity'
+      description: 
+    - if:
+      - payloadType: Issues
+      - labelAdded:
+          label: 'Needs: Environment Info'
+      then:
+      - addReply:
+          reply: >-
+            This issue would benefit from environment info. Please edit your issue report to add this information.
+
+
+            If you are using latest version:
+
+            1. `npx react-native --version`:
+
+            2. `npx react-native run-windows --info`:
+
+
+            Otherwise if `--info` doesn't exist:
+
+            1. `react-native -v`:
+
+            2. `npm ls rnpm-plugin-windows`:
+
+            3. `npm ls react-native-windows`:
+
+            4. `node -v`:
+
+            5. `npm -v`:
+
+            6. `yarn --version`<!-- (if you use Yarn) -->:
+      - addLabel:
+          label: 'Needs: Author Feedback'
+      - removeLabel:
+          label: 'Needs: Triage :mag:'
       description: 
 onFailure: 
 onSuccess: 
