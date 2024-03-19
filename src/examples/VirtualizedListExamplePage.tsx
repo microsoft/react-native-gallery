@@ -11,7 +11,7 @@ import {
   TouchableHighlight,
   ScrollView,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import CheckBox from '@react-native-community/checkbox';
@@ -173,8 +173,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   var DATA: INT[] = [];
   const [selectedIndex, setSelectedIndex] = useState();
   const [selectedIndex2, setSelectedIndex2] = useState();
+  const [currentIndex, setCurrentIndex] = useState();
+  const [currentIndexSelected, setCurrentIndexSelected] = useState(false);
   const [selectedSupport, setSelectedSupport] = useState('None');
   const [getList, setList] = useState([]);
+
+  const itemRefs = useRef({});
 
   const getItem = (data, index) => ({
     id: Math.random().toString(12).substring(0),
@@ -214,8 +218,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     </TouchableHighlight>
   );
 
-  const Item3CheckBox = ({title, index}) => (
+  const Item3CheckBox = ({title, index, innerRef}) => (
     <TouchableHighlight
+      ref={innerRef}
       style={getList.includes(index) ? styles.itemSelected : styles.item}
       activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
       underlayColor={selectedSupport === 'None' ? '' : colors.border}
@@ -241,10 +246,13 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     } else if (selectedSupport === 'Single') {
       setSelectedIndex2(index);
     } else if (selectedSupport === 'Multiple') {
+      setCurrentIndex(index);
       if (getList.includes(index)) {
         setList(getList.filter((item) => item !== index));
+        setCurrentIndexSelected(false);
       } else {
         setList(getList.concat([index]));
+        setCurrentIndexSelected(true);
       }
     }
   };
@@ -290,11 +298,23 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
 
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
-      <Item3CheckBox title={item.title} index={item.index} />
+      <Item3CheckBox
+        title={item.title}
+        index={item.index}
+        innerRef={(ref) => {
+          itemRefs.current[item.index] = ref;
+        }}
+      />
     ) : (
       <Item3 title={item.title} index={item.index} />
     );
   };
+
+  useEffect(() => {
+    if (currentIndex && itemRefs.current[currentIndex]) {
+      itemRefs.current[currentIndex].focus();
+    }
+  }, [currentIndex, currentIndexSelected]);
 
   return (
     <Page
