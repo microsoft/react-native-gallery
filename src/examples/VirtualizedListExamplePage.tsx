@@ -174,6 +174,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   const [selectedIndex, setSelectedIndex] = useState();
   const [selectedIndex2, setSelectedIndex2] = useState();
   const [currentIndex, setCurrentIndex] = useState();
+  const [currentIndexSelected, setCurrentIndexSelected] = useState(false);
   const [selectedSupport, setSelectedSupport] = useState('None');
   const [getList, setList] = useState([]);
 
@@ -248,8 +249,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       setCurrentIndex(index);
       if (getList.includes(index)) {
         setList(getList.filter((item) => item !== index));
+        setCurrentIndexSelected(false);
       } else {
         setList(getList.concat([index]));
+        setCurrentIndexSelected(true);
       }
     }
   };
@@ -311,7 +314,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     if (currentIndex && itemRefs.current[currentIndex]) {
       itemRefs.current[currentIndex].focus();
     }
-  }, [currentIndex]);
+  }, [currentIndex, currentIndexSelected]);
 
   return (
     <Page
