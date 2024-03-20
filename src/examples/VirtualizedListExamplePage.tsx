@@ -172,7 +172,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
 
   var DATA: INT[] = [];
   const [selectedIndex, setSelectedIndex] = useState();
-  const [selectedgitIndex2, setSelectedIndex2] = useState();
+  const [selectedIndex2, setSelectedIndex2] = useState();
   const [selectedSupport, setSelectedSupport] = useState('None');
   const [getList, setList] = useState([]);
 
