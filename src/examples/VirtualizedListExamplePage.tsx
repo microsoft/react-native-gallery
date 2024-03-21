@@ -184,71 +184,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
 
   const getItemCount = (data) => 50;
 
-  const Item = ({title, index}) => (
-    <TouchableHighlight style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
-  );
-
-  const Item2 = ({title, index}) => (
-    <TouchableHighlight
-      style={index === selectedIndex ? styles.itemSelected : styles.item}
-      activeOpacity={0.6}
-      underlayColor={colors.border}
-      onPress={() => {
-        setSelectedIndex(index);
-      }}>
-      <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
-  );
-
-  const Item3 = ({title, index}) => (
-    <TouchableHighlight
-      style={index === selectedIndex2 ? styles.itemSelected : styles.item}
-      activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
-      underlayColor={selectedSupport === 'None' ? '' : colors.border}
-      onPress={() => {
-        onPressSupport({index});
-      }}>
-      <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
-  );
-
-  const Item3CheckBox = ({title, index}) => (
-    <TouchableHighlight
-      style={getList.includes(index) ? styles.itemSelected : styles.item}
-      activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
-      underlayColor={selectedSupport === 'None' ? '' : colors.border}
-      onPress={() => {
-        onPressSupport({index});
-      }}
-      accessibilityLabel={title}>
-      <View style={styles.item}>
-        <CheckBox
-          value={getList.includes(index) ? true : false}
-          onValueChange={() => {
-            onPressSupport({index});
-          }}
-        />
-        <Text style={styles.title}>{title}</Text>
-      </View>
-    </TouchableHighlight>
-  );
-
-  const onPressSupport = ({index}) => {
-    if (selectedSupport === 'None') {
-      return;
-    } else if (selectedSupport === 'Single') {
-      setSelectedIndex2(index);
-    } else if (selectedSupport === 'Multiple') {
-      if (getList.includes(index)) {
-        setList(getList.filter((item) => item !== index));
-      } else {
-        setList(getList.concat([index]));
-      }
-    }
-  };
-
   const styles = StyleSheet.create({
     container: {
       height: 300,
@@ -281,18 +216,67 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   });
 
   const renderItem = ({item}) => {
-    return <Item title={item.title} index={item.index} />;
+    return (
+      <TouchableHighlight style={styles.item}>
+        <Text style={styles.title}>{item.title}</Text>
+      </TouchableHighlight>
+    );
   };
 
   const renderItem2 = ({item}) => {
-    return <Item2 title={item.title} index={item.index} />;
+    return (
+      <TouchableHighlight
+        style={item.index === selectedIndex ? styles.itemSelected : styles.item}
+        activeOpacity={0.6}
+        underlayColor={colors.border}
+        onPress={() => {
+          setSelectedIndex(item.index);
+        }}>
+        <Text style={styles.title}>{item.title}</Text>
+      </TouchableHighlight>
+    );
   };
 
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
-      <Item3CheckBox title={item.title} index={item.index} />
+      <TouchableHighlight
+        style={getList.includes(item.index) ? styles.itemSelected : styles.item}
+        activeOpacity={0.6}
+        underlayColor={colors.border}
+        onPress={() => {
+          if (getList.includes(item.index)) {
+            setList(getList.filter((value) => value !== item.index));
+          } else {
+            setList(getList.concat([item.index]));
+          }
+        }}
+        accessibilityLabel={item.title}>
+        <View style={styles.item}>
+          <CheckBox
+            value={getList.includes(item.index) ? true : false}
+            onValueChange={() => {
+              if (getList.includes(item.index)) {
+                setList(getList.filter((value) => value !== item.index));
+              } else {
+                setList(getList.concat([item.index]));
+              }
+            }}
+          />
+          <Text style={styles.title}>{item.title}</Text>
+        </View>
+      </TouchableHighlight>
     ) : (
-      <Item3 title={item.title} index={item.index} />
+      <TouchableHighlight
+        style={
+          item.index === selectedIndex2 ? styles.itemSelected : styles.item
+        }
+        activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
+        underlayColor={selectedSupport === 'None' ? '' : colors.border}
+        onPress={() => {
+          setSelectedIndex2(item.index);
+        }}>
+        <Text style={styles.title}>{item.title}</Text>
+      </TouchableHighlight>
     );
   };
 
