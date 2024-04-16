@@ -62,7 +62,7 @@ const SettingContainer = (props: {
   );
 };
 
-export const SettingsPage: React.FunctionComponent<{}> = (props) => {
+export const SettingsPage: React.FunctionComponent<{}> = () => {
   //const theme = React.useContext(RawThemeContext);
   //const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();

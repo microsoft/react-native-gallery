@@ -35,7 +35,7 @@ import {WindowsHelloExamplePage} from '../src/examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
 import {View} from 'react-native';
 
-function Control(props) {
+function Control() {
   return <View />;
 }
 

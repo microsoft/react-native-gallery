@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
 
 function RenderDrawerItem(props, i: number) {
   const isDrawerOpen =
-    getDrawerStatusFromState(props.navigation.getState()) == 'open';
+    getDrawerStatusFromState(props.navigation.getState()) === 'open';
   return (
     <DrawerItem
       importantForAccessibility={isDrawerOpen ? 'auto' : 'no-hide-descendants'}
@@ -90,7 +90,7 @@ function RenderDrawer(props) {
 
 function CustomDrawerContent(props) {
   const isDrawerOpen =
-    getDrawerStatusFromState(props.navigation.getState()) == 'open';
+    getDrawerStatusFromState(props.navigation.getState()) === 'open';
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
@@ -173,7 +173,7 @@ function MyDrawer() {
   );
 }
 
-export default function App(props) {
+export default function App() {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
