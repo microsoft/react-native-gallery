@@ -44,6 +44,7 @@ let RNGalleryCategories = [
   'Layout',
   'Status and Info',
   'Media',
+  'Text',
   'System',
 ];
 
