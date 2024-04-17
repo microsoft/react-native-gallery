@@ -3,11 +3,9 @@ import {Button, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
 
 export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
   const [title, setTitle] = useState(0);
-  const {colors} = useTheme();
 
   const example1jsx = '<Button title="Button" onPress={() => {}} />';
   const example2jsx =

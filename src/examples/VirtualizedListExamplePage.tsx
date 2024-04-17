@@ -1,17 +1,13 @@
 'use strict';
 import {
-  SafeAreaView,
   View,
   VirtualizedList,
   StyleSheet,
   Text,
-  StatusBar,
-  Button,
-  Pressable,
   TouchableHighlight,
   ScrollView,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import CheckBox from '@react-native-community/checkbox';
@@ -182,7 +178,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     index: index,
   });
 
-  const getItemCount = (data) => 50;
+  const getItemCount = () => 50;
 
   const styles = StyleSheet.create({
     container: {
