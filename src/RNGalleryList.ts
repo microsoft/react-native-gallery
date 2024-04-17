@@ -4,6 +4,7 @@ import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
+import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
 import {ConfigExamplePage} from './examples/ConfigExamplePage';
 import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
@@ -36,6 +37,16 @@ import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 
+let RNGalleryCategories = [
+  'Basic Input',
+  'Date and Time',
+  'Dialogs and Flyouts',
+  'Layout',
+  'Status and Info',
+  'Media',
+  'System',
+];
+
 interface IRNGalleryExample {
   key: string;
   component: React.ElementType;
@@ -67,6 +78,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: CheckBoxExamplePage,
     icon: '\uE73A',
     type: 'Basic Input',
+  },
+  {
+    key: 'Clipboard',
+    component: ClipboardExamplePage,
+    icon: '\uE8C8',
+    type: 'System',
   },
   {
     key: 'Config',
@@ -257,3 +274,4 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
 ];
 
 export default RNGalleryList;
+export {RNGalleryCategories};
