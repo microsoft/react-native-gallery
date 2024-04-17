@@ -2260,6 +2260,914 @@ exports[`CheckBox Example Page 1`] = `
 </View>
 `;
 
+exports[`Clipboard Example Page 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessibilityLabel="Navigation bar"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    disabled={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": {
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
+        },
+        "height": "100%",
+        "paddingBottom": 20,
+        "width": 48,
+      }
+    }
+  >
+    <View>
+      <View
+        accessibilityLabel="Navigation bar hamburger icon"
+        accessibilityRole="button"
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderRadius": 3,
+            "height": 34,
+            "justifyContent": "center",
+            "margin": 5,
+            "width": 38,
+          }
+        }
+        tooltip="Expand Menu"
+      >
+        <Text
+          style={
+            {
+              "color": {
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
+              },
+              "fontFamily": "Segoe MDL2 Assets",
+              "fontSize": 16,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "alignSelf": "stretch",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "height": "100%",
+        "paddingLeft": 15,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+          "marginTop": 44,
+          "paddingRight": 20,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="header"
+        accessible={true}
+        style={
+          [
+            {
+              "fontSize": 26,
+              "fontWeight": "200",
+            },
+            {
+              "color": "rgb(28, 28, 30)",
+            },
+          ]
+        }
+      >
+        Clipboard
+      </Text>
+      <View>
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "borderRadius": 3,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "margin": 2,
+                "paddingBottom": 5,
+                "paddingLeft": 10,
+                "paddingRight": 10,
+                "paddingTop": 5,
+              },
+              {
+                "backgroundColor": "rgb(28, 28, 30)",
+              },
+            ]
+          }
+          tooltip="This component is not a part of React Native core. The package for this component must be explicitly added in order to have access to this component in a React Native project."
+        >
+          <Text
+            style={
+              [
+                {
+                  "fontSize": 15,
+                  "fontWeight": "400",
+                  "paddingRight": 4,
+                },
+                {
+                  "color": {
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
+                  },
+                },
+              ]
+            }
+          >
+            Community Module
+          </Text>
+          <XamlControl
+            foreground={
+              {
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
+              }
+            }
+            symbol={57637}
+            type="Windows.UI.Xaml.Controls.SymbolIcon"
+          />
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "paddingRight": 20,
+          },
+          {
+            "color": "rgb(28, 28, 30)",
+          },
+        ]
+      }
+    >
+      Copy and paste to and from the system Clipboard.
+    </Text>
+    <RCTScrollView
+      style={
+        {
+          "paddingRight": 20,
+        }
+      }
+    >
+      <View>
+        <View>
+          <Text
+            accessibilityRole="header"
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+                "marginTop": 30,
+              }
+            }
+          >
+            Copy text to the Clipboard.
+          </Text>
+          <View
+            style={
+              {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderRadius": 2,
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "padding": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "flex-start",
+                    "gap": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    [
+                      {
+                        "backgroundColor": {
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
+                        },
+                        "borderBottomWidth": 1.5,
+                        "borderColor": {
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
+                        },
+                        "borderRadius": 3,
+                        "borderWidth": 1,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={{}}
+                  >
+                    <View
+                      style={{}}
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": {
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
+                              },
+                              "fontSize": 14,
+                              "fontWeight": "400",
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                          ]
+                        }
+                      >
+                        Copy text to the Clipboard
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <TextInput
+                  onChangeText={[Function]}
+                  value="This text will be copied to the clipboard"
+                />
+              </View>
+            </View>
+            <View
+              style={
+                {
+                  "borderColor": "rgb(216, 216, 216)",
+                  "borderTopWidth": 1,
+                  "borderWidth": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "#E6E6E6",
+                    "flexGrow": 1,
+                    "padding": 5,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    {
+                      "color": "#000000",
+                      "fontFamily": "Consolas",
+                    }
+                  }
+                >
+                  <Text>
+                    &lt;Button
+  title=
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "Copy text to the Clipboard"
+                    </Text>
+                  </Text>
+                  <Text>
+                    
+  onPress={
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text>
+                      () =&gt;
+                    </Text>
+                  </Text>
+                  <Text>
+                     Clipboard.setString(textToCopy)}/&gt;
+                  </Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text
+            accessibilityRole="header"
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+                "marginTop": 30,
+              }
+            }
+          >
+            Paste text from the Clipboard.
+          </Text>
+          <View
+            style={
+              {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderRadius": 2,
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "padding": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "flex-start",
+                    "gap": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    [
+                      {
+                        "backgroundColor": {
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
+                        },
+                        "borderBottomWidth": 1.5,
+                        "borderColor": {
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
+                        },
+                        "borderRadius": 3,
+                        "borderWidth": 1,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={{}}
+                  >
+                    <View
+                      style={{}}
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": {
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
+                              },
+                              "fontSize": 14,
+                              "fontWeight": "400",
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                          ]
+                        }
+                      >
+                        Paste text from the Clipboard
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <Text />
+              </View>
+            </View>
+            <View
+              style={
+                {
+                  "borderColor": "rgb(216, 216, 216)",
+                  "borderTopWidth": 1,
+                  "borderWidth": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "#E6E6E6",
+                    "flexGrow": 1,
+                    "padding": 5,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    {
+                      "color": "#000000",
+                      "fontFamily": "Consolas",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     getClipboardText = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      async
+                    </Text>
+                  </Text>
+                  <Text>
+                     () =&gt; {
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     text = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      await
+                    </Text>
+                  </Text>
+                  <Text>
+                     Clipboard.getString();
+  setTextFromClipboard(text);
+};
+  
+
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Button
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+  
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          title
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "Paste text from the Clipboard"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+  
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onPress
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {()
+                        </Text>
+                      </Text>
+                      <Text>
+                         =&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                       getClipboardText()}/&gt;
+                    </Text>
+                  </Text>
+                  <Text>
+                    
+
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      {textFromClipboard}
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+              "marginRight": 90,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "marginBottom": 10,
+                  "marginRight": 30,
+                  "marginTop": 30,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                style={
+                  {
+                    "color": "rgb(28, 28, 30)",
+                    "fontSize": 20,
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                View page code on Github
+              </Text>
+              <XamlControl
+                content={
+                  {
+                    "string": "Source Code",
+                  }
+                }
+                navigateUri="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ClipboardExamplePage.tsx"
+                type="Windows.UI.Xaml.Controls.HyperlinkButton"
+              />
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "marginBottom": 10,
+                  "marginRight": 30,
+                  "marginTop": 30,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                style={
+                  {
+                    "color": "rgb(28, 28, 30)",
+                    "fontSize": 20,
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                Feedback
+              </Text>
+              <XamlControl
+                content={
+                  {
+                    "string": "Send feedback about this page",
+                  }
+                }
+                navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
+                type="Windows.UI.Xaml.Controls.HyperlinkButton"
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "flex-start",
+                "marginBottom": 10,
+                "marginRight": 30,
+                "marginTop": 30,
+              }
+            }
+          >
+            <Text
+              accessibilityRole="header"
+              style={
+                {
+                  "color": "rgb(28, 28, 30)",
+                  "fontSize": 20,
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Documentation
+            </Text>
+            <XamlControl
+              content={
+                {
+                  "string": "Clipboard",
+                }
+              }
+              navigateUri="https://github.com/react-native-clipboard/clipboard"
+              type="Windows.UI.Xaml.Controls.HyperlinkButton"
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`Config Example Page 1`] = `
 <View
   style={
