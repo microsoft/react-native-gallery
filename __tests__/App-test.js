@@ -14,6 +14,7 @@ import {ScrollViewExamplePage} from '../src/examples/ScrollViewExample';
 import {PopupExamplePage} from '../src/examples/PopupExamplePage';
 import {FlyoutExamplePage} from '../src/examples/FlyoutExamplePage';
 import {CheckBoxExamplePage} from '../src/examples/CheckBoxExamplePage';
+import {ClipboardExamplePage} from '../src/examples/ClipboardExamplePage';
 import {ConfigExamplePage} from '../src/examples/ConfigExamplePage';
 import {DatePickerExamplePage} from '../src/examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from '../src/examples/TimePickerExamplePage';
@@ -50,6 +51,11 @@ test('Button Example Page', () => {
 
 test('CheckBox Example Page', () => {
   const tree = create(<CheckBoxExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('Clipboard Example Page', () => {
+  const tree = create(<ClipboardExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

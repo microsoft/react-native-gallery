@@ -7,6 +7,9 @@ jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 jest.mock('react-native-device-info', () =>
   require('react-native-device-info/jest/react-native-device-info-mock'),
 );
+jest.mock('@react-native-clipboard/clipboard', () =>
+  require('@react-native-clipboard/clipboard/jest/clipboard-mock'),
+);
 
 process.env.NODE_ENV = 'test';
 

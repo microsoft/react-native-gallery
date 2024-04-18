@@ -2,7 +2,7 @@
 import {StyleSheet, View, Text, Pressable} from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from '@react-navigation/native';
-import RNGalleryList from './RNGalleryList';
+import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScrollView} from 'react-native';
 import {ScreenWrapper} from './components/ScreenWrapper';
 
@@ -122,53 +122,24 @@ const RenderHomeComponentTiles = (indicies: number[], navigation) => {
 };
 
 const RenderPageContent = ({navigation}) => {
-  var basicInput = [];
-  var dateAndTime = [];
-  var dialogsAndFlyouts = [];
-  var layout = [];
-  var text = [];
-  var statusAndInfo = [];
-  var media = [];
-  for (var i = 0; i < RNGalleryList.length; i++) {
-    if (RNGalleryList[i].type === 'Basic Input') {
-      basicInput.push(i);
-    } else if (RNGalleryList[i].type === 'Date and Time') {
-      dateAndTime.push(i);
-    } else if (RNGalleryList[i].type === 'Dialogs and Flyouts') {
-      dialogsAndFlyouts.push(i);
-    } else if (RNGalleryList[i].type === 'Layout') {
-      layout.push(i);
-    } else if (RNGalleryList[i].type === 'Text') {
-      text.push(i);
-    } else if (RNGalleryList[i].type === 'Status and Info') {
-      statusAndInfo.push(i);
-    } else if (RNGalleryList[i].type === 'Media') {
-      media.push(i);
-    }
-  }
+  let categoryMap = new Map();
+  RNGalleryCategories.forEach((category) => {
+    categoryMap.set(category, []);
+  });
+
+  RNGalleryList.forEach((item, index) => {
+    let category = item.type;
+    let categoryList = categoryMap.get(category);
+    categoryList?.push(index);
+  });
+
   return (
     <ScrollView>
-      <HomeContainer heading="Basic Input">
-        {RenderHomeComponentTiles(basicInput, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Date and Time">
-        {RenderHomeComponentTiles(dateAndTime, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Dialogs and Flyouts">
-        {RenderHomeComponentTiles(dialogsAndFlyouts, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Layout">
-        {RenderHomeComponentTiles(layout, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Text">
-        {RenderHomeComponentTiles(text, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Status and Info">
-        {RenderHomeComponentTiles(statusAndInfo, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Media">
-        {RenderHomeComponentTiles(media, navigation)}
-      </HomeContainer>
+      {RNGalleryCategories.map((category) => (
+        <HomeContainer key={category} heading={category}>
+          {RenderHomeComponentTiles(categoryMap.get(category), navigation)}
+        </HomeContainer>
+      ))}
     </ScrollView>
   );
 };
