@@ -4,9 +4,9 @@ import {
   StyleSheet,
   TouchableHighlight,
   Text,
+  PlatformColor,
   Pressable,
 } from 'react-native';
-import {PlatformColor} from 'react-native';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
 
 const styles = StyleSheet.create({
@@ -14,13 +14,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     height: '100%',
+    backgroundColor: PlatformColor('SolidBackgroundFillColorBaseBrush'),
+  },
+  navBar: {
+    backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+    width: 48,
+    height: '100%',
+    paddingBottom: 20,
   },
   navItem: {
     flexGrow: 1,
     flexShrink: 1,
     height: '100%',
     alignSelf: 'stretch',
-    paddingLeft: 15,
+    borderTopLeftRadius: 8,
+    borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+    borderLeftWidth: 1,
+  },
+  insetNavItem: {
+    paddingLeft: 36,
   },
   menu: {
     margin: 5,
@@ -37,8 +49,13 @@ const styles = StyleSheet.create({
   },
 });
 
-// @ts-ignore
-export function ScreenWrapper({children}) {
+type ScreenWrapperProps = React.PropsWithChildren<{
+  doNotInset?: boolean;
+}>;
+export function ScreenWrapper({
+  children,
+  doNotInset,
+}: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
 
   return (
@@ -51,12 +68,7 @@ export function ScreenWrapper({children}) {
         /*accessibilityState={{
           expanded: useIsDrawerOpen(),
         }}*/
-        style={{
-          backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-          width: 48,
-          height: '100%',
-          paddingBottom: 20,
-        }}
+        style={styles.navBar}
         onPress={() => {
           navigation.dispatch(DrawerActions.openDrawer());
         }}>
@@ -76,7 +88,9 @@ export function ScreenWrapper({children}) {
           </TouchableHighlight>
         </View>
       </Pressable>
-      <View style={styles.navItem}>{children}</View>
+      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
+        {children}
+      </View>
     </View>
   );
 }
