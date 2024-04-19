@@ -4,6 +4,7 @@ exports[`Button Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -118,13 +119,24 @@ exports[`Button Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -1485,6 +1497,7 @@ exports[`CheckBox Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -1599,13 +1612,24 @@ exports[`CheckBox Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -4432,6 +4456,7 @@ exports[`Config Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -4546,13 +4571,24 @@ exports[`Config Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -5157,6 +5193,7 @@ exports[`DeviceInfo Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -5271,13 +5308,24 @@ exports[`DeviceInfo Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -6187,6 +6235,7 @@ exports[`Expander Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -6301,13 +6350,24 @@ exports[`Expander Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -8966,6 +9026,7 @@ exports[`FlatList Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -9080,13 +9141,24 @@ exports[`FlatList Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -11421,6 +11493,7 @@ exports[`Flyout Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -11535,13 +11608,24 @@ exports[`Flyout Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -14917,6 +15001,7 @@ exports[`Hello Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -15031,13 +15116,24 @@ exports[`Hello Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -16406,6 +16502,7 @@ exports[`Image Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -16520,13 +16617,24 @@ exports[`Image Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -18291,6 +18399,7 @@ exports[`Picker Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -18405,13 +18514,24 @@ exports[`Picker Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -20290,6 +20410,7 @@ exports[`Popup Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -20404,13 +20525,24 @@ exports[`Popup Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -24033,6 +24165,7 @@ exports[`Pressable Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -24147,13 +24280,24 @@ exports[`Pressable Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -26398,6 +26542,7 @@ exports[`Print Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -26512,13 +26657,24 @@ exports[`Print Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -27076,6 +27232,7 @@ exports[`ProgressView Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -27190,13 +27347,24 @@ exports[`ProgressView Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -27978,6 +28146,7 @@ exports[`ScrollView Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -28092,13 +28261,24 @@ exports[`ScrollView Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -29882,6 +30062,7 @@ exports[`SensitiveInfo Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -29996,13 +30177,24 @@ exports[`SensitiveInfo Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -31697,6 +31889,7 @@ exports[`Slider Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -31811,13 +32004,24 @@ exports[`Slider Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -33291,6 +33495,7 @@ exports[`Switch Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -33405,13 +33610,24 @@ exports[`Switch Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -34278,6 +34494,7 @@ exports[`Text Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -34392,13 +34609,24 @@ exports[`Text Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -36625,6 +36853,7 @@ exports[`TextInput Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -36739,13 +36968,24 @@ exports[`TextInput Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -38049,6 +38289,7 @@ exports[`TextToSpeech Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -38163,13 +38404,24 @@ exports[`TextToSpeech Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -38753,6 +39005,7 @@ exports[`TouchableHighlight Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -38867,13 +39120,24 @@ exports[`TouchableHighlight Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -40539,6 +40803,7 @@ exports[`TouchableOpacity Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -40653,13 +40918,24 @@ exports[`TouchableOpacity Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -43539,6 +43815,7 @@ exports[`View Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -43653,13 +43930,24 @@ exports[`View Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -48028,6 +48316,7 @@ exports[`WebView Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -48142,13 +48431,24 @@ exports[`WebView Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -48945,6 +49245,7 @@ exports[`Xaml Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -49059,13 +49360,24 @@ exports[`Xaml Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
