@@ -3368,6 +3368,7 @@ exports[`Clipboard Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -3482,13 +3483,24 @@ exports[`Clipboard Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
