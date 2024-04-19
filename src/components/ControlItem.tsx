@@ -15,8 +15,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
       backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
-      borderColor:
-        isPressing
+      borderColor: isPressing
         ? PlatformColor('TextFillColorSecondaryBrush')
         : isHovered
         ? PlatformColor('ControlStrokeColorSecondary')
@@ -46,8 +45,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
     controlItemTitle: {
       // BodyStrongTextBlockStyle
       fontWeight: '600', // SemiBold
-      color:
-        isHovered
+      color: isHovered
         ? PlatformColor('TextFillColorSecondaryBrush')
         : PlatformColor('TextFillColorPrimaryBrush'),
     },
