@@ -6,48 +6,50 @@ import {
   Text,
   PlatformColor,
   Pressable,
+  useColorScheme,
 } from 'react-native';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    width: '100%',
-    height: '100%',
-    backgroundColor: PlatformColor('SolidBackgroundFillColorBaseBrush'),
-  },
-  navBar: {
-    backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-    width: 48,
-    height: '100%',
-    paddingBottom: 20,
-  },
-  navItem: {
-    flexGrow: 1,
-    flexShrink: 1,
-    height: '100%',
-    alignSelf: 'stretch',
-    borderTopLeftRadius: 8,
-    borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
-    borderLeftWidth: 1,
-  },
-  insetNavItem: {
-    paddingLeft: 36,
-  },
-  menu: {
-    margin: 5,
-    height: 34,
-    width: 38,
-    borderRadius: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  icon: {
-    fontFamily: 'Segoe MDL2 Assets',
-    fontSize: 16,
-    color: PlatformColor('TextControlForeground'),
-  },
-});
+const createStyles = (colorScheme) =>
+  StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      width: '100%',
+      height: '100%',
+      backgroundColor: colorScheme === 'light' ? '#f9f9f9' : '#262626',
+    },
+    navBar: {
+      backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+      width: 48,
+      height: '100%',
+      paddingBottom: 20,
+    },
+    navItem: {
+      flexGrow: 1,
+      flexShrink: 1,
+      height: '100%',
+      alignSelf: 'stretch',
+      borderTopLeftRadius: 8,
+      borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+      borderLeftWidth: 1,
+    },
+    insetNavItem: {
+      paddingLeft: 36,
+    },
+    menu: {
+      margin: 5,
+      height: 34,
+      width: 38,
+      borderRadius: 3,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    icon: {
+      fontFamily: 'Segoe MDL2 Assets',
+      fontSize: 16,
+      color: PlatformColor('TextControlForeground'),
+    },
+  });
 
 type ScreenWrapperProps = React.PropsWithChildren<{
   doNotInset?: boolean;
@@ -57,6 +59,8 @@ export function ScreenWrapper({
   doNotInset,
 }: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
+  const colorScheme = useColorScheme();
+  const styles = createStyles(colorScheme);
 
   return (
     <View style={styles.container}>

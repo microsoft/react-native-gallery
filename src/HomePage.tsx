@@ -114,7 +114,7 @@ const PageTitle = () => {
         colors={
           colorScheme === 'light'
             ? ['#f9f9f900', '#f9f9f9FF']
-            : ['#2C2C2C00', '#2C2C2CFF']
+            : ['#26262600', '#262626FF']
         }
         style={styles.heroGradient}
       />
