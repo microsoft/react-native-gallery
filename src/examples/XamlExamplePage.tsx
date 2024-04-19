@@ -27,8 +27,8 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
   );
   const [selectedRadioButton, setSelectedRadioButton] = useState('1');
   const onRadioButtonSelected = (event) => {
-    setSelectedRadioButton(event.nativeEvent?.sender.tag)
-  }
+    setSelectedRadioButton(event.nativeEvent?.sender.tag);
+  };
 
   const example1jsx = '<TextBlock text="I am a XAML TextBlock." />';
   const example2jsx =
@@ -82,11 +82,10 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
     <FontIcon glyph="&#xE790;" />
   </NavigationViewItem>
 </NavigationView>`;
-const example9jsx = `
-const [selectedRadioButton, setSelectedRadioButton] = useState('1');
+  const example9jsx = `const [selectedRadioButton, setSelectedRadioButton] = useState('1');
 const onRadioButtonSelected = (event) => {
-  setSelectedRadioButton(event.nativeEvent?.sender.tag)
-}
+  setSelectedRadioButton(event.nativeEvent?.sender.tag);
+};
 
 <View>
   <RadioButton content="Option 1" tag="1" isChecked={true} onChecked={onRadioButtonSelected}/>
@@ -131,9 +130,22 @@ const onRadioButtonSelected = (event) => {
       <Example title="A simple XAML radio group." code={example9jsx}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View>
-            <RadioButton content="Option 1" tag="1" isChecked={true} onChecked={onRadioButtonSelected}/>
-            <RadioButton content="Option 2" tag="2" onChecked={onRadioButtonSelected}/>
-            <RadioButton content="Option 3" tag="3" onChecked={onRadioButtonSelected}/>
+            <RadioButton
+              content="Option 1"
+              tag="1"
+              isChecked={true}
+              onChecked={onRadioButtonSelected}
+            />
+            <RadioButton
+              content="Option 2"
+              tag="2"
+              onChecked={onRadioButtonSelected}
+            />
+            <RadioButton
+              content="Option 3"
+              tag="3"
+              onChecked={onRadioButtonSelected}
+            />
           </View>
           <Text>{`Output:
 You selected Option ${selectedRadioButton}`}</Text>
