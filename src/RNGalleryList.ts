@@ -36,6 +36,7 @@ import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
+import {WinRTExamplePage} from './examples/WinRTExamplePage';
 
 let RNGalleryCategories = [
   'Basic Input',
@@ -264,6 +265,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'VirtualizedList',
     component: VirtualizedListExamplePage,
     icon: '\uE8A4',
+    type: 'Layout',
+  },
+  {
+    key: 'WinRT',
+    component: WinRTExamplePage,
+    icon: '\uEF15',
     type: 'Layout',
   },
   {
