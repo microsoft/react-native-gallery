@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 
-type PagingButtonProps = {left: boolean, onPress: () => void};
+type PagingButtonProps = {left: boolean; onPress: () => void};
 const PagingButton = ({left, onPress}: PagingButtonProps) => {
   const [hover, setHover] = useState(false);
 
@@ -21,7 +21,7 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
 
   return (
     <Pressable
-      accessibilityRole='button'
+      accessibilityRole="button"
       accessibilityLabel={tooltip}
       tooltip={tooltip}
       onPress={() => onPress()}
@@ -47,16 +47,19 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
           style={{
             width: 16,
             height: 16,
-          }}/>
+          }}
+        />
       </View>
     </Pressable>
   );
 };
 
 type HorizontalListWithPageNavigationProps<ItemT> = FlatListProps<ItemT> & {
-  spacing?: number,
+  spacing?: number;
 };
-const HorizontalListWithPageNavigation = (props: HorizontalListWithPageNavigationProps<JSX.Element>): JSX.Element => {
+const HorizontalListWithPageNavigation = (
+  props: HorizontalListWithPageNavigationProps<JSX.Element>,
+): JSX.Element => {
   const listRef = React.useRef<FlatList>(null);
   const [scrollLeftTarget, setScrollLeftTarget] = React.useState(-1);
   const [scrollRightTarget, setScrollRightTarget] = React.useState(-1);
@@ -80,7 +83,7 @@ const HorizontalListWithPageNavigation = (props: HorizontalListWithPageNavigatio
 
   return (
     <View>
-      {canScrollLeft &&
+      {canScrollLeft && (
         <View
           style={{
             position: 'absolute',
@@ -100,8 +103,8 @@ const HorizontalListWithPageNavigation = (props: HorizontalListWithPageNavigatio
             }}
           />
         </View>
-      }
-      {canScrollRight &&
+      )}
+      {canScrollRight && (
         <View
           style={{
             position: 'absolute',
@@ -121,7 +124,7 @@ const HorizontalListWithPageNavigation = (props: HorizontalListWithPageNavigatio
             }}
           />
         </View>
-      }
+      )}
       <FlatList
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
         showsHorizontalScrollIndicator={false}

@@ -10,20 +10,17 @@ import {
 } from 'react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import {useTheme} from '@react-navigation/native';
 import {PathIcon, FontIcon} from 'react-native-xaml';
 import {HorizontalListWithPageNavigation} from './PageScroller';
 
-const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
+const createStyles = (isHovered: boolean, _isPressing: boolean) =>
   StyleSheet.create({
     headerTile: {
       // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HeaderTile.xaml#L12
-      backgroundColor:
-        isHovered
+      backgroundColor: isHovered
         ? PlatformColor('ControlOnImageFillColorSecondaryBrush')
         : PlatformColor('AcrylicInAppFillColorDefaultBrush'),
-      borderColor:
-        isHovered
+      borderColor: isHovered
         ? PlatformColor('ControlStrokeColorSecondary')
         : PlatformColor('SurfaceStrokeColorFlyoutBrush'),
       borderWidth: 1,
@@ -68,10 +65,9 @@ type HeaderTileType = PropsWithChildren<{
   link: string;
 }>;
 const HeaderTile = (props: HeaderTileType): JSX.Element => {
-  const {colors} = useTheme();
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressing, setIsPressing] = React.useState(false);
-  const styles = createStyles(colors, isHovered, isPressing);
+  const styles = createStyles(isHovered, isPressing);
 
   const openInNewWindowIcon = '\uE8A7';
   return (
@@ -91,9 +87,6 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
 };
 
 const TileGallery = () => {
-  const {colors} = useTheme();
-  const styles = createStyles(colors);
-
   const items = [
     <HeaderTile
       title="Getting started"
