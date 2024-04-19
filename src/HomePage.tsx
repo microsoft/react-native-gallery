@@ -1,10 +1,10 @@
 'use strict';
-import {StyleSheet, View, Text, Pressable} from 'react-native';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from '@react-navigation/native';
 import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
-import {ScrollView} from 'react-native';
 import {ScreenWrapper} from './components/ScreenWrapper';
+import {HomeComponentTile} from './components/ControlItem';
 
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -48,8 +48,11 @@ const createStyles = (colors: any) =>
     icon: {
       fontFamily: 'Segoe MDL2 Assets',
       fontSize: 16,
-      paddingRight: 10,
-      paddingLeft: 10,
+    },
+    controlItems: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      gap: 12,
     },
   });
 
@@ -66,59 +69,26 @@ const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
   );
 };
 
-const HomeComponentTile = (props: {index: number; navigation}) => {
+const RenderHomeComponentTiles = (indicies: number[], navigation) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
 
-  return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={
-        RNGalleryList[props.index].key === 'Button'
-          ? 'Button1 control'
-          : RNGalleryList[props.index].key + ' control'
-      }
-      accessibilityHint={
-        'click to view the ' + RNGalleryList[props.index].key + ' sample page'
-      }
-      style={({pressed}) => [
-        {
-          backgroundColor: colors.background,
-          borderColor: colors.border,
-          borderWidth: 1,
-          borderBottomWidth: pressed ? 1 : 2,
-          paddingTop: 5,
-          paddingBottom: 5,
-          borderRadius: 4,
-          alignItems: 'center',
-          flexDirection: 'row',
-          marginRight: 5,
-          marginBottom: 5,
-        },
-      ]}
-      onPress={() => {
-        props.navigation.navigate(RNGalleryList[props.index].key);
-      }}>
-      <Text style={styles.icon}>{RNGalleryList[props.index].icon}</Text>
-      <Text style={[styles.text, {paddingRight: 10}]}>
-        {RNGalleryList[props.index].key}
-      </Text>
-    </Pressable>
-  );
-};
-
-const RenderHomeComponentTiles = (indicies: number[], navigation) => {
   var homeComponentTiles = [];
   for (var i = 0; i < indicies.length; i++) {
+    let index = indicies[i];
     homeComponentTiles.push(
       <HomeComponentTile
         key={indicies[i]}
-        index={indicies[i]}
+        pageKey={RNGalleryList[index].key}
+        subtitle={RNGalleryList[index].subtitle}
+        textIcon={RNGalleryList[index].textIcon}
+        imageIcon={RNGalleryList[index].imageIcon}
         navigation={navigation}
       />,
     );
   }
-  return homeComponentTiles;
+
+  return <View style={styles.controlItems}>{homeComponentTiles}</View>;
 };
 
 const RenderPageContent = ({navigation}) => {
