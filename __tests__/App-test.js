@@ -34,6 +34,8 @@ import {XamlExamplePage} from '../src/examples/XamlExamplePage';
 //import {TrackPlayerExamplePage} from '../src/examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from '../src/examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
+// Unable to import: {export * from './types'; SyntaxError: Unexpected token 'export'
+//import {RadioButtonsExamplePage} from '../src/examples/RadioButtonsExamplePage';
 import {View} from 'react-native';
 
 function Control() {
@@ -136,6 +138,11 @@ test('ProgressView Example Page', () => {
   const tree = create(<ProgressViewExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+/*test('Radio Buttons Example Page', () => {
+  const tree = create(<RadioButtonsExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});*/
 
 test('ScrollView Example Page', () => {
   const tree = create(<ScrollViewExamplePage />).toJSON();
