@@ -91,6 +91,10 @@ function RenderDrawer(props) {
 function CustomDrawerContent(props) {
   const isDrawerOpen =
     getDrawerStatusFromState(props.navigation.getState()) === 'open';
+
+  if (!isDrawerOpen) {
+    return <View />;
+  }
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
