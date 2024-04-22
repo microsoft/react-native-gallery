@@ -3320,10 +3320,10 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.22.0.tgz#d7502533a7c96e25baab86bac965468e0703a8b4"
   integrity sha512-CAOgFOKLybd02uj/GhCdEeeBjOS0yeoDeo/CA7ASBSmenpZHAKGB3iDm/rv3BQLcabb/OprDEsSQ1y0P8A7Siw==
 
-"@react-native-clipboard/clipboard@^1.13.2":
-  version "1.13.2"
-  resolved "https://registry.yarnpkg.com/@react-native-clipboard/clipboard/-/clipboard-1.13.2.tgz#28adcfc43ed2addddf79a59198ec1b25087c115e"
-  integrity sha512-uVM55oEGc6a6ZmSATDeTcMm55A/C1km5X47g0xaoF0Zagv7N/8RGvLceA5L/izPwflIy78t7XQeJUcnGSib0nA==
+"@react-native-clipboard/clipboard@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@react-native-clipboard/clipboard/-/clipboard-1.14.0.tgz#ae3b7b59f51b1da1fc6a362244c18ddec113d1f6"
+  integrity sha512-kDLfA6HzP4T+kfGTEGdbsc2r4q0xQALshRQp8Ph/5YD5qT4CZdgkQM3oloKHIdh+AVks+QjtVHK1cZ1xb0Or7w==
 
 "@react-native-community/checkbox@^0.5.16":
   version "0.5.16"

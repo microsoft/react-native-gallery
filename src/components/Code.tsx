@@ -5,7 +5,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {ThemeContext} from '../themes/Theme';
 
 const darkColors = {
-  background: '#1E1E1E',
+  background: 'transparent',
   text: '#9cdcfe',
   comment: '#6a9955',
   keyword: '#c586c0',
@@ -19,7 +19,7 @@ const darkColors = {
 };
 
 const lightColors = {
-  background: '#E6E6E6',
+  background: 'transparent',
   text: '#000000',
   comment: '#000000',
   keyword: '#FF0000',
