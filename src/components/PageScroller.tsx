@@ -17,7 +17,7 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
   const leftImage =
     'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIGNsYXNzPSJzdmdfZGQ3OTBlZTMiIGZvY3VzYWJsZT0iZmFsc2UiPjxwYXRoIGQ9Ik0xNDQzIDIwNDVMNDIxIDEwMjQgMTQ0MyAzbDkwIDkwLTkzMCA5MzEgOTMwIDkzMS05MCA5MHoiLz48L3N2Zz4=';
 
-  const tooltip = left ? 'Previous' : 'Next';
+  const tooltip = left ? 'Scroll left' : 'Scroll right';
 
   return (
     <Pressable
