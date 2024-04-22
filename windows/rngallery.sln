@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWindowsHello", "..\node_modules\react-native-windows-hello\windows\ReactNativeWindowsHello\ReactNativeWindowsHello.vcxproj", "{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinRTTurboModule", "..\node_modules\react-native-winrt\windows\WinRTTurboModule\WinRTTurboModule.vcxproj", "{E13C9C82-0013-422C-945E-848A258AC4DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -375,6 +377,18 @@ Global
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x64.Build.0 = Release|x64
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x86.ActiveCfg = Release|Win32
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x86.Build.0 = Release|Win32
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Debug|ARM64.Build.0 = Debug|ARM64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Debug|x64.ActiveCfg = Debug|x64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Debug|x64.Build.0 = Debug|x64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Debug|x86.ActiveCfg = Debug|Win32
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Debug|x86.Build.0 = Debug|Win32
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Release|ARM64.ActiveCfg = Release|ARM64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Release|ARM64.Build.0 = Release|ARM64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Release|x64.ActiveCfg = Release|x64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Release|x64.Build.0 = Release|x64
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Release|x86.ActiveCfg = Release|Win32
+		{E13C9C82-0013-422C-945E-848A258AC4DB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
