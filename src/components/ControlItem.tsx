@@ -78,7 +78,7 @@ const HomeComponentTile = ({
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7
     <Pressable
-      accessibilityRole="button"
+      accessibilityRole="listitem"
       accessibilityLabel={
         pageKey === 'Button' ? 'Button1 control' : pageKey + ' control'
       }
@@ -92,7 +92,13 @@ const HomeComponentTile = ({
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}>
       {imageIcon ? (
-        <Image source={imageIcon} style={styles.controlItemIcon} />
+        <Image
+          source={imageIcon}
+          style={styles.controlItemIcon}
+          accessible={true}
+          accessibilityRole="image"
+          accessibilityLabel={pageKey}
+        />
       ) : (
         <View>
           <Image

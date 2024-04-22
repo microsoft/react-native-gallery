@@ -60,7 +60,10 @@ const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   return (
-    <View accessibilityLabel={props.heading + 'components'}>
+    <View
+      accessibilityLabel={props.heading + 'components'}
+      accessible={true}
+      accessibilityRole="none">
       <Text accessibilityRole="header" style={styles.heading}>
         {props.heading}
       </Text>
