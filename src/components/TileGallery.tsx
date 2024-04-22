@@ -79,11 +79,14 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}>
+      onHoverOut={() => setIsHovered(false)}
+      accessibilityRole="link">
       <View style={styles.tileIconContent}>{props.children}</View>
       <Text style={styles.tileTitle}>{props.title}</Text>
       <Text style={styles.tileDescription}>{props.description}</Text>
-      <Text style={styles.tileLinkIcon}>{openInNewWindowIcon}</Text>
+      <Text style={styles.tileLinkIcon} accessible={false}>
+        {openInNewWindowIcon}
+      </Text>
     </Pressable>
   );
 };
@@ -95,6 +98,8 @@ const TileGallery = () => {
       description="An overview of app development options, tools, and samples."
       link="https://learn.microsoft.com/windows/apps/get-started/https://aka.ms/reactnative">
       <Image
+        accessible={true}
+        accessibilityRole="image"
         source={require('../../assets/HomeHeaderTiles/Header-WinUIGallery.png')}
         style={{width: 56, height: 56}}
       />
@@ -104,6 +109,8 @@ const TileGallery = () => {
       description="Website for React Native for Desktop."
       link="https://aka.ms/reactnative">
       <Image
+        accessible={true}
+        accessibilityRole="image"
         source={require('../../assets/HomeHeaderTiles/tiny_logo.png')}
         style={{width: 64, height: 64}}
       />
@@ -113,6 +120,8 @@ const TileGallery = () => {
       description="Design guidelines and toolkits for creating native app experiences."
       link="https://learn.microsoft.com/windows/apps/design/">
       <Image
+        accessible={true}
+        accessibilityRole="image"
         source={require('../../assets/HomeHeaderTiles/Header-WindowsDesign.png')}
         style={{width: 64, height: 64}}
       />
@@ -144,6 +153,8 @@ const TileGallery = () => {
       description="Upload your app to the Store."
       link="https://developer.microsoft.com/windows/">
       <Image
+        accessible={true}
+        accessibilityRole="image"
         source={require('../../assets/HomeHeaderTiles/Header-Store.light.png')}
         style={{width: 64, height: 64}}
       />
