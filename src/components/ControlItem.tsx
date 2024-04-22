@@ -70,15 +70,29 @@ const HomeComponentTile = ({
   imageIcon,
   navigation,
 }: HomeComponentTileProps) => {
+  // Comparable WinUI gallery control:
+  // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7
   const {colors} = useTheme();
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressing, setIsPressing] = React.useState(false);
   const styles = createStyles(colors, isHovered, isPressing);
 
+  // Workaround for accessibility label requirements:
+  // 'The Name must not include the same text as the LocalizedControlType.'
+  // The component _is_ the Image component, but that matches the role.
+  // Note that WinUI3 gallery has the same problem. We'll use a workaround
+  // to quiet the toolchain.
+  const imageAccessibilityLabel = pageKey === 'Image' ? 'Bitmap' : pageKey;
+
   return (
-    // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7
+    // accessibilityRole="listitem" would be appropriate here, but two problems:
+    // - It's not in the type information, even though it works
+    // - role="listitem" is not supported by RNW
+    // - While you can get this to show as "list item", then you run afoul of:
+    //   'The element's ControlType requires valid values for SizeOfSet and PositionInSet.'
+    // As a result, sticking with "button"
     <Pressable
-      accessibilityRole="listitem"
+      accessibilityRole="button"
       accessibilityLabel={
         pageKey === 'Button' ? 'Button1 control' : pageKey + ' control'
       }
@@ -97,15 +111,19 @@ const HomeComponentTile = ({
           style={styles.controlItemIcon}
           accessible={true}
           accessibilityRole="image"
-          accessibilityLabel={pageKey}
+          accessibilityLabel={imageAccessibilityLabel}
         />
       ) : (
         <View>
           <Image
             source={require('../../assets/ControlImages/Placeholder.png')}
             style={styles.controlItemIcon}
+            accessible={true}
+            accessibilityRole="image"
+            accessibilityLabel={imageAccessibilityLabel}
           />
           <Text
+            accessible={false}
             style={[
               styles.textIcon,
               {
