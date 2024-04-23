@@ -36,6 +36,7 @@ import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
+import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 
 let RNGalleryCategories = [
   'Basic Input',
@@ -126,6 +127,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Image',
     component: ImageExamplePage,
     icon: '\uEB9F',
+    type: 'Media',
+  },
+  {
+    key: 'Linear Gradient',
+    component: LinearGradientExamplePage,
+    icon: '\uE790',
     type: 'Media',
   },
   {
