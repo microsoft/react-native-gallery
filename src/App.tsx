@@ -91,6 +91,10 @@ function RenderDrawer(props) {
 function CustomDrawerContent(props) {
   const isDrawerOpen =
     getDrawerStatusFromState(props.navigation.getState()) === 'open';
+
+  if (!isDrawerOpen) {
+    return <View />;
+  }
   return (
     <View style={styles.drawer}>
       <TouchableHighlight
@@ -164,9 +168,7 @@ function MyDrawer() {
   let screens = renderScreens();
   return (
     <Drawer.Navigator
-      drawerContent={(props) => (
-        <CustomDrawerContent {...props} drawerType="permanent" />
-      )}
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{headerShown: false}}>
       {screens}
     </Drawer.Navigator>
