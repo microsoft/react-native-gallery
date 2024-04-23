@@ -34,6 +34,7 @@ import {XamlExamplePage} from '../src/examples/XamlExamplePage';
 //import {TrackPlayerExamplePage} from '../src/examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from '../src/examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
+// https://github.com/microsoft/react-native-gallery/issues/420
 // Unable to import: {export * from './types'; SyntaxError: Unexpected token 'export'
 //import {RadioButtonsExamplePage} from '../src/examples/RadioButtonsExamplePage';
 import {View} from 'react-native';
