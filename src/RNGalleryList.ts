@@ -37,15 +37,16 @@ import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 
+// https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
-  'Basic Input',
-  'Date and Time',
-  'Dialogs and Flyouts',
-  'Layout',
-  'Status and Info',
-  'Media',
-  'Text',
-  'System',
+  {label: 'Basic Input', icon: ''},
+  {label: 'Date and Time', icon: ''},
+  {label: 'Dialogs and Flyouts', icon: ''},
+  {label: 'Layout', icon: ''},
+  {label: 'Status and Info', icon: ''},
+  {label: 'Media', icon: ''},
+  {label: 'Text', icon: ''},
+  {label: 'System', icon: ''},
 ];
 
 interface IRNGalleryExample {
