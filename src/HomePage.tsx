@@ -97,7 +97,7 @@ const RenderHomeComponentTiles = (indicies: number[], navigation) => {
 const RenderPageContent = ({navigation}) => {
   let categoryMap = new Map();
   RNGalleryCategories.forEach((category) => {
-    categoryMap.set(category, []);
+    categoryMap.set(category.label, []);
   });
 
   RNGalleryList.forEach((item, index) => {
@@ -109,8 +109,11 @@ const RenderPageContent = ({navigation}) => {
   return (
     <ScrollView>
       {RNGalleryCategories.map((category) => (
-        <HomeContainer key={category} heading={category}>
-          {RenderHomeComponentTiles(categoryMap.get(category), navigation)}
+        <HomeContainer key={category.label} heading={category.label}>
+          {RenderHomeComponentTiles(
+            categoryMap.get(category.label),
+            navigation,
+          )}
         </HomeContainer>
       ))}
     </ScrollView>
