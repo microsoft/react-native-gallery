@@ -203,7 +203,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   {
     key: 'Radio Buttons',
     component: RadioButtonsExamplePage,
-    icon: '\uECCB',
+    textIcon: '\uECCB',
+    imageIcon: require('../assets/ControlImages/RadioButtons.png'),
+    subtitle:
+      'A control that allows the user to select a single option from a group of options.',
     type: 'Basic Input',
   },
   {
