@@ -50171,6 +50171,685 @@ exports[`Xaml Example Page 1`] = `
               }
             }
           >
+            A simple XAML radio group.
+          </Text>
+          <View
+            style={
+              {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderRadius": 8,
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
+                  "padding": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <View>
+                  <XamlControl
+                    content="Option 1"
+                    isChecked={true}
+                    onChecked={[Function]}
+                    tag="1"
+                    type="Windows.UI.Xaml.Controls.RadioButton"
+                  />
+                  <XamlControl
+                    content="Option 2"
+                    onChecked={[Function]}
+                    tag="2"
+                    type="Windows.UI.Xaml.Controls.RadioButton"
+                  />
+                  <XamlControl
+                    content="Option 3"
+                    onChecked={[Function]}
+                    tag="3"
+                    type="Windows.UI.Xaml.Controls.RadioButton"
+                  />
+                </View>
+                <Text>
+                  Output:
+You selected Option 1
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
+                  "borderColor": "rgb(216, 216, 216)",
+                  "borderTopWidth": 1,
+                  "borderWidth": 0,
+                  "padding": 12,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "transparent",
+                    "flexGrow": 1,
+                    "padding": 5,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    {
+                      "color": "#000000",
+                      "fontFamily": "Consolas",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [selectedRadioButton, setSelectedRadioButton] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      '1'
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     onRadioButtonSelected = 
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text>
+                      (
+                    </Text>
+                    <Text
+                      style={{}}
+                    >
+                      <Text>
+                        event
+                      </Text>
+                    </Text>
+                    <Text>
+                      ) =&gt;
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+  setSelectedRadioButton(event.nativeEvent?.sender.tag);
+};
+
+
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+  
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          RadioButton
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          content
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "Option 1"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          tag
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "1"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          isChecked
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {true}
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onChecked
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {onRadioButtonSelected}/
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+  
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          RadioButton
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          content
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "Option 2"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          tag
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "2"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onChecked
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {onRadioButtonSelected}/
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+  
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          RadioButton
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          content
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "Option 3"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          tag
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "3"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onChecked
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {onRadioButtonSelected}/
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                </Text>
+              </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text
+            accessibilityRole="header"
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+                "marginTop": 30,
+              }
+            }
+          >
             A simple ComboBox.
           </Text>
           <View
