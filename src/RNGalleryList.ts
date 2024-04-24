@@ -42,16 +42,16 @@ import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 // https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
   {label: 'Basic Input', icon: ''},
-  {label: 'Collections', icon: ''},
+  {label: 'Collections', icon: ''},
   {label: 'Date & time', icon: ''},
   {label: 'Dialogs & flyouts', icon: ''},
   {label: 'Layout', icon: ''},
   {label: 'Media', icon: ''},
-  {label: 'Scrolling', icon: ''},
+  {label: 'Scrolling', icon: ''},
   {label: 'Status and Info', icon: ''},
   {label: 'Text', icon: ''},
   {label: 'System', icon: ''},
-  {label: 'Legacy', icon: ''},
+  {label: 'Legacy', icon: '\uE711'},
 ];
 
 interface IRNGalleryExample {
