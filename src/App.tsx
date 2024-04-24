@@ -100,13 +100,17 @@ const DrawerListItem = ({
       onPressOut={() => setIsPressed(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}
-      accessibilityRole='button'
+      accessibilityRole="button"
       accessibilityLabel={label}
       style={localStyles.drawerListItem}>
       <View style={styles.indentContainer}>
-        <Text style={styles.icon}>{icon}</Text>
+        <Text accessible={false} style={styles.icon}>
+          {icon}
+        </Text>
       </View>
-      <Text style={styles.drawerText}>{label}</Text>
+      <Text accessible={false} style={styles.drawerText}>
+        {label}
+      </Text>
     </Pressable>
   );
 };
@@ -137,14 +141,20 @@ const DrawerCollapsibleCategory = ({
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
-        accessibilityRole='button'
+        accessibilityRole="button"
         accessibilityLabel={categoryLabel}>
         <View style={styles.indentContainer}>
-          <Text style={styles.icon}>{categoryIcon}</Text>
+          <Text accessible={false} style={styles.icon}>
+            {categoryIcon}
+          </Text>
         </View>
-        <Text style={styles.drawerText}>{categoryLabel}</Text>
+        <Text accessible={false} style={styles.drawerText}>
+          {categoryLabel}
+        </Text>
         <View style={styles.expandedChevron}>
-          <Text style={styles.icon}>{isExpanded ? '\uE971' : '\uE972'}</Text>
+          <Text accessible={false} style={styles.icon}>
+            {isExpanded ? '\uE971' : '\uE972'}
+          </Text>
         </View>
       </Pressable>
       {isExpanded &&
