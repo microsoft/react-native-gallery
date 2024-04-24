@@ -162,14 +162,14 @@ const DrawerCollapsibleCategory = ({
         </View>
       </Pressable>
       {isExpanded &&
-          items.map((item) => (
-            <DrawerListItem
-              key={item.label}
-              route={item.label}
-              label={item.label}
-              navigation={navigation}
-            />
-          ))}
+        items.map((item) => (
+          <DrawerListItem
+            key={item.label}
+            route={item.label}
+            label={item.label}
+            navigation={navigation}
+          />
+        ))}
     </View>
   );
 };
