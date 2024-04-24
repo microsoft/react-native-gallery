@@ -18435,6 +18435,3499 @@ exports[`Image Example Page 1`] = `
 </View>
 `;
 
+exports[`Networking Example Page 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#f9f9f9",
+      "flexDirection": "row",
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessibilityLabel="Navigation bar"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    disabled={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": {
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
+        },
+        "height": "100%",
+        "paddingBottom": 20,
+        "width": 48,
+      }
+    }
+  >
+    <View>
+      <View
+        accessibilityLabel="Navigation bar hamburger icon"
+        accessibilityRole="button"
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderRadius": 3,
+            "height": 34,
+            "justifyContent": "center",
+            "margin": 5,
+            "width": 38,
+          }
+        }
+        tooltip="Expand Menu"
+      >
+        <Text
+          style={
+            {
+              "color": {
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
+              },
+              "fontFamily": "Segoe MDL2 Assets",
+              "fontSize": 16,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+          "marginTop": 44,
+          "paddingRight": 20,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="header"
+        accessible={true}
+        style={
+          [
+            {
+              "fontSize": 26,
+              "fontWeight": "200",
+            },
+            {
+              "color": "rgb(28, 28, 30)",
+            },
+          ]
+        }
+      >
+        Networking
+      </Text>
+      <View>
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "borderRadius": 3,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "margin": 2,
+                "paddingBottom": 5,
+                "paddingLeft": 10,
+                "paddingRight": 10,
+                "paddingTop": 5,
+              },
+              {
+                "backgroundColor": "rgb(0, 122, 255)",
+              },
+            ]
+          }
+          tooltip="This component is a part of React Native Windows core. No additional library must be added in order to have access to this component in a React Native Windows project."
+        >
+          <Text
+            style={
+              [
+                {
+                  "fontSize": 15,
+                  "fontWeight": "400",
+                  "paddingRight": 4,
+                },
+                {
+                  "color": {
+                    "windowsbrush": [
+                      "SystemColorHighlightTextColor",
+                    ],
+                  },
+                },
+              ]
+            }
+          >
+            Core Component
+          </Text>
+          <XamlControl
+            foreground={
+              {
+                "windowsbrush": [
+                  "SystemColorHighlightTextColor",
+                ],
+              }
+            }
+            symbol={57611}
+            type="Windows.UI.Xaml.Controls.SymbolIcon"
+          />
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "paddingRight": 20,
+          },
+          {
+            "color": "rgb(28, 28, 30)",
+          },
+        ]
+      }
+    >
+      Many mobile apps need to load resources from a remote URL. You may want to make a POST request to a REST API, or you may need to fetch a chunk of static content from another server.
+    </Text>
+    <RCTScrollView
+      style={
+        {
+          "paddingRight": 20,
+        }
+      }
+    >
+      <View>
+        <View>
+          <Text
+            accessibilityRole="header"
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+                "marginTop": 30,
+              }
+            }
+          >
+            Fetch Example
+          </Text>
+          <View
+            style={
+              {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderRadius": 8,
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
+                  "padding": 15,
+                }
+              }
+            >
+              <Text>
+                Fetch results from https://reactnative.dev/movies.json
+              </Text>
+              <View>
+                <View>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Raw
+                  </Text>
+                  <Text>
+                    {"title":"The Basics - Networking","description":"Your app fetched this from a remote endpoint!","movies":[{"id":"1","title":"Star Wars","releaseYear":"1977"},{"id":"2","title":"Back to the Future","releaseYear":"1985"},{"id":"3","title":"The Matrix","releaseYear":"1999"},{"id":"4","title":"Inception","releaseYear":"2010"},{"id":"5","title":"Interstellar","releaseYear":"2014"}]}
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Formatted
+                  </Text>
+                  <Text>
+                    Star Wars
+                    , 
+                    1977
+                  </Text>
+                  <Text>
+                    Back to the Future
+                    , 
+                    1985
+                  </Text>
+                  <Text>
+                    The Matrix
+                    , 
+                    1999
+                  </Text>
+                  <Text>
+                    Inception
+                    , 
+                    2010
+                  </Text>
+                  <Text>
+                    Interstellar
+                    , 
+                    2014
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
+                  "borderColor": "rgb(216, 216, 216)",
+                  "borderTopWidth": 1,
+                  "borderWidth": 0,
+                  "padding": 12,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "transparent",
+                    "flexGrow": 1,
+                    "padding": 5,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    {
+                      "color": "#000000",
+                      "fontFamily": "Consolas",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      type
+                    </Text>
+                  </Text>
+                  <Text>
+                     Movie = {
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      id
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      string
+                    </Text>
+                  </Text>
+                  <Text>
+                    ;
+  title: 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      string
+                    </Text>
+                  </Text>
+                  <Text>
+                    ;
+  releaseYear: 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      string
+                    </Text>
+                  </Text>
+                  <Text>
+                    ;
+};
+
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     Movies = 
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text>
+                      () =&gt;
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [isLoading, setLoading] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      true
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [responseText, setResponseText] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      ''
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [data, setData] = useState&lt;Movie[]&gt;([]);
+
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     getMovies = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      async
+                    </Text>
+                  </Text>
+                  <Text>
+                     () =&gt; {
+    
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      try
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+      
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     response = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      await
+                    </Text>
+                  </Text>
+                  <Text>
+                     fetch(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'https://reactnative.dev/movies.json'
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+      
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     json = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      await
+                    </Text>
+                  </Text>
+                  <Text>
+                     response.json();
+      setResponseText(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      JSON
+                    </Text>
+                  </Text>
+                  <Text>
+                    .stringify(json));
+      setData(json.movies);
+    } 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      catch
+                    </Text>
+                  </Text>
+                  <Text>
+                     (error) {
+      
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      console
+                    </Text>
+                  </Text>
+                  <Text>
+                    .error(error);
+    } 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      finally
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+      setLoading(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      false
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+    }
+  };
+
+  useEffect(
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text>
+                      () =&gt;
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+    getMovies();
+  }, []);
+
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      return
+                    </Text>
+                  </Text>
+                  <Text>
+                     (
+    
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+      {isLoading ? 
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          ActivityIndicator
+                        </Text>
+                      </Text>
+                      <Text>
+                        /&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                       :
+        
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+          
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          style
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {{fontWeight:
+                        </Text>
+                      </Text>
+                      <Text>
+                         '
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          bold
+                        </Text>
+                      </Text>
+                      <Text>
+                        '}}&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      Raw
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+          
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      {responseText}
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+
+          
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          style
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {{fontWeight:
+                        </Text>
+                      </Text>
+                      <Text>
+                         '
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          bold
+                        </Text>
+                      </Text>
+                      <Text>
+                        '}}&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      Formatted
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+          {data.map((item) =&gt; (
+            
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          key
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {item.id}
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+              {item.title}, {item.releaseYear}
+            
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+          ))}
+        
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+      }
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text>
+                    
+  );
+};
+                  </Text>
+                </Text>
+              </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text
+            accessibilityRole="header"
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+                "marginTop": 30,
+              }
+            }
+          >
+            POST Example
+          </Text>
+          <View
+            style={
+              {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderRadius": 8,
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
+                  "padding": 15,
+                }
+              }
+            >
+              <Text>
+                POST results from https://api.openai.com/v1/chat/completions
+              </Text>
+              <View>
+                <Text
+                  style={
+                    {
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Inputs
+                </Text>
+                <Text>
+                  Enter a valid OpenAI API key
+                </Text>
+                <TextInput
+                  onChangeText={[Function]}
+                  onSubmitEditing={[Function]}
+                  secureTextEntry={true}
+                  value=""
+                />
+                <Text>
+                  What is your question
+                </Text>
+                <TextInput
+                  onChangeText={[Function]}
+                  onSubmitEditing={[Function]}
+                  value="What is the meaning of life, as an emoji?"
+                />
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    [
+                      {
+                        "backgroundColor": {
+                          "windowsbrush": [
+                            "ButtonBackground",
+                          ],
+                        },
+                        "borderBottomWidth": 1.5,
+                        "borderColor": {
+                          "windowsbrush": [
+                            "ButtonBorderBrush",
+                          ],
+                        },
+                        "borderRadius": 3,
+                        "borderWidth": 1,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={{}}
+                  >
+                    <View
+                      style={{}}
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": {
+                                "windowsbrush": [
+                                  "ButtonForeground",
+                                ],
+                              },
+                              "fontSize": 14,
+                              "fontWeight": "400",
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                          ]
+                        }
+                      >
+                        Submit
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Raw
+                  </Text>
+                  <Text>
+                    {"title":"The Basics - Networking","description":"Your app fetched this from a remote endpoint!","movies":[{"id":"1","title":"Star Wars","releaseYear":"1977"},{"id":"2","title":"Back to the Future","releaseYear":"1985"},{"id":"3","title":"The Matrix","releaseYear":"1999"},{"id":"4","title":"Inception","releaseYear":"2010"},{"id":"5","title":"Interstellar","releaseYear":"2014"}]}
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Answer
+                  </Text>
+                  <Text />
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
+                  "borderColor": "rgb(216, 216, 216)",
+                  "borderTopWidth": 1,
+                  "borderWidth": 0,
+                  "padding": 12,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "transparent",
+                    "flexGrow": 1,
+                    "padding": 5,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    {
+                      "color": "#000000",
+                      "fontFamily": "Consolas",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [isLoading, setLoading] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      true
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [responseText, setResponseText] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      ''
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [answer, setAnswer] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      ''
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [apiKey, setApiKey] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      ''
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     [prompt, setPrompt] = useState(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'What is the meaning of life, as an emoji?'
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     doRequest = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      async
+                    </Text>
+                  </Text>
+                  <Text>
+                     () =&gt; {
+  
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      try
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+    
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     response = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      await
+                    </Text>
+                  </Text>
+                  <Text>
+                     fetch(
+      
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'https://api.openai.com/v1/chat/completions'
+                    </Text>
+                  </Text>
+                  <Text>
+                    ,
+      {
+        
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      method
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'POST'
+                    </Text>
+                  </Text>
+                  <Text>
+                    ,
+        
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      headers
+                    </Text>
+                  </Text>
+                  <Text>
+                    : {
+          
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      Accept
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'application/json'
+                    </Text>
+                  </Text>
+                  <Text>
+                    ,
+          
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'Authorization'
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      \`Bearer 
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#FF0000",
+                        }
+                      }
+                    >
+                      <Text>
+                        \${apiKey}
+                      </Text>
+                    </Text>
+                    <Text>
+                      \`
+                    </Text>
+                  </Text>
+                  <Text>
+                    ,
+          
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'Content-Type'
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'application/json'
+                    </Text>
+                  </Text>
+                  <Text>
+                    ,
+        },
+        
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      body
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      JSON
+                    </Text>
+                  </Text>
+                  <Text>
+                    .stringify({
+          
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      model
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      'gpt-3.5-turbo'
+                    </Text>
+                  </Text>
+                  <Text>
+                    ,
+          
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      messages
+                    </Text>
+                  </Text>
+                  <Text>
+                    : [
+            {
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "role"
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "system"
+                    </Text>
+                  </Text>
+                  <Text>
+                    , 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "content"
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "You are a helpful assistant."
+                    </Text>
+                  </Text>
+                  <Text>
+                    },
+            {
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "role"
+                    </Text>
+                  </Text>
+                  <Text>
+                    : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "user"
+                    </Text>
+                  </Text>
+                  <Text>
+                    , 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "content"
+                    </Text>
+                  </Text>
+                  <Text>
+                    : prompt},
+          ]
+        }),
+      });
+    
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      const
+                    </Text>
+                  </Text>
+                  <Text>
+                     json = 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      await
+                    </Text>
+                  </Text>
+                  <Text>
+                     response.json();
+    setResponseText(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      JSON
+                    </Text>
+                  </Text>
+                  <Text>
+                    .stringify(json));
+    setAnswer(json.choices ? json.choices[
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      0
+                    </Text>
+                  </Text>
+                  <Text>
+                    ].message.content : 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      ''
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+  } 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      catch
+                    </Text>
+                  </Text>
+                  <Text>
+                     (error) {
+    
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      console
+                    </Text>
+                  </Text>
+                  <Text>
+                    .error(error);
+  } 
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      finally
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+    setLoading(
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#FF0000",
+                      }
+                    }
+                  >
+                    <Text>
+                      false
+                    </Text>
+                  </Text>
+                  <Text>
+                    );
+  }
+};
+
+useEffect(
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text>
+                      () =&gt;
+                    </Text>
+                  </Text>
+                  <Text>
+                     {
+  doRequest();
+}, []);
+
+
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#000000",
+                      }
+                    }
+                  >
+                    <Text>
+                      return
+                    </Text>
+                  </Text>
+                  <Text>
+                     (
+  
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          style
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {{fontWeight:
+                        </Text>
+                      </Text>
+                      <Text>
+                         '
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          bold
+                        </Text>
+                      </Text>
+                      <Text>
+                        '}}&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      Inputs
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      Enter a valid OpenAI API key
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          TextInput
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          value
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {apiKey}
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onChangeText
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {setApiKey}
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onSubmitEditing
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {doRequest}
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          secureTextEntry
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {true}/
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      What is your question
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          TextInput
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          value
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {prompt}
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onChangeText
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {setPrompt}
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onSubmitEditing
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {doRequest}/
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Button
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          title
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "Submit"
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          onPress
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {doRequest}/
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    {isLoading ? 
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          ActivityIndicator
+                        </Text>
+                      </Text>
+                      <Text>
+                        /&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                       :
+      
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+        
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          style
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {{fontWeight:
+                        </Text>
+                      </Text>
+                      <Text>
+                         '
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          bold
+                        </Text>
+                      </Text>
+                      <Text>
+                        '}}&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      Raw
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+        
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      {responseText}
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+        
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                         
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          style
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          {{fontWeight:
+                        </Text>
+                      </Text>
+                      <Text>
+                         '
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          bold
+                        </Text>
+                      </Text>
+                      <Text>
+                        '}}&gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      Answer
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+        
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      {answer}
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Text
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+      
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                    <Text>
+                      
+    }
+  
+                    </Text>
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;/
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          View
+                        </Text>
+                      </Text>
+                      <Text>
+                        &gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text>
+                    
+);
+                  </Text>
+                </Text>
+              </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+              "marginRight": 90,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "marginBottom": 10,
+                  "marginRight": 30,
+                  "marginTop": 30,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                style={
+                  {
+                    "color": "rgb(28, 28, 30)",
+                    "fontSize": 20,
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                View page code on Github
+              </Text>
+              <XamlControl
+                content={
+                  {
+                    "string": "Source Code",
+                  }
+                }
+                navigateUri="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/NetworkExamplePage.tsx"
+                type="Windows.UI.Xaml.Controls.HyperlinkButton"
+              />
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "marginBottom": 10,
+                  "marginRight": 30,
+                  "marginTop": 30,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                style={
+                  {
+                    "color": "rgb(28, 28, 30)",
+                    "fontSize": 20,
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                Feedback
+              </Text>
+              <XamlControl
+                content={
+                  {
+                    "string": "Send feedback about this page",
+                  }
+                }
+                navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
+                type="Windows.UI.Xaml.Controls.HyperlinkButton"
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "flex-start",
+                "marginBottom": 10,
+                "marginRight": 30,
+                "marginTop": 30,
+              }
+            }
+          >
+            <Text
+              accessibilityRole="header"
+              style={
+                {
+                  "color": "rgb(28, 28, 30)",
+                  "fontSize": 20,
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Documentation
+            </Text>
+            <XamlControl
+              content={
+                {
+                  "string": "Networking",
+                }
+              }
+              navigateUri="https://reactnative.dev/docs/network"
+              type="Windows.UI.Xaml.Controls.HyperlinkButton"
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`Picker Example Page 1`] = `
 <View
   style={

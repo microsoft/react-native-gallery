@@ -37,6 +37,7 @@ import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
 // https://github.com/microsoft/react-native-gallery/issues/420
 // Unable to import: {export * from './types'; SyntaxError: Unexpected token 'export'
 //import {RadioButtonsExamplePage} from '../src/examples/RadioButtonsExamplePage';
+import {NetworkExamplePage} from '../src/examples/NetworkExamplePage';
 import {View} from 'react-native';
 
 function Control() {
@@ -113,6 +114,14 @@ test('Flyout Example Page', () => {
 test('Image Example Page', () => {
   const tree = create(<ImageExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+test('Networking Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<NetworkExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 test('Picker Example Page', () => {
