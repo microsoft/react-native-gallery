@@ -1679,7 +1679,7 @@ exports[`CheckBox Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -6445,7 +6445,7 @@ exports[`Expander Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -11707,7 +11707,7 @@ exports[`Flyout Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -15215,7 +15215,7 @@ exports[`Hello Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -16720,7 +16720,7 @@ exports[`Image Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -18621,7 +18621,7 @@ exports[`Picker Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -20636,7 +20636,7 @@ exports[`Popup Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -28380,7 +28380,7 @@ exports[`ScrollView Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -32127,7 +32127,7 @@ exports[`Slider Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -33737,7 +33737,7 @@ exports[`Switch Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -34736,7 +34736,7 @@ exports[`Text Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -37095,7 +37095,7 @@ exports[`TextInput Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -44061,7 +44061,7 @@ exports[`View Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
@@ -48562,7 +48562,7 @@ exports[`WebView Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "LayerFillColorAltBrush",
+                    "SolidBackgroundFillColorSecondaryBrush",
                   ],
                 },
               },
