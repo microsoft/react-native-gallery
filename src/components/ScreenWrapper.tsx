@@ -4,42 +4,63 @@ import {
   StyleSheet,
   TouchableHighlight,
   Text,
+  PlatformColor,
   Pressable,
+  useColorScheme,
 } from 'react-native';
-import {PlatformColor} from 'react-native';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    width: '100%',
-    height: '100%',
-  },
-  navItem: {
-    flexGrow: 1,
-    flexShrink: 1,
-    height: '100%',
-    alignSelf: 'stretch',
-    paddingLeft: 15,
-  },
-  menu: {
-    margin: 5,
-    height: 34,
-    width: 38,
-    borderRadius: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  icon: {
-    fontFamily: 'Segoe MDL2 Assets',
-    fontSize: 16,
-    color: PlatformColor('TextControlForeground'),
-  },
-});
+const createStyles = (colorScheme) =>
+  StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      width: '100%',
+      height: '100%',
+      backgroundColor: colorScheme === 'light' ? '#f9f9f9' : '#262626',
+    },
+    navBar: {
+      backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+      width: 48,
+      height: '100%',
+      paddingBottom: 20,
+    },
+    navItem: {
+      flexGrow: 1,
+      flexShrink: 1,
+      height: '100%',
+      alignSelf: 'stretch',
+      borderTopLeftRadius: 8,
+      borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+      borderLeftWidth: 1,
+    },
+    insetNavItem: {
+      paddingLeft: 36,
+    },
+    menu: {
+      margin: 5,
+      height: 34,
+      width: 38,
+      borderRadius: 3,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    icon: {
+      fontFamily: 'Segoe MDL2 Assets',
+      fontSize: 16,
+      color: PlatformColor('TextControlForeground'),
+    },
+  });
 
-// @ts-ignore
-export function ScreenWrapper({children}) {
+type ScreenWrapperProps = React.PropsWithChildren<{
+  doNotInset?: boolean;
+}>;
+export function ScreenWrapper({
+  children,
+  doNotInset,
+}: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
+  const colorScheme = useColorScheme();
+  const styles = createStyles(colorScheme);
 
   return (
     <View style={styles.container}>
@@ -51,12 +72,7 @@ export function ScreenWrapper({children}) {
         /*accessibilityState={{
           expanded: useIsDrawerOpen(),
         }}*/
-        style={{
-          backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-          width: 48,
-          height: '100%',
-          paddingBottom: 20,
-        }}
+        style={styles.navBar}
         onPress={() => {
           navigation.dispatch(DrawerActions.openDrawer());
         }}>
@@ -76,7 +92,9 @@ export function ScreenWrapper({children}) {
           </TouchableHighlight>
         </View>
       </Pressable>
-      <View style={styles.navItem}>{children}</View>
+      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
+        {children}
+      </View>
     </View>
   );
 }
