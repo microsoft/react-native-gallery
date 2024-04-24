@@ -86,7 +86,6 @@ const PostChatCompletionExample = () => {
       setResponseText(JSON.stringify(json));
       setAnswer(json.choices ? json.choices[0].message.content : '');
     } catch (error) {
-      console.error(error);
     } finally {
       setLoading(false);
     }

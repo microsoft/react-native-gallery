@@ -18439,6 +18439,7 @@ exports[`Networking Example Page 1`] = `
 <View
   style={
     {
+      "backgroundColor": "#f9f9f9",
       "flexDirection": "row",
       "height": "100%",
       "width": "100%",
@@ -18553,13 +18554,24 @@ exports[`Networking Example Page 1`] = `
   </View>
   <View
     style={
-      {
-        "alignSelf": "stretch",
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "height": "100%",
-        "paddingLeft": 15,
-      }
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
     }
   >
     <View
@@ -18687,7 +18699,7 @@ exports[`Networking Example Page 1`] = `
             style={
               {
                 "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 2,
+                "borderRadius": 8,
                 "borderWidth": 1,
               }
             }
@@ -18695,6 +18707,11 @@ exports[`Networking Example Page 1`] = `
             <View
               style={
                 {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
                   "padding": 15,
                 }
               }
@@ -18703,22 +18720,75 @@ exports[`Networking Example Page 1`] = `
                 Fetch results from https://reactnative.dev/movies.json
               </Text>
               <View>
-                <ActivityIndicator />
+                <View>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Raw
+                  </Text>
+                  <Text>
+                    {"title":"The Basics - Networking","description":"Your app fetched this from a remote endpoint!","movies":[{"id":"1","title":"Star Wars","releaseYear":"1977"},{"id":"2","title":"Back to the Future","releaseYear":"1985"},{"id":"3","title":"The Matrix","releaseYear":"1999"},{"id":"4","title":"Inception","releaseYear":"2010"},{"id":"5","title":"Interstellar","releaseYear":"2014"}]}
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Formatted
+                  </Text>
+                  <Text>
+                    Star Wars
+                    , 
+                    1977
+                  </Text>
+                  <Text>
+                    Back to the Future
+                    , 
+                    1985
+                  </Text>
+                  <Text>
+                    The Matrix
+                    , 
+                    1999
+                  </Text>
+                  <Text>
+                    Inception
+                    , 
+                    2010
+                  </Text>
+                  <Text>
+                    Interstellar
+                    , 
+                    2014
+                  </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
                   "borderColor": "rgb(216, 216, 216)",
                   "borderTopWidth": 1,
                   "borderWidth": 0,
+                  "padding": 12,
                 }
               }
             >
               <View
                 style={
                   {
-                    "backgroundColor": "#E6E6E6",
+                    "backgroundColor": "transparent",
                     "flexGrow": 1,
                     "padding": 5,
                   }
@@ -19630,6 +19700,85 @@ exports[`Networking Example Page 1`] = `
                   </Text>
                 </Text>
               </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
             </View>
           </View>
         </View>
@@ -19651,7 +19800,7 @@ exports[`Networking Example Page 1`] = `
             style={
               {
                 "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 2,
+                "borderRadius": 8,
                 "borderWidth": 1,
               }
             }
@@ -19659,6 +19808,11 @@ exports[`Networking Example Page 1`] = `
             <View
               style={
                 {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
                   "padding": 15,
                 }
               }
@@ -19775,22 +19929,51 @@ exports[`Networking Example Page 1`] = `
                     </View>
                   </View>
                 </View>
-                <ActivityIndicator />
+                <View>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Raw
+                  </Text>
+                  <Text>
+                    {"title":"The Basics - Networking","description":"Your app fetched this from a remote endpoint!","movies":[{"id":"1","title":"Star Wars","releaseYear":"1977"},{"id":"2","title":"Back to the Future","releaseYear":"1985"},{"id":"3","title":"The Matrix","releaseYear":"1999"},{"id":"4","title":"Inception","releaseYear":"2010"},{"id":"5","title":"Interstellar","releaseYear":"2014"}]}
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Answer
+                  </Text>
+                  <Text />
+                </View>
               </View>
             </View>
             <View
               style={
                 {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
                   "borderColor": "rgb(216, 216, 216)",
                   "borderTopWidth": 1,
                   "borderWidth": 0,
+                  "padding": 12,
                 }
               }
             >
               <View
                 style={
                   {
-                    "backgroundColor": "#E6E6E6",
+                    "backgroundColor": "transparent",
                     "flexGrow": 1,
                     "padding": 5,
                   }
@@ -21542,6 +21725,85 @@ useEffect(
 );
                   </Text>
                 </Text>
+              </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
