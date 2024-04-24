@@ -1,5 +1,5 @@
 'use strict';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -7,6 +7,7 @@ import {
   TextBlock,
   Button,
   Hyperlink,
+  RadioButton,
   Run,
   ToggleSwitch,
   ComboBox,
@@ -24,6 +25,10 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
   const [menuFlyoutOption, setMenuFlyoutOption] = useState(
     'MenuFlyout Option 1',
   );
+  const [selectedRadioButton, setSelectedRadioButton] = useState('1');
+  const onRadioButtonSelected = (event) => {
+    setSelectedRadioButton(event.nativeEvent?.sender.tag);
+  };
 
   const example1jsx = '<TextBlock text="I am a XAML TextBlock." />';
   const example2jsx =
@@ -77,6 +82,16 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
     <FontIcon glyph="&#xE790;" />
   </NavigationViewItem>
 </NavigationView>`;
+  const example9jsx = `const [selectedRadioButton, setSelectedRadioButton] = useState('1');
+const onRadioButtonSelected = (event) => {
+  setSelectedRadioButton(event.nativeEvent?.sender.tag);
+};
+
+<View>
+  <RadioButton content="Option 1" tag="1" isChecked={true} onChecked={onRadioButtonSelected}/>
+  <RadioButton content="Option 2" tag="2" onChecked={onRadioButtonSelected}/>
+  <RadioButton content="Option 3" tag="3" onChecked={onRadioButtonSelected}/>
+</View>`;
 
   return (
     <Page
@@ -111,6 +126,30 @@ export const XamlExamplePage: React.FunctionComponent<{}> = () => {
           </Hyperlink>
           <Run text=" repository." />
         </TextBlock>
+      </Example>
+      <Example title="A simple XAML radio group." code={example9jsx}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View>
+            <RadioButton
+              content="Option 1"
+              tag="1"
+              isChecked={true}
+              onChecked={onRadioButtonSelected}
+            />
+            <RadioButton
+              content="Option 2"
+              tag="2"
+              onChecked={onRadioButtonSelected}
+            />
+            <RadioButton
+              content="Option 3"
+              tag="3"
+              onChecked={onRadioButtonSelected}
+            />
+          </View>
+          <Text>{`Output:
+You selected Option ${selectedRadioButton}`}</Text>
+        </View>
       </Example>
       <Example title="A simple ComboBox." code={example5jsx}>
         <ComboBox accessibilityLabel="Simple example ComboBox" text="ComboBox">
