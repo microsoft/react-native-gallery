@@ -100,6 +100,7 @@ const DrawerListItem = ({
       onPressOut={() => setIsPressed(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}
+      accessibilityRole='button'
       accessibilityLabel={label}
       style={localStyles.drawerListItem}>
       <View style={styles.indentContainer}>
@@ -135,7 +136,9 @@ const DrawerCollapsibleCategory = ({
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
-        onHoverOut={() => setIsHovered(false)}>
+        onHoverOut={() => setIsHovered(false)}
+        accessibilityRole='button'
+        accessibilityLabel={categoryLabel}>
         <View style={styles.indentContainer}>
           <Text style={styles.icon}>{categoryIcon}</Text>
         </View>
