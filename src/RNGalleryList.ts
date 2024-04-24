@@ -158,12 +158,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'Media',
   },
   {
-    key: 'Linear Gradient',
-    component: LinearGradientExamplePage,
-    icon: '\uE790',
-    type: 'Media',
-  },
-  {
     key: 'Permissions',
     component: PermissionsExamplePage,
     textIcon: '\uED2C',
