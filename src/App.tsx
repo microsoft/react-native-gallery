@@ -133,7 +133,12 @@ const DrawerCollapsibleCategory = ({
   const localStyles = createDrawerListItemStyles(isHovered, isPressed);
 
   return (
-    <View style={styles.category}>
+    <View
+      style={styles.category}
+      accessible={true}
+      accessibilityRole="button"
+      accessibilityLabel={categoryLabel}
+      onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
       <Pressable
         style={localStyles.drawerListItem}
         onPress={() => setIsExpanded(!isExpanded)}
@@ -141,8 +146,7 @@ const DrawerCollapsibleCategory = ({
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
-        accessibilityRole="button"
-        accessibilityLabel={categoryLabel}>
+        accessible={false}>
         <View style={styles.indentContainer}>
           <Text accessible={false} style={styles.icon}>
             {categoryIcon}
@@ -158,14 +162,14 @@ const DrawerCollapsibleCategory = ({
         </View>
       </Pressable>
       {isExpanded &&
-        items.map((item) => (
-          <DrawerListItem
-            key={item.label}
-            route={item.label}
-            label={item.label}
-            navigation={navigation}
-          />
-        ))}
+          items.map((item) => (
+            <DrawerListItem
+              key={item.label}
+              route={item.label}
+              label={item.label}
+              navigation={navigation}
+            />
+          ))}
     </View>
   );
 };
