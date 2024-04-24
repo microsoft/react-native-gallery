@@ -50177,7 +50177,7 @@ exports[`Xaml Example Page 1`] = `
             style={
               {
                 "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 2,
+                "borderRadius": 8,
                 "borderWidth": 1,
               }
             }
@@ -50185,6 +50185,11 @@ exports[`Xaml Example Page 1`] = `
             <View
               style={
                 {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
                   "padding": 15,
                 }
               }
@@ -50227,16 +50232,22 @@ You selected Option 1
             <View
               style={
                 {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
                   "borderColor": "rgb(216, 216, 216)",
                   "borderTopWidth": 1,
                   "borderWidth": 0,
+                  "padding": 12,
                 }
               }
             >
               <View
                 style={
                   {
-                    "backgroundColor": "#E6E6E6",
+                    "backgroundColor": "transparent",
                     "flexGrow": 1,
                     "padding": 5,
                   }
@@ -50744,6 +50755,85 @@ You selected Option 1
                     </Text>
                   </Text>
                 </Text>
+              </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
