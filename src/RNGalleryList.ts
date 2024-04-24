@@ -40,18 +40,19 @@ import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 
+// https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
-  'Basic Input',
-  'Collections',
-  'Date & time',
-  'Dialogs & flyouts',
-  'Layout',
-  'Media',
-  'Scrolling',
-  'Status and Info',
-  'Text',
-  'System',
-  'Legacy',
+  {label: 'Basic Input', icon: '\uE73A'},
+  {label: 'Collections', icon: '\uE80A'},
+  {label: 'Date & time', icon: '\uEC92'},
+  {label: 'Dialogs & flyouts', icon: '\uE8BD'},
+  {label: 'Layout', icon: '\uE8A1'},
+  {label: 'Media', icon: '\uE786'},
+  {label: 'Scrolling', icon: '\uE8CB'},
+  {label: 'Status and Info', icon: '\uE8F2'},
+  {label: 'Text', icon: '\uE8D2'},
+  {label: 'System', icon: '\uE7F8'},
+  {label: 'Legacy', icon: '\uE96A'},
 ];
 
 interface IRNGalleryExample {
