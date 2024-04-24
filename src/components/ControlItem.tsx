@@ -8,8 +8,8 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import type {ImageSourcePropType} from 'react-native';
 import {useTheme} from '@react-navigation/native';
+import type {IRNGalleryExample} from './RNGalleryList';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
@@ -54,22 +54,24 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       color: PlatformColor('TextFillColorSecondaryBrush'),
       fontSize: 12,
     },
+    badgeContainer: {
+      position: 'absolute',
+      right: 12,
+      top: 12,
+    },
+    newItemBadge: {
+      width: 10,
+      height: 10,
+      borderRadius: 5,
+      backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+    },
   });
 
 type HomeComponentTileProps = {
-  pageKey: string;
-  subtitle?: string;
-  textIcon: string;
-  imageIcon?: ImageSourcePropType;
+  item: IRNGalleryExample;
   navigation: any;
 };
-const HomeComponentTile = ({
-  pageKey,
-  subtitle,
-  textIcon,
-  imageIcon,
-  navigation,
-}: HomeComponentTileProps) => {
+const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
   // Comparable WinUI gallery control:
   // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7
   const {colors} = useTheme();
@@ -82,7 +84,7 @@ const HomeComponentTile = ({
   // The component _is_ the Image component, but that matches the role.
   // Note that WinUI3 gallery has the same problem. We'll use a workaround
   // to quiet the toolchain.
-  const imageAccessibilityLabel = pageKey === 'Image' ? 'Bitmap' : pageKey;
+  const imageAccessibilityLabel = item.key === 'Image' ? 'Bitmap' : item.key;
 
   return (
     // accessibilityRole="listitem" would be appropriate here, but two problems:
@@ -94,20 +96,20 @@ const HomeComponentTile = ({
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={
-        pageKey === 'Button' ? 'Button1 control' : pageKey + ' control'
+        item.key === 'Button' ? 'Button1 control' : item.key + ' control'
       }
-      accessibilityHint={'click to view the ' + pageKey + ' sample page'}
+      accessibilityHint={'click to view the ' + item.pageKey + ' sample page'}
       style={styles.controlItem}
       onPress={() => {
-        navigation.navigate(pageKey);
+        navigation.navigate(item.key);
       }}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}>
-      {imageIcon ? (
+      {item.imageIcon ? (
         <Image
-          source={imageIcon}
+          source={item.imageIcon}
           style={styles.controlItemIcon}
           accessible={true}
           accessibilityRole="image"
@@ -132,14 +134,19 @@ const HomeComponentTile = ({
                 color: PlatformColor('TextOnAccentFillColorPrimaryBrush'),
               },
             ]}>
-            {textIcon}
+            {item.textIcon}
           </Text>
         </View>
       )}
       <View style={{flexShrink: 1}}>
-        <Text style={styles.controlItemTitle}>{pageKey}</Text>
-        <Text style={styles.controlItemSubtitle}>{subtitle}</Text>
+        <Text style={styles.controlItemTitle}>{item.key}</Text>
+        <Text style={styles.controlItemSubtitle}>{item.subtitle}</Text>
       </View>
+      {(item.new || item.recentlyUpdated) && (
+        <View style={styles.badgeContainer}>
+          <View style={styles.newItemBadge} />
+        </View>
+      )}
     </Pressable>
   );
 };

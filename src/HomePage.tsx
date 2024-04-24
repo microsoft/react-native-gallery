@@ -155,13 +155,11 @@ const RenderHomeComponentTiles = (indicies: number[], navigation) => {
   var homeComponentTiles = [];
   for (var i = 0; i < indicies.length; i++) {
     let index = indicies[i];
+    let item = RNGalleryList[index];
     homeComponentTiles.push(
       <HomeComponentTile
         key={indicies[i]}
-        pageKey={RNGalleryList[index].key}
-        subtitle={RNGalleryList[index].subtitle}
-        textIcon={RNGalleryList[index].textIcon}
-        imageIcon={RNGalleryList[index].imageIcon}
+        item={item}
         navigation={navigation}
       />,
     );

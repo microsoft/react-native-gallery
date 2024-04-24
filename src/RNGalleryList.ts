@@ -63,6 +63,8 @@ interface IRNGalleryExample {
   imageIcon?: ImageSourcePropType;
   type: string;
   subtitle?: string;
+  new?: boolean;
+  recentlyUpdated?: boolean;
 }
 
 export const RNGalleryList: Array<IRNGalleryExample> = [
@@ -100,6 +102,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     textIcon: '\uE8C8',
     imageIcon: require('../assets/ControlImages/Clipboard.png'),
     type: 'System',
+    new: true,
   },
   {
     key: 'Config',
@@ -158,12 +161,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: LinearGradientExamplePage,
     textIcon: '\uE790',
     type: 'Media',
+    new: true,
   },
   {
     key: 'Networking',
     component: NetworkExamplePage,
     textIcon: '\uE704',
     type: 'Status and Info',
+    new: true,
   },
   {
     key: 'Permissions',
@@ -216,6 +221,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A control that allows the user to select a single option from a group of options.',
     type: 'Basic Input',
+    new: true,
   },
   {
     key: 'ScrollView',
@@ -346,6 +352,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: XamlExamplePage,
     textIcon: '\uE70F',
     type: 'Layout',
+    recentlyUpdated: true,
   },
 ];
 
