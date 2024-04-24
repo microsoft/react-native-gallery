@@ -46,6 +46,10 @@ const styles = StyleSheet.create({
   drawerText: {
     color: PlatformColor('TextControlForeground'),
   },
+  drawerDivider: {
+    backgroundColor: PlatformColor('CardStrokeColorDefaultBrush'),
+    height: 1,
+  },
   indentContainer: {
     width: 30,
   },
@@ -229,9 +233,11 @@ function CustomDrawerContent({navigation}) {
         icon="&#xE80F;"
         navigation={navigation}
       />
+      <View style={styles.drawerDivider} />
       <ScrollView>
         <DrawerListView navigation={navigation} />
       </ScrollView>
+      <View style={styles.drawerDivider} />
       <DrawerListItem
         route="Settings"
         label="Settings"
