@@ -9,7 +9,7 @@ export function NativeControlBadge() {
     <Badge
       badgeColor={
         Platform.OS === 'windows'
-          ? PlatformColor('SystemColorHighlightTextColor')
+          ? PlatformColor('CardBackgroundFillColorDefaultBrush')
           : colors.border
       }
       textColor={colors.text}

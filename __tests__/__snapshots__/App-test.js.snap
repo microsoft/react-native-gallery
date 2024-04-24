@@ -1679,7 +1679,7 @@ exports[`CheckBox Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -1724,7 +1724,11 @@ exports[`CheckBox Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -3548,7 +3552,11 @@ exports[`Clipboard Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -4648,7 +4656,11 @@ exports[`Config Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -5385,7 +5397,11 @@ exports[`DeviceInfo Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -6429,7 +6445,7 @@ exports[`Expander Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -6474,7 +6490,11 @@ exports[`Expander Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -11687,7 +11707,7 @@ exports[`Flyout Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -15195,7 +15215,7 @@ exports[`Hello Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -15240,7 +15260,11 @@ exports[`Hello Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -16696,7 +16720,7 @@ exports[`Image Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -16741,7 +16765,11 @@ exports[`Image Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -18593,7 +18621,7 @@ exports[`Picker Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -18638,7 +18666,11 @@ exports[`Picker Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -20604,7 +20636,7 @@ exports[`Popup Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -26734,7 +26766,11 @@ exports[`Print Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -27424,7 +27460,11 @@ exports[`ProgressView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -28340,7 +28380,7 @@ exports[`ScrollView Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -30254,7 +30294,11 @@ exports[`SensitiveInfo Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -32083,7 +32127,7 @@ exports[`Slider Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -32128,7 +32172,11 @@ exports[`Slider Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -33689,7 +33737,7 @@ exports[`Switch Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -34688,7 +34736,7 @@ exports[`Text Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -37047,7 +37095,7 @@ exports[`TextInput Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -38481,7 +38529,11 @@ exports[`TextToSpeech Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -44009,7 +44061,7 @@ exports[`View Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -48510,7 +48562,7 @@ exports[`WebView Example Page 1`] = `
               {
                 "backgroundColor": {
                   "windowsbrush": [
-                    "SystemColorHighlightTextColor",
+                    "CardBackgroundFillColorDefaultBrush",
                   ],
                 },
               },
@@ -48555,7 +48607,11 @@ exports[`WebView Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
@@ -49437,7 +49493,11 @@ exports[`Xaml Example Page 1`] = `
                 "paddingTop": 5,
               },
               {
-                "backgroundColor": "rgb(28, 28, 30)",
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
               },
             ]
           }
