@@ -10,7 +10,7 @@ export function CommunityModuleBadge() {
       badgeColor={PlatformColor('AccentFillColorDefaultBrush')}
       textColor={
         Platform.OS === 'windows'
-          ? PlatformColor('SystemColorHighlightTextColor')
+          ? PlatformColor('TextOnAccentFillColorPrimaryBrush')
           : colors.border
       }
       badgeTitle="Community Module"

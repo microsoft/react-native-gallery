@@ -1745,7 +1745,7 @@ exports[`CheckBox Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -1758,7 +1758,7 @@ exports[`CheckBox Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -3573,7 +3573,7 @@ exports[`Clipboard Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -3586,7 +3586,7 @@ exports[`Clipboard Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -4677,7 +4677,7 @@ exports[`Config Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -4690,7 +4690,7 @@ exports[`Config Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -5418,7 +5418,7 @@ exports[`DeviceInfo Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -5431,7 +5431,7 @@ exports[`DeviceInfo Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -6511,7 +6511,7 @@ exports[`Expander Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -6524,7 +6524,7 @@ exports[`Expander Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -15281,7 +15281,7 @@ exports[`Hello Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -15294,7 +15294,7 @@ exports[`Hello Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -16786,7 +16786,7 @@ exports[`Image Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -16799,7 +16799,7 @@ exports[`Image Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -22180,7 +22180,7 @@ exports[`Picker Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -22193,7 +22193,7 @@ exports[`Picker Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -30280,7 +30280,7 @@ exports[`Print Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -30293,7 +30293,7 @@ exports[`Print Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -30974,7 +30974,7 @@ exports[`ProgressView Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -30987,7 +30987,7 @@ exports[`ProgressView Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -33808,7 +33808,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -33821,7 +33821,7 @@ exports[`SensitiveInfo Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -35686,7 +35686,7 @@ exports[`Slider Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -35699,7 +35699,7 @@ exports[`Slider Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -42043,7 +42043,7 @@ exports[`TextToSpeech Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -42056,7 +42056,7 @@ exports[`TextToSpeech Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -52121,7 +52121,7 @@ exports[`WebView Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -52134,7 +52134,7 @@ exports[`WebView Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
@@ -53007,7 +53007,7 @@ exports[`Xaml Example Page 1`] = `
                 {
                   "color": {
                     "windowsbrush": [
-                      "SystemColorHighlightTextColor",
+                      "TextOnAccentFillColorPrimaryBrush",
                     ],
                   },
                 },
@@ -53020,7 +53020,7 @@ exports[`Xaml Example Page 1`] = `
             foreground={
               {
                 "windowsbrush": [
-                  "SystemColorHighlightTextColor",
+                  "TextOnAccentFillColorPrimaryBrush",
                 ],
               }
             }
