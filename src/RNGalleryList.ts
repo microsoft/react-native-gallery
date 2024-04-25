@@ -171,12 +171,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     new: true,
   },
   {
-    key: 'Networking',
-    component: NetworkExamplePage,
-    textIcon: '\uE704',
-    type: 'Status and Info',
-  },
-  {
     key: 'Permissions',
     component: PermissionsExamplePage,
     textIcon: '\uED2C',
