@@ -45,7 +45,11 @@ export function Example(props: {
       {props.code ? (
         <View style={styles.box}>
           <View style={styles.exampleContainer}>{props.children}</View>
-          <View style={styles.codeContainer}>
+          <View
+            style={styles.codeContainer}
+            accessible={true}
+            accessibilityRole="none"
+            accessibilityLabel="Source code">
             <Code>{props.code}</Code>
             <View style={{position: 'absolute', right: 12, top: 12}}>
               <CopyToClipboardButton content={props.code} />
