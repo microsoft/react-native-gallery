@@ -366,6 +366,9 @@ exports[`Button Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -437,6 +440,8 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -490,6 +495,7 @@ exports[`Button Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -640,6 +646,9 @@ exports[`Button Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -711,6 +720,8 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -764,6 +775,7 @@ exports[`Button Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -924,6 +936,9 @@ exports[`Button Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -1009,6 +1024,8 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -1062,6 +1079,7 @@ exports[`Button Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -1202,6 +1220,9 @@ exports[`Button Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -1292,6 +1313,8 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -1345,6 +1368,7 @@ exports[`Button Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -1842,6 +1866,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -1889,6 +1916,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -1942,6 +1971,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -2014,6 +2044,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -2075,6 +2108,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -2128,6 +2163,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -2200,6 +2236,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -2247,6 +2286,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -2300,6 +2341,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -2373,6 +2415,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -2434,6 +2479,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -2487,6 +2534,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -2560,6 +2608,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -2621,6 +2672,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -2674,6 +2727,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -2747,6 +2801,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -2808,6 +2865,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -2861,6 +2920,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -2934,6 +2994,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -2995,6 +3058,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -3048,6 +3113,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -3120,6 +3186,9 @@ exports[`CheckBox Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -3167,6 +3236,8 @@ exports[`CheckBox Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -3220,6 +3291,7 @@ exports[`CheckBox Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -3750,6 +3822,9 @@ exports[`Clipboard Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -3823,6 +3898,8 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -3876,6 +3953,7 @@ exports[`Clipboard Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -4024,6 +4102,9 @@ exports[`Clipboard Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -4280,6 +4361,8 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -4333,6 +4416,7 @@ exports[`Clipboard Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -4786,6 +4870,9 @@ exports[`Config Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -5017,6 +5104,8 @@ exports[`Config Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -5070,6 +5159,7 @@ exports[`Config Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -5520,6 +5610,9 @@ exports[`DeviceInfo Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -5690,6 +5783,8 @@ exports[`DeviceInfo Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -5743,6 +5838,7 @@ exports[`DeviceInfo Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -5812,6 +5908,9 @@ exports[`DeviceInfo Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -5901,6 +6000,8 @@ exports[`DeviceInfo Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -5954,6 +6055,7 @@ exports[`DeviceInfo Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -6020,6 +6122,9 @@ exports[`DeviceInfo Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -6067,6 +6172,8 @@ exports[`DeviceInfo Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -6120,6 +6227,7 @@ exports[`DeviceInfo Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -6607,6 +6715,9 @@ exports[`Expander Example Page 1`] = `
               </ExpanderView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -6805,6 +6916,8 @@ exports[`Expander Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -6858,6 +6971,7 @@ exports[`Expander Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -6938,6 +7052,9 @@ exports[`Expander Example Page 1`] = `
               </ExpanderView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -7366,6 +7483,8 @@ exports[`Expander Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -7419,6 +7538,7 @@ exports[`Expander Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -7490,6 +7610,9 @@ exports[`Expander Example Page 1`] = `
               </ExpanderView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -7702,6 +7825,8 @@ exports[`Expander Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -7755,6 +7880,7 @@ exports[`Expander Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -7829,6 +7955,9 @@ exports[`Expander Example Page 1`] = `
               </ExpanderView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -8089,6 +8218,8 @@ exports[`Expander Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -8142,6 +8273,7 @@ exports[`Expander Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -8253,6 +8385,9 @@ exports[`Expander Example Page 1`] = `
               </ExpanderView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -8853,6 +8988,8 @@ exports[`Expander Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -8906,6 +9043,7 @@ exports[`Expander Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -9496,6 +9634,9 @@ exports[`FlatList Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -9566,6 +9707,8 @@ exports[`FlatList Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -9619,6 +9762,7 @@ exports[`FlatList Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -9887,6 +10031,9 @@ exports[`FlatList Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -10171,6 +10318,8 @@ exports[`FlatList Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -10224,6 +10373,7 @@ exports[`FlatList Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -10520,6 +10670,9 @@ exports[`FlatList Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -10620,6 +10773,8 @@ exports[`FlatList Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -10673,6 +10828,7 @@ exports[`FlatList Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -10855,6 +11011,9 @@ exports[`FlatList Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -10969,6 +11128,8 @@ exports[`FlatList Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -11022,6 +11183,7 @@ exports[`FlatList Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -11235,6 +11397,9 @@ exports[`FlatList Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -11320,6 +11485,8 @@ exports[`FlatList Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -11373,6 +11540,7 @@ exports[`FlatList Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -11977,6 +12145,9 @@ exports[`Flyout Example Page 1`] = `
               </RCTFlyout>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -12511,6 +12682,8 @@ exports[`Flyout Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -12564,6 +12737,7 @@ exports[`Flyout Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -12747,6 +12921,9 @@ exports[`Flyout Example Page 1`] = `
               </RCTFlyout>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -13282,6 +13459,8 @@ exports[`Flyout Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -13335,6 +13514,7 @@ exports[`Flyout Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -13519,6 +13699,9 @@ exports[`Flyout Example Page 1`] = `
               </RCTFlyout>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -14055,6 +14238,8 @@ exports[`Flyout Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -14108,6 +14293,7 @@ exports[`Flyout Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -14291,6 +14477,9 @@ exports[`Flyout Example Page 1`] = `
               </RCTFlyout>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -14828,6 +15017,8 @@ exports[`Flyout Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -14881,6 +15072,7 @@ exports[`Flyout Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -15448,6 +15640,9 @@ exports[`Hello Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -15609,6 +15804,8 @@ exports[`Hello Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -15662,6 +15859,7 @@ exports[`Hello Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -15803,6 +16001,9 @@ exports[`Hello Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -15964,6 +16165,8 @@ exports[`Hello Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -16017,6 +16220,7 @@ exports[`Hello Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -16158,6 +16362,9 @@ exports[`Hello Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -16333,6 +16540,8 @@ exports[`Hello Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -16386,6 +16595,7 @@ exports[`Hello Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -16881,6 +17091,9 @@ exports[`Image Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -17016,6 +17229,8 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -17069,6 +17284,7 @@ exports[`Image Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -17139,6 +17355,9 @@ exports[`Image Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -17289,6 +17508,8 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -17342,6 +17563,7 @@ exports[`Image Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -17412,6 +17634,9 @@ exports[`Image Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -17560,6 +17785,8 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -17613,6 +17840,7 @@ exports[`Image Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -17684,6 +17912,9 @@ exports[`Image Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -17860,6 +18091,8 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -17913,6 +18146,7 @@ exports[`Image Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -17986,6 +18220,9 @@ exports[`Image Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -18225,6 +18462,8 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -18278,6 +18517,7 @@ exports[`Image Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -18771,6 +19011,9 @@ exports[`Networking Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -19710,6 +19953,8 @@ exports[`Networking Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -19763,6 +20008,7 @@ exports[`Networking Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -19956,6 +20202,9 @@ exports[`Networking Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -21736,6 +21985,8 @@ useEffect(
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -21789,6 +22040,7 @@ useEffect(
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -22302,6 +22554,9 @@ exports[`Picker Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -22673,6 +22928,8 @@ exports[`Picker Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -22726,6 +22983,7 @@ exports[`Picker Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -22823,6 +23081,9 @@ exports[`Picker Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -23208,6 +23469,8 @@ exports[`Picker Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -23261,6 +23524,7 @@ exports[`Picker Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -23357,6 +23621,9 @@ exports[`Picker Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -23742,6 +24009,8 @@ exports[`Picker Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -23795,6 +24064,7 @@ exports[`Picker Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -24460,6 +24730,9 @@ exports[`Popup Example Page 1`] = `
               </RCTPopup>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -24962,6 +25235,8 @@ exports[`Popup Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -25015,6 +25290,7 @@ exports[`Popup Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -25259,6 +25535,9 @@ exports[`Popup Example Page 1`] = `
               </RCTPopup>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -25822,6 +26101,8 @@ exports[`Popup Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -25875,6 +26156,7 @@ exports[`Popup Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -26120,6 +26402,9 @@ exports[`Popup Example Page 1`] = `
               </RCTPopup>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -26656,6 +26941,8 @@ exports[`Popup Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -26709,6 +26996,7 @@ exports[`Popup Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -26952,6 +27240,9 @@ exports[`Popup Example Page 1`] = `
               </RCTPopup>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -27488,6 +27779,8 @@ exports[`Popup Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -27541,6 +27834,7 @@ exports[`Popup Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -28029,6 +28323,9 @@ exports[`Pressable Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -28158,6 +28455,8 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -28211,6 +28510,7 @@ exports[`Pressable Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -28329,6 +28629,9 @@ exports[`Pressable Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -28680,6 +28983,8 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -28733,6 +29038,7 @@ exports[`Pressable Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -28853,6 +29159,9 @@ exports[`Pressable Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -29318,6 +29627,8 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -29371,6 +29682,7 @@ exports[`Pressable Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -29489,6 +29801,9 @@ exports[`Pressable Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -29874,6 +30189,8 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -29927,6 +30244,7 @@ exports[`Pressable Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -30452,6 +30770,9 @@ exports[`Print Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -30577,6 +30898,8 @@ exports[`Print Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -30630,6 +30953,7 @@ exports[`Print Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -31067,6 +31391,9 @@ exports[`ProgressView Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -31128,6 +31455,8 @@ exports[`ProgressView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -31181,6 +31510,7 @@ exports[`ProgressView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -31248,6 +31578,9 @@ exports[`ProgressView Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -31309,6 +31642,8 @@ exports[`ProgressView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -31362,6 +31697,7 @@ exports[`ProgressView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -31431,6 +31767,9 @@ exports[`ProgressView Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -31495,6 +31834,8 @@ exports[`ProgressView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -31548,6 +31889,7 @@ exports[`ProgressView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -32036,6 +32378,9 @@ exports[`ScrollView Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -32185,6 +32530,8 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -32238,6 +32585,7 @@ exports[`ScrollView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -32314,6 +32662,9 @@ exports[`ScrollView Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -32472,6 +32823,8 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -32525,6 +32878,7 @@ exports[`ScrollView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -32601,6 +32955,9 @@ exports[`ScrollView Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -32764,6 +33121,8 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -32817,6 +33176,7 @@ exports[`ScrollView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -32916,6 +33276,9 @@ exports[`ScrollView Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -33393,6 +33756,8 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -33446,6 +33811,7 @@ exports[`ScrollView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -34156,6 +34522,9 @@ exports[`SensitiveInfo Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -35242,6 +35611,8 @@ exports[`SensitiveInfo Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -35295,6 +35666,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -35796,6 +36168,9 @@ exports[`Slider Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -35945,6 +36320,8 @@ exports[`Slider Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -35998,6 +36375,7 @@ exports[`Slider Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -36082,6 +36460,9 @@ exports[`Slider Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -36231,6 +36612,8 @@ exports[`Slider Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -36284,6 +36667,7 @@ exports[`Slider Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -36371,6 +36755,9 @@ exports[`Slider Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -36537,6 +36924,8 @@ exports[`Slider Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -36590,6 +36979,7 @@ exports[`Slider Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -36679,6 +37069,9 @@ exports[`Slider Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -36843,6 +37236,8 @@ exports[`Slider Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -36896,6 +37291,7 @@ exports[`Slider Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -37389,6 +37785,9 @@ exports[`Switch Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -37438,6 +37837,8 @@ exports[`Switch Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -37491,6 +37892,7 @@ exports[`Switch Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -37563,6 +37965,9 @@ exports[`Switch Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -37613,6 +38018,8 @@ exports[`Switch Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -37666,6 +38073,7 @@ exports[`Switch Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -37740,6 +38148,9 @@ exports[`Switch Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -37833,6 +38244,8 @@ exports[`Switch Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -37886,6 +38299,7 @@ exports[`Switch Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -38382,6 +38796,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -38443,6 +38860,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -38496,6 +38915,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -38563,6 +38983,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -38682,6 +39105,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -38735,6 +39160,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -38801,6 +39227,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -38878,6 +39307,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -38931,6 +39362,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -38998,6 +39430,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -39163,6 +39598,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -39216,6 +39653,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -39300,6 +39738,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -39425,6 +39866,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -39478,6 +39921,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -39544,6 +39988,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -39664,6 +40111,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -39717,6 +40166,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -39783,6 +40233,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -39920,6 +40373,8 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -39973,6 +40428,7 @@ exports[`Text Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -40040,6 +40496,9 @@ exports[`Text Example Page 1`] = `
               </Text>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -40192,6 +40651,8 @@ Here is a line
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -40245,6 +40706,7 @@ Here is a line
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -40744,6 +41206,9 @@ exports[`TextInput Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -40836,6 +41301,8 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -40889,6 +41356,7 @@ exports[`TextInput Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -40958,6 +41426,9 @@ exports[`TextInput Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -41066,6 +41537,8 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -41119,6 +41592,7 @@ exports[`TextInput Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -41191,6 +41665,9 @@ exports[`TextInput Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -41374,6 +41851,8 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -41427,6 +41906,7 @@ exports[`TextInput Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -41496,6 +41976,9 @@ exports[`TextInput Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -41619,6 +42102,8 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -41672,6 +42157,7 @@ exports[`TextInput Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -42266,6 +42752,9 @@ exports[`TextToSpeech Example Page 1`] = `
               </RCTScrollView>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -42364,6 +42853,8 @@ exports[`TextToSpeech Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -42417,6 +42908,7 @@ exports[`TextToSpeech Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -42891,6 +43383,9 @@ exports[`TouchableHighlight Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -43202,6 +43697,8 @@ exports[`TouchableHighlight Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -43255,6 +43752,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -43357,6 +43855,9 @@ exports[`TouchableHighlight Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -43668,6 +44169,8 @@ exports[`TouchableHighlight Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -43721,6 +44224,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -43828,6 +44332,9 @@ exports[`TouchableHighlight Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -44155,6 +44662,8 @@ exports[`TouchableHighlight Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -44208,6 +44717,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -44701,6 +45211,9 @@ exports[`TouchableOpacity Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -45040,6 +45553,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -45093,6 +45608,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -45207,6 +45723,9 @@ exports[`TouchableOpacity Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -45546,6 +46065,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -45599,6 +46120,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -45718,6 +46240,9 @@ exports[`TouchableOpacity Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -46072,6 +46597,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -46125,6 +46652,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -46244,6 +46772,9 @@ exports[`TouchableOpacity Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -46599,6 +47130,8 @@ activeOpacity={
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -46652,6 +47185,7 @@ activeOpacity={
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -46770,6 +47304,9 @@ activeOpacity={
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -47167,6 +47704,8 @@ onPress={
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -47220,6 +47759,7 @@ onPress={
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -47699,6 +48239,9 @@ exports[`View Example Page 1`] = `
               <View />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -47746,6 +48289,8 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -47799,6 +48344,7 @@ exports[`View Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -47865,6 +48411,9 @@ exports[`View Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -48016,6 +48565,8 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -48069,6 +48620,7 @@ exports[`View Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -48152,6 +48704,9 @@ exports[`View Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -48523,6 +49078,8 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -48576,6 +49133,7 @@ exports[`View Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -48660,6 +49218,9 @@ exports[`View Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -49097,6 +49658,8 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -49150,6 +49713,7 @@ exports[`View Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -49248,6 +49812,9 @@ exports[`View Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -49980,6 +50547,8 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -50033,6 +50602,7 @@ exports[`View Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -50122,6 +50692,9 @@ exports[`View Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -50704,6 +51277,8 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -50757,6 +51332,7 @@ exports[`View Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -50826,6 +51402,9 @@ exports[`View Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -51051,6 +51630,8 @@ style={{
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -51104,6 +51685,7 @@ style={{
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -51173,6 +51755,9 @@ style={{
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -51398,6 +51983,8 @@ style={{
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -51451,6 +52038,7 @@ style={{
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -51518,6 +52106,9 @@ style={{
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -51659,6 +52250,8 @@ style={{
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -51712,6 +52305,7 @@ style={{
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -52240,6 +52834,9 @@ exports[`WebView Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -52347,6 +52944,8 @@ exports[`WebView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -52400,6 +52999,7 @@ exports[`WebView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -52493,6 +53093,9 @@ exports[`WebView Example Page 1`] = `
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -52601,6 +53204,8 @@ exports[`WebView Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -52654,6 +53259,7 @@ exports[`WebView Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -53093,6 +53699,9 @@ exports[`Xaml Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -53154,6 +53763,8 @@ exports[`Xaml Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -53207,6 +53818,7 @@ exports[`Xaml Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -53272,6 +53884,9 @@ exports[`Xaml Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -53357,6 +53972,8 @@ exports[`Xaml Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -53410,6 +54027,7 @@ exports[`Xaml Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -53470,6 +54088,9 @@ exports[`Xaml Example Page 1`] = `
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -53517,6 +54138,8 @@ exports[`Xaml Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -53570,6 +54193,7 @@ exports[`Xaml Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -53647,6 +54271,9 @@ exports[`Xaml Example Page 1`] = `
               </XamlControl>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -53964,6 +54591,8 @@ exports[`Xaml Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -54017,6 +54646,7 @@ exports[`Xaml Example Page 1`] = `
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -54107,6 +54737,9 @@ You selected Option 1
               </View>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -54643,6 +55276,8 @@ You selected Option 1
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -54696,6 +55331,7 @@ You selected Option 1
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -54782,6 +55418,9 @@ You selected Option 1
               </XamlControl>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -55111,6 +55750,8 @@ You selected Option 1
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -55164,6 +55805,7 @@ You selected Option 1
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -55225,6 +55867,9 @@ You selected Option 1
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -55286,6 +55931,8 @@ You selected Option 1
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -55339,6 +55986,7 @@ You selected Option 1
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -55432,6 +56080,9 @@ You selected Option 1
               />
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -55940,6 +56591,8 @@ You selected Option 1
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -55993,6 +56646,7 @@ You selected Option 1
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
@@ -56085,6 +56739,9 @@ You selected Option 1
               </XamlControl>
             </View>
             <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
               style={
                 {
                   "backgroundColor": {
@@ -56595,6 +57252,8 @@ You selected Option 1
                 }
               >
                 <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
                   accessibilityState={
                     {
                       "busy": undefined,
@@ -56648,6 +57307,7 @@ You selected Option 1
                   tooltip="Copy to clipboard"
                 >
                   <Text
+                    accessible={false}
                     style={
                       {
                         "color": {
