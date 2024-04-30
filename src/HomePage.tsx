@@ -16,7 +16,7 @@ import {HomeComponentTile} from './components/ControlItem';
 import {TileGallery} from './components/TileGallery';
 import LinearGradient from 'react-native-linear-gradient';
 
-const createStyles = (colors: any) =>
+const createStyles = () =>
   StyleSheet.create({
     heading: {
       marginTop: 30,
@@ -24,11 +24,6 @@ const createStyles = (colors: any) =>
       fontSize: 20,
       fontWeight: '600',
       color: PlatformColor('TextFillColorPrimaryBrush'),
-    },
-    text: {
-      paddingTop: 5,
-      paddingBottom: 5,
-      color: colors.text,
     },
     container: {
       padding: 10,

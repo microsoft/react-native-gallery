@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   title: {
-    fontWeight: '200',
-    fontSize: 26,
+    fontWeight: '600',
+    fontSize: 28,
   },
   titlePane: {
     marginTop: 44,
@@ -94,10 +94,7 @@ export function Page(props: {
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
-        <Text
-          accessible
-          accessibilityRole={'header'}
-          style={[styles.title, {color: colors.text}]}>
+        <Text accessible accessibilityRole={'header'} style={styles.title}>
           {props.title}
         </Text>
         <View>
