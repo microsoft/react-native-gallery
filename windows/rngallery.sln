@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNCConfig", "..\node_module
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNDeviceInfoCPP", "..\node_modules\react-native-device-info\windows\RNDeviceInfoCPP\RNDeviceInfoCPP.vcxproj", "{3E3931F2-4735-4417-8CB0-33668A7314D6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNLinearGradient", "..\node_modules\react-native-linear-gradient\windows\RNLinearGradient\RNLinearGradient\RNLinearGradient.vcxproj", "{193DF456-3F97-4CC1-A7D4-809857CC064E}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPermissions", "..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj", "{99677B9D-A27B-4239-930E-C36C8D339C54}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPrint", "..\node_modules\react-native-print\windows\RNPrint\RNPrint.vcxproj", "{6F9AC236-D97D-4C75-971B-91AC99D7C23B}"
@@ -68,8 +70,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeXaml", "..\node_modules\react-native-xaml\windows\ReactNativeXaml\ReactNativeXaml.vcxproj", "{0FF7027A-222C-4FFB-8F17-91D18BBAF7A8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWindowsHello", "..\node_modules\react-native-windows-hello\windows\ReactNativeWindowsHello\ReactNativeWindowsHello.vcxproj", "{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNLinearGradient", "..\node_modules\react-native-linear-gradient\windows\RNLinearGradient\RNLinearGradient\RNLinearGradient.vcxproj", "{193DF456-3F97-4CC1-A7D4-809857CC064E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -281,6 +281,18 @@ Global
 		{3E3931F2-4735-4417-8CB0-33668A7314D6}.Release|x64.Build.0 = Release|x64
 		{3E3931F2-4735-4417-8CB0-33668A7314D6}.Release|x86.ActiveCfg = Release|Win32
 		{3E3931F2-4735-4417-8CB0-33668A7314D6}.Release|x86.Build.0 = Release|Win32
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x64.ActiveCfg = Debug|x64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x64.Build.0 = Debug|x64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x86.ActiveCfg = Debug|Win32
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x86.Build.0 = Debug|Win32
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|ARM64.Build.0 = Release|ARM64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x64.ActiveCfg = Release|x64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x64.Build.0 = Release|x64
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x86.ActiveCfg = Release|Win32
+		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x86.Build.0 = Release|Win32
 		{99677B9D-A27B-4239-930E-C36C8D339C54}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{99677B9D-A27B-4239-930E-C36C8D339C54}.Debug|ARM64.Build.0 = Debug|ARM64
 		{99677B9D-A27B-4239-930E-C36C8D339C54}.Debug|x64.ActiveCfg = Debug|x64
@@ -377,18 +389,6 @@ Global
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x64.Build.0 = Release|x64
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x86.ActiveCfg = Release|Win32
 		{82BF2B2C-EDA5-47CA-A9F5-56BA622A15EA}.Release|x86.Build.0 = Release|Win32
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|ARM64.Build.0 = Debug|ARM64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x64.ActiveCfg = Debug|x64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x64.Build.0 = Debug|x64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x86.ActiveCfg = Debug|Win32
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Debug|x86.Build.0 = Debug|Win32
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|ARM64.ActiveCfg = Release|ARM64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|ARM64.Build.0 = Release|ARM64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x64.ActiveCfg = Release|x64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x64.Build.0 = Release|x64
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x86.ActiveCfg = Release|Win32
-		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
