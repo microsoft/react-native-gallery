@@ -31,17 +31,22 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
   const styles = createButtonStyles(isHovered, isPressing);
 
   const copyIcon = '\uE8C8';
+  const helpText = 'Copy to clipboard';
 
   return (
     <Pressable
-      tooltip={'Copy to clipboard'}
+      accessibilityRole="button"
+      accessibilityLabel={helpText}
+      tooltip={helpText}
       style={styles.background}
       onPress={() => Clipboard.setString(content)}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}>
-      <Text style={styles.text}>{copyIcon}</Text>
+      <Text accessible={false} style={styles.text}>
+        {copyIcon}
+      </Text>
     </Pressable>
   );
 };
