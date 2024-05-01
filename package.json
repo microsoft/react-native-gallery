@@ -52,7 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@react-native/eslint-config": "0.74.81",
+    "@react-native-community/eslint-config": "^1.1.0",
     "@rnx-kit/cli": "^0.16.10",
     "@rnx-kit/jest-preset": "^0.1.14",
     "@types/lowlight": "^0.0.1",
