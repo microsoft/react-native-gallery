@@ -155,15 +155,10 @@ exports[`Button Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Button
@@ -1672,15 +1667,10 @@ exports[`CheckBox Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Checkbox
@@ -3595,15 +3585,10 @@ exports[`Clipboard Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Clipboard
@@ -4711,15 +4696,10 @@ exports[`Config Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Config Variables
@@ -5458,15 +5438,10 @@ exports[`DeviceInfo Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Device Info
@@ -6522,15 +6497,10 @@ exports[`Expander Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Expander
@@ -9347,15 +9317,10 @@ exports[`FlatList Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         FlatList
@@ -11844,15 +11809,10 @@ exports[`Flyout Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Flyout
@@ -15376,15 +15336,10 @@ exports[`Hello Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Windows Hello
@@ -16899,15 +16854,10 @@ exports[`Image Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Image
@@ -18830,15 +18780,10 @@ exports[`Networking Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Networking
@@ -22335,15 +22280,10 @@ exports[`Picker Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Picker
@@ -24368,15 +24308,10 @@ exports[`Popup Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Popup
@@ -28147,15 +28082,10 @@ exports[`Pressable Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Pressable
@@ -30548,15 +30478,10 @@ exports[`Print Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Print
@@ -31248,15 +31173,10 @@ exports[`ProgressView Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         ProgressView
@@ -32184,15 +32104,10 @@ exports[`ScrollView Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         ScrollView
@@ -34124,15 +34039,10 @@ exports[`SensitiveInfo Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Sensitive Info
@@ -35961,15 +35871,10 @@ exports[`Slider Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Slider
@@ -37595,15 +37500,10 @@ exports[`Switch Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Switch
@@ -38612,15 +38512,10 @@ exports[`Text Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Text
@@ -41019,15 +40914,10 @@ exports[`TextInput Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         TextInput
@@ -42479,15 +42369,10 @@ exports[`TextToSpeech Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Text-to-Speech
@@ -43205,15 +43090,10 @@ exports[`TouchableHighlight Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Touchable Highlight
@@ -45021,15 +44901,10 @@ exports[`TouchableOpacity Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Touchable Opacity
@@ -48063,15 +47938,10 @@ exports[`View Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         View
@@ -52618,15 +52488,10 @@ exports[`WebView Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         WebView
@@ -53563,15 +53428,10 @@ exports[`Xaml Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Xaml
