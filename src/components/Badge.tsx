@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, OpaqueColorValue} from 'react-native';
 import {SymbolIcon} from 'react-native-xaml';
 
 const styles = StyleSheet.create({
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 });
 
 export function Badge(props: {
-  badgeColor: string;
+  badgeColor: OpaqueColorValue;
   textColor: string;
   badgeTitle: string;
   icon: number;

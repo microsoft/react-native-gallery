@@ -83,7 +83,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
         <Text style={{color: colors.text, fontWeight: '500'}}>Key:key1 </Text>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
-            accessibilityLabel="Input"
+            accessibilityLabel="Enter text to set item"
             style={{
               width: 200,
               height: 36,
@@ -102,7 +102,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
           <TextInput
-            accessibilityLabel="Input"
+            accessibilityLabel="Enter text to get item"
             style={{
               width: 200,
               height: 36,

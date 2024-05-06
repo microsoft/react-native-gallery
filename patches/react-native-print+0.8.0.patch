@@ -1,13 +1,24 @@
 diff --git a/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj b/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj
-index 2a830ae..c404e71 100644
+index 2a830ae..1c41c35 100644
 --- a/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj
 +++ b/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj
-@@ -14,7 +14,7 @@
+@@ -13,13 +13,16 @@
+     <AppContainerApplication>true</AppContainerApplication>
      <ApplicationType>Windows Store</ApplicationType>
      <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
-     <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
+-    <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
 -    <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
-+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
    </PropertyGroup>
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
    <PropertyGroup Label="ReactNativeWindowsProps">
+     <ReactNativeWindowsDir Condition="'$(ReactNativeWindowsDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\react-native-windows\package.json'))\node_modules\react-native-windows\</ReactNativeWindowsDir>
+   </PropertyGroup>
++  <Import Project="$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.WindowsSdk.Default.props" Condition="Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.WindowsSdk.Default.props')" />
++  <PropertyGroup Label="Fallback Windows SDK Versions">
++   <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
++   <WindowsTargetPlatformMinVersion Condition=" '$(WindowsTargetPlatformMinVersion)' == '' ">10.0.17763.0</WindowsTargetPlatformMinVersion>
++  </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|ARM">
+       <Configuration>Debug</Configuration>

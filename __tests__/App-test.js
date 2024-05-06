@@ -11,10 +11,10 @@ import {ImageExamplePage} from '../src/examples/ImageExamplePage';
 import {PressableExamplePage} from '../src/examples/PressableExamplePage';
 import {FlatListExamplePage} from '../src/examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from '../src/examples/ScrollViewExample';
-// Issue: #344
-//import {PopupExamplePage} from '../src/examples/PopupExamplePage';
-//import {FlyoutExamplePage} from '../src/examples/FlyoutExamplePage';
+import {PopupExamplePage} from '../src/examples/PopupExamplePage';
+import {FlyoutExamplePage} from '../src/examples/FlyoutExamplePage';
 import {CheckBoxExamplePage} from '../src/examples/CheckBoxExamplePage';
+import {ClipboardExamplePage} from '../src/examples/ClipboardExamplePage';
 import {ConfigExamplePage} from '../src/examples/ConfigExamplePage';
 import {DatePickerExamplePage} from '../src/examples/DatePickerExamplePage';
 import {TimePickerExamplePage} from '../src/examples/TimePickerExamplePage';
@@ -34,9 +34,13 @@ import {XamlExamplePage} from '../src/examples/XamlExamplePage';
 //import {TrackPlayerExamplePage} from '../src/examples/TrackPlayerExamplePage';
 import {WindowsHelloExamplePage} from '../src/examples/WindowsHelloExamplePage';
 import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
+// https://github.com/microsoft/react-native-gallery/issues/420
+// Unable to import: {export * from './types'; SyntaxError: Unexpected token 'export'
+//import {RadioButtonsExamplePage} from '../src/examples/RadioButtonsExamplePage';
+import {NetworkExamplePage} from '../src/examples/NetworkExamplePage';
 import {View} from 'react-native';
 
-function Control(props) {
+function Control() {
   return <View />;
 }
 
@@ -51,6 +55,11 @@ test('Button Example Page', () => {
 
 test('CheckBox Example Page', () => {
   const tree = create(<CheckBoxExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('Clipboard Example Page', () => {
+  const tree = create(<ClipboardExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
@@ -97,17 +106,22 @@ test('FlatList Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-// Issue: #344
-/*
 test('Flyout Example Page', () => {
   const tree = create(<FlyoutExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-*/
 
 test('Image Example Page', () => {
   const tree = create(<ImageExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+test('Networking Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<NetworkExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 test('Picker Example Page', () => {
@@ -115,13 +129,10 @@ test('Picker Example Page', () => {
   expect(tree).toMatchSnapshot();
 });
 
-// Issue: #344
-/*
 test('Popup Example Page', () => {
   const tree = create(<PopupExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
-*/
 
 test('Pressable Example Page', () => {
   const tree = create(<PressableExamplePage />).toJSON();
@@ -137,6 +148,11 @@ test('ProgressView Example Page', () => {
   const tree = create(<ProgressViewExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+/*test('Radio Buttons Example Page', () => {
+  const tree = create(<RadioButtonsExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});*/
 
 test('ScrollView Example Page', () => {
   const tree = create(<ScrollViewExamplePage />).toJSON();

@@ -5,12 +5,10 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '@react-navigation/native';
 import {TouchableWithoutFeedback} from 'react-native-windows';
-import {Banner} from '@react-native-material/core';
 
 export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
   () => {
     const [title, setTitle] = useState(0);
-    const [focus, setFocus] = useState(false);
     const {colors} = useTheme();
 
     const example1jsx = `<TouchableWithoutFeedback>

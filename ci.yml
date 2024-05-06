@@ -46,7 +46,7 @@ steps:
   - task: NodeTool@0
     displayName: Installing Node
     inputs:
-      versionSpec: '16.x'
+      versionSpec: '18.x'
 
   - task: CmdLine@2
     displayName: Upgrade react-native-windows Version

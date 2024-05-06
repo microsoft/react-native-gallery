@@ -4,11 +4,8 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import RNPrint from 'react-native-print';
-import {useTheme} from '@react-navigation/native';
 
 export const PrintExamplePage: React.FunctionComponent<{}> = () => {
-  const {colors} = useTheme();
-
   const example = `<Button
   color={colors.primary}
   onPress={async () => {
@@ -40,8 +37,8 @@ export const PrintExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="Print PDF document" code={example}>
         <Button
-          accessibilityLabel="Example"
-          color={colors.primary}
+          accessibilityLabel="Print PDF"
+          color="rgb(52, 122, 226)"
           onPress={printRemotePDF}
           title="Print PDF"
         />

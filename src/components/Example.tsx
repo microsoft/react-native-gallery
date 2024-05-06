@@ -1,6 +1,7 @@
 import React from 'react';
 import {Code} from './Code';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, PlatformColor, Text, View} from 'react-native';
+import {CopyToClipboardButton} from './CopyToClipboard';
 import {useTheme} from '@react-navigation/native';
 
 const createStyles = (colors: any) =>
@@ -12,17 +13,20 @@ const createStyles = (colors: any) =>
       color: colors.text,
     },
     box: {
-      borderRadius: 2,
+      borderRadius: 8,
       borderWidth: 1,
       borderColor: colors.border,
     },
     exampleContainer: {
       padding: 15,
+      backgroundColor: PlatformColor('SolidBackgroundFillColorSecondaryBrush'),
     },
     codeContainer: {
       borderWidth: 0,
       borderTopWidth: 1,
       borderColor: colors.border,
+      padding: 12,
+      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
     },
   });
 
@@ -41,8 +45,15 @@ export function Example(props: {
       {props.code ? (
         <View style={styles.box}>
           <View style={styles.exampleContainer}>{props.children}</View>
-          <View style={styles.codeContainer}>
+          <View
+            style={styles.codeContainer}
+            accessible={true}
+            accessibilityRole="none"
+            accessibilityLabel="Source code">
             <Code>{props.code}</Code>
+            <View style={{position: 'absolute', right: 12, top: 12}}>
+              <CopyToClipboardButton content={props.code} />
+            </View>
           </View>
         </View>
       ) : (

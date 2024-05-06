@@ -40,7 +40,7 @@ export const TTSExamplePage: React.FunctionComponent<{}> = () => {
           onPress={(evt) => onVoicePress(evt, voice)}
           title={voice.name}
           color={voice.id === selectedVoice?.id ? 'steelblue' : 'red'}
-          accessibilityLabel={voice.language}
+          accessibilityLabel={voice.name + ', ' + voice.language}
         />
       </View>
     );
@@ -68,12 +68,13 @@ export const TTSExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Speak" code={exampleJsx}>
         <View style={{marginBottom: 8}}>
           <TextInput
+            accessibilityLabel="Enter text here"
             style={{height: 40, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(value: string) => setText(value)}
             value={text}
           />
         </View>
-        <Button onPress={onSpeak} title="Speak" />
+        <Button accessibilityLabel="Speak" onPress={onSpeak} title="Speak" />
         <Text
           style={{
             fontSize: 14,

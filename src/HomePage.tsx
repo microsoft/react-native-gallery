@@ -1,41 +1,37 @@
 'use strict';
-import {StyleSheet, View, Text, Pressable} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  Image,
+  PlatformColor,
+  useColorScheme,
+} from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from '@react-navigation/native';
-import RNGalleryList from './RNGalleryList';
-import {ScrollView} from 'react-native';
+import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
+import {HomeComponentTile} from './components/ControlItem';
+import {TileGallery} from './components/TileGallery';
+import LinearGradient from 'react-native-linear-gradient';
 
-const createStyles = (colors: any) =>
+const createStyles = () =>
   StyleSheet.create({
     heading: {
       marginTop: 30,
       marginBottom: 10,
-      fontSize: 23,
-      color: colors.text,
-    },
-    text: {
-      paddingTop: 5,
-      paddingBottom: 5,
-      color: colors.text,
+      fontSize: 20,
+      fontWeight: '600',
+      color: PlatformColor('TextFillColorPrimaryBrush'),
     },
     container: {
       padding: 10,
+      paddingBottom: 40,
+      paddingLeft: 36,
       alignSelf: 'stretch',
       height: '100%',
       alignContent: 'flex-start',
-      paddingBottom: 40,
-    },
-    title: {
-      fontWeight: '200',
-      fontSize: 26,
-      marginTop: 20,
-      marginBottom: 10,
-      color: colors.text,
-    },
-    description: {
-      paddingRight: 20,
-      color: colors.text,
     },
     scrollView: {
       paddingRight: 20,
@@ -48,16 +44,97 @@ const createStyles = (colors: any) =>
     icon: {
       fontFamily: 'Segoe MDL2 Assets',
       fontSize: 16,
-      paddingRight: 10,
-      paddingLeft: 10,
+    },
+    controlItems: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      gap: 12,
+    },
+    heroGradient: {
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+    },
+    heroBackgroundImage: {
+      position: 'absolute',
+      resizeMode: 'cover',
+      width: '100%',
+      height: '99%',
+    },
+    pageHeader: {},
+    pageTitleContainer: {
+      height: 204,
+      justifyContent: 'center',
+    },
+    pageTitle: {
+      // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/HomePage.xaml#L82
+      // TitleLargeTextBlockStyle
+      fontSize: 40,
+      fontWeight: '600', // SemiBold
+      paddingLeft: 36,
     },
   });
+
+const PageTitle = () => {
+  const {colors} = useTheme();
+  const colorScheme = useColorScheme();
+  const styles = createStyles(colors);
+
+  return (
+    // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
+    <View>
+      <LinearGradient
+        start={{x: 0.5, y: 0}}
+        end={{x: 0.5, y: 1}}
+        colors={
+          colorScheme === 'light'
+            ? ['#CED8E4', '#D5DBE3']
+            : ['#020B20', '#020B20']
+        }
+        style={styles.heroGradient}
+      />
+      <Image
+        source={require('../assets/GalleryHeaderImage.png')}
+        style={[
+          styles.heroBackgroundImage,
+          {
+            opacity: colorScheme === 'light' ? 0.9 : 0.8,
+          },
+        ]}
+      />
+      <LinearGradient
+        start={{x: 0, y: 0.5}}
+        end={{x: 0, y: 1.5}}
+        colors={
+          colorScheme === 'light'
+            ? ['#f9f9f900', '#f9f9f9FF']
+            : ['#26262600', '#262626FF']
+        }
+        style={styles.heroGradient}
+      />
+      <View style={styles.pageHeader}>
+        <View style={styles.pageTitleContainer}>
+          <Text
+            accessible
+            accessibilityRole={'header'}
+            style={styles.pageTitle}>
+            React Native Gallery
+          </Text>
+        </View>
+        <TileGallery />
+      </View>
+    </View>
+  );
+};
 
 const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   return (
-    <View accessibilityLabel={props.heading + 'components'}>
+    <View
+      accessibilityLabel={props.heading + 'components'}
+      accessible={true}
+      accessibilityRole="none">
       <Text accessibilityRole="header" style={styles.heading}>
         {props.heading}
       </Text>
@@ -66,109 +143,48 @@ const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
   );
 };
 
-const HomeComponentTile = (props: {index: number; navigation}) => {
+const RenderHomeComponentTiles = (indicies: number[], navigation) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
 
-  return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={
-        RNGalleryList[props.index].key === 'Button'
-          ? 'Button1 control'
-          : RNGalleryList[props.index].key + ' control'
-      }
-      accessibilityHint={
-        'click to view the ' + RNGalleryList[props.index].key + ' sample page'
-      }
-      style={({pressed}) => [
-        {
-          backgroundColor: colors.background,
-          borderColor: colors.border,
-          borderWidth: 1,
-          borderBottomWidth: pressed ? 1 : 2,
-          paddingTop: 5,
-          paddingBottom: 5,
-          borderRadius: 4,
-          alignItems: 'center',
-          flexDirection: 'row',
-          marginRight: 5,
-          marginBottom: 5,
-        },
-      ]}
-      onPress={() => {
-        props.navigation.navigate(RNGalleryList[props.index].key);
-      }}>
-      <Text style={styles.icon}>{RNGalleryList[props.index].icon}</Text>
-      <Text style={[styles.text, {paddingRight: 10}]}>
-        {RNGalleryList[props.index].key}
-      </Text>
-    </Pressable>
-  );
-};
-
-const RenderHomeComponentTiles = (indicies: number[], navigation) => {
   var homeComponentTiles = [];
   for (var i = 0; i < indicies.length; i++) {
+    let index = indicies[i];
+    let item = RNGalleryList[index];
     homeComponentTiles.push(
       <HomeComponentTile
         key={indicies[i]}
-        index={indicies[i]}
+        item={item}
         navigation={navigation}
       />,
     );
   }
-  return homeComponentTiles;
+
+  return <View style={styles.controlItems}>{homeComponentTiles}</View>;
 };
 
 const RenderPageContent = ({navigation}) => {
-  var basicInput = [];
-  var dateAndTime = [];
-  var dialogsAndFlyouts = [];
-  var layout = [];
-  var text = [];
-  var statusAndInfo = [];
-  var media = [];
-  for (var i = 0; i < RNGalleryList.length; i++) {
-    if (RNGalleryList[i].type === 'Basic Input') {
-      basicInput.push(i);
-    } else if (RNGalleryList[i].type === 'Date and Time') {
-      dateAndTime.push(i);
-    } else if (RNGalleryList[i].type === 'Dialogs and Flyouts') {
-      dialogsAndFlyouts.push(i);
-    } else if (RNGalleryList[i].type === 'Layout') {
-      layout.push(i);
-    } else if (RNGalleryList[i].type === 'Text') {
-      text.push(i);
-    } else if (RNGalleryList[i].type === 'Status and Info') {
-      statusAndInfo.push(i);
-    } else if (RNGalleryList[i].type === 'Media') {
-      media.push(i);
-    }
-  }
+  let categoryMap = new Map();
+  RNGalleryCategories.forEach((category) => {
+    categoryMap.set(category.label, []);
+  });
+
+  RNGalleryList.forEach((item, index) => {
+    let category = item.type;
+    let categoryList = categoryMap.get(category);
+    categoryList?.push(index);
+  });
+
   return (
     <ScrollView>
-      <HomeContainer heading="Basic Input">
-        {RenderHomeComponentTiles(basicInput, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Date and Time">
-        {RenderHomeComponentTiles(dateAndTime, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Dialogs and Flyouts">
-        {RenderHomeComponentTiles(dialogsAndFlyouts, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Layout">
-        {RenderHomeComponentTiles(layout, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Text">
-        {RenderHomeComponentTiles(text, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Status and Info">
-        {RenderHomeComponentTiles(statusAndInfo, navigation)}
-      </HomeContainer>
-      <HomeContainer heading="Media">
-        {RenderHomeComponentTiles(media, navigation)}
-      </HomeContainer>
+      {RNGalleryCategories.map((category) => (
+        <HomeContainer key={category.label} heading={category.label}>
+          {RenderHomeComponentTiles(
+            categoryMap.get(category.label),
+            navigation,
+          )}
+        </HomeContainer>
+      ))}
     </ScrollView>
   );
 };
@@ -180,15 +196,13 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
 
   return isScreenFocused ? (
     <View>
-      <ScreenWrapper style={styles.container}>
-        <Text accessible accessibilityRole={'header'} style={styles.title}>
-          Welcome to React Native Gallery!
-        </Text>
-        <Text style={styles.description}>
-          React Native Gallery is a React Native Windows application which
-          displays the range of React Native components with Windows support.
-        </Text>
-        <RenderPageContent navigation={navigation} />
+      <ScreenWrapper doNotInset={true}>
+        <ScrollView>
+          <PageTitle />
+          <View style={styles.container}>
+            <RenderPageContent navigation={navigation} />
+          </View>
+        </ScrollView>
       </ScreenWrapper>
     </View>
   ) : (

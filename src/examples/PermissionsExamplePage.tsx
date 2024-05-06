@@ -120,7 +120,7 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
                 console.log(err);
               }
             }}
-            color={colors.primary}
+            color="rgb(52, 122, 226)"
             title="Request"
             disabled={status === 'unavailable' || status === 'blocked'}
             accessibilityLabel={'Request' + perm}
