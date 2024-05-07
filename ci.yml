@@ -33,7 +33,7 @@ variables:
 
 pool:
   name: rnw-pool-4
-  demands: ImageOverride -equals rnw-img-vs2022
+  demands: ImageOverride -equals rnw-img-vs2022-node18
 
 steps:
   - checkout: self
