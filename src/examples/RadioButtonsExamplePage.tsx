@@ -32,7 +32,7 @@ export const RadioButtonsExamplePage: React.FunctionComponent<{}> = () => {
       title="Radio Buttons"
       description="Use radio buttons to let a user choose between mutually exclusive, related options."
       componentType="Community"
-      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/LinearGradientExamplePage.tsx"
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/RadioButtonsExamplePage.tsx"
       documentation={[
         {
           label: 'Radio Buttons Group',
