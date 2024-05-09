@@ -69,7 +69,7 @@ steps:
   - task: CmdLine@2
     displayName: midgard-yarn (faster yarn install)
     inputs:
-      script: npx midgard-yarn@1.23.14 --pure-lockfile
+      script: midgard-yarn --ignore-scripts --frozen-lockfile
 
   - task: CmdLine@2
     displayName: Lint and Type Checks
