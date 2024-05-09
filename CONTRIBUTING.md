@@ -45,21 +45,9 @@ Now you are done! Celebrate! Thank you for your contribution!
 
 ![gallery_datepicker](https://user-images.githubusercontent.com/34109996/108123330-86734180-705a-11eb-8bea-409f017ab781.PNG)
 
-To add a sample page:
+To add a sample page you'll need to:
 
-1. Author your page as a standard RN component and export the component. See https://github.com/microsoft/RNGallery/tree/main/src/examples for existing sample pages
-2. Add an entry to the array in the [RNGalleryList](https://github.com/microsoft/RNGallery/blob/f592dac5969f054dad4837929d214c2fd63495a5/src/RNGalleryList.ts#L1)
+1. Author your page as a standard RN component that uses 'Page' and 'Example' components for structure. See [./src/examples/](https://github.com/microsoft/RNGallery/tree/main/src/examples) for existing sample pages
+2. Add an entry to the array in [RNGalleryList](https://github.com/microsoft/RNGallery/blob/f592dac5969f054dad4837929d214c2fd63495a5/src/RNGalleryList.ts#L1)
 
-```
-import {FooExamplePage} from './examples/FooExamplePage';
-
-export const RNGalleryList: Array<IRNGalleryExample> = [
-  ...
-  {
-    key: 'FooExamplePage',
-    component: FooExamplePage,
-  },
-];
-```
-
-It's that simple! The app will pick up your new sample page, add an item in the navigation draw for it, and navigate to your page when the user clicks on it. If you want a more detailed set of instructions on how to add a page visit [here](https://github.com/microsoft/react-native-gallery/wiki/Add-a-Component-Page).
+For more detailed instructions on how to add a page visit [here](https://github.com/microsoft/react-native-gallery/wiki/Add-a-Component-Page).
