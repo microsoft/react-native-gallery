@@ -1,0 +1,28 @@
+diff --git a/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj b/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
+index 0fdeca0..9ab5fb9 100644
+--- a/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
++++ b/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
+@@ -26,12 +26,10 @@
+     <AppContainerApplication>true</AppContainerApplication>
+     <ApplicationType>Windows Store</ApplicationType>
+     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+-    <WindowsTargetPlatformMinVersion>10.0.22621.0</WindowsTargetPlatformMinVersion>
+   </PropertyGroup>
+   <Import Project="$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.WindowsSdk.Default.props" Condition="Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.WindowsSdk.Default.props')" />
+   <PropertyGroup Label="Fallback Windows SDK Versions">
+-    <WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)'=='' Or $([MSBuild]::VersionLessThan('$(WindowsTargetPlatformVersion)', '10.0.18362.0'))">10.0.18362.0</WindowsTargetPlatformVersion>
++    <WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)'==''">10.0.18362.0</WindowsTargetPlatformVersion>
+     <WindowsTargetPlatformMinVersion Condition=" '$(WindowsTargetPlatformMinVersion)' == '' ">10.0.16299.0</WindowsTargetPlatformMinVersion>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+@@ -122,6 +120,9 @@
+     <ClCompile>
+       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+     </ClCompile>
++    <Link>
++      <AdditionalDependencies>dxguid.lib;WindowsApp.lib;%(AdditionalDependencies)</AdditionalDependencies>
++    </Link>
+   </ItemDefinitionGroup>
+   <ItemGroup>
+     <ClInclude Include="BrushView.h" />

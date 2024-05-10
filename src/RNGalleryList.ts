@@ -40,6 +40,7 @@ import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 import {NetworkExamplePage} from './examples/NetworkExamplePage';
+import {SvgExamplePage} from './examples/SvgExamplePage';
 
 // https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
@@ -261,6 +262,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A button that can be switched between two states like a CheckBox.',
     type: 'Basic Input',
+  },
+  {
+    key: 'Svg',
+    component: SvgExamplePage,
+    textIcon: '\uE734',
+    subtitle: 'Rendering of vector graphics.',
+    type: 'Media',
+    new: true,
   },
   {
     key: 'Text',
