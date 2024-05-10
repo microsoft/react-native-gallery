@@ -71,6 +71,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeWindowsHello", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNLinearGradient", "..\node_modules\react-native-linear-gradient\windows\RNLinearGradient\RNLinearGradient\RNLinearGradient.vcxproj", "{193DF456-3F97-4CC1-A7D4-809857CC064E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNSVG", "..\node_modules\react-native-svg\windows\RNSVG\RNSVG.vcxproj", "{7ACF84EC-EFBA-4043-8E14-40B159508902}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LottieReactNative", "..\node_modules\lottie-react-native\src\windows\cppwinrt\LottieReactNative.vcxproj", "{E5A7828D-F596-4793-80EC-4C071E575C58}"
 EndProject
 Global
@@ -403,6 +405,18 @@ Global
 		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x64.Build.0 = Release|x64
 		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x86.ActiveCfg = Release|Win32
 		{193DF456-3F97-4CC1-A7D4-809857CC064E}.Release|x86.Build.0 = Release|Win32
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Debug|ARM64.Build.0 = Debug|ARM64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Debug|x64.ActiveCfg = Debug|x64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Debug|x64.Build.0 = Debug|x64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Debug|x86.ActiveCfg = Debug|Win32
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Debug|x86.Build.0 = Debug|Win32
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Release|ARM64.ActiveCfg = Release|ARM64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Release|ARM64.Build.0 = Release|ARM64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Release|x64.ActiveCfg = Release|x64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Release|x64.Build.0 = Release|x64
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Release|x86.ActiveCfg = Release|Win32
+		{7ACF84EC-EFBA-4043-8E14-40B159508902}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
