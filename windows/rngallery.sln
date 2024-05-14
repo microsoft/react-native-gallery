@@ -53,8 +53,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNCConfig", "..\node_module
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNDeviceInfoCPP", "..\node_modules\react-native-device-info\windows\RNDeviceInfoCPP\RNDeviceInfoCPP.vcxproj", "{3E3931F2-4735-4417-8CB0-33668A7314D6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNLinearGradient", "..\node_modules\react-native-linear-gradient\windows\RNLinearGradient\RNLinearGradient\RNLinearGradient.vcxproj", "{193DF456-3F97-4CC1-A7D4-809857CC064E}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPermissions", "..\node_modules\react-native-permissions\windows\RNPermissions\RNPermissions.vcxproj", "{99677B9D-A27B-4239-930E-C36C8D339C54}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RNPrint", "..\node_modules\react-native-print\windows\RNPrint\RNPrint.vcxproj", "{6F9AC236-D97D-4C75-971B-91AC99D7C23B}"
