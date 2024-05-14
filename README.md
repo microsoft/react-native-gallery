@@ -2,7 +2,7 @@
 
 Welcome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support. React Native Gallery is currently live in the Microsoft Store! Follow the link to [download](https://www.microsoft.com/en-us/p/react-native-gallery/9npg0b292h4r).
 
-![gallery_welcome](https://user-images.githubusercontent.com/34109996/115446025-777c4d00-a1cb-11eb-8a8f-c1758613c09f.png)
+![gallery_welcome](./assets/GallerySnapshot.png)
 
 # Building React Native Gallery
 
