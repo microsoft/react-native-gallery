@@ -155,15 +155,10 @@ exports[`Button Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Button
@@ -1672,15 +1667,10 @@ exports[`CheckBox Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Checkbox
@@ -3595,15 +3585,10 @@ exports[`Clipboard Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Clipboard
@@ -4711,15 +4696,10 @@ exports[`Config Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Config Variables
@@ -5458,15 +5438,10 @@ exports[`DeviceInfo Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Device Info
@@ -6522,15 +6497,10 @@ exports[`Expander Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Expander
@@ -9347,15 +9317,10 @@ exports[`FlatList Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         FlatList
@@ -11844,15 +11809,10 @@ exports[`Flyout Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Flyout
@@ -15376,15 +15336,10 @@ exports[`Hello Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Windows Hello
@@ -16899,15 +16854,10 @@ exports[`Image Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Image
@@ -18830,15 +18780,10 @@ exports[`Networking Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Networking
@@ -22335,15 +22280,10 @@ exports[`Picker Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Picker
@@ -24368,15 +24308,10 @@ exports[`Popup Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Popup
@@ -28147,15 +28082,10 @@ exports[`Pressable Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Pressable
@@ -30548,15 +30478,10 @@ exports[`Print Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Print
@@ -31248,15 +31173,10 @@ exports[`ProgressView Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         ProgressView
@@ -32029,6 +31949,1108 @@ exports[`ProgressView Example Page 1`] = `
 </View>
 `;
 
+exports[`SVG Example Page 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#f9f9f9",
+      "flexDirection": "row",
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessibilityLabel="Navigation bar"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    disabled={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": {
+          "windowsbrush": [
+            "NavigationViewDefaultPaneBackground",
+          ],
+        },
+        "height": "100%",
+        "paddingBottom": 20,
+        "width": 48,
+      }
+    }
+  >
+    <View>
+      <View
+        accessibilityLabel="Navigation bar hamburger icon"
+        accessibilityRole="button"
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "borderRadius": 3,
+            "height": 34,
+            "justifyContent": "center",
+            "margin": 5,
+            "width": 38,
+          }
+        }
+        tooltip="Expand Menu"
+      >
+        <Text
+          style={
+            {
+              "color": {
+                "windowsbrush": [
+                  "TextControlForeground",
+                ],
+              },
+              "fontFamily": "Segoe MDL2 Assets",
+              "fontSize": 16,
+            }
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "stretch",
+          "borderColor": {
+            "windowsbrush": [
+              "SurfaceStrokeColorFlyoutBrush",
+            ],
+          },
+          "borderLeftWidth": 1,
+          "borderTopLeftRadius": 8,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": "100%",
+        },
+        {
+          "paddingLeft": 36,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+          "marginTop": 44,
+          "paddingRight": 20,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="header"
+        accessible={true}
+        style={
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
+        }
+      >
+        SVG
+      </Text>
+      <View>
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "borderRadius": 3,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "margin": 2,
+                "paddingBottom": 5,
+                "paddingLeft": 10,
+                "paddingRight": 10,
+                "paddingTop": 5,
+              },
+              {
+                "backgroundColor": {
+                  "windowsbrush": [
+                    "AccentFillColorDefaultBrush",
+                  ],
+                },
+              },
+            ]
+          }
+          tooltip="This component is not a part of React Native core. The package for this component must be explicitly added in order to have access to this component in a React Native project."
+        >
+          <Text
+            style={
+              [
+                {
+                  "fontSize": 15,
+                  "fontWeight": "400",
+                  "paddingRight": 4,
+                },
+                {
+                  "color": {
+                    "windowsbrush": [
+                      "TextOnAccentFillColorPrimaryBrush",
+                    ],
+                  },
+                },
+              ]
+            }
+          >
+            Community Module
+          </Text>
+          <XamlControl
+            foreground={
+              {
+                "windowsbrush": [
+                  "TextOnAccentFillColorPrimaryBrush",
+                ],
+              }
+            }
+            symbol={57637}
+            type="Windows.UI.Xaml.Controls.SymbolIcon"
+          />
+        </View>
+      </View>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "paddingRight": 20,
+          },
+          {
+            "color": "rgb(28, 28, 30)",
+          },
+        ]
+      }
+    >
+      A component which renders vector graphics.
+    </Text>
+    <RCTScrollView
+      style={
+        {
+          "paddingRight": 20,
+        }
+      }
+    >
+      <View>
+        <View>
+          <Text
+            accessibilityRole="header"
+            style={
+              {
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 20,
+                "marginBottom": 10,
+                "marginTop": 30,
+              }
+            }
+          >
+            A simple Image from web source.
+          </Text>
+          <View
+            style={
+              {
+                "borderColor": "rgb(216, 216, 216)",
+                "borderRadius": 8,
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "SolidBackgroundFillColorSecondaryBrush",
+                    ],
+                  },
+                  "padding": 15,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight="200px"
+                bbWidth="200px"
+                focusable={false}
+                height="200px"
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  [
+                    {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    {
+                      "flex": 0,
+                      "height": 200,
+                      "width": 200,
+                    },
+                  ]
+                }
+                vbHeight={100}
+                vbWidth={100}
+                width="200px"
+              >
+                <RNSVGGroup
+                  fill={
+                    {
+                      "payload": 4278190080,
+                      "type": 0,
+                    }
+                  }
+                >
+                  <RNSVGCircle
+                    cx="50"
+                    cy="50"
+                    fill={
+                      {
+                        "payload": 4278222848,
+                        "type": 0,
+                      }
+                    }
+                    propList={
+                      [
+                        "fill",
+                        "stroke",
+                        "strokeWidth",
+                      ]
+                    }
+                    r="45"
+                    stroke={
+                      {
+                        "payload": 4278190335,
+                        "type": 0,
+                      }
+                    }
+                    strokeWidth="2.5"
+                  />
+                  <RNSVGRect
+                    fill={
+                      {
+                        "payload": 4294967040,
+                        "type": 0,
+                      }
+                    }
+                    height="70"
+                    propList={
+                      [
+                        "fill",
+                        "stroke",
+                        "strokeWidth",
+                      ]
+                    }
+                    stroke={
+                      {
+                        "payload": 4294901760,
+                        "type": 0,
+                      }
+                    }
+                    strokeWidth="2"
+                    width="70"
+                    x="15"
+                    y="15"
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+            <View
+              accessibilityLabel="Source code"
+              accessibilityRole="none"
+              accessible={true}
+              style={
+                {
+                  "backgroundColor": {
+                    "windowsbrush": [
+                      "CardBackgroundFillColorDefaultBrush",
+                    ],
+                  },
+                  "borderColor": "rgb(216, 216, 216)",
+                  "borderTopWidth": 1,
+                  "borderWidth": 0,
+                  "padding": 12,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "transparent",
+                    "flexGrow": 1,
+                    "padding": 5,
+                  }
+                }
+              >
+                <Text
+                  selectable={true}
+                  style={
+                    {
+                      "color": "#000000",
+                      "fontFamily": "Consolas",
+                    }
+                  }
+                >
+                  <Text>
+                    &lt;Svg height=
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "200px"
+                    </Text>
+                  </Text>
+                  <Text>
+                     width=
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "200px"
+                    </Text>
+                  </Text>
+                  <Text>
+                     viewBox=
+                  </Text>
+                  <Text
+                    style={
+                      {
+                        "color": "#0000FF",
+                      }
+                    }
+                  >
+                    <Text>
+                      "0 0 100 100"
+                    </Text>
+                  </Text>
+                  <Text>
+                    &gt;
+  
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Circle
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          cx
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "50"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          cy
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "50"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          r
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "45"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          stroke
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "blue"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          strokeWidth
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "2.5"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          fill
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "green"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+  /&gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text>
+                    
+  
+                  </Text>
+                  <Text
+                    style={{}}
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#0000FF",
+                        }
+                      }
+                    >
+                      <Text>
+                        &lt;
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#A31515",
+                          }
+                        }
+                      >
+                        <Text>
+                          Rect
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          x
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "15"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          y
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "15"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          width
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "70"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          height
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "70"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          stroke
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "red"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          strokeWidth
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "2"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+    
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                          }
+                        }
+                      >
+                        <Text>
+                          fill
+                        </Text>
+                      </Text>
+                      <Text>
+                        =
+                      </Text>
+                      <Text
+                        style={
+                          {
+                            "color": "#0000FF",
+                          }
+                        }
+                      >
+                        <Text>
+                          "yellow"
+                        </Text>
+                      </Text>
+                      <Text>
+                        
+  /&gt;
+                      </Text>
+                    </Text>
+                  </Text>
+                  <Text>
+                    
+&lt;/Svg&gt;
+                  </Text>
+                </Text>
+              </View>
+              <View
+                style={
+                  {
+                    "position": "absolute",
+                    "right": 12,
+                    "top": 12,
+                  }
+                }
+              >
+                <View
+                  accessibilityLabel="Copy to clipboard"
+                  accessibilityRole="button"
+                  accessibilityState={
+                    {
+                      "busy": undefined,
+                      "checked": undefined,
+                      "disabled": undefined,
+                      "expanded": undefined,
+                      "selected": undefined,
+                    }
+                  }
+                  accessibilityValue={
+                    {
+                      "max": undefined,
+                      "min": undefined,
+                      "now": undefined,
+                      "text": undefined,
+                    }
+                  }
+                  accessible={true}
+                  disabled={false}
+                  focusable={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    {
+                      "backgroundColor": {
+                        "windowsbrush": [
+                          "ControlFillColorDefaultBrush",
+                        ],
+                      },
+                      "borderColor": {
+                        "windowsbrush": [
+                          "ControlStrokeColorDefaultBrush",
+                        ],
+                      },
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "padding": 6,
+                    }
+                  }
+                  tooltip="Copy to clipboard"
+                >
+                  <Text
+                    accessible={false}
+                    style={
+                      {
+                        "color": {
+                          "windowsbrush": [
+                            "TextControlForeground",
+                          ],
+                        },
+                        "fontFamily": "Segoe MDL2 Assets",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+              "marginRight": 90,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "marginBottom": 10,
+                  "marginRight": 30,
+                  "marginTop": 30,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                style={
+                  {
+                    "color": "rgb(28, 28, 30)",
+                    "fontSize": 20,
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                View page code on Github
+              </Text>
+              <XamlControl
+                content={
+                  {
+                    "string": "Source Code",
+                  }
+                }
+                navigateUri="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/SvgExamplePage.tsx"
+                type="Windows.UI.Xaml.Controls.HyperlinkButton"
+              />
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "marginBottom": 10,
+                  "marginRight": 30,
+                  "marginTop": 30,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="header"
+                style={
+                  {
+                    "color": "rgb(28, 28, 30)",
+                    "fontSize": 20,
+                    "marginBottom": 10,
+                  }
+                }
+              >
+                Feedback
+              </Text>
+              <XamlControl
+                content={
+                  {
+                    "string": "Send feedback about this page",
+                  }
+                }
+                navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
+                type="Windows.UI.Xaml.Controls.HyperlinkButton"
+              />
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "flex-start",
+                "marginBottom": 10,
+                "marginRight": 30,
+                "marginTop": 30,
+              }
+            }
+          >
+            <Text
+              accessibilityRole="header"
+              style={
+                {
+                  "color": "rgb(28, 28, 30)",
+                  "fontSize": 20,
+                  "marginBottom": 10,
+                }
+              }
+            >
+              Documentation
+            </Text>
+            <XamlControl
+              content={
+                {
+                  "string": "Svg",
+                }
+              }
+              navigateUri="https://github.com/software-mansion/react-native-svg"
+              type="Windows.UI.Xaml.Controls.HyperlinkButton"
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`ScrollView Example Page 1`] = `
 <View
   style={
@@ -32184,15 +33206,10 @@ exports[`ScrollView Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         ScrollView
@@ -34124,15 +35141,10 @@ exports[`SensitiveInfo Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Sensitive Info
@@ -35961,15 +36973,10 @@ exports[`Slider Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Slider
@@ -37595,15 +38602,10 @@ exports[`Switch Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Switch
@@ -38612,15 +39614,10 @@ exports[`Text Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Text
@@ -41019,15 +42016,10 @@ exports[`TextInput Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         TextInput
@@ -42479,15 +43471,10 @@ exports[`TextToSpeech Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Text-to-Speech
@@ -43205,15 +44192,10 @@ exports[`TouchableHighlight Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Touchable Highlight
@@ -45021,15 +46003,10 @@ exports[`TouchableOpacity Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Touchable Opacity
@@ -48063,15 +49040,10 @@ exports[`View Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         View
@@ -52618,15 +53590,10 @@ exports[`WebView Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         WebView
@@ -53563,15 +54530,10 @@ exports[`Xaml Example Page 1`] = `
         accessibilityRole="header"
         accessible={true}
         style={
-          [
-            {
-              "fontSize": 26,
-              "fontWeight": "200",
-            },
-            {
-              "color": "rgb(28, 28, 30)",
-            },
-          ]
+          {
+            "fontSize": 28,
+            "fontWeight": "600",
+          }
         }
       >
         Xaml

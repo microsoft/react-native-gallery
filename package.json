@@ -43,6 +43,7 @@
     "react-native-safe-area-context": "^4.2.4",
     "react-native-screens": "^2.9.0",
     "react-native-sensitive-info": "6.0.0-alpha.9",
+    "react-native-svg": "^15.2.0",
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^13.2.2",

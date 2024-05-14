@@ -38,6 +38,7 @@ import {ExpanderExamplePage} from '../src/examples/ExpanderExamplePage';
 // Unable to import: {export * from './types'; SyntaxError: Unexpected token 'export'
 //import {RadioButtonsExamplePage} from '../src/examples/RadioButtonsExamplePage';
 import {NetworkExamplePage} from '../src/examples/NetworkExamplePage';
+import {SvgExamplePage} from '../src/examples/SvgExamplePage';
 import {View} from 'react-native';
 
 function Control() {
@@ -171,6 +172,11 @@ test('SensitiveInfo Example Page', () => {
 
 test('Slider Example Page', () => {
   const tree = create(<SliderExamplePage />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('SVG Example Page', () => {
+  const tree = create(<SvgExamplePage />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
