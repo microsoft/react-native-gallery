@@ -27,6 +27,7 @@
     "@types/": "react-navigation/drawer",
     "@types/jest": "^29.5.3",
     "@wwimmo/react-native-sketch-canvas": "^0.8.5",
+    "lottie-react-native": "^5.1.6",
     "lowlight": "^1.17.0",
     "patch-package": "^7.0.0",
     "postinstall-postinstall": "^2.1.0",

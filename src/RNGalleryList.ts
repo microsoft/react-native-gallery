@@ -41,6 +41,7 @@ import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage'
 import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 import {NetworkExamplePage} from './examples/NetworkExamplePage';
 import {SvgExamplePage} from './examples/SvgExamplePage';
+import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage';
 
 // https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
@@ -362,6 +363,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     textIcon: '\uE70F',
     type: 'Layout',
     recentlyUpdated: true,
+  },
+  {
+    key: 'LottieAnimations',
+    component: LottieAnimationsExamplePage,
+    textIcon: '\uE78A',
+    type: 'Media',
   },
 ];
 
