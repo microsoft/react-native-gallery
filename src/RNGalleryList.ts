@@ -3,6 +3,7 @@ import React from 'react';
 import type {ImageSourcePropType} from 'react-native';
 import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
+import {ComponentListPage} from './ComponentListPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
@@ -80,6 +81,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Settings',
     component: SettingsPage,
     textIcon: '\uE713',
+    type: '',
+  },
+  {
+    key: 'All samples',
+    component: ComponentListPage,
+    textIcon: '\uE71D',
     type: '',
   },
   {
@@ -370,6 +377,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     textIcon: '\uE78A',
     type: 'Media',
   },
+  ...RNGalleryCategories.map((category) => ({
+    key: `Category: ${category.label}`,
+    component: ComponentListPage,
+    textIcon: category.icon,
+    type: '',
+  })),
 ];
 
 export default RNGalleryList;

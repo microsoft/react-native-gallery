@@ -75,6 +75,13 @@
           "fmt": "[1.0.0, )"
         }
       },
+      "lottiereactnative": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.ReactNative": "[1.0.0, )",
+          "Microsoft.UI.Xaml": "[2.8.0, )"
+        }
+      },
       "microsoft.reactnative": {
         "type": "Project",
         "dependencies": {
@@ -179,6 +186,13 @@
         }
       },
       "rnsketchcanvas": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.ReactNative": "[1.0.0, )",
+          "Microsoft.UI.Xaml": "[2.8.0, )"
+        }
+      },
+      "rnsvg": {
         "type": "Project",
         "dependencies": {
           "Microsoft.ReactNative": "[1.0.0, )",

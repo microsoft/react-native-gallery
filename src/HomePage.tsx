@@ -5,26 +5,18 @@ import {
   Text,
   ScrollView,
   Image,
-  PlatformColor,
   useColorScheme,
 } from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from '@react-navigation/native';
-import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
+import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
-import {HomeComponentTile} from './components/ControlItem';
 import {TileGallery} from './components/TileGallery';
+import {ListOfComponents} from './ComponentListPage';
 import LinearGradient from 'react-native-linear-gradient';
 
 const createStyles = () =>
   StyleSheet.create({
-    heading: {
-      marginTop: 30,
-      marginBottom: 10,
-      fontSize: 20,
-      fontWeight: '600',
-      color: PlatformColor('TextFillColorPrimaryBrush'),
-    },
     container: {
       padding: 10,
       paddingBottom: 40,
@@ -36,19 +28,9 @@ const createStyles = () =>
     scrollView: {
       paddingRight: 20,
     },
-    homeContainer: {
-      alignItems: 'flex-start',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-    },
     icon: {
       fontFamily: 'Segoe MDL2 Assets',
       fontSize: 16,
-    },
-    controlItems: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      gap: 12,
     },
     heroGradient: {
       position: 'absolute',
@@ -127,68 +109,6 @@ const PageTitle = () => {
   );
 };
 
-const HomeContainer = (props: {heading: string; children: React.ReactNode}) => {
-  const {colors} = useTheme();
-  const styles = createStyles(colors);
-  return (
-    <View
-      accessibilityLabel={props.heading + 'components'}
-      accessible={true}
-      accessibilityRole="none">
-      <Text accessibilityRole="header" style={styles.heading}>
-        {props.heading}
-      </Text>
-      <View style={styles.homeContainer}>{props.children}</View>
-    </View>
-  );
-};
-
-const RenderHomeComponentTiles = (indicies: number[], navigation) => {
-  const {colors} = useTheme();
-  const styles = createStyles(colors);
-
-  var homeComponentTiles = [];
-  for (var i = 0; i < indicies.length; i++) {
-    let index = indicies[i];
-    let item = RNGalleryList[index];
-    homeComponentTiles.push(
-      <HomeComponentTile
-        key={indicies[i]}
-        item={item}
-        navigation={navigation}
-      />,
-    );
-  }
-
-  return <View style={styles.controlItems}>{homeComponentTiles}</View>;
-};
-
-const RenderPageContent = ({navigation}) => {
-  let categoryMap = new Map();
-  RNGalleryCategories.forEach((category) => {
-    categoryMap.set(category.label, []);
-  });
-
-  RNGalleryList.forEach((item, index) => {
-    let category = item.type;
-    let categoryList = categoryMap.get(category);
-    categoryList?.push(index);
-  });
-
-  return (
-    <ScrollView>
-      {RNGalleryCategories.map((category) => (
-        <HomeContainer key={category.label} heading={category.label}>
-          {RenderHomeComponentTiles(
-            categoryMap.get(category.label),
-            navigation,
-          )}
-        </HomeContainer>
-      ))}
-    </ScrollView>
-  );
-};
-
 export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
@@ -200,7 +120,16 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
         <ScrollView>
           <PageTitle />
           <View style={styles.container}>
-            <RenderPageContent navigation={navigation} />
+            <ListOfComponents
+              heading="Recently added samples"
+              items={RNGalleryList.filter((item) => item.new)}
+              navigation={navigation}
+            />
+            <ListOfComponents
+              heading="Recently updated samples"
+              items={RNGalleryList.filter((item) => item.recentlyUpdated)}
+              navigation={navigation}
+            />
           </View>
         </ScrollView>
       </ScreenWrapper>
