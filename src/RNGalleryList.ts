@@ -3,6 +3,7 @@ import React from 'react';
 import type {ImageSourcePropType} from 'react-native';
 import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
+import {ComponentListPage} from './ComponentListPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
@@ -83,6 +84,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: '',
   },
   {
+    key: 'All samples',
+    component: ComponentListPage,
+    textIcon: '\uE71D',
+    type: '',
+  },
+  {
     key: 'Button',
     component: ButtonExamplePage,
     textIcon: '\uE815',
@@ -103,6 +110,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ClipboardExamplePage,
     textIcon: '\uE8C8',
     imageIcon: require('../assets/ControlImages/Clipboard.png'),
+    subtitle: 'Copy and paste to and from the system Clipboard.',
     type: 'System',
     new: true,
   },
@@ -140,6 +148,8 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: FlatListExamplePage,
     textIcon: '\uE8A4',
     imageIcon: require('../assets/ControlImages/ListView.png'),
+    subtitle:
+      'A performant interface for rendering basic, flat lists, supporting the most handy features.',
     type: 'Collections',
   },
   {
@@ -163,6 +173,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: LinearGradientExamplePage,
     textIcon: '\uE790',
     type: 'Media',
+    subtitle: 'Render a horizontal or vertical color gradient.',
     new: true,
   },
   {
@@ -170,6 +181,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: NetworkExamplePage,
     textIcon: '\uE704',
     type: 'Status and Info',
+    subtitle: 'Load resources from a remote URL.',
     new: true,
   },
   {
@@ -191,6 +203,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: PopupExamplePage,
     textIcon: '\uE75A',
     imageIcon: require('../assets/ControlImages/Flyout.png'),
+    subtitle: 'Displays content on top of existing content.',
     type: 'Dialogs & flyouts',
   },
   {
@@ -198,6 +211,8 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: PressableExamplePage,
     textIcon: '\uE815',
     imageIcon: require('../assets/ControlImages/Button.png'),
+    subtitle:
+      'A component that can detect various stages of press interactions on any of its defined children.',
     type: 'Basic Input',
   },
   {
@@ -307,18 +322,22 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'TouchableHighlight',
     component: TouchableHighlightExamplePage,
     textIcon: '\uEDA4',
+    subtitle: 'A legacy wrapper for making views respond to touches.',
     type: 'Legacy',
   },
   {
     key: 'TouchableOpacity',
     component: TouchableOpacityExamplePage,
     textIcon: '\uEDA4',
+    subtitle: 'A legacy wrapper for making views respond to touches.',
     type: 'Legacy',
   },
   {
     key: 'TouchableWithoutFeedback',
     component: TouchableWithoutFeedbackExamplePage,
     textIcon: '\uEDA4',
+    subtitle:
+      'A legacy wrapper for making views respond to touches without any visual feedback (not recommended).',
     type: 'Legacy',
   },
   {
@@ -333,6 +352,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ViewExamplePage,
     textIcon: '\uECA5',
     imageIcon: require('../assets/ControlImages/Canvas.png'),
+    subtitle: 'The most fundamental component for building a UI',
     type: 'Layout',
   },
   {
@@ -355,12 +375,15 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: VirtualizedListExamplePage,
     textIcon: '\uE8A4',
     imageIcon: require('../assets/ControlImages/ListView.png'),
+    subtitle:
+      'The base implementation for FlatList and SectionList, which can be used as alternative if you need more flexibility.',
     type: 'Collections',
   },
   {
     key: 'Xaml',
     component: XamlExamplePage,
     textIcon: '\uE70F',
+    subtitle: 'Directly access any native XAML control.',
     type: 'Layout',
     recentlyUpdated: true,
   },
@@ -373,6 +396,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'An element to render and control playback of motion graphics.',
     new: true,
   },
+  ...RNGalleryCategories.map((category) => ({
+    key: `Category: ${category.label}`,
+    component: ComponentListPage,
+    textIcon: category.icon,
+    type: '',
+  })),
 ];
 
 export default RNGalleryList;

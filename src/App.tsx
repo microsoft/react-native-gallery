@@ -51,7 +51,10 @@ const styles = StyleSheet.create({
     height: 1,
   },
   indentContainer: {
-    width: 30,
+    width: 40,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    paddingRight: 10,
   },
   category: {
     gap: 4,
@@ -59,6 +62,14 @@ const styles = StyleSheet.create({
   expandedChevron: {
     flexGrow: 1,
     alignItems: 'flex-end',
+  },
+  navigationItemPill: {
+    backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+    borderRadius: 2,
+    right: 6,
+    width: 3,
+    height: 16,
+    alignSelf: 'flex-start',
   },
 });
 
@@ -75,23 +86,40 @@ const createDrawerListItemStyles = (isHovered: boolean, isPressed: boolean) =>
         : PlatformColor('ControlStrokeColorDefaultBrush'),
       flexDirection: 'row',
       alignItems: 'center',
-      paddingHorizontal: 20,
+      paddingRight: 10,
       paddingVertical: 8,
       gap: 4,
     },
   });
+
+type SelectedNavigationItemPillProps = {
+  currentRoute: string;
+  itemRoute: string;
+};
+const SelectedNavigationItemPill = ({
+  currentRoute,
+  itemRoute,
+}: SelectedNavigationItemPillProps) => {
+  if (currentRoute !== itemRoute) {
+    return <View />;
+  }
+
+  return <View style={styles.navigationItemPill} />;
+};
 
 type DrawerListItemProps = {
   route: string;
   label: string;
   icon?: string;
   navigation: any;
+  currentRoute: string;
 };
 const DrawerListItem = ({
   route,
   label,
   icon,
   navigation,
+  currentRoute,
 }: DrawerListItemProps) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
@@ -108,6 +136,10 @@ const DrawerListItem = ({
       accessibilityLabel={label}
       style={localStyles.drawerListItem}>
       <View style={styles.indentContainer}>
+        <SelectedNavigationItemPill
+          currentRoute={currentRoute}
+          itemRoute={route}
+        />
         <Text accessible={false} style={styles.icon}>
           {icon}
         </Text>
@@ -124,17 +156,37 @@ type DrawerCollapsibleCategoryProps = {
   categoryIcon: string;
   items: any;
   navigation: any;
+  currentRoute: string;
+  containsCurrentRoute: boolean;
 };
 const DrawerCollapsibleCategory = ({
   categoryLabel,
   categoryIcon,
   items,
   navigation,
+  currentRoute,
+  containsCurrentRoute,
 }: DrawerCollapsibleCategoryProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const categoryRoute = `Category: ${categoryLabel}`;
+  const isCurrentRoute = currentRoute === categoryRoute;
+  const [isExpanded, setIsExpanded] = React.useState(
+    containsCurrentRoute || isCurrentRoute,
+  );
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
   const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+
+  const onPress = () => {
+    if (isExpanded && containsCurrentRoute) {
+      // Drawer will automatically close when navigating to a new route, by design:
+      // https://github.com/react-navigation/react-navigation/pull/4394
+      // As a workaround, we allow you to get a category page when the category
+      // is expanded but you aren't on the category page now.
+      navigation.navigate(categoryRoute, {category: categoryLabel});
+    } else {
+      setIsExpanded(!isExpanded);
+    }
+  };
 
   return (
     <View
@@ -145,13 +197,17 @@ const DrawerCollapsibleCategory = ({
       onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
       <Pressable
         style={localStyles.drawerListItem}
-        onPress={() => setIsExpanded(!isExpanded)}
+        onPress={() => onPress()}
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
         accessible={false}>
         <View style={styles.indentContainer}>
+          <SelectedNavigationItemPill
+            currentRoute={currentRoute}
+            itemRoute={categoryRoute}
+          />
           <Text accessible={false} style={styles.icon}>
             {categoryIcon}
           </Text>
@@ -172,6 +228,7 @@ const DrawerCollapsibleCategory = ({
             route={item.label}
             label={item.label}
             navigation={navigation}
+            currentRoute={currentRoute}
           />
         ))}
     </View>
@@ -182,6 +239,8 @@ const DrawerListView = (props) => {
   // Home and Settings drawer items have already been manually loaded.
   const filterPredicate = (item) => item.type !== '';
   const filteredList = RNGalleryList.filter(filterPredicate);
+
+  let categoryWithCurrentRoute = '';
 
   // Create an array for each category
   let categoryMap = new Map();
@@ -194,6 +253,9 @@ const DrawerListView = (props) => {
     let category = item.type;
     let categoryList = categoryMap.get(category);
     categoryList?.push({label: item.key, icon: item.icon});
+    if (item.key === props.currentRoute) {
+      categoryWithCurrentRoute = category;
+    }
   });
 
   return (
@@ -204,6 +266,8 @@ const DrawerListView = (props) => {
           categoryIcon={category.icon}
           items={categoryMap.get(category.label)}
           navigation={props.navigation}
+          currentRoute={props.currentRoute}
+          containsCurrentRoute={categoryWithCurrentRoute === category.label}
         />
       ))}
     </View>
@@ -213,6 +277,9 @@ const DrawerListView = (props) => {
 function CustomDrawerContent({navigation}) {
   const isDrawerOpen =
     getDrawerStatusFromState(navigation.getState()) === 'open';
+
+  const navigationState = navigation.getState();
+  const currentRoute = navigationState.routeNames[navigationState.index];
 
   if (!isDrawerOpen) {
     return <View />;
@@ -232,10 +299,18 @@ function CustomDrawerContent({navigation}) {
         label="Home"
         icon="&#xE80F;"
         navigation={navigation}
+        currentRoute={currentRoute}
+      />
+      <DrawerListItem
+        route="All samples"
+        label="All samples"
+        icon="&#xE71D;"
+        navigation={navigation}
+        currentRoute={currentRoute}
       />
       <View style={styles.drawerDivider} />
       <ScrollView>
-        <DrawerListView navigation={navigation} />
+        <DrawerListView navigation={navigation} currentRoute={currentRoute} />
       </ScrollView>
       <View style={styles.drawerDivider} />
       <DrawerListItem
@@ -243,6 +318,7 @@ function CustomDrawerContent({navigation}) {
         label="Settings"
         icon="&#xE713;"
         navigation={navigation}
+        currentRoute={currentRoute}
       />
     </View>
   );
@@ -255,11 +331,11 @@ function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{headerShown: false}}>
-      {RNGalleryList.map((item, i) => (
+      {RNGalleryList.map((item) => (
         <Drawer.Screen
-          name={RNGalleryList[i].key}
-          key={RNGalleryList[i].key}
-          component={RNGalleryList[i].component}
+          name={item.key}
+          key={item.key}
+          component={item.component}
         />
       ))}
     </Drawer.Navigator>
