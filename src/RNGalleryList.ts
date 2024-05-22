@@ -368,7 +368,10 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'LottieAnimations',
     component: LottieAnimationsExamplePage,
     textIcon: '\uE78A',
+    imageIcon: require('../assets/ControlImages/AnimatedVisualPlayer.png'),
     type: 'Media',
+    subtitle: 'An element to render and control playback of motion graphics.',
+    new: true,
   },
 ];
 
