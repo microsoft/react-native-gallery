@@ -13,7 +13,7 @@ import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
-import LinearGradient from 'react-native-linear-gradient';
+// import LinearGradient from 'react-native-linear-gradient';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -65,7 +65,7 @@ const PageTitle = () => {
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View>
-      <LinearGradient
+      {/* <LinearGradient
         start={{x: 0.5, y: 0}}
         end={{x: 0.5, y: 1}}
         colors={
@@ -74,7 +74,7 @@ const PageTitle = () => {
             : ['#020B20', '#020B20']
         }
         style={styles.heroGradient}
-      />
+      /> */}
       <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
@@ -84,7 +84,7 @@ const PageTitle = () => {
           },
         ]}
       />
-      <LinearGradient
+      {/* <LinearGradient
         start={{x: 0, y: 0.5}}
         end={{x: 0, y: 1.5}}
         colors={
@@ -93,7 +93,7 @@ const PageTitle = () => {
             : ['#26262600', '#262626FF']
         }
         style={styles.heroGradient}
-      />
+      /> */}
       <View style={styles.pageHeader}>
         <View style={styles.pageTitleContainer}>
           <Text
