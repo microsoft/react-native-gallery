@@ -92,11 +92,11 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
   </SettingContainer>*/}
         <SettingContainer heading="About">
           <Text style={styles.text}>Source code: </Text>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery">
+          {/* <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery">
             <TextBlock textDecorations={TextDecorations.Underline}>
               <Run text="React Native Gallery" />
             </TextBlock>
-          </HyperlinkButton>
+          </HyperlinkButton> */}
           <Text style={styles.text}>
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery

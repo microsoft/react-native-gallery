@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useTheme} from '@react-navigation/native';
 // TODO SAAD
-import {HyperlinkButton} from 'react-native-xaml';
+// import {HyperlinkButton} from 'react-native-xaml';
 
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -31,11 +31,12 @@ export function LinkTile(props: {
         {props.title}
       </Text>
       {props.links.map((hyp) => (
-        <HyperlinkButton
-          key={hyp.label}
-          content={{string: hyp.label}}
-          navigateUri={hyp.url}
-        />
+        // <HyperlinkButton
+        //   key={hyp.label}
+        //   content={{string: hyp.label}}
+        //   navigateUri={hyp.url}
+        // />
+        <Text key={hyp.label}>{hyp.label}</Text>
       ))}
     </View>
   );
