@@ -128,12 +128,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'A control that lets a user pick a date value.',
     type: 'Date & time',
   },
-  {
-    key: 'DeviceInfo',
-    component: DeviceInfoExamplePage,
-    textIcon: '\uE703',
-    type: 'Status and Info',
-  },
+  // {
+  //   key: 'DeviceInfo',
+  //   component: DeviceInfoExamplePage,
+  //   textIcon: '\uE703',
+  //   type: 'Status and Info',
+  // },
   {
     key: 'Expander',
     component: ExpanderExamplePage,
@@ -184,12 +184,13 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'Load resources from a remote URL.',
     new: true,
   },
-  {
-    key: 'Permissions',
-    component: PermissionsExamplePage,
-    textIcon: '\uED2C',
-    type: 'Status and Info',
-  },
+  // {
+  //   key: 'Permissions',
+  //   component: PermissionsExamplePage,
+  //   textIcon: '\uED2C',
+  //   fluentIcon: <Password16Regular />,
+  //   type: 'Status and Info',
+  // },
   {
     key: 'Picker',
     component: PickerExamplePage,
@@ -311,13 +312,13 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'A configurable control that lets a user pick a time value.',
     type: 'Date & time',
   },
-  {
-    key: 'TextToSpeech',
-    component: TTSExamplePage,
-    textIcon: '\uEC43',
-    imageIcon: require('../assets/ControlImages/Sound.png'),
-    type: 'Media',
-  },
+  // {
+  //   key: 'TextToSpeech',
+  //   component: TTSExamplePage,
+  //   textIcon: '\uEC43',
+  //   imageIcon: require('../assets/ControlImages/Sound.png'),
+  //   type: 'Media',
+  // },
   {
     key: 'TouchableHighlight',
     component: TouchableHighlightExamplePage,
@@ -340,13 +341,13 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'A legacy wrapper for making views respond to touches without any visual feedback (not recommended).',
     type: 'Legacy',
   },
-  {
-    key: 'TrackPlayer',
-    component: TrackPlayerExamplePage,
-    textIcon: '\uEC4F',
-    imageIcon: require('../assets/ControlImages/Sound.png'),
-    type: 'Media',
-  },
+  // {
+  //   key: 'TrackPlayer',
+  //   component: TrackPlayerExamplePage,
+  //   textIcon: '\uEC4F',
+  //   imageIcon: require('../assets/ControlImages/Sound.png'),
+  //   type: 'Media',
+  // },
   {
     key: 'View',
     component: ViewExamplePage,
