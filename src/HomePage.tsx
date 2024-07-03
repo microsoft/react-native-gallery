@@ -7,13 +7,15 @@ import {
   Image,
   useColorScheme,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from '@react-navigation/native';
 import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
-// import LinearGradient from 'react-native-linear-gradient';
+import {Svg, Defs, Stop, Rect, LinearGradient} from 'react-native-svg';
+import useHighContrastState from './hooks/useHighContrastState';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -33,9 +35,10 @@ const createStyles = () =>
       fontSize: 16,
     },
     heroGradient: {
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
+      // position: 'absolute',
+      // width: '100%',
+      // height: '100%',
+      flex: 1,
     },
     heroBackgroundImage: {
       position: 'absolute',
@@ -57,24 +60,40 @@ const createStyles = () =>
     },
   });
 
+interface BackgroundGradientProps {
+  colorStop1: ColorValue;
+  colorStop2: ColorValue;
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+}
+
 const PageTitle = () => {
   const {colors} = useTheme();
   const colorScheme = useColorScheme();
   const styles = createStyles(colors);
+  const isHighContrast = useHighContrastState();
+
+  const colorStops = isHighContrast
+    ? ['black', 'black']
+    : colorScheme === 'light'
+    ? ['#CED8E4', '#D5DBE3']
+    : // Dark
+      ['#020B20', '#020B20'];
 
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
-    <View>
-      {/* <LinearGradient
-        start={{x: 0.5, y: 0}}
-        end={{x: 0.5, y: 1}}
-        colors={
-          colorScheme === 'light'
-            ? ['#CED8E4', '#D5DBE3']
-            : ['#020B20', '#020B20']
-        }
-        style={styles.heroGradient}
-      /> */}
+    <View style={styles.heroGradient}>
+      <Svg height="100%" width="100%" style={StyleSheet.absoluteFillObject}>
+        <Defs>
+          <LinearGradient id="grad" x1={0.5} y1={0} x2={0.5} y2={1}>
+            <Stop offset="0" stopColor={colorStops[0]} />
+            <Stop offset="1" stopColor={colorStops[1]} />
+          </LinearGradient>
+        </Defs>
+        <Rect width="100%" height="100%" fill="url(#grad)" />
+      </Svg>
       <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
@@ -84,16 +103,6 @@ const PageTitle = () => {
           },
         ]}
       />
-      {/* <LinearGradient
-        start={{x: 0, y: 0.5}}
-        end={{x: 0, y: 1.5}}
-        colors={
-          colorScheme === 'light'
-            ? ['#f9f9f900', '#f9f9f9FF']
-            : ['#26262600', '#262626FF']
-        }
-        style={styles.heroGradient}
-      /> */}
       <View style={styles.pageHeader}>
         <View style={styles.pageTitleContainer}>
           <Text
