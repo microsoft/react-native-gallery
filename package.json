@@ -49,7 +49,7 @@
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^13.2.2",
     "react-native-windows": "0.74.2",
-    "react-native-xaml": "^0.0.74"
+    "react-native-xaml": "^0.0.78"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

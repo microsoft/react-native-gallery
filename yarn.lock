@@ -4586,13 +4586,6 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react-native@*":
-  version "0.66.11"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.66.11.tgz#3d138275fe9cca3b8efad990b1bee08078c3ff4d"
-  integrity sha512-DFuNMhRuyKMbJrI/s3rIuM5io+tIOK4Iq9oMzatWX5bIgfjZM86X1aA/epE0ipw1aFaoHKermK3fLG1bqFzzDQ==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-test-renderer@^18.0.0":
   version "18.0.0"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-18.0.0.tgz#7b7f69ca98821ea5501b21ba24ea7b6139da2243"
@@ -10108,14 +10101,12 @@ react-native-windows@0.74.2:
     ws "^6.2.2"
     yargs "^17.6.2"
 
-react-native-xaml@^0.0.74:
-  version "0.0.74"
-  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.74.tgz#fc747308320eb1fda6dd69f5317bfeae37686b57"
-  integrity sha512-4F/kcx2//uUTOFJpePgRyu+yRje1lk9zSIhRUY5ZRIGXkkccS109uE9J+q5LqvMU8KuDEpDElE8n3UsYHZ0pKQ==
+react-native-xaml@^0.0.78:
+  version "0.0.78"
+  resolved "https://registry.yarnpkg.com/react-native-xaml/-/react-native-xaml-0.0.78.tgz#146264bc459e1ddb645e61f0e0b69cd893d20069"
+  integrity sha512-JLey4nTc+JHpixGRz8V6GpdBOAEZrAU38AjdYo+3bU6OAXb7VBAAQs2P9moIda9cJlvgfhYYoHSAwW+cAcDkaA==
   dependencies:
     "@types/react" "*"
-    "@types/react-native" "*"
-    typescript "^4.4.3"
 
 react-native@^0.74.0:
   version "0.74.0"
@@ -11274,11 +11265,6 @@ typescript@^4.0.2:
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
   integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
-
-typescript@^4.4.3:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
-  integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
 
 ua-parser-js@^0.7.18:
   version "0.7.34"
