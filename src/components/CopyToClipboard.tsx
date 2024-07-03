@@ -1,24 +1,59 @@
 import React from 'react';
-import {Pressable, StyleSheet, PlatformColor, Text} from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  Platform,
+  PlatformColor,
+  Text,
+} from 'react-native';
+import type {ColorValue} from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
+
+const backgroundColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlFillColorDefaultBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'white',
+});
+const backgroundColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlFillColorSecondaryBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'white',
+});
+const backgroundColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlFillColorTertiaryBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'lightgray',
+});
+
+const borderColor = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorDefaultBrush'),
+  macos: 'transparent',
+  default: 'black',
+});
+
+const textColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextControlForeground'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
 
 const createButtonStyles = (isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     background: {
       backgroundColor: isPressing
-        ? PlatformColor('ControlFillColorTertiaryBrush')
+        ? backgroundColorPressed
         : isHovered
-        ? PlatformColor('ControlFillColorSecondaryBrush')
-        : PlatformColor('ControlFillColorDefaultBrush'),
+        ? backgroundColorHover
+        : backgroundColorRest,
       borderRadius: 8,
       borderWidth: 1,
-      borderColor: PlatformColor('ControlStrokeColorDefaultBrush'),
+      borderColor: borderColor,
       padding: 6,
     },
     text: {
       fontFamily: 'Segoe MDL2 Assets',
       fontSize: 16,
-      color: PlatformColor('TextControlForeground'),
+      color: textColor,
     },
   });
 
@@ -30,7 +65,7 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
   const [isPressing, setIsPressing] = React.useState(false);
   const styles = createButtonStyles(isHovered, isPressing);
 
-  const copyIcon = '\uE8C8';
+  const copyIcon = '⎘';
   const helpText = 'Copy to clipboard';
 
   return (

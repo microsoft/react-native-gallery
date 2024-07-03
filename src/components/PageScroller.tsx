@@ -3,10 +3,12 @@ import {
   FlatList,
   FlatListProps,
   Image,
+  Platform,
   PlatformColor,
   Pressable,
   View,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 
 type PagingButtonProps = {left: boolean; onPress: () => void};
 const PagingButton = ({left, onPress}: PagingButtonProps) => {
@@ -19,6 +21,30 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
 
   const tooltip = left ? 'Scroll left' : 'Scroll right';
 
+  const backgroundColorRest = Platform.select<ColorValue>({
+    windows: PlatformColor('ControlFillColorDefaultBrush'),
+    macos: PlatformColor('controlColor'),
+    default: 'white',
+  });
+
+  const backgroundColorHover = Platform.select<ColorValue>({
+    windows: PlatformColor('ControlFillColorSecondaryBrush'),
+    macos: PlatformColor('controlColor'),
+    default: 'lightgray',
+  });
+
+  const borderColorRest = Platform.select<ColorValue>({
+    windows: PlatformColor('CircleElevationBorderBrush'),
+    macos: PlatformColor('separatorColor'),
+    default: 'black',
+  });
+
+  const borderColorHover = Platform.select<ColorValue>({
+    windows: PlatformColor('ControlElevationBorderBrush'),
+    macos: PlatformColor('separatorColor'),
+    default: 'black',
+  });
+
   return (
     <Pressable
       accessibilityRole="button"
@@ -29,14 +55,10 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
       onHoverOut={() => setHover(false)}>
       <View
         style={{
-          backgroundColor: hover
-            ? PlatformColor('ControlFillColorSecondaryBrush')
-            : PlatformColor('ControlFillColorDefaultBrush'),
+          backgroundColor: hover ? backgroundColorHover : backgroundColorRest,
           borderRadius: 24,
           borderWidth: 1,
-          borderColor: hover
-            ? PlatformColor('ControlElevationBorderBrush')
-            : PlatformColor('CircleElevationBorderBrush'),
+          borderColor: hover ? borderColorHover : borderColorRest,
           alignItems: 'center',
           justifyContent: 'center',
           minWidth: 48,

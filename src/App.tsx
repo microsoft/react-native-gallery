@@ -2,11 +2,14 @@ import React from 'react';
 import {
   View,
   StyleSheet,
+  Platform,
+  PlatformColor,
   Pressable,
   Text,
   useColorScheme,
   ScrollView,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {
   createDrawerNavigator,
@@ -21,9 +24,53 @@ import {
   ThemeContext,
   ThemeSetterContext,
 } from './themes/Theme';
-import {PlatformColor} from 'react-native';
 import HighContrastTheme from './themes/HighContrastTheme';
 import useHighContrastState from './hooks/useHighContrastState';
+
+const textForegroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextControlForeground'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const accentColor = Platform.select<ColorValue>({
+  windows: PlatformColor('AccentFillColorDefaultBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'black',
+});
+
+const drawerDividerColor = Platform.select<ColorValue>({
+  windows: PlatformColor('CardStrokeColorDefaultBrush'),
+  macos: PlatformColor('gridColor'),
+  default: 'black',
+});
+
+const drawerBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('NavigationViewDefaultPaneBackground'),
+  macos: PlatformColor('controlBackgroundColor'),
+  default: 'white',
+});
+
+const drawerListItemRest = 'transparent';
+const drawerListItemPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlAltFillColorSecondaryBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'white',
+});
+const drawerListItemHovered = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlAltFillColorTertiaryBrush'),
+  default: 'white',
+});
+
+const drawerListItemBorderRest = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorDefaultBrush'),
+  default: 'transparent',
+});
+
+const drawerListItemBorderHovered = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorSecondary'),
+  default: 'transparent',
+});
 
 const styles = StyleSheet.create({
   menu: {
@@ -37,17 +84,17 @@ const styles = StyleSheet.create({
   icon: {
     fontFamily: 'Segoe MDL2 Assets',
     fontSize: 16,
-    color: PlatformColor('TextControlForeground'),
+    color: textForegroundColor,
   },
   drawer: {
-    backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+    backgroundColor: drawerBackgroundColor,
     height: '100%',
   },
   drawerText: {
-    color: PlatformColor('TextControlForeground'),
+    color: textForegroundColor,
   },
   drawerDivider: {
-    backgroundColor: PlatformColor('CardStrokeColorDefaultBrush'),
+    backgroundColor: drawerDividerColor,
     height: 1,
   },
   indentContainer: {
@@ -64,7 +111,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   navigationItemPill: {
-    backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+    backgroundColor: accentColor,
     borderRadius: 2,
     right: 6,
     width: 3,
@@ -77,13 +124,13 @@ const createDrawerListItemStyles = (isHovered: boolean, isPressed: boolean) =>
   StyleSheet.create({
     drawerListItem: {
       backgroundColor: isPressed
-        ? PlatformColor('ControlAltFillColorSecondaryBrush')
+        ? drawerListItemPressed
         : isHovered
-        ? PlatformColor('ControlAltFillColorTertiaryBrush')
-        : 'transparent',
+        ? drawerListItemHovered
+        : drawerListItemRest,
       borderColor: isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('ControlStrokeColorDefaultBrush'),
+        ? drawerListItemBorderHovered
+        : drawerListItemBorderRest,
       flexDirection: 'row',
       alignItems: 'center',
       paddingRight: 10,

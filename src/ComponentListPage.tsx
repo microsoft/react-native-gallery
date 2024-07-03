@@ -1,10 +1,23 @@
 'use strict';
-import {StyleSheet, View, Text, ScrollView, PlatformColor} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  PlatformColor,
+  Platform,
+  ColorValue,
+} from 'react-native';
 import React from 'react';
 import {useIsFocused} from '@react-navigation/native';
 import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {HomeComponentTile} from './components/ControlItem';
+
+const textColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  default: 'black',
+});
 
 const createStyles = () =>
   StyleSheet.create({
@@ -31,7 +44,7 @@ const createStyles = () =>
       marginBottom: 10,
       fontSize: 20,
       fontWeight: '600',
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: textColor,
     },
     homeContainer: {
       alignItems: 'flex-start',

@@ -5,14 +5,58 @@ import {
   Text,
   Pressable,
   Linking,
+  Platform,
   PlatformColor,
   Image,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 // TODO SAAD
 // import {PathIcon, FontIcon} from 'react-native-xaml';
 import {HorizontalListWithPageNavigation} from './PageScroller';
+
+const headerTileBackgroundColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorBaseBrush'),
+  macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  default: 'white',
+});
+
+const headerTileBackgroundColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+  macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  default: 'white',
+});
+
+const headerTileBorderColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'white',
+});
+
+const headerTileBorderColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorSecondary'),
+  macos: PlatformColor('separatorColor'),
+  default: 'white',
+});
+
+const titleColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const descriptionColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('secondaryLabelColor'),
+  default: 'black',
+});
+
+const linkColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('linkColor'),
+  default: 'blue',
+});
 
 const createStyles = (isHovered: boolean, _isPressing: boolean) =>
   StyleSheet.create({
@@ -21,11 +65,11 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       // Should use 'AcrylicInAppFillColorDefaultBrush', blocked on https://github.com/microsoft/react-native-windows/issues/8861
       // (The acrylic does work, but does not update when the theme changes)
       backgroundColor: isHovered
-        ? PlatformColor('SolidBackgroundFillColorBaseBrush')
-        : PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+        ? headerTileBackgroundColorHover
+        : headerTileBackgroundColorRest,
       borderColor: isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+        ? headerTileBorderColorHover
+        : headerTileBorderColorRest,
       borderWidth: 1,
       borderRadius: 8,
       padding: 24,
@@ -41,11 +85,11 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
     tileTitle: {
       // BodyTextBlockStyle: https://github.com/microsoft/microsoft-ui-xaml/blob/winui3/release/1.4-stable/dxaml/xcp/dxaml/themes/generic.xaml#L13278
       fontSize: 18,
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: titleColor,
     },
     tileDescription: {
       // CaptionTextBlockStyle: https://github.com/microsoft/microsoft-ui-xaml/blob/d4c4e539c55b562e78e7f026195d5b6c8af234ea/dxaml/xcp/dxaml/themes/generic.xaml#L13282
-      color: PlatformColor('TextFillColorSecondaryBrush'),
+      color: descriptionColor,
       fontSize: 12,
       flexGrow: 1,
     },
@@ -54,7 +98,7 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       alignSelf: 'flex-end',
       justifyContent: 'flex-end',
       fontSize: 18,
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: linkColor,
     },
     tileGalleryContainer: {
       flexDirection: 'row',

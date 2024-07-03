@@ -4,11 +4,31 @@ import {
   StyleSheet,
   TouchableHighlight,
   Text,
+  Platform,
   PlatformColor,
   Pressable,
   useColorScheme,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
+
+const navBarBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('NavigationViewDefaultPaneBackground'),
+  macos: PlatformColor('controlBackgroundColor'),
+  default: 'white',
+});
+
+const navItemBorderColor = Platform.select<ColorValue>({
+  windows: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'black',
+});
+
+const iconColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextControlForeground'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
 
 const createStyles = (colorScheme) =>
   StyleSheet.create({
@@ -19,7 +39,7 @@ const createStyles = (colorScheme) =>
       backgroundColor: colorScheme === 'light' ? '#f9f9f9' : '#262626',
     },
     navBar: {
-      backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+      backgroundColor: navBarBackgroundColor,
       width: 48,
       height: '100%',
       paddingBottom: 20,
@@ -30,7 +50,7 @@ const createStyles = (colorScheme) =>
       height: '100%',
       alignSelf: 'stretch',
       borderTopLeftRadius: 8,
-      borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+      borderColor: navItemBorderColor,
       borderLeftWidth: 1,
     },
     insetNavItem: {
@@ -47,7 +67,7 @@ const createStyles = (colorScheme) =>
     icon: {
       fontFamily: 'Segoe MDL2 Assets',
       fontSize: 16,
-      color: PlatformColor('TextControlForeground'),
+      color: iconColor,
     },
   });
 

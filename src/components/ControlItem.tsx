@@ -3,23 +3,77 @@ import {
   StyleSheet,
   View,
   Text,
+  Platform,
   PlatformColor,
   Pressable,
   Image,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import type {IRNGalleryExample} from './RNGalleryList';
 
+const controlItemBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+  macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  default: 'white',
+});
+
+const controlItemBorderColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('CardStrokeColorDefaultBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'black',
+});
+const controlItemBorderColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorSecondary'),
+  macos: PlatformColor('gridColor'),
+  default: 'black',
+});
+const controlItemBorderColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('gridColor'),
+  default: 'black',
+});
+
+const controlItemTitleColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const controlItemTitleColorHovered = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const controlItemSubtitleColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('secondaryLabelColor'),
+  default: 'black',
+});
+
+const accentColor = Platform.select<ColorValue>({
+  windows: PlatformColor('AccentFillColorDefaultBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'blue',
+});
+
+const textOnAccentColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextOnAccentFillColorPrimaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'white',
+});
+
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      backgroundColor: controlItemBackgroundColor,
       borderColor: isPressing
-        ? PlatformColor('TextFillColorSecondaryBrush')
+        ? controlItemBorderColorPressed
         : isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('CardStrokeColorDefaultBrush'),
+        ? controlItemBorderColorHover
+        : controlItemBorderColorRest,
       borderWidth: 1,
       borderBottomWidth: 1,
       padding: 8,
@@ -46,12 +100,12 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       // BodyStrongTextBlockStyle
       fontWeight: '600', // SemiBold
       color: isHovered
-        ? PlatformColor('TextFillColorSecondaryBrush')
-        : PlatformColor('TextFillColorPrimaryBrush'),
+        ? controlItemTitleColorRest
+        : controlItemTitleColorHovered,
     },
     controlItemSubtitle: {
       // CaptionTextBlockStyle
-      color: PlatformColor('TextFillColorSecondaryBrush'),
+      color: controlItemSubtitleColor,
       fontSize: 12,
     },
     badgeContainer: {
@@ -63,7 +117,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       width: 10,
       height: 10,
       borderRadius: 5,
-      backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+      backgroundColor: accentColor,
     },
   });
 
@@ -131,7 +185,7 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
               {
                 position: 'absolute',
                 marginTop: 28,
-                color: PlatformColor('TextOnAccentFillColorPrimaryBrush'),
+                color: textOnAccentColor,
               },
             ]}>
             {item.textIcon}

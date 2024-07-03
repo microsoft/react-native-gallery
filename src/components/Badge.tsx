@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, OpaqueColorValue} from 'react-native';
+import {StyleSheet, View, Text, ColorValue} from 'react-native';
 // TODO SAAD
 // import {SymbolIcon} from 'react-native-xaml';
 
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
 });
 
 export function Badge(props: {
-  badgeColor: OpaqueColorValue;
-  textColor: string;
+  badgeColor: ColorValue;
+  textColor: ColorValue;
   badgeTitle: string;
   icon: number;
   description: string;
