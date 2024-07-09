@@ -67,9 +67,9 @@ steps:
       verbosityRestore: Detailed
 
   - task: CmdLine@2
-    displayName: midgard-yarn (faster yarn install)
+    displayName: yarn
     inputs:
-      script: midgard-yarn --ignore-scripts --frozen-lockfile
+      script: yarn install --immutable
 
   - task: CmdLine@2
     displayName: Lint and Type Checks

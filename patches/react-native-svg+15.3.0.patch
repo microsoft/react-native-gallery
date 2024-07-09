@@ -1,5 +1,5 @@
 diff --git a/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj b/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
-index 0fdeca0..9ab5fb9 100644
+index b682596..4f52dcf 100644
 --- a/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
 +++ b/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
 @@ -26,12 +26,10 @@
@@ -16,13 +16,3 @@ index 0fdeca0..9ab5fb9 100644
      <WindowsTargetPlatformMinVersion Condition=" '$(WindowsTargetPlatformMinVersion)' == '' ">10.0.16299.0</WindowsTargetPlatformMinVersion>
    </PropertyGroup>
    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-@@ -122,6 +120,9 @@
-     <ClCompile>
-       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-     </ClCompile>
-+    <Link>
-+      <AdditionalDependencies>dxguid.lib;WindowsApp.lib;%(AdditionalDependencies)</AdditionalDependencies>
-+    </Link>
-   </ItemDefinitionGroup>
-   <ItemGroup>
-     <ClInclude Include="BrushView.h" />
