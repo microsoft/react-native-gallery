@@ -5867,6 +5867,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rnx-kit/metro-config@npm:^1.3.15":
+  version: 1.3.15
+  resolution: "@rnx-kit/metro-config@npm:1.3.15"
+  dependencies:
+    "@rnx-kit/console": "npm:^1.0.0"
+    "@rnx-kit/tools-node": "npm:^2.0.0"
+    "@rnx-kit/tools-react-native": "npm:^1.3.4"
+    "@rnx-kit/tools-workspaces": "npm:^0.1.3"
+  peerDependencies:
+    "@react-native/metro-config": "*"
+    react: "*"
+    react-native: "*"
+  peerDependenciesMeta:
+    "@react-native/metro-config":
+      optional: true
+  checksum: 10c0/484a3c5164e0a55eb9f21a2001dbc5eb8f277513e4d0af6bb492f32dd2eaf930105ab0eff4d90d087d2f84e0d01f67307d567f40732808879df3d32f23ae89ce
+  languageName: node
+  linkType: hard
+
 "@rnx-kit/metro-plugin-cyclic-dependencies-detector@npm:^1.1.1":
   version: 1.1.2
   resolution: "@rnx-kit/metro-plugin-cyclic-dependencies-detector@npm:1.1.2"
@@ -5974,15 +5993,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rnx-kit/tools-node@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@rnx-kit/tools-node@npm:2.0.0"
-  dependencies:
-    "@rnx-kit/tools-language": "npm:^2.0.0"
-    find-up: "npm:^5.0.0"
-    pkg-dir: "npm:^5.0.0"
-    pkg-up: "npm:^3.1.0"
-  checksum: 10c0/588573ddc1ce038ace6b6952932ebc473ce0d48689f47a65c9c80e49c2ca7cf3452c10f00a1469edaf0f6d394a4904ba339218d1a3785bf34ddbd9336b5bf945
+"@rnx-kit/tools-node@npm:^2.0.0, @rnx-kit/tools-node@npm:^2.0.1":
+  version: 2.1.1
+  resolution: "@rnx-kit/tools-node@npm:2.1.1"
+  checksum: 10c0/bed72f061e8d7c4791134ed42708e4df7db93dee745c3bf956948d55b830146a704ebec373c39b25d60d6e2ac8b3e0d2e9082c174146b29577213371d08b6903
   languageName: node
   linkType: hard
 
@@ -5992,6 +6006,27 @@ __metadata:
   dependencies:
     "@rnx-kit/tools-node": "npm:^2.0.0"
   checksum: 10c0/5a4f7c0c290e70e2e66b4b0dc135c3deea516eaf1db3f54a3162068c926a030378d759c3d80ffc2dcfcd49bed2da7afed9ccb5658433e6637e46f62c409b8142
+  languageName: node
+  linkType: hard
+
+"@rnx-kit/tools-react-native@npm:^1.3.4":
+  version: 1.3.5
+  resolution: "@rnx-kit/tools-react-native@npm:1.3.5"
+  dependencies:
+    "@rnx-kit/tools-node": "npm:^2.0.1"
+  checksum: 10c0/c5a13c63ab507f63d60ac8d19d10a166db4e79b02a6e7a384f2b506725cc53c7c82a9172b0f1804b6ddb52392160ecba19df1f2dc4e88d9744ae45345377aaab
+  languageName: node
+  linkType: hard
+
+"@rnx-kit/tools-workspaces@npm:^0.1.3":
+  version: 0.1.6
+  resolution: "@rnx-kit/tools-workspaces@npm:0.1.6"
+  dependencies:
+    fast-glob: "npm:^3.2.7"
+    find-up: "npm:^5.0.0"
+    read-yaml-file: "npm:^2.1.0"
+    strip-json-comments: "npm:^3.1.1"
+  checksum: 10c0/4e697da297d8af47684bc3b69972ff8b081b72810484c69a781b68c89d527e7dcfb442c01c260118f42f8d206b6a182c97ebb181bb1149efeebe965c29d18f39
   languageName: node
   linkType: hard
 
@@ -6660,6 +6695,13 @@ __metadata:
   dependencies:
     sprintf-js: "npm:~1.0.2"
   checksum: 10c0/b2972c5c23c63df66bca144dbc65d180efa74f25f8fd9b7d9a0a6c88ae839db32df3d54770dcb6460cf840d232b60695d1a6b1053f599d84e73f7437087712de
+  languageName: node
+  linkType: hard
+
+"argparse@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "argparse@npm:2.0.1"
+  checksum: 10c0/c5640c2d89045371c7cedd6a70212a04e360fd34d6edeae32f6952c63949e3525ea77dbec0289d8213a99bbaeab5abfa860b5c12cf88a2e6cf8106e90dd27a7e
   languageName: node
   linkType: hard
 
@@ -10901,6 +10943,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-yaml@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "js-yaml@npm:4.1.0"
+  dependencies:
+    argparse: "npm:^2.0.1"
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: 10c0/184a24b4eaacfce40ad9074c64fd42ac83cf74d8c8cd137718d456ced75051229e5061b8633c3366b8aada17945a7a356b337828c19da92b51ae62126575018f
+  languageName: node
+  linkType: hard
+
 "jsbn@npm:1.1.0":
   version: 1.1.0
   resolution: "jsbn@npm:1.1.0"
@@ -13170,15 +13223,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-up@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "pkg-up@npm:3.1.0"
-  dependencies:
-    find-up: "npm:^3.0.0"
-  checksum: 10c0/ecb60e1f8e1f611c0bdf1a0b6a474d6dfb51185567dc6f29cdef37c8d480ecba5362e006606bb290519bbb6f49526c403fabea93c3090c20368d98bb90c999ab
-  languageName: node
-  linkType: hard
-
 "pngjs@npm:^5.0.0":
   version: 5.0.0
   resolution: "pngjs@npm:5.0.0"
@@ -13844,6 +13888,16 @@ react-native-tts@ak1394/react-native-tts:
   languageName: node
   linkType: hard
 
+"read-yaml-file@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "read-yaml-file@npm:2.1.0"
+  dependencies:
+    js-yaml: "npm:^4.0.0"
+    strip-bom: "npm:^4.0.0"
+  checksum: 10c0/bad0673abe78a5bde7c53b22ee7cdd0dfe49ab7338a4ad8618be9fcd2fd25ab9ae60d395907fddbfb2e7fbbf494867aeec78295c2396bec2669fd7087d2734c1
+  languageName: node
+  linkType: hard
+
 "readable-stream@npm:^3.4.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
@@ -14324,6 +14378,7 @@ react-native-tts@ak1394/react-native-tts:
     "@react-navigation/stack": "npm:^6.3.12"
     "@rnx-kit/cli": "npm:^0.16.10"
     "@rnx-kit/jest-preset": "npm:^0.1.14"
+    "@rnx-kit/metro-config": "npm:^1.3.15"
     "@types/jest": "npm:^29.5.3"
     "@types/lowlight": "npm:^0.0.1"
     "@types/metro-config": "npm:^0.76.3"
