@@ -22,8 +22,8 @@ import {
   ThemeSetterContext,
 } from './themes/Theme';
 import {PlatformColor} from 'react-native';
-import {AppTheme} from 'react-native-windows';
 import HighContrastTheme from './themes/HighContrastTheme';
+import useHighContrastState from './hooks/useHighContrastState';
 
 const styles = StyleSheet.create({
   menu: {
@@ -347,17 +347,7 @@ export default function App() {
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
 
-  const [isHighContrast, setHighContrast] = React.useState(
-    AppTheme.isHighContrast,
-  );
-
-  React.useEffect(() => {
-    const subscription = AppTheme.addListener('highContrastChanged', () => {
-      setHighContrast(AppTheme.isHighContrast);
-    });
-
-    return () => subscription.remove();
-  });
+  const isHighContrast = useHighContrastState();
 
   return (
     <ThemeSetterContext.Provider value={setRawTheme}>
