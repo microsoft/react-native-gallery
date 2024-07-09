@@ -10685,15 +10685,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-react-native-config@luggit/react-native-config:
+"react-native-config@npm:^1.5.2":
   version: 1.5.2
-  resolution: "react-native-config@https://github.com/luggit/react-native-config.git#commit=8024e0e0832b6719bae8bbffa1083428b115cfdc"
+  resolution: "react-native-config@npm:1.5.2"
   peerDependencies:
     react-native-windows: ">=0.61"
   peerDependenciesMeta:
     react-native-windows:
       optional: true
-  checksum: 10c0/59abe0c10cc49ff55153e3a9111b81da7d010ecd600b901339086805a6ef483f8901b4a2229f95c1c2e9d4eec217ddfaa4e53d3a982f40d8477fd078a3797419
+  checksum: 10c0/af957f35547a74583dae9946120e5c23569b8a7203e4c0c87a036f0ab2011675ec3b5d572501091d9cd57c8258b90983e9b5bf4279a1cccedafeadac6fbfb9f2
   languageName: node
   linkType: hard
 
@@ -11398,7 +11398,7 @@ react-native-tts@ak1394/react-native-tts:
     postinstall-postinstall: "npm:^2.1.0"
     react: "npm:18.0.0"
     react-native: "npm:^0.74.0"
-    react-native-config: luggit/react-native-config
+    react-native-config: "npm:^1.5.2"
     react-native-device-info: "npm:^10.7.0"
     react-native-gesture-handler: "npm:2.9.0"
     react-native-linear-gradient: "npm:3.0.0-alpha.1"
