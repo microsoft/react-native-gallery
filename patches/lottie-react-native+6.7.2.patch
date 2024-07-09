@@ -1,7 +1,7 @@
-diff --git a/node_modules/lottie-react-native/src/windows/cppwinrt/LottieReactNative.vcxproj b/node_modules/lottie-react-native/src/windows/cppwinrt/LottieReactNative.vcxproj
-index 77d4a61..bce7bb3 100644
---- a/node_modules/lottie-react-native/src/windows/cppwinrt/LottieReactNative.vcxproj
-+++ b/node_modules/lottie-react-native/src/windows/cppwinrt/LottieReactNative.vcxproj
+diff --git a/node_modules/lottie-react-native/windows/cppwinrt/LottieReactNative.vcxproj b/node_modules/lottie-react-native/windows/cppwinrt/LottieReactNative.vcxproj
+index beff4ba..3492cbc 100644
+--- a/node_modules/lottie-react-native/windows/cppwinrt/LottieReactNative.vcxproj
++++ b/node_modules/lottie-react-native/windows/cppwinrt/LottieReactNative.vcxproj
 @@ -15,12 +15,18 @@
      <AppContainerApplication>true</AppContainerApplication>
      <ApplicationType>Windows Store</ApplicationType>
