@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fluentui-react-native/experimental-expander": "^0.6.1",
+    "@fluentui-react-native/icon": "^0.21.2",
     "@react-native-clipboard/clipboard": "^1.14.0",
     "@react-native-community/checkbox": "^0.5.16",
     "@react-native-community/datetimepicker": "^7.6.0",
