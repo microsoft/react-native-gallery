@@ -30,10 +30,6 @@ const createStyles = () =>
     scrollView: {
       paddingRight: 20,
     },
-    icon: {
-      fontFamily: 'Segoe MDL2 Assets',
-      fontSize: 16,
-    },
     heroGradient: {
       // position: 'absolute',
       // width: '100%',

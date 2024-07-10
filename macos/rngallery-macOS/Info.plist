@@ -43,5 +43,7 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>ATSApplicationFontPath</key>
+	<string>Segoe MDL 2 Assets.ttf</string>
 </dict>
 </plist>

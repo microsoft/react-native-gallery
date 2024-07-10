@@ -12,6 +12,7 @@
 		514201552437B4B40078DB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514201532437B4B40078DB4F /* Main.storyboard */; };
 		514201582437B4B40078DB4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 514201572437B4B40078DB4F /* main.m */; };
 		7F9A7D0A9B296E8245E632D4 /* libPods-rngallery-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D6ADB6FFF96DD03F032D49 /* libPods-rngallery-macOS.a */; };
+		AC5FF1622C3E211D00CFF5CF /* Segoe MDL2 Assets.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC5FF1612C3E211D00CFF5CF /* Segoe MDL2 Assets.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		514201562437B4B40078DB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514201572437B4B40078DB4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		514201592437B4B40078DB4F /* rngallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rngallery.entitlements; sourceTree = "<group>"; };
+		AC5FF1612C3E211D00CFF5CF /* Segoe MDL2 Assets.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe MDL2 Assets.ttf"; sourceTree = "<group>"; };
 		D2D6ADB6FFF96DD03F032D49 /* libPods-rngallery-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rngallery-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 		5142014A2437B4B30078DB4F /* rngallery-macOS */ = {
 			isa = PBXGroup;
 			children = (
+				AC5FF1612C3E211D00CFF5CF /* Segoe MDL2 Assets.ttf */,
 				5142014B2437B4B30078DB4F /* AppDelegate.h */,
 				5142014C2437B4B30078DB4F /* AppDelegate.mm */,
 				514201512437B4B40078DB4F /* Assets.xcassets */,
@@ -78,7 +81,6 @@
 				03DF0E512707AAC72533EDB0 /* Pods-rngallery-macOS.debug.xcconfig */,
 				00399E4B91D8F40E1C32D84B /* Pods-rngallery-macOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				514201522437B4B40078DB4F /* Assets.xcassets in Resources */,
+				AC5FF1622C3E211D00CFF5CF /* Segoe MDL2 Assets.ttf in Resources */,
 				514201552437B4B40078DB4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,10 +467,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = false;
@@ -524,10 +524,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = false;
