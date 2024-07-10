@@ -100,6 +100,7 @@ const PageTitle = () => {
           styles.heroBackgroundImage,
           {
             opacity: colorScheme === 'light' ? 0.9 : 0.8,
+            aspectRatio: 1,
           },
         ]}
       />

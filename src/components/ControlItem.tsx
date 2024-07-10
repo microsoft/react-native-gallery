@@ -93,8 +93,13 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
     controlItemIcon: {
       marginHorizontal: 12,
       width: 48,
-      height: 72,
       resizeMode: 'contain',
+      aspectRatio: 1,
+    },
+    controlItemPlaceholderIcon: {
+      marginHorizontal: 12,
+      width: 48,
+      height: 72,
     },
     controlItemTitle: {
       // BodyStrongTextBlockStyle
@@ -173,7 +178,7 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
         <View>
           <Image
             source={require('../../assets/ControlImages/Placeholder.png')}
-            style={styles.controlItemIcon}
+            style={styles.controlItemPlaceholderIcon}
             accessible={true}
             accessibilityRole="image"
             accessibilityLabel={imageAccessibilityLabel}
