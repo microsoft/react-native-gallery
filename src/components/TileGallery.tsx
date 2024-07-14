@@ -14,10 +14,11 @@ import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {HorizontalListWithPageNavigation} from './PageScroller';
 import {PathIcon} from './PathIcon';
+import {VibrancyView} from '@fluentui-react-native/vibrancy-view';
 
 const headerTileBackgroundColorRest = Platform.select<ColorValue>({
   windows: PlatformColor('SolidBackgroundFillColorBaseBrush'),
-  macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  macos: PlatformColor('controlBackgroundColor'),
   default: 'white',
 });
 
@@ -63,14 +64,16 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HeaderTile.xaml#L12
       // Should use 'AcrylicInAppFillColorDefaultBrush', blocked on https://github.com/microsoft/react-native-windows/issues/8861
       // (The acrylic does work, but does not update when the theme changes)
-      backgroundColor: isHovered
-        ? headerTileBackgroundColorHover
-        : headerTileBackgroundColorRest,
+      // backgroundColor: isHovered
+      //   ? headerTileBackgroundColorHover
+      //   : headerTileBackgroundColorRest,
+      backgroundColor: 'white',
       borderColor: isHovered
         ? headerTileBorderColorHover
         : headerTileBorderColorRest,
       borderWidth: 1,
       borderRadius: 8,
+      borderCurve: 'continuous',
       padding: 24,
       gap: 4,
       width: 198,
@@ -117,6 +120,11 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
 
   const openInNewWindowIcon = '\uE8A7';
   return (
+    // <VibrancyView
+    //   blendingMode="withinWindow"
+    //   state="followsWindowActiveState"
+    //   material="sidebar"
+    //   style={styles.headerTile}>
     <Pressable
       style={styles.headerTile}
       onPress={() => Linking.openURL(props.link)}
@@ -132,6 +140,7 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
         {openInNewWindowIcon}
       </Text>
     </Pressable>
+    // </VibrancyView>
   );
 };
 

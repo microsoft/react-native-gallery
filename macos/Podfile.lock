@@ -10,6 +10,8 @@ PODS:
     - React-jsi (= 0.73.32)
     - ReactCommon/turbomodule/core (= 0.73.32)
   - fmt (9.1.0)
+  - FRNVibrancyView (0.2.1):
+    - React
   - glog (0.3.5)
   - lottie-ios (4.4.1)
   - lottie-react-native (6.7.2):
@@ -1044,6 +1046,7 @@ DEPENDENCIES:
   - FBLazyVector (from `../node_modules/react-native-macos/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native-macos/React/FBReactNativeSpec`)
   - fmt (from `../node_modules/react-native-macos/third-party-podspecs/fmt.podspec`)
+  - "FRNVibrancyView (from `../node_modules/@fluentui-react-native/vibrancy-view`)"
   - glog (from `../node_modules/react-native-macos/third-party-podspecs/glog.podspec`)
   - lottie-react-native (from `../node_modules/lottie-react-native`)
   - RCT-Folly (from `../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec`)
@@ -1113,6 +1116,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-macos/React/FBReactNativeSpec"
   fmt:
     :podspec: "../node_modules/react-native-macos/third-party-podspecs/fmt.podspec"
+  FRNVibrancyView:
+    :path: "../node_modules/@fluentui-react-native/vibrancy-view"
   glog:
     :podspec: "../node_modules/react-native-macos/third-party-podspecs/glog.podspec"
   lottie-react-native:
@@ -1222,6 +1227,7 @@ SPEC CHECKSUMS:
   FBLazyVector: ec230eb0579ecfb1f0e0315a1f97161c21098b0e
   FBReactNativeSpec: 1ce1c898cc8011f31f4ffd7d090a6817a1b6564b
   fmt: 03574da4b7ba40de39da59677ca66610ce8c4a02
+  FRNVibrancyView: 4fc67aa9b2dadf4fe8f05821b918d2ac48df62e1
   glog: 3a72874c0322c7caf24931d3a2777cb7a3090529
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
   lottie-react-native: 2d9efc8a5ffabe688b55a1a1ac1fb94b9d971995

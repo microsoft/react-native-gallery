@@ -81,7 +81,7 @@ const PageTitle = () => {
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View style={styles.heroGradient}>
-      <Svg height="100%" width="100%" style={StyleSheet.absoluteFillObject}>
+      {/* <Svg height="100%" width="100%" style={StyleSheet.absoluteFillObject}>
         <Defs>
           <LinearGradient id="grad" x1={0.5} y1={0} x2={0.5} y2={1}>
             <Stop offset="0" stopColor={colorStops[0]} />
@@ -89,7 +89,7 @@ const PageTitle = () => {
           </LinearGradient>
         </Defs>
         <Rect width="100%" height="100%" fill="url(#grad)" />
-      </Svg>
+      </Svg> */}
       <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
@@ -97,6 +97,8 @@ const PageTitle = () => {
           {
             opacity: colorScheme === 'light' ? 0.9 : 0.8,
             aspectRatio: 1,
+            height: 450,
+            // margin: 20,
           },
         ]}
       />

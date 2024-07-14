@@ -3710,6 +3710,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fluentui-react-native/vibrancy-view@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@fluentui-react-native/vibrancy-view@npm:0.2.1"
+  dependencies:
+    "@fluentui-react-native/adapters": "npm:0.13.0"
+    tslib: "npm:^2.3.1"
+  peerDependencies:
+    "@office-iss/react-native-win32": ^0.73.0
+    react: 18.2.0
+    react-native: ^0.73.0
+    react-native-macos: ^0.73.0
+    react-native-windows: ^0.73.0
+  peerDependenciesMeta:
+    "@office-iss/react-native-win32":
+      optional: true
+    react-native-macos:
+      optional: true
+    react-native-windows:
+      optional: true
+  checksum: 10c0/510ba6f571f0a9bde6ae622d6189ca2a873f5ba36154b1b2f6ce519502e95dcdb9118d564519898b1204d9aff6cb4ac31fc47e263bdb7c6a3df2ca34aed714f7
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0":
   version: 9.1.1
   resolution: "@hapi/hoek@npm:9.1.1"
@@ -13683,6 +13706,7 @@ react-native-tts@ak1394/react-native-tts:
     "@babel/runtime": "npm:^7.20.0"
     "@fluentui-react-native/experimental-expander": "npm:^0.6.1"
     "@fluentui-react-native/icon": "npm:^0.21.2"
+    "@fluentui-react-native/vibrancy-view": "npm:^0.2.1"
     "@react-native-clipboard/clipboard": "npm:^1.14.0"
     "@react-native-community/checkbox": "npm:^0.5.16"
     "@react-native-community/datetimepicker": "npm:^7.6.0"

@@ -61,23 +61,24 @@ const accentColor = Platform.select<ColorValue>({
 
 const textOnAccentColor = Platform.select<ColorValue>({
   windows: PlatformColor('TextOnAccentFillColorPrimaryBrush'),
-  macos: PlatformColor('labelColor'),
+  macos: 'white',
   default: 'white',
 });
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: controlItemBackgroundColor,
+      backgroundColor: 'rgb(236, 236, 236)',
       borderColor: isPressing
         ? controlItemBorderColorPressed
         : isHovered
         ? controlItemBorderColorHover
         : controlItemBorderColorRest,
-      borderWidth: 1,
-      borderBottomWidth: 1,
+      // borderWidth: 1,
+      // borderBottomWidth: 1,
       padding: 8,
-      borderRadius: 4,
+      borderCurve: 'continuous',
+      borderRadius: 12,
       alignItems: 'center',
       flexDirection: 'row',
       gap: 16,
@@ -97,9 +98,10 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       aspectRatio: 1,
     },
     controlItemPlaceholderIcon: {
-      marginHorizontal: 12,
+      // marginHorizontal: 12,
+      margin: 12,
       width: 48,
-      height: 72,
+      height: 48,
     },
     controlItemTitle: {
       // BodyStrongTextBlockStyle

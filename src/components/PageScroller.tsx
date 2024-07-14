@@ -6,6 +6,7 @@ import {
   Platform,
   PlatformColor,
   Pressable,
+  Text,
   View,
 } from 'react-native';
 import type {ColorValue} from 'react-native';
@@ -64,13 +65,7 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
           minWidth: 48,
           minHeight: 48,
         }}>
-        <Image
-          src={left ? leftImage : rightImage}
-          style={{
-            width: 16,
-            height: 16,
-          }}
-        />
+        <Text style={{fontSize: 32}}>{left ? '‹' : '›'}</Text>
       </View>
     </Pressable>
   );
