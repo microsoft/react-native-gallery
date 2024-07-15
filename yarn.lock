@@ -2650,6 +2650,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.1.2":
+  version: 7.24.8
+  resolution: "@babel/runtime@npm:7.24.8"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/f24b30af6b3ecae19165b3b032f9bc37b2d1769677bd63b69a6f81061967cfc847aa822518402ea6616b1d301d7eb46986b99c9f69cdb5880834fca2e6b34881
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.0.0, @babel/template@npm:^7.22.15, @babel/template@npm:^7.3.3":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -2910,6 +2919,13 @@ __metadata:
   dependencies:
     "@types/hammerjs": "npm:^2.0.36"
   checksum: 10c0/dbedc15a0e633f887c08394bd636faf6a3abd05726dc0909a0e01209d5860a752d9eca5e512da623aecfabe665f49f1d035de3103eb2f9022c5cea692f9cc9be
+  languageName: node
+  linkType: hard
+
+"@emotion/hash@npm:^0.9.0":
+  version: 0.9.1
+  resolution: "@emotion/hash@npm:0.9.1"
+  checksum: 10c0/cdafe5da63fc1137f3db6e232fdcde9188b2b47ee66c56c29137199642a4086f42382d866911cfb4833cae2cc00271ab45cad3946b024f67b527bb7fac7f4c9d
   languageName: node
   linkType: hard
 
@@ -3730,6 +3746,55 @@ __metadata:
     react-native-windows:
       optional: true
   checksum: 10c0/510ba6f571f0a9bde6ae622d6189ca2a873f5ba36154b1b2f6ce519502e95dcdb9118d564519898b1204d9aff6cb4ac31fc47e263bdb7c6a3df2ca34aed714f7
+  languageName: node
+  linkType: hard
+
+"@fluentui/react-native-icons@npm:^2.0.249":
+  version: 2.0.249
+  resolution: "@fluentui/react-native-icons@npm:2.0.249"
+  dependencies:
+    "@griffel/react": "npm:^1.0.0"
+    "@types/react-native": "npm:^0.68.0"
+    tslib: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=16.8.0 <19.0.0"
+    react-native-svg: ">=12.5.0"
+  checksum: 10c0/9d0b91b0a5f599677fc0bd3196fe8fa1c800115616a6156ad2f3b05bdf99cf6dc61bd6e04cf48d90a8ef66d4f9bb2a20e1a65a4bd653cb6667148a8a85f03eb8
+  languageName: node
+  linkType: hard
+
+"@griffel/core@npm:^1.17.1":
+  version: 1.17.1
+  resolution: "@griffel/core@npm:1.17.1"
+  dependencies:
+    "@emotion/hash": "npm:^0.9.0"
+    "@griffel/style-types": "npm:^1.2.0"
+    csstype: "npm:^3.1.3"
+    rtl-css-js: "npm:^1.16.1"
+    stylis: "npm:^4.2.0"
+    tslib: "npm:^2.1.0"
+  checksum: 10c0/098628475805283e74141439ccf23049f1acde952fd211dfd91d2c814ba25c20e6cb7b2172f5ab2d588c6f23afa84516f4f5ace6cc8fd1caa8bbfa7abc321440
+  languageName: node
+  linkType: hard
+
+"@griffel/react@npm:^1.0.0":
+  version: 1.5.24
+  resolution: "@griffel/react@npm:1.5.24"
+  dependencies:
+    "@griffel/core": "npm:^1.17.1"
+    tslib: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=16.8.0 <19.0.0"
+  checksum: 10c0/825e12af964796e8e094d56a52fa06874a56f5c6a55b7cf0ce5845744d91d81f01737c234c892ede4ab10a182db01728cec98f0bd50890749cfa6fd2ef542ab4
+  languageName: node
+  linkType: hard
+
+"@griffel/style-types@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@griffel/style-types@npm:1.2.0"
+  dependencies:
+    csstype: "npm:^3.1.3"
+  checksum: 10c0/09fcc307b88378281c3083d45b6f3c87698cdd54e7008c7048a158fcd824978e8284e036afa960a9100624f5c41cda535181c09b41fefc824c00e2b52acebfd4
   languageName: node
   linkType: hard
 
@@ -6287,6 +6352,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-native@npm:^0.68.0":
+  version: 0.68.20
+  resolution: "@types/react-native@npm:0.68.20"
+  dependencies:
+    "@types/react": "npm:^17"
+  checksum: 10c0/491b6c75b2313e503a5ac2e9b472ed39ed9ac333f8e12491eb794ab2d47fa80b71375f7a93d24ac73e405ee0adb91b2d92f0a93e6d3e9311b070b374f9a24148
+  languageName: node
+  linkType: hard
+
 "@types/react-test-renderer@npm:^18.0.0":
   version: 18.0.0
   resolution: "@types/react-test-renderer@npm:18.0.0"
@@ -6303,6 +6377,24 @@ __metadata:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/fe455f805c5da13b89964c3d68060cebd43e73ec15001a68b34634604a78140e6fc202f3f61679b9d809dde6d7a7c2cb3ed51e0fd1462557911db09879b55114
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17":
+  version: 17.0.80
+  resolution: "@types/react@npm:17.0.80"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:^0.16"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/c5d2862564212a41a327ea9c7e70b9d3996d9b0f67971d39519d42d1f3ae6ddf76b183457b7b0be9d7b5d6ff0aaeed5711448423406d20018f082077c984eec4
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:^0.16":
+  version: 0.16.8
+  resolution: "@types/scheduler@npm:0.16.8"
+  checksum: 10c0/f86de504945b8fc41b1f391f847444d542e2e4067cf7e5d9bfeb5d2d2393d3203b1161bc0ef3b1e104d828dabfb60baf06e8d2c27e27ff7e8258e6e618d8c4ec
   languageName: node
   linkType: hard
 
@@ -7811,6 +7903,13 @@ __metadata:
   version: 3.0.3
   resolution: "csstype@npm:3.0.3"
   checksum: 10c0/20f2e9f5cc3c419a9f110f45a8e1e8c653159cb8b403715bbbab7bd113b3f7d519d3c8efc587221d02900d76b7dc3c8c3110d4c7bd84a9e0b2bd421488ca6bdb
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "csstype@npm:3.1.3"
+  checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
   languageName: node
   linkType: hard
 
@@ -13414,6 +13513,13 @@ react-native-tts@ak1394/react-native-tts:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.14.0":
+  version: 0.14.1
+  resolution: "regenerator-runtime@npm:0.14.1"
+  checksum: 10c0/1b16eb2c4bceb1665c89de70dcb64126a22bc8eb958feef3cd68fe11ac6d2a4899b5cd1b80b0774c7c03591dc57d16631a7f69d2daa2ec98100e2f29f7ec4cc4
+  languageName: node
+  linkType: hard
+
 "regenerator-transform@npm:^0.15.1":
   version: 0.15.1
   resolution: "regenerator-transform@npm:0.15.1"
@@ -13707,6 +13813,7 @@ react-native-tts@ak1394/react-native-tts:
     "@fluentui-react-native/experimental-expander": "npm:^0.6.1"
     "@fluentui-react-native/icon": "npm:^0.21.2"
     "@fluentui-react-native/vibrancy-view": "npm:^0.2.1"
+    "@fluentui/react-native-icons": "npm:^2.0.249"
     "@react-native-clipboard/clipboard": "npm:^1.14.0"
     "@react-native-community/checkbox": "npm:^0.5.16"
     "@react-native-community/datetimepicker": "npm:^7.6.0"
@@ -13763,6 +13870,15 @@ react-native-tts@ak1394/react-native-tts:
     typescript: "npm:^4.0.2"
   languageName: unknown
   linkType: soft
+
+"rtl-css-js@npm:^1.16.1":
+  version: 1.16.1
+  resolution: "rtl-css-js@npm:1.16.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.1.2"
+  checksum: 10c0/4b81ef50e50c97455d61c9bb576e2892651c79bac5d0c52b4123ebb9d6a2c5144590a79c9db0a3212a81b4eb83bf317e03637220f20b387a37b96cbac324d3d2
+  languageName: node
+  linkType: hard
 
 "run-async@npm:^2.4.0":
   version: 2.4.1
@@ -14459,6 +14575,13 @@ react-native-tts@ak1394/react-native-tts:
   languageName: node
   linkType: hard
 
+"stylis@npm:^4.2.0":
+  version: 4.3.2
+  resolution: "stylis@npm:4.3.2"
+  checksum: 10c0/0410e1404cbeee3388a9e17587875211ce2f014c8379af0d1e24ca55878867c9f1ccc7b0ce9a156ca53f5d6e301391a82b0645522a604674a378b3189a4a1994
+  languageName: node
+  linkType: hard
+
 "sudo-prompt@npm:^9.0.0":
   version: 9.2.1
   resolution: "sudo-prompt@npm:9.2.1"
@@ -14655,6 +14778,13 @@ react-native-tts@ak1394/react-native-tts:
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: 10c0/4efd888895bdb3b987086b2b7793ad1013566f882b0eb7a328384e5ecc0d71cafb16bbeab3196200cbf7f01a73ccc25acc2f131d4ea6ee959be7436a8a306482
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.1.0":
+  version: 2.6.3
+  resolution: "tslib@npm:2.6.3"
+  checksum: 10c0/2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
   languageName: node
   linkType: hard
 

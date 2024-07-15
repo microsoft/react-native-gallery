@@ -9,6 +9,7 @@ import {
   Pressable,
   useColorScheme,
   ScrollView,
+  I18nManager,
 } from 'react-native';
 import type {ColorValue} from 'react-native';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
@@ -16,6 +17,23 @@ import {VibrancyView} from '@fluentui-react-native/vibrancy-view';
 import {getDrawerStatusFromState} from '@react-navigation/drawer';
 import RNGalleryList, {RNGalleryCategories} from '../RNGalleryList';
 import {ColorWithSystemEffectMacOS} from 'react-native-macos';
+import {
+  ChevronDown12Filled,
+  ChevronDown12Regular,
+  ChevronDown16Filled,
+  ChevronDown16Regular,
+  ChevronLeft12Filled,
+  ChevronLeft12Regular,
+  ChevronLeft16Filled,
+  ChevronLeft16Regular,
+  ChevronRight12Filled,
+  ChevronRight12Regular,
+  ChevronRight16Filled,
+  ChevronRight16Regular,
+  Home16Regular,
+  List16Regular,
+  TextBulletList16Regular,
+} from '@fluentui/react-native-icons';
 
 const textForegroundColor = Platform.select<ColorValue>({
   windows: PlatformColor('TextControlForeground'),
@@ -122,7 +140,7 @@ const styles = StyleSheet.create({
     backgroundColor: drawerBackgroundColor,
     // borderRadius: 8,
     paddingTop: 53,
-    padding: 10,
+    // padding: 10,
     height: '100%',
   },
   drawerText: {
@@ -201,6 +219,7 @@ const createDrawerListItemStyles = (isHovered: boolean, isPressed: boolean) =>
 type DrawerCollapsibleCategoryProps = {
   categoryLabel: string;
   categoryIcon: string;
+  categoryFluentIcon?: JSX.Element;
   items: any;
   navigation: any;
   currentRoute: string;
@@ -209,6 +228,7 @@ type DrawerCollapsibleCategoryProps = {
 const DrawerCollapsibleCategory = ({
   categoryLabel,
   categoryIcon,
+  categoryFluentIcon,
   items,
   navigation,
   currentRoute,
@@ -235,6 +255,38 @@ const DrawerCollapsibleCategory = ({
     }
   };
 
+  const renderedIcon = categoryFluentIcon ? (
+    categoryFluentIcon
+  ) : (
+    <Text accessible={false} style={styles.icon}>
+      {categoryIcon}
+    </Text>
+  );
+
+  let chevron = null;
+  if (isExpanded) {
+    if (isPressed) {
+      chevron = <ChevronDown12Filled />;
+    } else {
+      chevron = <ChevronDown12Regular />;
+    }
+  } else {
+    const isRTL = I18nManager.isRTL;
+    if (isPressed) {
+      if (isRTL) {
+        chevron = <ChevronLeft12Filled />;
+      } else {
+        chevron = <ChevronRight12Filled />;
+      }
+    } else {
+      if (isRTL) {
+        chevron = <ChevronLeft12Regular />;
+      } else {
+        chevron = <ChevronRight12Regular />;
+      }
+    }
+  }
+
   return (
     <View
       style={styles.category}
@@ -255,19 +307,18 @@ const DrawerCollapsibleCategory = ({
             currentRoute={currentRoute}
             itemRoute={categoryRoute}
           />
-          <Text accessible={false} style={styles.icon}>
-            {categoryIcon}
-          </Text>
+          {renderedIcon}
         </View>
         <Text accessible={false} style={styles.drawerText}>
           {categoryLabel}
         </Text>
-        <View style={styles.expandedChevron}>
-          <Text
+        <View style={[styles.expandedChevron, !isHovered && {opacity: 0}]}>
+          {/* <Text
             accessible={false}
-            style={[styles.chevronIcon, !isHovered && {opacity: 0}]}>
+            style={[styles.chevronIcon, }]}>
             {isExpanded ? '\uE971' : '\uE972'}
-          </Text>
+          </Text> */}
+          {chevron}
         </View>
       </Pressable>
       {isExpanded &&
@@ -276,6 +327,8 @@ const DrawerCollapsibleCategory = ({
             key={item.label}
             route={item.label}
             label={item.label}
+            icon={item.icon}
+            fluentIcon={item.fluentIcon}
             navigation={navigation}
             currentRoute={currentRoute}
           />
@@ -301,7 +354,11 @@ const DrawerListView = (props) => {
   filteredList.forEach((item) => {
     let category = item.type;
     let categoryList = categoryMap.get(category);
-    categoryList?.push({label: item.key, icon: item.icon});
+    categoryList?.push({
+      label: item.key,
+      icon: item.textIcon,
+      fluentIcon: item.fluentIcon,
+    });
     if (item.key === props.currentRoute) {
       categoryWithCurrentRoute = category;
     }
@@ -313,6 +370,7 @@ const DrawerListView = (props) => {
         <DrawerCollapsibleCategory
           categoryLabel={category.label}
           categoryIcon={category.icon}
+          categoryFluentIcon={category.fluentIcon}
           items={categoryMap.get(category.label)}
           navigation={props.navigation}
           currentRoute={props.currentRoute}
@@ -340,6 +398,7 @@ function CustomDrawerContent({navigation}) {
         route="Home"
         label="Home"
         icon="&#xE80F;"
+        fluentIcon={<Home16Regular />}
         navigation={navigation}
         currentRoute={currentRoute}
       />
@@ -347,11 +406,13 @@ function CustomDrawerContent({navigation}) {
         route="All samples"
         label="All samples"
         icon="&#xE71D;"
+        fluentIcon={<TextBulletList16Regular />}
         navigation={navigation}
         currentRoute={currentRoute}
       />
       <View style={styles.drawerDivider} />
-      <ScrollView>
+      {/* TODO: Rectify Scroller padding */}
+      <ScrollView style={{paddingEnd: 15}}>
         <DrawerListView navigation={navigation} currentRoute={currentRoute} />
       </ScrollView>
       <View style={styles.drawerDivider} />
@@ -385,6 +446,7 @@ type DrawerListItemProps = {
   route: string;
   label: string;
   icon?: string;
+  fluentIcon?: JSX.Element;
   navigation: any;
   currentRoute: string;
 };
@@ -392,6 +454,7 @@ const DrawerListItem = ({
   route,
   label,
   icon,
+  fluentIcon,
   navigation,
   currentRoute,
 }: DrawerListItemProps) => {
@@ -399,6 +462,18 @@ const DrawerListItem = ({
   const [isPressed, setIsPressed] = React.useState(false);
 
   const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+
+  const renderedIcon = fluentIcon ? (
+    fluentIcon
+  ) : (
+    <Text accessible={false} style={styles.icon}>
+      {icon}
+    </Text>
+  );
+
+  const isSelected = currentRoute === route;
+  const selectedStyle = {backgroundColor: 'lightgrey'};
+
   return (
     <Pressable
       onPress={() => navigation.navigate(route)}
@@ -414,9 +489,7 @@ const DrawerListItem = ({
           currentRoute={currentRoute}
           itemRoute={route}
         />
-        <Text accessible={false} style={styles.icon}>
-          {icon}
-        </Text>
+        {renderedIcon}
       </View>
       <Text accessible={false} style={styles.drawerText}>
         {label}

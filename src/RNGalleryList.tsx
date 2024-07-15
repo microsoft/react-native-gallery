@@ -43,20 +43,74 @@ import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 import {NetworkExamplePage} from './examples/NetworkExamplePage';
 import {SvgExamplePage} from './examples/SvgExamplePage';
 import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage';
+import {
+  Button16Regular,
+  Calendar16Regular,
+  CalendarAdd16Regular,
+  CheckboxChecked16Regular,
+  Clipboard16Regular,
+  Cloud16Regular,
+  Comment16Regular,
+  Desktop16Regular,
+  DualScreenVerticalScrollRegular,
+  Eye16Regular,
+  FormRegular,
+  Globe16Regular,
+  Grid16Regular,
+  HandPoint16Regular,
+  Home16Regular,
+  Image16Regular,
+  LayoutColumnTwoSplitLeft16Regular,
+  List16Regular,
+  ListBar16Regular,
+  LockClosed16Regular,
+  NetworkCheckRegular,
+  Password16Regular,
+  PlayCircle16Regular,
+  Print16Regular,
+  RadioButton16Filled,
+  RadioButton16Regular,
+  RadioButtonOff16Regular,
+  Save16Regular,
+  Settings16Regular,
+  Status16Regular,
+  TextBulletList16Regular,
+  TextChangeCaseRegular,
+  TimePicker20Regular,
+  TimePickerRegular,
+  ToggleLeft16Regular,
+} from '@fluentui/react-native-icons';
 
 // https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
-  {label: 'Basic Input', icon: '\uE73A'},
-  {label: 'Collections', icon: '\uE80A'},
-  {label: 'Date & time', icon: '\uEC92'},
-  {label: 'Dialogs & flyouts', icon: '\uE8BD'},
-  {label: 'Layout', icon: '\uE8A1'},
-  {label: 'Media', icon: '\uE786'},
-  {label: 'Scrolling', icon: '\uE8CB'},
-  {label: 'Status and Info', icon: '\uE8F2'},
-  {label: 'Text', icon: '\uE8D2'},
-  {label: 'System', icon: '\uE7F8'},
-  {label: 'Legacy', icon: '\uE96A'},
+  {
+    label: 'Basic Input',
+    icon: '\uE73A',
+    fluentIcon: <CheckboxChecked16Regular />,
+  },
+  {label: 'Collections', icon: '\uE80A', fluentIcon: <Grid16Regular />},
+  {label: 'Date & time', icon: '\uEC92', fluentIcon: <Calendar16Regular />},
+  {
+    label: 'Dialogs & flyouts',
+    icon: '\uE8BD',
+    fluentIcon: <Comment16Regular />,
+  },
+  {
+    label: 'Layout',
+    icon: '\uE8A1',
+    fluentIcon: <LayoutColumnTwoSplitLeft16Regular />,
+  },
+  {label: 'Media', icon: '\uE786', fluentIcon: <PlayCircle16Regular />},
+  {
+    label: 'Scrolling',
+    icon: '\uE8CB',
+    // fluentIcon: <ArrowBidirectionalUpDownRegular />,
+    fluentIcon: <DualScreenVerticalScrollRegular />,
+  },
+  {label: 'Status and Info', icon: '\uE8F2', fluentIcon: <Status16Regular />},
+  {label: 'Text', icon: '\uE8D2', fluenticon: <TextChangeCaseRegular />},
+  {label: 'System', icon: '\uE7F8', fluentIcon: <Desktop16Regular />},
+  {label: 'Legacy', icon: '\uE96A', fluentIcon: <Save16Regular />},
 ];
 
 interface IRNGalleryExample {
@@ -64,6 +118,7 @@ interface IRNGalleryExample {
   component: React.ElementType;
   textIcon: string;
   imageIcon?: ImageSourcePropType;
+  fluentIcon?: React.ReactElement;
   type: string;
   subtitle?: string;
   new?: boolean;
@@ -75,18 +130,21 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Home',
     component: HomePage,
     textIcon: '\uE80F',
+    fluentIcon: <Home16Regular />,
     type: '',
   },
   {
     key: 'Settings',
     component: SettingsPage,
     textIcon: '\uE713',
+    fluentIcon: <Settings16Regular />,
     type: '',
   },
   {
     key: 'All samples',
     component: ComponentListPage,
     textIcon: '\uE71D',
+    fluentIcon: <TextBulletList16Regular />,
     type: '',
   },
   {
@@ -94,6 +152,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ButtonExamplePage,
     textIcon: '\uE815',
     imageIcon: require('../assets/ControlImages/Button.png'),
+    fluentIcon: <Button16Regular />,
     subtitle: 'A control that responds to user input and raises a Click event.',
     type: 'Basic Input',
   },
@@ -102,6 +161,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: CheckBoxExamplePage,
     textIcon: '\uE73A',
     imageIcon: require('../assets/ControlImages/Checkbox.png'),
+    fluentIcon: <CheckboxChecked16Regular />,
     subtitle: 'A control that a user can select or clear.',
     type: 'Basic Input',
   },
@@ -110,6 +170,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ClipboardExamplePage,
     textIcon: '\uE8C8',
     imageIcon: require('../assets/ControlImages/Clipboard.png'),
+    fluentIcon: <Clipboard16Regular />,
     subtitle: 'Copy and paste to and from the system Clipboard.',
     type: 'System',
     new: true,
@@ -118,6 +179,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Config',
     component: ConfigExamplePage,
     textIcon: '\uE753',
+    fluentIcon: <Cloud16Regular />,
     type: 'Status and Info',
   },
   {
@@ -125,6 +187,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: DatePickerExamplePage,
     textIcon: '\uE787',
     imageIcon: require('../assets/ControlImages/DatePicker.png'),
+    fluentIcon: <CalendarAdd16Regular />,
     subtitle: 'A control that lets a user pick a date value.',
     type: 'Date & time',
   },
@@ -148,6 +211,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: FlatListExamplePage,
     textIcon: '\uE8A4',
     imageIcon: require('../assets/ControlImages/ListView.png'),
+    fluentIcon: <List16Regular />,
     subtitle:
       'A performant interface for rendering basic, flat lists, supporting the most handy features.',
     type: 'Collections',
@@ -165,6 +229,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ImageExamplePage,
     textIcon: '\uEB9F',
     imageIcon: require('../assets/ControlImages/Image.png'),
+    fluentIcon: <Image16Regular />,
     subtitle: 'A control to display image content.',
     type: 'Media',
   },
@@ -180,6 +245,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Networking',
     component: NetworkExamplePage,
     textIcon: '\uE704',
+    fluentIcon: <NetworkCheckRegular />,
     type: 'Status and Info',
     subtitle: 'Load resources from a remote URL.',
     new: true,
@@ -196,6 +262,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: PickerExamplePage,
     textIcon: '\uE7B8',
     imageIcon: require('../assets/ControlImages/ComboBox.png'),
+    fluentIcon: <ListBar16Regular />,
     subtitle: 'A drop-down list of items a user can select from.',
     type: 'Basic Input',
   },
@@ -212,6 +279,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: PressableExamplePage,
     textIcon: '\uE815',
     imageIcon: require('../assets/ControlImages/Button.png'),
+    fluentIcon: <HandPoint16Regular />,
     subtitle:
       'A component that can detect various stages of press interactions on any of its defined children.',
     type: 'Basic Input',
@@ -220,6 +288,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'Print',
     component: PrintExamplePage,
     textIcon: '\uE749',
+    fluentIcon: <Print16Regular />,
     type: 'Media',
   },
   {
@@ -236,6 +305,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: RadioButtonsExamplePage,
     textIcon: '\uECCB',
     imageIcon: require('../assets/ControlImages/RadioButtons.png'),
+    fluentIcon: <RadioButton16Filled />,
     subtitle:
       'A control that allows the user to select a single option from a group of options.',
     type: 'Basic Input',
@@ -254,6 +324,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'SensitiveInfo',
     component: SensitiveInfoExamplePage,
     textIcon: '\uE72E',
+    fluentIcon: <LockClosed16Regular />,
     type: 'Status and Info',
   },
   {
@@ -276,6 +347,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: SwitchExamplePage,
     textIcon: '\uF19E',
     imageIcon: require('../assets/ControlImages/ToggleSwitch.png'),
+    fluentIcon: <ToggleLeft16Regular />,
     subtitle:
       'A button that can be switched between two states like a CheckBox.',
     type: 'Basic Input',
@@ -309,6 +381,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: TimePickerExamplePage,
     textIcon: '\uE823',
     imageIcon: require('../assets/ControlImages/TimePicker.png'),
+    fluentIcon: <TimePickerRegular />,
     subtitle: 'A configurable control that lets a user pick a time value.',
     type: 'Date & time',
   },
@@ -361,6 +434,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: WebViewExamplePage,
     textIcon: '\uE774',
     imageIcon: require('../assets/ControlImages/WebView.png'),
+    fluentIcon: <Globe16Regular />,
     subtitle:
       'A Microsoft Edge (Chromium) based control that hosts HTML content in an app.',
     type: 'Media',
@@ -369,6 +443,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     key: 'WindowsHello',
     component: WindowsHelloExamplePage,
     textIcon: '\uE890',
+    fluentIcon: <Eye16Regular />,
     type: 'Status and Info',
   },
   {
@@ -376,6 +451,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: VirtualizedListExamplePage,
     textIcon: '\uE8A4',
     imageIcon: require('../assets/ControlImages/ListView.png'),
+    fluentIcon: <ListBar16Regular />,
     subtitle:
       'The base implementation for FlatList and SectionList, which can be used as alternative if you need more flexibility.',
     type: 'Collections',
