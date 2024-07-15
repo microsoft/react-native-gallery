@@ -9,6 +9,7 @@ import {
   useColorScheme,
   ScrollView,
   I18nManager,
+  LayoutAnimation,
 } from 'react-native';
 import type {ColorValue} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
@@ -237,11 +238,12 @@ const DrawerCollapsibleCategory = ({
   const onPress = () => {
     if (isExpanded && containsCurrentRoute) {
       // Drawer will automatically close when navigating to a new route, by design:
-      // https://github.com/react-navigation/react-navigation/pull/4394
+      // https://github.com/react-xnavigation/react-navigation/pull/4394
       // As a workaround, we allow you to get a category page when the category
       // is expanded but you aren't on the category page now.
       navigation.navigate(categoryRoute, {category: categoryLabel});
     } else {
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       setIsExpanded(!isExpanded);
     }
   };
@@ -255,28 +257,28 @@ const DrawerCollapsibleCategory = ({
   );
 
   let chevron = null;
-  if (isExpanded) {
-    if (isPressed) {
-      chevron = <ChevronDown12Filled />;
+  // if (isExpanded) {
+  //   if (isPressed) {
+  //     chevron = <ChevronDown12Filled />;
+  //   } else {
+  //     chevron = <ChevronDown12Regular />;
+  //   }
+  // } else {
+  const isRTL = I18nManager.isRTL;
+  if (isPressed) {
+    if (isRTL) {
+      chevron = <ChevronLeft12Filled />;
     } else {
-      chevron = <ChevronDown12Regular />;
+      chevron = <ChevronRight12Filled />;
     }
   } else {
-    const isRTL = I18nManager.isRTL;
-    if (isPressed) {
-      if (isRTL) {
-        chevron = <ChevronLeft12Filled />;
-      } else {
-        chevron = <ChevronRight12Filled />;
-      }
+    if (isRTL) {
+      chevron = <ChevronLeft12Regular />;
     } else {
-      if (isRTL) {
-        chevron = <ChevronLeft12Regular />;
-      } else {
-        chevron = <ChevronRight12Regular />;
-      }
+      chevron = <ChevronRight12Regular />;
     }
   }
+  // }
 
   return (
     <View
@@ -309,7 +311,9 @@ const DrawerCollapsibleCategory = ({
             style={[styles.chevronIcon, }]}>
             {isExpanded ? '\uE971' : '\uE972'}
           </Text> */}
-          {chevron}
+          <View style={isExpanded && {transform: [{rotate: '90deg'}]}}>
+            {chevron}
+          </View>
         </View>
       </Pressable>
       {isExpanded &&
