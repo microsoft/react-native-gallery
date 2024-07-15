@@ -199,15 +199,16 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
           </Text>
         </View>
       )}
-      <View style={{flexShrink: 1}}>
+      <View style={{flexShrink: 1, padding: 5}}>
         <Text style={styles.controlItemTitle}>{item.key}</Text>
+        <View style={{height: 4}} />
         <Text style={styles.controlItemSubtitle}>{item.subtitle}</Text>
       </View>
-      {(item.new || item.recentlyUpdated) && (
+      {/* {(item.new || item.recentlyUpdated) && (
         <View style={styles.badgeContainer}>
           <View style={styles.newItemBadge} />
         </View>
-      )}
+      )} */}
     </Pressable>
   );
 };
