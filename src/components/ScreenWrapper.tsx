@@ -16,8 +16,6 @@ import {useNavigation} from '@react-navigation/native';
 import {VibrancyView} from '@fluentui-react-native/vibrancy-view';
 import RNGalleryList, {RNGalleryCategories} from '../RNGalleryList';
 import {
-  ChevronDown12Filled,
-  ChevronDown12Regular,
   ChevronLeft12Filled,
   ChevronLeft12Regular,
   ChevronRight12Filled,
@@ -27,6 +25,7 @@ import {
   TextBulletList16Regular,
 } from '@fluentui/react-native-icons';
 import {FocusZone} from '@fluentui-react-native/focus-zone';
+import {DynamicColorMacOS} from 'react-native-macos';
 
 const textForegroundColor = Platform.select<ColorValue>({
   windows: PlatformColor('TextControlForeground'),
@@ -76,12 +75,12 @@ const createStyles = (colorScheme) =>
       flexDirection: 'row',
       width: '100%',
       height: '100%',
-      backgroundColor: colorScheme === 'light' ? '#f9f9f9' : '#262626',
-      // backgroundColor: 'transparent',
+      backgroundColor: colorScheme === 'light' ? 'white' : 'rgb(30,30,30)',
     },
     navBar: {
       backgroundColor: 'transparent',
       height: '100%',
+      minWidth: 600,
     },
     navItem: {
       flexGrow: 1,
@@ -134,6 +133,7 @@ const styles = StyleSheet.create({
     // borderRadius: 8,
     paddingTop: 53,
     padding: 10,
+    minWidth: 220,
     height: '100%',
   },
   drawerText: {
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
   drawerDivider: {
     backgroundColor: drawerDividerColor,
-    height: 2,
+    height: 1,
   },
   indentContainer: {
     width: 40,
@@ -203,6 +203,7 @@ const createDrawerListItemStyles = (isHovered: boolean, isPressed: boolean) =>
       flexDirection: 'row',
       alignItems: 'center',
       padding: 5,
+      paddingHorizontal: 10,
       borderRadius: 4,
       borderCurve: 'continuous',
       gap: 4,
@@ -230,7 +231,8 @@ const DrawerCollapsibleCategory = ({
   const categoryRoute = `Category: ${categoryLabel}`;
   const isCurrentRoute = currentRoute === categoryRoute;
   const [isExpanded, setIsExpanded] = React.useState(
-    containsCurrentRoute || isCurrentRoute,
+    // containsCurrentRoute || isCurrentRoute,
+    true,
   );
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
@@ -268,15 +270,31 @@ const DrawerCollapsibleCategory = ({
   const isRTL = I18nManager.isRTL;
   if (isPressed) {
     if (isRTL) {
-      chevron = <ChevronLeft12Filled />;
+      chevron = (
+        <ChevronLeft12Filled
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
     } else {
-      chevron = <ChevronRight12Filled />;
+      chevron = (
+        <ChevronRight12Filled
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
     }
   } else {
     if (isRTL) {
-      chevron = <ChevronLeft12Regular />;
+      chevron = (
+        <ChevronLeft12Regular
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
     } else {
-      chevron = <ChevronRight12Regular />;
+      chevron = (
+        <ChevronRight12Regular
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
     }
   }
   // }
@@ -289,7 +307,7 @@ const DrawerCollapsibleCategory = ({
       accessibilityLabel={categoryLabel}
       onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
       <Pressable
-        style={localStyles.drawerListItem}
+        style={[localStyles.drawerListItem, {paddingStart: 5}]}
         onPress={() => onPress()}
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
@@ -302,8 +320,17 @@ const DrawerCollapsibleCategory = ({
             itemRoute={categoryRoute}
           />
         </View> */}
-        {renderedIcon}
-        <Text accessible={false} style={styles.drawerText}>
+        {/* {renderedIcon} */}
+        <Text
+          accessible={false}
+          style={[
+            styles.drawerText,
+            {
+              fontSize: 11,
+              fontWeight: 'bold',
+              color: PlatformColor('secondaryLabelColor'),
+            },
+          ]}>
           {categoryLabel}
         </Text>
         <View style={[styles.expandedChevron, !isHovered && {opacity: 0}]}>
@@ -411,7 +438,7 @@ function CustomDrawerContent({navigation}) {
             navigation={navigation}
             currentRoute={currentRoute}
           />
-          {/* <View style={styles.drawerDivider} /> */}
+          <View style={[styles.drawerDivider]} />
           {/* TODO: Rectify Scroller padding */}
           <ScrollView>
             <DrawerListView
@@ -419,7 +446,7 @@ function CustomDrawerContent({navigation}) {
               currentRoute={currentRoute}
             />
           </ScrollView>
-          {/* <View style={styles.drawerDivider} /> */}
+          <View style={styles.drawerDivider} />
           <DrawerListItem
             route="Settings"
             label="Settings"
@@ -491,7 +518,12 @@ const DrawerListItem = ({
       accessibilityLabel={label}
       style={[
         localStyles.drawerListItem,
-        isSelected && {backgroundColor: 'rgb(208,206,205)'},
+        isSelected && {
+          backgroundColor: DynamicColorMacOS({
+            light: 'rgb(208,206,205)',
+            dark: 'rgb(101,99,98)',
+          }),
+        },
       ]}>
       {/* <View style={styles.indentContainer}> */}
       {/* <SelectedNavigationItemPill
@@ -520,7 +552,6 @@ export function ScreenWrapper({
 
   return (
     <View style={styles.container}>
-      <CustomDrawerContent navigation={navigation} />
       <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
         {children}
       </View>

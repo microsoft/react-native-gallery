@@ -12,6 +12,10 @@ import type {ColorValue} from 'react-native';
 import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import type {IRNGalleryExample} from './RNGalleryList';
+import {
+  ColorWithSystemEffectMacOS,
+  DynamicColorMacOS,
+} from 'react-native-macos';
 
 const controlItemBackgroundColor = Platform.select<ColorValue>({
   windows: PlatformColor('CardBackgroundFillColorDefaultBrush'),
@@ -68,22 +72,24 @@ const textOnAccentColor = Platform.select<ColorValue>({
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: 'rgb(236, 236, 236)',
+      // backgroundColor:
+      //   colorScheme === 'light' ? 'rgb(236, 236, 236)' : 'rgb(50,50,50)',
+      backgroundColor: ColorWithSystemEffectMacOS(
+        DynamicColorMacOS({light: 'rgb(236, 236, 236)', dark: 'rgb(50,50,50)'}),
+        isPressing ? 'pressed' : 'none',
+      ),
       borderColor: isPressing
         ? controlItemBorderColorPressed
         : isHovered
         ? controlItemBorderColorHover
         : controlItemBorderColorRest,
-      // borderWidth: 1,
-      // borderBottomWidth: 1,
       padding: 8,
       borderCurve: 'continuous',
       borderRadius: 12,
       alignItems: 'center',
       flexDirection: 'row',
-      gap: 16,
       width: 360,
-      height: 90,
+      height: 80,
     },
     textIcon: {
       fontFamily: 'Segoe MDL2 Assets',
@@ -127,6 +133,19 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       backgroundColor: accentColor,
     },
   });
+
+const appleTypography = StyleSheet.create({
+  headline: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'bold',
+  },
+  body: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'regular',
+  },
+});
 
 type HomeComponentTileProps = {
   item: IRNGalleryExample;
@@ -199,10 +218,14 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
           </Text>
         </View>
       )}
-      <View style={{flexShrink: 1, padding: 5}}>
-        <Text style={styles.controlItemTitle}>{item.key}</Text>
+      <View style={{flexShrink: 1}}>
+        <Text style={[styles.controlItemTitle, appleTypography.headline]}>
+          {item.key}
+        </Text>
         <View style={{height: 4}} />
-        <Text style={styles.controlItemSubtitle}>{item.subtitle}</Text>
+        <Text style={[styles.controlItemSubtitle, appleTypography.body]}>
+          {item.subtitle}
+        </Text>
       </View>
       {/* {(item.new || item.recentlyUpdated) && (
         <View style={styles.badgeContainer}>

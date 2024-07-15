@@ -1,3 +1,7 @@
+import {
+  ChevronLeft48Regular,
+  ChevronRight48Regular,
+} from '@fluentui/react-native-icons';
 import React, {useState} from 'react';
 import {
   FlatList,
@@ -65,7 +69,8 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
           minWidth: 48,
           minHeight: 48,
         }}>
-        <Text style={{fontSize: 32}}>{left ? '‹' : '›'}</Text>
+        {/* <Text style={{fontSize: 32}}>{left ? '‹' : '›'}</Text> */}
+        {left ? <ChevronLeft48Regular /> : <ChevronRight48Regular />}
       </View>
     </Pressable>
   );

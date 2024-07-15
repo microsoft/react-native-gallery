@@ -14,7 +14,7 @@ import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {HorizontalListWithPageNavigation} from './PageScroller';
 import {PathIcon} from './PathIcon';
-import {VibrancyView} from '@fluentui-react-native/vibrancy-view';
+import {ColorWithSystemEffectMacOS} from 'react-native-macos';
 
 const headerTileBackgroundColorRest = Platform.select<ColorValue>({
   windows: PlatformColor('SolidBackgroundFillColorBaseBrush'),
@@ -25,6 +25,15 @@ const headerTileBackgroundColorRest = Platform.select<ColorValue>({
 const headerTileBackgroundColorHover = Platform.select<ColorValue>({
   windows: PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
   macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  default: 'white',
+});
+
+const headerTileBackgroundColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+  macos: ColorWithSystemEffectMacOS(
+    PlatformColor('controlBackgroundColor'),
+    'pressed',
+  ),
   default: 'white',
 });
 
@@ -46,6 +55,12 @@ const titleColor = Platform.select<ColorValue>({
   default: 'black',
 });
 
+const titleColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: ColorWithSystemEffectMacOS(PlatformColor('labelColor'), 'pressed'),
+  default: 'black',
+});
+
 const descriptionColor = Platform.select<ColorValue>({
   windows: PlatformColor('TextFillColorSecondaryBrush'),
   macos: PlatformColor('secondaryLabelColor'),
@@ -58,16 +73,17 @@ const linkColor = Platform.select<ColorValue>({
   default: 'blue',
 });
 
-const createStyles = (isHovered: boolean, _isPressing: boolean) =>
+const createStyles = (isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     headerTile: {
       // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HeaderTile.xaml#L12
       // Should use 'AcrylicInAppFillColorDefaultBrush', blocked on https://github.com/microsoft/react-native-windows/issues/8861
       // (The acrylic does work, but does not update when the theme changes)
-      // backgroundColor: isHovered
-      //   ? headerTileBackgroundColorHover
-      //   : headerTileBackgroundColorRest,
-      backgroundColor: 'white',
+      backgroundColor: isHovered
+        ? headerTileBackgroundColorHover
+        : isPressing
+        ? 'red'
+        : headerTileBackgroundColorRest,
       borderColor: isHovered
         ? headerTileBorderColorHover
         : headerTileBorderColorRest,
@@ -77,8 +93,9 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       padding: 24,
       gap: 4,
       width: 198,
-      height: 220,
+      // height: 220,
       alignItems: 'flex-start',
+      cursor: 'pointer',
     },
     tileIconContent: {
       height: 56,
@@ -108,6 +125,19 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
     },
   });
 
+const appleTypography = StyleSheet.create({
+  title2: {
+    fontSize: 17,
+    lineHeight: 22,
+    fontWeight: 'regular',
+  },
+  body: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'regular',
+  },
+});
+
 type HeaderTileType = PropsWithChildren<{
   title: string;
   description: string;
@@ -118,15 +148,13 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
   const [isPressing, setIsPressing] = React.useState(false);
   const styles = createStyles(isHovered, isPressing);
 
-  const openInNewWindowIcon = '\uE8A7';
   return (
-    // <VibrancyView
-    //   blendingMode="withinWindow"
-    //   state="followsWindowActiveState"
-    //   material="sidebar"
-    //   style={styles.headerTile}>
     <Pressable
-      style={styles.headerTile}
+      style={[
+        styles.headerTile,
+        // TODO: Figure out why styles.headerTile is not being applied when isPressing is true
+        isPressing && {backgroundColor: headerTileBackgroundColorPressed},
+      ]}
       onPress={() => Linking.openURL(props.link)}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
@@ -134,18 +162,17 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       onHoverOut={() => setIsHovered(false)}
       accessibilityRole="link">
       <View style={styles.tileIconContent}>{props.children}</View>
-      <Text style={styles.tileTitle}>{props.title}</Text>
-      <Text style={styles.tileDescription}>{props.description}</Text>
-      <Text style={styles.tileLinkIcon} accessible={false}>
-        {openInNewWindowIcon}
+      <Text style={[styles.tileTitle, appleTypography.title2]}>
+        {props.title}
+      </Text>
+      <Text style={[styles.tileDescription, appleTypography.body]}>
+        {props.description}
       </Text>
     </Pressable>
-    // </VibrancyView>
   );
 };
 
 const TileGallery = () => {
-  const styles = createStyles(false, false);
   const items = [
     <HeaderTile
       title="Getting started"

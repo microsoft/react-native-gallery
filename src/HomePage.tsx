@@ -14,7 +14,6 @@ import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
-import {Svg, Defs, Stop, Rect, LinearGradient} from 'react-native-svg';
 import useHighContrastState from './hooks/useHighContrastState';
 
 const createStyles = () =>
@@ -22,7 +21,7 @@ const createStyles = () =>
     container: {
       padding: 10,
       paddingBottom: 40,
-      paddingLeft: 36,
+      paddingStart: 36,
       alignSelf: 'stretch',
       height: '100%',
       alignContent: 'flex-start',
@@ -44,7 +43,8 @@ const createStyles = () =>
     },
     pageHeader: {},
     pageTitleContainer: {
-      height: 204,
+      // height: 204,
+      height: 76,
       justifyContent: 'center',
     },
     pageTitle: {
@@ -55,6 +55,18 @@ const createStyles = () =>
       paddingLeft: 36,
     },
   });
+
+const appleTypography = StyleSheet.create({
+  largeTitle: {
+    fontSize: 26,
+    lineHeight: 32,
+  },
+  largeTitleEmphasized: {
+    fontSize: 26,
+    lineHeight: 32,
+    fontWeight: 'bold',
+  },
+});
 
 interface BackgroundGradientProps {
   colorStop1: ColorValue;
@@ -81,33 +93,24 @@ const PageTitle = () => {
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View style={styles.heroGradient}>
-      {/* <Svg height="100%" width="100%" style={StyleSheet.absoluteFillObject}>
-        <Defs>
-          <LinearGradient id="grad" x1={0.5} y1={0} x2={0.5} y2={1}>
-            <Stop offset="0" stopColor={colorStops[0]} />
-            <Stop offset="1" stopColor={colorStops[1]} />
-          </LinearGradient>
-        </Defs>
-        <Rect width="100%" height="100%" fill="url(#grad)" />
-      </Svg> */}
-      <Image
+      {/* <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
           styles.heroBackgroundImage,
           {
             opacity: colorScheme === 'light' ? 0.9 : 0.8,
             aspectRatio: 1,
-            height: 450,
+            height: 330,
             // margin: 20,
           },
         ]}
-      />
+      /> */}
       <View style={styles.pageHeader}>
         <View style={styles.pageTitleContainer}>
           <Text
             accessible
             accessibilityRole={'header'}
-            style={styles.pageTitle}>
+            style={[styles.pageTitle, appleTypography.largeTitle]}>
             React Native Gallery
           </Text>
         </View>
@@ -117,9 +120,10 @@ const PageTitle = () => {
   );
 };
 
-export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
-  const {colors} = useTheme();
-  const styles = createStyles(colors);
+export const HomePage: React.FunctionComponent<{navigation: any}> = ({
+  navigation,
+}) => {
+  const styles = createStyles();
   const isScreenFocused = useIsFocused();
 
   return isScreenFocused ? (
