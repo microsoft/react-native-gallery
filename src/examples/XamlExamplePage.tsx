@@ -113,7 +113,11 @@ const onRadioButtonSelected = (event) => {
         <TextBlock text="I am a XAML TextBlock." />
       </Example>
       <Example title="A simple XAML Button." code={example2jsx}>
-        <Button content={{string: 'XAML Button'}} onClick={() => {}} />
+        <Button
+          accessibilityLabel="Simple example"
+          content={{string: 'XAML Button'}}
+          onClick={() => {}}
+        />
       </Example>
       <Example title="A simple XAML ToggleSwitch." code={example3jsx}>
         <ToggleSwitch accessibilityLabel="Simple example ToggleSwitch" />
@@ -152,7 +156,7 @@ You selected Option ${selectedRadioButton}`}</Text>
         </View>
       </Example>
       <Example title="A simple ComboBox." code={example5jsx}>
-        <ComboBox accessibilityLabel="Simple example ComboBox" text="ComboBox">
+        <ComboBox accessibilityLabel="Simple example" text="ComboBox">
           <ComboBoxItem content={{string: 'ComboBoxItem 1'}} />
           <ComboBoxItem content={{string: 'ComboBoxItem 2'}} />
           <ComboBoxItem content={{string: 'ComboBoxItem 3'}} />

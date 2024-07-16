@@ -43,16 +43,22 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Copy text to the Clipboard." code={example1jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
+            accessibilityLabel="Example copy text"
             title="Copy text to the Clipboard"
             onPress={() => Clipboard.setString(textToCopy)}
           />
-          <TextInput value={textToCopy} onChangeText={setTextToCopy} />
+          <TextInput
+            accessibilityLabel="Example set text to copy"
+            value={textToCopy}
+            onChangeText={setTextToCopy}
+          />
         </View>
       </Example>
 
       <Example title="Paste text from the Clipboard." code={example2jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
+            accessibilityLabel="Example paste text"
             title="Paste text from the Clipboard"
             onPress={() => getClipboardText()}
           />
