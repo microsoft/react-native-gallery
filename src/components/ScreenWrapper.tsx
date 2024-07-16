@@ -26,6 +26,7 @@ import {
   Settings16Regular,
   TextBulletList16Regular,
 } from '@fluentui/react-native-icons';
+import {FocusZone} from '@fluentui-react-native/focus-zone';
 
 const textForegroundColor = Platform.select<ColorValue>({
   windows: PlatformColor('TextControlForeground'),
@@ -41,7 +42,7 @@ const accentColor = Platform.select<ColorValue>({
 
 const drawerDividerColor = Platform.select<ColorValue>({
   windows: PlatformColor('CardStrokeColorDefaultBrush'),
-  macos: PlatformColor('gridColor'),
+  macos: PlatformColor('separatorColor'),
   default: 'black',
 });
 
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
   },
   drawerDivider: {
     backgroundColor: drawerDividerColor,
-    height: 1,
+    height: 2,
   },
   indentContainer: {
     width: 40,
@@ -391,40 +392,44 @@ function CustomDrawerContent({navigation}) {
     <VibrancyView
       blendingMode="behindWindow"
       state="followsWindowActiveState"
-      material="sidebar"
-      style={styles.navBar}>
-      <View style={styles.drawer}>
-        <DrawerListItem
-          route="Home"
-          label="Home"
-          icon="&#xE80F;"
-          fluentIcon={<Home16Regular />}
-          navigation={navigation}
-          currentRoute={currentRoute}
-        />
-        <DrawerListItem
-          route="All samples"
-          label="All samples"
-          icon="&#xE71D;"
-          fluentIcon={<TextBulletList16Regular />}
-          navigation={navigation}
-          currentRoute={currentRoute}
-        />
-        <View style={styles.drawerDivider} />
-        {/* TODO: Rectify Scroller padding */}
-        <ScrollView>
-          <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-        </ScrollView>
-        <View style={styles.drawerDivider} />
-        <DrawerListItem
-          route="Settings"
-          label="Settings"
-          icon="&#xE713;"
-          fluentIcon={<Settings16Regular />}
-          navigation={navigation}
-          currentRoute={currentRoute}
-        />
-      </View>
+      material="sidebar">
+      <FocusZone focusZoneDirection="vertical">
+        <View style={styles.drawer}>
+          <DrawerListItem
+            route="Home"
+            label="Home"
+            icon="&#xE80F;"
+            fluentIcon={<Home16Regular />}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+          <DrawerListItem
+            route="All samples"
+            label="All samples"
+            icon="&#xE71D;"
+            fluentIcon={<TextBulletList16Regular />}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+          {/* <View style={styles.drawerDivider} /> */}
+          {/* TODO: Rectify Scroller padding */}
+          <ScrollView>
+            <DrawerListView
+              navigation={navigation}
+              currentRoute={currentRoute}
+            />
+          </ScrollView>
+          {/* <View style={styles.drawerDivider} /> */}
+          <DrawerListItem
+            route="Settings"
+            label="Settings"
+            icon="&#xE713;"
+            fluentIcon={<Settings16Regular />}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+        </View>
+      </FocusZone>
     </VibrancyView>
   );
 }

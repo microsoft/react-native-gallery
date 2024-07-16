@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fluentui-react-native/experimental-expander": "^0.6.1",
+    "@fluentui-react-native/focus-zone": "^0.17.1",
     "@fluentui-react-native/icon": "^0.21.2",
     "@fluentui-react-native/vibrancy-view": "^0.2.1",
     "@fluentui/react-native-icons": "^2.0.249",

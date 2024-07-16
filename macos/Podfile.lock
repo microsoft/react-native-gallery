@@ -35,6 +35,8 @@ PODS:
     - DoubleConversion
     - fmt (= 9.1.0)
     - glog
+  - RCTFocusZone (0.17.1):
+    - React
   - RCTRequired (0.73.32)
   - RCTTypeSafety (0.73.32):
     - FBLazyVector (= 0.73.32)
@@ -1051,6 +1053,7 @@ DEPENDENCIES:
   - lottie-react-native (from `../node_modules/lottie-react-native`)
   - RCT-Folly (from `../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec`)
+  - "RCTFocusZone (from `../node_modules/@fluentui-react-native/focus-zone`)"
   - RCTRequired (from `../node_modules/react-native-macos/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native-macos/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native-macos/`)
@@ -1124,6 +1127,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/lottie-react-native"
   RCT-Folly:
     :podspec: "../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec"
+  RCTFocusZone:
+    :path: "../node_modules/@fluentui-react-native/focus-zone"
   RCTRequired:
     :path: "../node_modules/react-native-macos/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -1232,6 +1237,7 @@ SPEC CHECKSUMS:
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
   lottie-react-native: 2d9efc8a5ffabe688b55a1a1ac1fb94b9d971995
   RCT-Folly: 68e9c0fd4c0f05964afd447041d3ac2d67298f27
+  RCTFocusZone: e3051ce057fd1481ebfb35aef160b98a22302bd8
   RCTRequired: 5d75ee7b031673f6ba14c9676034399529792ed5
   RCTTypeSafety: b8394b9791f4650512e04d6989ef2db232f7ca68
   React: 711b4f63092274fd03ca4f29391e02c23ee646e0

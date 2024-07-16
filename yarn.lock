@@ -3270,6 +3270,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fluentui-react-native/focus-zone@npm:^0.17.1":
+  version: 0.17.1
+  resolution: "@fluentui-react-native/focus-zone@npm:0.17.1"
+  dependencies:
+    "@fluentui-react-native/interactive-hooks": "npm:0.27.0"
+    "@uifabricshared/foundation-composable": "npm:0.13.0"
+    "@uifabricshared/foundation-settings": "npm:0.15.0"
+  peerDependencies:
+    "@office-iss/react-native-win32": ^0.73.0
+    react: 18.2.0
+    react-native: ^0.73.0
+    react-native-macos: ^0.73.0
+    react-native-windows: ^0.73.0
+  peerDependenciesMeta:
+    "@office-iss/react-native-win32":
+      optional: true
+    react-native-macos:
+      optional: true
+    react-native-windows:
+      optional: true
+  checksum: 10c0/069b558a168cbc8e3df0d2a5aa139b692e3864504266a231a08b23becded431461bb64f5253f3bc6f54843456d9ccd25420b06f30ecfd5f01736826c6ec27f6a
+  languageName: node
+  linkType: hard
+
 "@fluentui-react-native/framework@npm:0.11.0":
   version: 0.11.0
   resolution: "@fluentui-react-native/framework@npm:0.11.0"
@@ -13811,6 +13835,7 @@ react-native-tts@ak1394/react-native-tts:
     "@babel/core": "npm:^7.20.0"
     "@babel/runtime": "npm:^7.20.0"
     "@fluentui-react-native/experimental-expander": "npm:^0.6.1"
+    "@fluentui-react-native/focus-zone": "npm:^0.17.1"
     "@fluentui-react-native/icon": "npm:^0.21.2"
     "@fluentui-react-native/vibrancy-view": "npm:^0.2.1"
     "@fluentui/react-native-icons": "npm:^2.0.249"
