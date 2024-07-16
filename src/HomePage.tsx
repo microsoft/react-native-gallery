@@ -116,7 +116,7 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
 
   return isScreenFocused ? (
     <View>
-      <ScreenWrapper doNotInset={true}>
+      <ScreenWrapper>
         <ScrollView>
           <PageTitle />
           <View style={styles.container}>

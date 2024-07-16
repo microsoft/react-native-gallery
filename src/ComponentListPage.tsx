@@ -106,7 +106,7 @@ const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
 
   return isScreenFocused ? (
     <View>
-      <ScreenWrapper doNotInset={true}>
+      <ScreenWrapper>
         <ScrollView>
           {category !== undefined ? (
             <View style={styles.container}>

@@ -32,9 +32,7 @@ const createStyles = (colorScheme) =>
       borderTopLeftRadius: 8,
       borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
       borderLeftWidth: 1,
-    },
-    insetNavItem: {
-      paddingLeft: 36,
+      paddingStart: 36,
     },
     menu: {
       margin: 5,
@@ -51,13 +49,8 @@ const createStyles = (colorScheme) =>
     },
   });
 
-type ScreenWrapperProps = React.PropsWithChildren<{
-  doNotInset?: boolean;
-}>;
-export function ScreenWrapper({
-  children,
-  doNotInset,
-}: ScreenWrapperProps): JSX.Element {
+type ScreenWrapperProps = React.PropsWithChildren<{}>;
+export function ScreenWrapper({children}: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
   const colorScheme = useColorScheme();
   const styles = createStyles(colorScheme);
@@ -92,9 +85,7 @@ export function ScreenWrapper({
           </TouchableHighlight>
         </View>
       </Pressable>
-      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
-        {children}
-      </View>
+      <View style={styles.navItem}>{children}</View>
     </View>
   );
 }
