@@ -100,13 +100,22 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
           }}
         />
         <View style={{flexDirection: 'row', gap: 12}}>
-          <Button onPress={onPlay} title={'play'} />
-          <Button onPress={onPause} title={'pause'} />
-          <Button onPress={onResume} title={'resume'} />
-          <Button onPress={onReset} title="reset" />
+          <Button onPress={onPlay} title={'play'} accessibilityLabel="Play" />
+          <Button
+            onPress={onPause}
+            title={'pause'}
+            accessibilityLabel="Pause"
+          />
+          <Button
+            onPress={onResume}
+            title={'resume'}
+            accessibilityLabel="Resume"
+          />
+          <Button onPress={onReset} title="reset" accessibilityLabel="Reset" />
           <Button
             onPress={handlerChangeLoop}
             title={loop ? 'disable loop' : 'ative resume'}
+            accessibilityLabel="Disable Loop"
           />
         </View>
       </Example>
