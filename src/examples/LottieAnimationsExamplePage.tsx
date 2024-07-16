@@ -114,8 +114,8 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
           <Button onPress={onReset} title="reset" accessibilityLabel="Reset" />
           <Button
             onPress={handlerChangeLoop}
-            title={loop ? 'disable loop' : 'ative resume'}
-            accessibilityLabel="Disable Loop"
+            title={loop ? 'Disable loop' : 'Resume loop'}
+            accessibilityLabel={loop ? 'Disable loop' : 'Resume loop'}
           />
         </View>
       </Example>
