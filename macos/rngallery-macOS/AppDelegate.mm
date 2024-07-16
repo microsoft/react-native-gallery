@@ -11,7 +11,11 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
-  return [super applicationDidFinishLaunching:notification];
+  [super applicationDidFinishLaunching:notification];
+  
+  self.window.styleMask = self.window.styleMask | NSWindowStyleMaskFullSizeContentView;
+  self.window.titlebarAppearsTransparent = true;
+  self.window.titleVisibility = NSWindowTitleHidden;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
