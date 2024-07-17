@@ -3719,6 +3719,7 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Example copy text"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -3801,6 +3802,7 @@ exports[`Clipboard Example Page 1`] = `
                   </View>
                 </View>
                 <TextInput
+                  accessibilityLabel="Example set text to copy"
                   onChangeText={[Function]}
                   value="This text will be copied to the clipboard"
                 />
@@ -4002,6 +4004,7 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <View
+                  accessibilityLabel="Example paste text"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -54836,6 +54839,7 @@ exports[`Xaml Example Page 1`] = `
               }
             >
               <XamlControl
+                accessibilityLabel="Simple example"
                 content={
                   {
                     "string": "XAML Button",
@@ -56349,7 +56353,7 @@ You selected Option 1
               }
             >
               <XamlControl
-                accessibilityLabel="Simple example ComboBox"
+                accessibilityLabel="Simple example"
                 text="ComboBox"
                 type="Windows.UI.Xaml.Controls.ComboBox"
               >
