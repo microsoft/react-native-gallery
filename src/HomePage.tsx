@@ -130,6 +130,11 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
               items={RNGalleryList.filter((item) => item.recentlyUpdated)}
               navigation={navigation}
             />
+            <ListOfComponents
+              heading="All samples"
+              items={RNGalleryList}
+              navigation={navigation}
+            />
           </View>
         </ScrollView>
       </ScreenWrapper>
