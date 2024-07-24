@@ -7,20 +7,21 @@ import {
   Image,
   useColorScheme,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from '@react-navigation/native';
 import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
-import LinearGradient from 'react-native-linear-gradient';
+import useHighContrastState from './hooks/useHighContrastState';
 
 const createStyles = () =>
   StyleSheet.create({
     container: {
       padding: 10,
       paddingBottom: 40,
-      paddingLeft: 36,
+      paddingStart: 36,
       alignSelf: 'stretch',
       height: '100%',
       alignContent: 'flex-start',
@@ -28,14 +29,11 @@ const createStyles = () =>
     scrollView: {
       paddingRight: 20,
     },
-    icon: {
-      fontFamily: 'Segoe MDL2 Assets',
-      fontSize: 16,
-    },
     heroGradient: {
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
+      // position: 'absolute',
+      // width: '100%',
+      // height: '100%',
+      flex: 1,
     },
     heroBackgroundImage: {
       position: 'absolute',
@@ -45,7 +43,8 @@ const createStyles = () =>
     },
     pageHeader: {},
     pageTitleContainer: {
-      height: 204,
+      // height: 204,
+      height: 76,
       justifyContent: 'center',
     },
     pageTitle: {
@@ -57,49 +56,61 @@ const createStyles = () =>
     },
   });
 
+const appleTypography = StyleSheet.create({
+  largeTitle: {
+    fontSize: 26,
+    lineHeight: 32,
+  },
+  largeTitleEmphasized: {
+    fontSize: 26,
+    lineHeight: 32,
+    fontWeight: 'bold',
+  },
+});
+
+interface BackgroundGradientProps {
+  colorStop1: ColorValue;
+  colorStop2: ColorValue;
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+}
+
 const PageTitle = () => {
   const {colors} = useTheme();
   const colorScheme = useColorScheme();
   const styles = createStyles(colors);
+  const isHighContrast = useHighContrastState();
+
+  const colorStops = isHighContrast
+    ? ['black', 'black']
+    : colorScheme === 'light'
+    ? ['#CED8E4', '#D5DBE3']
+    : // Dark
+      ['#020B20', '#020B20'];
 
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
-    <View>
-      <LinearGradient
-        start={{x: 0.5, y: 0}}
-        end={{x: 0.5, y: 1}}
-        colors={
-          colorScheme === 'light'
-            ? ['#CED8E4', '#D5DBE3']
-            : ['#020B20', '#020B20']
-        }
-        style={styles.heroGradient}
-      />
-      <Image
+    <View style={styles.heroGradient}>
+      {/* <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
           styles.heroBackgroundImage,
           {
             opacity: colorScheme === 'light' ? 0.9 : 0.8,
+            aspectRatio: 1,
+            height: 330,
+            // margin: 20,
           },
         ]}
-      />
-      <LinearGradient
-        start={{x: 0, y: 0.5}}
-        end={{x: 0, y: 1.5}}
-        colors={
-          colorScheme === 'light'
-            ? ['#f9f9f900', '#f9f9f9FF']
-            : ['#26262600', '#262626FF']
-        }
-        style={styles.heroGradient}
-      />
+      /> */}
       <View style={styles.pageHeader}>
         <View style={styles.pageTitleContainer}>
           <Text
             accessible
             accessibilityRole={'header'}
-            style={styles.pageTitle}>
+            style={[styles.pageTitle, appleTypography.largeTitle]}>
             React Native Gallery
           </Text>
         </View>
@@ -109,9 +120,10 @@ const PageTitle = () => {
   );
 };
 
-export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
-  const {colors} = useTheme();
-  const styles = createStyles(colors);
+export const HomePage: React.FunctionComponent<{navigation: any}> = ({
+  navigation,
+}) => {
+  const styles = createStyles();
   const isScreenFocused = useIsFocused();
 
   return isScreenFocused ? (
@@ -128,6 +140,11 @@ export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
             <ListOfComponents
               heading="Recently updated samples"
               items={RNGalleryList.filter((item) => item.recentlyUpdated)}
+              navigation={navigation}
+            />
+            <ListOfComponents
+              heading="All samples"
+              items={RNGalleryList}
               navigation={navigation}
             />
           </View>

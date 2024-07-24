@@ -5,33 +5,97 @@ import {
   Text,
   Pressable,
   Linking,
+  Platform,
   PlatformColor,
   Image,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import {PathIcon, FontIcon} from 'react-native-xaml';
 import {HorizontalListWithPageNavigation} from './PageScroller';
+import {PathIcon} from './PathIcon';
+import {ColorWithSystemEffectMacOS} from 'react-native-macos';
 
-const createStyles = (isHovered: boolean, _isPressing: boolean) =>
+const headerTileBackgroundColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorBaseBrush'),
+  macos: PlatformColor('controlBackgroundColor'),
+  default: 'white',
+});
+
+const headerTileBackgroundColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+  macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  default: 'white',
+});
+
+const headerTileBackgroundColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+  macos: ColorWithSystemEffectMacOS(
+    PlatformColor('controlBackgroundColor'),
+    'pressed',
+  ),
+  default: 'white',
+});
+
+const headerTileBorderColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'white',
+});
+
+const headerTileBorderColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorSecondary'),
+  macos: PlatformColor('separatorColor'),
+  default: 'white',
+});
+
+const titleColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const titleColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: ColorWithSystemEffectMacOS(PlatformColor('labelColor'), 'pressed'),
+  default: 'black',
+});
+
+const descriptionColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('secondaryLabelColor'),
+  default: 'black',
+});
+
+const linkColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('linkColor'),
+  default: 'blue',
+});
+
+const createStyles = (isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     headerTile: {
       // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HeaderTile.xaml#L12
       // Should use 'AcrylicInAppFillColorDefaultBrush', blocked on https://github.com/microsoft/react-native-windows/issues/8861
       // (The acrylic does work, but does not update when the theme changes)
       backgroundColor: isHovered
-        ? PlatformColor('SolidBackgroundFillColorBaseBrush')
-        : PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+        ? headerTileBackgroundColorHover
+        : isPressing
+        ? 'red'
+        : headerTileBackgroundColorRest,
       borderColor: isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+        ? headerTileBorderColorHover
+        : headerTileBorderColorRest,
       borderWidth: 1,
       borderRadius: 8,
+      borderCurve: 'continuous',
       padding: 24,
       gap: 4,
       width: 198,
-      height: 220,
+      // height: 220,
       alignItems: 'flex-start',
+      cursor: 'pointer',
     },
     tileIconContent: {
       height: 56,
@@ -40,11 +104,11 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
     tileTitle: {
       // BodyTextBlockStyle: https://github.com/microsoft/microsoft-ui-xaml/blob/winui3/release/1.4-stable/dxaml/xcp/dxaml/themes/generic.xaml#L13278
       fontSize: 18,
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: titleColor,
     },
     tileDescription: {
       // CaptionTextBlockStyle: https://github.com/microsoft/microsoft-ui-xaml/blob/d4c4e539c55b562e78e7f026195d5b6c8af234ea/dxaml/xcp/dxaml/themes/generic.xaml#L13282
-      color: PlatformColor('TextFillColorSecondaryBrush'),
+      color: descriptionColor,
       fontSize: 12,
       flexGrow: 1,
     },
@@ -53,13 +117,26 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       alignSelf: 'flex-end',
       justifyContent: 'flex-end',
       fontSize: 18,
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: linkColor,
     },
     tileGalleryContainer: {
       flexDirection: 'row',
       gap: 12,
     },
   });
+
+const appleTypography = StyleSheet.create({
+  title2: {
+    fontSize: 17,
+    lineHeight: 22,
+    fontWeight: 'regular',
+  },
+  body: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'regular',
+  },
+});
 
 type HeaderTileType = PropsWithChildren<{
   title: string;
@@ -71,10 +148,13 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
   const [isPressing, setIsPressing] = React.useState(false);
   const styles = createStyles(isHovered, isPressing);
 
-  const openInNewWindowIcon = '\uE8A7';
   return (
     <Pressable
-      style={styles.headerTile}
+      style={[
+        styles.headerTile,
+        // TODO: Figure out why styles.headerTile is not being applied when isPressing is true
+        isPressing && {backgroundColor: headerTileBackgroundColorPressed},
+      ]}
       onPress={() => Linking.openURL(props.link)}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
@@ -82,10 +162,11 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       onHoverOut={() => setIsHovered(false)}
       accessibilityRole="link">
       <View style={styles.tileIconContent}>{props.children}</View>
-      <Text style={styles.tileTitle}>{props.title}</Text>
-      <Text style={styles.tileDescription}>{props.description}</Text>
-      <Text style={styles.tileLinkIcon} accessible={false}>
-        {openInNewWindowIcon}
+      <Text style={[styles.tileTitle, appleTypography.title2]}>
+        {props.title}
+      </Text>
+      <Text style={[styles.tileDescription, appleTypography.body]}>
+        {props.description}
       </Text>
     </Pressable>
   );
@@ -146,7 +227,11 @@ const TileGallery = () => {
       title="Code samples"
       description="Find samples that demonstrate specific tasks, features, and APIs."
       link="https://github.com/microsoft/react-native-windows-samples">
-      <FontIcon xamlMargin="0,8,0,0" fontSize={44} glyph="&#xE943;" />
+      <Text
+        accessible={false}
+        style={{fontFamily: 'Segoe MDL2 Assets', fontSize: 44}}>
+        {'\uE943'}
+      </Text>
     </HeaderTile>,
     <HeaderTile
       title="Partner Center"

@@ -1,10 +1,49 @@
 'use strict';
-import {StyleSheet, View, Text, ScrollView, PlatformColor} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  PlatformColor,
+  Platform,
+  ColorValue,
+} from 'react-native';
 import React from 'react';
 import {useIsFocused} from '@react-navigation/native';
 import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {HomeComponentTile} from './components/ControlItem';
+
+const textColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const appleTypography = StyleSheet.create({
+  largeTitle: {
+    fontSize: 26,
+    lineHeight: 32,
+  },
+  headline: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'bold',
+    color: textColor,
+  },
+  title1: {
+    fontSize: 22,
+    lineHeight: 26,
+    fontWeight: 'regular',
+    color: textColor,
+  },
+  title1Emphasized: {
+    fontSize: 22,
+    lineHeight: 26,
+    fontWeight: 'bold',
+    color: textColor,
+  },
+});
 
 const createStyles = () =>
   StyleSheet.create({
@@ -31,7 +70,7 @@ const createStyles = () =>
       marginBottom: 10,
       fontSize: 20,
       fontWeight: '600',
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: textColor,
     },
     homeContainer: {
       alignItems: 'flex-start',
@@ -56,7 +95,9 @@ const ListOfComponents = ({
       accessibilityLabel={heading + 'components'}
       accessible={true}
       accessibilityRole="none">
-      <Text accessibilityRole="header" style={styles.heading}>
+      <Text
+        accessibilityRole="header"
+        style={[styles.heading, appleTypography.title1Emphasized]}>
         {heading}
       </Text>
       <View style={styles.controlItems}>
@@ -118,7 +159,9 @@ const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
             </View>
           ) : (
             <View style={styles.container}>
-              <Text accessibilityRole={'header'} style={styles.title}>
+              <Text
+                accessibilityRole={'header'}
+                style={[styles.title, appleTypography.largeTitle]}>
                 All samples
               </Text>
               <GroupedListOfAllComponents
