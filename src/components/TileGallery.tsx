@@ -96,7 +96,7 @@ const TileGallery = () => {
     <HeaderTile
       title="Getting started"
       description="An overview of app development options, tools, and samples."
-      link="https://learn.microsoft.com/windows/apps/get-started/https://aka.ms/reactnative">
+      link="https://learn.microsoft.com/windows/apps/get-started/">
       <Image
         accessible={true}
         accessibilityRole="image"
