@@ -5792,13 +5792,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dedent@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "dedent@npm:0.6.0"
-  checksum: 10c0/0fade439baf9cec04f98c0881bf6b6b3da4687488b74aecce3bda96ec1c2b441cdd5e0921d0b911adcbaaf66367896fd31c7a2da1e575bf81e84848269818c0a
-  languageName: node
-  linkType: hard
-
 "dedent@npm:^0.7.0":
   version: 0.7.0
   resolution: "dedent@npm:0.7.0"
@@ -7632,7 +7625,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"invariant@npm:*, invariant@npm:2.2.4, invariant@npm:^2.2.2, invariant@npm:^2.2.4":
+"invariant@npm:*, invariant@npm:2.2.4, invariant@npm:^2.2.4":
   version: 2.2.4
   resolution: "invariant@npm:2.2.4"
   dependencies:
@@ -8850,21 +8843,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lottie-react-native@npm:^5.1.6":
-  version: 5.1.6
-  resolution: "lottie-react-native@npm:5.1.6"
-  dependencies:
-    invariant: "npm:^2.2.2"
-    react-native-safe-modules: "npm:^1.0.3"
+"lottie-react-native@npm:^6.7.2":
+  version: 6.7.2
+  resolution: "lottie-react-native@npm:6.7.2"
   peerDependencies:
-    lottie-ios: ^3.4.0
+    "@dotlottie/react-player": ^1.6.1
+    "@lottiefiles/react-lottie-player": ^3.5.3
     react: "*"
     react-native: ">=0.46"
     react-native-windows: ">=0.63.x"
   peerDependenciesMeta:
+    "@dotlottie/react-player":
+      optional: true
+    "@lottiefiles/react-lottie-player":
+      optional: true
     react-native-windows:
       optional: true
-  checksum: 10c0/becb609bb9f975a198d6e5ebdf1ded0a7004807c3427d04aaa9a1d4f69b74b32ae8e30701b89cdeacaaa2b7d5df367c3c3b3e2536f0329ebfcb719ba9fdfa392
+  checksum: 10c0/a98ffa572b1f47edabec7e652926358bfe72b6ebce85ad91a52046859e097320f86b201c8848aec644673e8975b28ef8445abf42fac52812a38f9273f9bb4a5b
   languageName: node
   linkType: hard
 
@@ -10802,17 +10797,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-modules@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "react-native-safe-modules@npm:1.0.3"
-  dependencies:
-    dedent: "npm:^0.6.0"
-  peerDependencies:
-    react-native: "*"
-  checksum: 10c0/1f0e5199f81f0402e87cb2da16c956b1980f75cad06c351fe22c64959edca1e4dfad7d971158487659851d195bbc888fe98e639380d8e70dfef79adb718470d1
-  languageName: node
-  linkType: hard
-
 "react-native-screens@npm:^2.9.0":
   version: 2.18.1
   resolution: "react-native-screens@npm:2.18.1"
@@ -11391,7 +11375,7 @@ react-native-tts@ak1394/react-native-tts:
     babel-jest: "npm:^29.5.0"
     eslint: "npm:^6.5.1"
     jest: "npm:^29.5.0"
-    lottie-react-native: "npm:^5.1.6"
+    lottie-react-native: "npm:^6.7.2"
     lowlight: "npm:^1.17.0"
     metro-config: "npm:^0.76.9"
     patch-package: "npm:^7.0.0"
