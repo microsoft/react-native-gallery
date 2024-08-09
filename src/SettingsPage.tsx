@@ -3,12 +3,12 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 //import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
 //import {Picker} from '@react-native-picker/picker';
-import {
-  HyperlinkButton,
-  Run,
-  TextBlock,
-  TextDecorations,
-} from 'react-native-xaml';
+// import {
+//   HyperlinkButton,
+//   Run,
+//   TextBlock,
+//   TextDecorations,
+// } from 'react-native-xaml';
 import {useTheme, useIsFocused} from '@react-navigation/native';
 import {ScreenWrapper} from './components/ScreenWrapper';
 var pkg = require('../package.json');
@@ -92,11 +92,11 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
   </SettingContainer>*/}
         <SettingContainer heading="About">
           <Text style={styles.text}>Source code: </Text>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery">
+          {/* <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery">
             <TextBlock textDecorations={TextDecorations.Underline}>
               <Run text="React Native Gallery" />
             </TextBlock>
-          </HyperlinkButton>
+          </HyperlinkButton> */}
           <Text style={styles.text}>
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
@@ -107,7 +107,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             {pkg.dependencies['react-native-windows']}
           </Text>
         </SettingContainer>
-        <SettingContainer heading="Found a bug? Want a new sample?">
+        {/* <SettingContainer heading="Found a bug? Want a new sample?">
           <Text style={styles.text}>
             If you have found a bug within the React Native Gallery app, please
             file an issue on GitHub:
@@ -167,7 +167,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
               <Run text="Microsoft Privacy Statement" />
             </TextBlock>
           </HyperlinkButton>
-        </SettingContainer>
+        </SettingContainer> */}
       </ScrollView>
     </ScreenWrapper>
   ) : (

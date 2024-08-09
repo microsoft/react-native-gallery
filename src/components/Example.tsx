@@ -1,8 +1,21 @@
 import React from 'react';
 import {Code} from './Code';
-import {StyleSheet, PlatformColor, Text, View} from 'react-native';
+import {StyleSheet, Platform, PlatformColor, Text, View} from 'react-native';
+import type {ColorValue} from 'react-native';
 import {CopyToClipboardButton} from './CopyToClipboard';
 import {useTheme} from '@react-navigation/native';
+
+const exampleContainerBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('SolidBackgroundFillColorSecondaryBrush'),
+  macos: PlatformColor('controlBackgroundColor'),
+  default: 'white',
+});
+
+const codeContainerBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+  macos: PlatformColor('controlBackgroundColor'),
+  default: 'white',
+});
 
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -19,14 +32,14 @@ const createStyles = (colors: any) =>
     },
     exampleContainer: {
       padding: 15,
-      backgroundColor: PlatformColor('SolidBackgroundFillColorSecondaryBrush'),
+      backgroundColor: exampleContainerBackgroundColor,
     },
     codeContainer: {
       borderWidth: 0,
       borderTopWidth: 1,
       borderColor: colors.border,
       padding: 12,
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      backgroundColor: codeContainerBackgroundColor,
     },
   });
 

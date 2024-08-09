@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, View, Text, OpaqueColorValue} from 'react-native';
-import {SymbolIcon} from 'react-native-xaml';
+import {StyleSheet, View, Text, ColorValue} from 'react-native';
+// TODO SAAD
+// import {SymbolIcon} from 'react-native-xaml';
 
 const styles = StyleSheet.create({
   badgeContainer: {
@@ -22,8 +23,8 @@ const styles = StyleSheet.create({
 });
 
 export function Badge(props: {
-  badgeColor: OpaqueColorValue;
-  textColor: string;
+  badgeColor: ColorValue;
+  textColor: ColorValue;
   badgeTitle: string;
   icon: number;
   description: string;
@@ -35,7 +36,7 @@ export function Badge(props: {
       <Text style={[styles.badgeText, {color: props.textColor}]}>
         {props.badgeTitle}
       </Text>
-      <SymbolIcon symbol={props.icon} foreground={props.textColor} />
+      {/* <SymbolIcon symbol={props.icon} foreground={props.textColor} /> */}
     </View>
   );
 }

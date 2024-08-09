@@ -3,32 +3,93 @@ import {
   StyleSheet,
   View,
   Text,
+  Platform,
   PlatformColor,
   Pressable,
   Image,
 } from 'react-native';
+import type {ColorValue} from 'react-native';
 import React from 'react';
 import {useTheme} from '@react-navigation/native';
 import type {IRNGalleryExample} from './RNGalleryList';
+import {
+  ColorWithSystemEffectMacOS,
+  DynamicColorMacOS,
+} from 'react-native-macos';
+
+const controlItemBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+  macos: PlatformColor('alternatingEvenContentBackgroundColor'),
+  default: 'white',
+});
+
+const controlItemBorderColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('CardStrokeColorDefaultBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'black',
+});
+const controlItemBorderColorHover = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorSecondary'),
+  macos: PlatformColor('gridColor'),
+  default: 'black',
+});
+const controlItemBorderColorPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('gridColor'),
+  default: 'black',
+});
+
+const controlItemTitleColorRest = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorPrimaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const controlItemTitleColorHovered = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const controlItemSubtitleColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextFillColorSecondaryBrush'),
+  macos: PlatformColor('secondaryLabelColor'),
+  default: 'black',
+});
+
+const accentColor = Platform.select<ColorValue>({
+  windows: PlatformColor('AccentFillColorDefaultBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'blue',
+});
+
+const textOnAccentColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextOnAccentFillColorPrimaryBrush'),
+  macos: 'white',
+  default: 'white',
+});
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      // backgroundColor:
+      //   colorScheme === 'light' ? 'rgb(236, 236, 236)' : 'rgb(50,50,50)',
+      backgroundColor: ColorWithSystemEffectMacOS(
+        DynamicColorMacOS({light: 'rgb(236, 236, 236)', dark: 'rgb(50,50,50)'}),
+        isPressing ? 'pressed' : 'none',
+      ),
       borderColor: isPressing
-        ? PlatformColor('TextFillColorSecondaryBrush')
+        ? controlItemBorderColorPressed
         : isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('CardStrokeColorDefaultBrush'),
-      borderWidth: 1,
-      borderBottomWidth: 1,
+        ? controlItemBorderColorHover
+        : controlItemBorderColorRest,
       padding: 8,
-      borderRadius: 4,
+      borderCurve: 'continuous',
+      borderRadius: 12,
       alignItems: 'center',
       flexDirection: 'row',
-      gap: 16,
       width: 360,
-      height: 90,
+      height: 80,
     },
     textIcon: {
       fontFamily: 'Segoe MDL2 Assets',
@@ -39,19 +100,25 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
     controlItemIcon: {
       marginHorizontal: 12,
       width: 48,
-      height: 72,
       resizeMode: 'contain',
+      aspectRatio: 1,
+    },
+    controlItemPlaceholderIcon: {
+      // marginHorizontal: 12,
+      margin: 12,
+      width: 48,
+      height: 48,
     },
     controlItemTitle: {
       // BodyStrongTextBlockStyle
       fontWeight: '600', // SemiBold
       color: isHovered
-        ? PlatformColor('TextFillColorSecondaryBrush')
-        : PlatformColor('TextFillColorPrimaryBrush'),
+        ? controlItemTitleColorRest
+        : controlItemTitleColorHovered,
     },
     controlItemSubtitle: {
       // CaptionTextBlockStyle
-      color: PlatformColor('TextFillColorSecondaryBrush'),
+      color: controlItemSubtitleColor,
       fontSize: 12,
     },
     badgeContainer: {
@@ -63,9 +130,22 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       width: 10,
       height: 10,
       borderRadius: 5,
-      backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+      backgroundColor: accentColor,
     },
   });
+
+const appleTypography = StyleSheet.create({
+  headline: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'bold',
+  },
+  body: {
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: 'regular',
+  },
+});
 
 type HomeComponentTileProps = {
   item: IRNGalleryExample;
@@ -119,7 +199,7 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
         <View>
           <Image
             source={require('../../assets/ControlImages/Placeholder.png')}
-            style={styles.controlItemIcon}
+            style={styles.controlItemPlaceholderIcon}
             accessible={true}
             accessibilityRole="image"
             accessibilityLabel={imageAccessibilityLabel}
@@ -131,7 +211,7 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
               {
                 position: 'absolute',
                 marginTop: 28,
-                color: PlatformColor('TextOnAccentFillColorPrimaryBrush'),
+                color: textOnAccentColor,
               },
             ]}>
             {item.textIcon}
@@ -139,14 +219,19 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
         </View>
       )}
       <View style={{flexShrink: 1}}>
-        <Text style={styles.controlItemTitle}>{item.key}</Text>
-        <Text style={styles.controlItemSubtitle}>{item.subtitle}</Text>
+        <Text style={[styles.controlItemTitle, appleTypography.headline]}>
+          {item.key}
+        </Text>
+        <View style={{height: 4}} />
+        <Text style={[styles.controlItemSubtitle, appleTypography.body]}>
+          {item.subtitle}
+        </Text>
       </View>
-      {(item.new || item.recentlyUpdated) && (
+      {/* {(item.new || item.recentlyUpdated) && (
         <View style={styles.badgeContainer}>
           <View style={styles.newItemBadge} />
         </View>
-      )}
+      )} */}
     </Pressable>
   );
 };

@@ -2,13 +2,72 @@ import React from 'react';
 import {
   View,
   StyleSheet,
-  TouchableHighlight,
   Text,
+  Platform,
   PlatformColor,
   Pressable,
   useColorScheme,
+  ScrollView,
+  I18nManager,
+  LayoutAnimation,
 } from 'react-native';
-import {useNavigation, DrawerActions} from '@react-navigation/native';
+import type {ColorValue} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {VibrancyView} from '@fluentui-react-native/vibrancy-view';
+import RNGalleryList, {RNGalleryCategories} from '../RNGalleryList';
+import {
+  ChevronLeft12Filled,
+  ChevronLeft12Regular,
+  ChevronRight12Filled,
+  ChevronRight12Regular,
+  Home16Regular,
+  Settings16Regular,
+  TextBulletList16Regular,
+} from '@fluentui/react-native-icons';
+import {FocusZone} from '@fluentui-react-native/focus-zone';
+import {DynamicColorMacOS} from 'react-native-macos';
+
+const textForegroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextControlForeground'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
+
+const accentColor = Platform.select<ColorValue>({
+  windows: PlatformColor('AccentFillColorDefaultBrush'),
+  macos: PlatformColor('controlAccentColor'),
+  default: 'black',
+});
+
+const drawerDividerColor = Platform.select<ColorValue>({
+  windows: PlatformColor('CardStrokeColorDefaultBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'black',
+});
+
+const drawerBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('NavigationViewDefaultPaneBackground'),
+  macos: 'transparent',
+  default: 'white',
+});
+
+const navBarBackgroundColor = Platform.select<ColorValue>({
+  windows: PlatformColor('NavigationViewDefaultPaneBackground'),
+  macos: PlatformColor('controlBackgroundColor'),
+  default: 'white',
+});
+
+const navItemBorderColor = Platform.select<ColorValue>({
+  windows: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+  macos: PlatformColor('separatorColor'),
+  default: 'black',
+});
+
+const iconColor = Platform.select<ColorValue>({
+  windows: PlatformColor('TextControlForeground'),
+  macos: PlatformColor('labelColor'),
+  default: 'black',
+});
 
 const createStyles = (colorScheme) =>
   StyleSheet.create({
@@ -16,21 +75,20 @@ const createStyles = (colorScheme) =>
       flexDirection: 'row',
       width: '100%',
       height: '100%',
-      backgroundColor: colorScheme === 'light' ? '#f9f9f9' : '#262626',
+      backgroundColor: colorScheme === 'light' ? 'white' : 'rgb(30,30,30)',
     },
     navBar: {
-      backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
-      width: 48,
+      backgroundColor: 'transparent',
       height: '100%',
-      paddingBottom: 20,
+      minWidth: 600,
     },
     navItem: {
       flexGrow: 1,
       flexShrink: 1,
       height: '100%',
       alignSelf: 'stretch',
-      borderTopLeftRadius: 8,
-      borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+      // borderTopLeftRadius: 8,
+      borderColor: navItemBorderColor,
       borderLeftWidth: 1,
     },
     insetNavItem: {
@@ -47,9 +105,439 @@ const createStyles = (colorScheme) =>
     icon: {
       fontFamily: 'Segoe MDL2 Assets',
       fontSize: 16,
-      color: PlatformColor('TextControlForeground'),
+      color: iconColor,
     },
   });
+
+const styles = StyleSheet.create({
+  menu: {
+    margin: 5,
+    height: 34,
+    width: 38,
+    borderRadius: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    fontFamily: 'Segoe MDL2 Assets',
+    fontSize: 16,
+    color: textForegroundColor,
+  },
+  chevronIcon: {
+    fontFamily: 'Segoe MDL2 Assets',
+    fontSize: 13,
+    color: textForegroundColor,
+  },
+  drawer: {
+    backgroundColor: drawerBackgroundColor,
+    // borderRadius: 8,
+    paddingTop: 53,
+    padding: 10,
+    minWidth: 220,
+    height: '100%',
+  },
+  drawerText: {
+    fontSize: 13,
+    color: textForegroundColor,
+  },
+  drawerDivider: {
+    backgroundColor: drawerDividerColor,
+    height: 1,
+  },
+  indentContainer: {
+    width: 40,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    paddingRight: 10,
+  },
+  category: {
+    gap: 4,
+  },
+  expandedChevron: {
+    flexGrow: 1,
+    alignItems: 'flex-end',
+  },
+  navigationItemPill: {
+    backgroundColor: accentColor,
+    borderRadius: 2,
+    right: 6,
+    width: 3,
+    height: 16,
+    alignSelf: 'flex-start',
+  },
+});
+
+const drawerListItemRest = 'transparent';
+const drawerListItemPressed = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlAltFillColorSecondaryBrush'),
+  macos: 'transparent',
+  default: 'white',
+});
+const drawerListItemHovered = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlAltFillColorTertiaryBrush'),
+  macos: 'trasparent',
+  default: 'white',
+});
+
+const drawerListItemBorderRest = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorDefaultBrush'),
+  default: 'transparent',
+});
+
+const drawerListItemBorderHovered = Platform.select<ColorValue>({
+  windows: PlatformColor('ControlStrokeColorSecondary'),
+  default: 'transparent',
+});
+
+const createDrawerListItemStyles = (isHovered: boolean, isPressed: boolean) =>
+  StyleSheet.create({
+    drawerListItem: {
+      backgroundColor: isPressed
+        ? drawerListItemPressed
+        : isHovered
+        ? drawerListItemHovered
+        : drawerListItemRest,
+      borderColor: isHovered
+        ? drawerListItemBorderHovered
+        : drawerListItemBorderRest,
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: 5,
+      paddingHorizontal: 10,
+      borderRadius: 4,
+      borderCurve: 'continuous',
+      gap: 4,
+    },
+  });
+
+type DrawerCollapsibleCategoryProps = {
+  categoryLabel: string;
+  categoryIcon: string;
+  categoryFluentIcon?: JSX.Element;
+  items: any;
+  navigation: any;
+  currentRoute: string;
+  containsCurrentRoute: boolean;
+};
+const DrawerCollapsibleCategory = ({
+  categoryLabel,
+  categoryIcon,
+  categoryFluentIcon,
+  items,
+  navigation,
+  currentRoute,
+  containsCurrentRoute,
+}: DrawerCollapsibleCategoryProps) => {
+  const categoryRoute = `Category: ${categoryLabel}`;
+  const isCurrentRoute = currentRoute === categoryRoute;
+  const [isExpanded, setIsExpanded] = React.useState(
+    // containsCurrentRoute || isCurrentRoute,
+    true,
+  );
+  const [isHovered, setIsHovered] = React.useState(false);
+  const [isPressed, setIsPressed] = React.useState(false);
+  const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+
+  const onPress = () => {
+    if (isExpanded && containsCurrentRoute) {
+      // Drawer will automatically close when navigating to a new route, by design:
+      // https://github.com/react-xnavigation/react-navigation/pull/4394
+      // As a workaround, we allow you to get a category page when the category
+      // is expanded but you aren't on the category page now.
+      navigation.navigate(categoryRoute, {category: categoryLabel});
+    } else {
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+      setIsExpanded(!isExpanded);
+    }
+  };
+
+  const renderedIcon = categoryFluentIcon ? (
+    categoryFluentIcon
+  ) : (
+    <Text accessible={false} style={styles.icon}>
+      {categoryIcon}
+    </Text>
+  );
+
+  let chevron = null;
+  // if (isExpanded) {
+  //   if (isPressed) {
+  //     chevron = <ChevronDown12Filled />;
+  //   } else {
+  //     chevron = <ChevronDown12Regular />;
+  //   }
+  // } else {
+  const isRTL = I18nManager.isRTL;
+  if (isPressed) {
+    if (isRTL) {
+      chevron = (
+        <ChevronLeft12Filled
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
+    } else {
+      chevron = (
+        <ChevronRight12Filled
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
+    }
+  } else {
+    if (isRTL) {
+      chevron = (
+        <ChevronLeft12Regular
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
+    } else {
+      chevron = (
+        <ChevronRight12Regular
+          primaryFill={PlatformColor('secondaryLabelColor')}
+        />
+      );
+    }
+  }
+  // }
+
+  return (
+    <View
+      style={styles.category}
+      accessible={true}
+      accessibilityRole="button"
+      accessibilityLabel={categoryLabel}
+      onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
+      <Pressable
+        style={[localStyles.drawerListItem, {paddingStart: 5}]}
+        onPress={() => onPress()}
+        onPressIn={() => setIsPressed(true)}
+        onPressOut={() => setIsPressed(false)}
+        onHoverIn={() => setIsHovered(true)}
+        onHoverOut={() => setIsHovered(false)}
+        accessible={false}>
+        {/* <View style={styles.indentContainer}>
+          <SelectedNavigationItemPill
+            currentRoute={currentRoute}
+            itemRoute={categoryRoute}
+          />
+        </View> */}
+        {/* {renderedIcon} */}
+        <Text
+          accessible={false}
+          style={[
+            styles.drawerText,
+            {
+              fontSize: 11,
+              fontWeight: 'bold',
+              color: PlatformColor('secondaryLabelColor'),
+            },
+          ]}>
+          {categoryLabel}
+        </Text>
+        <View style={[styles.expandedChevron, !isHovered && {opacity: 0}]}>
+          {/* <Text
+            accessible={false}
+            style={[styles.chevronIcon, }]}>
+            {isExpanded ? '\uE971' : '\uE972'}
+          </Text> */}
+          <View style={isExpanded && {transform: [{rotate: '90deg'}]}}>
+            {chevron}
+          </View>
+        </View>
+      </Pressable>
+      {isExpanded &&
+        items.map((item) => (
+          <DrawerListItem
+            key={item.label}
+            route={item.label}
+            label={item.label}
+            icon={item.icon}
+            fluentIcon={item.fluentIcon}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+        ))}
+    </View>
+  );
+};
+
+const DrawerListView = (props) => {
+  // Home and Settings drawer items have already been manually loaded.
+  const filterPredicate = (item) => item.type !== '';
+  const filteredList = RNGalleryList.filter(filterPredicate);
+
+  let categoryWithCurrentRoute = '';
+
+  // Create an array for each category
+  let categoryMap = new Map();
+  RNGalleryCategories.forEach((category) => {
+    categoryMap.set(category.label, []);
+  });
+
+  // Populate the category arrays
+  filteredList.forEach((item) => {
+    let category = item.type;
+    let categoryList = categoryMap.get(category);
+    categoryList?.push({
+      label: item.key,
+      icon: item.textIcon,
+      fluentIcon: item.fluentIcon,
+    });
+    if (item.key === props.currentRoute) {
+      categoryWithCurrentRoute = category;
+    }
+  });
+
+  return (
+    <View>
+      {RNGalleryCategories.map((category) => (
+        <DrawerCollapsibleCategory
+          categoryLabel={category.label}
+          categoryIcon={category.icon}
+          categoryFluentIcon={category.fluentIcon}
+          items={categoryMap.get(category.label)}
+          navigation={props.navigation}
+          currentRoute={props.currentRoute}
+          containsCurrentRoute={categoryWithCurrentRoute === category.label}
+        />
+      ))}
+    </View>
+  );
+};
+
+function CustomDrawerContent({navigation}) {
+  // const isDrawerOpen =
+  //   getDrawerStatusFromState(navigation.getState()) === 'open';
+  const isDrawerOpen = true;
+
+  const navigationState = navigation.getState();
+  const currentRoute = navigationState.routeNames[navigationState.index];
+
+  if (!isDrawerOpen) {
+    return <View />;
+  }
+  return (
+    <VibrancyView
+      blendingMode="behindWindow"
+      state="followsWindowActiveState"
+      material="sidebar">
+      <FocusZone focusZoneDirection="vertical">
+        <View style={styles.drawer}>
+          <DrawerListItem
+            route="Home"
+            label="Home"
+            icon="&#xE80F;"
+            fluentIcon={<Home16Regular />}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+          <DrawerListItem
+            route="All samples"
+            label="All samples"
+            icon="&#xE71D;"
+            fluentIcon={<TextBulletList16Regular />}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+          <View style={[styles.drawerDivider]} />
+          {/* TODO: Rectify Scroller padding */}
+          <ScrollView>
+            <DrawerListView
+              navigation={navigation}
+              currentRoute={currentRoute}
+            />
+          </ScrollView>
+          <View style={styles.drawerDivider} />
+          <DrawerListItem
+            route="Settings"
+            label="Settings"
+            icon="&#xE713;"
+            fluentIcon={<Settings16Regular />}
+            navigation={navigation}
+            currentRoute={currentRoute}
+          />
+        </View>
+      </FocusZone>
+    </VibrancyView>
+  );
+}
+
+type SelectedNavigationItemPillProps = {
+  currentRoute: string;
+  itemRoute: string;
+};
+const SelectedNavigationItemPill = ({
+  currentRoute,
+  itemRoute,
+}: SelectedNavigationItemPillProps) => {
+  if (currentRoute !== itemRoute) {
+    return <View />;
+  }
+
+  return <View style={styles.navigationItemPill} />;
+};
+
+type DrawerListItemProps = {
+  route: string;
+  label: string;
+  icon?: string;
+  fluentIcon?: JSX.Element;
+  navigation: any;
+  currentRoute: string;
+};
+const DrawerListItem = ({
+  route,
+  label,
+  icon,
+  fluentIcon,
+  navigation,
+  currentRoute,
+}: DrawerListItemProps) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+  const [isPressed, setIsPressed] = React.useState(false);
+
+  const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+
+  const renderedIcon = fluentIcon ? (
+    fluentIcon
+  ) : (
+    <Text accessible={false} style={styles.icon}>
+      {icon}
+    </Text>
+  );
+
+  const isSelected = currentRoute === route;
+
+  return (
+    <Pressable
+      onPress={() => navigation.navigate(route)}
+      onPressIn={() => setIsPressed(true)}
+      onPressOut={() => setIsPressed(false)}
+      onHoverIn={() => setIsHovered(true)}
+      onHoverOut={() => setIsHovered(false)}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      style={[
+        localStyles.drawerListItem,
+        isSelected && {
+          backgroundColor: DynamicColorMacOS({
+            light: 'rgb(208,206,205)',
+            dark: 'rgb(101,99,98)',
+          }),
+        },
+      ]}>
+      {/* <View style={styles.indentContainer}> */}
+      {/* <SelectedNavigationItemPill
+          currentRoute={currentRoute}
+          itemRoute={route}
+        /> */}
+      {renderedIcon}
+      {/* </View> */}
+      <Text accessible={false} style={styles.drawerText}>
+        {label}
+      </Text>
+    </Pressable>
+  );
+};
 
 type ScreenWrapperProps = React.PropsWithChildren<{
   doNotInset?: boolean;
@@ -64,34 +552,6 @@ export function ScreenWrapper({
 
   return (
     <View style={styles.container}>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="Navigation bar"
-        // requires react-native-gesture-handler to be imported in order to pass testing.
-        // blocked by #125
-        /*accessibilityState={{
-          expanded: useIsDrawerOpen(),
-        }}*/
-        style={styles.navBar}
-        onPress={() => {
-          navigation.dispatch(DrawerActions.openDrawer());
-        }}>
-        <View>
-          <TouchableHighlight
-            accessibilityRole="button"
-            accessibilityLabel="Navigation bar hamburger icon"
-            {...{tooltip: 'Expand Menu'}}
-            // requires react-native-gesture-handler to be imported in order to pass testing.
-            // blocked by #125
-            //accessibilityState={{expanded: useIsDrawerOpen()}}
-            style={styles.menu}
-            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
-            activeOpacity={0.5783}
-            underlayColor="rgba(0, 0, 0, 0.0241);">
-            <Text style={styles.icon}>&#xE700;</Text>
-          </TouchableHighlight>
-        </View>
-      </Pressable>
       <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
         {children}
       </View>

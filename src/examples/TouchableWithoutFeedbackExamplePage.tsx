@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '@react-navigation/native';
-import {TouchableWithoutFeedback} from 'react-native-windows';
+import {TouchableWithoutFeedback} from 'react-native';
 
 export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
   () => {
