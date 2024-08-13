@@ -89,11 +89,6 @@ export const App: React.FunctionComponent<{}> = () => {
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
         />
         <StackScreen
-          name='Switch'
-          component={SwitchExamplePage}
-          options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
-        />
-        <StackScreen
           name='Text'
           component={TextExamplePage}
           options={({navigation}) => ({header: () => <BreadcrumbBar navigation={navigation}/>})}
