@@ -847,7 +847,7 @@ exports[`Button Example Page 1`] = `
                 }
                 accessible={true}
                 disabled={true}
-                focusable={true}
+                focusable={false}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -38776,6 +38776,7 @@ exports[`Switch Example Page 1`] = `
               <RCTSwitch
                 accessibilityLabel="simple switch example"
                 accessibilityRole="switch"
+                accessible={true}
                 focusable={true}
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
@@ -38955,6 +38956,7 @@ exports[`Switch Example Page 1`] = `
               <RCTSwitch
                 accessibilityLabel="disabled switch example"
                 accessibilityRole="switch"
+                accessible={true}
                 disabled={true}
                 focusable={true}
                 onChange={[Function]}
@@ -39136,6 +39138,7 @@ exports[`Switch Example Page 1`] = `
               <RCTSwitch
                 accessibilityLabel="colorful switch example"
                 accessibilityRole="switch"
+                accessible={true}
                 focusable={true}
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
@@ -47178,7 +47181,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                 accessible={true}
                 collapsable={false}
                 disabled={true}
-                focusable={true}
+                focusable={false}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -53786,6 +53789,11 @@ exports[`WebView Example Page 1`] = `
                   onLoadingStart={[Function]}
                   onMessage={[Function]}
                   onShouldStartLoadWithRequest={[Function]}
+                  source={
+                    {
+                      "uri": "https://github.com/microsoft/react-native-gallery",
+                    }
+                  }
                   style={
                     [
                       {
@@ -54045,6 +54053,11 @@ exports[`WebView Example Page 1`] = `
                   onLoadingStart={[Function]}
                   onMessage={[Function]}
                   onShouldStartLoadWithRequest={[Function]}
+                  source={
+                    {
+                      "uri": "https://github.com/microsoft/react-native-gallery",
+                    }
+                  }
                   style={
                     [
                       {
