@@ -80,7 +80,8 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}
-      accessibilityRole="link">
+      accessibilityRole="link"
+      accessibilityLabel={props.title}>
       <View style={styles.tileIconContent}>{props.children}</View>
       <Text style={styles.tileTitle}>{props.title}</Text>
       <Text style={styles.tileDescription}>{props.description}</Text>
