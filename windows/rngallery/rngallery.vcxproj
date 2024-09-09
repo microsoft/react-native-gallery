@@ -214,6 +214,9 @@
   <ItemGroup>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <PropertyGroup>
+    <BundleEntryFile Condition="'$(Configuration)'=='Release'">index.ts</BundleEntryFile>
+  </PropertyGroup>
   <!-- lottie-react-native imports -->
   <PropertyGroup Label="LottieReactNativeProps">
     <LottieReactNativeDir>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\lottie-react-native\package.json'))\node_modules\lottie-react-native</LottieReactNativeDir>
