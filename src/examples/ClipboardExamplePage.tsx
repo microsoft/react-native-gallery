@@ -43,7 +43,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Copy text to the Clipboard." code={example1jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
-            accessibilityLabel="Example copy text"
+            accessibilityLabel="Copy text to the Clipboard"
             title="Copy text to the Clipboard"
             onPress={() => Clipboard.setString(textToCopy)}
           />
@@ -58,7 +58,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Paste text from the Clipboard." code={example2jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
-            accessibilityLabel="Example paste text"
+            accessibilityLabel="Paste text from the Clipboar"
             title="Paste text from the Clipboard"
             onPress={() => getClipboardText()}
           />
