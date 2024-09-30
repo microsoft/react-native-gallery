@@ -1,6 +1,6 @@
 'use strict';
 import React, {useState} from 'react';
-import {Button, Text, TextInput, View} from 'react-native';
+import {AccessibilityInfo, Button, Text, TextInput, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Clipboard from '@react-native-clipboard/clipboard';
@@ -45,7 +45,10 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
           <Button
             accessibilityLabel="Copy text to the Clipboard"
             title="Copy text to the Clipboard"
-            onPress={() => Clipboard.setString(textToCopy)}
+            onPress={() => {
+              Clipboard.setString(textToCopy);
+              AccessibilityInfo.announceForAccessibility('copied');
+            }}
           />
           <TextInput
             accessibilityLabel="Example set text to copy"
@@ -60,7 +63,10 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
           <Button
             accessibilityLabel="Paste text from the Clipboar"
             title="Paste text from the Clipboard"
-            onPress={() => getClipboardText()}
+            onPress={() => {
+              getClipboardText();
+              AccessibilityInfo.announceForAccessibility('pasted');
+            }}
           />
           <Text>{textFromClipboard}</Text>
         </View>
