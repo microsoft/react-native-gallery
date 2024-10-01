@@ -1,5 +1,11 @@
 import React from 'react';
-import {AccessibilityInfo, Pressable, StyleSheet, PlatformColor, Text} from 'react-native';
+import {
+  AccessibilityInfo,
+  Pressable,
+  StyleSheet,
+  PlatformColor,
+  Text,
+} from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
 
 const createButtonStyles = (isHovered: boolean, isPressing: boolean) =>
