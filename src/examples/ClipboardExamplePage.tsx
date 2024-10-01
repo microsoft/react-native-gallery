@@ -61,7 +61,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Paste text from the Clipboard." code={example2jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
-            accessibilityLabel="Paste text from the Clipboar"
+            accessibilityLabel="Paste text from the Clipboard"
             title="Paste text from the Clipboard"
             onPress={() => {
               getClipboardText();

@@ -3719,7 +3719,7 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <View
-                  accessibilityLabel="Example copy text"
+                  accessibilityLabel="Copy text to the Clipboard"
                   accessibilityRole="button"
                   accessibilityState={
                     {
@@ -4004,7 +4004,7 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <View
-                  accessibilityLabel="Example paste text"
+                  accessibilityLabel="Paste text from the Clipboard"
                   accessibilityRole="button"
                   accessibilityState={
                     {
