@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable, StyleSheet, PlatformColor, Text} from 'react-native';
+import {AccessibilityInfo, Pressable, StyleSheet, PlatformColor, Text} from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
 
 const createButtonStyles = (isHovered: boolean, isPressing: boolean) =>
@@ -39,7 +39,10 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
       accessibilityLabel={helpText}
       tooltip={helpText}
       style={styles.background}
-      onPress={() => Clipboard.setString(content)}
+      onPress={() => {
+        Clipboard.setString(content);
+        AccessibilityInfo.announceForAccessibility('copied');
+      }}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
