@@ -47,7 +47,7 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
       style={styles.background}
       onPress={() => {
         Clipboard.setString(content);
-        AccessibilityInfo.announceForAccessibility('copied');
+        AccessibilityInfo.announceForAccessibility('Text copied to clipboard');
       }}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
