@@ -16,7 +16,7 @@ const createStyles = (colorScheme) =>
       flexDirection: 'row',
       width: '100%',
       height: '100%',
-      backgroundColor: colorScheme === 'light' ? '#f9f9f9' : '#262626',
+      backgroundColor: PlatformColor('SystemControlBackgroundListLowBrush'),
     },
     navBar: {
       backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),

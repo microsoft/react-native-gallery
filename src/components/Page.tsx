@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {PlatformColor, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';

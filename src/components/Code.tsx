@@ -20,7 +20,7 @@ const darkColors = {
 
 const lightColors = {
   background: 'transparent',
-  text: '#000000',
+  text: '#FFFFFFF',
   comment: '#000000',
   keyword: '#FF0000',
   tag: '#A31515',
