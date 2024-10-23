@@ -47,7 +47,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       fontWeight: '600', // SemiBold
       color: isHovered
         ? PlatformColor('TextFillColorSecondaryBrush')
-        : PlatformColor('TextFillColorPrimaryBrush'),
+        : PlatformColor('TextFillColorPrimaryBrush'),  
     },
     controlItemSubtitle: {
       // CaptionTextBlockStyle
@@ -139,8 +139,8 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
         </View>
       )}
       <View style={{flexShrink: 1}}>
-        <Text style={styles.controlItemTitle}>{item.key}</Text>
-        <Text style={styles.controlItemSubtitle}>{item.subtitle}</Text>
+        <Text style={styles.controlItemTitle} allowFontScaling={false}>{item.key}</Text>
+        <Text style={styles.controlItemSubtitle} allowFontScaling={false}>{item.subtitle}</Text>
       </View>
       {(item.new || item.recentlyUpdated) && (
         <View style={styles.badgeContainer}>
