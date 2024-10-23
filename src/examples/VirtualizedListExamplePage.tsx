@@ -208,7 +208,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     },
     title: {
       fontSize: 20,
-      color: PlatformColor('SystemControlHighlightAltBaseHighBrush'),
+      color: PlatformColor('SystemControlHighlightBaseHighBrush'),
     },
   });
 
