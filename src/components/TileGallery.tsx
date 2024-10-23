@@ -83,9 +83,9 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       accessibilityRole="button"
       accessibilityLabel={props.title}>
       <View style={styles.tileIconContent}>{props.children}</View>
-      <Text style={styles.tileTitle} maxFontSizeMultiplier={1}>{props.title}</Text>
-      <Text style={styles.tileDescription} maxFontSizeMultiplier={1}>{props.description}</Text>
-      <Text style={styles.tileLinkIcon} maxFontSizeMultiplier={1} accessible={false}>
+      <Text style={styles.tileTitle} adjustsFontSizeToFit={true} maxFontSizeMultiplier={1}>{props.title}</Text>
+      <Text style={styles.tileDescription} adjustsFontSizeToFit={true} maxFontSizeMultiplier={1}>{props.description}</Text>
+      <Text style={styles.tileLinkIcon} adjustsFontSizeToFit={true} maxFontSizeMultiplier={1} accessible={false}>
         {openInNewWindowIcon}
       </Text>
     </Pressable>
