@@ -139,8 +139,8 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
         </View>
       )}
       <View style={{flexShrink: 1}}>
-        <Text style={styles.controlItemTitle} adjustsFontSizeToFit={true} maxFontSizeMultiplier={1}>{item.key}</Text>
-        <Text style={styles.controlItemSubtitle} adjustsFontSizeToFit={true} maxFontSizeMultiplier={1}>{item.subtitle}</Text>
+        <Text style={styles.controlItemTitle} allowFontScaling={false}>{item.key}</Text>
+        <Text style={styles.controlItemSubtitle} allowFontScaling={false}>{item.subtitle}</Text>
       </View>
       {(item.new || item.recentlyUpdated) && (
         <View style={styles.badgeContainer}>
