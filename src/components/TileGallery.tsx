@@ -30,7 +30,7 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       padding: 24,
       gap: 4,
       width: 198,
-      height: 220,
+      height: '100%',
       alignItems: 'flex-start',
     },
     tileIconContent: {
@@ -83,9 +83,9 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       accessibilityRole="button"
       accessibilityLabel={props.title}>
       <View style={styles.tileIconContent}>{props.children}</View>
-      <Text style={styles.tileTitle} allowFontScaling={false}>{props.title}</Text>
-      <Text style={styles.tileDescription} allowFontScaling={false}>{props.description}</Text>
-      <Text style={styles.tileLinkIcon} allowFontScaling={false} accessible={false}>
+      <Text style={styles.tileTitle}>{props.title}</Text>
+      <Text style={styles.tileDescription}>{props.description}</Text>
+      <Text style={styles.tileLinkIcon} accessible={false}>
         {openInNewWindowIcon}
       </Text>
     </Pressable>
