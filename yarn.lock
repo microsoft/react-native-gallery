@@ -4188,13 +4188,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/progress-view@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "@react-native-community/progress-view@npm:1.4.1"
+"@react-native-community/progress-view@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@react-native-community/progress-view@npm:1.5.0"
   peerDependencies:
     react: ">16.8.3"
     react-native: ">=0.59.5"
-  checksum: 10c0/29f1d04fef2d4fb227664d987d12a2eec614e60f312320875371561af8d85ad4d828174462dadf7e4a7007adfd322e3e2c1a85aa0afbec963b3925f7b97987f7
+  checksum: 10c0/7ae8a0ffa97f16bf4e5a430d75e031cb5dc0d325a0ef065f74b2a46820b087217ca4154d22b11baa804476a3e2e98b192339e7ec4d9c53ba3054ca81d5d1749b
   languageName: node
   linkType: hard
 
@@ -13026,7 +13026,7 @@ react-native-tts@ak1394/react-native-tts:
     "@react-native-community/datetimepicker": "npm:^7.6.0"
     "@react-native-community/eslint-config": "npm:^3.2.0"
     "@react-native-community/masked-view": "npm:^0.1.11"
-    "@react-native-community/progress-view": "npm:^1.4.1"
+    "@react-native-community/progress-view": "npm:^1.5.0"
     "@react-native-community/slider": "npm:^4.4.2"
     "@react-native-picker/picker": "npm:^2.4.10"
     "@react-native/babel-preset": "npm:0.75.0-rc.3"
