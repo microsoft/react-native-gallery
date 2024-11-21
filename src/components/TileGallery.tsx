@@ -30,7 +30,6 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       padding: 24,
       gap: 4,
       width: 198,
-      height: '100%',
       minHeight: 220,
       alignItems: 'flex-start',
     },

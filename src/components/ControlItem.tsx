@@ -28,8 +28,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       flexDirection: 'row',
       gap: 16,
       width: 360,
-      height: '50%',
-      minHeight: 110,
+      minHeight: 90,
     },
     textIcon: {
       fontFamily: 'Segoe MDL2 Assets',
