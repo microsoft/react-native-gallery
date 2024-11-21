@@ -32394,6 +32394,7 @@ exports[`ProgressView Example Page 1`] = `
               }
             >
               <RNCProgressViewWindows
+                accessibilityLabel="Simple ProgressView"
                 progress={0.5}
                 style={
                   [
@@ -32585,6 +32586,7 @@ exports[`ProgressView Example Page 1`] = `
               }
             >
               <RNCProgressViewWindows
+                accessibilityLabel="Indeterminate ProgressView"
                 isIndeterminate="true"
                 style={
                   [
@@ -32776,6 +32778,7 @@ exports[`ProgressView Example Page 1`] = `
               }
             >
               <RNCProgressViewWindows
+                accessibilityLabel="Colored ProgressView"
                 progress={0.7}
                 progressTintColor="rgb(0, 122, 255)"
                 style={
