@@ -1,5 +1,5 @@
 diff --git a/node_modules/@react-native-community/progress-view/windows/progress-view/progress-view.vcxproj b/node_modules/@react-native-community/progress-view/windows/progress-view/progress-view.vcxproj
-index 2af846f..8a07868 100644
+index ae96863..8a07868 100644
 --- a/node_modules/@react-native-community/progress-view/windows/progress-view/progress-view.vcxproj
 +++ b/node_modules/@react-native-community/progress-view/windows/progress-view/progress-view.vcxproj
 @@ -14,8 +14,14 @@
@@ -7,7 +7,7 @@ index 2af846f..8a07868 100644
      <ApplicationType>Windows Store</ApplicationType>
      <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
 -    <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
--    <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
+-    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
 +  </PropertyGroup>
 +  <PropertyGroup Label="ReactNativeWindowsProps">
 +    <ReactNativeWindowsDir Condition="'$(ReactNativeWindowsDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\react-native-windows\package.json'))\node_modules\react-native-windows\</ReactNativeWindowsDir>
