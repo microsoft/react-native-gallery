@@ -29,6 +29,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       gap: 16,
       width: 360,
       height: '50%',
+      minHeight: 150,
     },
     textIcon: {
       fontFamily: 'Segoe MDL2 Assets',
