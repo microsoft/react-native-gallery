@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   navigationItemPill: {
-    backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+    backgroundColor: PlatformColor('SystemControlHighlightBaseMediumHighBrush'),
     borderRadius: 2,
     right: 6,
     width: 3,

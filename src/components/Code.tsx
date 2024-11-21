@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import low from 'lowlight';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {PlatformColor, StyleSheet, Text, View} from 'react-native';
 import {ThemeContext} from '../themes/Theme';
 
 const darkColors = {
   background: 'transparent',
-  text: '#9cdcfe',
+  text: PlatformColor('SystemControlPageTextBaseMediumBrush'),
   comment: '#6a9955',
   keyword: '#c586c0',
   tag: '#cc99cc',
@@ -20,7 +20,7 @@ const darkColors = {
 
 const lightColors = {
   background: 'transparent',
-  text: '#000000',
+  text: PlatformColor('SystemControlPageTextBaseMediumBrush'),
   comment: '#000000',
   keyword: '#FF0000',
   tag: '#A31515',
