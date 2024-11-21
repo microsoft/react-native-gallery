@@ -6,6 +6,7 @@ import {
   Text,
   TouchableHighlight,
   ScrollView,
+  PlatformColor,
 } from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
@@ -203,11 +204,11 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       padding: 5,
       paddingHorizontal: 10,
       marginVertical: 3,
-      backgroundColor: colors.border,
+      backgroundColor: PlatformColor('SystemControlHighlightBaseLowBrush'),
     },
     title: {
       fontSize: 20,
-      color: colors.text,
+      color: PlatformColor('SystemControlHighlightBaseHighBrush'),
     },
   });
 
