@@ -33,7 +33,7 @@
     "patch-package": "^7.0.0",
     "postinstall-postinstall": "^2.1.0",
     "react": "18.3.1",
-    "react-native": "^0.76.0",
+    "react-native": "0.77.0-rc.4",
     "react-native-config": "^1.5.2",
     "react-native-device-info": "^10.7.0",
     "react-native-gesture-handler": "2.9.0",
@@ -49,7 +49,7 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^13.2.2",
-    "react-native-windows": "0.76.0",
+    "react-native-windows": "0.77.0-preview.2",
     "react-native-xaml": "^0.0.78"
   },
   "devDependencies": {
