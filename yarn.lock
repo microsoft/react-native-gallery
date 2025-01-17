@@ -12772,13 +12772,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-radio-buttons-group@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "react-native-radio-buttons-group@npm:3.1.0"
-  checksum: 10c0/2e51b69a67b6c9e82985d67ea8ce4512d39dfe06eb5fccd723fbb97db36c3c585d96af7cd4cb15d41fa92d17c281be00ef26f0f0aea666d9f1c46a06586590da
-  languageName: node
-  linkType: hard
-
 "react-native-reanimated@npm:^1.10.0":
   version: 1.13.4
   resolution: "react-native-reanimated@npm:1.13.4"
@@ -13449,7 +13442,6 @@ react-native-tts@ak1394/react-native-tts:
     react-native-linear-gradient: "npm:3.0.0-alpha.1"
     react-native-permissions: "npm:^3.8.1"
     react-native-print: "npm:0.8.0"
-    react-native-radio-buttons-group: "npm:^3.1.0"
     react-native-reanimated: "npm:^1.10.0"
     react-native-safe-area-context: "npm:^4.2.4"
     react-native-screens: "npm:^2.9.0"
