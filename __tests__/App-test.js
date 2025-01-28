@@ -41,6 +41,8 @@ import {NetworkExamplePage} from '../src/examples/NetworkExamplePage';
 import {SvgExamplePage} from '../src/examples/SvgExamplePage';
 import {View} from 'react-native';
 
+jest.useFakeTimers();
+
 function Control() {
   return <View />;
 }
