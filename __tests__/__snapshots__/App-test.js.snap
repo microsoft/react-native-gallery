@@ -24,6 +24,8 @@ exports[`Button Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -289,6 +291,8 @@ exports[`Button Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -451,6 +455,8 @@ exports[`Button Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -562,6 +568,8 @@ exports[`Button Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -735,6 +743,8 @@ exports[`Button Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -846,6 +856,8 @@ exports[`Button Example Page 1`] = `
                     "checked": undefined,
                     "disabled": true,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -1043,6 +1055,8 @@ exports[`Button Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -1155,6 +1169,8 @@ exports[`Button Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -1340,6 +1356,8 @@ exports[`Button Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -1560,6 +1578,8 @@ exports[`CheckBox Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -1946,6 +1966,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -2142,6 +2164,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -2324,6 +2348,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -2521,6 +2547,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -2718,6 +2746,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -2915,6 +2945,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -3112,6 +3144,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -3294,6 +3328,8 @@ exports[`CheckBox Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -3514,6 +3550,8 @@ exports[`Clipboard Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -3791,6 +3829,8 @@ exports[`Clipboard Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -3961,6 +4001,8 @@ exports[`Clipboard Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -4080,6 +4122,8 @@ exports[`Clipboard Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -4453,6 +4497,8 @@ exports[`Clipboard Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -4664,6 +4710,8 @@ exports[`Config Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -5199,6 +5247,8 @@ exports[`Config Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -5414,6 +5464,8 @@ exports[`DeviceInfo Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -5881,6 +5933,8 @@ exports[`DeviceInfo Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -6106,6 +6160,8 @@ exports[`DeviceInfo Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -6282,6 +6338,8 @@ exports[`DeviceInfo Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -6493,6 +6551,8 @@ exports[`Expander Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -7029,6 +7089,8 @@ exports[`Expander Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -7600,6 +7662,8 @@ exports[`Expander Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -7946,6 +8010,8 @@ exports[`Expander Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -8343,6 +8409,8 @@ exports[`Expander Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -9181,6 +9249,8 @@ exports[`Expander Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -9401,6 +9471,8 @@ exports[`FlatList Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -9903,6 +9975,8 @@ exports[`FlatList Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -10534,6 +10608,8 @@ exports[`FlatList Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -10993,6 +11069,8 @@ exports[`FlatList Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -11356,6 +11434,8 @@ exports[`FlatList Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -11717,6 +11797,8 @@ exports[`FlatList Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -11937,6 +12019,8 @@ exports[`Flyout Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -12929,6 +13013,8 @@ exports[`Flyout Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -13722,6 +13808,8 @@ exports[`Flyout Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -14517,6 +14605,8 @@ exports[`Flyout Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -15312,6 +15402,8 @@ exports[`Flyout Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -15532,6 +15624,8 @@ exports[`Hello Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -15849,6 +15943,8 @@ exports[`Hello Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -16110,6 +16206,8 @@ exports[`Hello Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -16222,6 +16320,8 @@ exports[`Hello Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -16483,6 +16583,8 @@ exports[`Hello Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -16595,6 +16697,8 @@ exports[`Hello Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -16870,6 +16974,8 @@ exports[`Hello Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -17090,6 +17196,8 @@ exports[`Image Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -17574,6 +17682,8 @@ exports[`Image Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -17869,6 +17979,8 @@ exports[`Image Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -18162,6 +18274,8 @@ exports[`Image Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -18488,6 +18602,8 @@ exports[`Image Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -18891,6 +19007,8 @@ exports[`Image Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -19120,6 +19238,8 @@ exports[`Networking Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -20489,6 +20609,8 @@ exports[`Networking Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -20629,6 +20751,8 @@ exports[`Networking Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -22681,6 +22805,8 @@ useEffect(
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -22892,6 +23018,8 @@ exports[`Picker Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -23659,6 +23787,8 @@ exports[`Picker Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -24236,6 +24366,8 @@ exports[`Picker Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -24816,6 +24948,8 @@ exports[`Picker Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -25036,6 +25170,8 @@ exports[`Popup Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -25439,6 +25575,8 @@ exports[`Popup Example Page 1`] = `
                         "checked": undefined,
                         "disabled": undefined,
                         "expanded": undefined,
+                        "multiselectable": undefined,
+                        "required": undefined,
                         "selected": undefined,
                       }
                     }
@@ -26053,6 +26191,8 @@ exports[`Popup Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -26256,6 +26396,8 @@ exports[`Popup Example Page 1`] = `
                         "checked": undefined,
                         "disabled": undefined,
                         "expanded": undefined,
+                        "multiselectable": undefined,
+                        "required": undefined,
                         "selected": undefined,
                       }
                     }
@@ -26939,6 +27081,8 @@ exports[`Popup Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -27143,6 +27287,8 @@ exports[`Popup Example Page 1`] = `
                         "checked": undefined,
                         "disabled": undefined,
                         "expanded": undefined,
+                        "multiselectable": undefined,
+                        "required": undefined,
                         "selected": undefined,
                       }
                     }
@@ -27795,6 +27941,8 @@ exports[`Popup Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -27997,6 +28145,8 @@ exports[`Popup Example Page 1`] = `
                         "checked": undefined,
                         "disabled": undefined,
                         "expanded": undefined,
+                        "multiselectable": undefined,
+                        "required": undefined,
                         "selected": undefined,
                       }
                     }
@@ -28649,6 +28799,8 @@ exports[`Popup Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -28878,6 +29030,8 @@ exports[`Pressable Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -29144,6 +29298,8 @@ exports[`Pressable Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -29328,6 +29484,8 @@ exports[`Pressable Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -29439,6 +29597,8 @@ exports[`Pressable Example Page 1`] = `
                     "checked": undefined,
                     "disabled": true,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -29896,6 +30056,8 @@ exports[`Pressable Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -30008,6 +30170,8 @@ exports[`Pressable Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -30600,6 +30764,8 @@ exports[`Pressable Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -30712,6 +30878,8 @@ exports[`Pressable Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -31198,6 +31366,8 @@ exports[`Pressable Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -31418,6 +31588,8 @@ exports[`Print Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -31687,6 +31859,8 @@ exports[`Print Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -31922,6 +32096,8 @@ exports[`Print Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -32133,6 +32309,8 @@ exports[`ProgressView Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -32483,6 +32661,8 @@ exports[`ProgressView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -32675,6 +32855,8 @@ exports[`ProgressView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -32872,6 +33054,8 @@ exports[`ProgressView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -33083,6 +33267,8 @@ exports[`SVG Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -34034,6 +34220,8 @@ exports[`SVG Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -34245,6 +34433,8 @@ exports[`ScrollView Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -34737,6 +34927,8 @@ exports[`ScrollView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -35038,6 +35230,8 @@ exports[`ScrollView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -35344,6 +35538,8 @@ exports[`ScrollView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -36023,6 +36219,8 @@ exports[`ScrollView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -36252,6 +36450,8 @@ exports[`SensitiveInfo Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -36583,6 +36783,8 @@ exports[`SensitiveInfo Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -36696,6 +36898,8 @@ exports[`SensitiveInfo Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -38049,6 +38253,8 @@ exports[`SensitiveInfo Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -38260,6 +38466,8 @@ exports[`Slider Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -38769,6 +38977,8 @@ exports[`Slider Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -39073,6 +39283,8 @@ exports[`Slider Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -39397,6 +39609,8 @@ exports[`Slider Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -39721,6 +39935,8 @@ exports[`Slider Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -39941,6 +40157,8 @@ exports[`Switch Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -40326,6 +40544,8 @@ exports[`Switch Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -40512,6 +40732,8 @@ exports[`Switch Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -40751,6 +40973,8 @@ exports[`Switch Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -40980,6 +41204,8 @@ exports[`Text Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -41374,6 +41600,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -41635,6 +41863,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -41849,6 +42079,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -42168,6 +42400,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -42452,6 +42686,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -42713,6 +42949,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -42995,6 +43233,8 @@ exports[`Text Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -43297,6 +43537,8 @@ Here is a line
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -43526,6 +43768,8 @@ exports[`TextInput Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -43958,6 +44202,8 @@ exports[`TextInput Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -44206,6 +44452,8 @@ exports[`TextInput Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -44548,6 +44796,8 @@ exports[`TextInput Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -44811,6 +45061,8 @@ exports[`TextInput Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -45049,6 +45301,8 @@ exports[`TextToSpeech Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -45338,6 +45592,8 @@ exports[`TextToSpeech Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -45569,6 +45825,8 @@ exports[`TextToSpeech Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -45782,6 +46040,8 @@ exports[`TouchableHighlight Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -46444,6 +46704,8 @@ exports[`TouchableHighlight Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -46948,6 +47210,8 @@ exports[`TouchableHighlight Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -47473,6 +47737,8 @@ exports[`TouchableHighlight Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -47693,6 +47959,8 @@ exports[`TouchableOpacity Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -47958,6 +48226,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -48399,6 +48669,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -48510,6 +48782,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -48947,6 +49221,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -49058,6 +49334,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "checked": undefined,
                     "disabled": true,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -49515,6 +49793,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -49627,6 +49907,8 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -50084,6 +50366,8 @@ activeOpacity={
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -50195,6 +50479,8 @@ activeOpacity={
                     "checked": undefined,
                     "disabled": undefined,
                     "expanded": undefined,
+                    "multiselectable": undefined,
+                    "required": undefined,
                     "selected": undefined,
                   }
                 }
@@ -50694,6 +50980,8 @@ onPress={
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -50914,6 +51202,8 @@ exports[`View Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -51282,6 +51572,8 @@ exports[`View Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -51578,6 +51870,8 @@ exports[`View Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -52151,6 +52445,8 @@ exports[`View Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -52803,6 +53099,8 @@ exports[`View Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -53836,6 +54134,8 @@ exports[`View Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -54686,6 +54986,8 @@ exports[`View Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -55071,6 +55373,8 @@ style={{
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -55456,6 +55760,8 @@ style={{
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -55735,6 +56041,8 @@ style={{
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -55964,6 +56272,8 @@ exports[`WebView Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -56445,6 +56755,8 @@ exports[`WebView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -56722,6 +57034,8 @@ exports[`WebView Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -56942,6 +57256,8 @@ exports[`Xaml Example Page 1`] = `
         "checked": undefined,
         "disabled": undefined,
         "expanded": undefined,
+        "multiselectable": undefined,
+        "required": undefined,
         "selected": undefined,
       }
     }
@@ -57284,6 +57600,8 @@ exports[`Xaml Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -57502,6 +57820,8 @@ exports[`Xaml Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -57672,6 +57992,8 @@ exports[`Xaml Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -58145,6 +58467,8 @@ exports[`Xaml Example Page 1`] = `
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -58882,6 +59206,8 @@ You selected Option 1
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -59396,6 +59722,8 @@ You selected Option 1
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -59581,6 +59909,8 @@ You selected Option 1
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -60289,6 +60619,8 @@ You selected Option 1
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
@@ -61002,6 +61334,8 @@ You selected Option 1
                       "checked": undefined,
                       "disabled": undefined,
                       "expanded": undefined,
+                      "multiselectable": undefined,
+                      "required": undefined,
                       "selected": undefined,
                     }
                   }
