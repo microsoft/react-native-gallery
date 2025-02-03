@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Pressable,
   Text,
+  TouchableOpacity,
   useColorScheme,
   ScrollView,
 } from 'react-native';
@@ -330,7 +331,8 @@ function MyDrawer() {
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
-      screenOptions={{headerShown: false}}>
+      screenOptions={{headerShown: false}}
+      defaultStatus='closed'>
       {RNGalleryList.map((item) => (
         <Drawer.Screen
           name={item.key}

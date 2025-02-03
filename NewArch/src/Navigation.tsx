@@ -226,11 +226,7 @@ const DrawerNavigator = ({drawerContent, screenOptions, defaultStatus, children}
   return (
     <NavigationContext.Provider value={navigation}>
       <View>
-          <View style={{
-            position: 'absolute',
-            zIndex: 1,
-            height: '100%',
-            width: '100%'}}>
+          <View>
             { drawerIsOpen &&
               <Animated.View
                 style={{opacity: fadeAnim}}>
