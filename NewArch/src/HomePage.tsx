@@ -13,7 +13,6 @@ import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
-// import LinearGradient from 'react-native-linear-gradient';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -36,16 +35,20 @@ const createStyles = () =>
       position: 'absolute',
       width: '100%',
       height: '100%',
+      backgroundColor: '#ced8e4',
+      borderTopLeftRadius: 8,
+      borderBottomLeftRadius: 8,
     },
     heroBackgroundImage: {
       position: 'absolute',
       resizeMode: 'cover',
       width: '100%',
-      height: '99%',
+      height: '100%',
+      borderBottomLeftRadius: 8,
     },
     pageHeader: {},
     pageTitleContainer: {
-      height: 204,
+      height: 224,
       justifyContent: 'center',
     },
     pageTitle: {
@@ -58,42 +61,20 @@ const createStyles = () =>
   });
 
 const PageTitle = () => {
-  const {colors} = useTheme();
-  const colorScheme = useColorScheme();
-  const styles = createStyles(colors);
+  const styles = createStyles();
 
   return (
-    // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View>
-      {/* <LinearGradient
-        start={{x: 0.5, y: 0}}
-        end={{x: 0.5, y: 1}}
-        colors={
-          colorScheme === 'light'
-            ? ['#CED8E4', '#D5DBE3']
-            : ['#020B20', '#020B20']
-        }
-        style={styles.heroGradient}
-      />
+      <View style={styles.heroGradient}></View>
       <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
           styles.heroBackgroundImage,
           {
-            opacity: colorScheme === 'light' ? 0.9 : 0.8,
+            opacity: 0.9,
           },
         ]}
-      /> */}
-      {/* <LinearGradient
-        start={{x: 0, y: 0.5}}
-        end={{x: 0, y: 1.5}}
-        colors={
-          colorScheme === 'light'
-            ? ['#f9f9f900', '#f9f9f9FF']
-            : ['#26262600', '#262626FF']
-        }
-        style={styles.heroGradient}
-      /> */}
+      />
       <View style={styles.pageHeader}>
         <View style={styles.pageTitleContainer}>
           <Text
@@ -109,32 +90,31 @@ const PageTitle = () => {
   );
 };
 
-export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
-  const {colors} = useTheme();
-  const styles = createStyles(colors);
-  const isScreenFocused = useIsFocused();
+export const HomePage: React.FunctionComponent<{}> = () => {
+  const styles = createStyles();
+  const navigation = {};
 
-  return isScreenFocused ? (
+  return (
     <View>
-      <ScreenWrapper doNotInset={true}>
-        <ScrollView>
-          <PageTitle />
-          <View style={styles.container}>
-            <ListOfComponents
-              heading="Recently added samples"
-              items={RNGalleryList.filter((item) => item.new)}
-              navigation={navigation}
-            />
-            <ListOfComponents
-              heading="Recently updated samples"
-              items={RNGalleryList.filter((item) => item.recentlyUpdated)}
-              navigation={navigation}
-            />
-          </View>
-        </ScrollView>
-      </ScreenWrapper>
+      <View>
+        <ScreenWrapper doNotInset={true}>
+          <ScrollView>
+            <PageTitle />
+            <View style={styles.container}>
+              <ListOfComponents
+                heading="Recently added samples"
+                items={RNGalleryList.filter((item) => item.new)}
+                navigation={navigation}
+              />
+              <ListOfComponents
+                heading="Recently updated samples"
+                items={RNGalleryList.filter((item) => item.recentlyUpdated)}
+                navigation={navigation}
+              />
+            </View>
+          </ScrollView>
+        </ScreenWrapper>
+      </View>
     </View>
-  ) : (
-    <View />
-  );
+    );
 };

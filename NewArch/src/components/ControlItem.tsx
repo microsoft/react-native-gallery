@@ -8,18 +8,19 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import {useTheme} from '../Navigation';
-import type {IRNGalleryExample} from './RNGalleryList';
+//import {useTheme} from '@react-navigation/native';
+import type {IRNGalleryExample} from '../RNGalleryList';
+import AppContext from '../AppContext';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      backgroundColor: '#fdfdfd',
       borderColor: isPressing
-        ? PlatformColor('TextFillColorSecondaryBrush')
+        ? '#5f5f5f'
         : isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('CardStrokeColorDefaultBrush'),
+        ? '#d1d1d1'
+        : '#eaeaea',
       borderWidth: 1,
       borderBottomWidth: 1,
       padding: 8,
@@ -28,7 +29,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       flexDirection: 'row',
       gap: 16,
       width: 360,
-      minHeight: 90,
+      height: 90,
     },
     textIcon: {
       fontFamily: 'Segoe MDL2 Assets',
@@ -63,7 +64,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       width: 10,
       height: 10,
       borderRadius: 5,
-      backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+      backgroundColor: '#0067c0',
     },
   });
 
@@ -74,9 +75,10 @@ type HomeComponentTileProps = {
 const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
   // Comparable WinUI gallery control:
   // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7
-  const {colors} = useTheme();
+  //const {colors} = useTheme();
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressing, setIsPressing] = React.useState(false);
+  const colors = {};
   const styles = createStyles(colors, isHovered, isPressing);
 
   // Workaround for accessibility label requirements:

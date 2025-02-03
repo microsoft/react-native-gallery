@@ -150,6 +150,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A performant interface for rendering basic, flat lists, supporting the most handy features.',
     type: 'Collections',
+    new: true,
   },
   // {
   //   key: 'Flyout',
@@ -267,6 +268,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A button that can be switched between two states like a CheckBox.',
     type: 'Basic Input',
+    new: true,
   },
   // {
   //   key: 'Svg',
@@ -291,6 +293,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/TextBox.png'),
     subtitle: 'A single-line or multi-line plain text field.',
     type: 'Text',
+    recentlyUpdated: true,
   },
   // {
   //   key: 'TimePicker',
@@ -313,6 +316,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     textIcon: '\uEDA4',
     subtitle: 'A legacy wrapper for making views respond to touches.',
     type: 'Legacy',
+    recentlyUpdated: true,
   },
   {
     key: 'TouchableOpacity',
