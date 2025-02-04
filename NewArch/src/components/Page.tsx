@@ -1,10 +1,9 @@
 import React from 'react';
-import {PlatformColor, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
-import {useTheme, useIsFocused} from '../Navigation';
 import {ScreenWrapper} from './ScreenWrapper';
 
 const styles = StyleSheet.create({
@@ -18,7 +17,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   titlePane: {
-    marginTop: 44,
+    marginTop: 24,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -26,7 +25,9 @@ const styles = StyleSheet.create({
     paddingRight: 20,
   },
   description: {
+    paddingTop: 10,
     paddingRight: 20,
+    paddingBottom: 20
   },
   scrollView: {
     paddingRight: 20,
@@ -89,9 +90,9 @@ export function Page(props: {
   documentation: {label: string; url: string}[];
   children: React.ReactNode;
 }) {
-  const {colors} = useTheme();
-  const isScreenFocused = useIsFocused();
-  return isScreenFocused ? (
+  //const {colors} = useTheme();
+  //const isScreenFocused = useIsFocused();
+  return (
     <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
         <Text accessible accessibilityRole={'header'} style={styles.title}>
@@ -104,7 +105,7 @@ export function Page(props: {
       </View>
 
       {props.description && (
-        <Text style={[styles.description, {color: colors.text}]}>
+        <Text style={[styles.description, {color: '#505050'}]}>
           {props.description}
         </Text>
       )}
@@ -118,7 +119,5 @@ export function Page(props: {
         )}
       </ScrollView>
     </ScreenWrapper>
-  ) : (
-    <View />
   );
 }

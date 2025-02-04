@@ -232,7 +232,8 @@ const DrawerNavigator = ({drawerContent, screenOptions, defaultStatus, children}
                 style={{opacity: fadeAnim}}>
                 <Pressable
                   style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    backgroundColor: 'rgba(216, 216, 216, 0.5)',
+                    maxWidth: DEFAULT_DRAWER_WIDTH,
                     height: '100%',
                     width: '100%'}} 
                     onPress={() => setDrawerDesiredOpen(false)}

@@ -356,19 +356,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
           </View>
           <View style={styles.selectionContainer}>
             <Text>Selection Support</Text>
-            <Picker
-              accessibilityLabel="Selection Support"
-              style={{height: 50, width: 200, marginTop: 10}}
-              itemStyle={{color: colors.text}}
-              selectedValue={selectedSupport}
-              onValueChange={(itemValue) => {
-                setSelectedSupport(itemValue);
-                setList([]);
-              }}>
-              <Picker.Item label="None" value="None" />
-              <Picker.Item label="Single" value="Single" />
-              <Picker.Item label="Multiple" value="Multiple" />
-            </Picker>
           </View>
         </ScrollView>
       </Example>
