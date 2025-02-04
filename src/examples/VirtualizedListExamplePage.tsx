@@ -206,9 +206,13 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       marginVertical: 3,
       backgroundColor: PlatformColor('SystemControlHighlightBaseLowBrush'),
     },
+    titleSelected : {
+      fontSize: 20,
+      color: PlatformColor('SystemControlBackgroundChromeWhiteBrush'),
+    },
     title: {
       fontSize: 20,
-      color: PlatformColor('SystemControlHighlightBaseHighBrush'),
+      color: PlatformColor('SystemControlForegroundChromeBlackHighBrush'),
     },
   });
 
@@ -230,7 +234,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
         onPress={() => {
           setSelectedIndex(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
