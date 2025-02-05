@@ -6,7 +6,7 @@ import {SettingsPage} from './SettingsPage';
 import {ComponentListPage} from './ComponentListPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 // import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
-// import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
+import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
 // import {ConfigExamplePage} from './examples/ConfigExamplePage';
 // import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 // import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
@@ -104,15 +104,15 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   //   subtitle: 'A control that a user can select or clear.',
   //   type: 'Basic Input',
   // },
-  // {
-  //   key: 'Clipboard',
-  //   component: ClipboardExamplePage,
-  //   textIcon: '\uE8C8',
-  //   imageIcon: require('../assets/ControlImages/Clipboard.png'),
-  //   subtitle: 'Copy and paste to and from the system Clipboard.',
-  //   type: 'System',
-  //   new: true,
-  // },
+  {
+    key: 'Clipboard',
+    component: ClipboardExamplePage,
+    textIcon: '\uE8C8',
+    imageIcon: require('../assets/ControlImages/Clipboard.png'),
+    subtitle: 'Copy and paste to and from the system Clipboard.',
+    type: 'System',
+    new: true,
+  },
   // {
   //   key: 'Config',
   //   component: ConfigExamplePage,
