@@ -16,10 +16,9 @@ const createStyles = (colorScheme) =>
       flexDirection: 'row',
       width: '100%',
       height: '100%',
-      backgroundColor: PlatformColor('SystemControlBackgroundListLowBrush'),
     },
     navBar: {
-      backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
+      backgroundColor: 'rgba(233, 233, 233, 0.47)',
       width: 48,
       height: '100%',
       paddingBottom: 20,
@@ -30,7 +29,7 @@ const createStyles = (colorScheme) =>
       height: '100%',
       alignSelf: 'stretch',
       borderTopLeftRadius: 8,
-      borderColor: PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+      borderColor: 'rgba(233, 233, 233, 0.47)',
       borderLeftWidth: 1,
     },
     insetNavItem: {

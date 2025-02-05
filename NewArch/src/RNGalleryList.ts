@@ -143,7 +143,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   //   type: 'Layout',
   // },
   {
-    key: 'FlatList ',
+    key: 'FlatList',
     component: FlatListExamplePage,
     textIcon: '\uE8A4',
     imageIcon: require('../assets/ControlImages/ListView.png'),

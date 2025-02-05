@@ -13,6 +13,7 @@ import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
+// import LinearGradient from 'react-native-linear-gradient';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -23,6 +24,7 @@ const createStyles = () =>
       alignSelf: 'stretch',
       height: '100%',
       alignContent: 'flex-start',
+      backgroundColor: 'rgba(216, 216, 216, 0.5)',
     },
     scrollView: {
       paddingRight: 20,
@@ -64,6 +66,7 @@ const PageTitle = () => {
   const styles = createStyles();
 
   return (
+    // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View>
       <View style={styles.heroGradient}></View>
       <Image
@@ -90,31 +93,32 @@ const PageTitle = () => {
   );
 };
 
-export const HomePage: React.FunctionComponent<{}> = () => {
-  const styles = createStyles();
-  const navigation = {};
+export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
+  const isScreenFocused = useIsFocused();
 
-  return (
+  return isScreenFocused ? (
     <View>
-      <View>
-        <ScreenWrapper doNotInset={true}>
-          <ScrollView>
-            <PageTitle />
-            <View style={styles.container}>
-              <ListOfComponents
-                heading="Recently added samples"
-                items={RNGalleryList.filter((item) => item.new)}
-                navigation={navigation}
-              />
-              <ListOfComponents
-                heading="Recently updated samples"
-                items={RNGalleryList.filter((item) => item.recentlyUpdated)}
-                navigation={navigation}
-              />
-            </View>
-          </ScrollView>
-        </ScreenWrapper>
-      </View>
+      <ScreenWrapper doNotInset={true}>
+        <ScrollView>
+          <PageTitle />
+          <View style={styles.container}>
+            <ListOfComponents
+              heading="Recently added samples"
+              items={RNGalleryList.filter((item) => item.new)}
+              navigation={navigation}
+            />
+            <ListOfComponents
+              heading="Recently updated samples"
+              items={RNGalleryList.filter((item) => item.recentlyUpdated)}
+              navigation={navigation}
+            />
+          </View>
+        </ScrollView>
+      </ScreenWrapper>
     </View>
-    );
+  ) : (
+    <View />
+  );
 };
