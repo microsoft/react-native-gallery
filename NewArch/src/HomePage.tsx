@@ -68,7 +68,7 @@ const PageTitle = () => {
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View>
-      <View style={styles.heroGradient}></View>
+      <View style={styles.heroGradient} />
       <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[

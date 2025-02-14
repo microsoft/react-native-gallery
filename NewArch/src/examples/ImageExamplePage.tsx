@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '../Navigation'
+import {useTheme} from '../Navigation';
 
 export const ImageExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

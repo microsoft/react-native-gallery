@@ -4,11 +4,10 @@ import {
   StyleSheet,
   Pressable,
   Text,
-  TouchableOpacity,
   useColorScheme,
   ScrollView,
 } from 'react-native';
-import {NavigationContainer} from './Navigation'
+import {NavigationContainer} from './Navigation';
 import {
   createDrawerNavigator,
   getDrawerStatusFromState,
@@ -332,7 +331,7 @@ function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{headerShown: false}}
-      defaultStatus='closed'>
+      defaultStatus="closed">
       {RNGalleryList.map((item) => (
         <Drawer.Screen
           name={item.key}

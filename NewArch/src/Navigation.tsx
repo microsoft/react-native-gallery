@@ -67,11 +67,11 @@ const NavigationContainer = ({children}: NavigationContainerProps) => {
     dispatch: (op: () => void) => {
       console.warn('unhandled dispatch', op);
     },
-    getState: () => {return {routes: routes, routeNames: routes, params: parameters}},
+    getState: () => {return {routes: routes, routeNames: routes, params: parameters};},
     currentScreen: currentScreen,
     routes: routes,
     parameters: parameters,
-  }
+  };
   return (
     <NavigationContext.Provider value={navigationContext}>
       {children}
@@ -114,9 +114,9 @@ const StackScreen = ({children, name, component, options}: StackScreenProps) => 
 
   const navigation = {
     params: navigationContext.parameters ?? myRoute.parameters,
-    push: (screen: string, parameters: any) => {navigationContext.push(screen, parameters, name)},
-    pop: () => {navigationContext.pop()},
-    getState: () => {return {routes: navigationContext.routes, params: navigationContext.parameters}}
+    push: (screen: string, parameters: any) => {navigationContext.push(screen, parameters, name);},
+    pop: () => {navigationContext.pop();},
+    getState: () => {return {routes: navigationContext.routes, params: navigationContext.parameters};},
   };
 
   let header = null;
@@ -135,7 +135,7 @@ const StackScreen = ({children, name, component, options}: StackScreenProps) => 
 };
 
 const createNativeStackNavigator = () => {
-  return {}
+  return {};
 };
 
 type DrawerNavigatorProps = PropsWithChildren<{
@@ -145,8 +145,8 @@ type DrawerNavigatorProps = PropsWithChildren<{
 }>;
 const DrawerNavigator = ({drawerContent, screenOptions, defaultStatus, children} : DrawerNavigatorProps) => {
   const navigationContext = React.useContext(NavigationContext);
-  
-  // Separately keep track of whether the drawer is open (visible) and whether it wants to be 
+
+  // Separately keep track of whether the drawer is open (visible) and whether it wants to be
   // (toggle state) so that the animation can only hide the content when it's done sliding out of view
   const [drawerDesiredOpen, setDrawerDesiredOpen] = React.useState(defaultStatus === 'open');
   const [drawerIsOpen, setDrawerIsOpen] = React.useState(false);
@@ -214,11 +214,11 @@ const DrawerNavigator = ({drawerContent, screenOptions, defaultStatus, children}
       return {
         ...state,
         drawerIsOpen: drawerIsOpen,
-      }
+      };
     },
-    openDrawer: () => {setDrawerDesiredOpen(true)},
-    closeDrawer: () => {setDrawerDesiredOpen(false)},
-  }
+    openDrawer: () => {setDrawerDesiredOpen(true);},
+    closeDrawer: () => {setDrawerDesiredOpen(false);},
+  };
 
   // Create the drawer content
   const drawer = drawerIsOpen && drawerContent({navigation});
@@ -235,7 +235,7 @@ const DrawerNavigator = ({drawerContent, screenOptions, defaultStatus, children}
                     backgroundColor: 'rgba(216, 216, 216, 0.5)',
                     maxWidth: DEFAULT_DRAWER_WIDTH,
                     height: '100%',
-                    width: '100%'}} 
+                    width: '100%'}}
                     onPress={() => setDrawerDesiredOpen(false)}
                     />
               </Animated.View>
@@ -296,18 +296,18 @@ const createDrawerNavigator = () => {
     Screen: ({component, name, key}: DrawerScreenProps) => {
       return (
         <DrawerScreen key={key} name={name} component={component} />
-      )
+      );
     },
-  }
-}
+  };
+};
 
 const getDrawerStatusFromState = (state: any) => {
   return state.drawerIsOpen ? 'open' : 'closed';
-}
+};
 
 const useIsFocused = () => {
   return true;
-}
+};
 
 const useTheme = () => {
   return {colors: {
@@ -318,7 +318,7 @@ const useTheme = () => {
     border: '#E6E6E6',
     notification: 'rgb(255, 59, 48)',
   }};
-}
+};
 
 const Theme = {
   colors: {
@@ -330,17 +330,17 @@ const Theme = {
     notification: 'rgb(255, 59, 48)',
   },
   dark: false,
-}
+};
 
 const useNavigation = () => {
   const navigationContext = React.useContext(NavigationContext);
   return navigationContext;
-}
+};
 
 const DrawerActions = {
-  openDrawer: () => {console.log('openDrawer'); return { type: 'OPEN_DRAWER' }},
-  closeDrawer: () => {console.log('closeDrawer'); return { type: 'CLOSE_DRAWER' }},
-  toggleDrawer: () => {console.log('toggleDrawer'); return { type: 'TOGGLE_DRAWER' }}
-}
+  openDrawer: () => {console.log('openDrawer'); return { type: 'OPEN_DRAWER' };},
+  closeDrawer: () => {console.log('closeDrawer'); return { type: 'CLOSE_DRAWER' };},
+  toggleDrawer: () => {console.log('toggleDrawer'); return { type: 'TOGGLE_DRAWER' };},
+};
 
 export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, Theme, useNavigation, DrawerActions };

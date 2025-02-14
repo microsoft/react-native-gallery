@@ -92,11 +92,6 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
   </SettingContainer>*/}
         <SettingContainer heading="About">
           <Text style={styles.text}>Source code: </Text>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="React Native Gallery" />
-            </TextBlock>
-          </HyperlinkButton>
           <Text style={styles.text}>
             To clone this source repository: git clone
             https://github.com/microsoft/react-native-gallery
@@ -112,42 +107,15 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             If you have found a bug within the React Native Gallery app, please
             file an issue on GitHub:
           </Text>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery/issues/new">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="New React Native Gallery Bug Report" />
-            </TextBlock>
-          </HyperlinkButton>
 
           <Text style={styles.text}>
             If you would like a new sample, request it on Github:
           </Text>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-gallery/issues/new">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="New Sample Request" />
-            </TextBlock>
-          </HyperlinkButton>
           <Text style={styles.text}>
             If you have found a bug in your React Native Windows app (not in the
             React Native Gallery) and need help, file an issue on the React
             Native Windows GitHub:
           </Text>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-windows/issues/new?assignees=&labels=bug&template=bug-report.md&title=Describe+the+problem">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="New React Native Windows Bug Report" />
-            </TextBlock>
-          </HyperlinkButton>
-        </SettingContainer>
-        <SettingContainer heading="Dependencies and References">
-          <HyperlinkButton navigateUri="https://microsoft.github.io/react-native-windows/">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="React Native for Windows and MacOS Website" />
-            </TextBlock>
-          </HyperlinkButton>
-          <HyperlinkButton navigateUri="https://github.com/microsoft/react-native-windows">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="React Native Windows GitHub" />
-            </TextBlock>
-          </HyperlinkButton>
         </SettingContainer>
         <SettingContainer heading="Disclaimer">
           <Text style={styles.text}>
@@ -157,16 +125,6 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             PARTICULAR PURPOSE.{'\n\n'}Copyright (c) Microsoft Corporation. All
             rights reserved.
           </Text>
-          <HyperlinkButton navigateUri="https://www.microsoft.com/en-us/servicesagreement/default.aspx">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="Microsoft Services Agreement" />
-            </TextBlock>
-          </HyperlinkButton>
-          <HyperlinkButton navigateUri="https://privacy.microsoft.com/en-us/privacystatement">
-            <TextBlock textDecorations={TextDecorations.Underline}>
-              <Run text="Microsoft Privacy Statement" />
-            </TextBlock>
-          </HyperlinkButton>
         </SettingContainer>
       </ScrollView>
     </ScreenWrapper>

@@ -46,7 +46,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
     controlItemTitle: {
       // BodyStrongTextBlockStyle
       fontWeight: '600', // SemiBold
-      color: PlatformColor('TextFillColorPrimary')
+      color: PlatformColor('TextFillColorPrimary'),
     },
     controlItemSubtitle: {
       // CaptionTextBlockStyle

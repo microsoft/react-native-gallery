@@ -3,7 +3,7 @@ import {Text, Pressable, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '../Navigation'
+import {useTheme} from '../Navigation';
 
 export const PressableExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
