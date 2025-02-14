@@ -6,7 +6,7 @@ import {ThemeContext} from '../themes/Theme';
 
 const darkColors = {
   background: 'transparent',
-  text: PlatformColor('SystemControlPageTextBaseMediumBrush'),
+  text: PlatformColor('TextFillColorPrimary'),
   comment: '#6a9955',
   keyword: '#c586c0',
   tag: '#cc99cc',
@@ -20,7 +20,7 @@ const darkColors = {
 
 const lightColors = {
   background: 'transparent',
-  text: PlatformColor('SystemControlPageTextBaseMediumBrush'),
+  text: PlatformColor('TextFillColorPrimary'),
   comment: '#000000',
   keyword: '#FF0000',
   tag: '#A31515',

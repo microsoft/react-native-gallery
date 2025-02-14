@@ -115,10 +115,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
             accessibilityValue={{text: `${title}`}}
             style={{
               height: 40,
-              backgroundColor:
-                Platform.OS === 'windows'
-                  ? PlatformColor('SystemColorButtonFaceColor')
-                  : 'silver',
+              backgroundColor: PlatformColor(TextFillColorPrimary),
               borderRadius: 3,
               justifyContent: 'center',
               alignItems: 'center',
@@ -127,8 +124,8 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
               setTitle(title + 1);
             }}
             activeOpacity={0.2}
-            underlayColor={colors.text}>
-            <Text style={{color: colors.text}}>{String(title)}</Text>
+            underlayColor={'white'}>
+            <Text style={{color: PlatformColor('TextFillColorPrimary')}}>{String(title)}</Text>
           </TouchableHighlight>
         </Example>
       </Page>

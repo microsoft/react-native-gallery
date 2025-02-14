@@ -46,13 +46,11 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
     controlItemTitle: {
       // BodyStrongTextBlockStyle
       fontWeight: '600', // SemiBold
-      color: isHovered
-        ? PlatformColor('TextFillColorSecondaryBrush')
-        : PlatformColor('TextFillColorPrimaryBrush'),
+      color: PlatformColor('TextFillColorPrimary')
     },
     controlItemSubtitle: {
       // CaptionTextBlockStyle
-      color: PlatformColor('TextFillColorSecondaryBrush'),
+      color: PlatformColor('TextFillColorPrimary'),
       fontSize: 12,
     },
     badgeContainer: {

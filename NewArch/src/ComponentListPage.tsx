@@ -31,7 +31,7 @@ const createStyles = () =>
       marginBottom: 10,
       fontSize: 20,
       fontWeight: '600',
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: PlatformColor('TextFillColorPrimary'),
     },
     homeContainer: {
       alignItems: 'flex-start',

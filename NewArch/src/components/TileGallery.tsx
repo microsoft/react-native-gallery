@@ -40,11 +40,11 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
     tileTitle: {
       // BodyTextBlockStyle: https://github.com/microsoft/microsoft-ui-xaml/blob/winui3/release/1.4-stable/dxaml/xcp/dxaml/themes/generic.xaml#L13278
       fontSize: 18,
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: PlatformColor('TextFillColorPrimary'),
     },
     tileDescription: {
       // CaptionTextBlockStyle: https://github.com/microsoft/microsoft-ui-xaml/blob/d4c4e539c55b562e78e7f026195d5b6c8af234ea/dxaml/xcp/dxaml/themes/generic.xaml#L13282
-      color: PlatformColor('TextFillColorSecondaryBrush'),
+      color: PlatformColor('TextFillColorPrimary'),
       fontSize: 12,
       flexGrow: 1,
     },
@@ -53,7 +53,7 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       alignSelf: 'flex-end',
       justifyContent: 'flex-end',
       fontSize: 18,
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: PlatformColor('SystemChromeBlackLowColor'),
     },
     tileGalleryContainer: {
       flexDirection: 'row',

@@ -10,7 +10,7 @@ export function CoreComponentBadge() {
       badgeColor={colors.primary}
       textColor={
         Platform.OS === 'windows'
-          ? PlatformColor('SystemColorHighlightTextColor')
+          ? PlatformColor('TextFillColorPrimary')
           : colors.primary
       }
       badgeTitle="Core Component"

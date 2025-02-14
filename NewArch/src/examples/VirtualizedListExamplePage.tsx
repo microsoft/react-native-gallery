@@ -204,11 +204,11 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       padding: 5,
       paddingHorizontal: 10,
       marginVertical: 3,
-      backgroundColor: PlatformColor('SystemControlHighlightBaseLowBrush'),
+      backgroundColor: PlatformColor('TextFillColorPrimary'),
     },
     title: {
       fontSize: 20,
-      color: PlatformColor('SystemControlHighlightBaseHighBrush'),
+      color: PlatformColor('TextFillColorPrimary'),
     },
   });
 

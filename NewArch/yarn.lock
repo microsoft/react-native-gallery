@@ -3253,8 +3253,8 @@ __metadata:
     lowlight: "npm:^1.17.0"
     prettier: "npm:2.8.8"
     react: "npm:18.3.1"
-    react-native: "npm:0.77.0"
-    react-native-windows: "npm:0.77.0"
+    react-native: "npm:^0.77.0"
+    react-native-windows: "npm:^0.77.0"
     react-test-renderer: "npm:18.3.1"
     typescript: "npm:5.0.4"
   languageName: unknown
@@ -8611,9 +8611,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-windows@npm:0.77.0":
-  version: 0.77.0
-  resolution: "react-native-windows@npm:0.77.0"
+"react-native-windows@npm:^0.77.0":
+  version: 0.77.2
+  resolution: "react-native-windows@npm:0.77.2"
   dependencies:
     "@babel/runtime": "npm:^7.0.0"
     "@jest/create-cache-key-function": "npm:^29.6.3"
@@ -8665,11 +8665,11 @@ __metadata:
     "@types/react": ^18.2.6
     react: ^18.2.0
     react-native: ^0.77.0
-  checksum: 10c0/05589fc9c176ff09f26e0ec2737e52c63429530596caebfa33cdaf673523cb6918aefdfdb50c1a5ceefc16b0948ef503c1df5a5c8a563540384de7fa64b3ad4b
+  checksum: 10c0/e3abb4126b845f5aa2423b4ba7877f3d76664b1d9028ce11b467c4747d953f22c17925d63e95c32d70ed62850f7e9d7b1f8a42ffebe73ceef255aa6bbd32f8a4
   languageName: node
   linkType: hard
 
-"react-native@npm:0.77.0":
+"react-native@npm:^0.77.0":
   version: 0.77.0
   resolution: "react-native@npm:0.77.0"
   dependencies:
