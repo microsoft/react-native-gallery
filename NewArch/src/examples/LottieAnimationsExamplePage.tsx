@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {Button, Platform, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import LottieView, {AnimatedLottieViewProps} from 'lottie-react-native';
+import LottieView from 'lottie-react-native';
 
 export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
   const [loop, setLoop] = useState(true);

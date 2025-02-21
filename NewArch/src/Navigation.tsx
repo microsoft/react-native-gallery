@@ -47,7 +47,7 @@ const NavigationContainer = ({children}: NavigationContainerProps) => {
   const [parameters, setParameters] = useState({} as any);
 
   const navigationContext = {
-    push: (screen: string, parameters: any, navigateFrom: string) => {
+    push: (screen: string, parameters: any, _navigateFrom: string) => {
       setRoutes([...routes, {name: screen, key: screen, params: parameters}]);
       setCurrentScreen(screen);
       setParameters(parameters);
@@ -82,7 +82,7 @@ const NavigationContainer = ({children}: NavigationContainerProps) => {
 type StackNavigatorProps = PropsWithChildren<{
     initialRouteName?: string;
 }>;
-const StackNavigator = ({children, initialRouteName}: StackNavigatorProps) => {
+const StackNavigator = ({children}: StackNavigatorProps) => {
   const navigationContext = React.useContext(NavigationContext);
 
   return (
@@ -107,7 +107,7 @@ type StackScreenProps = PropsWithChildren<{
   component: ({ navigation, route }: { navigation: any; route: any; }) => JSX.Element,
   options: ({navigation}: {navigation: any}) => any,
 }>;
-const StackScreen = ({children, name, component, options}: StackScreenProps) => {
+const StackScreen = ({ name, component, options}: StackScreenProps) => {
   const navigationContext = React.useContext(NavigationContext);
 
   let myRoute = navigationContext.routes.find((route) => route.name === name);
@@ -143,7 +143,7 @@ type DrawerNavigatorProps = PropsWithChildren<{
   screenOptions: any,
   defaultStatus: string,
 }>;
-const DrawerNavigator = ({drawerContent, screenOptions, defaultStatus, children} : DrawerNavigatorProps) => {
+const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNavigatorProps) => {
   const navigationContext = React.useContext(NavigationContext);
 
   // Separately keep track of whether the drawer is open (visible) and whether it wants to be
@@ -272,7 +272,7 @@ type DrawerScreenProps = {
   name: string,
   component: ({ navigation, route }: { navigation: any; route: any; }) => JSX.Element,
 };
-const DrawerScreen = ({key, name, component}: DrawerScreenProps) => {
+const DrawerScreen = ({key, component}: DrawerScreenProps) => {
   const navigationContext = React.useContext(NavigationContext);
 
   const content = component({navigation: navigationContext, route: navigationContext});

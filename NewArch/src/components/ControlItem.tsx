@@ -10,7 +10,6 @@ import {
 import React from 'react';
 //import {useTheme} from '@react-navigation/native';
 import type {IRNGalleryExample} from '../RNGalleryList';
-import AppContext from '../AppContext';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({

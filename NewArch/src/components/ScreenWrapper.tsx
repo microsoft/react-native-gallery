@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {useNavigation, DrawerActions} from '../Navigation';
 
-const createStyles = (colorScheme) =>
+const createStyles = () =>
   StyleSheet.create({
     container: {
       flexDirection: 'row',

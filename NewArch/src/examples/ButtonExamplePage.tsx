@@ -1,5 +1,5 @@
 'use strict';
-import {Button, Platform, PlatformColor} from 'react-native';
+import {Button, Platform} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';

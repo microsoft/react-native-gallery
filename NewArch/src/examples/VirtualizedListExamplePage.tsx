@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   ScrollView,
   PlatformColor,
+  Pressable,
 } from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
@@ -170,7 +171,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   var DATA: INT[] = [];
   const [selectedIndex, setSelectedIndex] = useState();
   const [selectedIndex2, setSelectedIndex2] = useState();
-  const [selectedSupport, setSelectedSupport] = useState('None');
+  const [selectedSupport, setSelectedSupport] = useState('Multiple');
   const [getList, setList] = useState([]);
 
   const getItem = (data, index) => ({
@@ -259,8 +260,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
-        activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
-        underlayColor={selectedSupport === 'None' ? '' : colors.border}
+        activeOpacity={0.6}
+        underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex2(item.index);
         }}>
@@ -346,6 +347,22 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
           </View>
           <View style={styles.selectionContainer}>
             <Text>Selection Support</Text>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={'selection support pressable'}
+              accessibilityHint={'click me to change selection support'}
+              onPress={() => {
+                if (selectedSupport === 'Single') {
+                  setSelectedSupport('Multiple');
+                } else {
+                  setSelectedSupport('Single');
+                }
+              }}
+            >
+              <Text>
+                Selection Support: {selectedSupport}
+              </Text>
+            </Pressable>
           </View>
         </ScrollView>
       </Example>

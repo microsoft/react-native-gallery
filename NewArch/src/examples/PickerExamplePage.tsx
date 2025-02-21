@@ -3,7 +3,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Picker} from '@react-native-picker/picker';
-import {useTheme} from '../Navigation
+import {useTheme} from '../Navigation';
 
 export const PickerExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

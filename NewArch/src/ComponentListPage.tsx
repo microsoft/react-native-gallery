@@ -73,11 +73,9 @@ const ListOfComponents = ({
 };
 
 type GroupedListOfAllComponentsProps = {
-  route: any;
   navigation: any;
 };
 const GroupedListOfAllComponents = ({
-  route,
   navigation,
 }: GroupedListOfAllComponentsProps) => {
   return (

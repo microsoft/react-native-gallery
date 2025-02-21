@@ -5,7 +5,6 @@ import {
   Text,
   ScrollView,
   Image,
-  useColorScheme,
 } from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from './Navigation';

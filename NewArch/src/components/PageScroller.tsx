@@ -3,7 +3,6 @@ import {
   FlatList,
   FlatListProps,
   Image,
-  PlatformColor,
   Pressable,
   View,
 } from 'react-native';
