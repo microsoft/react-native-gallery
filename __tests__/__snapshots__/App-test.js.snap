@@ -25,6 +25,7 @@ exports[`Button Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -292,6 +293,7 @@ exports[`Button Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -456,6 +458,7 @@ exports[`Button Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -569,6 +572,7 @@ exports[`Button Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -744,6 +748,7 @@ exports[`Button Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -857,6 +862,7 @@ exports[`Button Example Page 1`] = `
                     "disabled": true,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -1056,6 +1062,7 @@ exports[`Button Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -1170,6 +1177,7 @@ exports[`Button Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -1357,6 +1365,7 @@ exports[`Button Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -1579,6 +1588,7 @@ exports[`CheckBox Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -1967,6 +1977,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -2165,6 +2176,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -2349,6 +2361,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -2548,6 +2561,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -2747,6 +2761,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -2946,6 +2961,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -3145,6 +3161,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -3329,6 +3346,7 @@ exports[`CheckBox Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -3551,6 +3569,7 @@ exports[`Clipboard Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -3830,6 +3849,7 @@ exports[`Clipboard Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -4002,6 +4022,7 @@ exports[`Clipboard Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -4123,6 +4144,7 @@ exports[`Clipboard Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -4498,6 +4520,7 @@ exports[`Clipboard Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -4711,6 +4734,7 @@ exports[`Config Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -5248,6 +5272,7 @@ exports[`Config Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -5465,6 +5490,7 @@ exports[`DeviceInfo Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -5934,6 +5960,7 @@ exports[`DeviceInfo Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -6161,6 +6188,7 @@ exports[`DeviceInfo Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -6339,6 +6367,7 @@ exports[`DeviceInfo Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -6552,6 +6581,7 @@ exports[`Expander Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -7090,6 +7120,7 @@ exports[`Expander Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -7663,6 +7694,7 @@ exports[`Expander Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -8011,6 +8043,7 @@ exports[`Expander Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -8410,6 +8443,7 @@ exports[`Expander Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -9250,6 +9284,7 @@ exports[`Expander Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -9447,2553 +9482,7 @@ exports[`Expander Example Page 1`] = `
 </View>
 `;
 
-exports[`FlatList Example Page 1`] = `
-<View
-  style={
-    {
-      "backgroundColor": {
-        "windowsbrush": [
-          "SystemControlBackgroundListLowBrush",
-        ],
-      },
-      "flexDirection": "row",
-      "height": "100%",
-      "width": "100%",
-    }
-  }
->
-  <View
-    accessibilityLabel="Navigation bar"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": undefined,
-        "expanded": undefined,
-        "multiselectable": undefined,
-        "required": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    disabled={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "backgroundColor": {
-          "windowsbrush": [
-            "NavigationViewDefaultPaneBackground",
-          ],
-        },
-        "height": "100%",
-        "paddingBottom": 20,
-        "width": 48,
-      }
-    }
-  >
-    <View>
-      <View
-        accessibilityLabel="Navigation bar hamburger icon"
-        accessibilityRole="button"
-        accessibilityValue={
-          {
-            "max": undefined,
-            "min": undefined,
-            "now": undefined,
-            "text": undefined,
-          }
-        }
-        accessible={true}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          {
-            "alignItems": "center",
-            "borderRadius": 3,
-            "height": 34,
-            "justifyContent": "center",
-            "margin": 5,
-            "width": 38,
-          }
-        }
-        tooltip="Expand Menu"
-      >
-        <Text
-          style={
-            {
-              "color": {
-                "windowsbrush": [
-                  "TextControlForeground",
-                ],
-              },
-              "fontFamily": "Segoe MDL2 Assets",
-              "fontSize": 16,
-            }
-          }
-        >
-          
-        </Text>
-      </View>
-    </View>
-  </View>
-  <View
-    style={
-      [
-        {
-          "alignSelf": "stretch",
-          "borderColor": {
-            "windowsbrush": [
-              "SurfaceStrokeColorFlyoutBrush",
-            ],
-          },
-          "borderLeftWidth": 1,
-          "borderTopLeftRadius": 8,
-          "flexGrow": 1,
-          "flexShrink": 1,
-          "height": "100%",
-        },
-        {
-          "paddingLeft": 36,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "marginBottom": 10,
-          "marginTop": 44,
-          "paddingRight": 20,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="header"
-        accessible={true}
-        style={
-          {
-            "fontSize": 28,
-            "fontWeight": "600",
-          }
-        }
-      >
-        FlatList
-      </Text>
-      <View>
-        <View
-          style={
-            [
-              {
-                "alignItems": "center",
-                "borderRadius": 3,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 2,
-                "paddingBottom": 5,
-                "paddingLeft": 10,
-                "paddingRight": 10,
-                "paddingTop": 5,
-              },
-              {
-                "backgroundColor": "rgb(0, 122, 255)",
-              },
-            ]
-          }
-          tooltip="This component is a part of React Native Windows core. No additional library must be added in order to have access to this component in a React Native Windows project."
-        >
-          <Text
-            style={
-              [
-                {
-                  "fontSize": 15,
-                  "fontWeight": "400",
-                  "paddingRight": 4,
-                },
-                {
-                  "color": {
-                    "windowsbrush": [
-                      "SystemColorHighlightTextColor",
-                    ],
-                  },
-                },
-              ]
-            }
-          >
-            Core Component
-          </Text>
-          <XamlControl
-            foreground={
-              {
-                "windowsbrush": [
-                  "SystemColorHighlightTextColor",
-                ],
-              }
-            }
-            symbol={57611}
-            type="Windows.UI.Xaml.Controls.SymbolIcon"
-          />
-        </View>
-      </View>
-    </View>
-    <Text
-      style={
-        [
-          {
-            "paddingRight": 20,
-          },
-          {
-            "color": "rgb(28, 28, 30)",
-          },
-        ]
-      }
-    >
-      A component for rendering flat lists in React Native which supports horizontal mode, headers, footers, separators, scroll loading, and more. 
-    </Text>
-    <RCTScrollView
-      style={
-        {
-          "paddingRight": 20,
-        }
-      }
-    >
-      <View>
-        <View>
-          <Text
-            accessibilityRole="header"
-            style={
-              {
-                "color": "rgb(28, 28, 30)",
-                "fontSize": 20,
-                "marginBottom": 10,
-                "marginTop": 30,
-              }
-            }
-          >
-            A simple FlatList.
-          </Text>
-          <View
-            style={
-              {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 8,
-                "borderWidth": 1,
-              }
-            }
-          >
-            <View
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "SolidBackgroundFillColorSecondaryBrush",
-                    ],
-                  },
-                  "padding": 15,
-                }
-              }
-            >
-              <RCTScrollView
-                data={
-                  [
-                    {
-                      "id": "0",
-                      "title": "Item 1",
-                    },
-                    {
-                      "id": "1",
-                      "title": "Item 2",
-                    },
-                    {
-                      "id": "2",
-                      "title": "Item 3",
-                    },
-                    {
-                      "id": "3",
-                      "title": "Item 4",
-                    },
-                    {
-                      "id": "4",
-                      "title": "Item 5",
-                    },
-                  ]
-                }
-                getItem={[Function]}
-                getItemCount={[Function]}
-                keyExtractor={[Function]}
-                onContentSizeChange={[Function]}
-                onLayout={[Function]}
-                onMomentumScrollBegin={[Function]}
-                onMomentumScrollEnd={[Function]}
-                onScroll={[Function]}
-                onScrollBeginDrag={[Function]}
-                onScrollEndDrag={[Function]}
-                removeClippedSubviews={false}
-                renderItem={[Function]}
-                scrollEventThrottle={0.0001}
-                stickyHeaderIndices={[]}
-                viewabilityConfigCallbackPairs={[]}
-              >
-                <View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 1
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 2
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 3
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 4
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 5
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityLabel="Source code"
-              accessibilityRole="none"
-              accessible={true}
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "CardBackgroundFillColorDefaultBrush",
-                    ],
-                  },
-                  "borderColor": "rgb(216, 216, 216)",
-                  "borderTopWidth": 1,
-                  "borderWidth": 0,
-                  "padding": 12,
-                }
-              }
-            >
-              <View
-                style={
-                  {
-                    "backgroundColor": "transparent",
-                    "flexGrow": 1,
-                    "padding": 5,
-                  }
-                }
-              >
-                <Text
-                  selectable={true}
-                  style={
-                    {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemControlPageTextBaseMediumBrush",
-                        ],
-                      },
-                      "fontFamily": "Consolas",
-                    }
-                  }
-                >
-                  <Text>
-                    &lt;FlatList
-  data={Data}
-  renderItem={renderItem}
-  keyExtractor={
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text>
-                      (
-                    </Text>
-                    <Text
-                      style={{}}
-                    >
-                      <Text>
-                        item
-                      </Text>
-                    </Text>
-                    <Text>
-                      ) =&gt;
-                    </Text>
-                  </Text>
-                  <Text>
-                     item.id}/&gt;
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  {
-                    "position": "absolute",
-                    "right": 12,
-                    "top": 12,
-                  }
-                }
-              >
-                <View
-                  accessibilityLabel="Copy to clipboard"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": undefined,
-                      "expanded": undefined,
-                      "multiselectable": undefined,
-                      "required": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  disabled={false}
-                  focusable={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "backgroundColor": {
-                        "windowsbrush": [
-                          "ControlFillColorDefaultBrush",
-                        ],
-                      },
-                      "borderColor": {
-                        "windowsbrush": [
-                          "ControlStrokeColorDefaultBrush",
-                        ],
-                      },
-                      "borderRadius": 8,
-                      "borderWidth": 1,
-                      "padding": 6,
-                    }
-                  }
-                  tooltip="Copy to clipboard"
-                >
-                  <Text
-                    accessible={false}
-                    style={
-                      {
-                        "color": {
-                          "windowsbrush": [
-                            "TextControlForeground",
-                          ],
-                        },
-                        "fontFamily": "Segoe MDL2 Assets",
-                        "fontSize": 16,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View>
-          <Text
-            accessibilityRole="header"
-            style={
-              {
-                "color": "rgb(28, 28, 30)",
-                "fontSize": 20,
-                "marginBottom": 10,
-                "marginTop": 30,
-              }
-            }
-          >
-            A FlatList with header and footer.
-          </Text>
-          <View
-            style={
-              {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 8,
-                "borderWidth": 1,
-              }
-            }
-          >
-            <View
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "SolidBackgroundFillColorSecondaryBrush",
-                    ],
-                  },
-                  "padding": 15,
-                }
-              }
-            >
-              <RCTScrollView
-                ListFooterComponent={
-                  <Text
-                    style={
-                      {
-                        "color": "rgb(28, 28, 30)",
-                        "fontStyle": "italic",
-                      }
-                    }
-                  >
-                    This is a footer at the end of the list.
-                  </Text>
-                }
-                ListHeaderComponent={
-                  <Text
-                    style={
-                      {
-                        "color": "rgb(28, 28, 30)",
-                        "fontStyle": "italic",
-                      }
-                    }
-                  >
-                    This is a header at the start of the list.
-                  </Text>
-                }
-                data={
-                  [
-                    {
-                      "id": "0",
-                      "title": "Item 1",
-                    },
-                    {
-                      "id": "1",
-                      "title": "Item 2",
-                    },
-                    {
-                      "id": "2",
-                      "title": "Item 3",
-                    },
-                    {
-                      "id": "3",
-                      "title": "Item 4",
-                    },
-                    {
-                      "id": "4",
-                      "title": "Item 5",
-                    },
-                  ]
-                }
-                getItem={[Function]}
-                getItemCount={[Function]}
-                keyExtractor={[Function]}
-                onContentSizeChange={[Function]}
-                onLayout={[Function]}
-                onMomentumScrollBegin={[Function]}
-                onMomentumScrollEnd={[Function]}
-                onScroll={[Function]}
-                onScrollBeginDrag={[Function]}
-                onScrollEndDrag={[Function]}
-                removeClippedSubviews={false}
-                renderItem={[Function]}
-                scrollEventThrottle={0.0001}
-                stickyHeaderIndices={[]}
-                viewabilityConfigCallbackPairs={[]}
-              >
-                <View>
-                  <View
-                    collapsable={false}
-                    onLayout={[Function]}
-                  >
-                    <Text
-                      style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                          "fontStyle": "italic",
-                        }
-                      }
-                    >
-                      This is a header at the start of the list.
-                    </Text>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 1
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 2
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 3
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 4
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 5
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onLayout={[Function]}
-                  >
-                    <Text
-                      style={
-                        {
-                          "color": "rgb(28, 28, 30)",
-                          "fontStyle": "italic",
-                        }
-                      }
-                    >
-                      This is a footer at the end of the list.
-                    </Text>
-                  </View>
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityLabel="Source code"
-              accessibilityRole="none"
-              accessible={true}
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "CardBackgroundFillColorDefaultBrush",
-                    ],
-                  },
-                  "borderColor": "rgb(216, 216, 216)",
-                  "borderTopWidth": 1,
-                  "borderWidth": 0,
-                  "padding": 12,
-                }
-              }
-            >
-              <View
-                style={
-                  {
-                    "backgroundColor": "transparent",
-                    "flexGrow": 1,
-                    "padding": 5,
-                  }
-                }
-              >
-                <Text
-                  selectable={true}
-                  style={
-                    {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemControlPageTextBaseMediumBrush",
-                        ],
-                      },
-                      "fontFamily": "Consolas",
-                    }
-                  }
-                >
-                  <Text>
-                    &lt;FlatList
-  data={Data}
-  renderItem={renderItem}
-  keyExtractor={
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text>
-                      (
-                    </Text>
-                    <Text
-                      style={{}}
-                    >
-                      <Text>
-                        item
-                      </Text>
-                    </Text>
-                    <Text>
-                      ) =&gt;
-                    </Text>
-                  </Text>
-                  <Text>
-                     item.id}
-  ListHeaderComponent={
-    
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text
-                      style={
-                        {
-                          "color": "#0000FF",
-                        }
-                      }
-                    >
-                      <Text>
-                        &lt;
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": "#A31515",
-                          }
-                        }
-                      >
-                        <Text>
-                          Text
-                        </Text>
-                      </Text>
-                      <Text>
-                         
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": {
-                              "windowsbrush": [
-                                "SystemControlPageTextBaseMediumBrush",
-                              ],
-                            },
-                          }
-                        }
-                      >
-                        <Text>
-                          style
-                        </Text>
-                      </Text>
-                      <Text>
-                        =
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": "#0000FF",
-                          }
-                        }
-                      >
-                        <Text>
-                          {{fontStyle:
-                        </Text>
-                      </Text>
-                      <Text>
-                         '
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": {
-                              "windowsbrush": [
-                                "SystemControlPageTextBaseMediumBrush",
-                              ],
-                            },
-                          }
-                        }
-                      >
-                        <Text>
-                          italic
-                        </Text>
-                      </Text>
-                      <Text>
-                        '}}&gt;
-                      </Text>
-                    </Text>
-                    <Text>
-                      
-      This is a header at the start of the list.
-    
-                    </Text>
-                    <Text
-                      style={
-                        {
-                          "color": "#0000FF",
-                        }
-                      }
-                    >
-                      <Text>
-                        &lt;/
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": "#A31515",
-                          }
-                        }
-                      >
-                        <Text>
-                          Text
-                        </Text>
-                      </Text>
-                      <Text>
-                        &gt;
-                      </Text>
-                    </Text>
-                  </Text>
-                  <Text>
-                    
-  }
-  ListFooterComponent={
-    
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text
-                      style={
-                        {
-                          "color": "#0000FF",
-                        }
-                      }
-                    >
-                      <Text>
-                        &lt;
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": "#A31515",
-                          }
-                        }
-                      >
-                        <Text>
-                          Text
-                        </Text>
-                      </Text>
-                      <Text>
-                         
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": {
-                              "windowsbrush": [
-                                "SystemControlPageTextBaseMediumBrush",
-                              ],
-                            },
-                          }
-                        }
-                      >
-                        <Text>
-                          style
-                        </Text>
-                      </Text>
-                      <Text>
-                        =
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": "#0000FF",
-                          }
-                        }
-                      >
-                        <Text>
-                          {{fontStyle:
-                        </Text>
-                      </Text>
-                      <Text>
-                         '
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": {
-                              "windowsbrush": [
-                                "SystemControlPageTextBaseMediumBrush",
-                              ],
-                            },
-                          }
-                        }
-                      >
-                        <Text>
-                          italic
-                        </Text>
-                      </Text>
-                      <Text>
-                        '}}&gt;
-                      </Text>
-                    </Text>
-                    <Text>
-                      
-      This is a footer at the end of the list.
-    
-                    </Text>
-                    <Text
-                      style={
-                        {
-                          "color": "#0000FF",
-                        }
-                      }
-                    >
-                      <Text>
-                        &lt;/
-                      </Text>
-                      <Text
-                        style={
-                          {
-                            "color": "#A31515",
-                          }
-                        }
-                      >
-                        <Text>
-                          Text
-                        </Text>
-                      </Text>
-                      <Text>
-                        &gt;
-                      </Text>
-                    </Text>
-                  </Text>
-                  <Text>
-                    
-  }/&gt;
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  {
-                    "position": "absolute",
-                    "right": 12,
-                    "top": 12,
-                  }
-                }
-              >
-                <View
-                  accessibilityLabel="Copy to clipboard"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": undefined,
-                      "expanded": undefined,
-                      "multiselectable": undefined,
-                      "required": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  disabled={false}
-                  focusable={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "backgroundColor": {
-                        "windowsbrush": [
-                          "ControlFillColorDefaultBrush",
-                        ],
-                      },
-                      "borderColor": {
-                        "windowsbrush": [
-                          "ControlStrokeColorDefaultBrush",
-                        ],
-                      },
-                      "borderRadius": 8,
-                      "borderWidth": 1,
-                      "padding": 6,
-                    }
-                  }
-                  tooltip="Copy to clipboard"
-                >
-                  <Text
-                    accessible={false}
-                    style={
-                      {
-                        "color": {
-                          "windowsbrush": [
-                            "TextControlForeground",
-                          ],
-                        },
-                        "fontFamily": "Segoe MDL2 Assets",
-                        "fontSize": 16,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View>
-          <Text
-            accessibilityRole="header"
-            style={
-              {
-                "color": "rgb(28, 28, 30)",
-                "fontSize": 20,
-                "marginBottom": 10,
-                "marginTop": 30,
-              }
-            }
-          >
-            An inverted order FlatList with horizontal layout.
-          </Text>
-          <View
-            style={
-              {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 8,
-                "borderWidth": 1,
-              }
-            }
-          >
-            <View
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "SolidBackgroundFillColorSecondaryBrush",
-                    ],
-                  },
-                  "padding": 15,
-                }
-              }
-            >
-              <RCTScrollView
-                data={
-                  [
-                    {
-                      "id": "0",
-                      "title": "Item 1",
-                    },
-                    {
-                      "id": "1",
-                      "title": "Item 2",
-                    },
-                    {
-                      "id": "2",
-                      "title": "Item 3",
-                    },
-                    {
-                      "id": "3",
-                      "title": "Item 4",
-                    },
-                    {
-                      "id": "4",
-                      "title": "Item 5",
-                    },
-                  ]
-                }
-                getItem={[Function]}
-                getItemCount={[Function]}
-                horizontal={true}
-                invertStickyHeaders={true}
-                inverted={true}
-                isInvertedVirtualizedList={true}
-                keyExtractor={[Function]}
-                onContentSizeChange={[Function]}
-                onLayout={[Function]}
-                onMomentumScrollBegin={[Function]}
-                onMomentumScrollEnd={[Function]}
-                onScroll={[Function]}
-                onScrollBeginDrag={[Function]}
-                onScrollEndDrag={[Function]}
-                removeClippedSubviews={false}
-                renderItem={[Function]}
-                scrollEventThrottle={0.0001}
-                stickyHeaderIndices={[]}
-                style={
-                  [
-                    {
-                      "transform": [
-                        {
-                          "scaleX": -1,
-                        },
-                      ],
-                    },
-                    undefined,
-                  ]
-                }
-                viewabilityConfigCallbackPairs={[]}
-              >
-                <View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={
-                      [
-                        {
-                          "flexDirection": "row-reverse",
-                        },
-                        {
-                          "transform": [
-                            {
-                              "scaleX": -1,
-                            },
-                          ],
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 1
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={
-                      [
-                        {
-                          "flexDirection": "row-reverse",
-                        },
-                        {
-                          "transform": [
-                            {
-                              "scaleX": -1,
-                            },
-                          ],
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 2
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={
-                      [
-                        {
-                          "flexDirection": "row-reverse",
-                        },
-                        {
-                          "transform": [
-                            {
-                              "scaleX": -1,
-                            },
-                          ],
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 3
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={
-                      [
-                        {
-                          "flexDirection": "row-reverse",
-                        },
-                        {
-                          "transform": [
-                            {
-                              "scaleX": -1,
-                            },
-                          ],
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 4
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={
-                      [
-                        {
-                          "flexDirection": "row-reverse",
-                        },
-                        {
-                          "transform": [
-                            {
-                              "scaleX": -1,
-                            },
-                          ],
-                        },
-                      ]
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 5
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityLabel="Source code"
-              accessibilityRole="none"
-              accessible={true}
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "CardBackgroundFillColorDefaultBrush",
-                    ],
-                  },
-                  "borderColor": "rgb(216, 216, 216)",
-                  "borderTopWidth": 1,
-                  "borderWidth": 0,
-                  "padding": 12,
-                }
-              }
-            >
-              <View
-                style={
-                  {
-                    "backgroundColor": "transparent",
-                    "flexGrow": 1,
-                    "padding": 5,
-                  }
-                }
-              >
-                <Text
-                  selectable={true}
-                  style={
-                    {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemControlPageTextBaseMediumBrush",
-                        ],
-                      },
-                      "fontFamily": "Consolas",
-                    }
-                  }
-                >
-                  <Text>
-                    &lt;FlatList
-  data={Data}
-  renderItem={renderItem}
-  keyExtractor={
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text>
-                      (
-                    </Text>
-                    <Text
-                      style={{}}
-                    >
-                      <Text>
-                        item
-                      </Text>
-                    </Text>
-                    <Text>
-                      ) =&gt;
-                    </Text>
-                  </Text>
-                  <Text>
-                     item.id}
-  horizontal={
-                  </Text>
-                  <Text
-                    style={
-                      {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      true
-                    </Text>
-                  </Text>
-                  <Text>
-                    }
-  inverted={
-                  </Text>
-                  <Text
-                    style={
-                      {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      true
-                    </Text>
-                  </Text>
-                  <Text>
-                    }/&gt;
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  {
-                    "position": "absolute",
-                    "right": 12,
-                    "top": 12,
-                  }
-                }
-              >
-                <View
-                  accessibilityLabel="Copy to clipboard"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": undefined,
-                      "expanded": undefined,
-                      "multiselectable": undefined,
-                      "required": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  disabled={false}
-                  focusable={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "backgroundColor": {
-                        "windowsbrush": [
-                          "ControlFillColorDefaultBrush",
-                        ],
-                      },
-                      "borderColor": {
-                        "windowsbrush": [
-                          "ControlStrokeColorDefaultBrush",
-                        ],
-                      },
-                      "borderRadius": 8,
-                      "borderWidth": 1,
-                      "padding": 6,
-                    }
-                  }
-                  tooltip="Copy to clipboard"
-                >
-                  <Text
-                    accessible={false}
-                    style={
-                      {
-                        "color": {
-                          "windowsbrush": [
-                            "TextControlForeground",
-                          ],
-                        },
-                        "fontFamily": "Segoe MDL2 Assets",
-                        "fontSize": 16,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View>
-          <Text
-            accessibilityRole="header"
-            style={
-              {
-                "color": "rgb(28, 28, 30)",
-                "fontSize": 20,
-                "marginBottom": 10,
-                "marginTop": 30,
-              }
-            }
-          >
-            A FlatList inside of a fixed-height view.
-          </Text>
-          <View
-            style={
-              {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 8,
-                "borderWidth": 1,
-              }
-            }
-          >
-            <View
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "SolidBackgroundFillColorSecondaryBrush",
-                    ],
-                  },
-                  "padding": 15,
-                }
-              }
-            >
-              <RCTScrollView
-                data={
-                  [
-                    {
-                      "id": "0",
-                      "title": "Item 1",
-                    },
-                    {
-                      "id": "1",
-                      "title": "Item 2",
-                    },
-                    {
-                      "id": "2",
-                      "title": "Item 3",
-                    },
-                    {
-                      "id": "3",
-                      "title": "Item 4",
-                    },
-                    {
-                      "id": "4",
-                      "title": "Item 5",
-                    },
-                  ]
-                }
-                getItem={[Function]}
-                getItemCount={[Function]}
-                initialNumToRender={3}
-                keyExtractor={[Function]}
-                onContentSizeChange={[Function]}
-                onLayout={[Function]}
-                onMomentumScrollBegin={[Function]}
-                onMomentumScrollEnd={[Function]}
-                onScroll={[Function]}
-                onScrollBeginDrag={[Function]}
-                onScrollEndDrag={[Function]}
-                removeClippedSubviews={false}
-                renderItem={[Function]}
-                scrollEventThrottle={0.0001}
-                stickyHeaderIndices={[]}
-                style={
-                  {
-                    "height": 50,
-                  }
-                }
-                viewabilityConfigCallbackPairs={[]}
-              >
-                <View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 1
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 2
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "padding": 5,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          {
-                            "color": "rgb(28, 28, 30)",
-                          }
-                        }
-                      >
-                        Item 3
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      {
-                        "height": 0,
-                      }
-                    }
-                  />
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityLabel="Source code"
-              accessibilityRole="none"
-              accessible={true}
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "CardBackgroundFillColorDefaultBrush",
-                    ],
-                  },
-                  "borderColor": "rgb(216, 216, 216)",
-                  "borderTopWidth": 1,
-                  "borderWidth": 0,
-                  "padding": 12,
-                }
-              }
-            >
-              <View
-                style={
-                  {
-                    "backgroundColor": "transparent",
-                    "flexGrow": 1,
-                    "padding": 5,
-                  }
-                }
-              >
-                <Text
-                  selectable={true}
-                  style={
-                    {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemControlPageTextBaseMediumBrush",
-                        ],
-                      },
-                      "fontFamily": "Consolas",
-                    }
-                  }
-                >
-                  <Text>
-                    &lt;FlatList
-  data={Data}
-  renderItem={renderItem}
-  keyExtractor={
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text>
-                      (
-                    </Text>
-                    <Text
-                      style={{}}
-                    >
-                      <Text>
-                        item
-                      </Text>
-                    </Text>
-                    <Text>
-                      ) =&gt;
-                    </Text>
-                  </Text>
-                  <Text>
-                     item.id}
-  initialNumToRender={
-                  </Text>
-                  <Text
-                    style={
-                      {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      3
-                    </Text>
-                  </Text>
-                  <Text>
-                    }
-  style={{
-                  </Text>
-                  <Text
-                    style={
-                      {
-                        "color": {
-                          "windowsbrush": [
-                            "SystemControlPageTextBaseMediumBrush",
-                          ],
-                        },
-                      }
-                    }
-                  >
-                    <Text>
-                      height
-                    </Text>
-                  </Text>
-                  <Text>
-                    : 
-                  </Text>
-                  <Text
-                    style={
-                      {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      50
-                    </Text>
-                  </Text>
-                  <Text>
-                    }}/&gt;
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  {
-                    "position": "absolute",
-                    "right": 12,
-                    "top": 12,
-                  }
-                }
-              >
-                <View
-                  accessibilityLabel="Copy to clipboard"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": undefined,
-                      "expanded": undefined,
-                      "multiselectable": undefined,
-                      "required": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  disabled={false}
-                  focusable={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "backgroundColor": {
-                        "windowsbrush": [
-                          "ControlFillColorDefaultBrush",
-                        ],
-                      },
-                      "borderColor": {
-                        "windowsbrush": [
-                          "ControlStrokeColorDefaultBrush",
-                        ],
-                      },
-                      "borderRadius": 8,
-                      "borderWidth": 1,
-                      "padding": 6,
-                    }
-                  }
-                  tooltip="Copy to clipboard"
-                >
-                  <Text
-                    accessible={false}
-                    style={
-                      {
-                        "color": {
-                          "windowsbrush": [
-                            "TextControlForeground",
-                          ],
-                        },
-                        "fontFamily": "Segoe MDL2 Assets",
-                        "fontSize": 16,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View>
-          <Text
-            accessibilityRole="header"
-            style={
-              {
-                "color": "rgb(28, 28, 30)",
-                "fontSize": 20,
-                "marginBottom": 10,
-                "marginTop": 30,
-              }
-            }
-          >
-            A mutli-column FlatList.
-          </Text>
-          <View
-            style={
-              {
-                "borderColor": "rgb(216, 216, 216)",
-                "borderRadius": 8,
-                "borderWidth": 1,
-              }
-            }
-          >
-            <View
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "SolidBackgroundFillColorSecondaryBrush",
-                    ],
-                  },
-                  "padding": 15,
-                }
-              }
-            >
-              <RCTScrollView
-                data={
-                  [
-                    {
-                      "id": "0",
-                      "title": "Item 1",
-                    },
-                    {
-                      "id": "1",
-                      "title": "Item 2",
-                    },
-                    {
-                      "id": "2",
-                      "title": "Item 3",
-                    },
-                    {
-                      "id": "3",
-                      "title": "Item 4",
-                    },
-                    {
-                      "id": "4",
-                      "title": "Item 5",
-                    },
-                  ]
-                }
-                getItem={[Function]}
-                getItemCount={[Function]}
-                keyExtractor={[Function]}
-                onContentSizeChange={[Function]}
-                onLayout={[Function]}
-                onMomentumScrollBegin={[Function]}
-                onMomentumScrollEnd={[Function]}
-                onScroll={[Function]}
-                onScrollBeginDrag={[Function]}
-                onScrollEndDrag={[Function]}
-                removeClippedSubviews={false}
-                renderItem={[Function]}
-                scrollEventThrottle={0.0001}
-                stickyHeaderIndices={[]}
-                viewabilityConfigCallbackPairs={[]}
-              >
-                <View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "flexDirection": "row",
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          {
-                            "padding": 5,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            {
-                              "color": "rgb(28, 28, 30)",
-                            }
-                          }
-                        >
-                          Item 1
-                        </Text>
-                      </View>
-                      <View
-                        style={
-                          {
-                            "padding": 5,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            {
-                              "color": "rgb(28, 28, 30)",
-                            }
-                          }
-                        >
-                          Item 2
-                        </Text>
-                      </View>
-                      <View
-                        style={
-                          {
-                            "padding": 5,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            {
-                              "color": "rgb(28, 28, 30)",
-                            }
-                          }
-                        >
-                          Item 3
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    onFocusCapture={[Function]}
-                    onLayout={[Function]}
-                    style={null}
-                  >
-                    <View
-                      style={
-                        {
-                          "flexDirection": "row",
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          {
-                            "padding": 5,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            {
-                              "color": "rgb(28, 28, 30)",
-                            }
-                          }
-                        >
-                          Item 4
-                        </Text>
-                      </View>
-                      <View
-                        style={
-                          {
-                            "padding": 5,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            {
-                              "color": "rgb(28, 28, 30)",
-                            }
-                          }
-                        >
-                          Item 5
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityLabel="Source code"
-              accessibilityRole="none"
-              accessible={true}
-              style={
-                {
-                  "backgroundColor": {
-                    "windowsbrush": [
-                      "CardBackgroundFillColorDefaultBrush",
-                    ],
-                  },
-                  "borderColor": "rgb(216, 216, 216)",
-                  "borderTopWidth": 1,
-                  "borderWidth": 0,
-                  "padding": 12,
-                }
-              }
-            >
-              <View
-                style={
-                  {
-                    "backgroundColor": "transparent",
-                    "flexGrow": 1,
-                    "padding": 5,
-                  }
-                }
-              >
-                <Text
-                  selectable={true}
-                  style={
-                    {
-                      "color": {
-                        "windowsbrush": [
-                          "SystemControlPageTextBaseMediumBrush",
-                        ],
-                      },
-                      "fontFamily": "Consolas",
-                    }
-                  }
-                >
-                  <Text>
-                    &lt;FlatList
-  data={Data}
-  renderItem={renderItem}
-  keyExtractor={
-                  </Text>
-                  <Text
-                    style={{}}
-                  >
-                    <Text>
-                      (
-                    </Text>
-                    <Text
-                      style={{}}
-                    >
-                      <Text>
-                        item
-                      </Text>
-                    </Text>
-                    <Text>
-                      ) =&gt;
-                    </Text>
-                  </Text>
-                  <Text>
-                     item.id}
-  numColumns={
-                  </Text>
-                  <Text
-                    style={
-                      {
-                        "color": "#FF0000",
-                      }
-                    }
-                  >
-                    <Text>
-                      3
-                    </Text>
-                  </Text>
-                  <Text>
-                    }/&gt;
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  {
-                    "position": "absolute",
-                    "right": 12,
-                    "top": 12,
-                  }
-                }
-              >
-                <View
-                  accessibilityLabel="Copy to clipboard"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": undefined,
-                      "expanded": undefined,
-                      "multiselectable": undefined,
-                      "required": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  disabled={false}
-                  focusable={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "backgroundColor": {
-                        "windowsbrush": [
-                          "ControlFillColorDefaultBrush",
-                        ],
-                      },
-                      "borderColor": {
-                        "windowsbrush": [
-                          "ControlStrokeColorDefaultBrush",
-                        ],
-                      },
-                      "borderRadius": 8,
-                      "borderWidth": 1,
-                      "padding": 6,
-                    }
-                  }
-                  tooltip="Copy to clipboard"
-                >
-                  <Text
-                    accessible={false}
-                    style={
-                      {
-                        "color": {
-                          "windowsbrush": [
-                            "TextControlForeground",
-                          ],
-                        },
-                        "fontFamily": "Segoe MDL2 Assets",
-                        "fontSize": 16,
-                      }
-                    }
-                  >
-                    
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View
-          style={
-            {
-              "flexDirection": "column",
-              "marginRight": 90,
-            }
-          }
-        >
-          <View
-            style={
-              {
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-              }
-            }
-          >
-            <View
-              style={
-                {
-                  "alignItems": "flex-start",
-                  "marginBottom": 10,
-                  "marginRight": 30,
-                  "marginTop": 30,
-                }
-              }
-            >
-              <Text
-                accessibilityRole="header"
-                style={
-                  {
-                    "color": "rgb(28, 28, 30)",
-                    "fontSize": 20,
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                View page code on Github
-              </Text>
-              <XamlControl
-                content={
-                  {
-                    "string": "Source Code",
-                  }
-                }
-                navigateUri="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/FlatListExamplePage.tsx"
-                type="Windows.UI.Xaml.Controls.HyperlinkButton"
-              />
-            </View>
-            <View
-              style={
-                {
-                  "alignItems": "flex-start",
-                  "marginBottom": 10,
-                  "marginRight": 30,
-                  "marginTop": 30,
-                }
-              }
-            >
-              <Text
-                accessibilityRole="header"
-                style={
-                  {
-                    "color": "rgb(28, 28, 30)",
-                    "fontSize": 20,
-                    "marginBottom": 10,
-                  }
-                }
-              >
-                Feedback
-              </Text>
-              <XamlControl
-                content={
-                  {
-                    "string": "Send feedback about this page",
-                  }
-                }
-                navigateUri="https://github.com/microsoft/react-native-gallery/issues/new"
-                type="Windows.UI.Xaml.Controls.HyperlinkButton"
-              />
-            </View>
-          </View>
-          <View
-            style={
-              {
-                "alignItems": "flex-start",
-                "marginBottom": 10,
-                "marginRight": 30,
-                "marginTop": 30,
-              }
-            }
-          >
-            <Text
-              accessibilityRole="header"
-              style={
-                {
-                  "color": "rgb(28, 28, 30)",
-                  "fontSize": 20,
-                  "marginBottom": 10,
-                }
-              }
-            >
-              Documentation
-            </Text>
-            <XamlControl
-              content={
-                {
-                  "string": "Flat List",
-                }
-              }
-              navigateUri="https://reactnative.dev/docs/flatlist"
-              type="Windows.UI.Xaml.Controls.HyperlinkButton"
-            />
-            <XamlControl
-              content={
-                {
-                  "string": "Flat List Source Code",
-                }
-              }
-              navigateUri="https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js"
-              type="Windows.UI.Xaml.Controls.HyperlinkButton"
-            />
-          </View>
-        </View>
-      </View>
-    </RCTScrollView>
-  </View>
-</View>
-`;
+exports[`FlatList Example Page 1`] = `null`;
 
 exports[`Flyout Example Page 1`] = `
 <View
@@ -12020,6 +9509,7 @@ exports[`Flyout Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -13014,6 +10504,7 @@ exports[`Flyout Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -13809,6 +11300,7 @@ exports[`Flyout Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -14606,6 +12098,7 @@ exports[`Flyout Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -15403,6 +12896,7 @@ exports[`Flyout Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -15625,6 +13119,7 @@ exports[`Hello Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -15944,6 +13439,7 @@ exports[`Hello Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -16207,6 +13703,7 @@ exports[`Hello Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -16321,6 +13818,7 @@ exports[`Hello Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -16584,6 +14082,7 @@ exports[`Hello Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -16698,6 +14197,7 @@ exports[`Hello Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -16975,6 +14475,7 @@ exports[`Hello Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -17197,6 +14698,7 @@ exports[`Image Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -17683,6 +15185,7 @@ exports[`Image Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -17980,6 +15483,7 @@ exports[`Image Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -18275,6 +15779,7 @@ exports[`Image Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -18603,6 +16108,7 @@ exports[`Image Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -19008,6 +16514,7 @@ exports[`Image Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -19239,6 +16746,7 @@ exports[`Networking Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -20610,6 +18118,7 @@ exports[`Networking Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -20752,6 +18261,7 @@ exports[`Networking Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -22806,6 +20316,7 @@ useEffect(
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -23019,6 +20530,7 @@ exports[`Picker Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -23788,6 +21300,7 @@ exports[`Picker Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -24367,6 +21880,7 @@ exports[`Picker Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -24949,6 +22463,7 @@ exports[`Picker Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -25171,6 +22686,7 @@ exports[`Popup Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -25576,6 +23092,7 @@ exports[`Popup Example Page 1`] = `
                         "disabled": undefined,
                         "expanded": undefined,
                         "multiselectable": undefined,
+                        "readOnly": undefined,
                         "required": undefined,
                         "selected": undefined,
                       }
@@ -26192,6 +23709,7 @@ exports[`Popup Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -26397,6 +23915,7 @@ exports[`Popup Example Page 1`] = `
                         "disabled": undefined,
                         "expanded": undefined,
                         "multiselectable": undefined,
+                        "readOnly": undefined,
                         "required": undefined,
                         "selected": undefined,
                       }
@@ -27082,6 +24601,7 @@ exports[`Popup Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -27288,6 +24808,7 @@ exports[`Popup Example Page 1`] = `
                         "disabled": undefined,
                         "expanded": undefined,
                         "multiselectable": undefined,
+                        "readOnly": undefined,
                         "required": undefined,
                         "selected": undefined,
                       }
@@ -27942,6 +25463,7 @@ exports[`Popup Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -28146,6 +25668,7 @@ exports[`Popup Example Page 1`] = `
                         "disabled": undefined,
                         "expanded": undefined,
                         "multiselectable": undefined,
+                        "readOnly": undefined,
                         "required": undefined,
                         "selected": undefined,
                       }
@@ -28800,6 +26323,7 @@ exports[`Popup Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -29031,6 +26555,7 @@ exports[`Pressable Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -29299,6 +26824,7 @@ exports[`Pressable Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -29485,6 +27011,7 @@ exports[`Pressable Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -29598,6 +27125,7 @@ exports[`Pressable Example Page 1`] = `
                     "disabled": true,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -30057,6 +27585,7 @@ exports[`Pressable Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -30171,6 +27700,7 @@ exports[`Pressable Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -30765,6 +28295,7 @@ exports[`Pressable Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -30879,6 +28410,7 @@ exports[`Pressable Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -31367,6 +28899,7 @@ exports[`Pressable Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -31589,6 +29122,7 @@ exports[`Print Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -31860,6 +29394,7 @@ exports[`Print Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -32097,6 +29632,7 @@ exports[`Print Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -32310,6 +29846,7 @@ exports[`ProgressView Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -32662,6 +30199,7 @@ exports[`ProgressView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -32856,6 +30394,7 @@ exports[`ProgressView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -33055,6 +30594,7 @@ exports[`ProgressView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -33268,6 +30808,7 @@ exports[`SVG Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -34221,6 +31762,7 @@ exports[`SVG Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -34434,6 +31976,7 @@ exports[`ScrollView Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -34928,6 +32471,7 @@ exports[`ScrollView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -35231,6 +32775,7 @@ exports[`ScrollView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -35539,6 +33084,7 @@ exports[`ScrollView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -36220,6 +33766,7 @@ exports[`ScrollView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -36451,6 +33998,7 @@ exports[`SensitiveInfo Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -36784,6 +34332,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -36899,6 +34448,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -38254,6 +35804,7 @@ exports[`SensitiveInfo Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -38467,6 +36018,7 @@ exports[`Slider Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -38778,7 +36330,6 @@ exports[`Slider Example Page 1`] = `
               <RNCSlider
                 accessibilityLabel="Simple Example"
                 disabled={false}
-                inverted={false}
                 lowerLimit={-9007199254740991}
                 maximumValue={100}
                 minimumValue={0}
@@ -38799,9 +36350,7 @@ exports[`Slider Example Page 1`] = `
                     {},
                   ]
                 }
-                tapToSeek={false}
                 upperLimit={9007199254740991}
-                value={0}
               />
             </View>
             <View
@@ -38978,6 +36527,7 @@ exports[`Slider Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -39084,7 +36634,6 @@ exports[`Slider Example Page 1`] = `
               <RNCSlider
                 accessibilityLabel="Example"
                 disabled={false}
-                inverted={false}
                 lowerLimit={-9007199254740991}
                 maximumValue={1000}
                 minimumValue={500}
@@ -39105,9 +36654,7 @@ exports[`Slider Example Page 1`] = `
                     {},
                   ]
                 }
-                tapToSeek={false}
                 upperLimit={9007199254740991}
-                value={0}
               />
             </View>
             <View
@@ -39284,6 +36831,7 @@ exports[`Slider Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -39390,7 +36938,6 @@ exports[`Slider Example Page 1`] = `
               <RNCSlider
                 accessibilityLabel="Vertical Example"
                 disabled={false}
-                inverted={false}
                 lowerLimit={-9007199254740991}
                 maximumTrackTintColor="rgb(216, 216, 216)"
                 maximumValue={100}
@@ -39413,9 +36960,7 @@ exports[`Slider Example Page 1`] = `
                     {},
                   ]
                 }
-                tapToSeek={false}
                 upperLimit={9007199254740991}
-                value={0}
                 vertical={true}
               />
             </View>
@@ -39610,6 +37155,7 @@ exports[`Slider Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -39721,7 +37267,6 @@ exports[`Slider Example Page 1`] = `
                   }
                 }
                 disabled={true}
-                inverted={false}
                 lowerLimit={-9007199254740991}
                 maximumValue={100}
                 minimumValue={0}
@@ -39742,9 +37287,7 @@ exports[`Slider Example Page 1`] = `
                     {},
                   ]
                 }
-                tapToSeek={false}
                 upperLimit={9007199254740991}
-                value={0}
               />
             </View>
             <View
@@ -39936,6 +37479,7 @@ exports[`Slider Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -40158,6 +37702,7 @@ exports[`Switch Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -40545,6 +38090,7 @@ exports[`Switch Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -40733,6 +38279,7 @@ exports[`Switch Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -40974,6 +38521,7 @@ exports[`Switch Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -41205,6 +38753,7 @@ exports[`Text Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -41601,6 +39150,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -41864,6 +39414,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -42080,6 +39631,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -42401,6 +39953,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -42687,6 +40240,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -42950,6 +40504,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -43234,6 +40789,7 @@ exports[`Text Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -43538,6 +41094,7 @@ Here is a line
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -43769,6 +41326,7 @@ exports[`TextInput Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -44203,6 +41761,7 @@ exports[`TextInput Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -44453,6 +42012,7 @@ exports[`TextInput Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -44797,6 +42357,7 @@ exports[`TextInput Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -45062,6 +42623,7 @@ exports[`TextInput Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -45302,6 +42864,7 @@ exports[`TextToSpeech Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -45593,6 +43156,7 @@ exports[`TextToSpeech Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -45826,6 +43390,7 @@ exports[`TextToSpeech Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -46041,6 +43606,7 @@ exports[`TouchableHighlight Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -46705,6 +44271,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -47211,6 +44778,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -47738,6 +45306,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -47960,6 +45529,7 @@ exports[`TouchableOpacity Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -48227,6 +45797,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -48670,6 +46241,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -48783,6 +46355,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -49222,6 +46795,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -49335,6 +46909,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "disabled": true,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -49794,6 +47369,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -49908,6 +47484,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -50367,6 +47944,7 @@ activeOpacity={
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -50480,6 +48058,7 @@ activeOpacity={
                     "disabled": undefined,
                     "expanded": undefined,
                     "multiselectable": undefined,
+                    "readOnly": undefined,
                     "required": undefined,
                     "selected": undefined,
                   }
@@ -50981,6 +48560,7 @@ onPress={
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -51203,6 +48783,7 @@ exports[`View Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -51573,6 +49154,7 @@ exports[`View Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -51871,6 +49453,7 @@ exports[`View Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -52446,6 +50029,7 @@ exports[`View Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -53100,6 +50684,7 @@ exports[`View Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -54135,6 +51720,7 @@ exports[`View Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -54987,6 +52573,7 @@ exports[`View Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -55374,6 +52961,7 @@ style={{
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -55761,6 +53349,7 @@ style={{
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -56042,6 +53631,7 @@ style={{
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -56273,6 +53863,7 @@ exports[`WebView Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -56756,6 +54347,7 @@ exports[`WebView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -57035,6 +54627,7 @@ exports[`WebView Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -57257,6 +54850,7 @@ exports[`Xaml Example Page 1`] = `
         "disabled": undefined,
         "expanded": undefined,
         "multiselectable": undefined,
+        "readOnly": undefined,
         "required": undefined,
         "selected": undefined,
       }
@@ -57601,6 +55195,7 @@ exports[`Xaml Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -57821,6 +55416,7 @@ exports[`Xaml Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -57993,6 +55589,7 @@ exports[`Xaml Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -58468,6 +56065,7 @@ exports[`Xaml Example Page 1`] = `
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -59207,6 +56805,7 @@ You selected Option 1
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -59723,6 +57322,7 @@ You selected Option 1
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -59910,6 +57510,7 @@ You selected Option 1
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -60620,6 +58221,7 @@ You selected Option 1
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }
@@ -61335,6 +58937,7 @@ You selected Option 1
                       "disabled": undefined,
                       "expanded": undefined,
                       "multiselectable": undefined,
+                      "readOnly": undefined,
                       "required": undefined,
                       "selected": undefined,
                     }

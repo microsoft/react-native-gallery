@@ -47,28 +47,41 @@ function Control() {
   return <View />;
 }
 
-test('Control', () => {
-  const tree = create(<Control />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Control', async () => {
+  await act(async () => {
+    tree = create(<Control />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
-test('Button Example Page', () => {
-  const tree = create(<ButtonExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
-
-test('CheckBox Example Page', () => {
-  const tree = create(<CheckBoxExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
-
-test('Clipboard Example Page', () => {
-  const tree = create(<ClipboardExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Button Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<ButtonExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Config Example Page', () => {
-  const tree = create(<ConfigExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('CheckBox Example Page', async () => {
+  await act(async () => {
+    tree = create(<CheckBoxExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Clipboard Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<ClipboardExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Config Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<ConfigExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 test('DatePicker Example Page', async () => {
@@ -104,19 +117,28 @@ test('Expander Example Page', async () => {
   expect(tree.toJSON()).toMatchSnapshot();
 });*/
 
-test('FlatList Example Page', () => {
-  const tree = create(<FlatListExamplePage />).toJSON();
+test('FlatList Example Page', async() => {
+  let tree;
+  await act(() => {
+    tree = create(<FlatListExamplePage />);
+  });
   expect(tree).toMatchSnapshot();
 });
 
-test('Flyout Example Page', () => {
-  const tree = create(<FlyoutExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Flyout Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<FlyoutExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Image Example Page', () => {
-  const tree = create(<ImageExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Image Example Page', async () => {
+  let tree;
+  await act(() => {
+    tree = create(<ImageExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 test('Networking Example Page', async () => {
@@ -127,29 +149,44 @@ test('Networking Example Page', async () => {
   expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Picker Example Page', () => {
-  const tree = create(<PickerExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Picker Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<PickerExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Popup Example Page', () => {
-  const tree = create(<PopupExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Popup Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<PopupExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Pressable Example Page', () => {
-  const tree = create(<PressableExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Pressable Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<PressableExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Print Example Page', () => {
-  const tree = create(<PrintExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Print Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<PrintExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('ProgressView Example Page', () => {
-  const tree = create(<ProgressViewExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('ProgressView Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<ProgressViewExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 /*test('Radio Buttons Example Page', () => {
@@ -157,14 +194,20 @@ test('ProgressView Example Page', () => {
   expect(tree).toMatchSnapshot();
 });*/
 
-test('ScrollView Example Page', () => {
-  const tree = create(<ScrollViewExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('ScrollView Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<ScrollViewExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('SensitiveInfo Example Page', () => {
-  const tree = create(<SensitiveInfoExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('SensitiveInfo Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<SensitiveInfoExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 /*test('SketchCanvas Example Page', () => {
@@ -172,29 +215,44 @@ test('SensitiveInfo Example Page', () => {
   expect(tree).toMatchSnapshot();
 });*/
 
-test('Slider Example Page', () => {
-  const tree = create(<SliderExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Slider Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<SliderExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('SVG Example Page', () => {
-  const tree = create(<SvgExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('SVG Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<SvgExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Switch Example Page', () => {
-  const tree = create(<SwitchExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Switch Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<SwitchExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Text Example Page', () => {
-  const tree = create(<TextExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Text Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<TextExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('TextInput Example Page', () => {
-  const tree = create(<TextInputExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('TextInput Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<TextInputExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 test('TimePicker Example Page', async () => {
@@ -213,14 +271,20 @@ test('TextToSpeech Example Page', async () => {
   expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('TouchableHighlight Example Page', () => {
-  const tree = create(<TouchableHighlightExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('TouchableHighlight Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<TouchableHighlightExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('TouchableOpacity Example Page', () => {
-  const tree = create(<TouchableOpacityExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('TouchableOpacity Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<TouchableOpacityExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 /*test('TrackPlayer Example Page', () => {
@@ -228,22 +292,34 @@ test('TouchableOpacity Example Page', () => {
   expect(tree).toMatchSnapshot();
 });*/
 
-test('View Example Page', () => {
-  const tree = create(<ViewExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('View Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<ViewExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('WebView Example Page', () => {
-  const tree = create(<WebViewExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('WebView Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<WebViewExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Hello Example Page', () => {
-  const tree = create(<WindowsHelloExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Hello Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<WindowsHelloExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
-test('Xaml Example Page', () => {
-  const tree = create(<XamlExamplePage />).toJSON();
-  expect(tree).toMatchSnapshot();
+test('Xaml Example Page', async () => {
+  let tree;
+  await act(async () => {
+    tree = create(<XamlExamplePage />);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
