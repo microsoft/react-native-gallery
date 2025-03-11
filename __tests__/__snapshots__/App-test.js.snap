@@ -9482,8 +9482,6 @@ exports[`Expander Example Page 1`] = `
 </View>
 `;
 
-exports[`FlatList Example Page 1`] = `null`;
-
 exports[`Flyout Example Page 1`] = `
 <View
   style={

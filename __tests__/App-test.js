@@ -48,6 +48,7 @@ function Control() {
 }
 
 test('Control', async () => {
+  let tree;
   await act(async () => {
     tree = create(<Control />);
   });
@@ -62,6 +63,7 @@ test('Button Example Page', async () => {
 });
 
 test('CheckBox Example Page', async () => {
+  let tree;
   await act(async () => {
     tree = create(<CheckBoxExamplePage />);
   });
@@ -115,8 +117,9 @@ test('Expander Example Page', async () => {
     tree = create(<PermissionsExamplePage />);
   });
   expect(tree.toJSON()).toMatchSnapshot();
-});*/
+});
 
+// Issue: https://github.com/microsoft/react-native-windows/issues/13436
 test('FlatList Example Page', async() => {
   let tree;
   await act(() => {
@@ -124,6 +127,7 @@ test('FlatList Example Page', async() => {
   });
   expect(tree).toMatchSnapshot();
 });
+*/
 
 test('Flyout Example Page', async () => {
   let tree;
