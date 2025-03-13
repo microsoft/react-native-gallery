@@ -16,9 +16,10 @@ const createStyles = () =>
       flexDirection: 'row',
       width: '100%',
       height: '100%',
+      backgroundColor: PlatformColor('Background'),
     },
     navBar: {
-      backgroundColor: 'rgba(233, 233, 233, 0.47)',
+      backgroundColor: PlatformColor('Background'),
       width: 48,
       height: '100%',
       paddingBottom: 20,

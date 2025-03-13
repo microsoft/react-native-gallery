@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {
   Animated,
   Easing,
+  PlatformColor,
   Pressable,
   View,
   useAnimatedValue,
@@ -232,7 +233,7 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
                 style={{opacity: fadeAnim}}>
                 <Pressable
                   style={{
-                    backgroundColor: 'rgba(216, 216, 216, 0.5)',
+                    backgroundColor: PlatformColor('Background'),
                     maxWidth: DEFAULT_DRAWER_WIDTH,
                     height: '100%',
                     width: '100%'}}

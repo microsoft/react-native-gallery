@@ -14,7 +14,7 @@ import type {IRNGalleryExample} from '../RNGalleryList';
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: '#fdfdfd',
+      backgroundColor: PlatformColor('Background'),
       borderColor: isPressing
         ? '#5f5f5f'
         : isHovered

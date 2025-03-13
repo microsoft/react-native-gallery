@@ -19,9 +19,7 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HeaderTile.xaml#L12
       // Should use 'AcrylicInAppFillColorDefaultBrush', blocked on https://github.com/microsoft/react-native-windows/issues/8861
       // (The acrylic does work, but does not update when the theme changes)
-      backgroundColor: isHovered
-        ? '#f3f3f3'
-        : '#f9f9f9',
+      backgroundColor: PlatformColor('Background'),
       borderColor: isHovered
         ? '#b6b9bc'
         : '#b7babd',

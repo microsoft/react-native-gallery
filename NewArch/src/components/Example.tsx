@@ -10,7 +10,7 @@ const createStyles = (colors: any) =>
       marginTop: 30,
       marginBottom: 10,
       fontSize: 20,
-      color: colors.text,
+      color: PlatformColor('TextControlForeground'),
     },
     box: {
       borderRadius: 8,
@@ -19,14 +19,14 @@ const createStyles = (colors: any) =>
     },
     exampleContainer: {
       padding: 15,
-      backgroundColor: PlatformColor('SolidBackgroundFillColorSecondaryBrush'),
+      backgroundColor: PlatformColor('Background'),
     },
     codeContainer: {
       borderWidth: 0,
       borderTopWidth: 1,
       borderColor: colors.border,
       padding: 12,
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      backgroundColor: PlatformColor('Background'),
     },
   });
 

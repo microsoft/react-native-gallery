@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {PlatformColor, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   title: {
+    color: PlatformColor('TextControlForeground'),
     fontWeight: '600',
     fontSize: 28,
   },
@@ -93,7 +94,7 @@ export function Page(props: {
   //const {colors} = useTheme();
   //const isScreenFocused = useIsFocused();
   return (
-    <ScreenWrapper style={styles.container}>
+    <ScreenWrapper>
       <View style={styles.titlePane}>
         <Text accessible accessibilityRole={'header'} style={styles.title}>
           {props.title}
@@ -105,7 +106,7 @@ export function Page(props: {
       </View>
 
       {props.description && (
-        <Text style={[styles.description, {color: '#505050'}]}>
+        <Text style={[styles.description, {color: PlatformColor('TextControlForeground')}]}>
           {props.description}
         </Text>
       )}

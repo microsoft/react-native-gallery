@@ -5,6 +5,7 @@ import {
   Text,
   ScrollView,
   Image,
+  PlatformColor,
 } from 'react-native';
 import React from 'react';
 import {useTheme, useIsFocused} from './Navigation';
@@ -23,7 +24,7 @@ const createStyles = () =>
       alignSelf: 'stretch',
       height: '100%',
       alignContent: 'flex-start',
-      backgroundColor: 'rgba(216, 216, 216, 0.5)',
+      backgroundColor: PlatformColor('Background'),
     },
     scrollView: {
       paddingRight: 20,

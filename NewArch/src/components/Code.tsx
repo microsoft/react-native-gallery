@@ -5,7 +5,7 @@ import {PlatformColor, StyleSheet, Text, View} from 'react-native';
 import {ThemeContext} from '../themes/Theme';
 
 const darkColors = {
-  background: 'transparent',
+  background: PlatformColor('Background'),
   text: PlatformColor('TextFillColorPrimary'),
   comment: '#6a9955',
   keyword: '#c586c0',
@@ -19,7 +19,7 @@ const darkColors = {
 };
 
 const lightColors = {
-  background: 'transparent',
+  background: PlatformColor('Background'),
   text: PlatformColor('TextFillColorPrimary'),
   comment: '#000000',
   keyword: '#FF0000',
