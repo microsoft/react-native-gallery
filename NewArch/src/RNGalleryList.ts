@@ -28,6 +28,7 @@ import {ImageExamplePage} from './examples/ImageExamplePage';
 import {PressableExamplePage} from './examples/PressableExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
+import { ModalExamplePage } from './examples/ModalExamplePage'; // Fabric only
 // import {WebViewExamplePage} from './examples/WebViewExamplePage';
 // import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
 // import {PopupExamplePage} from './examples/PopupExamplePage';
@@ -347,6 +348,13 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/Canvas.png'),
     subtitle: 'The most fundamental component for building a UI',
     type: 'Layout',
+  },
+  {
+    key: 'Modal',
+    component: ModalExamplePage,
+    textIcon: '\uECA5',
+    subtitle: 'The most fundamental component for building a UI',
+    type: 'Dialogs & flyouts',
   },
   // {
   //   key: 'WebView',
