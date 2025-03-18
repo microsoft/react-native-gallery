@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {PlatformColor, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useTheme} from '../Navigation';
 // import {HyperlinkButton} from 'react-native-xaml';
@@ -15,7 +15,7 @@ const createStyles = (colors: any) =>
     hyperlinkTileTitle: {
       marginBottom: 10,
       fontSize: 20,
-      color: colors.text,
+      color: PlatformColor('TextControlForeground'),
     },
   });
 
