@@ -4,7 +4,7 @@ import {useTheme} from '../Navigation';
 // import {HyperlinkButton} from 'react-native-xaml';
 import { Hyperlink } from './Controls';
 
-const createStyles = (colors: any) =>
+const createStyles = () =>
   StyleSheet.create({
     hyperlinkTile: {
       marginTop: 30,
