@@ -47,12 +47,13 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
 
     return (
         <View key={status} style={{flex: 1, flexDirection: 'row', alignItems:'center', paddingBottom: 10}}>
-          {status == 'granted' ? <Button onPress={() => {}} color='#737373' title="Granted" />
+          {status == 'granted' ? <Button onPress={() => {}} color='#737373' title="Granted" onAccessibilityTap={() => {}} />
                                : <Button 
                                    onPress={() => requestPermission(perm)} 
                                    title="Request"
                                    colors={colors.primary}
-                                   disabled={status == 'unavailable' || status == 'blocked'} />}
+                                   disabled={status == 'unavailable' || status == 'blocked'}
+                                   onAccessibilityTap={() => requestPermission(perm)} />}
           <Text style={{fontWeight: 'bold', paddingLeft: 10}}>{item[0]}</Text>
           <Text style={{paddingLeft: 10}}>{getResultString(status)}</Text>
         </View>
@@ -109,7 +110,7 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
           paddingBottom: 10,
         }}>
         {status === 'granted' ? (
-          <Button onPress={() => {}} color="#737373" title="Granted" />
+          <Button onPress={() => {}} color="#737373" title="Granted" onAccessibilityTap={() => {}} />
         ) : (
           <Button
             onPress={async () => {
@@ -124,6 +125,14 @@ export const PermissionsExamplePage: React.FunctionComponent<{}> = () => {
             title="Request"
             disabled={status === 'unavailable' || status === 'blocked'}
             accessibilityLabel={'Request' + perm}
+            onAccessibilityTap={async () => {
+              try {
+                const result = await request(perm);
+                setStatus(result);
+              } catch (err) {
+                console.log(err);
+              }
+            }}
           />
         )}
         <Text style={{fontWeight: 'bold', paddingLeft: 10, color: colors.text}}>

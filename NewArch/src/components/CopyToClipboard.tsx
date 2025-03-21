@@ -52,7 +52,11 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}>
+      onHoverOut={() => setIsHovered(false)}
+      onAccessibilityTap={() => {
+        Clipboard.setString(content);
+        AccessibilityInfo.announceForAccessibility('Text copied to clipboard');
+      }}>
       <Text accessible={false} style={styles.text}>
         {copyIcon}
       </Text>

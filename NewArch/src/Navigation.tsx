@@ -238,6 +238,7 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
                     height: '100%',
                     width: '100%'}}
                     onPress={() => setDrawerDesiredOpen(false)}
+                    onAccessibilityTap={() => setDrawerDesiredOpen(false)}
                     />
               </Animated.View>
             }

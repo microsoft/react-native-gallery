@@ -93,7 +93,13 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           accessibilityLabel={'example pressable'}
           accessibilityHint={
             'click me to change text from Pressed to Press Me'
-          }>
+          }
+          onPress={() => {
+            setTimesPressed((current) => current + 1);
+          }}
+          onAccessibilityTap={() => {
+            setTimesPressed((current) => current + 1);
+          }}>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
               {pressed ? 'Pressed!' : 'Press Me'}
@@ -134,6 +140,9 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           accessibilityLabel={'example pressable with a counter'}
           accessibilityHint={'click me to increase the example counter'}
           onPress={() => {
+            setTimesPressed((current) => current + 1);
+          }}
+          onAccessibilityTap={() => {
             setTimesPressed((current) => current + 1);
           }}
           style={({pressed}) => [
@@ -181,7 +190,8 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => setCurrEvent('press')}
           onPressIn={() => setCurrEvent('pressIn')}
           onPressOut={() => setCurrEvent('pressOut')}
-          onLongPress={() => setCurrEvent('longPress')}>
+          onLongPress={() => setCurrEvent('longPress')}
+          onAccessibilityTap={() => setCurrEvent('press')}>
           <Text
             style={{
               textAlign: 'center',

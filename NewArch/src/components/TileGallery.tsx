@@ -74,6 +74,7 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
     <Pressable
       style={styles.headerTile}
       onPress={() => Linking.openURL(props.link)}
+      onAccessibilityTap={() => Linking.openURL(props.link)}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
