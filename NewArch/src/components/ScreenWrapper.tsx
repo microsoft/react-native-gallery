@@ -86,6 +86,7 @@ export function ScreenWrapper({
             //accessibilityState={{expanded: useIsDrawerOpen()}}
             style={styles.menu}
             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+            onAccessibilityTap={() => navigation.dispatch(DrawerActions.openDrawer())}
             activeOpacity={0.5783}
             underlayColor="rgba(0, 0, 0, 0.0241);">
             <Text style={styles.icon}>&#xE700;</Text>
