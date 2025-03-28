@@ -1,5 +1,5 @@
 'use strict';
-import {Modal, Button, View, Text, StyleSheet, Dimensions} from 'react-native';
+import {Modal, Button, View, Text, StyleSheet, Dimensions, PlatformColor} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -15,14 +15,18 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
   const [onDismissCount, setOnDismissCount] = React.useState(0);
   const [onShowCount, setOnShowCount] = React.useState(0);
 
-  const example1jsx = `Button title='Open Modal' onPress={()=>{setModal1(!modal1)}}></Button>
+  const example1jsx = `
+  const [modal1, setModal1] = React.useState(false);
+  <Button title='Open Modal' onPress={()=>{setModal1(!modal1)}}></Button>
   <Modal visible={modal1}>
     <View style={{width: 500, height: 200}}>
       <Text>This is a Modal Screen</Text>
       <Button title='Close Modal' onPress={()=>{setModal1(!modal1)}}></Button>
     </View>
   </Modal>`;
-  const example2jsx = `<Button title='Open Modal' onPress={()=>{setModal2(!modal2)}}></Button>
+  const example2jsx = `
+  const [modal2, setModal2] = React.useState(false);
+  <Button title='Open Modal' onPress={()=>{setModal2(!modal2)}}></Button>
    <Modal visible={modal2}>
      <View style={[styles.centeredView, styles.modalBackdrop]}>
       <View style={styles.modalView}>
@@ -31,14 +35,29 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
       </View>
      </View>
     </Modal>`;
-  const example3jsx = `<Button title='Open Modal' onPress={()=>{setModal3(!modal3)}}></Button>
-    <Text>onShow event Count = {onShowCount}</Text>
-    <Text>onDismiss event Count = {onDismissCount}</Text>
-      <Modal visible={modal3} onDismiss={()=>{setOnDismissCount(onDismissCount + 1)}} onShow={()=>{setOnShowCount(onShowCount+1)}}>
-        <View style={{width: 500, height: 200}}>
-          <Text>This is a simple Modal</Text>
-          <Button title='Close Modal' onPress={()=>{setModal3(!modal3)}}></Button>
-        </View>
+  const example3jsx = `
+  const [modal3, setModal3] = React.useState(false);
+  <Button title='Open Modal' onPress={()=>{setModal3(!modal3)}}></Button>
+    <Modal
+      visible={modal3}
+      onDismiss={() => {
+      setOnDismissCount(onDismissCount + 1);
+      }}
+      onShow={() => {
+        setOnShowCount(onShowCount + 1);
+      }}>
+      <View style={{width: 500, height: 100}}>
+      <View style={styles.container}>
+        <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
+        <Text>onShow event Count = {onShowCount}</Text>
+        <Text>onDismiss event Count = {onDismissCount}</Text>
+      </View>
+        <Button
+          title="Close Modal"
+          onPress={() => {
+          setModal3(!modal3);
+          }}></Button>
+      </View>
     </Modal>`;
 
   return (
@@ -68,38 +87,12 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
             setModal1(!modal1);
           }}></Button>
         <Modal visible={modal1}>
-          <View style={{width: 500, height: 200}}>
+          <View style={{width: 500, height: 50}}>
             <Text>This is a simple Modal</Text>
             <Button
               title="Close Modal"
               onPress={() => {
                 setModal1(!modal1);
-              }}></Button>
-          </View>
-        </Modal>
-      </Example>
-      <Example title="A Modal with events" code={example3jsx}>
-        <Button
-          title="Open Modal"
-          onPress={() => {
-            setModal3(!modal3);
-          }}></Button>
-        <Text>onShow event Count = {onShowCount}</Text>
-        <Text>onDismiss event Count = {onDismissCount}</Text>
-        <Modal
-          visible={modal3}
-          onDismiss={() => {
-            setOnDismissCount(onDismissCount + 1);
-          }}
-          onShow={() => {
-            setOnShowCount(onShowCount + 1);
-          }}>
-          <View style={{width: 500, height: 200}}>
-            <Text>This is a simple Modal</Text>
-            <Button
-              title="Close Modal"
-              onPress={() => {
-                setModal3(!modal3);
               }}></Button>
           </View>
         </Modal>
@@ -128,6 +121,39 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
           </View>
         </Modal>
       </Example>
+      <Example title="A Modal with events" code={example3jsx}>
+        <Button
+          title="Open Modal"
+          onPress={() => {
+            setModal3(!modal3);
+          }}></Button>
+          <View style={styles.container}>
+              <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
+              <Text>onShow event Count = {onShowCount}</Text>
+              <Text>onDismiss event Count = {onDismissCount}</Text>
+            </View>
+        <Modal
+          visible={modal3}
+          onDismiss={() => {
+            setOnDismissCount(onDismissCount + 1);
+          }}
+          onShow={() => {
+            setOnShowCount(onShowCount + 1);
+          }}>
+          <View style={{width: 500, height: 100}}>
+            <View style={styles.container}>
+              <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
+              <Text>onShow event Count = {onShowCount}</Text>
+              <Text>onDismiss event Count = {onDismissCount}</Text>
+            </View>
+            <Button
+              title="Close Modal"
+              onPress={() => {
+                setModal3(!modal3);
+              }}></Button>
+          </View>
+        </Modal>
+      </Example>
     </Page>
   );
 };
@@ -136,7 +162,7 @@ const styles = StyleSheet.create({
   container: {
     //display: 'flex',
     alignItems: 'center',
-    paddingVertical: 30,
+    padding: 10,
   },
   centeredView: {
     //flex: 1,
@@ -146,7 +172,7 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height, // can remove when bumped to 78
   },
   modalBackdrop: {
-    backgroundColor: 'rgba(207, 134, 134, 0.5)',
+    backgroundColor: PlatformColor('ControlFillColorSecondaryBrush'),
   },
   modalView: {
     margin: 20,
@@ -168,15 +194,10 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
   textStyle: {
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
+    paddingTop: 5,
   },
 });

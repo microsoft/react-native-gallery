@@ -355,6 +355,8 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     textIcon: '\uECA5',
     subtitle: 'The most fundamental component for building a UI',
     type: 'Dialogs & flyouts',
+    new: true,
+    recentlyUpdated: true,
   },
   // {
   //   key: 'WebView',
