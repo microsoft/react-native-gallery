@@ -3,11 +3,8 @@ import {Modal, Button, View, Text, StyleSheet, Dimensions, PlatformColor} from '
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '../Navigation';
 
 export const ModalExamplePage: React.FunctionComponent<{}> = () => {
-  const {colors} = useTheme();
-
   const [modal1, setModal1] = React.useState(false);
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
