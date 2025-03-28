@@ -136,7 +136,7 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
           style={{height: 50}}
         />
       </Example>
-      <Example title="A mutli-column FlatList." code={example5jsx}>
+      <Example title="A multi-column FlatList." code={example5jsx}>
         <FlatList
           data={Data}
           renderItem={renderItem}
