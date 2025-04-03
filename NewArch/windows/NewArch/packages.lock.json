@@ -17,16 +17,16 @@
       "Microsoft.ReactNative": {
         "type": "Direct",
         "requested": "[0.77.6-Fabric, )",
-        "resolved": "0.78.0-Fabric",
-        "contentHash": "0GOjyO8DzjuBUQR0g+L2nCUGBepLMSJLGGT4y9w4NaXd8xyXBH0QHVWhRlTU8bwU2+ocgyB1Jlc6VF4dfIWCcg=="
+        "resolved": "0.77.6-Fabric",
+        "contentHash": "lAQljRuwLW5QRFDv2UBX2RPkqC1lLZCgRaeF4VHwcCjGqaOPHJxCmI6p3mObqKLrt9gabtMiVhVEEK9Mwd14xQ=="
       },
       "Microsoft.ReactNative.Cxx": {
         "type": "Direct",
         "requested": "[0.77.6-Fabric, )",
-        "resolved": "0.78.0-Fabric",
-        "contentHash": "eZ6Pa8Wlngk5NNnvf3dK2xXxG8f5mWHTwAcyQc4hykskkjY8C11OKvsTHsXKZvJEP5U3dc/MDFaNNqME2MIC5w==",
+        "resolved": "0.77.6-Fabric",
+        "contentHash": "MMk8YFjy1S5MV2yK0Ohv9z9sxdVRlqzZu5YMtfu55VSh5a1GuuS7Nk51AG7tHRhsAQvY7k0wP6hyVKr8BayrRw==",
         "dependencies": {
-          "Microsoft.ReactNative": "0.78.0-Fabric"
+          "Microsoft.ReactNative": "0.77.6-Fabric"
         }
       },
       "Microsoft.VCRTForwarders.140": {
@@ -76,8 +76,8 @@
       "Microsoft.ReactNative": {
         "type": "Direct",
         "requested": "[0.77.6-Fabric, )",
-        "resolved": "0.78.0-Fabric",
-        "contentHash": "0GOjyO8DzjuBUQR0g+L2nCUGBepLMSJLGGT4y9w4NaXd8xyXBH0QHVWhRlTU8bwU2+ocgyB1Jlc6VF4dfIWCcg=="
+        "resolved": "0.77.6-Fabric",
+        "contentHash": "lAQljRuwLW5QRFDv2UBX2RPkqC1lLZCgRaeF4VHwcCjGqaOPHJxCmI6p3mObqKLrt9gabtMiVhVEEK9Mwd14xQ=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
@@ -105,8 +105,8 @@
       "Microsoft.ReactNative": {
         "type": "Direct",
         "requested": "[0.77.6-Fabric, )",
-        "resolved": "0.78.0-Fabric",
-        "contentHash": "0GOjyO8DzjuBUQR0g+L2nCUGBepLMSJLGGT4y9w4NaXd8xyXBH0QHVWhRlTU8bwU2+ocgyB1Jlc6VF4dfIWCcg=="
+        "resolved": "0.77.6-Fabric",
+        "contentHash": "lAQljRuwLW5QRFDv2UBX2RPkqC1lLZCgRaeF4VHwcCjGqaOPHJxCmI6p3mObqKLrt9gabtMiVhVEEK9Mwd14xQ=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
@@ -134,8 +134,8 @@
       "Microsoft.ReactNative": {
         "type": "Direct",
         "requested": "[0.77.6-Fabric, )",
-        "resolved": "0.78.0-Fabric",
-        "contentHash": "0GOjyO8DzjuBUQR0g+L2nCUGBepLMSJLGGT4y9w4NaXd8xyXBH0QHVWhRlTU8bwU2+ocgyB1Jlc6VF4dfIWCcg=="
+        "resolved": "0.77.6-Fabric",
+        "contentHash": "lAQljRuwLW5QRFDv2UBX2RPkqC1lLZCgRaeF4VHwcCjGqaOPHJxCmI6p3mObqKLrt9gabtMiVhVEEK9Mwd14xQ=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
@@ -163,8 +163,8 @@
       "Microsoft.ReactNative": {
         "type": "Direct",
         "requested": "[0.77.6-Fabric, )",
-        "resolved": "0.78.0-Fabric",
-        "contentHash": "0GOjyO8DzjuBUQR0g+L2nCUGBepLMSJLGGT4y9w4NaXd8xyXBH0QHVWhRlTU8bwU2+ocgyB1Jlc6VF4dfIWCcg=="
+        "resolved": "0.77.6-Fabric",
+        "contentHash": "lAQljRuwLW5QRFDv2UBX2RPkqC1lLZCgRaeF4VHwcCjGqaOPHJxCmI6p3mObqKLrt9gabtMiVhVEEK9Mwd14xQ=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
