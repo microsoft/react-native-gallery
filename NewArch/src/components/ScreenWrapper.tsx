@@ -88,7 +88,7 @@ export function ScreenWrapper({
             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
             activeOpacity={0.5783}
             underlayColor="rgba(0, 0, 0, 0.0241);">
-            <Text style={styles.icon}>&#xE700;</Text>
+            <Text style={styles.icon} accessibilityLabel="Navigation bar hamburger icon text">&#xE700;</Text>
           </TouchableHighlight>
         </View>
       </Pressable>
