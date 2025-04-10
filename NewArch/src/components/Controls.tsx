@@ -31,6 +31,7 @@ function Hyperlink({url, text}: HyperlinkProps): JSX.Element {
       accessibilityRole="link"
       accessibilityLabel={displayText}
       onPress={() => Linking.openURL(url)}
+      onAccessibilityTap={() => Linking.openURL(url)}
       onPressIn={() => setPressing(true)}
       onPressOut={() => setPressing(false)}
       onHoverIn={() => setHovering(true)}

@@ -199,6 +199,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowPopup1(true);
           }}
+          onAccessibilityTap={() => {
+            setShowPopup1(true);
+          }}
           activeOpacity={0.2}
           ref={buttonRef}
           underlayColor={colors.border}>
@@ -324,6 +327,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             alignItems: 'center',
           }}
           onPress={() => {
+            setShowPopup3(true);
+          }}
+          onAccessibilityTap={() => {
             setShowPopup3(true);
           }}
           activeOpacity={0.2}

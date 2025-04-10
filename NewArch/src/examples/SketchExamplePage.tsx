@@ -62,6 +62,11 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
                 if (sketchRef.current) {
                   setCanvasColor('white');
                 }
+              }}
+              onAccessibilityTap={() => {
+                if (sketchRef.current) {
+                  setCanvasColor('white');
+                }
               }}>
               <Text style={{color: 'white'}}>Eraser</Text>
             </TouchableHighlight>
@@ -74,6 +79,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
               accessibilityLabel={'Undo'}
               onPress={() => {
                 sketchRef.current?.undo();
+              }}
+              onAccessibilityTap={() => {
+                sketchRef.current?.undo();
               }}>
               <Text style={{color: 'white'}}>Undo</Text>
             </TouchableHighlight>
@@ -83,6 +91,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
               accessibilityRole={'button'}
               accessibilityLabel={'Clear'}
               onPress={() => {
+                sketchRef.current?.clear();
+              }}
+              onAccessibilityTap={() => {
                 sketchRef.current?.clear();
               }}>
               <Text style={{color: 'white'}}>Clear</Text>
@@ -99,6 +110,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             onPress={() => {
               setCanvasColor('black');
             }}
+            onAccessibilityTap={() => {
+              setCanvasColor('black');
+            }}
           />
           <Pressable
             accessible
@@ -107,6 +121,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             focusable
             style={[{backgroundColor: 'red'}, styles.strokeColorButton]}
             onPress={() => {
+              setCanvasColor('red');
+            }}
+            onAccessibilityTap={() => {
               setCanvasColor('red');
             }}
           />
@@ -119,6 +136,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             onPress={() => {
               setCanvasColor('turquoise');
             }}
+            onAccessibilityTap={() => {
+              setCanvasColor('turquoise');
+            }}
           />
           <Pressable
             accessible
@@ -127,6 +147,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             focusable
             style={[{backgroundColor: 'blue'}, styles.strokeColorButton]}
             onPress={() => {
+              setCanvasColor('blue');
+            }}
+            onAccessibilityTap={() => {
               setCanvasColor('blue');
             }}
           />
@@ -139,6 +162,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             onPress={() => {
               setCanvasColor('navy');
             }}
+            onAccessibilityTap={() => {
+              setCanvasColor('navy');
+            }}
           />
           <Pressable
             accessible
@@ -147,6 +173,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             focusable
             style={[{backgroundColor: 'maroon'}, styles.strokeColorButton]}
             onPress={() => {
+              setCanvasColor('maroon');
+            }}
+            onAccessibilityTap={() => {
               setCanvasColor('maroon');
             }}
           />
@@ -159,6 +188,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             onPress={() => {
               setCanvasColor('green');
             }}
+            onAccessibilityTap={() => {
+              setCanvasColor('green');
+            }}
           />
           <Pressable
             accessible
@@ -167,6 +199,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             focusable
             style={[{backgroundColor: 'fuchsia'}, styles.strokeColorButton]}
             onPress={() => {
+              setCanvasColor('fuchsia');
+            }}
+            onAccessibilityTap={() => {
               setCanvasColor('fuchsia');
             }}
           />
@@ -179,6 +214,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             onPress={() => {
               setCanvasColor('white');
             }}
+            onAccessibilityTap={() => {
+              setCanvasColor('white');
+            }}
           />
           <Pressable
             accessible
@@ -187,6 +225,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             focusable
             style={[{backgroundColor: 'silver'}, styles.strokeColorButton]}
             onPress={() => {
+              setCanvasColor('silver');
+            }}
+            onAccessibilityTap={() => {
               setCanvasColor('silver');
             }}
           />
@@ -199,6 +240,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             onPress={() => {
               setCanvasColor('grey');
             }}
+            onAccessibilityTap={() => {
+              setCanvasColor('grey');
+            }}
           />
           <Pressable
             accessible
@@ -207,6 +251,9 @@ export const SketchExamplePage: React.FunctionComponent<{}> = () => {
             focusable
             style={[{backgroundColor: 'pink'}, styles.strokeColorButton]}
             onPress={() => {
+              setCanvasColor('pink');
+            }}
+            onAccessibilityTap={() => {
               setCanvasColor('pink');
             }}
           />

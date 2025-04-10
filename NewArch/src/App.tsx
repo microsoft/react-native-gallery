@@ -134,7 +134,8 @@ const DrawerListItem = ({
       onHoverOut={() => setIsHovered(false)}
       accessibilityRole="button"
       accessibilityLabel={label}
-      style={localStyles.drawerListItem}>
+      style={localStyles.drawerListItem}
+      onAccessibilityTap={() => navigation.navigate(route)}>
       <View style={styles.indentContainer}>
         <SelectedNavigationItemPill
           currentRoute={currentRoute}
@@ -202,7 +203,8 @@ const DrawerCollapsibleCategory = ({
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
-        accessible={false}>
+        accessible={false}
+        onAccessibilityTap={() => onPress()}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -291,7 +293,8 @@ function CustomDrawerContent({navigation}) {
         accessibilityLabel="Navigation bar expanded"
         {...{tooltip: 'Collapse Menu'}}
         style={styles.menu}
-        onPress={() => navigation.closeDrawer()}>
+        onPress={() => navigation.closeDrawer()}
+        onAccessibilityTap={() => navigation.closeDrawer()}>
         <Text style={styles.icon}>&#xE700;</Text>
       </Pressable>
       <DrawerListItem

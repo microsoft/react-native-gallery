@@ -160,6 +160,9 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           onPress={() => {
             setShowFlyout1(true);
           }}
+          onAccessibilityTap={() => {
+            setShowFlyout1(true);
+          }}
           accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
@@ -191,6 +194,9 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
                 alignItems: 'center',
               }}
               onPress={() => {
+                setShowFlyout1(false);
+              }}
+              onAccessibilityTap={() => {
                 setShowFlyout1(false);
               }}
               activeOpacity={0.2}
@@ -271,6 +277,9 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
             alignItems: 'center',
           }}
           onPress={() => {
+            setShowFlyout3(true);
+          }}
+          onAccessibilityTap={() => {
             setShowFlyout3(true);
           }}
           accessibilityRole="button"
