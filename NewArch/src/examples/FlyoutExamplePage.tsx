@@ -27,7 +27,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
   }}
   activeOpacity={0.2}
   underlayColor={colors.border}>
-  <Text>Open Popup</Text>
+  <Text>Open Flyout</Text>
 </TouchableHighlight>
 <Flyout
   isOpen={showFlyout1}
@@ -52,7 +52,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
   }}
   activeOpacity={0.2}
   underlayColor={colors.border}>
-  <Text>Open Popup</Text>
+  <Text>Open Flyout</Text>
 </TouchableHighlight>
 <Flyout
   isOpen={showFlyout2}
@@ -78,7 +78,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
   }}
   activeOpacity={0.2}
   underlayColor={colors.border}>
-  <Text>Open Popup</Text>
+  <Text>Open Flyout</Text>
 </TouchableHighlight>
 <Flyout
   isOpen={showFlyout3}
@@ -106,7 +106,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
   ref={myRef}
   activeOpacity={0.2}
   underlayColor={colors.border}>
-  <Text>Open Popup</Text>
+  <Text>Open Flyout</Text>
 </TouchableHighlight>
 <Flyout
   isOpen={showFlyout4}
@@ -163,7 +163,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
-          <Text style={{color: colors.text}}>Open Popup</Text>
+          <Text style={{color: colors.text}}>Open Flyout</Text>
         </TouchableHighlight>
         <Flyout
           isOpen={showFlyout1}
@@ -219,7 +219,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
-          <Text style={{color: colors.text}}>Open Popup</Text>
+          <Text style={{color: colors.text}}>Open Flyout</Text>
         </TouchableHighlight>
         <Flyout
           isOpen={showFlyout2}
@@ -276,7 +276,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           accessibilityRole="button"
           activeOpacity={0.2}
           underlayColor={colors.border}>
-          <Text style={{color: colors.text}}>Open Popup</Text>
+          <Text style={{color: colors.text}}>Open Flyout</Text>
         </TouchableHighlight>
         <Flyout
           isOpen={showFlyout3}
@@ -337,7 +337,7 @@ export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
           ref={myRef}
           activeOpacity={0.2}
           underlayColor={colors.border}>
-          <Text style={{color: colors.text}}>Open Popup</Text>
+          <Text style={{color: colors.text}}>Open Flyout</Text>
         </TouchableHighlight>
         <Flyout
           isOpen={showFlyout4}
