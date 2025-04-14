@@ -25,7 +25,8 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
       tooltip={tooltip}
       onPress={() => onPress()}
       onHoverIn={() => setHover(true)}
-      onHoverOut={() => setHover(false)}>
+      onHoverOut={() => setHover(false)}
+      onAccessibilityTap={() => onPress()}>
       <View
         style={{
           backgroundColor: hover
@@ -98,6 +99,13 @@ const HorizontalListWithPageNavigation = (
                 viewPosition: 0,
               });
             }}
+            onAccessibilityTap={() => {
+              listRef.current?.scrollToIndex({
+                animated: true,
+                index: scrollLeftTarget,
+                viewPosition: 0,
+              });
+            }}
           />
         </View>
       )}
@@ -113,6 +121,13 @@ const HorizontalListWithPageNavigation = (
           <PagingButton
             left={false}
             onPress={() => {
+              listRef.current?.scrollToIndex({
+                animated: true,
+                index: scrollRightTarget,
+                viewPosition: 0,
+              });
+            }}
+            onAccessibilityTap={() => {
               listRef.current?.scrollToIndex({
                 animated: true,
                 index: scrollRightTarget,

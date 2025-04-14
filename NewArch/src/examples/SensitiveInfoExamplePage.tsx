@@ -98,6 +98,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             color={colors.primary}
             onPress={setItem}
             title="Set Item"
+            onAccessibilityTap={setItem}
           />
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
@@ -117,6 +118,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             color={colors.primary}
             onPress={getItem}
             title="Get Item"
+            onAccessibilityTap={getItem}
           />
         </View>
       </Example>

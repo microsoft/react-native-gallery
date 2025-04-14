@@ -19,6 +19,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.2}
   underlayColor={colors.border}>
   <Text style={{color: colors.text}}>TouchableHighlight</Text>
@@ -33,6 +34,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.6}
   underlayColor={colors.text}>
   <Text style={{color: 'white'}}>TouchableHighlight</Text>
@@ -47,6 +49,9 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
     alignItems: 'center',
   }}
   onPress={() => {
+    setTitle(title + 1);
+  }}
+  onAccessibilityTap={() => {
     setTitle(title + 1);
   }}
   activeOpacity={0.2}
@@ -85,6 +90,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
               alignItems: 'center',
             }}
             onPress={() => {}}
+            onAccessibilityTap={() => {}}
             activeOpacity={0.2}
             underlayColor={colors.border}>
             <Text style={{color: colors.text}}>TouchableHighlight</Text>
@@ -102,6 +108,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
               alignItems: 'center',
             }}
             onPress={() => {}}
+            onAccessibilityTap={() => {}}
             activeOpacity={0.6}
             underlayColor={colors.text}>
             <Text style={{color: 'white'}}>TouchableHighlight</Text>
@@ -121,6 +128,9 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
               alignItems: 'center',
             }}
             onPress={() => {
+              setTitle(title + 1);
+            }}
+            onAccessibilityTap={() => {
               setTitle(title + 1);
             }}
             activeOpacity={0.2}

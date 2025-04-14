@@ -111,7 +111,7 @@ const PostChatCompletionExample = () => {
         onChangeText={setPrompt}
         onSubmitEditing={doRequest}
       />
-      <Button title="Submit" onPress={doRequest} />
+      <Button title="Submit" onPress={doRequest} onAccessibilityTap={doRequest} />
       {isLoading ? (
         <ActivityIndicator />
       ) : (
@@ -221,7 +221,7 @@ return (
     <TextInput value={apiKey} onChangeText={setApiKey} onSubmitEditing={doRequest} secureTextEntry={true}/>
     <Text>What is your question</Text>
     <TextInput value={prompt} onChangeText={setPrompt} onSubmitEditing={doRequest}/>
-    <Button title="Submit" onPress={doRequest}/>
+    <Button title="Submit" onPress={doRequest} onAccessibilityTap={doRequest}/>
     {isLoading ? <ActivityIndicator/> :
       <View>
         <Text style={{fontWeight: 'bold'}}>Raw</Text>

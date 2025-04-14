@@ -20,6 +20,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.5}>
   <Text style={{color: colors.text}}>TouchableOpacity</Text>
 </TouchableOpacity>`;
@@ -34,6 +35,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.8}>
   <Text style={{color: 'white'}}>TouchableOpacity</Text>
 </TouchableOpacity>`;
@@ -48,6 +50,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.8}
   disabled={true}>
   <Text style={{color: colors.text}}>TouchableOpacity</Text>
@@ -63,6 +66,9 @@ style={{
   alignItems: 'center',
 }}
 onPress={() => {
+  setTitle(title + 1);
+}}
+onAccessibilityTap={() => {
   setTitle(title + 1);
 }}
 activeOpacity={0.8}>
@@ -85,7 +91,8 @@ onBlur={() => {
   setFocus(false);
 }}
 activeOpacity={0.2}
-onPress={() => {}}>
+onPress={() => {}}
+onAccessibilityTap={() => {}}>
 <Text style={{color: colors.text}}>
   {focus
     ? 'TouchableOpacity Focused'
@@ -125,6 +132,7 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
           activeOpacity={0.5}>
           <Text style={{color: colors.text}}>TouchableOpacity</Text>
         </TouchableOpacity>
@@ -142,6 +150,7 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
           activeOpacity={0.8}>
           <Text style={{color: 'white'}}>TouchableOpacity</Text>
         </TouchableOpacity>
@@ -162,6 +171,7 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
           activeOpacity={0.8}
           disabled={true}>
           <Text style={{color: colors.text}}>TouchableOpacity</Text>
@@ -185,6 +195,9 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {
+            setTitle(title + 1);
+          }}
+          onAccessibilityTap={() => {
             setTitle(title + 1);
           }}
           activeOpacity={0.8}>
@@ -215,7 +228,8 @@ onPress={() => {}}>
             setFocus(false);
           }}
           activeOpacity={0.2}
-          onPress={() => {}}>
+          onPress={() => {}}
+          onAccessibilityTap={() => {}}>
           <Text style={{color: colors.text}}>
             {focus
               ? 'TouchableOpacity Focused'

@@ -215,7 +215,14 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
 
   const renderItem = ({item}) => {
     return (
-      <TouchableHighlight style={styles.item}>
+      <TouchableHighlight
+        style={styles.item}
+        onPress={() => {
+          setSelectedIndex(item.index);
+        }}
+        onAccessibilityTap={() => {
+          setSelectedIndex(item.index);
+        }}>
         <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
@@ -229,6 +236,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
+          setSelectedIndex(item.index);
+        }}
+        onAccessibilityTap={() => {
           setSelectedIndex(item.index);
         }}>
         <Text style={styles.title}>{item.title}</Text>
@@ -263,6 +273,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
+          setSelectedIndex2(item.index);
+        }}
+        onAccessibilityTap={() => {
           setSelectedIndex2(item.index);
         }}>
         <Text style={styles.title}>{item.title}</Text>
