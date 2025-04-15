@@ -102,6 +102,9 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
       onPress={() => {
         navigation.navigate(item.key);
       }}
+      onAccessibilityTap={() => {
+        navigation.navigate(item.key);
+      }}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}

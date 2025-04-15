@@ -26,6 +26,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
     accessibilityRole="button"
     accessibilityLabel={'simple example TouchableWithoutFeedback'}
     onPress={() => {}}
+    onAccessibilityTap={() => {}}
     disabled={true}>
     <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
     </TouchableWithoutFeedback>`;
@@ -36,6 +37,9 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
     accessibilityHint={'click me to increase the example counter'}
     accessibilityValue={{text: ${title}}}
     onPress={() => {
+        setTitle(title + 1);
+    }}
+    onAccessibilityTap={() => {
         setTitle(title + 1);
     }}>
     <Text style={{color: colors.text}}>{String(title)}</Text>
@@ -65,7 +69,8 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
           <TouchableWithoutFeedback
             accessibilityRole="button"
             accessibilityLabel={'simple example TouchableWithoutFeedback'}
-            onPress={() => {}}>
+            onPress={() => {}}
+            onAccessibilityTap={() => {}}>
             <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
           </TouchableWithoutFeedback>
         </Example>
@@ -73,7 +78,8 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
           <TouchableWithoutFeedback
             accessibilityRole="button"
             accessibilityLabel={'colored example TouchableWithoutFeedback'}
-            onPress={() => {}}>
+            onPress={() => {}}
+            onAccessibilityTap={() => {}}>
             <Text style={{color: 'green'}}>TouchableWithoutFeedback</Text>
           </TouchableWithoutFeedback>
         </Example>
@@ -84,6 +90,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
             accessibilityRole="button"
             accessibilityLabel={'disabled example TouchableWithoutFeedback'}
             onPress={() => {}}
+            onAccessibilityTap={() => {}}
             disabled={true}
             style={{
               height: 40,
@@ -103,6 +110,9 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
             accessibilityHint={'click me to increase the example counter'}
             accessibilityValue={{text: `${title}`}}
             onPress={() => {
+              setTitle(title + 1);
+            }}
+            onAccessibilityTap={() => {
               setTitle(title + 1);
             }}>
             <Text style={{color: colors.text}}>{String(title)}</Text>

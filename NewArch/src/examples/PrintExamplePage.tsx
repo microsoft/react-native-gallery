@@ -41,6 +41,7 @@ export const PrintExamplePage: React.FunctionComponent<{}> = () => {
           color="rgb(52, 122, 226)"
           onPress={printRemotePDF}
           title="Print PDF"
+          onAccessibilityTap={printRemotePDF}
         />
       </Example>
     </Page>
