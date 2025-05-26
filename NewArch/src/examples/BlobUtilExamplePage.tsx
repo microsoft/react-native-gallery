@@ -33,7 +33,8 @@ export const BlobUtilExamplePage: React.FunctionComponent<{}> = () => {
       .then((files) => {
         Alert.alert('Method finished: check debug console for results');
         console.log(files);
-      });
+      })
+      .catch((err) => Alert.alert(err.message));
   };
 
   const cpCall = () => {
