@@ -7,6 +7,7 @@ import {ComponentListPage} from './ComponentListPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 // import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
+import {BlobUtilExamplePage} from './examples/BlobUtilExamplePage';
 // import {ConfigExamplePage} from './examples/ConfigExamplePage';
 // import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 // import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
@@ -114,6 +115,15 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'System',
     new: true,
   },
+  // {
+  //   key: 'BlobUtil',
+  //   component: BlobUtilExamplePage,
+  //   textIcon: '\uE8C8',
+  //   imageIcon: require('../assets/ControlImages/Clipboard.png'),
+  //   subtitle: 'File and Blob utilities for React Native.',
+  //   type: 'System',
+  //   new: true,
+  // },
   // {
   //   key: 'Config',
   //   component: ConfigExamplePage,
