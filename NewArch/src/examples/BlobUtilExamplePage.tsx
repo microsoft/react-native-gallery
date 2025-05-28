@@ -295,7 +295,6 @@ export const BlobUtilExamplePage: React.FunctionComponent<{}> = () => {
 const styles = StyleSheet.create({
   exampleContainer: {
     alignItems: 'flex-start',
-    gap: 12,
   },
   input: {
     borderWidth: 1,
