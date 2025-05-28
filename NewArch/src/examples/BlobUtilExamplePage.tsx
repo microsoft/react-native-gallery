@@ -1,6 +1,6 @@
 'use strict';
 import React, {useState} from 'react';
-import {Alert, Button, TextInput, View, StyleSheet} from 'react-native';
+import {Alert, Text, Button, TextInput, View, StyleSheet} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import ReactNativeBlobUtil from 'react-native-blob-util';
@@ -107,7 +107,9 @@ export const BlobUtilExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/RonRadtke/react-native-blob-util',
         },
       ]}>
-       <Example
+      <Text>Directory: {ReactNativeBlobUtil.fs.dirs.DocumentDir}</Text>
+
+      <Example
         title="Check if file exists"
         code={`ReactNativeBlobUtil.fs
   .exists(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + existsParam)
