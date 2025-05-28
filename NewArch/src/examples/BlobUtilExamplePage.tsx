@@ -21,77 +21,77 @@ export const BlobUtilExamplePage: React.FunctionComponent<{}> = () => {
 
   // API Methods
   const existsCall = () => {
-    ReactNativeBlobUtil.fs
-      .exists(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + existsParam)
-      .then((result) => Alert.alert('Exists: ' + result))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .exists(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + existsParam)
+    //   .then((result) => Alert.alert('Exists: ' + result))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const lsCall = () => {
-    ReactNativeBlobUtil.fs
-      .ls(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + lsParam)
-      .then((files) => {
-        Alert.alert('Method finished: check debug console for results');
-        console.log(files);
-      });
+    // ReactNativeBlobUtil.fs
+    //   .ls(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + lsParam)
+    //   .then((files) => {
+    //     Alert.alert('Method finished: check debug console for results');
+    //     console.log(files);
+    //   });
   };
 
   const cpCall = () => {
-    ReactNativeBlobUtil.fs
-      .cp(
-        ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + cpSourceParam,
-        ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + cpDestParam,
-      )
-      .then(() => Alert.alert('File successfully copied'))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .cp(
+    //     ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + cpSourceParam,
+    //     ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + cpDestParam,
+    //   )
+    //   .then(() => Alert.alert('File successfully copied'))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const unlinkCall = () => {
-    ReactNativeBlobUtil.fs
-      .unlink(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + unlinkParam)
-      .then(() => Alert.alert('File/Directory successfully unlinked'))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .unlink(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + unlinkParam)
+    //   .then(() => Alert.alert('File/Directory successfully unlinked'))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const statCall = () => {
-    ReactNativeBlobUtil.fs
-      .stat(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + statParam)
-      .then((stats) => {
-        console.log(stats);
-        Alert.alert(
-          'Stat Result',
-          `Filename: ${stats.filename}\nSize: ${stats.size}\nType: ${stats.type}`,
-        );
-      })
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .stat(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + statParam)
+    //   .then((stats) => {
+    //     console.log(stats);
+    //     Alert.alert(
+    //       'Stat Result',
+    //       `Filename: ${stats.filename}\nSize: ${stats.size}\nType: ${stats.type}`,
+    //     );
+    //   })
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const mkdirCall = () => {
-    ReactNativeBlobUtil.fs
-      .mkdir(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + mkdirParam)
-      .then(() => Alert.alert('Directory created successfully'))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .mkdir(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + mkdirParam)
+    //   .then(() => Alert.alert('Directory created successfully'))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const readFileCall = () => {
-    ReactNativeBlobUtil.fs
-      .readFile(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + readParam, 'utf8')
-      .then((data) => Alert.alert('File Content', data))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .readFile(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + readParam, 'utf8')
+    //   .then((data) => Alert.alert('File Content', data))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const hashCall = () => {
-    ReactNativeBlobUtil.fs
-      .hash(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + hashPathParam, hashAlgValue)
-      .then((hash) => Alert.alert(`${hashAlgValue} Hash`, hash))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .hash(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + hashPathParam, hashAlgValue)
+    //   .then((hash) => Alert.alert(`${hashAlgValue} Hash`, hash))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   const writeFileCall = () => {
-    ReactNativeBlobUtil.fs
-      .writeFile(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + writeParam, 'Sample content', writeEncodeParam)
-      .then(() => Alert.alert('File written successfully'))
-      .catch((err) => Alert.alert(err.message));
+    // ReactNativeBlobUtil.fs
+    //   .writeFile(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + writeParam, 'Sample content', writeEncodeParam)
+    //   .then(() => Alert.alert('File written successfully'))
+    //   .catch((err) => Alert.alert(err.message));
   };
 
   // Examples
@@ -107,7 +107,7 @@ export const BlobUtilExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/RonRadtke/react-native-blob-util',
         },
       ]}>
-      <Example
+       <Example
         title="Check if file exists"
         code={`ReactNativeBlobUtil.fs
   .exists(ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + existsParam)
