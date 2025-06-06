@@ -29,10 +29,10 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="$targetentrypoint$">
+      EntryPoint="NewArch.App">
       <uap:VisualElements
-        DisplayName="NewArch"
-        Description="NewArch"
+        DisplayName="React Native Gallery - Experimental"
+        Description="React Native Gallery - Experimental [New Architecture]"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
