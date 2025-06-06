@@ -7,7 +7,7 @@
 #include "AutolinkedNativeModules.g.h"
 
 #include "NativeModules.h"
-
+#include "string.h"
 // A PackageProvider containing any turbo modules you define within this app project
 struct CompReactPackageProvider
     : winrt::implements<CompReactPackageProvider, winrt::Microsoft::ReactNative::IReactPackageProvider> {
@@ -73,6 +73,21 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
   appWindow.Title(L"React Native Gallery - Experimental");
   appWindow.Resize({1000, 1000});
 
+  // Update Icon
+    // Update Icon
+  WCHAR iconPathBuffer[MAX_PATH];
+  // Copy appDirectory to iconPathBuffer
+  wcscpy_s(iconPathBuffer, appDirectory);
+
+  // Remove last path element from iconPathBuffer (get parent directory)
+  HRESULT hr = PathCchRemoveFileSpec(iconPathBuffer, MAX_PATH);
+  if (SUCCEEDED(hr)) {
+    // Append the relative path to the icon
+    wcscat_s(iconPathBuffer, L"\\Images\\NewArch.ico");
+    winrt::hstring iconPath(iconPathBuffer, wcslen(iconPathBuffer));
+    appWindow.SetIcon(iconPath);
+  }
+  
   // Get the ReactViewOptions so we can set the initial RN component to load
   auto viewOptions{reactNativeWin32App.ReactViewOptions()};
   viewOptions.ComponentName(L"NewArch");
