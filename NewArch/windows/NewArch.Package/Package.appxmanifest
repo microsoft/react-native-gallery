@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -7,13 +7,13 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="Microsoft.ReactNativeGallery-Experimental"
-    Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+    Name="NewArch"
+    Publisher="CN=anuverma"
     Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>React Native Gallery - Experimental</DisplayName>
-    <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
+    <DisplayName>NewArch</DisplayName>
+    <PublisherDisplayName>anuverma</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
 
