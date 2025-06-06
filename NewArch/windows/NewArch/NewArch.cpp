@@ -7,7 +7,7 @@
 #include "AutolinkedNativeModules.g.h"
 
 #include "NativeModules.h"
-#include "string.h"
+
 // A PackageProvider containing any turbo modules you define within this app project
 struct CompReactPackageProvider
     : winrt::implements<CompReactPackageProvider, winrt::Microsoft::ReactNative::IReactPackageProvider> {
@@ -74,7 +74,6 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
   appWindow.Resize({1000, 1000});
 
   // Update Icon
-    // Update Icon
   WCHAR iconPathBuffer[MAX_PATH];
   // Copy appDirectory to iconPathBuffer
   wcscpy_s(iconPathBuffer, appDirectory);
