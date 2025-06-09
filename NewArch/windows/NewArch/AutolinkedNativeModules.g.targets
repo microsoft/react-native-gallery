@@ -6,5 +6,9 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-clipboard\clipboard\windows\Clipboard\Clipboard.vcxproj">
       <Project>{90BFF18B-474B-445D-9847-B065853288D8}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-blob-util -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-blob-util\windows\ReactNativeBlobUtil\ReactNativeBlobUtil.vcxproj">
+      <Project>{CDDE3311-EFD2-462D-8551-93637A7FAE92}</Project>
+    </ProjectReference>
   </ItemGroup>
 </Project>

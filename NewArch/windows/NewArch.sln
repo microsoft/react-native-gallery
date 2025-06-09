@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewArch", "NewArch\NewArch.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Clipboard", "..\node_modules\@react-native-clipboard\clipboard\windows\Clipboard\Clipboard.vcxproj", "{90BFF18B-474B-445D-9847-B065853288D8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReactNativeBlobUtil", "..\node_modules\react-native-blob-util\windows\ReactNativeBlobUtil\ReactNativeBlobUtil.vcxproj", "{CDDE3311-EFD2-462D-8551-93637A7FAE92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -67,6 +69,18 @@ Global
 		{90BFF18B-474B-445D-9847-B065853288D8}.Release|x86.Build.0 = Release|Win32
 		{90BFF18B-474B-445D-9847-B065853288D8}.Release|ARM64.ActiveCfg = Release|ARM64
 		{90BFF18B-474B-445D-9847-B065853288D8}.Release|ARM64.Build.0 = Release|ARM64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Debug|x64.ActiveCfg = Debug|x64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Debug|x64.Build.0 = Debug|x64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Debug|x86.ActiveCfg = Debug|Win32
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Debug|x86.Build.0 = Debug|Win32
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Debug|ARM64.Build.0 = Debug|ARM64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Release|x64.ActiveCfg = Release|x64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Release|x64.Build.0 = Release|x64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Release|x86.ActiveCfg = Release|Win32
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Release|x86.Build.0 = Release|Win32
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Release|ARM64.ActiveCfg = Release|ARM64
+		{CDDE3311-EFD2-462D-8551-93637A7FAE92}.Release|ARM64.Build.0 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
