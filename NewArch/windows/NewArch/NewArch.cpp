@@ -70,9 +70,23 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
 
   // Get the AppWindow so we can configure its initial title and size
   auto appWindow{reactNativeWin32App.AppWindow()};
-  appWindow.Title(L"NewArch");
+  appWindow.Title(L"React Native Gallery - Experimental");
   appWindow.Resize({1000, 1000});
 
+  // Update Icon
+  WCHAR iconPathBuffer[MAX_PATH];
+  // Copy appDirectory to iconPathBuffer
+  wcscpy_s(iconPathBuffer, appDirectory);
+
+  // Remove last path element from iconPathBuffer (get parent directory)
+  HRESULT hr = PathCchRemoveFileSpec(iconPathBuffer, MAX_PATH);
+  if (SUCCEEDED(hr)) {
+    // Append the relative path to the icon
+    wcscat_s(iconPathBuffer, L"\\Images\\NewArch.ico");
+    winrt::hstring iconPath(iconPathBuffer, wcslen(iconPathBuffer));
+    appWindow.SetIcon(iconPath);
+  }
+  
   // Get the ReactViewOptions so we can set the initial RN component to load
   auto viewOptions{reactNativeWin32App.ReactViewOptions()};
   viewOptions.ComponentName(L"NewArch");

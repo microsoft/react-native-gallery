@@ -7,10 +7,10 @@ export function CommunityModuleBadge() {
   const {colors} = useTheme();
   return (
     <Badge
-      badgeColor={PlatformColor('TextFillColorPrimary')}
+      badgeColor={PlatformColor('AccentFillColorDefault')}
       textColor={
         Platform.OS === 'windows'
-          ? PlatformColor('TextFillColorPrimary')
+          ? PlatformColor('TextOnAccentFillColorPrimary')
           : colors.border
       }
       badgeTitle="Community Module"
