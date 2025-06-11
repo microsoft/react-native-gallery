@@ -15,8 +15,8 @@
     "@react-native-clipboard/clipboard": "^1.16.1",
     "lowlight": "^1.17.0",
     "react": "19.0.0",
-    "react-native": "^0.79.0-rc.0",
-    "react-native-windows": "^0.79.0-preview.1"
+    "react-native": "^0.79.0",
+    "react-native-windows": "^0.79.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
