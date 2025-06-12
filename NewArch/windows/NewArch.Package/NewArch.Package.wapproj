@@ -137,7 +137,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\x64\Release\Clipboard\Clipboard.dll">
+    <Content Include="..\\$(Platform)\\$(Configuration)\\Clipboard\\Clipboard.dll" Condition="'$(Platform)' == 'x64'">
       <PackagePath>Clipboard.dll</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
