@@ -33,7 +33,7 @@
     "patch-package": "^7.0.0",
     "postinstall-postinstall": "^2.1.0",
     "react": "19.0.0",
-    "react-native": "0.78.0",
+    "react-native": "0.79.0",
     "react-native-config": "^1.5.2",
     "react-native-device-info": "^10.7.0",
     "react-native-gesture-handler": "2.9.0",
@@ -48,17 +48,17 @@
     "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
     "react-native-tts": "ak1394/react-native-tts",
     "react-native-webview": "^13.2.2",
-    "react-native-windows": "0.78.0",
+    "react-native-windows": "0.79.0",
     "react-native-xaml": "^0.0.78"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.20.0",
-    "@react-native/babel-preset": "0.78.0",
-    "@react-native/eslint-config": "0.78.0",
-    "@react-native/metro-config": "0.78.0",
-    "@react-native/typescript-config": "0.78.0",
+    "@react-native/babel-preset": "0.79.0",
+    "@react-native/eslint-config": "0.79.0",
+    "@react-native/metro-config": "0.79.0",
+    "@react-native/typescript-config": "0.79.0",
     "@rnx-kit/cli": "^0.16.10",
     "@rnx-kit/jest-preset": "^0.1.17",
     "@types/lowlight": "^0.0.1",
@@ -97,5 +97,12 @@
     "node_modules/",
     "lib/"
   ],
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "react-native-windows": {
+    "init-windows": {
+      "name": "rngallery",
+      "namespace": "rngallery",
+      "template": "old/uwp-cpp-app"
+    }
+  }
 }
