@@ -123,6 +123,15 @@
   </ItemGroup>
   <!-- end -->
   <ItemGroup>
+    <Image Include="Assets\BadgeLogo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\BadgeLogo.scale-125.png" />
+    <Image Include="Assets\BadgeLogo.scale-150.png" />
+    <Image Include="Assets\BadgeLogo.scale-200.png" />
+    <Image Include="Assets\BadgeLogo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Assets\LargeTile.scale-100.png" />
     <Image Include="Assets\LargeTile.scale-125.png" />
     <Image Include="Assets\LargeTile.scale-150.png" />
@@ -167,7 +176,9 @@
     <Image Include="Assets\StoreLogo.scale-100.png" />
     <Image Include="Assets\StoreLogo.scale-125.png" />
     <Image Include="Assets\StoreLogo.scale-150.png" />
-    <Image Include="Assets\StoreLogo.scale-200.png" />
+    <Image Include="Assets\StoreLogo.scale-200.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Assets\StoreLogo.scale-400.png" />
     <Image Include="Assets\Wide310x150Logo.scale-100.png" />
     <Image Include="Assets\Wide310x150Logo.scale-125.png" />
