@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   View,
   StyleSheet,
@@ -6,13 +6,14 @@ import {
   Text,
   useColorScheme,
   ScrollView,
+  KeyboardEvent as RNKeyboardEvent,
 } from 'react-native';
-import {NavigationContainer} from './Navigation';
+import { NavigationContainer } from './Navigation';
 import {
   createDrawerNavigator,
   getDrawerStatusFromState,
 } from './Navigation';
-import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
+import RNGalleryList, { RNGalleryCategories } from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
 import {
@@ -21,7 +22,7 @@ import {
   ThemeContext,
   ThemeSetterContext,
 } from './themes/Theme';
-import {PlatformColor} from 'react-native';
+import { PlatformColor } from 'react-native';
 import HighContrastTheme from './themes/HighContrastTheme';
 import useHighContrastState from './hooks/useHighContrastState';
 
@@ -113,44 +114,49 @@ type DrawerListItemProps = {
   icon?: string;
   navigation: any;
   currentRoute: string;
+  onKeyDown?: (e: RNKeyboardEvent) => void;
+  ref?: React.Ref<Pressable>;
 };
-const DrawerListItem = ({
-  route,
-  label,
-  icon,
-  navigation,
-  currentRoute,
-}: DrawerListItemProps) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [isPressed, setIsPressed] = React.useState(false);
+const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
+  (
+    { route, label, icon, navigation, currentRoute, onKeyDown },
+    ref,
+  ) => {
+    const [isHovered, setIsHovered] = React.useState(false);
+    const [isPressed, setIsPressed] = React.useState(false);
 
-  const localStyles = createDrawerListItemStyles(isHovered, isPressed);
-  return (
-    <Pressable
-      onPress={() => navigation.navigate(route)}
-      onPressIn={() => setIsPressed(true)}
-      onPressOut={() => setIsPressed(false)}
-      onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      style={localStyles.drawerListItem}
-      onAccessibilityTap={() => navigation.navigate(route)}>
-      <View style={styles.indentContainer}>
-        <SelectedNavigationItemPill
-          currentRoute={currentRoute}
-          itemRoute={route}
-        />
-        <Text accessible={false} style={styles.icon}>
-          {icon}
+    const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+    return (
+      <Pressable
+        ref={ref}
+        onKeyDown={onKeyDown}
+        onPress={() => navigation.navigate(route)}
+        onPressIn={() => setIsPressed(true)}
+        onPressOut={() => setIsPressed(false)}
+        onHoverIn={() => setIsHovered(true)}
+        onHoverOut={() => setIsHovered(false)}
+        accessibilityRole="button"
+        accessibilityLabel={label}
+        style={localStyles.drawerListItem}
+        onAccessibilityTap={() => navigation.navigate(route)}
+        focusable={true}
+      >
+        <View style={styles.indentContainer}>
+          <SelectedNavigationItemPill
+            currentRoute={currentRoute}
+            itemRoute={route}
+          />
+          <Text accessible={false} style={styles.icon}>
+            {icon}
+          </Text>
+        </View>
+        <Text accessible={false} style={styles.drawerText}>
+          {label}
         </Text>
-      </View>
-      <Text accessible={false} style={styles.drawerText}>
-        {label}
-      </Text>
-    </Pressable>
-  );
-};
+      </Pressable>
+    );
+  },
+);
 
 type DrawerCollapsibleCategoryProps = {
   categoryLabel: string;
@@ -179,11 +185,7 @@ const DrawerCollapsibleCategory = ({
 
   const onPress = () => {
     if (isExpanded && containsCurrentRoute) {
-      // Drawer will automatically close when navigating to a new route, by design:
-      // https://github.com/react-navigation/react-navigation/pull/4394
-      // As a workaround, we allow you to get a category page when the category
-      // is expanded but you aren't on the category page now.
-      navigation.navigate(categoryRoute, {category: categoryLabel});
+      navigation.navigate(categoryRoute, { category: categoryLabel });
     } else {
       setIsExpanded(!isExpanded);
     }
@@ -195,7 +197,8 @@ const DrawerCollapsibleCategory = ({
       accessible={true}
       accessibilityRole="button"
       accessibilityLabel={categoryLabel}
-      onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
+      onAccessibilityTap={() => setIsExpanded(!isExpanded)}
+    >
       <Pressable
         style={localStyles.drawerListItem}
         onPress={() => onPress()}
@@ -204,7 +207,8 @@ const DrawerCollapsibleCategory = ({
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
         accessible={false}
-        onAccessibilityTap={() => onPress()}>
+        onAccessibilityTap={() => onPress()}
+      >
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -237,24 +241,24 @@ const DrawerCollapsibleCategory = ({
   );
 };
 
-const DrawerListView = (props) => {
-  // Home and Settings drawer items have already been manually loaded.
-  const filterPredicate = (item) => item.type !== '';
+const DrawerListView = (props: {
+  navigation: any;
+  currentRoute: string;
+}) => {
+  const filterPredicate = (item: any) => item.type !== '';
   const filteredList = RNGalleryList.filter(filterPredicate);
 
   let categoryWithCurrentRoute = '';
 
-  // Create an array for each category
-  let categoryMap = new Map();
+  let categoryMap = new Map<string, Array<{ label: string; icon: string }>>();
   RNGalleryCategories.forEach((category) => {
     categoryMap.set(category.label, []);
   });
 
-  // Populate the category arrays
   filteredList.forEach((item) => {
     let category = item.type;
     let categoryList = categoryMap.get(category);
-    categoryList?.push({label: item.key, icon: item.icon});
+    categoryList?.push({ label: item.key, icon: item.icon });
     if (item.key === props.currentRoute) {
       categoryWithCurrentRoute = category;
     }
@@ -264,6 +268,7 @@ const DrawerListView = (props) => {
     <View>
       {RNGalleryCategories.map((category) => (
         <DrawerCollapsibleCategory
+          key={category.label}
           categoryLabel={category.label}
           categoryIcon={category.icon}
           items={categoryMap.get(category.label)}
@@ -276,12 +281,39 @@ const DrawerListView = (props) => {
   );
 };
 
-function CustomDrawerContent({navigation}) {
+function CustomDrawerContent({ navigation }: { navigation: any }) {
   const isDrawerOpen =
     getDrawerStatusFromState(navigation.getState()) === 'open';
 
   const navigationState = navigation.getState();
   const currentRoute = navigationState.routeNames[navigationState.index];
+
+  // Added refs for hamburger and settings
+  const hamburgerRef = useRef<Pressable>(null);
+  const settingsRef = useRef<Pressable>(null);
+
+  // Focus hamburger when drawer opens
+  useEffect(() => {
+    if (isDrawerOpen && hamburgerRef.current) {
+      setTimeout(() => {
+        hamburgerRef.current?.focus();
+      }, 300);
+    }
+  }, [isDrawerOpen]);
+
+  // Keyboard navigation handlers for cycling focus
+  const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
+    if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
+      e.preventDefault();
+      settingsRef.current?.focus();
+    }
+  };
+  const onSettingsKeyDown = (e: RNKeyboardEvent) => {
+    if (e.nativeEvent.key === 'Tab' && !e.nativeEvent.shiftKey) {
+      e.preventDefault();
+      hamburgerRef.current?.focus();
+    }
+  };
 
   if (!isDrawerOpen) {
     return <View />;
@@ -289,12 +321,16 @@ function CustomDrawerContent({navigation}) {
   return (
     <View style={styles.drawer}>
       <Pressable
+        ref={hamburgerRef}
         accessibilityRole="button"
         accessibilityLabel="Navigation bar expanded"
-        {...{tooltip: 'Collapse Menu'}}
+        tooltip="Collapse Menu"
         style={styles.menu}
         onPress={() => navigation.closeDrawer()}
-        onAccessibilityTap={() => navigation.closeDrawer()}>
+        onAccessibilityTap={() => navigation.closeDrawer()}
+        onKeyDown={onHamburgerKeyDown}
+        focusable={true}
+      >
         <Text style={styles.icon}>&#xE700;</Text>
       </Pressable>
       <DrawerListItem
@@ -317,11 +353,14 @@ function CustomDrawerContent({navigation}) {
       </ScrollView>
       <View style={styles.drawerDivider} />
       <DrawerListItem
+        ref={settingsRef}
         route="Settings"
         label="Settings"
         icon="&#xE713;"
         navigation={navigation}
         currentRoute={currentRoute}
+        onKeyDown={onSettingsKeyDown}
+        focusable={true}
       />
     </View>
   );
@@ -333,8 +372,9 @@ function MyDrawer() {
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
-      screenOptions={{headerShown: false}}
-      defaultStatus="closed">
+      screenOptions={{ headerShown: false }}
+      defaultStatus="closed"
+    >
       {RNGalleryList.map((item) => (
         <Drawer.Screen
           name={item.key}
@@ -364,7 +404,8 @@ export default function App() {
                 : theme === 'dark'
                 ? DarkTheme
                 : LightTheme
-            }>
+            }
+          >
             <MyDrawer />
           </NavigationContainer>
         </ThemeContext.Provider>
