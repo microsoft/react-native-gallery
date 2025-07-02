@@ -312,9 +312,7 @@ function CustomDrawerContent({navigation}) {
         currentRoute={currentRoute}
       />
       <View style={styles.drawerDivider} />
-      <ScrollView>
-        <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-      </ScrollView>
+      <DrawerListView navigation={navigation} currentRoute={currentRoute} />
       <View style={styles.drawerDivider} />
       <DrawerListItem
         route="Settings"
