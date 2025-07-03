@@ -5,7 +5,6 @@ import {
   Pressable,
   Text,
   useColorScheme,
-  ScrollView,
   KeyboardEvent as RNKeyboardEvent,
 } from 'react-native';
 import { NavigationContainer } from './Navigation';
@@ -360,9 +359,7 @@ return (
     />
 
     <View style={styles.drawerDivider} />
-    <ScrollView>
       <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-    </ScrollView>
     <View style={styles.drawerDivider} />
 
     <DrawerListItem
