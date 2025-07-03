@@ -228,12 +228,9 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
       style={{
         flex: 1,
         maxWidth: DEFAULT_DRAWER_WIDTH,
-        paddingLeft: 16, // Add padding for spacing
+        paddingLeft: 16,
+        paddingRight: 6,
       }}
-      contentContainerStyle={{
-        paddingVertical: 10, // Add vertical padding for better spacing
-      }}
-      keyboardShouldPersistTaps="handled"
     >
       {drawerContent({navigation})}
     </ScrollView>
