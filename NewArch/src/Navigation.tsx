@@ -227,7 +227,7 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
     <ScrollView
       style={{
         flex: 1,
-        maxWidth: DEFAULT_DRAWER_WIDTH,
+        width: DEFAULT_DRAWER_WIDTH,
         paddingLeft: 16, // Add padding for spacing
       }}
       contentContainerStyle={{
@@ -249,9 +249,8 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
                 <Pressable
                   style={{
                     backgroundColor: PlatformColor('Background'),
-                    maxWidth: DEFAULT_DRAWER_WIDTH,
-                    height: '100%',
-                    width: '100%'}}
+                    width: DEFAULT_DRAWER_WIDTH,
+                    height: '100%'}}
                     onPress={() => setDrawerDesiredOpen(false)}
                     onAccessibilityTap={() => setDrawerDesiredOpen(false)}
                     />
@@ -260,9 +259,8 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
             <Animated.View
               style={{
                 position: 'absolute',
-                maxWidth: DEFAULT_DRAWER_WIDTH,
+                width: DEFAULT_DRAWER_WIDTH,
                 height: '100%',
-                width: '100%',
                 transform: [{translateX: slideAnim}]}}
               >
               {drawer}
