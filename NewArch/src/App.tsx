@@ -5,7 +5,6 @@ import {
   Pressable,
   Text,
   useColorScheme,
-  ScrollView,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
@@ -312,9 +311,7 @@ function CustomDrawerContent({navigation}) {
         currentRoute={currentRoute}
       />
       <View style={styles.drawerDivider} />
-      <ScrollView>
-        <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-      </ScrollView>
+      <DrawerListView navigation={navigation} currentRoute={currentRoute} />
       <View style={styles.drawerDivider} />
       <DrawerListItem
         route="Settings"

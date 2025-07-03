@@ -4,6 +4,7 @@ import {
   Easing,
   PlatformColor,
   Pressable,
+  ScrollView,
   View,
   useAnimatedValue,
 } from 'react-native';
@@ -222,7 +223,21 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
   };
 
   // Create the drawer content
-  const drawer = drawerIsOpen && drawerContent({navigation});
+  const drawer = drawerIsOpen && (
+    <ScrollView
+      style={{
+        flex: 1,
+        maxWidth: DEFAULT_DRAWER_WIDTH,
+        paddingLeft: 16, // Add padding for spacing
+      }}
+      contentContainerStyle={{
+        paddingVertical: 10, // Add vertical padding for better spacing
+      }}
+      keyboardShouldPersistTaps="handled"
+    >
+      {drawerContent({navigation})}
+    </ScrollView>
+  );
 
   return (
     <NavigationContext.Provider value={navigation}>

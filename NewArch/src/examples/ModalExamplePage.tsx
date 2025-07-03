@@ -82,7 +82,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
           title="Open Modal"
           onPress={() => {
             setModal1(!modal1);
-          }}></Button>
+          }} />
         <Modal visible={modal1}>
           <View style={{width: 500, height: 50}}>
             <Text>This is a simple Modal</Text>
@@ -90,7 +90,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
               title="Close Modal"
               onPress={() => {
                 setModal1(!modal1);
-              }}></Button>
+              }} />
           </View>
         </Modal>
       </Example>
@@ -101,7 +101,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
           title="Open Modal"
           onPress={() => {
             setModal2(!modal2);
-          }}></Button>
+          }} />
         <Modal visible={modal2}>
           <View style={[styles.centeredView, styles.modalBackdrop]}>
             <View style={styles.modalView}>
@@ -113,7 +113,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
                 style={styles.button}
                 onPress={() => {
                   setModal2(!modal2);
-                }}></Button>
+                }} />
             </View>
           </View>
         </Modal>
@@ -123,7 +123,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
           title="Open Modal"
           onPress={() => {
             setModal3(!modal3);
-          }}></Button>
+          }} />
           <View style={styles.container}>
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
@@ -147,7 +147,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
               title="Close Modal"
               onPress={() => {
                 setModal3(!modal3);
-              }}></Button>
+              }} />
           </View>
         </Modal>
       </Example>
