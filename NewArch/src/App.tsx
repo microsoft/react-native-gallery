@@ -25,6 +25,7 @@ import {
 import { PlatformColor } from 'react-native';
 import HighContrastTheme from './themes/HighContrastTheme';
 import useHighContrastState from './hooks/useHighContrastState';
+import { InteractionManager } from 'react-native';
 
 const styles = StyleSheet.create({
   menu: {
@@ -288,20 +289,21 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   const navigationState = navigation.getState();
   const currentRoute = navigationState.routeNames[navigationState.index];
 
-  // Added refs for hamburger and settings
+  // Refs for hamburger, home and settings buttons
   const hamburgerRef = useRef<Pressable>(null);
+  const homeRef = useRef<Pressable>(null);
   const settingsRef = useRef<Pressable>(null);
 
-  // Focus hamburger when drawer opens
+  // When drawer opens, focus the Home menu item
   useEffect(() => {
-    if (isDrawerOpen && hamburgerRef.current) {
-      setTimeout(() => {
-        hamburgerRef.current?.focus();
-      }, 300);
-    }
-  }, [isDrawerOpen]);
+  if (isDrawerOpen && homeRef.current) {
+    InteractionManager.runAfterInteractions(() => {
+      homeRef.current?.focus();
+    });
+  }
+}, [isDrawerOpen]);
 
-  // Keyboard navigation handlers for cycling focus
+  // Keyboard navigation looping handlers
   const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
     if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
       e.preventDefault();
@@ -315,55 +317,67 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
     }
   };
 
-  if (!isDrawerOpen) {
-    return <View />;
-  }
-  return (
-    <View style={styles.drawer}>
-      <Pressable
-        ref={hamburgerRef}
-        accessibilityRole="button"
-        accessibilityLabel="Navigation bar expanded"
-        tooltip="Collapse Menu"
-        style={styles.menu}
-        onPress={() => navigation.closeDrawer()}
-        onAccessibilityTap={() => navigation.closeDrawer()}
-        onKeyDown={onHamburgerKeyDown}
-        focusable={true}
-      >
-        <Text style={styles.icon}>&#xE700;</Text>
-      </Pressable>
-      <DrawerListItem
-        route="Home"
-        label="Home"
-        icon="&#xE80F;"
-        navigation={navigation}
-        currentRoute={currentRoute}
-      />
-      <DrawerListItem
-        route="All samples"
-        label="All samples"
-        icon="&#xE71D;"
-        navigation={navigation}
-        currentRoute={currentRoute}
-      />
-      <View style={styles.drawerDivider} />
-      <ScrollView>
-        <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-      </ScrollView>
-      <View style={styles.drawerDivider} />
-      <DrawerListItem
-        ref={settingsRef}
-        route="Settings"
-        label="Settings"
-        icon="&#xE713;"
-        navigation={navigation}
-        currentRoute={currentRoute}
-        onKeyDown={onSettingsKeyDown}
-        focusable={true}
-      />
-    </View>
-  );
+  if (!isDrawerOpen) return <View />;
+
+
+return (
+  <View style={styles.drawer}>
+    <Pressable
+      ref={hamburgerRef}
+      accessibilityRole="button"
+      accessibilityLabel="Navigation bar expanded"
+      tooltip="Collapse Menu"
+      style={styles.menu}
+      onPress={() => navigation.closeDrawer()}
+      onAccessibilityTap={() => navigation.closeDrawer()}
+      onKeyDown={onHamburgerKeyDown}
+      keyboardEvents={['keyDown']}
+      focusable={true}
+    >
+      <Text style={styles.icon}>&#xE700;</Text>
+    </Pressable>
+
+    <DrawerListItem
+      ref={homeRef}
+      route="Home"
+      label="Home"
+      icon="&#xE80F;"
+      navigation={navigation}
+      currentRoute={currentRoute}
+      onKeyDown={() => {}}
+      keyboardEvents={['keyDown']}    // <-- Added this for consistent keyboard handling
+      focusable={true}
+    />
+
+    <DrawerListItem
+      route="All samples"
+      label="All samples"
+      icon="&#xE71D;"
+      navigation={navigation}
+      currentRoute={currentRoute}
+      keyboardEvents={['keyDown']}    // Optional, for consistent behavior
+      focusable={true}
+    />
+
+    <View style={styles.drawerDivider} />
+    <ScrollView>
+      <DrawerListView navigation={navigation} currentRoute={currentRoute} />
+    </ScrollView>
+    <View style={styles.drawerDivider} />
+
+    <DrawerListItem
+      ref={settingsRef}
+      route="Settings"
+      label="Settings"
+      icon="&#xE713;"
+      navigation={navigation}
+      currentRoute={currentRoute}
+      onKeyDown={onSettingsKeyDown}
+      keyboardEvents={['keyDown']}
+      focusable={true}
+    />
+  </View>
+);
 }
 
 const Drawer = createDrawerNavigator();
@@ -374,6 +388,7 @@ function MyDrawer() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{ headerShown: false }}
       defaultStatus="closed"
+      initialRouteName="Home" // <-- Home is the default screen
     >
       {RNGalleryList.map((item) => (
         <Drawer.Screen
