@@ -5,7 +5,6 @@ import {
   Pressable,
   Text,
   useColorScheme,
-  ScrollView,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
