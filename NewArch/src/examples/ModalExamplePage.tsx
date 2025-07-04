@@ -8,6 +8,15 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
   const [modal1, setModal1] = React.useState(false);
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
+  const changeModal1 = () => {
+    setModal1(!modal1);
+  };
+  const changeModal2 = () => {
+    setModal2(!modal2);
+  };
+  const changeModal3 = () => {
+    setModal3(!modal3);
+  };
 
   const [onDismissCount, setOnDismissCount] = React.useState(0);
   const [onShowCount, setOnShowCount] = React.useState(0);
@@ -85,24 +94,16 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         <Button
           title="Open Modal"
           accessibilityLabel='Open Modal'
-          onPress={() => {
-            setModal1(!modal1);
-          }}
-          onAccessibilityTap={() => {
-            setModal1(!modal1);
-          }}/>
+          onPress={changeModal1}
+          onAccessibilityTap={changeModal1}/>
         <Modal visible={modal1}>
           <View style={{width: 500, height: 50}}>
             <Text>This is a simple Modal</Text>
             <Button
               title="Close Modal"
               accessibilityLabel='Close Modal'
-              onPress={() => {
-                setModal1(!modal1);
-              }}
-              onAccessibilityTap={() => {
-                setModal1(!modal1);
-              }}/>
+              onPress={changeModal1}
+              onAccessibilityTap={changeModal1}/>
           </View>
         </Modal>
       </Example>
@@ -112,12 +113,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         <Button
           title="Open Modal"
           accessibilityLabel='Open Modal'
-          onPress={() => {
-            setModal2(!modal2);
-          }}
-          onAccessibilityTap={() => {
-            setModal2(!modal2);
-          }}/>
+          onPress={changeModal2}
+          onAccessibilityTap={changeModal2}/>
         <Modal visible={modal2}>
           <View style={[styles.centeredView, styles.modalBackdrop]}>
             <View style={styles.modalView}>
@@ -128,12 +125,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
                 title="Close Modal"
                 accessibilityLabel='Close Modal'
                 style={styles.button}
-                onPress={() => {
-                  setModal2(!modal2);
-                }}
-                onAccessibilityTap={() => {
-                  setModal2(!modal2);
-                }}/>
+                onPress={changeModal2}
+                onAccessibilityTap={changeModal2}/>
             </View>
           </View>
         </Modal>
@@ -142,12 +135,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         <Button
           title="Open Modal"
           accessibilityLabel="Open Modal"
-          onPress={() => {
-            setModal3(!modal3);
-          }}
-          onAccessibilityTap={() => {
-            setModal3(!modal3);
-          }}/>
+          onPress={changeModal3}
+          onAccessibilityTap={changeModal3}/>
           <View style={styles.container}>
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
@@ -170,12 +159,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
             <Button
               title="Close Modal"
               accessibilityLabel="Close Modal"
-              onPress={() => {
-                setModal3(!modal3);
-              }}
-              onAccessibilityTap={() => {
-                setModal3(!modal3);
-              }}/>
+              onPress={changeModal3}
+              onAccessibilityTap={changeModal3}/>
           </View>
         </Modal>
       </Example>
