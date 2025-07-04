@@ -84,7 +84,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Modal." code={example1jsx}>
         <Button
           title="Open Modal"
-          accessibilityLabel='Open Modal'
+          accessibilityLabel="Open Modal"
           onPress={() => {
             setModal1(!modal1);
           }}
