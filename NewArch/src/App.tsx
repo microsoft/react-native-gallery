@@ -185,6 +185,10 @@ const DrawerCollapsibleCategory = ({
 
   const onPress = () => {
     if (isExpanded && containsCurrentRoute) {
+      // Drawer will automatically close when navigating to a new route, by design:
+      // https://github.com/react-navigation/react-navigation/pull/4394
+      // As a workaround, we allow you to get a category page when the category
+      // is expanded but you aren't on the category page now.
       navigation.navigate(categoryRoute, { category: categoryLabel });
     } else {
       setIsExpanded(!isExpanded);
