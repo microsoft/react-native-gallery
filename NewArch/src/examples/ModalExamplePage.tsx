@@ -93,7 +93,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Modal." code={example1jsx}>
         <Button
           title="Open Modal"
-          accessibilityLabel='Open Modal'
+          accessibilityLabel="Open Modal"
           onPress={changeModal1}
           onAccessibilityTap={changeModal1}/>
         <Modal visible={modal1}>
@@ -101,7 +101,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
             <Text>This is a simple Modal</Text>
             <Button
               title="Close Modal"
-              accessibilityLabel='Close Modal'
+              accessibilityLabel="Close Modal"
               onPress={changeModal1}
               onAccessibilityTap={changeModal1}/>
           </View>
@@ -112,7 +112,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         code={example2jsx}>
         <Button
           title="Open Modal"
-          accessibilityLabel='Open Modal'
+          accessibilityLabel="Open Modal"
           onPress={changeModal2}
           onAccessibilityTap={changeModal2}/>
         <Modal visible={modal2}>
@@ -123,7 +123,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
               </Text>
               <Button
                 title="Close Modal"
-                accessibilityLabel='Close Modal'
+                accessibilityLabel="Close Modal"
                 style={styles.button}
                 onPress={changeModal2}
                 onAccessibilityTap={changeModal2}/>
