@@ -139,8 +139,7 @@ const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
         accessibilityLabel={label}
         style={localStyles.drawerListItem}
         onAccessibilityTap={() => navigation.navigate(route)}
-        focusable={true}
-      >
+        focusable={true}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -189,7 +188,7 @@ const DrawerCollapsibleCategory = ({
       // https://github.com/react-navigation/react-navigation/pull/4394
       // As a workaround, we allow you to get a category page when the category
       // is expanded but you aren't on the category page now.
-      navigation.navigate(categoryRoute, { category: categoryLabel });
+      navigation.navigate(categoryRoute, {category: categoryLabel});
     } else {
       setIsExpanded(!isExpanded);
     }
@@ -201,8 +200,7 @@ const DrawerCollapsibleCategory = ({
       accessible={true}
       accessibilityRole="button"
       accessibilityLabel={categoryLabel}
-      onAccessibilityTap={() => setIsExpanded(!isExpanded)}
-    >
+      onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
       <Pressable
         style={localStyles.drawerListItem}
         onPress={() => onPress()}
@@ -211,8 +209,7 @@ const DrawerCollapsibleCategory = ({
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
         accessible={false}
-        onAccessibilityTap={() => onPress()}
-      >
+        onAccessibilityTap={() => onPress()}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -262,7 +259,7 @@ const DrawerListView = (props: {
   filteredList.forEach((item) => {
     let category = item.type;
     let categoryList = categoryMap.get(category);
-    categoryList?.push({ label: item.key, icon: item.icon });
+    categoryList?.push({label: item.key, icon: item.icon});
     if (item.key === props.currentRoute) {
       categoryWithCurrentRoute = category;
     }
@@ -335,11 +332,9 @@ return (
       onAccessibilityTap={() => navigation.closeDrawer()}
       onKeyDown={onHamburgerKeyDown}
       keyboardEvents={['keyDown']}
-      focusable={true}
-    >
+      focusable={true}>
       <Text style={styles.icon}>&#xE700;</Text>
     </Pressable>
-
     <DrawerListItem
       ref={homeRef}
       route="Home"
@@ -351,7 +346,6 @@ return (
       keyboardEvents={['keyDown']}    // <-- Added this for consistent keyboard handling
       focusable={true}
     />
-
     <DrawerListItem
       route="All samples"
       label="All samples"
@@ -389,8 +383,7 @@ function MyDrawer() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{ headerShown: false }}
       defaultStatus="closed"
-      initialRouteName="Home" // <-- Home is the default screen
-    >
+      initialRouteName="Home">
       {RNGalleryList.map((item) => (
         <Drawer.Screen
           name={item.key}
@@ -420,8 +413,7 @@ export default function App() {
                 : theme === 'dark'
                 ? DarkTheme
                 : LightTheme
-            }
-          >
+            }>
             <MyDrawer />
           </NavigationContainer>
         </ThemeContext.Provider>
