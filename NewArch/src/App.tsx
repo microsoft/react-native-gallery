@@ -7,12 +7,12 @@ import {
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
 } from 'react-native';
-import { NavigationContainer } from './Navigation';
+import {NavigationContainer} from './Navigation';
 import {
   createDrawerNavigator,
   getDrawerStatusFromState,
 } from './Navigation';
-import RNGalleryList, { RNGalleryCategories } from './RNGalleryList';
+import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
 import {
@@ -21,10 +21,10 @@ import {
   ThemeContext,
   ThemeSetterContext,
 } from './themes/Theme';
-import { PlatformColor } from 'react-native';
+import {PlatformColor} from 'react-native';
 import HighContrastTheme from './themes/HighContrastTheme';
 import useHighContrastState from './hooks/useHighContrastState';
-import { InteractionManager } from 'react-native';
+import {InteractionManager} from 'react-native';
 
 const styles = StyleSheet.create({
   menu: {
