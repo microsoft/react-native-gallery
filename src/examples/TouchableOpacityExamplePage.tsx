@@ -4,20 +4,15 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '@react-navigation/native';
-import useFontScale from '../hooks/useFontScale';
 
 export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
   const [title, setTitle] = useState(0);
   const [focus, setFocus] = useState(false);
   const {colors} = useTheme();
-  const fontScale = useFontScale();
-
-  // Scale heights based on font scale to accommodate larger text
-  const scaledHeight40 = Math.ceil(40 * fontScale);
 
   const example1jsx = `<TouchableOpacity
   style={{
-    height: ${scaledHeight40},
+    height: 40,
     width: 150,
     backgroundColor: colors.border,
     borderRadius: 3,
@@ -31,7 +26,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
 
   const example2jsx = `<TouchableOpacity
   style={{
-    height: ${scaledHeight40},
+    height: 40,
     width: 150,
     backgroundColor: colors.primary,
     borderRadius: 3,
@@ -45,7 +40,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
 
   const example3jsx = `<TouchableOpacity
   style={{
-    height: ${scaledHeight40},
+    height: 40,
     width: 150,
     backgroundColor: colors.border,
     borderRadius: 3,
@@ -60,7 +55,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
 
   const example4jsx = `<TouchableOpacity
 style={{
-  height: ${scaledHeight40},
+  height: 40,
   width: 150,
   backgroundColor: colors.text,
   borderRadius: 3,
@@ -76,7 +71,7 @@ activeOpacity={0.8}>
 
   const example5jsx = `<TouchableOpacity
 style={{
-  height: ${scaledHeight40},
+  height: 40,
   width: 250,
   backgroundColor: colors.border,
   borderRadius: 3,
@@ -119,7 +114,7 @@ onPress={() => {}}>
           accessibilityRole="button"
           accessibilityLabel={'simple example touchableOpacity'}
           style={{
-            height: scaledHeight40,
+            height: 40,
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
@@ -139,7 +134,7 @@ onPress={() => {}}>
           accessibilityRole="button"
           accessibilityLabel={'colored example TouchableOpacity'}
           style={{
-            height: scaledHeight40,
+            height: 40,
             width: 150,
             backgroundColor: colors.primary,
             borderRadius: 3,
@@ -156,7 +151,7 @@ onPress={() => {}}>
           accessibilityRole="button"
           accessibilityLabel={'disabled example TouchableOpacity'}
           style={{
-            height: scaledHeight40,
+            height: 40,
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
@@ -179,7 +174,7 @@ onPress={() => {}}>
           accessibilityHint={'click me to increase the example counter'}
           accessibilityValue={{text: `${title}`}}
           style={{
-            height: scaledHeight40,
+            height: 40,
             width: 150,
             backgroundColor:
               Platform.OS === 'windows'
@@ -203,7 +198,7 @@ onPress={() => {}}>
           accessibilityRole="button"
           accessibilityLabel={'example TouchableOpacity responsive to focus'}
           style={{
-            height: scaledHeight40,
+            height: 40,
             width: 250,
             backgroundColor:
               Platform.OS === 'windows'
