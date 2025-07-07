@@ -46,7 +46,11 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A colored Button." code={example2jsx}>
         <Button
           title="Button"
-          color={PlatformColor('Accent')}
+          color={
+            Platform.OS === 'windows'
+              ? PlatformColor('Accent')
+              : 'silver'
+          }
           accessibilityLabel={'example colored button2'}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
