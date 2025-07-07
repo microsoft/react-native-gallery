@@ -4,10 +4,16 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import useFontScale from '../hooks/useFontScale';
 
 export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
-  const example1jsx = `<ScrollView style={{height: 40}}>
+  const fontScale = useFontScale();
+
+  // Scale heights based on font scale to accommodate larger text
+  const scaledHeight40 = Math.ceil(40 * fontScale);
+  const scaledHeight50 = Math.ceil(50 * fontScale);
+  const example1jsx = `<ScrollView style={{height: ${scaledHeight40}}}>
   <Text>
     Here is a very long snippet of text. The goal is for this text to be
     too long to fit inside this view which has a height restriction.
@@ -22,7 +28,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
     but you can add any type of ReactNode inside of of a ScrollView.
   </Text>
 </ScrollView>`;
-  const example2jsx = `<ScrollView style={{height: 40}} horizontal={true}>
+  const example2jsx = `<ScrollView style={{height: ${scaledHeight40}}} horizontal={true}>
   <Text>
     Here is a very long snippet of text. The goal is for this text to be
     too long to fit inside this view which has a height restriction.
@@ -32,7 +38,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
     ScrollView.
   </Text>
 </ScrollView>`;
-  const example3jsx = `<ScrollView style={{height: 40}} scrollEnabled={false}>
+  const example3jsx = `<ScrollView style={{height: ${scaledHeight40}}} scrollEnabled={false}>
   <Text>
     Here is a very long snippet of text. The goal is for this text to be
     too long to fit inside this view which has a height restriction.
@@ -47,7 +53,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
     but you can add any type of ReactNode inside of of a ScrollView.
   </Text>
 </ScrollView>`;
-  const example4jsx = `<ScrollView style={{height: 50, padding: 10}}>
+  const example4jsx = `<ScrollView style={{height: ${scaledHeight50}, padding: 10}}>
   <Text numberOfLines={5}>
     Here is a very long snippet of text. The goal is for this text to be
     too long to fit inside this view which has a height restriction.
@@ -100,7 +106,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
         },
       ]}>
       <Example title="A simple ScrollView with text." code={example1jsx}>
-        <ScrollView style={{height: 40}}>
+        <ScrollView style={{height: scaledHeight40}}>
           <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
@@ -117,7 +123,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
         </ScrollView>
       </Example>
       <Example title="A horizontal ScrollView." code={example2jsx}>
-        <ScrollView style={{height: 40}} horizontal={true}>
+        <ScrollView style={{height: scaledHeight40}} horizontal={true}>
           <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
@@ -129,7 +135,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
         </ScrollView>
       </Example>
       <Example title="A disabled ScrollView." code={example3jsx}>
-        <ScrollView style={{height: 40}} scrollEnabled={false}>
+        <ScrollView style={{height: scaledHeight40}} scrollEnabled={false}>
           <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
@@ -148,7 +154,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
       <Example
         title="Nested ScrollViews with opposite scroll direction."
         code={example4jsx}>
-        <ScrollView style={{height: 50, padding: 10}}>
+        <ScrollView style={{height: scaledHeight50, padding: 10}}>
           <Text numberOfLines={5} style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
@@ -162,7 +168,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
             example of a simple ScrollView. We just have text inside this view,
             but you can add any type of ReactNode inside of of a ScrollView.
           </Text>
-          <ScrollView style={{height: 40}} horizontal={true}>
+          <ScrollView style={{height: scaledHeight40}} horizontal={true}>
             <Text
               style={{
                 fontStyle: 'italic',
