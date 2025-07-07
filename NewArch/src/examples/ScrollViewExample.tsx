@@ -1,14 +1,13 @@
 'use strict';
-import {Text, ScrollView} from 'react-native';
+import {Text, ScrollView, PixelRatio} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
-import useFontScale from '../hooks/useFontScale';
 
 export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
-  const fontScale = useFontScale();
+  const fontScale = PixelRatio.getFontScale();
 
   // Scale heights based on font scale to accommodate larger text
   const scaledHeight40 = Math.ceil(40 * fontScale);

@@ -1,16 +1,15 @@
 'use strict';
-import {Text, TouchableOpacity, Platform, PlatformColor} from 'react-native';
+import {Text, TouchableOpacity, Platform, PlatformColor, PixelRatio} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
-import useFontScale from '../hooks/useFontScale';
 
 export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
   const [title, setTitle] = useState(0);
   const [focus, setFocus] = useState(false);
   const {colors} = useTheme();
-  const fontScale = useFontScale();
+  const fontScale = PixelRatio.getFontScale();
 
   // Scale heights based on font scale to accommodate larger text
   const scaledHeight40 = Math.ceil(40 * fontScale);

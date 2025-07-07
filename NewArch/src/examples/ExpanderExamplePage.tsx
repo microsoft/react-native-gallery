@@ -1,5 +1,5 @@
 'use strict';
-import {Text, View} from 'react-native';
+import {Text, View, PixelRatio} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -7,11 +7,10 @@ import {useTheme} from '../Navigation';
 import {Expander} from '@fluentui-react-native/experimental-expander';
 import CheckBox from '@react-native-community/checkbox';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import useFontScale from '../hooks/useFontScale';
 
 export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
-  const fontScale = useFontScale();
+  const fontScale = PixelRatio.getFontScale();
 
   // Scale heights based on font scale to accommodate larger text
   const scaledHeight50 = Math.ceil(50 * fontScale);
