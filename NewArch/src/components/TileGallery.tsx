@@ -152,7 +152,7 @@ const TileGallery = () => {
       title="Code samples"
       description="Find samples that demonstrate specific tasks, features, and APIs."
       link="https://github.com/microsoft/react-native-windows-samples">
-      <Text style={{fontFamily: 'Segoe MDL2 Assets', fontSize: 58}}>&#xE943;</Text>
+      <Text style={{fontFamily: 'Segoe MDL2 Assets', fontSize: 43}}>&#xE943;</Text>
     </HeaderTile>,
     <HeaderTile
       title="Partner Center"
