@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   View,
   StyleSheet,
   Pressable,
   Text,
   useColorScheme,
+  KeyboardEvent as RNKeyboardEvent,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
@@ -23,6 +24,7 @@ import {
 import {PlatformColor} from 'react-native';
 import HighContrastTheme from './themes/HighContrastTheme';
 import useHighContrastState from './hooks/useHighContrastState';
+import {InteractionManager} from 'react-native';
 
 const styles = StyleSheet.create({
   menu: {
@@ -112,44 +114,48 @@ type DrawerListItemProps = {
   icon?: string;
   navigation: any;
   currentRoute: string;
+  onKeyDown?: (e: RNKeyboardEvent) => void;
+  ref?: React.Ref<Pressable>;
 };
-const DrawerListItem = ({
-  route,
-  label,
-  icon,
-  navigation,
-  currentRoute,
-}: DrawerListItemProps) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [isPressed, setIsPressed] = React.useState(false);
+const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
+  (
+    { route, label, icon, navigation, currentRoute, onKeyDown },
+    ref,
+  ) => {
+    const [isHovered, setIsHovered] = React.useState(false);
+    const [isPressed, setIsPressed] = React.useState(false);
 
-  const localStyles = createDrawerListItemStyles(isHovered, isPressed);
-  return (
-    <Pressable
-      onPress={() => navigation.navigate(route)}
-      onPressIn={() => setIsPressed(true)}
-      onPressOut={() => setIsPressed(false)}
-      onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      style={localStyles.drawerListItem}
-      onAccessibilityTap={() => navigation.navigate(route)}>
-      <View style={styles.indentContainer}>
-        <SelectedNavigationItemPill
-          currentRoute={currentRoute}
-          itemRoute={route}
-        />
-        <Text accessible={false} style={styles.icon}>
-          {icon}
+    const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+    return (
+      <Pressable
+        ref={ref}
+        onKeyDown={onKeyDown}
+        onPress={() => navigation.navigate(route)}
+        onPressIn={() => setIsPressed(true)}
+        onPressOut={() => setIsPressed(false)}
+        onHoverIn={() => setIsHovered(true)}
+        onHoverOut={() => setIsHovered(false)}
+        accessibilityRole="button"
+        accessibilityLabel={label}
+        style={localStyles.drawerListItem}
+        onAccessibilityTap={() => navigation.navigate(route)}
+        focusable={true}>
+        <View style={styles.indentContainer}>
+          <SelectedNavigationItemPill
+            currentRoute={currentRoute}
+            itemRoute={route}
+          />
+          <Text accessible={false} style={styles.icon}>
+            {icon}
+          </Text>
+        </View>
+        <Text accessible={false} style={styles.drawerText}>
+          {label}
         </Text>
-      </View>
-      <Text accessible={false} style={styles.drawerText}>
-        {label}
-      </Text>
-    </Pressable>
-  );
-};
+      </Pressable>
+    );
+  },
+);
 
 type DrawerCollapsibleCategoryProps = {
   categoryLabel: string;
@@ -236,20 +242,20 @@ const DrawerCollapsibleCategory = ({
   );
 };
 
-const DrawerListView = (props) => {
-  // Home and Settings drawer items have already been manually loaded.
-  const filterPredicate = (item) => item.type !== '';
+const DrawerListView = (props: {
+  navigation: any;
+  currentRoute: string;
+}) => {
+  const filterPredicate = (item: any) => item.type !== '';
   const filteredList = RNGalleryList.filter(filterPredicate);
 
   let categoryWithCurrentRoute = '';
 
-  // Create an array for each category
-  let categoryMap = new Map();
+  let categoryMap = new Map<string, Array<{ label: string; icon: string }>>();
   RNGalleryCategories.forEach((category) => {
     categoryMap.set(category.label, []);
   });
 
-  // Populate the category arrays
   filteredList.forEach((item) => {
     let category = item.type;
     let categoryList = categoryMap.get(category);
@@ -263,6 +269,7 @@ const DrawerListView = (props) => {
     <View>
       {RNGalleryCategories.map((category) => (
         <DrawerCollapsibleCategory
+          key={category.label}
           categoryLabel={category.label}
           categoryIcon={category.icon}
           items={categoryMap.get(category.label)}
@@ -275,53 +282,97 @@ const DrawerListView = (props) => {
   );
 };
 
-function CustomDrawerContent({navigation}) {
+function CustomDrawerContent({ navigation }: { navigation: any }) {
   const isDrawerOpen =
     getDrawerStatusFromState(navigation.getState()) === 'open';
 
   const navigationState = navigation.getState();
   const currentRoute = navigationState.routeNames[navigationState.index];
 
-  if (!isDrawerOpen) {
-    return <View />;
+  // Refs for hamburger, home and settings buttons
+  const hamburgerRef = useRef<Pressable>(null);
+  const homeRef = useRef<Pressable>(null);
+  const settingsRef = useRef<Pressable>(null);
+
+  // When drawer opens, focus the Home menu item
+  useEffect(() => {
+  if (isDrawerOpen && homeRef.current) {
+    InteractionManager.runAfterInteractions(() => {
+      homeRef.current?.focus();
+    });
   }
-  return (
-    <View style={styles.drawer}>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="Navigation bar expanded"
-        {...{tooltip: 'Collapse Menu'}}
-        style={styles.menu}
-        onPress={() => navigation.closeDrawer()}
-        onAccessibilityTap={() => navigation.closeDrawer()}>
-        <Text style={styles.icon}>&#xE700;</Text>
-      </Pressable>
-      <DrawerListItem
-        route="Home"
-        label="Home"
-        icon="&#xE80F;"
-        navigation={navigation}
-        currentRoute={currentRoute}
-      />
-      <DrawerListItem
-        route="All samples"
-        label="All samples"
-        icon="&#xE71D;"
-        navigation={navigation}
-        currentRoute={currentRoute}
-      />
-      <View style={styles.drawerDivider} />
+}, [isDrawerOpen]);
+
+  // Keyboard navigation looping handlers
+  const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
+    if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
+      e.preventDefault();
+      settingsRef.current?.focus();
+    }
+  };
+  const onSettingsKeyDown = (e: RNKeyboardEvent) => {
+    if (e.nativeEvent.key === 'Tab' && !e.nativeEvent.shiftKey) {
+      e.preventDefault();
+      hamburgerRef.current?.focus();
+    }
+  };
+
+  if (!isDrawerOpen) return <View />;
+
+
+return (
+  <View style={styles.drawer}>
+    <Pressable
+      ref={hamburgerRef}
+      accessibilityRole="button"
+      accessibilityLabel="Navigation bar expanded"
+      tooltip="Collapse Menu"
+      style={styles.menu}
+      onPress={() => navigation.closeDrawer()}
+      onAccessibilityTap={() => navigation.closeDrawer()}
+      onKeyDown={onHamburgerKeyDown}
+      keyboardEvents={['keyDown']}
+      focusable={true}>
+      <Text style={styles.icon}>&#xE700;</Text>
+    </Pressable>
+    <DrawerListItem
+      ref={homeRef}
+      route="Home"
+      label="Home"
+      icon="&#xE80F;"
+      navigation={navigation}
+      currentRoute={currentRoute}
+      onKeyDown={() => {}}
+      keyboardEvents={['keyDown']}    // <-- Added this for consistent keyboard handling
+      focusable={true}
+    />
+    <DrawerListItem
+      route="All samples"
+      label="All samples"
+      icon="&#xE71D;"
+      navigation={navigation}
+      currentRoute={currentRoute}
+      keyboardEvents={['keyDown']}    // Optional, for consistent behavior
+      focusable={true}
+    />
+
+    <View style={styles.drawerDivider} />
       <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-      <View style={styles.drawerDivider} />
-      <DrawerListItem
-        route="Settings"
-        label="Settings"
-        icon="&#xE713;"
-        navigation={navigation}
-        currentRoute={currentRoute}
-      />
-    </View>
-  );
+    <View style={styles.drawerDivider} />
+
+    <DrawerListItem
+      ref={settingsRef}
+      route="Settings"
+      label="Settings"
+      icon="&#xE713;"
+      navigation={navigation}
+      currentRoute={currentRoute}
+      onKeyDown={onSettingsKeyDown}
+      keyboardEvents={['keyDown']}
+      focusable={true}
+    />
+  </View>
+);
 }
 
 const Drawer = createDrawerNavigator();
@@ -330,8 +381,9 @@ function MyDrawer() {
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
-      screenOptions={{headerShown: false}}
-      defaultStatus="closed">
+      screenOptions={{ headerShown: false }}
+      defaultStatus="closed"
+      initialRouteName="Home">
       {RNGalleryList.map((item) => (
         <Drawer.Screen
           name={item.key}
