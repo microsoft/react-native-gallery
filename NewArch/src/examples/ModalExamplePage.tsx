@@ -57,6 +57,28 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
       </View>
     </Modal>`;
 
+  // Add refs for the first focusable element in each modal
+  const modal1FirstButtonRef = React.useRef<any>(null);
+  const modal2FirstButtonRef = React.useRef<any>(null);
+  const modal3FirstButtonRef = React.useRef<any>(null);
+
+  // Focus the first element when modal opens
+  React.useEffect(() => {
+    if (modal1 && modal1FirstButtonRef.current && typeof modal1FirstButtonRef.current.focus === 'function') {
+      modal1FirstButtonRef.current.focus();
+    }
+  }, [modal1]);
+  React.useEffect(() => {
+    if (modal2 && modal2FirstButtonRef.current && typeof modal2FirstButtonRef.current.focus === 'function') {
+      modal2FirstButtonRef.current.focus();
+    }
+  }, [modal2]);
+  React.useEffect(() => {
+    if (modal3 && modal3FirstButtonRef.current && typeof modal3FirstButtonRef.current.focus === 'function') {
+      modal3FirstButtonRef.current.focus();
+    }
+  }, [modal3]);
+
   return (
     <Page
       title="Modal"
@@ -87,6 +109,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
           <View style={{width: 500, height: 50}}>
             <Text>This is a simple Modal</Text>
             <Button
+              ref={modal1FirstButtonRef}
               title="Close Modal"
               onPress={() => {
                 setModal1(!modal1);
@@ -109,8 +132,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
                 This is a Modal with more complex styling
               </Text>
               <Button
+                ref={modal2FirstButtonRef}
                 title="Close Modal"
-                style={styles.button}
                 onPress={() => {
                   setModal2(!modal2);
                 }} />
@@ -144,6 +167,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
               <Text>onDismiss event Count = {onDismissCount}</Text>
             </View>
             <Button
+              ref={modal3FirstButtonRef}
               title="Close Modal"
               onPress={() => {
                 setModal3(!modal3);
