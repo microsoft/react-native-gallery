@@ -124,7 +124,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
               ref={modal1FirstButtonRef}
               title="Close Modal"
               accessibilityLabel="Close Modal"
-              onPress={changeModal1}/>
+              onPress={changeModal1}
+              onAccessibilityTap={changeModal1}/>
           </View>
         </Modal>
       </Example>
@@ -145,7 +146,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
                 ref={modal2FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
-                onPress={changeModal2}/>
+                onPress={changeModal2}
+                onAccessibilityTap={changeModal2}/>
             </View>
           </View>
         </Modal>
@@ -178,7 +180,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
               ref={modal3FirstButtonRef}
               title="Close Modal"
               accessibilityLabel="Close Modal"
-              onPress={changeModal3}/>
+              onPress={changeModal3}
+              onAccessibilityTap={changeModal3}/>
           </View>
         </Modal>
       </Example>
