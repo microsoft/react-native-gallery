@@ -116,7 +116,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         <Button
           title="Open Modal"
           accessibilityLabel="Open Modal"
-          onPress={changeModal1}/>
+          onPress={changeModal1}
+          onAccessibilityTap={changeModal1}/>
         <Modal visible={modal1}>
           <View style={{width: 500, height: 50}}>
             <Text>This is a simple Modal</Text>
@@ -135,7 +136,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         <Button
           title="Open Modal"
           accessibilityLabel="Open Modal"
-          onPress={changeModal2}/>
+          onPress={changeModal2}
+          onAccessibilityTap={changeModal2}/>
         <Modal visible={modal2}>
           <View style={[styles.centeredView, styles.modalBackdrop]}>
             <View style={styles.modalView}>
@@ -156,7 +158,8 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
         <Button
           title="Open Modal"
           accessibilityLabel="Open Modal"
-          onPress={changeModal3}/>
+          onPress={changeModal3}
+          onAccessibilityTap={changeModal3}/>
           <View style={styles.container}>
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
