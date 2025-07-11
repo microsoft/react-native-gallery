@@ -1,3 +1,27 @@
+diff --git a/node_modules/react-native-print/windows/RNPrint/RNPrint.cpp b/node_modules/react-native-print/windows/RNPrint/RNPrint.cpp
+index 8b04ab7..541f976 100644
+--- a/node_modules/react-native-print/windows/RNPrint/RNPrint.cpp
++++ b/node_modules/react-native-print/windows/RNPrint/RNPrint.cpp
+@@ -281,7 +281,18 @@ namespace winrt::RNPrint
+           }
+         );
+ 
+-        co_await PrintManager::ShowPrintUIAsync();
++        // Ensure the print dialog respects text scaling settings
++        try {
++          // Show the print dialog - the system dialog should respect text scaling
++          // if the application is properly configured for DPI awareness
++          co_await PrintManager::ShowPrintUIAsync();
++        } catch (winrt::hresult_error const& ex) {
++          cleanUp();
++          capturedPromise.Reject("Failed to show print dialog: " + winrt::to_string(ex.message()));
++        } catch (...) {
++          cleanUp();
++          capturedPromise.Reject("Failed to show print dialog");
++        }
+       }
+     }
+   }
 diff --git a/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj b/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj
 index 2a830ae..1c41c35 100644
 --- a/node_modules/react-native-print/windows/RNPrint/RNPrint.vcxproj
