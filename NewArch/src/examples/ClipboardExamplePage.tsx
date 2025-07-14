@@ -1,6 +1,6 @@
 'use strict';
 import React, {useState} from 'react';
-import {AccessibilityInfo, Button, Text, TextInput, View} from 'react-native';
+import {Button, Text, TextInput, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Clipboard from '@react-native-clipboard/clipboard';
@@ -10,6 +10,8 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
     'This text will be copied to the clipboard',
   );
   const [textFromClipboard, setTextFromClipboard] = useState('');
+  const [accessibilityValueCopy, setAccessibilityValueCopy] = useState('');
+  const [accessibilityValuePaste, setAccessibilityValuePaste] = useState('');
   const example1jsx = `<Button
   title="Copy text to the Clipboard"
   onPress={() => Clipboard.setString(textToCopy)}/>`;
@@ -44,18 +46,17 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
             accessibilityLabel="Copy text to the Clipboard"
+            accessibilityValue={{text: accessibilityValueCopy}}
             title="Copy text to the Clipboard"
             onPress={() => {
               Clipboard.setString(textToCopy);
-              AccessibilityInfo.announceForAccessibility(
-                'Text copied to clipboard',
-              );
+              setAccessibilityValueCopy(''); // reset before reading to update on multiple clicks
+              setAccessibilityValueCopy('Text copied to clipboard');
             }}
             onAccessibilityTap={() => {
               Clipboard.setString(textToCopy);
-              AccessibilityInfo.announceForAccessibility(
-                'Text copied to clipboard',
-              );
+              setAccessibilityValueCopy('');
+              setAccessibilityValueCopy('Text copied to clipboard');              
             }}
           />
           <TextInput
@@ -70,18 +71,17 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
             accessibilityLabel="Paste text from the Clipboard"
+            accessibilityValue={{text: accessibilityValuePaste}}
             title="Paste text from the Clipboard"
             onPress={() => {
               getClipboardText();
-              AccessibilityInfo.announceForAccessibility(
-                'Text pasted from clipboard',
-              );
+              setAccessibilityValuePaste('');
+              setAccessibilityValuePaste('Text pasted from clipboard');             
             }}
             onAccessibilityTap={() => {
               getClipboardText();
-              AccessibilityInfo.announceForAccessibility(
-                'Text pasted from clipboard',
-              );
+              setAccessibilityValuePaste('');
+              setAccessibilityValuePaste('Text pasted from clipboard');
             }}
           />
           <Text>{textFromClipboard}</Text>
