@@ -216,6 +216,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
   const renderItem = ({item}) => {
     return (
       <TouchableHighlight
+        accessibilityRole="listitem"
+        accessibilityLabel={item.title}
         style={styles.item}
         onPress={() => {
           setSelectedIndex(item.index);
@@ -232,6 +234,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     return (
       <TouchableHighlight
         accessibilityRole="listitem"
+        accessibilityLabel={item.title}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -250,6 +253,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
         accessibilityRole="listitem"
+        accessibilityLabel={item.title}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -260,13 +264,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
             setList(getList.concat([item.index]));
           }
         }}
-        accessibilityLabel={item.title}>
+        >
         <View style={styles.item}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
       </TouchableHighlight>
     ) : (
       <TouchableHighlight
+        accessibilityRole="listitem"
+        accessibilityLabel={item.title}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
