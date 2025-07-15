@@ -4,6 +4,7 @@ import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
+import {useIsFocused} from '@react-navigation/native';
 import {ScreenWrapper} from './ScreenWrapper';
 
 const styles = StyleSheet.create({
@@ -91,12 +92,31 @@ export function Page(props: {
   documentation: {label: string; url: string}[];
   children: React.ReactNode;
 }) {
-  //const {colors} = useTheme();
-  //const isScreenFocused = useIsFocused();
+  const isScreenFocused = useIsFocused();
+  const titleRef = React.useRef<Text>(null);
+
+  // Focus the page title when the screen becomes focused after navigation
+  React.useEffect(() => {
+    if (isScreenFocused && titleRef.current) {
+      // Use a small delay to ensure the navigation transition is complete
+      const focusTimeout = setTimeout(() => {
+        titleRef.current?.focus();
+      }, 100);
+
+      return () => clearTimeout(focusTimeout);
+    }
+  }, [isScreenFocused]);
+
   return (
     <ScreenWrapper>
       <View style={styles.titlePane}>
-        <Text accessible accessibilityRole={'header'} style={styles.title}>
+        <Text
+          ref={titleRef}
+          accessible
+          accessibilityRole={'header'}
+          style={styles.title}
+          focusable={true}
+        >
           {props.title}
         </Text>
         <View>
