@@ -50,11 +50,19 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
             title="Copy text to the Clipboard"
             onPress={() => {
               Clipboard.setString(textToCopy);
+              // Issue #622: Workaround
+              // AccessibilityInfo.announceForAccessibility(
+              //   'Text copied to clipboard',
+              // );
               setAccessibilityValueCopy(''); // reset before reading to update on multiple clicks
               setAccessibilityValueCopy('Text copied to clipboard');
             }}
             onAccessibilityTap={() => {
               Clipboard.setString(textToCopy);
+              // Issue #622: Workaround
+              // AccessibilityInfo.announceForAccessibility(
+              //   'Text copied to clipboard',
+              // );
               setAccessibilityValueCopy('');
               setAccessibilityValueCopy('Text copied to clipboard');              
             }}
@@ -75,11 +83,19 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
             title="Paste text from the Clipboard"
             onPress={() => {
               getClipboardText();
+              // Issue #622: Workaround
+              // AccessibilityInfo.announceForAccessibility(
+              //   'Text pasted from clipboard',
+              // );
               setAccessibilityValuePaste('');
               setAccessibilityValuePaste('Text pasted from clipboard');             
             }}
             onAccessibilityTap={() => {
               getClipboardText();
+              // Issue #622: Workaround
+              // AccessibilityInfo.announceForAccessibility(
+              //   'Text pasted from clipboard',
+              // );
               setAccessibilityValuePaste('');
               setAccessibilityValuePaste('Text pasted from clipboard');
             }}
