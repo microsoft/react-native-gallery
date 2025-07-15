@@ -1,5 +1,5 @@
 import React from 'react';
-import {PlatformColor, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
@@ -91,10 +91,30 @@ export function Page(props: {
 }) {
   const {colors} = useTheme();
   const isScreenFocused = useIsFocused();
+  const titleRef = React.useRef<Text>(null);
+
+  // Focus the page title when the screen becomes focused after navigation
+  React.useEffect(() => {
+    if (isScreenFocused && titleRef.current) {
+      // Use a small delay to ensure the navigation transition is complete
+      const focusTimeout = setTimeout(() => {
+        titleRef.current?.focus();
+      }, 100);
+
+      return () => clearTimeout(focusTimeout);
+    }
+  }, [isScreenFocused]);
+
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
       <View style={styles.titlePane}>
-        <Text accessible accessibilityRole={'header'} style={styles.title}>
+        <Text
+          ref={titleRef}
+          accessible
+          accessibilityRole={'header'}
+          style={styles.title}
+          focusable={true}
+        >
           {props.title}
         </Text>
         <View>

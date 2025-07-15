@@ -161,6 +161,7 @@ exports[`Button Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -1724,6 +1725,7 @@ exports[`CheckBox Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -3705,6 +3707,7 @@ exports[`Clipboard Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -4870,6 +4873,7 @@ exports[`Config Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -5626,6 +5630,7 @@ exports[`DeviceInfo Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -6717,6 +6722,7 @@ exports[`Expander Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -9643,6 +9649,7 @@ exports[`Flyout Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -13253,6 +13260,7 @@ exports[`Hello Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -14832,6 +14840,7 @@ exports[`Image Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -16880,6 +16889,7 @@ exports[`Networking Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -20664,6 +20674,7 @@ exports[`Picker Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -22820,6 +22831,7 @@ exports[`Popup Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -26689,6 +26701,7 @@ exports[`Pressable Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -29256,6 +29269,7 @@ exports[`Print Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -29980,6 +29994,7 @@ exports[`ProgressView Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -30942,6 +30957,7 @@ exports[`SVG Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -32110,6 +32126,7 @@ exports[`ScrollView Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -34132,6 +34149,7 @@ exports[`SensitiveInfo Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -36152,6 +36170,7 @@ exports[`Slider Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -37836,6 +37855,7 @@ exports[`Switch Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -38887,6 +38907,7 @@ exports[`Text Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -41460,6 +41481,7 @@ exports[`TextInput Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -42998,6 +43020,7 @@ exports[`TextToSpeech Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -43740,6 +43763,7 @@ exports[`TouchableHighlight Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -45663,6 +45687,7 @@ exports[`TouchableOpacity Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -48917,6 +48942,7 @@ exports[`View Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -53997,6 +54023,7 @@ exports[`WebView Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
@@ -54984,6 +55011,7 @@ exports[`Xaml Example Page 1`] = `
       <Text
         accessibilityRole="header"
         accessible={true}
+        focusable={true}
         style={
           {
             "fontSize": 28,
