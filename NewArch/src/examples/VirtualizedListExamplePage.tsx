@@ -263,8 +263,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
           } else {
             setList(getList.concat([item.index]));
           }
-        }}
-        >
+        }}>
         <View style={styles.item}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
