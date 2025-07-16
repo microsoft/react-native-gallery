@@ -8,7 +8,7 @@ import {
   PlatformColor,
 } from 'react-native';
 import React, {useRef, useEffect} from 'react';
-import {useIsFocused} from './Navigation';
+import {useTheme, useIsFocused} from './Navigation';
 import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
