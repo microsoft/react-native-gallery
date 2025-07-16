@@ -105,7 +105,8 @@ const PageTitle = ({ shouldFocus, focusTimestamp }: { shouldFocus?: boolean; foc
 };
 
 export const HomePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
-  const styles = createStyles();
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
   
   // Check if we should focus based on navigation parameters
