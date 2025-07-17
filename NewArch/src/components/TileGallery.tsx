@@ -63,8 +63,9 @@ type HeaderTileType = PropsWithChildren<{
   title: string;
   description: string;
   link: string;
+  ref?: React.Ref<any>;
 }>;
-const HeaderTile = (props: HeaderTileType): JSX.Element => {
+const HeaderTile = React.forwardRef<any, HeaderTileType>((props, ref) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressing, setIsPressing] = React.useState(false);
   const styles = createStyles(isHovered, isPressing);
@@ -72,6 +73,7 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
   const openInNewWindowIcon = '\uE8A7';
   return (
     <Pressable
+      ref={ref}
       style={styles.headerTile}
       onPress={() => Linking.openURL(props.link)}
       onAccessibilityTap={() => Linking.openURL(props.link)}
@@ -89,11 +91,12 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
       </Text>
     </Pressable>
   );
-};
+});
 
-const TileGallery = () => {
+const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) => {
   const items = [
     <HeaderTile
+      ref={firstTileRef}
       title="Getting started"
       description="An overview of app development options, tools, and samples."
       link="https://learn.microsoft.com/windows/apps/get-started/">

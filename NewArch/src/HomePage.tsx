@@ -7,7 +7,7 @@ import {
   Image,
   PlatformColor,
 } from 'react-native';
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import {useTheme, useIsFocused} from './Navigation';
 import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
@@ -62,8 +62,19 @@ const createStyles = () =>
     },
   });
 
-const PageTitle = () => {
+const PageTitle = ({ shouldFocus, focusTimestamp }: { shouldFocus?: boolean; focusTimestamp?: number }) => {
   const styles = createStyles();
+  const firstTileRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (shouldFocus && firstTileRef.current) {
+      // Small delay to ensure page is fully rendered and hamburger focus is cleared
+      const timer = setTimeout(() => {
+        firstTileRef.current?.focus();
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [shouldFocus, focusTimestamp]); // Include focusTimestamp to trigger on every click
 
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
@@ -87,22 +98,26 @@ const PageTitle = () => {
             React Native Gallery
           </Text>
         </View>
-        <TileGallery />
+        <TileGallery firstTileRef={firstTileRef} />
       </View>
     </View>
   );
 };
 
-export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
+export const HomePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
+  
+  // Check if we should focus based on navigation parameters
+  const shouldFocus = navigation?.parameters?.shouldFocus || false;
+  const focusTimestamp = navigation?.parameters?.focusTimestamp || 0;
 
   return isScreenFocused ? (
     <View>
       <ScreenWrapper doNotInset={true}>
         <ScrollView>
-          <PageTitle />
+          <PageTitle shouldFocus={shouldFocus} focusTimestamp={focusTimestamp} />
           <View style={styles.container}>
             <ListOfComponents
               heading="Recently added samples"
