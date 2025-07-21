@@ -4,8 +4,10 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
+export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstTextInputExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const [text1, setText1] = React.useState('');
@@ -81,6 +83,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple TextInput." code={example1jsx}>
         <TextInput
+          ref={firstTextInputExampleRef}
           style={{
             borderColor: colors.border,
             borderWidth: 1,

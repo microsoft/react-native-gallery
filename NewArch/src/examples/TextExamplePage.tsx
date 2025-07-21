@@ -4,8 +4,10 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TextExamplePage: React.FunctionComponent<{}> = () => {
+export const TextExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstTextExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = '<Text>Here is a line of text.</Text>';
@@ -72,7 +74,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
           url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
         },
       ]}>
-      <Example title="A simple line of Text." code={example1jsx}>
+      <Example ref={firstTextExampleRef} title="A simple line of Text." code={example1jsx}>
         <Text style={{color: colors.text}}>Here is a line of text.</Text>
       </Example>
       <Example title="A line of bolded and italicized Text." code={example2jsx}>
