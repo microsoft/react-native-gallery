@@ -9,8 +9,7 @@ import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const SwitchExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const {colors} = useTheme();
-  
-  // Use the common focus management hook
+
   const firstSwitchRef = usePageFocusManagement(navigation);
 
   const [switch1, setSwitch1] = useState(false);

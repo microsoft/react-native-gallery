@@ -98,8 +98,7 @@ export const HomePage: React.FunctionComponent<{route?: any; navigation?: any}> 
   const {colors} = useTheme();
   const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
-  
-  // Use the consistent focus management hook pattern
+
   const firstTileRef = usePageFocusManagement(navigation);
 
   return isScreenFocused ? (

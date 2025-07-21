@@ -136,6 +136,7 @@ const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
                 All samples
               </Text>
               <GroupedListOfAllComponents
+                route={route}
                 navigation={navigation}
                 firstTileRef={firstTileRef}
               />

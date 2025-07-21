@@ -306,8 +306,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           <View
             ref={firstVirtualizedListRef}
             style={styles.container}
-            accessible={true}
-            accessibilityRole="list"
             accessibilityLabel="VirtualizedList container">
             <VirtualizedList
               accessibilityRole="list"

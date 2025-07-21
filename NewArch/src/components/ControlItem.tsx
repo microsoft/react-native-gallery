@@ -8,6 +8,7 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
+import type {IRNGalleryExample} from '../RNGalleryList';
 //import {useTheme} from '@react-navigation/native';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
@@ -65,10 +66,10 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   });
 
 type HomeComponentTileProps = {
-  item: any;
+  item: IRNGalleryExample;
   navigation: any;
 };
-const HomeComponentTile = React.forwardRef<View, HomeComponentTileProps>(
+const HomeComponentTile = React.forwardRef<any, HomeComponentTileProps>(
   ({item, navigation}, ref) => {
   // Comparable WinUI gallery control:
   // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7

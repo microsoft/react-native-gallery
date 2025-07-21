@@ -7,8 +7,7 @@ import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
 export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const [title, setTitle] = useState(0);
-  
-  // Use the common focus management hook
+
   const firstButtonRef = usePageFocusManagement(navigation);
 
   const example1jsx = '<Button title="Button" onPress={() => {}} />';
