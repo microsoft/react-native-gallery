@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 
 /**
  * Custom hook for managing page focus - replicates HomePage focus behavior
@@ -14,16 +14,13 @@ export const usePageFocusManagement = (navigation?: any) => {
   const shouldFocus = navigation?.parameters?.shouldFocus || false;
   const focusTimestamp = navigation?.parameters?.focusTimestamp || 0;
 
-  // Focus the first element when page loads with focus management
-  useEffect(() => {
-    if (shouldFocus && firstElementRef.current) {
-      // Small delay to ensure page is fully rendered and hamburger focus is cleared
-      const timer = setTimeout(() => {
-        firstElementRef.current?.focus();
-      }, 300);
-      return () => clearTimeout(timer);
+  // Focus the first element when page loads with focus management OR on initial app load
+  useLayoutEffect(() => {
+    if (firstElementRef.current) {
+      // Focus immediately after DOM updates but before paint
+      firstElementRef.current?.focus();
     }
-  }, [shouldFocus, focusTimestamp]); // Include focusTimestamp to trigger on every click
+  }, [shouldFocus, focusTimestamp]);
 
   return firstElementRef;
 };

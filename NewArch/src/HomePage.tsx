@@ -7,12 +7,13 @@ import {
   Image,
   PlatformColor,
 } from 'react-native';
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 import {useTheme, useIsFocused} from './Navigation';
 import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
+import {usePageFocusManagement} from './hooks/usePageFocusManagement';
 // import LinearGradient from 'react-native-linear-gradient';
 
 const createStyles = () =>
@@ -62,19 +63,8 @@ const createStyles = () =>
     },
   });
 
-const PageTitle = ({ shouldFocus, focusTimestamp }: { shouldFocus?: boolean; focusTimestamp?: number }) => {
+const PageTitle = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) => {
   const styles = createStyles();
-  const firstTileRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (shouldFocus && firstTileRef.current) {
-      // Small delay to ensure page is fully rendered and hamburger focus is cleared
-      const timer = setTimeout(() => {
-        firstTileRef.current?.focus();
-      }, 300);
-      return () => clearTimeout(timer);
-    }
-  }, [shouldFocus, focusTimestamp]); // Include focusTimestamp to trigger on every click
 
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
@@ -109,15 +99,14 @@ export const HomePage: React.FunctionComponent<{route?: any; navigation?: any}> 
   const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
   
-  // Check if we should focus based on navigation parameters
-  const shouldFocus = navigation?.parameters?.shouldFocus || false;
-  const focusTimestamp = navigation?.parameters?.focusTimestamp || 0;
+  // Use the consistent focus management hook pattern
+  const firstTileRef = usePageFocusManagement(navigation);
 
   return isScreenFocused ? (
     <View>
       <ScreenWrapper doNotInset={true}>
         <ScrollView>
-          <PageTitle shouldFocus={shouldFocus} focusTimestamp={focusTimestamp} />
+          <PageTitle firstTileRef={firstTileRef} />
           <View style={styles.container}>
             <ListOfComponents
               heading="Recently added samples"
