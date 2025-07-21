@@ -130,7 +130,7 @@ const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
       <Pressable
         ref={ref}
         onKeyDown={onKeyDown}
-        onPress={() => navigation.navigate(route, route === 'Home' ? { shouldFocus: true, focusTimestamp: Date.now() } : {})}
+        onPress={() => navigation.navigate(route, { shouldFocus: true, focusTimestamp: Date.now() })}
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
@@ -138,7 +138,7 @@ const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
         accessibilityRole="button"
         accessibilityLabel={label}
         style={localStyles.drawerListItem}
-        onAccessibilityTap={() => navigation.navigate(route, route === 'Home' ? { shouldFocus: true, focusTimestamp: Date.now() } : {})}
+        onAccessibilityTap={() => navigation.navigate(route, { shouldFocus: true, focusTimestamp: Date.now() })}
         focusable={true}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill

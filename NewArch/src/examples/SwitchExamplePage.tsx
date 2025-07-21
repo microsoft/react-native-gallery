@@ -4,10 +4,14 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
-export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
+export const SwitchExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const {colors} = useTheme();
+  
+  // Use the common focus management hook
+  const firstSwitchRef = usePageFocusManagement(navigation);
 
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(false);
@@ -57,6 +61,7 @@ export const SwitchExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Switch." code={example1jsx}>
         <Switch
+          ref={firstSwitchRef}
           accessibilityLabel="simple switch example"
           value={switch1}
           onValueChange={onSwitchChange1}
