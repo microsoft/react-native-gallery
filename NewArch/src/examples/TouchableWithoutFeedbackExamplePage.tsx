@@ -5,9 +5,12 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
 import {TouchableWithoutFeedback} from 'react-native-windows';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
-  () => {
+export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
+  navigation?: any;
+}> = ({navigation}) => {
+    const firstTouchableWithoutFeedbackRef = usePageFocusManagement(navigation);
     const [title, setTitle] = useState(0);
     const {colors} = useTheme();
 
@@ -67,6 +70,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
         <Text style={{fontWeight: 'bold'}}>{pressableMsg}</Text>
         <Example title="A simple TouchableWithoutFeedback." code={example1jsx}>
           <TouchableWithoutFeedback
+            ref={firstTouchableWithoutFeedbackRef}
             accessibilityRole="button"
             accessibilityLabel={'simple example TouchableWithoutFeedback'}
             onPress={() => {}}

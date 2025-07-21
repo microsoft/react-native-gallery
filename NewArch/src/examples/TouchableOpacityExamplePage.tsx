@@ -4,8 +4,10 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
+export const TouchableOpacityExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstTouchableOpacityRef = usePageFocusManagement(navigation);
   const [title, setTitle] = useState(0);
   const [focus, setFocus] = useState(false);
   const {colors} = useTheme();
@@ -118,6 +120,7 @@ onAccessibilityTap={() => {}}>
       ]}>
       <Example title="A simple TouchableOpacity." code={example1jsx}>
         <TouchableOpacity
+          ref={firstTouchableOpacityRef}
           accessibilityRole="button"
           accessibilityLabel={'simple example touchableOpacity'}
           style={{
