@@ -4,6 +4,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
 const Data = [
   {
@@ -89,7 +90,8 @@ const Data = [
   },
 ];
 
-export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
+export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstFlatListRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = `<FlatList
@@ -150,7 +152,7 @@ export const FlatListExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js',
         },
       ]}>
-      <Example title="A simple FlatList." code={example1jsx}>
+      <Example ref={firstFlatListRef} title="A simple FlatList." code={example1jsx}>
         <FlatList
           data={Data}
           renderItem={renderItem}

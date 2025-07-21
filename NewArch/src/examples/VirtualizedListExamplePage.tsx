@@ -14,9 +14,11 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 // import CheckBox from '@react-native-community/checkbox';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 // import {Picker} from '@react-native-picker/picker';
 
-export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
+export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstVirtualizedListRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = `
@@ -301,7 +303,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple VirtualizedList." code={example1jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container}>
+          <View
+            ref={firstVirtualizedListRef}
+            style={styles.container}
+            accessible={true}
+            accessibilityRole="list"
+            accessibilityLabel="VirtualizedList container">
             <VirtualizedList
               accessibilityRole="list"
               data={DATA}

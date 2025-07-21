@@ -30,11 +30,11 @@ const createStyles = (colors: any) =>
     },
   });
 
-export function Example(props: {
+export const Example = React.forwardRef<any, {
   title: string;
   code: string;
   children: React.ReactNode;
-}) {
+}>((props, ref) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   return (
@@ -52,7 +52,7 @@ export function Example(props: {
             accessibilityLabel="Source code">
             <Code>{props.code}</Code>
             <View style={{position: 'absolute', right: 12, top: 12}}>
-              <CopyToClipboardButton content={props.code} />
+              <CopyToClipboardButton ref={ref} content={props.code} />
             </View>
           </View>
         </View>
@@ -63,4 +63,4 @@ export function Example(props: {
       )}
     </View>
   );
-}
+});
