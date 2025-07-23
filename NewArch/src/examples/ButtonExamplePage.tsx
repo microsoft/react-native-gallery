@@ -3,9 +3,12 @@ import {Button, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
+export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const [title, setTitle] = useState(0);
+
+  const firstButtonRef = usePageFocusManagement(navigation);
 
   const example1jsx = '<Button title="Button" onPress={() => {}} />';
   const example2jsx =
@@ -37,6 +40,7 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Button." code={example1jsx}>
         <Button
+          ref={firstButtonRef}
           title="Button"
           accessibilityLabel={'example simple button1'}
           onPress={() => {}}

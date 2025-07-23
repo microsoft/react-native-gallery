@@ -4,8 +4,10 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const ImageExamplePage: React.FunctionComponent<{}> = () => {
+export const ImageExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstImageExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = `<Image
@@ -59,7 +61,7 @@ export const ImageExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
         },
       ]}>
-      <Example title="A simple Image from web source." code={example1jsx}>
+      <Example ref={firstImageExampleRef} title="A simple Image from web source." code={example1jsx}>
         <Image
           style={{width: 50, height: 50}}
           source={{

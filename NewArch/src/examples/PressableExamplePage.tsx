@@ -4,8 +4,10 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const PressableExamplePage: React.FunctionComponent<{}> = () => {
+export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstPressableRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const [timesPressed, setTimesPressed] = useState(1);
@@ -89,6 +91,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Pressable component." code={example1jsx}>
         <Pressable
+          ref={firstPressableRef}
           accessibilityRole="button"
           accessibilityLabel={'example pressable'}
           accessibilityHint={

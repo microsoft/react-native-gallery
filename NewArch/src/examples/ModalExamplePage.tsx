@@ -3,8 +3,10 @@ import {Modal, Button, View, Text, StyleSheet, Dimensions, PlatformColor} from '
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const ModalExamplePage: React.FunctionComponent<{}> = () => {
+export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstModalExampleRef = usePageFocusManagement(navigation);
   const [modal1, setModal1] = React.useState(false);
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
@@ -114,6 +116,7 @@ export const ModalExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple Modal." code={example1jsx}>
         <Button
+          ref={firstModalExampleRef}
           title="Open Modal"
           accessibilityLabel="Open Modal"
           onPress={changeModal1}

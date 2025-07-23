@@ -4,8 +4,10 @@ import {Button, Text, TextInput, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Clipboard from '@react-native-clipboard/clipboard';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
+export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstClipboardButtonRef = usePageFocusManagement(navigation);
   const [textToCopy, setTextToCopy] = useState(
     'This text will be copied to the clipboard',
   );
@@ -45,6 +47,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Copy text to the Clipboard." code={example1jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
+            ref={firstClipboardButtonRef}
             accessibilityLabel="Copy text to the Clipboard"
             accessibilityValue={{text: accessibilityValueCopy}}
             title="Copy text to the Clipboard"

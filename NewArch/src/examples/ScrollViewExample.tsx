@@ -4,8 +4,10 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
+export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstScrollViewExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
   const example1jsx = `<ScrollView style={{height: 40}}>
   <Text>
@@ -99,7 +101,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
           url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ScrollViewManager.h',
         },
       ]}>
-      <Example title="A simple ScrollView with text." code={example1jsx}>
+      <Example ref={firstScrollViewExampleRef} title="A simple ScrollView with text." code={example1jsx}>
         <ScrollView style={{height: 40}}>
           <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be

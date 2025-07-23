@@ -8,8 +8,8 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-//import {useTheme} from '@react-navigation/native';
 import type {IRNGalleryExample} from '../RNGalleryList';
+//import {useTheme} from '@react-navigation/native';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
@@ -69,7 +69,8 @@ type HomeComponentTileProps = {
   item: IRNGalleryExample;
   navigation: any;
 };
-const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
+const HomeComponentTile = React.forwardRef<any, HomeComponentTileProps>(
+  ({item, navigation}, ref) => {
   // Comparable WinUI gallery control:
   // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/ItemTemplates.xaml#L7
   //const {colors} = useTheme();
@@ -93,11 +94,12 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
     //   'The element's ControlType requires valid values for SizeOfSet and PositionInSet.'
     // As a result, sticking with "button"
     <Pressable
+      ref={ref}
       accessibilityRole="button"
       accessibilityLabel={
         item.key === 'Button' ? 'Button1 control' : item.key + ' control'
       }
-      accessibilityHint={'click to view the ' + item.pageKey + ' sample page'}
+      accessibilityHint={'click to view the ' + item.key + ' sample page'}
       style={styles.controlItem}
       onPress={() => {
         navigation.navigate(item.key);
@@ -151,6 +153,6 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
       )}
     </Pressable>
   );
-};
+});
 
 export {HomeComponentTile};

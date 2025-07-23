@@ -13,6 +13,7 @@ import RNGalleryList from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {TileGallery} from './components/TileGallery';
 import {ListOfComponents} from './ComponentListPage';
+import {usePageFocusManagement} from './hooks/usePageFocusManagement';
 // import LinearGradient from 'react-native-linear-gradient';
 
 const createStyles = () =>
@@ -62,7 +63,7 @@ const createStyles = () =>
     },
   });
 
-const PageTitle = () => {
+const PageTitle = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) => {
   const styles = createStyles();
 
   return (
@@ -87,22 +88,24 @@ const PageTitle = () => {
             React Native Gallery
           </Text>
         </View>
-        <TileGallery />
+        <TileGallery firstTileRef={firstTileRef} />
       </View>
     </View>
   );
 };
 
-export const HomePage: React.FunctionComponent<{}> = ({navigation}) => {
+export const HomePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
+
+  const firstTileRef = usePageFocusManagement(navigation);
 
   return isScreenFocused ? (
     <View>
       <ScreenWrapper doNotInset={true}>
         <ScrollView>
-          <PageTitle />
+          <PageTitle firstTileRef={firstTileRef} />
           <View style={styles.container}>
             <ListOfComponents
               heading="Recently added samples"

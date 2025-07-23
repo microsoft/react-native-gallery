@@ -5,6 +5,7 @@ import {useIsFocused} from './Navigation';
 import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {HomeComponentTile} from './components/ControlItem';
+import {usePageFocusManagement} from './hooks/usePageFocusManagement';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -44,11 +45,13 @@ type ListOfComponentsProps = {
   navigation: any;
   heading: string;
   items: any[];
+  firstTileRef?: React.RefObject<View>;
 };
 const ListOfComponents = ({
   navigation,
   heading,
   items,
+  firstTileRef,
 }: ListOfComponentsProps) => {
   const styles = createStyles();
   return (
@@ -60,9 +63,10 @@ const ListOfComponents = ({
         {heading}
       </Text>
       <View style={styles.controlItems}>
-        {items.map((item) => (
+        {items.map((item, index) => (
           <HomeComponentTile
             key={item.key}
+            ref={index === 0 ? firstTileRef : undefined}
             item={item}
             navigation={navigation}
           />
@@ -74,20 +78,30 @@ const ListOfComponents = ({
 
 type GroupedListOfAllComponentsProps = {
   navigation: any;
+  firstTileRef?: React.RefObject<View>;
 };
 const GroupedListOfAllComponents = ({
   navigation,
+  firstTileRef,
 }: GroupedListOfAllComponentsProps) => {
   return (
     <View>
-      {RNGalleryCategories.map((category) => (
-        <ListOfComponents
-          key={category.label}
-          navigation={navigation}
-          heading={category.label}
-          items={RNGalleryList.filter((item) => item.type === category.label)}
-        />
-      ))}
+      {RNGalleryCategories.map((category, categoryIndex) => {
+        const items = RNGalleryList.filter((item) => item.type === category.label);
+        if (items.length === 0) {
+          return null;
+        }
+        
+        return (
+          <ListOfComponents
+            key={category.label}
+            navigation={navigation}
+            heading={category.label}
+            items={items}
+            firstTileRef={categoryIndex === 0 ? firstTileRef : undefined}
+          />
+        );
+      })}
     </View>
   );
 };
@@ -97,6 +111,7 @@ type ComponentListPageProps = {
   navigation: any;
 };
 const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
+  const firstTileRef = usePageFocusManagement(navigation);
   const styles = createStyles();
   const isScreenFocused = useIsFocused();
 
@@ -112,6 +127,7 @@ const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
                 navigation={navigation}
                 heading={category}
                 items={RNGalleryList.filter((item) => item.type === category)}
+                firstTileRef={firstTileRef}
               />
             </View>
           ) : (
@@ -122,6 +138,7 @@ const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
               <GroupedListOfAllComponents
                 route={route}
                 navigation={navigation}
+                firstTileRef={firstTileRef}
               />
             </View>
           )}
