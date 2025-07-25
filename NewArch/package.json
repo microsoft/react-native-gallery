@@ -15,8 +15,8 @@
     "@react-native-clipboard/clipboard": "^1.16.1",
     "lowlight": "^1.17.0",
     "react": "19.0.0",
-    "react-native": "^0.79.0",
-    "react-native-windows": "^0.79.0"
+    "react-native": "^0.79.2",
+    "react-native-windows": "^0.79.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -25,10 +25,10 @@
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
-    "@react-native/babel-preset": "0.79.0",
-    "@react-native/eslint-config": "0.79.0",
-    "@react-native/metro-config": "0.79.0",
-    "@react-native/typescript-config": "0.79.0",
+    "@react-native/babel-preset": "0.79.2",
+    "@react-native/eslint-config": "0.79.2",
+    "@react-native/metro-config": "0.79.2",
+    "@react-native/typescript-config": "0.79.2",
     "@rnx-kit/jest-preset": "^0.1.17",
     "@types/jest": "^29.5.13",
     "@types/react": "19.0.0",
