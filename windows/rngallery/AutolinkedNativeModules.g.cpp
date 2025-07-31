@@ -3,111 +3,12 @@
 #include "pch.h"
 #include "AutolinkedNativeModules.g.h"
 
-// Includes from @fluentui-react-native/experimental-expander
-#include <winrt/ReactNativeExpander.h>
-
-// Includes from @react-native-clipboard/clipboard
-#include <winrt/NativeClipboard.h>
-
-// Includes from @react-native-community/checkbox
-#include <winrt/CheckboxWindows.h>
-
-// Includes from @react-native-community/datetimepicker
-#include <winrt/DateTimePicker.h>
-
-// Includes from @react-native-community/progress-view
-#include <winrt/progress_view.h>
-
-// Includes from @react-native-community/slider
-#include <winrt/SliderWindows.h>
-
-// Includes from @react-native-picker/picker
-#include <winrt/ReactNativePicker.h>
-
-// Includes from @wwimmo/react-native-sketch-canvas
-#include <winrt/RNSketchCanvas.h>
-
-// Includes from react-native-config
-#include <winrt/RNCConfig.h>
-
-// Includes from react-native-device-info
-#include <winrt/RNDeviceInfoCPP.h>
-
-// Includes from react-native-linear-gradient
-#include <winrt/RNLinearGradient.h>
-
-// Includes from react-native-permissions
-#include <winrt/RNPermissions.h>
-
-// Includes from react-native-print
-#include <winrt/RNPrint.h>
-
-// Includes from react-native-sensitive-info
-#include <winrt/RNSensitiveInfoCPP.h>
-
-// Includes from react-native-svg
-#include <winrt/RNSVG.h>
-
-// Includes from react-native-track-player
-#include <winrt/RNTrackPlayer.h>
-
-// Includes from react-native-tts
-#include <winrt/RNTTS.h>
-
-// Includes from react-native-webview
-#include <winrt/ReactNativeWebView.h>
-
-// Includes from react-native-xaml
-#include <winrt/ReactNativeXaml.h>
-
-// Includes from react-native-windows-hello
-#include <winrt/ReactNativeWindowsHello.h>
-
 namespace winrt::Microsoft::ReactNative
 {
 
 void RegisterAutolinkedNativeModulePackages(winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::ReactNative::IReactPackageProvider> const& packageProviders)
 { 
-    // IReactPackageProviders from @fluentui-react-native/experimental-expander
-    packageProviders.Append(winrt::ReactNativeExpander::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-clipboard/clipboard
-    packageProviders.Append(winrt::NativeClipboard::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/checkbox
-    packageProviders.Append(winrt::CheckboxWindows::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/datetimepicker
-    packageProviders.Append(winrt::DateTimePicker::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/progress-view
-    packageProviders.Append(winrt::progress_view::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-community/slider
-    packageProviders.Append(winrt::SliderWindows::ReactPackageProvider());
-    // IReactPackageProviders from @react-native-picker/picker
-    packageProviders.Append(winrt::ReactNativePicker::ReactPackageProvider());
-    // IReactPackageProviders from @wwimmo/react-native-sketch-canvas
-    packageProviders.Append(winrt::RNSketchCanvas::ReactPackageProvider());
-    // IReactPackageProviders from react-native-config
-    packageProviders.Append(winrt::RNCConfig::ReactPackageProvider());
-    // IReactPackageProviders from react-native-device-info
-    packageProviders.Append(winrt::RNDeviceInfoCPP::ReactPackageProvider());
-    // IReactPackageProviders from react-native-linear-gradient
-    packageProviders.Append(winrt::RNLinearGradient::ReactPackageProvider());
-    // IReactPackageProviders from react-native-permissions
-    packageProviders.Append(winrt::RNPermissions::ReactPackageProvider());
-    // IReactPackageProviders from react-native-print
-    packageProviders.Append(winrt::RNPrint::ReactPackageProvider());
-    // IReactPackageProviders from react-native-sensitive-info
-    packageProviders.Append(winrt::RNSensitiveInfoCPP::ReactPackageProvider());
-    // IReactPackageProviders from react-native-svg
-    packageProviders.Append(winrt::RNSVG::ReactPackageProvider());
-    // IReactPackageProviders from react-native-track-player
-    packageProviders.Append(winrt::RNTrackPlayer::ReactPackageProvider());
-    // IReactPackageProviders from react-native-tts
-    packageProviders.Append(winrt::RNTTS::ReactPackageProvider());
-    // IReactPackageProviders from react-native-webview
-    packageProviders.Append(winrt::ReactNativeWebView::ReactPackageProvider());
-    // IReactPackageProviders from react-native-xaml
-    packageProviders.Append(winrt::ReactNativeXaml::ReactPackageProvider());
-    // IReactPackageProviders from react-native-windows-hello
-    packageProviders.Append(winrt::ReactNativeWindowsHello::ReactPackageProvider());
+    UNREFERENCED_PARAMETER(packageProviders);
 }
 
 }

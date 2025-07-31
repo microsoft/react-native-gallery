@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This project was created with react-native-windows 0.80.0-preview.1 -->
 <Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\LottieGen.MsBuild.7.0.5\build\native\LottieGen.MsBuild.props" Condition="Exists('..\packages\LottieGen.MsBuild.7.0.5\build\native\LottieGen.MsBuild.props')" />
   <Import Project="$(SolutionDir)\ExperimentalFeatures.props" Condition="Exists('$(SolutionDir)\ExperimentalFeatures.props')" />
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
@@ -61,8 +60,7 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -115,76 +113,14 @@
       <SubType>Designer</SubType>
     </AppxManifest>
   </ItemGroup>
-  <!-- lottie-react-native animations imports -->
   <ItemGroup>
-    <LottieAnimation Include="Assets\Animations\Loading-Atom.json" Name="MyAnimation" />
-    <LottieAnimation Include="Assets\Animations\LottieLogo.json" Name="LottieLogo" />
-    <LottieAnimation Include="Assets\Animations\Loading-Atom-Colored.json" Name="Loading Atom Colored" />
-  </ItemGroup>
-  <!-- end -->
-  <ItemGroup>
-    <Image Include="Assets\BadgeLogo.scale-100.png">
-      <DeploymentContent>true</DeploymentContent>
-    </Image>
-    <Image Include="Assets\BadgeLogo.scale-125.png" />
-    <Image Include="Assets\BadgeLogo.scale-150.png" />
-    <Image Include="Assets\BadgeLogo.scale-200.png" />
-    <Image Include="Assets\BadgeLogo.scale-400.png">
-      <DeploymentContent>true</DeploymentContent>
-    </Image>
-    <Image Include="Assets\LargeTile.scale-100.png" />
-    <Image Include="Assets\LargeTile.scale-125.png" />
-    <Image Include="Assets\LargeTile.scale-150.png" />
-    <Image Include="Assets\LargeTile.scale-200.png" />
-    <Image Include="Assets\LargeTile.scale-400.png" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
-    <Image Include="Assets\SmallTile.scale-100.png" />
-    <Image Include="Assets\SmallTile.scale-125.png" />
-    <Image Include="Assets\SmallTile.scale-150.png" />
-    <Image Include="Assets\SmallTile.scale-200.png" />
-    <Image Include="Assets\SmallTile.scale-400.png" />
-    <Image Include="Assets\SplashScreen.scale-100.png" />
-    <Image Include="Assets\SplashScreen.scale-125.png" />
-    <Image Include="Assets\SplashScreen.scale-150.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
-    <Image Include="Assets\SplashScreen.scale-400.png" />
-    <Image Include="Assets\Square150x150Logo.scale-100.png" />
-    <Image Include="Assets\Square150x150Logo.scale-125.png" />
-    <Image Include="Assets\Square150x150Logo.scale-150.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
-    <Image Include="Assets\Square150x150Logo.scale-400.png" />
-    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
-    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
-    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
-    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
-    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
-    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
-    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
-    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
-    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
-    <Image Include="Assets\Square44x44Logo.scale-100.png" />
-    <Image Include="Assets\Square44x44Logo.scale-125.png" />
-    <Image Include="Assets\Square44x44Logo.scale-150.png" />
     <Image Include="Assets\Square44x44Logo.scale-200.png" />
-    <Image Include="Assets\Square44x44Logo.scale-400.png" />
-    <Image Include="Assets\Square44x44Logo.targetsize-16.png" />
-    <Image Include="Assets\Square44x44Logo.targetsize-24.png" />
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Image Include="Assets\Square44x44Logo.targetsize-256.png" />
-    <Image Include="Assets\Square44x44Logo.targetsize-32.png" />
-    <Image Include="Assets\Square44x44Logo.targetsize-48.png" />
-    <Image Include="Assets\StoreLogo.scale-100.png" />
-    <Image Include="Assets\StoreLogo.scale-125.png" />
-    <Image Include="Assets\StoreLogo.scale-150.png" />
-    <Image Include="Assets\StoreLogo.scale-200.png">
-      <DeploymentContent>true</DeploymentContent>
-    </Image>
-    <Image Include="Assets\StoreLogo.scale-400.png" />
-    <Image Include="Assets\Wide310x150Logo.scale-100.png" />
-    <Image Include="Assets\Wide310x150Logo.scale-125.png" />
-    <Image Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Image Include="Assets\Wide310x150Logo.scale-400.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainPage.cpp">
@@ -211,7 +147,6 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="PropertySheet.props" />
     <Text Include="readme.txt">
       <DeploymentContent>false</DeploymentContent>
@@ -225,22 +160,6 @@
   <ItemGroup>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <PropertyGroup>
-    <BundleEntryFile Condition="'$(Configuration)'=='Release'">index.ts</BundleEntryFile>
-  </PropertyGroup>
-  <!-- lottie-react-native imports -->
-  <PropertyGroup Label="LottieReactNativeProps">
-    <LottieReactNativeDir>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\lottie-react-native\package.json'))\node_modules\lottie-react-native</LottieReactNativeDir>
-    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
-    <GenerateTestArtifacts>True</GenerateTestArtifacts>
-    <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
-    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-  </PropertyGroup>
-  <ImportGroup Label="LottieReactNativeTargets">
-    <Import Project="$(LottieReactNativeDir)\src\windows\cppwinrt\PropertySheets\LottieGen.Auto.targets" />
-  </ImportGroup>
-  <!-- end -->
   <ImportGroup Label="ReactNativeWindowsTargets">
     <Import Project="$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.targets" Condition="Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.targets')" />
   </ImportGroup>
@@ -250,11 +169,5 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.props')" Text="$([System.String]::Format('$(ErrorText)', '$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.props'))" />
     <Error Condition="!Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.targets'))" />
-  </Target>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet packages that are not present on this computer. Use the NuGet Package Restore feature to download them. For more information, see https://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\LottieGen.MsBuild.7.0.5\build\native\LottieGen.MsBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LottieGen.MsBuild.7.0.5\build\native\LottieGen.MsBuild.props'))" />
   </Target>
 </Project>

@@ -4,14 +4,9 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
-  xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
-  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
-  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
-  IgnorableNamespaces="uap mp uap3 uap6 uap4 uap2 iot">
+  IgnorableNamespaces="uap mp">
 
- <Identity
+  <Identity
     Name="Microsoft.ReactNativeGallery"
     Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
     Version="1.0.38.0" />
@@ -49,7 +44,7 @@
     </Application>
   </Applications>
 
- <Capabilities>
-  <Capability Name="internetClientServer"/>
- </Capabilities>
+  <Capabilities>
+    <Capability Name="internetClientServer"/>
+  </Capabilities>
 </Package>
