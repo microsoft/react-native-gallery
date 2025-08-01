@@ -54,6 +54,10 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-print\windows\RNPrint\RNPrint.vcxproj">
       <Project>{6f9ac236-d97d-4c75-971b-91ac99d7c23b}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-screens -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-screens\windows\RNScreens\RNScreens.vcxproj">
+      <Project>{d638f49e-29d2-4699-ac52-facd82fa7138}</Project>
+    </ProjectReference>
     <!-- Projects from react-native-sensitive-info -->
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-sensitive-info\windows\RNSensitiveInfoCPP\RNSensitiveInfoCPP.vcxproj">
       <Project>{471024f1-cd6d-4f1e-a6c7-0037152c850e}</Project>
