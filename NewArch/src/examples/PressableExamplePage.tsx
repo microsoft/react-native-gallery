@@ -155,8 +155,10 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
                 : Platform.OS === 'windows'
                 ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
-              width: 140,
-              height: 50,
+              padding: 8,
+              minWidth: 140,
+              alignItems: 'center',
+              justifyContent: 'center',
               borderRadius: 2,
             },
           ]}>
@@ -165,6 +167,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
               style={{
                 textAlign: 'center',
                 paddingVertical: 15,
+                flexWrap: 'wrap',
                 color: pressed ? '#FFFFFF' : colors.text,
               }}>
               {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
