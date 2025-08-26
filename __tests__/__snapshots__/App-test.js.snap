@@ -1208,7 +1208,6 @@ exports[`Button Example Page 1`] = `
                 style={
                   [
                     {
-                      "alignItems": "center",
                       "backgroundColor": {
                         "windowsbrush": [
                           "ButtonBackground",
@@ -8600,7 +8599,7 @@ exports[`Expander Example Page 1`] = `
                       undefined,
                     ]
                   }
-                  timeZoneOffsetInSeconds={-0}
+                  timeZoneOffsetInSeconds={19800}
                 />
               </ExpanderView>
             </View>
@@ -26585,7 +26584,6 @@ exports[`Pressable Example Page 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       {
-        "alignItems": "center",
         "backgroundColor": {
           "windowsbrush": [
             "NavigationViewDefaultPaneBackground",
@@ -27732,6 +27730,7 @@ exports[`Pressable Example Page 1`] = `
                 style={
                   [
                     {
+                      "alignItems": "center",
                       "backgroundColor": {
                         "windowsbrush": [
                           "SystemColorButtonFaceColor",
