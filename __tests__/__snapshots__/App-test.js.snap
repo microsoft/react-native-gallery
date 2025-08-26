@@ -1208,6 +1208,7 @@ exports[`Button Example Page 1`] = `
                 style={
                   [
                     {
+                      "alignItems": "center",
                       "backgroundColor": {
                         "windowsbrush": [
                           "ButtonBackground",
@@ -27736,8 +27737,10 @@ exports[`Pressable Example Page 1`] = `
                         ],
                       },
                       "borderRadius": 2,
-                      "height": 50,
-                      "width": 140,
+                      "justifyContent": "center",
+                      "minWidth": 140,
+                      "padding": 8,
+
                     },
                   ]
                 }
@@ -27746,7 +27749,7 @@ exports[`Pressable Example Page 1`] = `
                   style={
                     {
                       "color": "rgb(28, 28, 30)",
-                      "paddingVertical": 15,
+                      "flexWrap": "wrap",
                       "textAlign": "center",
                     }
                   }
@@ -28445,8 +28448,6 @@ exports[`Pressable Example Page 1`] = `
                       ],
                     },
                     "borderRadius": 2,
-                    "height": 50,
-                    "width": 200,
                   }
                 }
               >
@@ -28454,7 +28455,6 @@ exports[`Pressable Example Page 1`] = `
                   style={
                     {
                       "color": "rgb(28, 28, 30)",
-                      "paddingVertical": 15,
                       "textAlign": "center",
                     }
                   }
