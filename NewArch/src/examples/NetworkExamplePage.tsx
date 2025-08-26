@@ -100,6 +100,7 @@ const PostChatCompletionExample = () => {
       <Text style={{fontWeight: 'bold'}}>Inputs</Text>
       <Text>Enter a valid OpenAI API key</Text>
       <TextInput
+        accessibilityLabel="API key input field"
         value={apiKey}
         onChangeText={setApiKey}
         onSubmitEditing={doRequest}
@@ -107,11 +108,12 @@ const PostChatCompletionExample = () => {
       />
       <Text>What is your question</Text>
       <TextInput
+        accessibilityLabel="Question input field"
         value={prompt}
         onChangeText={setPrompt}
         onSubmitEditing={doRequest}
       />
-      <Button title="Submit" onPress={doRequest} onAccessibilityTap={doRequest} />
+      <Button title="Submit" accessibilityLabel="Submit API request" onPress={doRequest} onAccessibilityTap={doRequest} />
       {isLoading ? (
         <ActivityIndicator />
       ) : (
@@ -218,10 +220,10 @@ return (
   <View>
     <Text style={{fontWeight: 'bold'}}>Inputs</Text>
     <Text>Enter a valid OpenAI API key</Text>
-    <TextInput value={apiKey} onChangeText={setApiKey} onSubmitEditing={doRequest} secureTextEntry={true}/>
+    <TextInput value={apiKey} onChangeText={setApiKey} onSubmitEditing={doRequest} accessibilityLabel="API key input field" secureTextEntry={true}/>
     <Text>What is your question</Text>
-    <TextInput value={prompt} onChangeText={setPrompt} onSubmitEditing={doRequest}/>
-    <Button title="Submit" onPress={doRequest} onAccessibilityTap={doRequest}/>
+    <TextInput value={prompt} onChangeText={setPrompt} onSubmitEditing={doRequest} accessibilityLabel="Question input field"/>
+    <Button title="Submit" accessibilityLabel="Submit API request" onPress={doRequest} onAccessibilityTap={doRequest}/>
     {isLoading ? <ActivityIndicator/> :
       <View>
         <Text style={{fontWeight: 'bold'}}>Raw</Text>
