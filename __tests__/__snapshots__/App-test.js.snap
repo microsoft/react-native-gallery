@@ -1208,6 +1208,7 @@ exports[`Button Example Page 1`] = `
                 style={
                   [
                     {
+                      "alignItems": "center",
                       "backgroundColor": {
                         "windowsbrush": [
                           "ButtonBackground",
