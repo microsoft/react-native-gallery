@@ -1208,7 +1208,6 @@ exports[`Button Example Page 1`] = `
                 style={
                   [
                     {
-                      "alignItems": "center",
                       "backgroundColor": {
                         "windowsbrush": [
                           "ButtonBackground",
@@ -26585,6 +26584,7 @@ exports[`Pressable Example Page 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       {
+        "alignItems": "center",
         "backgroundColor": {
           "windowsbrush": [
             "NavigationViewDefaultPaneBackground",
@@ -27740,7 +27740,6 @@ exports[`Pressable Example Page 1`] = `
                       "justifyContent": "center",
                       "minWidth": 140,
                       "padding": 8,
-
                     },
                   ]
                 }
