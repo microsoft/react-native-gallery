@@ -43,6 +43,9 @@ const styles = StyleSheet.create({
   drawer: {
     backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
     height: '100%',
+    width: 440, // Increased from default for better label fit
+    minWidth: 440,
+    maxWidth: 500,
   },
   drawerText: {
     color: PlatformColor('TextControlForeground'),
@@ -149,9 +152,15 @@ const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
             {icon}
           </Text>
         </View>
-        <Text accessible={false} style={styles.drawerText}>
-          {label}
-        </Text>
+        <Text
+        accessible={false}
+        style={styles.drawerText}
+        maxFontSizeMultiplier={1}
+        numberOfLines={1}
+        ellipsizeMode="tail"
+      >
+        {label}
+      </Text>
       </Pressable>
     );
   },
