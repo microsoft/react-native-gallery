@@ -81,6 +81,8 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
         {/* Tracking Issue: #17
         <SettingContainer heading="Theme Mode">
           <Picker
+            accessibilityRole="combobox"
+            accessibilityLabel="Theme Mode Picker, combo box"
             style={{height: 50, width: 200}}
             onValueChange={PickerValueChanged}
             selectedValue={theme}
