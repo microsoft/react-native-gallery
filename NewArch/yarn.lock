@@ -2408,14 +2408,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-windows/cli@npm:0.80.0-preview.1":
-  version: 0.80.0-preview.1
-  resolution: "@react-native-windows/cli@npm:0.80.0-preview.1"
+"@react-native-windows/cli@npm:0.80.0-preview.3":
+  version: 0.80.0-preview.3
+  resolution: "@react-native-windows/cli@npm:0.80.0-preview.3"
   dependencies:
     "@react-native-windows/codegen": "npm:0.80.0-preview.1"
     "@react-native-windows/fs": "npm:0.80.0-preview.1"
     "@react-native-windows/package-utils": "npm:0.80.0-preview.1"
-    "@react-native-windows/telemetry": "npm:0.80.0-preview.1"
+    "@react-native-windows/telemetry": "npm:0.80.0-preview.2"
     "@xmldom/xmldom": "npm:^0.7.7"
     chalk: "npm:^4.1.0"
     cli-spinners: "npm:^2.2.0"
@@ -2435,7 +2435,7 @@ __metadata:
     xpath: "npm:^0.0.27"
   peerDependencies:
     react-native: "*"
-  checksum: 10c0/b05a0a7ae80fb1da4384305d028123423c711f8f12014b2cfeb5f6298468e1f54a28ba250dffdca320673a84ce16f691ad8694269bc77b61d217296f066e6481
+  checksum: 10c0/c18daa3fdf249b0d4989d923b48df1850bb7a46f9bf309e3752e5a297eccf67265d22491dc5b12704be7b78b7849e73b82264cf4bfa67777e85903cb65158a6c
   languageName: node
   linkType: hard
 
@@ -2488,9 +2488,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-windows/telemetry@npm:0.80.0-preview.1":
-  version: 0.80.0-preview.1
-  resolution: "@react-native-windows/telemetry@npm:0.80.0-preview.1"
+"@react-native-windows/telemetry@npm:0.80.0-preview.2":
+  version: 0.80.0-preview.2
+  resolution: "@react-native-windows/telemetry@npm:0.80.0-preview.2"
   dependencies:
     "@microsoft/1ds-core-js": "npm:^4.3.0"
     "@microsoft/1ds-post-js": "npm:^4.3.0"
@@ -2501,7 +2501,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     os-locale: "npm:^5.0.0"
     xpath: "npm:^0.0.27"
-  checksum: 10c0/b68109910e869827c2fed79881584a98fd6a2fae34a82fc6ebc580acad6b3cb1af1c80a0f4ed7fc0ba53b4849077665b9b4bafd8c53f2543c59fc0988e6d05b5
+  checksum: 10c0/1d1a59bb6befdd9e643c204d1831a4d26015665de02775908371889e008f82ec226048271effcfba3364643c1d5fc01b1961e14b23287d67e72b784a9086245a
   languageName: node
   linkType: hard
 
@@ -3327,7 +3327,7 @@ __metadata:
     prettier: "npm:2.8.8"
     react: "npm:19.1.0"
     react-native: "npm:^0.80.2"
-    react-native-windows: "npm:^0.80.0-preview.1"
+    react-native-windows: "npm:^0.80.0-preview.4"
     react-test-renderer: "npm:19.1.0"
     typescript: "npm:5.0.4"
   languageName: unknown
@@ -8563,16 +8563,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-windows@npm:^0.80.0-preview.1":
-  version: 0.80.0-preview.1
-  resolution: "react-native-windows@npm:0.80.0-preview.1"
+"react-native-windows@npm:^0.80.0-preview.4":
+  version: 0.80.0-preview.4
+  resolution: "react-native-windows@npm:0.80.0-preview.4"
   dependencies:
     "@babel/runtime": "npm:^7.0.0"
     "@jest/create-cache-key-function": "npm:^29.7.0"
     "@react-native-community/cli": "npm:17.0.0"
     "@react-native-community/cli-platform-android": "npm:17.0.0"
     "@react-native-community/cli-platform-ios": "npm:17.0.0"
-    "@react-native-windows/cli": "npm:0.80.0-preview.1"
+    "@react-native-windows/cli": "npm:0.80.0-preview.3"
     "@react-native/assets": "npm:1.0.0"
     "@react-native/assets-registry": "npm:0.80.0"
     "@react-native/codegen": "npm:0.80.0"
@@ -8616,7 +8616,7 @@ __metadata:
     "@types/react": ^19.1.0
     react: ^19.1.0
     react-native: ^0.80.0
-  checksum: 10c0/112e43552c78c4f61508a4208423261a4044ae1de369de9d8fa418afea392186191f71c4341a59fe109b1d403f933efaac6dcdca37b73df659762e8c6c8db350
+  checksum: 10c0/b0f75166cd54f95990edd63b226f97c1c5edaf507c76b0ca6498acb21d915ee3b959a8e4c64542106d7d0f448c593df17663ce35a469c7611b4cf4c1a37b2db0
   languageName: node
   linkType: hard
 
