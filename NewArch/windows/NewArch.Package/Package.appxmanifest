@@ -9,10 +9,10 @@
   <Identity
     Name="Microsoft.ReactNativeGallery-Experimental"
     Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
-    Version="1.0.7.0" />
+    Version="2.0.1.0" />
 
   <Properties>
-    <DisplayName>React Native Gallery - Experimental</DisplayName>
+    <DisplayName>React Native Gallery - Preview</DisplayName>
     <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
@@ -31,8 +31,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="NewArch.App">
       <uap:VisualElements
-        DisplayName="React Native Gallery - Experimental"
-        Description="React Native Gallery - Experimental [New Architecture]"
+        DisplayName="React Native Gallery - Preview"
+        Description="React Native Gallery - Preview [New Architecture]"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
