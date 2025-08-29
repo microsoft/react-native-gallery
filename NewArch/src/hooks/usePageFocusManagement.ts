@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from 'react';
 
 /**
- * Custom hook for managing page focus 
+ * Custom hook for managing page focus
  * Automatically focuses the first interactive element when navigating from drawer
  *
  * @param navigation - Navigation object containing parameters

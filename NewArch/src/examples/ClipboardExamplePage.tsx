@@ -56,6 +56,8 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
             }}
             onAccessibilityTap={() => {
               Clipboard.setString(textToCopy);
+              setAccessibilityValueCopy('');
+              setAccessibilityValueCopy('Text copied to clipboard');
               AccessibilityInfo.announceForAccessibility(
                 'Text copied to clipboard',
               );
@@ -76,6 +78,8 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
             title="Paste text from the Clipboard"
             onPress={() => {
               getClipboardText();
+              setAccessibilityValuePaste('');
+              setAccessibilityValuePaste('Text pasted from clipboard');
               AccessibilityInfo.announceForAccessibility(
                 'Text pasted from clipboard',
               );
