@@ -6,7 +6,6 @@ import {
   Text,
   PlatformColor,
   Pressable,
-  useColorScheme,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 
@@ -59,9 +58,8 @@ export function ScreenWrapper({
   doNotInset,
 }: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
-  const colorScheme = useColorScheme();
   const styles = createStyles();
-  
+
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
 
   return (

@@ -91,7 +91,7 @@ const GroupedListOfAllComponents = ({
         if (items.length === 0) {
           return null;
         }
-        
+
         return (
           <ListOfComponents
             key={category.label}

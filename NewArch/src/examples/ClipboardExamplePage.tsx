@@ -67,7 +67,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
               //   'Text copied to clipboard',
               // );
               setAccessibilityValueCopy('');
-              setAccessibilityValueCopy('Text copied to clipboard');              
+              setAccessibilityValueCopy('Text copied to clipboard');
             }}
           />
           <TextInput
@@ -91,7 +91,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
               //   'Text pasted from clipboard',
               // );
               setAccessibilityValuePaste('');
-              setAccessibilityValuePaste('Text pasted from clipboard');             
+              setAccessibilityValuePaste('Text pasted from clipboard');
             }}
             onAccessibilityTap={() => {
               getClipboardText();

@@ -325,7 +325,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         accessibilityRole="button"
         accessibilityLabel="Navigation menu"
         accessibilityState={{ expanded: isDrawerOpen }}
-        accessibilityHint={isDrawerOpen ? "Tap to collapse navigation menu" : "Tap to expand navigation menu"}
+        accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         style={styles.menu}
         onPress={() => {
           if (isDrawerOpen) {
@@ -346,7 +346,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         focusable={true}>
         <Text style={styles.icon}>&#xE700;</Text>
       </Pressable>
-      
+
       {isDrawerOpen && (
         <>
           <DrawerListItem
