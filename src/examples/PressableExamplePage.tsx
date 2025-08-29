@@ -143,17 +143,19 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
                 : Platform.OS === 'windows'
                 ? PlatformColor('SystemColorButtonFaceColor')
                 : 'silver',
-              width: 140,
-              height: 50,
               borderRadius: 2,
+              padding: 8,
+              minWidth: 140,
+              alignItems: 'center',
+              justifyContent: 'center',
             },
           ]}>
           {({pressed}) => (
             <Text
               style={{
                 textAlign: 'center',
-                paddingVertical: 15,
                 color: pressed ? '#FFFFFF' : colors.text,
+                flexWrap: 'wrap',
               }}>
               {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
             </Text>
@@ -170,8 +172,6 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
             'click me to see the diffrent events (press, pressIn, pressOut, longPress)'
           }
           style={{
-            width: 200,
-            height: 50,
             borderRadius: 2,
             backgroundColor:
               Platform.OS === 'windows'
@@ -185,7 +185,6 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
           <Text
             style={{
               textAlign: 'center',
-              paddingVertical: 15,
               color: colors.text,
             }}>
             Most recent event: {currEvent}
