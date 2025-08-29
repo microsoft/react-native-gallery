@@ -8,7 +8,7 @@ import {
   Pressable,
   useColorScheme,
 } from 'react-native';
-import {useNavigation, DrawerActions} from '../Navigation';
+import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -60,36 +60,32 @@ export function ScreenWrapper({
 }: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
   const colorScheme = useColorScheme();
-  const styles = createStyles(colorScheme);
+  const styles = createStyles();
+  
+  const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
 
   return (
     <View style={styles.container}>
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel="Navigation bar"
-        // requires react-native-gesture-handler to be imported in order to pass testing.
-        // blocked by #125
-        /*accessibilityState={{
-          expanded: useIsDrawerOpen(),
-        }}*/
+        accessibilityLabel="Navigation menu"
+        accessibilityState={{ expanded: isDrawerOpen }}
+        accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         style={styles.navBar}
         onPress={() => {
-          navigation.dispatch(DrawerActions.openDrawer());
+          navigation.dispatch(DrawerActions.toggleDrawer());
         }}>
         <View>
           <TouchableHighlight
             accessibilityRole="button"
-            accessibilityLabel="Navigation bar hamburger icon"
-            {...{tooltip: 'Expand Menu'}}
-            // requires react-native-gesture-handler to be imported in order to pass testing.
-            // blocked by #125
-            //accessibilityState={{expanded: useIsDrawerOpen()}}
+            accessibilityLabel="Navigation menu"
+            accessibilityState={{ expanded: isDrawerOpen }}
             style={styles.menu}
-            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
-            onAccessibilityTap={() => navigation.dispatch(DrawerActions.openDrawer())}
+            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+            onAccessibilityTap={() => navigation.dispatch(DrawerActions.toggleDrawer())}
             activeOpacity={0.5783}
             underlayColor="rgba(0, 0, 0, 0.0241);">
-            <Text style={styles.icon} accessibilityLabel="Navigation bar hamburger icon text">&#xE700;</Text>
+            <Text style={styles.icon}>&#xE700;</Text>
           </TouchableHighlight>
         </View>
       </Pressable>
