@@ -6,7 +6,6 @@ import {
   Text,
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
-  PressableProps,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
