@@ -6,6 +6,7 @@ import {
   Text,
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
+  PressableProps,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
@@ -195,12 +196,7 @@ const DrawerCollapsibleCategory = ({
   };
 
   return (
-    <View
-      style={styles.category}
-      accessible={true}
-      accessibilityRole="button"
-      accessibilityLabel={categoryLabel}
-      onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
+    <View style={styles.category}>
       <Pressable
         style={localStyles.drawerListItem}
         onPress={() => onPress()}
@@ -208,8 +204,19 @@ const DrawerCollapsibleCategory = ({
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
-        accessible={false}
-        onAccessibilityTap={() => onPress()}>
+        accessibilityRole="button"
+        accessibilityLabel={`${categoryLabel}, ${isExpanded ? 'expanded' : 'collapsed'}`}
+        accessibilityState={{expanded: isExpanded}}
+        accessibilityActions={[
+          {name: isExpanded ? 'collapse' : 'expand', label: isExpanded ? 'Collapse' : 'Expand'},
+        ]}
+        onAccessibilityAction={(event) => {
+          if (event.nativeEvent.actionName === 'expand' || event.nativeEvent.actionName === 'collapse') {
+            setIsExpanded(!isExpanded);
+          }
+        }}
+        onAccessibilityTap={() => onPress()}
+        focusable={true}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -229,7 +236,7 @@ const DrawerCollapsibleCategory = ({
         </View>
       </Pressable>
       {isExpanded &&
-        items.map((item) => (
+        items.map((item: any) => (
           <DrawerListItem
             key={item.label}
             route={item.label}
@@ -290,9 +297,9 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   const currentRoute = navigationState.routeNames[navigationState.index];
 
   // Refs for hamburger, home and settings buttons
-  const hamburgerRef = useRef<Pressable>(null);
-  const homeRef = useRef<Pressable>(null);
-  const settingsRef = useRef<Pressable>(null);
+  const hamburgerRef = useRef<View>(null);
+  const homeRef = useRef<View>(null);
+  const settingsRef = useRef<View>(null);
 
   // When drawer opens, focus the Home menu item
   useEffect(() => {
@@ -303,21 +310,9 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   }
 }, [isDrawerOpen]);
 
-  // Keyboard navigation looping handlers
-  const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
-    if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
-      e.preventDefault();
-      settingsRef.current?.focus();
-    }
-  };
-  const onSettingsKeyDown = (e: RNKeyboardEvent) => {
-    if (e.nativeEvent.key === 'Tab' && !e.nativeEvent.shiftKey) {
-      e.preventDefault();
-      hamburgerRef.current?.focus();
-    }
-  };
-
-  if (!isDrawerOpen) return <View />;
+  if (!isDrawerOpen) {
+    return <View />;
+  }
 
 
 return (
@@ -326,12 +321,9 @@ return (
       ref={hamburgerRef}
       accessibilityRole="button"
       accessibilityLabel="Navigation bar expanded"
-      tooltip="Collapse Menu"
       style={styles.menu}
       onPress={() => navigation.closeDrawer()}
       onAccessibilityTap={() => navigation.closeDrawer()}
-      onKeyDown={onHamburgerKeyDown}
-      keyboardEvents={['keyDown']}
       focusable={true}>
       <Text style={styles.icon}>&#xE700;</Text>
     </Pressable>
@@ -343,8 +335,6 @@ return (
       navigation={navigation}
       currentRoute={currentRoute}
       onKeyDown={() => {}}
-      keyboardEvents={['keyDown']}    // <-- Added this for consistent keyboard handling
-      focusable={true}
     />
     <DrawerListItem
       route="All samples"
@@ -352,8 +342,6 @@ return (
       icon="&#xE71D;"
       navigation={navigation}
       currentRoute={currentRoute}
-      keyboardEvents={['keyDown']}    // Optional, for consistent behavior
-      focusable={true}
     />
 
     <View style={styles.drawerDivider} />
@@ -367,9 +355,6 @@ return (
       icon="&#xE713;"
       navigation={navigation}
       currentRoute={currentRoute}
-      onKeyDown={onSettingsKeyDown}
-      keyboardEvents={['keyDown']}
-      focusable={true}
     />
   </View>
 );
