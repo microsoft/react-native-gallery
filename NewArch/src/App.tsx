@@ -345,6 +345,8 @@ return (
       style={styles.menu}
       onPress={() => navigation.closeDrawer()}
       onAccessibilityTap={() => navigation.closeDrawer()}
+      onKeyDown={onHamburgerKeyDown}
+      keyboardEvents={['keyDown']}
       focusable={true}>
       <Text style={styles.icon}>&#xE700;</Text>
     </Pressable>
@@ -356,6 +358,8 @@ return (
       navigation={navigation}
       currentRoute={currentRoute}
       onKeyDown={() => {}}
+      keyboardEvents={['keyDown']}    // <-- Added this for consistent keyboard handling
+      focusable={true}
     />
     <DrawerListItem
       route="All samples"
@@ -363,6 +367,8 @@ return (
       icon="&#xE71D;"
       navigation={navigation}
       currentRoute={currentRoute}
+      keyboardEvents={['keyDown']}    // Optional, for consistent behavior
+      focusable={true}
     />
 
     <View style={styles.drawerDivider} />
@@ -376,6 +382,9 @@ return (
       icon="&#xE713;"
       navigation={navigation}
       currentRoute={currentRoute}
+      onKeyDown={onSettingsKeyDown}
+      keyboardEvents={['keyDown']}
+      focusable={true}
     />
   </View>
 );
