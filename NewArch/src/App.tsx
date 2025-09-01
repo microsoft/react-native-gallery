@@ -204,14 +204,14 @@ const DrawerCollapsibleCategory = ({
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
         accessibilityRole="button"
-        accessibilityLabel={`${categoryLabel}, ${isExpanded ? 'expanded' : 'collapsed'}`}
+        accessibilityLabel={categoryLabel}
         accessibilityState={{expanded: isExpanded}}
         accessibilityActions={[
           {name: isExpanded ? 'collapse' : 'expand', label: isExpanded ? 'Collapse' : 'Expand'},
         ]}
         onAccessibilityAction={(event) => {
           if (event.nativeEvent.actionName === 'expand' || event.nativeEvent.actionName === 'collapse') {
-            setIsExpanded(!isExpanded);
+        setIsExpanded(!isExpanded);
           }
         }}
         onAccessibilityTap={() => onPress()}
@@ -308,6 +308,19 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
     });
   }
 }, [isDrawerOpen]);
+// Keyboard navigation looping handlers
+const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
+    if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
+      e.preventDefault();
+      settingsRef.current?.focus();
+    }
+  };
+  const onSettingsKeyDown = (e: RNKeyboardEvent) => {
+    if (e.nativeEvent.key === 'Tab' && !e.nativeEvent.shiftKey) {
+      e.preventDefault();
+      hamburgerRef.current?.focus();
+    }
+  };
 
   if (!isDrawerOpen) {
     return <View />;
