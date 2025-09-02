@@ -43,9 +43,6 @@ const styles = StyleSheet.create({
   drawer: {
     backgroundColor: PlatformColor('NavigationViewDefaultPaneBackground'),
     height: '100%',
-    width: 440, // Increased from default for better label fit
-    minWidth: 440,
-    maxWidth: 500,
   },
   drawerText: {
     color: PlatformColor('TextControlForeground'),
@@ -155,7 +152,7 @@ const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
         <Text
         accessible={false}
         style={styles.drawerText}
-        maxFontSizeMultiplier={1}
+        maxFontSizeMultiplier={1.5}
         numberOfLines={1}
         ellipsizeMode="tail"
       >
@@ -204,12 +201,7 @@ const DrawerCollapsibleCategory = ({
   };
 
   return (
-    <View
-      style={styles.category}
-      accessible={true}
-      accessibilityRole="button"
-      accessibilityLabel={categoryLabel}
-      onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
+    <View style={styles.category}>
       <Pressable
         style={localStyles.drawerListItem}
         onPress={() => onPress()}
@@ -217,8 +209,19 @@ const DrawerCollapsibleCategory = ({
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
-        accessible={false}
-        onAccessibilityTap={() => onPress()}>
+        accessibilityRole="button"
+        accessibilityLabel={categoryLabel}
+        accessibilityState={{expanded: isExpanded}}
+        accessibilityActions={[
+          {name: isExpanded ? 'collapse' : 'expand', label: isExpanded ? 'Collapse' : 'Expand'},
+        ]}
+        onAccessibilityAction={(event) => {
+          if (event.nativeEvent.actionName === 'expand' || event.nativeEvent.actionName === 'collapse') {
+        setIsExpanded(!isExpanded);
+          }
+        }}
+        onAccessibilityTap={() => onPress()}
+        focusable={true}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -238,7 +241,7 @@ const DrawerCollapsibleCategory = ({
         </View>
       </Pressable>
       {isExpanded &&
-        items.map((item) => (
+        items.map((item: any) => (
           <DrawerListItem
             key={item.label}
             route={item.label}
@@ -299,9 +302,9 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   const currentRoute = navigationState.routeNames[navigationState.index];
 
   // Refs for hamburger, home and settings buttons
-  const hamburgerRef = useRef<Pressable>(null);
-  const homeRef = useRef<Pressable>(null);
-  const settingsRef = useRef<Pressable>(null);
+  const hamburgerRef = useRef<View>(null);
+  const homeRef = useRef<View>(null);
+  const settingsRef = useRef<View>(null);
 
   // When drawer opens, focus the Home menu item
   useEffect(() => {
@@ -311,7 +314,6 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
     });
   }
 }, [isDrawerOpen]);
-
   // Keyboard navigation looping handlers
   const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
     if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
