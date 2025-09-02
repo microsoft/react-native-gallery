@@ -317,8 +317,8 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
     });
   }
 }, [isDrawerOpen]);
-// Keyboard navigation looping handlers
-const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
+  // Keyboard navigation looping handlers
+  const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
     if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
       e.preventDefault();
       settingsRef.current?.focus();
@@ -331,9 +331,7 @@ const onHamburgerKeyDown = (e: RNKeyboardEvent) => {
     }
   };
 
-  if (!isDrawerOpen) {
-    return <View />;
-  }
+  if (!isDrawerOpen) return <View />;
 
 
 return (
@@ -342,6 +340,7 @@ return (
       ref={hamburgerRef}
       accessibilityRole="button"
       accessibilityLabel="Navigation bar expanded"
+      tooltip="Collapse Menu"
       style={styles.menu}
       onPress={() => navigation.closeDrawer()}
       onAccessibilityTap={() => navigation.closeDrawer()}
