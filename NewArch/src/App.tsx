@@ -328,62 +328,76 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
     }
   };
 
-  if (!isDrawerOpen) return <View />;
+  return (
+    <View style={styles.drawer}>
+      <Pressable
+        ref={hamburgerRef}
+        accessibilityRole="button"
+        accessibilityLabel="Navigation menu"
+        accessibilityState={{ expanded: isDrawerOpen }}
+        accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
+        style={styles.menu}
+        onPress={() => {
+          if (isDrawerOpen) {
+            navigation.closeDrawer();
+          } else {
+            navigation.openDrawer();
+          }
+        }}
+        onAccessibilityTap={() => {
+          if (isDrawerOpen) {
+            navigation.closeDrawer();
+          } else {
+            navigation.openDrawer();
+          }
+        }}
+         onKeyDown={onHamburgerKeyDown}
+        keyboardEvents={['keyDown']}
+        focusable={true}>
+        <Text style={styles.icon}>&#xE700;</Text>
+      </Pressable>
 
+      {isDrawerOpen && (
+        <>
+          <DrawerListItem
+            ref={homeRef}
+            route="Home"
+            label="Home"
+            icon="&#xE80F;"
+            navigation={navigation}
+            currentRoute={currentRoute}
+            onKeyDown={() => {}}
+            keyboardEvents={['keyDown']}
+            focusable={true}
+          />
+          <DrawerListItem
+            route="All samples"
+            label="All samples"
+            icon="&#xE71D;"
+            navigation={navigation}
+            currentRoute={currentRoute}
+            keyboardEvents={['keyDown']}
+            focusable={true}
+          />
+          <View style={styles.drawerDivider} />
+          <DrawerListView navigation={navigation} currentRoute={currentRoute} />
+          <View style={styles.drawerDivider} />
 
-return (
-  <View style={styles.drawer}>
-    <Pressable
-      ref={hamburgerRef}
-      accessibilityRole="button"
-      accessibilityLabel="Navigation bar expanded"
-      tooltip="Collapse Menu"
-      style={styles.menu}
-      onPress={() => navigation.closeDrawer()}
-      onAccessibilityTap={() => navigation.closeDrawer()}
-      onKeyDown={onHamburgerKeyDown}
-      keyboardEvents={['keyDown']}
-      focusable={true}>
-      <Text style={styles.icon}>&#xE700;</Text>
-    </Pressable>
-    <DrawerListItem
-      ref={homeRef}
-      route="Home"
-      label="Home"
-      icon="&#xE80F;"
-      navigation={navigation}
-      currentRoute={currentRoute}
-      onKeyDown={() => {}}
-      keyboardEvents={['keyDown']}    // <-- Added this for consistent keyboard handling
-      focusable={true}
-    />
-    <DrawerListItem
-      route="All samples"
-      label="All samples"
-      icon="&#xE71D;"
-      navigation={navigation}
-      currentRoute={currentRoute}
-      keyboardEvents={['keyDown']}    // Optional, for consistent behavior
-      focusable={true}
-    />
-
-    <View style={styles.drawerDivider} />
-      <DrawerListView navigation={navigation} currentRoute={currentRoute} />
-    <View style={styles.drawerDivider} />
-
-    <DrawerListItem
-      ref={settingsRef}
-      route="Settings"
-      label="Settings"
-      icon="&#xE713;"
-      navigation={navigation}
-      currentRoute={currentRoute}
-      onKeyDown={onSettingsKeyDown}
-      keyboardEvents={['keyDown']}
-      focusable={true}
-    />
-  </View>
-);
+          <DrawerListItem
+            ref={settingsRef}
+            route="Settings"
+            label="Settings"
+            icon="&#xE713;"
+            navigation={navigation}
+            currentRoute={currentRoute}
+            onKeyDown={onSettingsKeyDown}
+            keyboardEvents={['keyDown']}
+            focusable={true}
+          />
+        </>
+      )}
+    </View>
+  );
 }
 
 const Drawer = createDrawerNavigator();
