@@ -4,9 +4,11 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
-  () => {
+export const TouchableHighlightExamplePage: React.FunctionComponent<{navigation?: any}> =
+  ({navigation}) => {
+    const firstTouchableHighlightRef = usePageFocusManagement(navigation);
     const [title, setTitle] = useState(0);
     const {colors} = useTheme();
 
@@ -77,6 +79,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         ]}>
         <Example title="A simple TouchableHighlight." code={example1jsx}>
           <TouchableHighlight
+            ref={firstTouchableHighlightRef}
             accessibilityRole="button"
             accessibilityLabel={'example TouchableHighlight'}
             style={{
@@ -122,7 +125,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
             accessibilityValue={{text: `${title}`}}
             style={{
               height: 40,
-              backgroundColor: PlatformColor(TextFillColorPrimary),
+              backgroundColor: colors.text,
               borderRadius: 3,
               justifyContent: 'center',
               alignItems: 'center',
@@ -135,7 +138,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
             }}
             activeOpacity={0.2}
             underlayColor={'white'}>
-            <Text style={{color: PlatformColor('TextFillColorPrimary')}}>{String(title)}</Text>
+            <Text style={{color: 'white'}}>{String(title)}</Text>
           </TouchableHighlight>
         </Example>
       </Page>
