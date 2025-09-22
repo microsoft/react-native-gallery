@@ -1,13 +1,13 @@
 'use strict';
 import {StyleSheet, View, Text, ScrollView, PlatformColor} from 'react-native';
 import React from 'react';
-import {useIsFocused} from './Navigation';
+import {useIsFocused, useTheme} from './Navigation';
 import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {HomeComponentTile} from './components/ControlItem';
 import {usePageFocusManagement} from './hooks/usePageFocusManagement';
 
-const createStyles = () =>
+const createStyles = (colors: any) =>
   StyleSheet.create({
     container: {
       padding: 10,
@@ -26,6 +26,7 @@ const createStyles = () =>
       marginTop: 30,
       marginBottom: 10,
       fontSize: 20,
+      color: colors.text,
     },
     heading: {
       marginTop: 30,
@@ -53,7 +54,8 @@ const ListOfComponents = ({
   items,
   firstTileRef,
 }: ListOfComponentsProps) => {
-  const styles = createStyles();
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   return (
     <View
       accessibilityLabel={heading + 'components'}
@@ -112,7 +114,8 @@ type ComponentListPageProps = {
 };
 const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
   const firstTileRef = usePageFocusManagement(navigation);
-  const styles = createStyles();
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
 
   const category = route.params?.category;

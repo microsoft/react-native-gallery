@@ -67,12 +67,12 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
             url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Touchable/TouchableWithoutFeedback.windows.js',
           },
         ]}>
-        <Text style={{fontWeight: 'bold'}}>{pressableMsg}</Text>
+        <Text style={{fontWeight: 'bold', color: colors.text}}>{pressableMsg}</Text>
         <Example title="A simple TouchableWithoutFeedback." code={example1jsx}>
           <TouchableWithoutFeedback
             ref={firstTouchableWithoutFeedbackRef}
             accessibilityRole="button"
-            accessibilityLabel={'simple example TouchableWithoutFeedback'}
+            accessibilityLabel={'TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
             <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
@@ -81,10 +81,10 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
         <Example title="A colored TouchableWithoutFeedback." code={example2jsx}>
           <TouchableWithoutFeedback
             accessibilityRole="button"
-            accessibilityLabel={'colored example TouchableWithoutFeedback'}
+            accessibilityLabel={'TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
-            <Text style={{color: 'green'}}>TouchableWithoutFeedback</Text>
+            <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
           </TouchableWithoutFeedback>
         </Example>
         <Example
@@ -92,7 +92,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           code={example3jsx}>
           <TouchableWithoutFeedback
             accessibilityRole="button"
-            accessibilityLabel={'disabled example TouchableWithoutFeedback'}
+            accessibilityLabel={'TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}
             disabled={true}
@@ -110,7 +110,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
         <Example title="A TouchableWithoutFeedback counter." code={example4jsx}>
           <TouchableWithoutFeedback
             accessibilityRole="button"
-            accessibilityLabel={'counter example TouchableWithoutFeedback'}
+            accessibilityLabel={'TouchableWithoutFeedback'}
             accessibilityHint={'click me to increase the example counter'}
             accessibilityValue={{text: `${title}`}}
             onPress={() => {
