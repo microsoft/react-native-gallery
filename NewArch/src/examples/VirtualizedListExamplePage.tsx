@@ -207,11 +207,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       padding: 5,
       paddingHorizontal: 10,
       marginVertical: 3,
-      backgroundColor: PlatformColor('TextFillColorPrimary'),
+      backgroundColor: colors.primary,
     },
     title: {
       fontSize: 20,
-      color: PlatformColor('TextFillColorPrimary'),
+      color: colors.text,
+    },
+    titleSelected: {
+      fontSize: 20,
+      color: colors.background,
     },
   });
 
@@ -246,7 +250,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         onAccessibilityTap={() => {
           setSelectedIndex(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -267,7 +271,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           }
         }}>
         <View style={styles.item}>
-          <Text style={styles.title}>{item.title}</Text>
+          <Text style={getList.includes(item.index) ? styles.titleSelected : styles.title}>{item.title}</Text>
         </View>
       </TouchableHighlight>
     ) : (
@@ -285,7 +289,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         onAccessibilityTap={() => {
           setSelectedIndex2(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex2 ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
