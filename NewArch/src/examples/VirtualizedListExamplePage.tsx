@@ -369,10 +369,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             />
           </View>
           <View style={styles.selectionContainer}>
-            <Text>Selection Support</Text>
+            <Text style={{color: colors.text}}>Selection Support</Text>
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel={'selection support pressable'}
+              accessibilityLabel={'Selection Support: Multiple'}
               accessibilityHint={'click me to change selection support'}
               onPress={() => {
                 if (selectedSupport === 'Single') {
@@ -381,8 +381,16 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                   setSelectedSupport('Single');
                 }
               }}
+              style={{
+                backgroundColor: colors.card,
+                borderColor: colors.border,
+                borderWidth: 1,
+                borderRadius: 4,
+                padding: 8,
+                marginTop: 8,
+              }}
             >
-              <Text>
+              <Text style={{color: colors.text}}>
                 Selection Support: {selectedSupport}
               </Text>
             </Pressable>
