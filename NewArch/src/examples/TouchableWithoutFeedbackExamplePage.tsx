@@ -72,7 +72,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           <TouchableWithoutFeedback
             ref={firstTouchableWithoutFeedbackRef}
             accessibilityRole="button"
-            accessibilityLabel={'TouchableWithoutFeedback'}
+            accessibilityLabel={'simple example TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
             <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
@@ -81,7 +81,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
         <Example title="A colored TouchableWithoutFeedback." code={example2jsx}>
           <TouchableWithoutFeedback
             accessibilityRole="button"
-            accessibilityLabel={'TouchableWithoutFeedback'}
+            accessibilityLabel={'colored example TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
             <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
@@ -92,7 +92,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           code={example3jsx}>
           <TouchableWithoutFeedback
             accessibilityRole="button"
-            accessibilityLabel={'TouchableWithoutFeedback'}
+            accessibilityLabel={'disabled example TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}
             disabled={true}
@@ -110,7 +110,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
         <Example title="A TouchableWithoutFeedback counter." code={example4jsx}>
           <TouchableWithoutFeedback
             accessibilityRole="button"
-            accessibilityLabel={'TouchableWithoutFeedback'}
+            accessibilityLabel={'counter example TouchableWithoutFeedback'}
             accessibilityHint={'click me to increase the example counter'}
             accessibilityValue={{text: `${title}`}}
             onPress={() => {
