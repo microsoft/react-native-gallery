@@ -122,7 +122,7 @@ onAccessibilityTap={() => {}}>
         <TouchableOpacity
           ref={firstTouchableOpacityRef}
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'simple example touchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -143,7 +143,7 @@ onAccessibilityTap={() => {}}>
       <Example title="A colored TouchableOpacity." code={example2jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'colored example TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -161,7 +161,7 @@ onAccessibilityTap={() => {}}>
       <Example title="A disabled TouchableOpacity." code={example3jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'disabled example TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -183,7 +183,7 @@ onAccessibilityTap={() => {}}>
       <Example title="A TouchableOpacity counter." code={example4jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'example TouchableOpacity counter'}
           accessibilityHint={'click me to increase the example counter'}
           accessibilityValue={{text: `${title}`}}
           style={{
@@ -212,7 +212,7 @@ onAccessibilityTap={() => {}}>
         code={example5jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'example TouchableOpacity responsive to focus'}
           style={{
             height: 40,
             width: 250,
