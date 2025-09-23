@@ -70,11 +70,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
             style={{
               color: colors.text,
               backgroundColor: colors.card,
-              borderColor: colors.border,
-              borderWidth: 1,
-              borderRadius: 4,
-              padding: 8,
-              minWidth: 200,
+              borderColor: colors.border
             }}
           />
         </View>

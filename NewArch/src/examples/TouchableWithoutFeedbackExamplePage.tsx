@@ -84,7 +84,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
             accessibilityLabel={'colored example TouchableWithoutFeedback'}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
-            <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
+            <Text style={{color: 'green'}}>TouchableWithoutFeedback</Text>
           </TouchableWithoutFeedback>
         </Example>
         <Example

@@ -93,7 +93,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
         <Pressable
           ref={firstPressableRef}
           accessibilityRole="button"
-          accessibilityLabel={'Press me'}
+          accessibilityLabel={'example pressable'}
           accessibilityHint={
             'click me to change text from Pressed to Press Me'
           }
@@ -113,7 +113,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
       <Example title="A disabled Pressable component." code={example2jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Disabled Pressable'}
+          accessibilityLabel={'example disabled pressable'}
           style={{
             width: 140,
             height: 50,
@@ -140,7 +140,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
       <Example title="A Pressable component with counter." code={example3jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Press me'}
+          accessibilityLabel={'example pressable with a counter'}
           accessibilityHint={'click me to increase the example counter'}
           onPress={() => {
             setTimesPressed((current) => current + 1);
@@ -180,7 +180,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
         code={example4jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Most recent event: press'}
+          accessibilityLabel={'example pressable with event feedback'}
           accessibilityHint={
             'click me to see the diffrent events (press, pressIn, pressOut, longPress)'
           }

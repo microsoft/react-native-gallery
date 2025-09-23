@@ -387,11 +387,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
               }}
               style={{
                 backgroundColor: colors.card,
-                borderColor: colors.border,
-                borderWidth: 1,
-                borderRadius: 4,
-                padding: 8,
-                marginTop: 8,
+                borderColor: colors.border
               }}
             >
               <Text style={{color: colors.text}}>
