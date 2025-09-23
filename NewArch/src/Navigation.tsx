@@ -54,22 +54,27 @@ type Theme = {
   };
 };
 
+// Default theme colors constant to avoid duplication
+const DEFAULT_THEME_COLORS = {
+  primary: '#0066cc',
+  background: '#FFFFFF',
+  card: '#FFFFFF',
+  text: '#505050',
+  border: '#E6E6E6',
+  notification: 'rgb(255, 59, 48)',
+};
+
+const DEFAULT_THEME: Theme = {
+  dark: false,
+  colors: DEFAULT_THEME_COLORS,
+};
+
 type NavigationContainerProps = PropsWithChildren<{
   theme?: Theme;
 }>;
 
 // Create a theme context
-const ThemeContext = React.createContext<Theme>({
-  dark: false,
-  colors: {
-    primary: '#0066cc',
-    background: '#FFFFFF',
-    card: '#FFFFFF',
-    text: '#505050',
-    border: '#E6E6E6',
-    notification: 'rgb(255, 59, 48)',
-  },
-});
+const ThemeContext = React.createContext<Theme>(DEFAULT_THEME);
 
 const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
   const [currentScreen, setCurrentScreen] = useState('Home');
@@ -102,19 +107,7 @@ const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
     routes: routes,
     parameters: parameters,
   };
-  const defaultTheme: Theme = {
-    dark: false,
-    colors: {
-      primary: '#0066cc',
-      background: '#FFFFFF',
-      card: '#FFFFFF',
-      text: '#505050',
-      border: '#E6E6E6',
-      notification: 'rgb(255, 59, 48)',
-    },
-  };
-
-  const currentTheme = theme || defaultTheme;
+  const currentTheme = theme || DEFAULT_THEME;
 
   return (
     <ThemeContext.Provider value={currentTheme}>
