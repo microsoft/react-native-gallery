@@ -54,32 +54,20 @@ type Theme = {
   };
 };
 
-// Default theme colors constant to avoid duplication
-const DEFAULT_THEME_COLORS = {
-  primary: '#0066cc',
-  background: '#FFFFFF',
-  card: '#FFFFFF',
-  text: '#505050',
-  border: '#E6E6E6',
-  notification: 'rgb(255, 59, 48)',
-};
-
-const DEFAULT_THEME: Theme = {
-  dark: false,
-  colors: DEFAULT_THEME_COLORS,
-};
-
 type NavigationContainerProps = PropsWithChildren<{
   theme?: Theme;
 }>;
 
-// Create a theme context
-const ThemeContext = React.createContext<Theme>(DEFAULT_THEME);
+// Store the current theme in a context for useTheme hook
+let currentTheme: Theme | null = null;
 
 const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
   const [currentScreen, setCurrentScreen] = useState('Home');
   const [routes, setRoutes] = useState<RouteType[]>([{name: 'Home', key: 'Home', params: {}}]);
   const [parameters, setParameters] = useState({} as any);
+
+  // Store the theme for useTheme hook
+  currentTheme = theme || null;
 
   const navigationContext = {
     push: (screen: string, parameters: any, _navigateFrom: string) => {
@@ -107,14 +95,11 @@ const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
     routes: routes,
     parameters: parameters,
   };
-  const currentTheme = theme || DEFAULT_THEME;
 
   return (
-    <ThemeContext.Provider value={currentTheme}>
-      <NavigationContext.Provider value={navigationContext}>
-        {children}
-      </NavigationContext.Provider>
-    </ThemeContext.Provider>
+    <NavigationContext.Provider value={navigationContext}>
+      {children}
+    </NavigationContext.Provider>
   );
 };
 
@@ -361,19 +346,23 @@ const useIsFocused = () => {
 };
 
 const useTheme = () => {
-  return React.useContext(ThemeContext);
-};
-
-const Theme = {
-  colors: {
-    primary: '#0066cc',
-    background: '#FFFFFF',
-    card: '#FFFFFF',
-    text: '#505050',
-    border: '#E6E6E6',
-    notification: 'rgb(255, 59, 48)',
-  },
-  dark: false,
+  // Return the current theme passed to NavigationContainer, or fallback to default light theme colors
+  if (currentTheme) {
+    return currentTheme;
+  }
+  
+  // Fallback to default light theme if no theme was provided
+  return {
+    dark: false,
+    colors: {
+      primary: '#0066cc',
+      background: '#FFFFFF',
+      card: '#FFFFFF',
+      text: '#505050',
+      border: '#E6E6E6',
+      notification: 'rgb(255, 59, 48)',
+    },
+  };
 };
 
 const useNavigation = () => {
@@ -387,5 +376,5 @@ const DrawerActions = {
   toggleDrawer: () => {console.log('toggleDrawer'); return { type: 'TOGGLE_DRAWER' };},
 };
 
-export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, Theme, useNavigation, DrawerActions };
+export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, useNavigation, DrawerActions };
 export type { Theme };
