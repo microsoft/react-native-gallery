@@ -9,6 +9,7 @@ import {
   useAnimatedValue,
 } from 'react-native';
 import type { PropsWithChildren } from 'react';
+import {Theme} from '@react-navigation/native';
 
 type NavigationAction = {
   type: string,
@@ -42,23 +43,11 @@ type RouteType = {
   params: any,
 }
 
-type Theme = {
-  dark: boolean;
-  colors: {
-    primary: string;
-    background: string;
-    card: string;
-    text: string;
-    border: string;
-    notification: string;
-  };
-};
-
 type NavigationContainerProps = PropsWithChildren<{
   theme?: Theme;
 }>;
 
-// Store the current theme in a context for useTheme hook
+// Store the current theme for useTheme hook
 let currentTheme: Theme | null = null;
 
 const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
@@ -95,7 +84,6 @@ const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
     routes: routes,
     parameters: parameters,
   };
-
   return (
     <NavigationContext.Provider value={navigationContext}>
       {children}
@@ -365,6 +353,18 @@ const useTheme = () => {
   };
 };
 
+const Theme = {
+  colors: {
+    primary: '#0066cc',
+    background: '#FFFFFF',
+    card: '#FFFFFF',
+    text: '#505050',
+    border: '#E6E6E6',
+    notification: 'rgb(255, 59, 48)',
+  },
+  dark: false,
+};
+
 const useNavigation = () => {
   const navigationContext = React.useContext(NavigationContext);
   return navigationContext;
@@ -376,5 +376,4 @@ const DrawerActions = {
   toggleDrawer: () => {console.log('toggleDrawer'); return { type: 'TOGGLE_DRAWER' };},
 };
 
-export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, useNavigation, DrawerActions };
-export type { Theme };
+export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, Theme, useNavigation, DrawerActions };
