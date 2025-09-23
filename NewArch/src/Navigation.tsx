@@ -9,7 +9,23 @@ import {
   useAnimatedValue,
 } from 'react-native';
 import type { PropsWithChildren } from 'react';
-import {Theme} from '@react-navigation/native';
+import { ThemeContext } from './themes/Theme';
+import LightTheme from './themes/LightTheme';
+import DarkTheme from './themes/DarkTheme';
+import HighContrastTheme from './themes/HighContrastTheme';
+import useHighContrastState from './hooks/useHighContrastState';
+
+type Theme = {
+  dark: boolean;
+  colors: {
+    primary: string;
+    background: string;
+    card: string;
+    text: string;
+    border: string;
+    notification: string;
+  };
+};
 
 type NavigationAction = {
   type: string,
@@ -46,17 +62,10 @@ type RouteType = {
 type NavigationContainerProps = PropsWithChildren<{
   theme?: Theme;
 }>;
-
-// Store the current theme for useTheme hook
-let currentTheme: Theme | null = null;
-
 const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
   const [currentScreen, setCurrentScreen] = useState('Home');
   const [routes, setRoutes] = useState<RouteType[]>([{name: 'Home', key: 'Home', params: {}}]);
   const [parameters, setParameters] = useState({} as any);
-
-  // Store the theme for useTheme hook
-  currentTheme = theme || null;
 
   const navigationContext = {
     push: (screen: string, parameters: any, _navigateFrom: string) => {
@@ -334,23 +343,20 @@ const useIsFocused = () => {
 };
 
 const useTheme = () => {
-  // Return the current theme passed to NavigationContainer, or fallback to default light theme colors
-  if (currentTheme) {
-    return currentTheme;
+  const themeMode = React.useContext(ThemeContext);
+  const isHighContrast = useHighContrastState();
+  
+  // Return the appropriate theme based on the context and high contrast state
+  if (isHighContrast) {
+    return HighContrastTheme;
   }
   
-  // Fallback to default light theme if no theme was provided
-  return {
-    dark: false,
-    colors: {
-      primary: '#0066cc',
-      background: '#FFFFFF',
-      card: '#FFFFFF',
-      text: '#505050',
-      border: '#E6E6E6',
-      notification: 'rgb(255, 59, 48)',
-    },
-  };
+  if (themeMode === 'dark') {
+    return DarkTheme;
+  }
+  
+  // Default to light theme
+  return LightTheme;
 };
 
 const Theme = {
@@ -377,3 +383,4 @@ const DrawerActions = {
 };
 
 export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, Theme, useNavigation, DrawerActions };
+export type { Theme };
