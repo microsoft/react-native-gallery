@@ -376,7 +376,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             <Text style={{color: colors.text}}>Selection Support</Text>
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel={'Selection Support: Multiple'}
+              accessibilityLabel={'selection support pressable'}
               accessibilityHint={'click me to change selection support'}
               onPress={() => {
                 if (selectedSupport === 'Single') {
