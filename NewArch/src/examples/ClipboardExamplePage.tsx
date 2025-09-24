@@ -5,9 +5,11 @@ import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Clipboard from '@react-native-clipboard/clipboard';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
+import {useTheme} from '../Navigation';
 
 export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
   const firstClipboardButtonRef = usePageFocusManagement(navigation);
+  const {colors} = useTheme();
   const [textToCopy, setTextToCopy] = useState(
     'This text will be copied to the clipboard',
   );
@@ -65,6 +67,15 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
             accessibilityLabel="Example set text to copy"
             value={textToCopy}
             onChangeText={setTextToCopy}
+            style={{
+              backgroundColor: 'white',
+              color: 'black',
+              borderColor: colors.border,
+              borderWidth: 1,
+              padding: 8,
+              minHeight: 40,
+              borderRadius: 4,
+            }}
           />
         </View>
       </Example>
