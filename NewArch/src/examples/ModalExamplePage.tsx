@@ -213,6 +213,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
+    backgroundColor: PlatformColor('ControlFillColorDefaultBrush'),
     borderRadius: 20,
     padding: 35,
     alignItems: 'center',
@@ -232,7 +233,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   textStyle: {
-    color: 'white',
+    color: PlatformColor('TextControlForeground'),
     fontWeight: 'bold',
     textAlign: 'center',
     paddingTop: 5,
