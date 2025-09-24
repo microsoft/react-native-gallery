@@ -9,6 +9,23 @@ import {
   useAnimatedValue,
 } from 'react-native';
 import type { PropsWithChildren } from 'react';
+import { ThemeContext } from './themes/Theme';
+import LightTheme from './themes/LightTheme';
+import DarkTheme from './themes/DarkTheme';
+import HighContrastTheme from './themes/HighContrastTheme';
+import useHighContrastState from './hooks/useHighContrastState';
+
+type Theme = {
+  dark: boolean;
+  colors: {
+    primary: string;
+    background: string;
+    card: string;
+    text: string;
+    border: string;
+    notification: string;
+  };
+};
 
 type NavigationAction = {
   type: string,
@@ -42,8 +59,10 @@ type RouteType = {
   params: any,
 }
 
-type NavigationContainerProps = PropsWithChildren<{}>;
-const NavigationContainer = ({children}: NavigationContainerProps) => {
+type NavigationContainerProps = PropsWithChildren<{
+  theme?: Theme;
+}>;
+const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
   const [currentScreen, setCurrentScreen] = useState('Home');
   const [routes, setRoutes] = useState<RouteType[]>([{name: 'Home', key: 'Home', params: {}}]);
   const [parameters, setParameters] = useState({} as any);
@@ -324,14 +343,20 @@ const useIsFocused = () => {
 };
 
 const useTheme = () => {
-  return {colors: {
-    primary: '#0066cc',
-    background: '#FFFFFF',
-    card: '#FFFFFF',
-    text: '#505050',
-    border: '#E6E6E6',
-    notification: 'rgb(255, 59, 48)',
-  }};
+  const themeMode = React.useContext(ThemeContext);
+  const isHighContrast = useHighContrastState();
+  
+  // Return the appropriate theme based on the context and high contrast state
+  if (isHighContrast) {
+    return HighContrastTheme;
+  }
+  
+  if (themeMode === 'dark') {
+    return DarkTheme;
+  }
+  
+  // Default to light theme
+  return LightTheme;
 };
 
 const Theme = {
@@ -358,3 +383,4 @@ const DrawerActions = {
 };
 
 export { NavigationContainer, StackNavigator, StackScreen, createNativeStackNavigator, createDrawerNavigator, getDrawerStatusFromState, useIsFocused, useTheme, Theme, useNavigation, DrawerActions };
+export type { Theme };
