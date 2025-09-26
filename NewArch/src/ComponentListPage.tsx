@@ -58,7 +58,7 @@ const ListOfComponents = ({
     <View
       accessibilityLabel={heading + 'components'}
       accessible={true}
-      accessibilityRole="none">
+      accessibilityRole="group">
       <Text accessibilityRole="header" style={styles.heading}>
         {heading}
       </Text>
