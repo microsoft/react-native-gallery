@@ -1,5 +1,5 @@
 'use strict';
-import {Text, ScrollView, View} from 'react-native';
+import {Text, ScrollView, View, Dimensions} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -18,7 +18,8 @@ export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> 
   const handleHorizontalScrollViewKeyDown = (e: any) => {
     if (!horizontalScrollViewRef.current) return;
     
-    const scrollAmount = 50; // Amount to scroll in pixels
+    const windowWidth = Dimensions.get('window').width;
+    const scrollAmount = windowWidth * 0.1; // 10% of window width
     
     if (e.nativeEvent.key === 'ArrowLeft') {
       e.preventDefault();
@@ -168,7 +169,11 @@ export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> 
     ref={horizontalScrollViewRef}
     style={{height: 40, borderWidth: 1, borderColor: 'gray'}} 
     horizontal={true}
-    onKeyDown={handleHorizontalScrollViewKeyDown}
+    onKeyDown={(e) => {
+      const windowWidth = Dimensions.get('window').width;
+      const scrollAmount = windowWidth * 0.1; // 10% of window width
+      // Handle arrow key navigation...
+    }}
     keyboardEvents={['keyDown']}
     focusable={true}
     onScroll={(event) => setScrollOffset(event.nativeEvent.contentOffset.x)}
