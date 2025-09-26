@@ -68,8 +68,8 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
             value={textToCopy}
             onChangeText={setTextToCopy}
             style={{
-              backgroundColor: 'white',
-              color: 'black',
+              backgroundColor: colors.card,
+              color: colors.text,
               borderColor: colors.border,
               borderWidth: 1,
               padding: 8,
