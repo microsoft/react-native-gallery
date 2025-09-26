@@ -169,11 +169,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> 
     ref={horizontalScrollViewRef}
     style={{height: 40, borderWidth: 1, borderColor: 'gray'}} 
     horizontal={true}
-    onKeyDown={(e) => {
-      const windowWidth = Dimensions.get('window').width;
-      const scrollAmount = windowWidth * 0.1; // 10% of window width
-      // Handle arrow key navigation...
-    }}
+    onKeyDown={handleHorizontalScrollViewKeyDown}
     keyboardEvents={['keyDown']}
     focusable={true}
     onScroll={(event) => setScrollOffset(event.nativeEvent.contentOffset.x)}
