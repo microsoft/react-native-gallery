@@ -41,29 +41,29 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
       <Example title="A simple Button." code={example1jsx}>
         <Button
           ref={firstButtonRef}
-          title="Button"
-          accessibilityLabel={'example simple button1'}
+          title="Simple Button"
+          accessibilityLabel={'simple button'}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A colored Button." code={example2jsx}>
         <Button
-          title="Button"
+          title="Colored Button"
           color={
             Platform.OS === 'windows'
               ? PlatformColor('SystemChromeMediumLowColor')
               : 'silver'
           }
-          accessibilityLabel={'example colored button2'}
+          accessibilityLabel={'colored button'}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A disabled Button." code={example3jsx}>
         <Button
-          title="Button"
-          accessibilityLabel={'example disabled button3'}
+          title="Disabled Button"
+          accessibilityLabel={'disabled button'}
           disabled={true}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
@@ -72,7 +72,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
       <Example title="A counter Button." code={example4jsx}>
         <Button
           accessibilityLabel={'example button4 counter'}
-          accessibilityHint={'click me to increase the example counter'}
+          accessibilityHint={`${title}`}
           title={String(title)}
           onPress={() => {
             setTitle(title + 1);
