@@ -218,33 +218,14 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole="button"
         accessibilityLabel={item.title}
-        accessibilityHint={`Select ${item.title}`}
-        accessibilityActions={[
-          { name: 'activate', label: 'Select' },
-        ]}
-        onAccessibilityAction={(event) => {
-          if (event.nativeEvent.actionName === 'activate') {
-            setSelectedIndex(item.index);
-          }
-        }}
-        importantForAccessibility="yes"
-        focusable={true}
         accessible={true}
+        focusable={true}
         style={styles.item}
         onPress={() => {
           setSelectedIndex(item.index);
-        }}
-        onAccessibilityTap={() => {
-          setSelectedIndex(item.index);
         }}>
-        <Text 
-          style={styles.title}
-          importantForAccessibility="no-hide-descendants"
-          accessible={false}>
-          {item.title}
-        </Text>
+        <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -252,35 +233,16 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem2 = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole="button"
         accessibilityLabel={item.title}
-        accessibilityHint={`Select ${item.title}`}
-        accessibilityActions={[
-          { name: 'activate', label: 'Select' },
-        ]}
-        onAccessibilityAction={(event) => {
-          if (event.nativeEvent.actionName === 'activate') {
-            setSelectedIndex(item.index);
-          }
-        }}
-        importantForAccessibility="yes"
-        focusable={true}
         accessible={true}
+        focusable={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex(item.index);
-        }}
-        onAccessibilityTap={() => {
-          setSelectedIndex(item.index);
         }}>
-        <Text 
-          style={styles.title}
-          importantForAccessibility="no-hide-descendants"
-          accessible={false}>
-          {item.title}
-        </Text>
+        <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -288,24 +250,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
-        accessibilityRole="button"
         accessibilityLabel={item.title}
-        accessibilityHint={`Toggle selection for ${item.title}`}
-        accessibilityActions={[
-          { name: 'activate', label: 'Toggle' },
-        ]}
-        onAccessibilityAction={(event) => {
-          if (event.nativeEvent.actionName === 'activate') {
-            if (getList.includes(item.index)) {
-              setList(getList.filter((value) => value !== item.index));
-            } else {
-              setList(getList.concat([item.index]));
-            }
-          }
-        }}
-        importantForAccessibility="yes"
-        focusable={true}
         accessible={true}
+        focusable={true}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -317,30 +264,14 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           }
         }}>
         <View style={styles.item}>
-          <Text 
-            style={styles.title}
-            importantForAccessibility="no-hide-descendants"
-            accessible={false}>
-            {item.title}
-          </Text>
+          <Text style={styles.title}>{item.title}</Text>
         </View>
       </TouchableHighlight>
     ) : (
       <TouchableHighlight
-        accessibilityRole="button"
         accessibilityLabel={item.title}
-        accessibilityHint={`Select ${item.title}`}
-        accessibilityActions={[
-          { name: 'activate', label: 'Select' },
-        ]}
-        onAccessibilityAction={(event) => {
-          if (event.nativeEvent.actionName === 'activate') {
-            setSelectedIndex2(item.index);
-          }
-        }}
-        importantForAccessibility="yes"
-        focusable={true}
         accessible={true}
+        focusable={true}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
@@ -348,16 +279,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex2(item.index);
-        }}
-        onAccessibilityTap={() => {
-          setSelectedIndex2(item.index);
         }}>
-        <Text 
-          style={styles.title}
-          importantForAccessibility="no-hide-descendants"
-          accessible={false}>
-          {item.title}
-        </Text>
+        <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -383,8 +306,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           <View
             ref={firstVirtualizedListRef}
             style={styles.container}
-            accessibilityLabel="VirtualizedList container"
-            accessibilityRole="list">
+            accessibilityLabel="VirtualizedList container">
             <VirtualizedList
               data={DATA}
               initialNumToRender={10}
@@ -394,8 +316,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
               getItem={getItem}
               accessibilityLabel={'A simple VirtualizedList'}
               focusable={true}
-              accessible={true}
-              importantForAccessibility="yes"
             />
           </View>
         </ScrollView>
@@ -405,7 +325,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         title="A VirtualizedList with single selection support"
         code={example2jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container} accessibilityRole="list">
+          <View style={styles.container}>
             <VirtualizedList
               data={DATA}
               initialNumToRender={10}
@@ -417,8 +337,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 'A VirtualizedList with single selection support'
               }
               focusable={true}
-              accessible={true}
-              importantForAccessibility="yes"
             />
           </View>
         </ScrollView>
@@ -428,7 +346,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         title="A VirtualizedList with multiple selection support."
         code={example3jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container} accessibilityRole="list">
+          <View style={styles.container}>
             <VirtualizedList
               data={DATA}
               initialNumToRender={10}
@@ -440,8 +358,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 'A VirtualizedList with multiple selection support'
               }
               focusable={true}
-              accessible={true}
-              importantForAccessibility="yes"
             />
           </View>
           <View style={styles.selectionContainer}>
