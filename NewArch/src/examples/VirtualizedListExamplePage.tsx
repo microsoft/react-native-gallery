@@ -41,7 +41,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     </TouchableHighlight>
   );
 
-  <VirtualizedList that's like just make sure
+  <VirtualizedList
     data={DATA}
     initialNumToRender={30}
     renderItem={renderItem}
