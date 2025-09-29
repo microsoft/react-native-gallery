@@ -118,6 +118,7 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
     }
   } catch (...) {
     // Silently continue if title bar theming is not supported
+    
   }
 
   // Update Icon
