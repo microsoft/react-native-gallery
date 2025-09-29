@@ -298,7 +298,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           setSelectedIndex2(item.index);
         }}
         onAccessibilityTap={() => {
-          setSelectedIndex(item.index);
+          setSelectedIndex2(item.index);
         }}>
         <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
