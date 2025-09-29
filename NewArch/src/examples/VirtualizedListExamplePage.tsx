@@ -9,7 +9,7 @@ import {
   PlatformColor,
   Pressable,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 // import CheckBox from '@react-native-community/checkbox';
@@ -20,6 +20,13 @@ import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
   const firstVirtualizedListRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
+
+  // Focus the first VirtualizedList when component mounts
+  useEffect(() => {
+    if (firstVirtualizedListRef?.current) {
+      firstVirtualizedListRef.current.focus();
+    }
+  }, []);
 
   const example1jsx = `
   var DATA: INT[] = [];
@@ -219,7 +226,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     return (
       <TouchableHighlight
         accessibilityLabel={item.title}
-        accessibilityRole="button"
+        accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={styles.item}
@@ -235,7 +242,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     return (
       <TouchableHighlight
         accessibilityLabel={item.title}
-        accessibilityRole="button"
+        accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
@@ -253,7 +260,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
         accessibilityLabel={item.title}
-        accessibilityRole="button"
+        accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
@@ -273,7 +280,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     ) : (
       <TouchableHighlight
         accessibilityLabel={item.title}
-        accessibilityRole="button"
+        accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={
@@ -313,6 +320,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             accessibilityLabel="VirtualizedList container"
             accessible={true}>
             <VirtualizedList
+              accessibilityRole="list"
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem}
@@ -333,6 +341,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         <ScrollView horizontal={true}>
           <View style={styles.container} accessible={true}>
             <VirtualizedList
+              accessibilityRole="list"
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem2}
@@ -355,6 +364,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         <ScrollView horizontal={true}>
           <View style={styles.container}>
             <VirtualizedList
+              accessibilityRole="list"
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem3}
