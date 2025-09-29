@@ -232,6 +232,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         style={styles.item}
         onPress={() => {
           setSelectedIndex(item.index);
+        }}
+        onAccessibilityTap={() => {
+          setSelectedIndex(item.index);
         }}>
         <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
@@ -249,6 +252,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
+          setSelectedIndex(item.index);
+        }}
+        onAccessibilityTap={() => {
           setSelectedIndex(item.index);
         }}>
         <Text style={styles.title}>{item.title}</Text>
@@ -290,6 +296,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex2(item.index);
+        }}
+        onAccessibilityTap={() => {
+          setSelectedIndex(item.index);
         }}>
         <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
@@ -317,8 +326,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           <View
             ref={firstVirtualizedListRef}
             style={styles.container}
-            accessibilityLabel="VirtualizedList container"
-            accessible={true}>
+            accessibilityLabel="VirtualizedList container">
             <VirtualizedList
               accessibilityRole="list"
               data={DATA}
@@ -329,7 +337,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
               getItem={getItem}
               accessibilityLabel={'A simple VirtualizedList'}
               focusable={true}
-              accessible={true}
             />
           </View>
         </ScrollView>
@@ -339,7 +346,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         title="A VirtualizedList with single selection support"
         code={example2jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container} accessible={true}>
+          <View style={styles.container}>
             <VirtualizedList
               accessibilityRole="list"
               data={DATA}
@@ -352,7 +359,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 'A VirtualizedList with single selection support'
               }
               focusable={true}
-              accessible={true}
             />
           </View>
         </ScrollView>
