@@ -218,7 +218,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole='listitem'
+        accessibilityRole="listitem"
         accessibilityLabel={item.title}
         style={styles.item}
         onPress={() => {
@@ -235,7 +235,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem2 = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole='listitem'
+        accessibilityRole="listitem"
         accessibilityLabel={item.title}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
@@ -254,7 +254,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
-        accessibilityRole='listitem'
+        accessibilityRole="listitem"
         accessibilityLabel={item.title}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
@@ -272,7 +272,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       </TouchableHighlight>
     ) : (
       <TouchableHighlight
-        accessibilityRole='listitem'
+        accessibilityRole="listitem"
         accessibilityLabel={item.title}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
@@ -313,7 +313,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             style={styles.container}
             accessibilityLabel="VirtualizedList container">
             <VirtualizedList
-              accessibilityRole='list'
+              accessibilityRole="list"
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem}
@@ -333,7 +333,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         <ScrollView horizontal={true}>
           <View style={styles.container}>
             <VirtualizedList
-              accessibilityRole='list'
+              accessibilityRole="list"
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem2}
@@ -355,7 +355,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         <ScrollView horizontal={true}>
           <View style={styles.container}>
             <VirtualizedList
-              accessibilityRole='list'
+              accessibilityRole="list"
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem3}
