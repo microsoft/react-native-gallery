@@ -334,6 +334,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         ref={hamburgerRef}
         accessibilityRole="button"
         accessibilityLabel="Navigation menu"
+        tooltip={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         accessibilityState={{ expanded: isDrawerOpen }}
         accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         style={styles.menu}
