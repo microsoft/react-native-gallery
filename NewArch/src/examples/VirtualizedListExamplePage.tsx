@@ -8,6 +8,7 @@ import {
   ScrollView,
   PlatformColor,
   Pressable,
+  Platform,
 } from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
@@ -195,6 +196,21 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     selectionContainer: {
       marginLeft: 30,
     },
+    selectionButton: {
+      backgroundColor: Platform.OS === 'windows'
+        ? PlatformColor('SystemColorButtonFaceColor')
+        : 'silver',
+      borderRadius: 2,
+      padding: 8,
+      marginTop: 10,
+      minWidth: 200,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    selectionButtonText: {
+      textAlign: 'center',
+      color: PlatformColor('TextFillColorPrimary'),
+    },
     item: {
       padding: 5,
       paddingHorizontal: 10,
@@ -375,6 +391,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
               accessibilityLabel={'selection support pressable'}
               accessibilityValue={{text: selectedSupport}}
               accessibilityHint={'click me to change selection support'}
+              style={styles.selectionButton}
               onPress={() => {
                 if (selectedSupport === 'Single') {
                   setSelectedSupport('Multiple');
@@ -383,7 +400,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 }
               }}
             >
-              <Text>
+              <Text style={styles.selectionButtonText}>
                 Selection Support: {selectedSupport}
               </Text>
             </Pressable>
