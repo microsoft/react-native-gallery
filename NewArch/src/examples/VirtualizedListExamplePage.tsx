@@ -26,7 +26,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     if (firstVirtualizedListRef?.current) {
       firstVirtualizedListRef.current.focus();
     }
-  }, []);
+  }, [firstVirtualizedListRef]);
 
   const example1jsx = `
   var DATA: INT[] = [];
