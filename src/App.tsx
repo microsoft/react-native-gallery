@@ -113,6 +113,7 @@ type DrawerListItemProps = {
   icon?: string;
   navigation: any;
   currentRoute: string;
+  scrollViewRef?: React.RefObject<ScrollView>;
 };
 const DrawerListItem = ({
   route,
@@ -120,21 +121,41 @@ const DrawerListItem = ({
   icon,
   navigation,
   currentRoute,
+  scrollViewRef,
 }: DrawerListItemProps) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
+  const itemRef = React.useRef<View>(null);
+
+  const handleFocus = () => {
+    if (scrollViewRef?.current && itemRef.current) {
+      itemRef.current.measureLayout(
+        scrollViewRef.current as any,
+        (_x, y, _width, _height) => {
+          scrollViewRef.current?.scrollTo({
+            y: y - 50,
+            animated: true,
+          });
+        },
+        () => {},
+      );
+    }
+  };
 
   const localStyles = createDrawerListItemStyles(isHovered, isPressed);
   return (
     <Pressable
+      ref={itemRef as any}
       onPress={() => navigation.navigate(route)}
       onPressIn={() => setIsPressed(true)}
       onPressOut={() => setIsPressed(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}
+      onFocus={handleFocus}
       accessibilityRole="button"
       accessibilityLabel={label}
-      style={localStyles.drawerListItem}>
+      style={localStyles.drawerListItem}
+      focusable={true}>
       <View style={styles.indentContainer}>
         <SelectedNavigationItemPill
           currentRoute={currentRoute}
@@ -158,6 +179,7 @@ type DrawerCollapsibleCategoryProps = {
   navigation: any;
   currentRoute: string;
   containsCurrentRoute: boolean;
+  scrollViewRef?: React.RefObject<ScrollView>;
 };
 const DrawerCollapsibleCategory = ({
   categoryLabel,
@@ -166,6 +188,7 @@ const DrawerCollapsibleCategory = ({
   navigation,
   currentRoute,
   containsCurrentRoute,
+  scrollViewRef,
 }: DrawerCollapsibleCategoryProps) => {
   const categoryRoute = `Category: ${categoryLabel}`;
   const isCurrentRoute = currentRoute === categoryRoute;
@@ -175,6 +198,22 @@ const DrawerCollapsibleCategory = ({
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
   const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+  const itemRef = React.useRef<View>(null);
+
+  const handleFocus = () => {
+    if (scrollViewRef?.current && itemRef.current) {
+      itemRef.current.measureLayout(
+        scrollViewRef.current as any,
+        (_x, y, _width, _height) => {
+          scrollViewRef.current?.scrollTo({
+            y: y - 50,
+            animated: true,
+          });
+        },
+        () => {},
+      );
+    }
+  };
 
   const onPress = () => {
     if (isExpanded && containsCurrentRoute) {
@@ -196,13 +235,16 @@ const DrawerCollapsibleCategory = ({
       accessibilityLabel={categoryLabel}
       onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
       <Pressable
+        ref={itemRef as any}
         style={localStyles.drawerListItem}
         onPress={() => onPress()}
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
-        accessible={false}>
+        onFocus={handleFocus}
+        accessible={false}
+        focusable={true}>
         <View style={styles.indentContainer}>
           <SelectedNavigationItemPill
             currentRoute={currentRoute}
@@ -229,6 +271,7 @@ const DrawerCollapsibleCategory = ({
             label={item.label}
             navigation={navigation}
             currentRoute={currentRoute}
+            scrollViewRef={scrollViewRef}
           />
         ))}
     </View>
@@ -262,12 +305,14 @@ const DrawerListView = (props) => {
     <View>
       {RNGalleryCategories.map((category) => (
         <DrawerCollapsibleCategory
+          key={category.label}
           categoryLabel={category.label}
           categoryIcon={category.icon}
           items={categoryMap.get(category.label)}
           navigation={props.navigation}
           currentRoute={props.currentRoute}
           containsCurrentRoute={categoryWithCurrentRoute === category.label}
+          scrollViewRef={props.scrollViewRef}
         />
       ))}
     </View>
@@ -280,6 +325,7 @@ function CustomDrawerContent({navigation}) {
 
   const navigationState = navigation.getState();
   const currentRoute = navigationState.routeNames[navigationState.index];
+  const scrollViewRef = React.useRef<ScrollView>(null);
 
   if (!isDrawerOpen) {
     return <View />;
@@ -291,7 +337,8 @@ function CustomDrawerContent({navigation}) {
         accessibilityLabel="Navigation bar expanded"
         {...{tooltip: 'Collapse Menu'}}
         style={styles.menu}
-        onPress={() => navigation.closeDrawer()}>
+        onPress={() => navigation.closeDrawer()}
+        focusable={true}>
         <Text style={styles.icon}>&#xE700;</Text>
       </Pressable>
       <DrawerListItem
@@ -309,8 +356,12 @@ function CustomDrawerContent({navigation}) {
         currentRoute={currentRoute}
       />
       <View style={styles.drawerDivider} />
-      <ScrollView>
-        <DrawerListView navigation={navigation} currentRoute={currentRoute} />
+      <ScrollView ref={scrollViewRef}>
+        <DrawerListView 
+          navigation={navigation} 
+          currentRoute={currentRoute}
+          scrollViewRef={scrollViewRef}
+        />
       </ScrollView>
       <View style={styles.drawerDivider} />
       <DrawerListItem

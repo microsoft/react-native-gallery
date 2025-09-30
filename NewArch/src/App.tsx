@@ -6,6 +6,7 @@ import {
   Text,
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
+  ScrollView,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
@@ -115,26 +116,51 @@ type DrawerListItemProps = {
   navigation: any;
   currentRoute: string;
   onKeyDown?: (e: RNKeyboardEvent) => void;
+  scrollViewRef?: React.RefObject<ScrollView>;
   ref?: React.Ref<Pressable>;
 };
 const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
   (
-    { route, label, icon, navigation, currentRoute, onKeyDown },
+    { route, label, icon, navigation, currentRoute, onKeyDown, scrollViewRef },
     ref,
   ) => {
     const [isHovered, setIsHovered] = React.useState(false);
     const [isPressed, setIsPressed] = React.useState(false);
+    const itemRef = useRef<View>(null);
+
+    const handleFocus = () => {
+      if (scrollViewRef?.current && itemRef.current) {
+        itemRef.current.measureLayout(
+          scrollViewRef.current as any,
+          (_x, y, _width, _height) => {
+            scrollViewRef.current?.scrollTo({
+              y: y - 50,
+              animated: true,
+            });
+          },
+          () => {},
+        );
+      }
+    };
 
     const localStyles = createDrawerListItemStyles(isHovered, isPressed);
     return (
       <Pressable
-        ref={ref}
+        ref={(node) => {
+          if (typeof ref === 'function') {
+            ref(node);
+          } else if (ref) {
+            (ref as any).current = node;
+          }
+          (itemRef as any).current = node;
+        }}
         onKeyDown={onKeyDown}
         onPress={() => navigation.navigate(route, { shouldFocus: true, focusTimestamp: Date.now() })}
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
+        onFocus={handleFocus}
         accessibilityRole="button"
         accessibilityLabel={label}
         style={localStyles.drawerListItem}
@@ -170,6 +196,7 @@ type DrawerCollapsibleCategoryProps = {
   navigation: any;
   currentRoute: string;
   containsCurrentRoute: boolean;
+  scrollViewRef?: React.RefObject<ScrollView>;
 };
 const DrawerCollapsibleCategory = ({
   categoryLabel,
@@ -178,6 +205,7 @@ const DrawerCollapsibleCategory = ({
   navigation,
   currentRoute,
   containsCurrentRoute,
+  scrollViewRef,
 }: DrawerCollapsibleCategoryProps) => {
   const categoryRoute = `Category: ${categoryLabel}`;
   const isCurrentRoute = currentRoute === categoryRoute;
@@ -187,6 +215,22 @@ const DrawerCollapsibleCategory = ({
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
   const localStyles = createDrawerListItemStyles(isHovered, isPressed);
+  const itemRef = useRef<View>(null);
+
+  const handleFocus = () => {
+    if (scrollViewRef?.current && itemRef.current) {
+      itemRef.current.measureLayout(
+        scrollViewRef.current as any,
+        (_x, y, _width, _height) => {
+          scrollViewRef.current?.scrollTo({
+            y: y - 50,
+            animated: true,
+          });
+        },
+        () => {},
+      );
+    }
+  };
 
   const onPress = () => {
     if (isExpanded && containsCurrentRoute) {
@@ -203,12 +247,14 @@ const DrawerCollapsibleCategory = ({
   return (
     <View style={styles.category}>
       <Pressable
+        ref={itemRef as any}
         style={localStyles.drawerListItem}
         onPress={() => onPress()}
         onPressIn={() => setIsPressed(true)}
         onPressOut={() => setIsPressed(false)}
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
+        onFocus={handleFocus}
         accessibilityRole="button"
         accessibilityLabel={categoryLabel}
         accessibilityState={{expanded: isExpanded}}
@@ -248,6 +294,7 @@ const DrawerCollapsibleCategory = ({
             label={item.label}
             navigation={navigation}
             currentRoute={currentRoute}
+            scrollViewRef={scrollViewRef}
           />
         ))}
     </View>
@@ -257,6 +304,7 @@ const DrawerCollapsibleCategory = ({
 const DrawerListView = (props: {
   navigation: any;
   currentRoute: string;
+  scrollViewRef?: React.RefObject<ScrollView>;
 }) => {
   const filterPredicate = (item: any) => item.type !== '';
   const filteredList = RNGalleryList.filter(filterPredicate);
@@ -288,6 +336,7 @@ const DrawerListView = (props: {
           navigation={props.navigation}
           currentRoute={props.currentRoute}
           containsCurrentRoute={categoryWithCurrentRoute === category.label}
+          scrollViewRef={props.scrollViewRef}
         />
       ))}
     </View>
@@ -305,6 +354,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   const hamburgerRef = useRef<View>(null);
   const homeRef = useRef<View>(null);
   const settingsRef = useRef<View>(null);
+  const scrollViewRef = useRef<ScrollView>(null);
 
   // When drawer opens, focus the Home menu item
   useEffect(() => {
@@ -380,7 +430,13 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             focusable={true}
           />
           <View style={styles.drawerDivider} />
-          <DrawerListView navigation={navigation} currentRoute={currentRoute} />
+          <ScrollView ref={scrollViewRef}>
+            <DrawerListView 
+              navigation={navigation} 
+              currentRoute={currentRoute} 
+              scrollViewRef={scrollViewRef}
+            />
+          </ScrollView>
           <View style={styles.drawerDivider} />
 
           <DrawerListItem
