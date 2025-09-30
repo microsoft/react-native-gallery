@@ -128,7 +128,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
                 color={'#8D8383'}
                 ref={modal1FirstButtonRef}
                 title="Close Modal"
-                accessibilityLabel="Close Modal"
+                accessibilityLabel="This is a simple Modal close Modal"
                 onPress={changeModal1}
                 onAccessibilityTap={changeModal1}/>
             </View>
@@ -151,7 +151,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Button
                 ref={modal2FirstButtonRef}
                 title="Close Modal"
-                accessibilityLabel="Close Modal"
+                accessibilityLabel="This is a Modal with more complex styling close Modal"
                 onPress={changeModal2}
                 onAccessibilityTap={changeModal2}/>
             </View>
@@ -186,7 +186,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
             <Button
               ref={modal3FirstButtonRef}
               title="Close Modal"
-              accessibilityLabel="Close Modal"
+              accessibilityLabel="Modal Events onShow onDismiss events count close Modal"
               onPress={changeModal3}
               onAccessibilityTap={changeModal3}/>
           </View>
