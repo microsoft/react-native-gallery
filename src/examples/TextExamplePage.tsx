@@ -111,7 +111,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
         </Text>
       </Example>
       <Example title="An line of enlarged Consolas Text." code={example6jsx}>
-        <Text style={{fontSize: 30, fontFamily: 'Consolas', color: colors.text}}>
+        <Text style={{fontSize: 30, fontFamily: 'Consolas'}}>
           Here is a line of enlarged Consolas text.
         </Text>
       </Example>
@@ -122,7 +122,6 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
           style={{
             lineHeight: 100,
             textAlign: 'right',
-            color: colors.text,
           }}>
           Here is a right-aligned line of Text with customized line height.
         </Text>
@@ -135,7 +134,6 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
             textTransform: 'uppercase',
             backgroundColor: colors.border,
             writingDirection: 'rtl',
-            color: colors.text,
           }}>
           Here is a line of capitalized text with Right-to-Left writing
           direction and background color.
