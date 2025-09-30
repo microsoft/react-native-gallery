@@ -254,6 +254,6 @@ const styles = StyleSheet.create({
   },
   simpleModalText: {
     color: 'black',
-    marginBottom: 10,
+    marginBottom: 20,
   },
 });
