@@ -5,7 +5,6 @@ import {
   TouchableHighlight,
   Text,
   PlatformColor,
-  Pressable,
   AccessibilityInfo,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
