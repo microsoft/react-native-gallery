@@ -6,6 +6,7 @@ import {
   Text,
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
+  AccessibilityInfo,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
@@ -334,12 +335,13 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         ref={hamburgerRef}
         accessibilityRole="button"
         accessibilityLabel="Navigation menu"
-        accessibilityState={{ expanded: isDrawerOpen }}
-        accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
+        tooltip={ 'Collapse navigation menu'}
+        accessibilityHint={'Tap to collapse navigation menu'}
         style={styles.menu}
         onPress={() => {
           if (isDrawerOpen) {
             navigation.closeDrawer();
+            AccessibilityInfo.announceForAccessibility('Navigation menu collapsed');
           } else {
             navigation.openDrawer();
           }
@@ -347,6 +349,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         onAccessibilityTap={() => {
           if (isDrawerOpen) {
             navigation.closeDrawer();
+            AccessibilityInfo.announceForAccessibility('Navigation menu collapsed');
           } else {
             navigation.openDrawer();
           }
