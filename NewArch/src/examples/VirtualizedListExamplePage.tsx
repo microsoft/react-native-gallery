@@ -8,6 +8,7 @@ import {
   ScrollView,
   PlatformColor,
   Pressable,
+  Platform,
 } from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
@@ -195,6 +196,20 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     selectionContainer: {
       marginLeft: 30,
     },
+    selectionButton: {
+      borderRadius: 2,
+      padding: 8,
+      marginTop: 10,
+      minWidth: 200,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    selectionButtonText: {
+      textAlign: 'center',
+      color: colors.text,
+    },
     item: {
       padding: 5,
       paddingHorizontal: 10,
@@ -375,6 +390,16 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
               accessibilityLabel={'selection support pressable'}
               accessibilityValue={{text: selectedSupport}}
               accessibilityHint={'click me to change selection support'}
+              style={({pressed}) => [
+                styles.selectionButton,
+                {
+                  backgroundColor: pressed
+                    ? colors.primary
+                    : Platform.OS === 'windows'
+                    ? PlatformColor('SystemColorButtonFaceColor')
+                    : colors.border,
+                },
+              ]}
               onPress={() => {
                 if (selectedSupport === 'Single') {
                   setSelectedSupport('Multiple');
@@ -383,7 +408,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 }
               }}
             >
-              <Text>
+              <Text 
+                style={[
+                  styles.selectionButtonText,
+                  // No need for pressed text color as it's handled in base style
+                ]}
+              >
                 Selection Support: {selectedSupport}
               </Text>
             </Pressable>
