@@ -238,6 +238,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     paddingTop: 5,
+    marginBottom: 20,
   },
   simpleModalView: {
     width: 500,
