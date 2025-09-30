@@ -203,16 +203,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       minWidth: 200,
       alignItems: 'center',
       justifyContent: 'center',
-      borderWidth: Platform.OS === 'windows' ? 0 : 1,
-      borderColor: Platform.OS === 'windows' 
-        ? 'transparent' 
-        : colors.border,
+      borderWidth: 1,
+      borderColor: colors.border,
     },
     selectionButtonText: {
       textAlign: 'center',
-      color: Platform.OS === 'windows'
-        ? PlatformColor('SystemControlForegroundChromeBlackHighBrush')
-        : colors.text,
+      color: colors.text,
     },
     item: {
       padding: 5,
