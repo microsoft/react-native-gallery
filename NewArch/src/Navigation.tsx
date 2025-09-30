@@ -238,44 +238,78 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
 
   return (
     <NavigationContext.Provider value={navigation}>
-      <View>
-          <View>
-            { drawerIsOpen &&
-              <Animated.View
-                style={{opacity: fadeAnim}}>
-                <Pressable
-                  style={{
-                    backgroundColor: PlatformColor('Background'),
-                    maxWidth: DEFAULT_DRAWER_WIDTH,
-                    height: '100%',
-                    width: '100%'}}
-                    onPress={() => setDrawerDesiredOpen(false)}
-                    onAccessibilityTap={() => setDrawerDesiredOpen(false)}
-                    />
-              </Animated.View>
+      <View style={{ flex: 1 }}>
+        {/* Main content area - should always be visible */}
+        <View style={{ flex: 1 }}>
+          {React.Children.map(children, child => {
+            const name = child.props.name;
+            if (name !== navigationContext.currentScreen) {
+              return null;
             }
+            return (
+              <View key={name} style={{ flex: 1, alignItems: 'stretch' }}>
+                {child}
+              </View>
+            );
+          })}
+        </View>
+
+        {/* Drawer overlay and drawer - positioned absolutely over content */}
+        {drawerIsOpen && (
+          <>
+            {/* Semi-transparent backdrop that covers the entire screen */}
             <Animated.View
               style={{
                 position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(0, 0, 0, 0.3)', // Semi-transparent overlay
+                opacity: fadeAnim,
+                zIndex: 1
+              }}>
+              <Pressable
+                style={{ flex: 1 }}
+                onPress={() => setDrawerDesiredOpen(false)}
+                onAccessibilityTap={() => setDrawerDesiredOpen(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close navigation menu"
+                accessibilityHint="Tap to close the navigation drawer"
+              />
+            </Animated.View>
+
+            {/* Drawer content */}
+            <Animated.View
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
                 maxWidth: DEFAULT_DRAWER_WIDTH,
                 height: '100%',
-                width: '100%',
-                transform: [{translateX: slideAnim}]}}
-              >
-              {drawer}
+                width: DEFAULT_DRAWER_WIDTH,
+                transform: [{ translateX: slideAnim }],
+                zIndex: 2,
+                backgroundColor: PlatformColor('Background'),
+                elevation: 16, // Android shadow
+                shadowColor: '#000', // iOS shadow
+                shadowOffset: { width: 2, height: 0 },
+                shadowOpacity: 0.25,
+                shadowRadius: 8,
+              }}>
+              <ScrollView
+                style={{
+                  flex: 1,
+                  paddingLeft: 16,
+                  paddingRight: 6,
+                }}
+                accessibilityRole="menu"
+                accessibilityLabel="Navigation menu">
+                {drawerContent({ navigation })}
+              </ScrollView>
             </Animated.View>
-          </View>
-        {React.Children.map(children, child => {
-          const name = child.props.name;
-          if (name !== navigationContext.currentScreen) {
-            return null;
-          }
-          return (
-            <View key={name} style={{alignItems: 'stretch'}}>
-              {child}
-            </View>
-          );
-        })}
+          </>
+        )}
       </View>
     </NavigationContext.Provider>
   );
