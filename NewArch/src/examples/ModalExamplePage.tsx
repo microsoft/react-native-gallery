@@ -54,11 +54,12 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
       onShow={() => {
         setOnShowCount(onShowCount + 1);
       }}>
-      <View style={{width: 500, height: 100}}>
+      <View style={{width: 500, height: 400}}>
       <View style={styles.container}>
         <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
         <Text>onShow event Count = {onShowCount}</Text>
         <Text>onDismiss event Count = {onDismissCount}</Text>
+        <Text style={styles.textStyle}> </Text>
       </View>
         <Button
           title="Close Modal"
@@ -122,15 +123,16 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           onPress={changeModal1}
           onAccessibilityTap={changeModal1}/>
         <Modal visible={modal1}>
-          <View style={{width: 500, height: 50}}>
-            <Text>This is a simple Modal</Text>
-            <Button
-              ref={modal1FirstButtonRef}
-              title="Close Modal"
-              accessibilityLabel="Close Modal"
-              onPress={changeModal1}
-              onAccessibilityTap={changeModal1}/>
-          </View>
+            <View style={styles.simpleModalView}>
+              <Text style={styles.simpleModalText}>This is a simple Modal</Text>
+              <Button
+                color={'#8D8383'}
+                ref={modal1FirstButtonRef}
+                title="Close Modal"
+                accessibilityLabel="Close Modal"
+                onPress={changeModal1}
+                onAccessibilityTap={changeModal1}/>
+            </View>
         </Modal>
       </Example>
       <Example
@@ -167,6 +169,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
               <Text>onDismiss event Count = {onDismissCount}</Text>
+              <Text style={styles.textStyle}> </Text>
             </View>
         <Modal
           visible={modal3}
@@ -176,7 +179,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           onShow={() => {
             setOnShowCount(onShowCount + 1);
           }}>
-          <View style={{width: 500, height: 100}}>
+          <View style={{width: 500, height: 400}}>
             <View style={styles.container}>
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
@@ -213,6 +216,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
+    backgroundColor: PlatformColor('ControlFillColorDefaultBrush'),
     borderRadius: 20,
     padding: 35,
     alignItems: 'center',
@@ -232,9 +236,27 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   textStyle: {
-    color: 'white',
+    color: PlatformColor('TextControlForeground'),
     fontWeight: 'bold',
     textAlign: 'center',
     paddingTop: 5,
+    marginBottom: 20,
+  },
+  simpleModalView: {
+    width: 500,
+    borderRadius: 10,
+    padding: 15,
+    alignItems: 'center',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  simpleModalText: {
+    color: 'black',
+    marginBottom: 20,
   },
 });

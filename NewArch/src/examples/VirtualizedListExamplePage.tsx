@@ -9,7 +9,7 @@ import {
   PlatformColor,
   Pressable,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 // import CheckBox from '@react-native-community/checkbox';
@@ -20,6 +20,13 @@ import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
   const firstVirtualizedListRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
+
+  // Focus the first VirtualizedList when component mounts
+  useEffect(() => {
+    if (firstVirtualizedListRef?.current) {
+      firstVirtualizedListRef.current.focus();
+    }
+  }, [firstVirtualizedListRef]);
 
   const example1jsx = `
   var DATA: INT[] = [];
@@ -222,8 +229,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={styles.item}
         onPress={() => {
           setSelectedIndex(item.index);
@@ -239,8 +248,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem2 = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -258,8 +269,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -276,8 +289,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       </TouchableHighlight>
     ) : (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
@@ -377,6 +392,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             <Pressable
               accessibilityRole="button"
               accessibilityLabel={'selection support pressable'}
+              accessibilityValue={{text: selectedSupport}}
               accessibilityHint={'click me to change selection support'}
               onPress={() => {
                 if (selectedSupport === 'Single') {
