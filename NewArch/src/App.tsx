@@ -439,7 +439,8 @@ function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props: any) => <CustomDrawerContent {...props} />}
       screenOptions={{ headerShown: false }}
-      defaultStatus="closed">
+      defaultStatus="closed"
+      initialRouteName="Home">
       {RNGalleryList.map((item) => (
         <Drawer.Screen
           name={item.key}
@@ -462,7 +463,14 @@ export default function App() {
     <ThemeSetterContext.Provider value={setRawTheme}>
       <RawThemeContext.Provider value={rawtheme}>
         <ThemeContext.Provider value={theme}>
-          <NavigationContainer>
+          <NavigationContainer
+            theme={
+              isHighContrast
+                ? HighContrastTheme
+                : theme === 'dark'
+                ? DarkTheme
+                : LightTheme
+            }>
             <MyDrawer />
           </NavigationContainer>
         </ThemeContext.Provider>
