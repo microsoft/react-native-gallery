@@ -277,7 +277,6 @@ const DrawerCollapsibleCategory = ({
             key={item.label}
             route={item.label}
             label={item.label}
-            icon={item.icon}
             navigation={navigation}
             currentRoute={currentRoute}
           />
@@ -400,6 +399,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             navigation={navigation}
             currentRoute={currentRoute}
             onKeyDown={handleKeyDown}
+            keyboardEvents={['keyDown']}
             focusable={true}
           />
           <DrawerListItem
@@ -410,6 +410,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             navigation={navigation}
             currentRoute={currentRoute}
             onKeyDown={handleKeyDown}
+            keyboardEvents={['keyDown']}
             focusable={true}
           />
           <View style={styles.drawerDivider} />
@@ -427,6 +428,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             navigation={navigation}
             currentRoute={currentRoute}
             onKeyDown={handleKeyDown}
+            keyboardEvents={['keyDown']}
             focusable={true}
           />
         </>
