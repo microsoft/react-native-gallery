@@ -205,12 +205,6 @@ const DrawerCollapsibleCategory = ({
   };
 
   const handleKeyDown = (e: any) => {
-    // Handle Enter/Space to toggle expand/collapse
-    if (e.nativeEvent.key === 'Enter' || e.nativeEvent.key === ' ') {
-      e.preventDefault();
-      setIsExpanded(!isExpanded);
-      return;
-    }
     
     // Handle Left Arrow to collapse if expanded
     if (e.nativeEvent.key === 'ArrowLeft' && isExpanded) {
