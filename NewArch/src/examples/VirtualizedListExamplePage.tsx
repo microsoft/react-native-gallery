@@ -6,7 +6,6 @@ import {
   Text,
   TouchableHighlight,
   ScrollView,
-  PlatformColor,
   Pressable,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
@@ -214,11 +213,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       padding: 5,
       paddingHorizontal: 10,
       marginVertical: 3,
-      backgroundColor: PlatformColor('TextFillColorPrimary'),
+      backgroundColor: colors.primary,
     },
     title: {
       fontSize: 20,
-      color: PlatformColor('TextFillColorPrimary'),
+      color: colors.text,
+    },
+    titleSelected: {
+      fontSize: 20,
+      color: colors.background,
     },
   });
 
@@ -257,7 +260,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         onAccessibilityTap={() => {
           setSelectedIndex(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -280,7 +283,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           }
         }}>
         <View style={styles.item}>
-          <Text style={styles.title}>{item.title}</Text>
+          <Text style={getList.includes(item.index) ? styles.titleSelected : styles.title}>{item.title}</Text>
         </View>
       </TouchableHighlight>
     ) : (
@@ -300,7 +303,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         onAccessibilityTap={() => {
           setSelectedIndex2(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex2 ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -384,7 +387,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             />
           </View>
           <View style={styles.selectionContainer}>
-            <Text>Selection Support</Text>
+            <Text style={{color: colors.text}}>Selection Support</Text>
             <Pressable
               accessibilityRole="button"
               accessibilityLabel={'selection support pressable'}
@@ -397,8 +400,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                   setSelectedSupport('Single');
                 }
               }}
+              style={{
+                backgroundColor: colors.card,
+                borderColor: colors.border
+              }}
             >
-              <Text>
+              <Text style={{color: colors.text}}>
                 Selection Support: {selectedSupport}
               </Text>
             </Pressable>
