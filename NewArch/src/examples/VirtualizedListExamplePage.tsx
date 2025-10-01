@@ -8,6 +8,7 @@ import {
   ScrollView,
   Pressable,
   Platform,
+  PlatformColor,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
@@ -415,7 +416,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                     ? colors.primary
                     : Platform.OS === 'windows'
                     ? PlatformColor('SystemColorButtonFaceColor')
-                    : colors.border,
+                    : colors.card,
+                  borderColor: colors.border,
                 },
               ]}
               onPress={() => {
@@ -424,10 +426,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 } else {
                   setSelectedSupport('Single');
                 }
-              }}
-              style={{
-                backgroundColor: colors.card,
-                borderColor: colors.border
               }}
             >
               <Text 
