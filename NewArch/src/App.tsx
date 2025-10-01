@@ -400,6 +400,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             navigation={navigation}
             currentRoute={currentRoute}
             onKeyDown={handleKeyDown}
+            focusable={true}
           />
           <DrawerListItem
             ref={allSamplesRef}
@@ -409,6 +410,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             navigation={navigation}
             currentRoute={currentRoute}
             onKeyDown={handleKeyDown}
+            focusable={true}
           />
           <View style={styles.drawerDivider} />
           <DrawerListView 
@@ -425,6 +427,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
             navigation={navigation}
             currentRoute={currentRoute}
             onKeyDown={handleKeyDown}
+            focusable={true}
           />
         </>
       )}
