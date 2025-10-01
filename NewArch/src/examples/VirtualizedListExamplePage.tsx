@@ -6,7 +6,6 @@ import {
   Text,
   TouchableHighlight,
   ScrollView,
-  PlatformColor,
   Pressable,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';

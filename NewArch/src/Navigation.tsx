@@ -62,7 +62,7 @@ type RouteType = {
 type NavigationContainerProps = PropsWithChildren<{
   theme?: Theme;
 }>;
-const NavigationContainer = ({children, theme}: NavigationContainerProps) => {
+const NavigationContainer = ({children}: NavigationContainerProps) => {
   const [currentScreen, setCurrentScreen] = useState('Home');
   const [routes, setRoutes] = useState<RouteType[]>([{name: 'Home', key: 'Home', params: {}}]);
   const [parameters, setParameters] = useState({} as any);
