@@ -5,7 +5,7 @@ import {
   TouchableHighlight,
   Text,
   PlatformColor,
-  Pressable,
+  AccessibilityInfo,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 
@@ -63,37 +63,48 @@ export function ScreenWrapper({
 
   return (
     <View style={styles.container}>
-      <Pressable
-        accessibilityRole="button"
+      <View
+        // accessibilityRole="button"
         accessibilityLabel="Navigation bar"
         accessibilityState={{ expanded: isDrawerOpen }}
-        accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
+        accessibilityLiveRegion='assertive'
+        // accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
+        // tooltip={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         // requires react-native-gesture-handler to be imported in order to pass testing.
         // blocked by #125
         /*accessibilityState={{
           expanded: useIsDrawerOpen(),
         }}*/
         style={styles.navBar}
-        onPress={() => {
-          navigation.dispatch(DrawerActions.toggleDrawer());
-        }}>
+       >
         <View>
           <TouchableHighlight
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
-            accessibilityState={{ expanded: isDrawerOpen }}
+            tooltip={'Expand navigation menu'}
             // requires react-native-gesture-handler to be imported in order to pass testing.
             // blocked by #125
             //accessibilityState={{expanded: useIsDrawerOpen()}}
             style={styles.menu}
-            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-            onAccessibilityTap={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+            accessibilityHint={'Tap to expand navigation menu'}
+            onPress={() => {
+              navigation.dispatch(DrawerActions.toggleDrawer());
+              if (!isDrawerOpen) {
+                AccessibilityInfo.announceForAccessibility('Navigation menu expanded');
+              }
+            }}
+            onAccessibilityTap={() => {
+              navigation.dispatch(DrawerActions.toggleDrawer());
+              if (!isDrawerOpen) {
+                AccessibilityInfo.announceForAccessibility('Navigation menu expanded');
+              }
+            }}
             activeOpacity={0.5783}
             underlayColor="rgba(0, 0, 0, 0.0241);">
             <Text style={styles.icon} accessibilityLabel="Navigation bar hamburger icon text">&#xE700;</Text>
           </TouchableHighlight>
         </View>
-      </Pressable>
+      </View>
       <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
         {children}
       </View>

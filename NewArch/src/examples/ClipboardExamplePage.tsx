@@ -98,7 +98,7 @@ export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> =
               );
             }}
           />
-          <Text>{textFromClipboard}</Text>
+          <Text style={{color: colors.text}}>{textFromClipboard}</Text>
         </View>
       </Example>
     </Page>
