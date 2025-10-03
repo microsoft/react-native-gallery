@@ -73,6 +73,53 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
   appWindow.Title(L"React Native Gallery - Preview");
   appWindow.Resize({1000, 1000});
 
+  // Configure title bar to respect system theme (dark mode support)
+  try {
+    auto titleBar = appWindow.TitleBar();
+    if (titleBar) {
+      // Enable title bar theming to follow system theme
+      titleBar.ExtendsContentIntoTitleBar(false);
+      
+      // Function to apply current system theme colors
+      auto applySystemTheme = [titleBar]() {
+        try {
+          auto uiSettings = winrt::Windows::UI::ViewManagement::UISettings();
+          auto foreground = uiSettings.GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType::Foreground);
+          auto background = uiSettings.GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType::Background);
+          
+          // Apply system theme colors to title bar
+          titleBar.ForegroundColor(foreground);
+          titleBar.BackgroundColor(background);
+          titleBar.ButtonForegroundColor(foreground);
+          titleBar.ButtonBackgroundColor(background);
+          titleBar.ButtonHoverForegroundColor(foreground);
+          titleBar.ButtonHoverBackgroundColor(background);
+          titleBar.ButtonPressedForegroundColor(foreground);
+          titleBar.ButtonPressedBackgroundColor(background);
+          
+          // Configure inactive state colors
+          titleBar.InactiveForegroundColor(foreground);
+          titleBar.InactiveBackgroundColor(background);
+          titleBar.ButtonInactiveForegroundColor(foreground);
+          titleBar.ButtonInactiveBackgroundColor(background);
+        } catch (...) {
+          // Ignore errors when applying theme
+        }
+      };
+      
+      // Apply initial theme
+      applySystemTheme();
+      
+      // Listen for system theme changes
+      auto uiSettings = winrt::Windows::UI::ViewManagement::UISettings();
+      uiSettings.ColorValuesChanged([applySystemTheme](auto const&, auto const&) {
+        applySystemTheme();
+      });
+    }
+  } catch (...) {
+    // Silently continue if title bar theming is not supported
+  }
+
   // Update Icon
   WCHAR iconPathBuffer[MAX_PATH];
   // Copy appDirectory to iconPathBuffer
