@@ -138,22 +138,6 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
   keyExtractor={(item) => item.id}
   numColumns={3}/>`;
 
-  const renderItem = ({item}: {item: any}) => (
-    <Pressable
-      style={{padding: 5}}
-      accessibilityRole="button"
-      accessibilityLabel={`List item: ${item.title}`}
-      onPress={() => {
-        // Handle item selection - for demo purposes, could show selection state
-        console.log(`Selected: ${item.title}`);
-      }}
-      onAccessibilityTap={() => {
-        console.log(`Accessibility tap: ${item.title}`);
-      }}>
-      <Text style={{color: colors.text}}>{item.title}</Text>
-    </Pressable>
-  );
-
   // Create a specialized render function for the fixed-height example to improve accessibility
   const renderAccessibleItem = ({item}: {item: any}) => (
     <Pressable
