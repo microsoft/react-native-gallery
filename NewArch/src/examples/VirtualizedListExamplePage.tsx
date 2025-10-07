@@ -6,10 +6,11 @@ import {
   Text,
   TouchableHighlight,
   ScrollView,
-  PlatformColor,
   Pressable,
+  Platform,
+  PlatformColor,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 // import CheckBox from '@react-native-community/checkbox';
@@ -20,6 +21,13 @@ import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
   const firstVirtualizedListRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
+
+  // Focus the first VirtualizedList when component mounts
+  useEffect(() => {
+    if (firstVirtualizedListRef?.current) {
+      firstVirtualizedListRef.current.focus();
+    }
+  }, [firstVirtualizedListRef]);
 
   const example1jsx = `
   var DATA: INT[] = [];
@@ -195,6 +203,20 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     selectionContainer: {
       marginLeft: 30,
     },
+    selectionButton: {
+      borderRadius: 2,
+      padding: 8,
+      marginTop: 10,
+      minWidth: 200,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    selectionButtonText: {
+      textAlign: 'center',
+      color: colors.text,
+    },
     item: {
       padding: 5,
       paddingHorizontal: 10,
@@ -207,19 +229,25 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       padding: 5,
       paddingHorizontal: 10,
       marginVertical: 3,
-      backgroundColor: PlatformColor('TextFillColorPrimary'),
+      backgroundColor: colors.primary,
     },
     title: {
       fontSize: 20,
-      color: PlatformColor('TextFillColorPrimary'),
+      color: colors.text,
+    },
+    titleSelected: {
+      fontSize: 20,
+      color: colors.background,
     },
   });
 
   const renderItem = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={styles.item}
         onPress={() => {
           setSelectedIndex(item.index);
@@ -235,8 +263,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem2 = ({item}) => {
     return (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -246,7 +276,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         onAccessibilityTap={() => {
           setSelectedIndex(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -254,8 +284,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
         activeOpacity={0.6}
         underlayColor={colors.border}
@@ -267,13 +299,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
           }
         }}>
         <View style={styles.item}>
-          <Text style={styles.title}>{item.title}</Text>
+          <Text style={getList.includes(item.index) ? styles.titleSelected : styles.title}>{item.title}</Text>
         </View>
       </TouchableHighlight>
     ) : (
       <TouchableHighlight
-        accessibilityRole="listitem"
         accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
+        focusable={true}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
@@ -285,7 +319,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         onAccessibilityTap={() => {
           setSelectedIndex2(item.index);
         }}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={item.index === selectedIndex2 ? styles.titleSelected : styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
   };
@@ -369,12 +403,23 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
             />
           </View>
           <View style={styles.selectionContainer}>
-            <Text>Selection Support</Text>
+            <Text style={{color: colors.text}}>Selection Support</Text>
             <Pressable
               accessibilityRole="button"
               accessibilityLabel={'selection support pressable'}
               accessibilityValue={{text: selectedSupport}}
               accessibilityHint={'click me to change selection support'}
+              style={({pressed}) => [
+                styles.selectionButton,
+                {
+                  backgroundColor: pressed
+                    ? colors.primary
+                    : Platform.OS === 'windows'
+                    ? PlatformColor('SystemColorButtonFaceColor')
+                    : colors.card,
+                  borderColor: colors.border,
+                },
+              ]}
               onPress={() => {
                 if (selectedSupport === 'Single') {
                   setSelectedSupport('Multiple');
@@ -383,7 +428,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
                 }
               }}
             >
-              <Text>
+              <Text 
+                style={[
+                  styles.selectionButtonText,
+                  // No need for pressed text color as it's handled in base style
+                ]}
+              >
                 Selection Support: {selectedSupport}
               </Text>
             </Pressable>

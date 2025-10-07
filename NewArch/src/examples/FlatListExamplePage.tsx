@@ -1,5 +1,5 @@
 'use strict';
-import {Text, FlatList, View} from 'react-native';
+import {Text, FlatList, View, Pressable} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -96,11 +96,11 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
 
   const example1jsx = `<FlatList
   data={Data}
-  renderItem={renderItem}
+  renderItem={renderAccessibleItem}
   keyExtractor={(item) => item.id}/>`;
   const example2jsx = `<FlatList
   data={Data}
-  renderItem={renderItem}
+  renderItem={renderAccessibleItem}
   keyExtractor={(item) => item.id}
   ListHeaderComponent={
     <Text style={{fontStyle: 'italic'}}>
@@ -114,26 +114,52 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
   }/>`;
   const example3jsx = `<FlatList
   data={Data}
-  renderItem={renderItem}
+  renderItem={renderAccessibleItem}
   keyExtractor={(item) => item.id}
   horizontal={true}
   inverted={true}/>`;
-  const example4jsx = `<FlatList
-  data={Data}
-  renderItem={renderItem}
-  keyExtractor={(item) => item.id}
-  initialNumToRender={3}
-  style={{height: 50}}/>`;
+  const example4jsx = `<View style={{height: 150, backgroundColor: colors.card, borderRadius: 8, padding: 5}}>
+  <FlatList
+    data={Data}
+    renderItem={renderAccessibleItem}
+    keyExtractor={(item) => item.id}
+    initialNumToRender={10}
+    showsVerticalScrollIndicator={true}
+    style={{flex: 1}}
+    contentContainerStyle={{paddingVertical: 5}}
+    accessible={true}
+    accessibilityLabel="Scrollable list of items in a fixed height container"
+    accessibilityHint="Use arrow keys to navigate through the list items"
+  />
+</View>`;
   const example5jsx = `<FlatList
   data={Data}
-  renderItem={renderItem}
+  renderItem={renderAccessibleItem}
   keyExtractor={(item) => item.id}
   numColumns={3}/>`;
 
-  const renderItem = ({item}) => (
-    <View style={{padding: 5}}>
-      <Text style={{color: colors.text}}>{item.title}</Text>
-    </View>
+  // Create a specialized render function for the fixed-height example to improve accessibility
+  const renderAccessibleItem = ({item}: {item: any}) => (
+    <Pressable
+      style={{
+        padding: 10,
+        marginVertical: 2,
+        backgroundColor: colors.background,
+        borderWidth: 1,
+        borderColor: colors.border,
+        borderRadius: 4,
+      }}
+      accessibilityRole="button"
+      accessibilityLabel={`List item ${item.id}: ${item.title}`}
+      accessibilityHint="Tap to select this item"
+      onPress={() => {
+        console.log(`Selected: ${item.title}`);
+      }}
+      onAccessibilityTap={() => {
+        console.log(`Accessibility tap: ${item.title}`);
+      }}>
+      <Text style={{color: colors.text, fontSize: 14}}>{item.title}</Text>
+    </Pressable>
   );
 
   return (
@@ -155,14 +181,14 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
       <Example ref={firstFlatListRef} title="A simple FlatList." code={example1jsx}>
         <FlatList
           data={Data}
-          renderItem={renderItem}
+          renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
         />
       </Example>
       <Example title="A FlatList with header and footer." code={example2jsx}>
         <FlatList
           data={Data}
-          renderItem={renderItem}
+          renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
             <Text style={{fontStyle: 'italic', color: colors.text}}>
@@ -181,7 +207,7 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
         code={example3jsx}>
         <FlatList
           data={Data}
-          renderItem={renderItem}
+          renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
           horizontal={true}
           inverted={true}
@@ -190,18 +216,25 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
       <Example
         title="A FlatList inside of a fixed-height view."
         code={example4jsx}>
-        <FlatList
-          data={Data}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          initialNumToRender={10}
-          style={{height: 50}}
-        />
+        <View style={{height: 150, backgroundColor: colors.card, borderRadius: 8, padding: 5}}>
+          <FlatList
+            data={Data}
+            renderItem={renderAccessibleItem}
+            keyExtractor={(item) => item.id}
+            initialNumToRender={10}
+            showsVerticalScrollIndicator={true}
+            style={{flex: 1}}
+            contentContainerStyle={{paddingVertical: 5}}
+            accessible={true}
+            accessibilityLabel="Scrollable list of items in a fixed height container"
+            accessibilityHint="Use arrow keys to navigate through the list items"
+          />
+        </View>
       </Example>
       <Example title="A mutli-column FlatList." code={example5jsx}>
         <FlatList
           data={Data}
-          renderItem={renderItem}
+          renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
           numColumns={3}
         />
