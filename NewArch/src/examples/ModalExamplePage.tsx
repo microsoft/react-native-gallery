@@ -11,7 +11,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
   const changeModal1 = () => {
-    AccessibilityInfo.announceForAccessibility("This is a simple simple modal")
+    AccessibilityInfo.announceForAccessibility("This is a simple modal")
     setModal1(!modal1);
   };
   const changeModal2 = () => {
