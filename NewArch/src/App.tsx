@@ -357,7 +357,6 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         ref={hamburgerRef}
         accessibilityRole="button"
         accessibilityLabel="Navigation menu"
-        accessibilityHint={'Tap to collapse navigation menu'}
         style={styles.menu}
         onPress={() => {
           if (isDrawerOpen) {
