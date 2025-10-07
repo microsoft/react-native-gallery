@@ -62,7 +62,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
         <Text>onShow event Count = {onShowCount}</Text>
         <Text>onDismiss event Count = {onDismissCount}</Text>
-        <Text style={styles.textStyle}> </Text>
       </View>
         <Button
           title="Close Modal"
