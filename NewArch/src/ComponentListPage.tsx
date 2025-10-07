@@ -58,9 +58,10 @@ const ListOfComponents = ({
   const styles = createStyles(colors);
   return (
     <View
-      accessibilityLabel={heading + 'components'}
+      accessibilityLabel={heading + ' components'}
       accessible={true}
-      accessibilityRole="none">
+      accessibilityRole="none"
+      role="region">
       <Text accessibilityRole="header" style={styles.heading}>
         {heading}
       </Text>

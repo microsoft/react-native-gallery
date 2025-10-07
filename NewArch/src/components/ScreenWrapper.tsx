@@ -68,23 +68,13 @@ export function ScreenWrapper({
         accessibilityLabel="Navigation bar"
         accessibilityState={{ expanded: isDrawerOpen }}
         accessibilityLiveRegion='assertive'
-        // accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
-        // tooltip={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
-        // requires react-native-gesture-handler to be imported in order to pass testing.
-        // blocked by #125
-        /*accessibilityState={{
-          expanded: useIsDrawerOpen(),
-        }}*/
+        role="banner"
         style={styles.navBar}
        >
         <View>
           <TouchableHighlight
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
-            tooltip={'Expand navigation menu'}
-            // requires react-native-gesture-handler to be imported in order to pass testing.
-            // blocked by #125
-            //accessibilityState={{expanded: useIsDrawerOpen()}}
             style={styles.menu}
             accessibilityHint={'Tap to expand navigation menu'}
             onPress={() => {
@@ -105,7 +95,10 @@ export function ScreenWrapper({
           </TouchableHighlight>
         </View>
       </View>
-      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
+      <View 
+        style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}
+        role="main"
+        accessibilityLabel="Main content">
         {children}
       </View>
     </View>

@@ -352,7 +352,10 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   }, [isDrawerOpen]);
 
   return (
-    <View style={styles.drawer}>
+    <View 
+      style={styles.drawer}
+      role="navigation"
+      accessibilityLabel="Main navigation menu">
       <Pressable
         ref={hamburgerRef}
         accessibilityRole="button"
