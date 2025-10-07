@@ -17,6 +17,29 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
       AccessibilityInfo.announceForAccessibility(`Counter ${action} to ${newValue}`);
     };
 
+    const counterButtonStyle = {
+      color: colors.text,
+      fontSize: 20,
+      padding: 10,
+      minWidth: 40,
+      textAlign: 'center' as const,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 3
+    };
+
+    const counterDisplayStyle = {
+      color: colors.text,
+      fontSize: 18,
+      padding: 10,
+      minWidth: 60,
+      textAlign: 'center' as const,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 3,
+      marginHorizontal: 5
+    };
+
     const example1jsx = `<TouchableWithoutFeedback>
     <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
   </TouchableWithoutFeedback>`;
@@ -111,7 +134,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           </TouchableWithoutFeedback>
         </Example>
         <Example title="A TouchableWithoutFeedback counter." code={example4jsx}>
-          <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <TouchableWithoutFeedback
               accessibilityRole="button"
               accessibilityLabel={`Decrease counter. Current value is ${title}`}
@@ -121,33 +144,15 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
                 setTitle(newValue);
                 announceCounterChange(newValue, 'decreased');
               }}>
-              <Text style={{
-                color: colors.text,
-                fontSize: 20,
-                padding: 10,
-                minWidth: 40,
-                textAlign: 'center',
-                borderWidth: 1,
-                borderColor: colors.border,
-                borderRadius: 3
-              }}>-</Text>
+              <Text style={counterButtonStyle}>-</Text>
             </TouchableWithoutFeedback>
             <Text
               accessible={true}
               accessibilityRole="text"
               accessibilityLabel={`Counter value: ${title}`}
               accessibilityHint="Counter display"
-              style={{
-                color: colors.text,
-                fontSize: 18,
-                padding: 10,
-                minWidth: 60,
-                textAlign: 'center',
-                borderWidth: 1,
-                borderColor: colors.border,
-                borderRadius: 3
-              }}>
-              {String(title)}
+              style={counterDisplayStyle}>
+              {title}
             </Text>
             <TouchableWithoutFeedback
               accessibilityRole="button"
@@ -158,16 +163,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
                 setTitle(newValue);
                 announceCounterChange(newValue, 'increased');
               }}>
-              <Text style={{
-                color: colors.text,
-                fontSize: 20,
-                padding: 10,
-                minWidth: 40,
-                textAlign: 'center',
-                borderWidth: 1,
-                borderColor: colors.border,
-                borderRadius: 3
-              }}>+</Text>
+              <Text style={counterButtonStyle}>+</Text>
             </TouchableWithoutFeedback>
           </View>
         </Example>

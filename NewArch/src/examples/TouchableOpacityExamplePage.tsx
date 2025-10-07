@@ -185,7 +185,7 @@ onAccessibilityTap={() => {}}>
         </TouchableOpacity>
       </Example>
       <Example title="A TouchableOpacity counter." code={example4jsx}>
-        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <TouchableOpacity
             accessibilityRole="button"
             accessibilityLabel={`Decrease counter. Current value is ${title}`}
@@ -227,8 +227,9 @@ onAccessibilityTap={() => {}}>
                 Platform.OS === 'windows'
                   ? PlatformColor('SystemColorButtonFaceColor')
                   : 'silver',
+              marginHorizontal: 5,
             }}>
-            {String(title)}
+            {title}
           </Text>
           <TouchableOpacity
             accessibilityRole="button"

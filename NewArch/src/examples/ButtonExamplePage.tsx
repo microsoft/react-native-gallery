@@ -72,7 +72,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
         />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
-        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Button
             title="-"
             accessibilityLabel={`Decrease counter. Current value is ${title}`}
@@ -95,7 +95,8 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
               padding: 10,
               borderWidth: 1,
               borderColor: 'gray',
-              borderRadius: 5
+              borderRadius: 5,
+              marginHorizontal: 5
             }}>
             {String(title)}
           </Text>
