@@ -30,7 +30,10 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
   accessibilityRole="button"
   onPress={() => {}}
   onAccessibilityTap={() => {}}>
-  <Text style={{color: 'white'}}>
+  <Text 
+    accessible={true}
+    accessibilityLabel="TouchableWithoutFeedback"
+    style={{color: 'white'}}>
     TouchableWithoutFeedback
   </Text>
 </TouchableWithoutFeedback>`;
@@ -41,7 +44,10 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
   onPress={() => {}}
   onAccessibilityTap={() => {}}
   disabled={true}>
-  <Text style={{color: colors.text}}>
+  <Text
+    accessible={true}
+    accessibilityLabel="TouchableWithoutFeedback" 
+    style={{color: colors.text}}>
     TouchableWithoutFeedback
   </Text>
 </TouchableWithoutFeedback>`;
@@ -57,7 +63,10 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
   onAccessibilityTap={() => {
     setTitle(title + 1);
   }}>
-  <Text style={{color: colors.text}}>
+  <Text
+    accessible={true}
+    accessibilityLabel="TouchableWithoutFeedback"
+    style={{color: colors.text}}>
     {String(title)}
   </Text>
 </TouchableWithoutFeedback>`;
@@ -82,7 +91,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           },
         ]}>
         <Text style={{fontWeight: 'bold', color: colors.text}}>{pressableMsg}</Text>
-                <Example title="A simple TouchableWithoutFeedback." code={example1jsx}>
+          <Example title="A simple TouchableWithoutFeedback." code={example1jsx}>
           <TouchableWithoutFeedback
             ref={firstTouchableWithoutFeedbackRef}
             accessibilityRole="button"
@@ -127,7 +136,8 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text 
+            <Text
+              accessibilityLabel="TouchableWithoutFeedback"
               style={{color: colors.text}}>
               TouchableWithoutFeedback
             </Text>
