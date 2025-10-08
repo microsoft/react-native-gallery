@@ -25,6 +25,7 @@ import {TouchableWithoutFeedbackExamplePage} from './examples/TouchableWithoutFe
 import {SwitchExamplePage} from './examples/SwitchExamplePage';
 import {ViewExamplePage} from './examples/ViewExamplePage';
 import {ImageExamplePage} from './examples/ImageExamplePage';
+import {ModalExamplePage} from './examples/ModalExamplePage';
 import {PressableExamplePage} from './examples/PressableExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
@@ -166,6 +167,15 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/Image.png'),
     subtitle: 'A control to display image content.',
     type: 'Media',
+  },
+  {
+    key: 'Modal',
+    component: ModalExamplePage,
+    textIcon: '\uE8BD',
+    imageIcon: require('../assets/ControlImages/Flyout.png'),
+    subtitle: 'Displays content on top of existing content, blocking interaction with the content underneath.',
+    type: 'Dialogs & flyouts',
+    new: true,
   },
   // {
   //   key: 'Linear Gradient',
