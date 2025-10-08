@@ -3,7 +3,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {ProgressView} from '@react-native-community/progress-view';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

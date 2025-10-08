@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 import {Expander} from '@fluentui-react-native/experimental-expander';
 import CheckBox from '@react-native-community/checkbox';
 import DateTimePicker from '@react-native-community/datetimepicker';

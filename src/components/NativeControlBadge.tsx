@@ -1,5 +1,5 @@
 import React from 'react';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 import {Badge} from './Badge';
 import {Platform, PlatformColor} from 'react-native';
 

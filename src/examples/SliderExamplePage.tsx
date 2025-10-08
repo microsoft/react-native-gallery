@@ -3,7 +3,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Slider from '@react-native-community/slider';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const SliderExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

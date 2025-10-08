@@ -8,7 +8,7 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 import type {IRNGalleryExample} from './RNGalleryList';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>

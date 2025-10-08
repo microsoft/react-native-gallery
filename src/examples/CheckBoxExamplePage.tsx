@@ -3,7 +3,7 @@ import React from 'react';
 import CheckBox from '@react-native-community/checkbox';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const CheckBoxExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

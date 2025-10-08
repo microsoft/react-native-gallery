@@ -11,7 +11,7 @@ import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Popup} from 'react-native-windows';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

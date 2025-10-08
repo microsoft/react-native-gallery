@@ -10,7 +10,7 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {SketchCanvas} from '@wwimmo/react-native-sketch-canvas';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const SketchExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

@@ -12,7 +12,7 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import CheckBox from '@react-native-community/checkbox';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 import {Picker} from '@react-native-picker/picker';
 
 export const VirtualizedListExamplePage: React.FunctionComponent<{}> = () => {

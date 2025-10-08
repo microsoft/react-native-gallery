@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import SInfo, {RNSensitiveInfoOptions} from 'react-native-sensitive-info';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 const SensitiveCredentials: RNSensitiveInfoOptions = {
   sharedPreferencesName: 'mySharedPrefs',

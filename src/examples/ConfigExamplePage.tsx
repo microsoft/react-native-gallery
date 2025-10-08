@@ -4,7 +4,7 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Config from 'react-native-config';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

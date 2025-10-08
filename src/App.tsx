@@ -7,12 +7,7 @@ import {
   useColorScheme,
   ScrollView,
 } from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  getDrawerStatusFromState,
-} from '@react-navigation/drawer';
-import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
+import {HomePage} from './HomePage';
 import LightTheme from './themes/LightTheme';
 import DarkTheme from './themes/DarkTheme';
 import {
@@ -20,6 +15,7 @@ import {
   RawThemeContext,
   ThemeContext,
   ThemeSetterContext,
+  ThemeProvider,
 } from './themes/Theme';
 import {PlatformColor} from 'react-native';
 import HighContrastTheme from './themes/HighContrastTheme';
@@ -324,24 +320,6 @@ function CustomDrawerContent({navigation}) {
   );
 }
 
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
-  return (
-    <Drawer.Navigator
-      drawerContent={(props) => <CustomDrawerContent {...props} />}
-      screenOptions={{headerShown: false}}>
-      {RNGalleryList.map((item) => (
-        <Drawer.Screen
-          name={item.key}
-          key={item.key}
-          component={item.component}
-        />
-      ))}
-    </Drawer.Navigator>
-  );
-}
-
 export default function App() {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
@@ -349,20 +327,19 @@ export default function App() {
 
   const isHighContrast = useHighContrastState();
 
+  const navigationTheme = isHighContrast
+    ? HighContrastTheme
+    : theme === 'dark'
+    ? DarkTheme
+    : LightTheme;
+
   return (
     <ThemeSetterContext.Provider value={setRawTheme}>
       <RawThemeContext.Provider value={rawtheme}>
         <ThemeContext.Provider value={theme}>
-          <NavigationContainer
-            theme={
-              isHighContrast
-                ? HighContrastTheme
-                : theme === 'dark'
-                ? DarkTheme
-                : LightTheme
-            }>
-            <MyDrawer />
-          </NavigationContainer>
+          <ThemeProvider theme={navigationTheme}>
+            <HomePage />
+          </ThemeProvider>
         </ThemeContext.Provider>
       </RawThemeContext.Provider>
     </ThemeSetterContext.Provider>

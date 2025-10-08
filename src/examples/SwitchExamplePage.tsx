@@ -3,7 +3,7 @@ import {Switch} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 // Replace TemplateExamplePage with <ComponentName>ExamplePage
 export const SwitchExamplePage: React.FunctionComponent<{}> = () => {

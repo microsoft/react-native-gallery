@@ -3,7 +3,7 @@ import {Text, TouchableOpacity, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
   const [title, setTitle] = useState(0);

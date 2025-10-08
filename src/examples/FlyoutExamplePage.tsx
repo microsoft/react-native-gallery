@@ -10,7 +10,7 @@ import React, {useState, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Flyout} from 'react-native-windows';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 export const FlyoutExamplePage: React.FunctionComponent<{}> = () => {
   const [showFlyout1, setShowFlyout1] = useState(false);

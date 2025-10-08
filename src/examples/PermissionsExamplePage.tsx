@@ -14,7 +14,7 @@ import {
 import {AndroidPermissionMap} from 'react-native-permissions/dist/typescript/permissions.android';
 import {IOSPermissionMap} from 'react-native-permissions/dist/typescript/permissions.ios';
 import {WindowsPermissionMap} from 'react-native-permissions/dist/typescript/permissions.windows';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../themes/Theme';
 
 const getResultString = (result: PermissionStatus) => {
   switch (result) {
