@@ -2,14 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, AccessibilityInfo } from 'react-native';
 
 interface AccessibilitySkipLinkProps {
-  targetId: string;
   label: string;
   onPress: () => void;
 }
 
 // Skip link component for accessibility navigation
 const AccessibilitySkipLink: React.FC<AccessibilitySkipLinkProps> = ({ 
-  targetId, 
   label, 
   onPress 
 }) => {
@@ -47,12 +45,10 @@ export const AccessibilityNavigationHelper: React.FC<{
   return (
     <View style={styles.container}>
       <AccessibilitySkipLink
-        targetId="main-content"
         label="Skip to main content"
         onPress={onSkipToMain}
       />
       <AccessibilitySkipLink
-        targetId="navigation"
         label="Skip to navigation"
         onPress={onSkipToNavigation}
       />
