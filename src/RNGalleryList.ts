@@ -5,20 +5,20 @@ import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
 import {ComponentListPage} from './ComponentListPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
-import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
+// import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage'; // Community module - not compatible with Fabric
 import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
-import {ConfigExamplePage} from './examples/ConfigExamplePage';
-import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
-import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
-import {SketchExamplePage} from './examples/SketchExamplePage';
-import {SliderExamplePage} from './examples/SliderExamplePage';
-import {PermissionsExamplePage} from './examples/PermissionsExamplePage';
-import {PickerExamplePage} from './examples/PickerExamplePage';
-import {PrintExamplePage} from './examples/PrintExamplePage';
-import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
+// import {ConfigExamplePage} from './examples/ConfigExamplePage'; // Community module - not compatible with Fabric
+// import {DatePickerExamplePage} from './examples/DatePickerExamplePage'; // Community module - not compatible with Fabric
+// import {TimePickerExamplePage} from './examples/TimePickerExamplePage'; // Community module - not compatible with Fabric
+// import {SketchExamplePage} from './examples/SketchExamplePage'; // Community module - not compatible with Fabric
+// import {SliderExamplePage} from './examples/SliderExamplePage'; // Community module - not compatible with Fabric
+// import {PermissionsExamplePage} from './examples/PermissionsExamplePage'; // Community module - not compatible with Fabric
+// import {PickerExamplePage} from './examples/PickerExamplePage'; // Community module - not compatible with Fabric
+// import {PrintExamplePage} from './examples/PrintExamplePage'; // Community module - not compatible with Fabric
+// import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage'; // Community module - not compatible with Fabric
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
-import {TTSExamplePage} from './examples/TTSExamplePage';
+// import {TTSExamplePage} from './examples/TTSExamplePage'; // Community module - not compatible with Fabric
 import {TouchableHighlightExamplePage} from './examples/TouchableHighlightExamplePage';
 import {TouchableOpacityExamplePage} from './examples/TouchableOpacityExamplePage';
 import {TouchableWithoutFeedbackExamplePage} from './examples/TouchableWithoutFeedbackExamplePage';
@@ -28,20 +28,20 @@ import {ImageExamplePage} from './examples/ImageExamplePage';
 import {PressableExamplePage} from './examples/PressableExamplePage';
 import {FlatListExamplePage} from './examples/FlatListExamplePage';
 import {ScrollViewExamplePage} from './examples/ScrollViewExample';
-import {WebViewExamplePage} from './examples/WebViewExamplePage';
-import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage';
-import {PopupExamplePage} from './examples/PopupExamplePage';
-import {FlyoutExamplePage} from './examples/FlyoutExamplePage';
-import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage';
-import {XamlExamplePage} from './examples/XamlExamplePage';
-import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage';
-import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage';
-import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
+// import {WebViewExamplePage} from './examples/WebViewExamplePage'; // Community module - not compatible with Fabric
+// import {SensitiveInfoExamplePage} from './examples/SensitiveInfoExamplePage'; // Community module - not compatible with Fabric
+// import {PopupExamplePage} from './examples/PopupExamplePage'; // Paper-only component - not available in Fabric
+// import {FlyoutExamplePage} from './examples/FlyoutExamplePage'; // Paper-only component - not available in Fabric
+// import {ProgressViewExamplePage} from './examples/ProgressViewExamplePage'; // Community module - not compatible with Fabric
+// import {XamlExamplePage} from './examples/XamlExamplePage'; // Paper-only component - not available in Fabric
+// import {TrackPlayerExamplePage} from './examples/TrackPlayerExamplePage'; // Community module - not compatible with Fabric
+// import {WindowsHelloExamplePage} from './examples/WindowsHelloExamplePage'; // Community module - not compatible with Fabric
+// import {ExpanderExamplePage} from './examples/ExpanderExamplePage'; // Community module - not compatible with Fabric
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
-import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
-import {NetworkExamplePage} from './examples/NetworkExamplePage';
-import {SvgExamplePage} from './examples/SvgExamplePage';
-import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage';
+// import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage'; // Community module - not compatible with Fabric
+// import {NetworkExamplePage} from './examples/NetworkExamplePage'; // Community module - not compatible with Fabric
+// import {SvgExamplePage} from './examples/SvgExamplePage'; // Community module - not compatible with Fabric
+// import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage'; // Community module - not compatible with Fabric
 
 // https://github.com/microsoft/WinUI-Gallery/blob/c8f04135579c08c9a80711dcad7247f259891c79/WinUIGallery/DataModel/ControlInfoData.json#L803
 let RNGalleryCategories = [
@@ -96,14 +96,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'A control that responds to user input and raises a Click event.',
     type: 'Basic Input',
   },
-  {
-    key: 'CheckBox',
-    component: CheckBoxExamplePage,
-    textIcon: '\uE73A',
-    imageIcon: require('../assets/ControlImages/Checkbox.png'),
-    subtitle: 'A control that a user can select or clear.',
-    type: 'Basic Input',
-  },
+  // {
+  //   key: 'CheckBox',
+  //   component: CheckBoxExamplePage,
+  //   textIcon: '\uE73A',
+  //   imageIcon: require('../assets/ControlImages/Checkbox.png'),
+  //   subtitle: 'A control that a user can select or clear.',
+  //   type: 'Basic Input',
+  // },
   {
     key: 'Clipboard',
     component: ClipboardExamplePage,
@@ -113,35 +113,35 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'System',
     new: true,
   },
-  {
-    key: 'Config',
-    component: ConfigExamplePage,
-    textIcon: '\uE753',
-    type: 'Status and Info',
-  },
-  {
-    key: 'DatePicker',
-    component: DatePickerExamplePage,
-    textIcon: '\uE787',
-    imageIcon: require('../assets/ControlImages/DatePicker.png'),
-    subtitle: 'A control that lets a user pick a date value.',
-    type: 'Date & time',
-  },
-  {
-    key: 'DeviceInfo',
-    component: DeviceInfoExamplePage,
-    textIcon: '\uE703',
-    type: 'Status and Info',
-  },
-  {
-    key: 'Expander',
-    component: ExpanderExamplePage,
-    textIcon: '\uE8C4',
-    imageIcon: require('../assets/ControlImages/Expander.png'),
-    subtitle:
-      'A container with a header that can be expanded to show a body with more content.',
-    type: 'Layout',
-  },
+  // {
+  //   key: 'Config',
+  //   component: ConfigExamplePage,
+  //   textIcon: '\uE753',
+  //   type: 'Status and Info',
+  // },
+  // {
+  //   key: 'DatePicker',
+  //   component: DatePickerExamplePage,
+  //   textIcon: '\uE787',
+  //   imageIcon: require('../assets/ControlImages/DatePicker.png'),
+  //   subtitle: 'A control that lets a user pick a date value.',
+  //   type: 'Date & time',
+  // },
+  // {
+  //   key: 'DeviceInfo',
+  //   component: DeviceInfoExamplePage,
+  //   textIcon: '\uE703',
+  //   type: 'Status and Info',
+  // },
+  // {
+  //   key: 'Expander',
+  //   component: ExpanderExamplePage,
+  //   textIcon: '\uE8C4',
+  //   imageIcon: require('../assets/ControlImages/Expander.png'),
+  //   subtitle:
+  //     'A container with a header that can be expanded to show a body with more content.',
+  //   type: 'Layout',
+  // },
   {
     key: 'FlatList ',
     component: FlatListExamplePage,
@@ -151,14 +151,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'A performant interface for rendering basic, flat lists, supporting the most handy features.',
     type: 'Collections',
   },
-  {
-    key: 'Flyout',
-    component: FlyoutExamplePage,
-    textIcon: '\uE75A',
-    imageIcon: require('../assets/ControlImages/Flyout.png'),
-    subtitle: 'Shows contextual information and enables user interaction.',
-    type: 'Dialogs & flyouts',
-  },
+  // {
+  //   key: 'Flyout',
+  //   component: FlyoutExamplePage,
+  //   textIcon: '\uE75A',
+  //   imageIcon: require('../assets/ControlImages/Flyout.png'),
+  //   subtitle: 'Shows contextual information and enables user interaction.',
+  //   type: 'Dialogs & flyouts',
+  // },
   {
     key: 'Image',
     component: ImageExamplePage,
@@ -167,44 +167,44 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'A control to display image content.',
     type: 'Media',
   },
-  {
-    key: 'Linear Gradient',
-    component: LinearGradientExamplePage,
-    textIcon: '\uE790',
-    type: 'Media',
-    subtitle: 'Render a horizontal or vertical color gradient.',
-    new: true,
-  },
-  {
-    key: 'Networking',
-    component: NetworkExamplePage,
-    textIcon: '\uE704',
-    type: 'Status and Info',
-    subtitle: 'Load resources from a remote URL.',
-    new: true,
-  },
-  {
-    key: 'Permissions',
-    component: PermissionsExamplePage,
-    textIcon: '\uED2C',
-    type: 'Status and Info',
-  },
-  {
-    key: 'Picker',
-    component: PickerExamplePage,
-    textIcon: '\uE7B8',
-    imageIcon: require('../assets/ControlImages/ComboBox.png'),
-    subtitle: 'A drop-down list of items a user can select from.',
-    type: 'Basic Input',
-  },
-  {
-    key: 'Popup',
-    component: PopupExamplePage,
-    textIcon: '\uE75A',
-    imageIcon: require('../assets/ControlImages/Flyout.png'),
-    subtitle: 'Displays content on top of existing content.',
-    type: 'Dialogs & flyouts',
-  },
+  // {
+  //   key: 'Linear Gradient',
+  //   component: LinearGradientExamplePage,
+  //   textIcon: '\uE790',
+  //   type: 'Media',
+  //   subtitle: 'Render a horizontal or vertical color gradient.',
+  //   new: true,
+  // },
+  // {
+  //   key: 'Networking',
+  //   component: NetworkExamplePage,
+  //   textIcon: '\uE704',
+  //   type: 'Status and Info',
+  //   subtitle: 'Load resources from a remote URL.',
+  //   new: true,
+  // },
+  // {
+  //   key: 'Permissions',
+  //   component: PermissionsExamplePage,
+  //   textIcon: '\uED2C',
+  //   type: 'Status and Info',
+  // },
+  // {
+  //   key: 'Picker',
+  //   component: PickerExamplePage,
+  //   textIcon: '\uE7B8',
+  //   imageIcon: require('../assets/ControlImages/ComboBox.png'),
+  //   subtitle: 'A drop-down list of items a user can select from.',
+  //   type: 'Basic Input',
+  // },
+  // {
+  //   key: 'Popup',
+  //   component: PopupExamplePage,
+  //   textIcon: '\uE75A',
+  //   imageIcon: require('../assets/ControlImages/Flyout.png'),
+  //   subtitle: 'Displays content on top of existing content.',
+  //   type: 'Dialogs & flyouts',
+  // },
   {
     key: 'Pressable',
     component: PressableExamplePage,
@@ -214,21 +214,21 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'A component that can detect various stages of press interactions on any of its defined children.',
     type: 'Basic Input',
   },
-  {
-    key: 'Print',
-    component: PrintExamplePage,
-    textIcon: '\uE749',
-    type: 'Media',
-  },
-  {
-    key: 'ProgressView',
-    component: ProgressViewExamplePage,
-    textIcon: '\uF16A',
-    imageIcon: require('../assets/ControlImages/ProgressBar.png'),
-    subtitle:
-      "Shows the apps progress on a task, or that the app is performing ongoing work that doesn't block user interaction.",
-    type: 'Basic Input',
-  },
+  // {
+  //   key: 'Print',
+  //   component: PrintExamplePage,
+  //   textIcon: '\uE749',
+  //   type: 'Media',
+  // },
+  // {
+  //   key: 'ProgressView',
+  //   component: ProgressViewExamplePage,
+  //   textIcon: '\uF16A',
+  //   imageIcon: require('../assets/ControlImages/ProgressBar.png'),
+  //   subtitle:
+  //     "Shows the apps progress on a task, or that the app is performing ongoing work that doesn't block user interaction.",
+  //   type: 'Basic Input',
+  // },
   {
     key: 'ScrollView',
     component: ScrollViewExamplePage,
@@ -238,27 +238,27 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'A container control that lets the user pan and zoom its content.',
     type: 'Scrolling',
   },
-  {
-    key: 'SensitiveInfo',
-    component: SensitiveInfoExamplePage,
-    textIcon: '\uE72E',
-    type: 'Status and Info',
-  },
-  {
-    key: 'Slider',
-    component: SliderExamplePage,
-    textIcon: '\uE9E9',
-    imageIcon: require('../assets/ControlImages/Slider.png'),
-    subtitle:
-      'A control that lets the user select from a range of values by moving a Thumb control along a track.',
-    type: 'Basic Input',
-  },
-  {
-    key: 'Sketch',
-    component: SketchExamplePage,
-    textIcon: '\uE790',
-    type: 'Media',
-  },
+  // {
+  //   key: 'SensitiveInfo',
+  //   component: SensitiveInfoExamplePage,
+  //   textIcon: '\uE72E',
+  //   type: 'Status and Info',
+  // },
+  // {
+  //   key: 'Slider',
+  //   component: SliderExamplePage,
+  //   textIcon: '\uE9E9',
+  //   imageIcon: require('../assets/ControlImages/Slider.png'),
+  //   subtitle:
+  //     'A control that lets the user select from a range of values by moving a Thumb control along a track.',
+  //   type: 'Basic Input',
+  // },
+  // {
+  //   key: 'Sketch',
+  //   component: SketchExamplePage,
+  //   textIcon: '\uE790',
+  //   type: 'Media',
+  // },
   {
     key: 'Switch',
     component: SwitchExamplePage,
@@ -268,14 +268,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'A button that can be switched between two states like a CheckBox.',
     type: 'Basic Input',
   },
-  {
-    key: 'Svg',
-    component: SvgExamplePage,
-    textIcon: '\uE734',
-    subtitle: 'Rendering of vector graphics.',
-    type: 'Media',
-    new: true,
-  },
+  // {
+  //   key: 'Svg',
+  //   component: SvgExamplePage,
+  //   textIcon: '\uE734',
+  //   subtitle: 'Rendering of vector graphics.',
+  //   type: 'Media',
+  //   new: true,
+  // },
   {
     key: 'Text',
     component: TextExamplePage,
@@ -292,21 +292,21 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'A single-line or multi-line plain text field.',
     type: 'Text',
   },
-  {
-    key: 'TimePicker',
-    component: TimePickerExamplePage,
-    textIcon: '\uE823',
-    imageIcon: require('../assets/ControlImages/TimePicker.png'),
-    subtitle: 'A configurable control that lets a user pick a time value.',
-    type: 'Date & time',
-  },
-  {
-    key: 'TextToSpeech',
-    component: TTSExamplePage,
-    textIcon: '\uEC43',
-    imageIcon: require('../assets/ControlImages/Sound.png'),
-    type: 'Media',
-  },
+  // {
+  //   key: 'TimePicker',
+  //   component: TimePickerExamplePage,
+  //   textIcon: '\uE823',
+  //   imageIcon: require('../assets/ControlImages/TimePicker.png'),
+  //   subtitle: 'A configurable control that lets a user pick a time value.',
+  //   type: 'Date & time',
+  // },
+  // {
+  //   key: 'TextToSpeech',
+  //   component: TTSExamplePage,
+  //   textIcon: '\uEC43',
+  //   imageIcon: require('../assets/ControlImages/Sound.png'),
+  //   type: 'Media',
+  // },
   {
     key: 'TouchableHighlight',
     component: TouchableHighlightExamplePage,
@@ -329,13 +329,13 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'A legacy wrapper for making views respond to touches without any visual feedback (not recommended).',
     type: 'Legacy',
   },
-  {
-    key: 'TrackPlayer',
-    component: TrackPlayerExamplePage,
-    textIcon: '\uEC4F',
-    imageIcon: require('../assets/ControlImages/Sound.png'),
-    type: 'Media',
-  },
+  // {
+  //   key: 'TrackPlayer',
+  //   component: TrackPlayerExamplePage,
+  //   textIcon: '\uEC4F',
+  //   imageIcon: require('../assets/ControlImages/Sound.png'),
+  //   type: 'Media',
+  // },
   {
     key: 'View',
     component: ViewExamplePage,
@@ -344,21 +344,21 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'The most fundamental component for building a UI',
     type: 'Layout',
   },
-  {
-    key: 'WebView',
-    component: WebViewExamplePage,
-    textIcon: '\uE774',
-    imageIcon: require('../assets/ControlImages/WebView.png'),
-    subtitle:
-      'A Microsoft Edge (Chromium) based control that hosts HTML content in an app.',
-    type: 'Media',
-  },
-  {
-    key: 'WindowsHello',
-    component: WindowsHelloExamplePage,
-    textIcon: '\uE890',
-    type: 'Status and Info',
-  },
+  // {
+  //   key: 'WebView',
+  //   component: WebViewExamplePage,
+  //   textIcon: '\uE774',
+  //   imageIcon: require('../assets/ControlImages/WebView.png'),
+  //   subtitle:
+  //     'A Microsoft Edge (Chromium) based control that hosts HTML content in an app.',
+  //   type: 'Media',
+  // },
+  // {
+  //   key: 'WindowsHello',
+  //   component: WindowsHelloExamplePage,
+  //   textIcon: '\uE890',
+  //   type: 'Status and Info',
+  // },
   {
     key: 'VirtualizedList',
     component: VirtualizedListExamplePage,
@@ -368,23 +368,23 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
       'The base implementation for FlatList and SectionList, which can be used as alternative if you need more flexibility.',
     type: 'Collections',
   },
-  {
-    key: 'Xaml',
-    component: XamlExamplePage,
-    textIcon: '\uE70F',
-    subtitle: 'Directly access any native XAML control.',
-    type: 'Layout',
-    recentlyUpdated: true,
-  },
-  {
-    key: 'LottieAnimations',
-    component: LottieAnimationsExamplePage,
-    textIcon: '\uE78A',
-    imageIcon: require('../assets/ControlImages/AnimatedVisualPlayer.png'),
-    type: 'Media',
-    subtitle: 'An element to render and control playback of motion graphics.',
-    new: true,
-  },
+  // {
+  //   key: 'Xaml',
+  //   component: XamlExamplePage,
+  //   textIcon: '\uE70F',
+  //   subtitle: 'Directly access any native XAML control.',
+  //   type: 'Layout',
+  //   recentlyUpdated: true,
+  // },
+  // {
+  //   key: 'LottieAnimations',
+  //   component: LottieAnimationsExamplePage,
+  //   textIcon: '\uE78A',
+  //   imageIcon: require('../assets/ControlImages/AnimatedVisualPlayer.png'),
+  //   type: 'Media',
+  //   subtitle: 'An element to render and control playback of motion graphics.',
+  //   new: true,
+  // },
   ...RNGalleryCategories.map((category) => ({
     key: `Category: ${category.label}`,
     component: ComponentListPage,

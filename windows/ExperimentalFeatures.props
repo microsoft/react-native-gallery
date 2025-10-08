@@ -10,6 +10,13 @@
 
   <PropertyGroup Label="Microsoft.ReactNative Experimental Features">
     <!--
+      Required for building a New Architecture project.
+
+      See https://microsoft.github.io/react-native-windows/docs/new-architecture
+    -->
+    <RnwNewArch>true</RnwNewArch>
+
+    <!--
       Enables default usage of Hermes.
       
       See https://microsoft.github.io/react-native-windows/docs/hermes
