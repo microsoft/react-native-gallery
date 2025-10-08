@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   View,
   StyleSheet,
@@ -8,6 +8,7 @@ import {
   AccessibilityInfo,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
+import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -56,19 +57,61 @@ type ScreenWrapperProps = React.PropsWithChildren<{
 export function ScreenWrapper({
   children,
   doNotInset,
-}: ScreenWrapperProps): JSX.Element {
+}: ScreenWrapperProps): React.JSX.Element {
   const navigation = useNavigation();
   const styles = createStyles();
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
+  
+  const navigationRef = useRef<View>(null);
+  const mainContentRef = useRef<View>(null);
+
+  // Announce page structure to screen readers
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      AccessibilityInfo.announceForAccessibility(
+        'Page loaded. Press M to open navigation menu. Use heading navigation to move between sections.'
+      );
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleSkipToMain = () => {
+    if (mainContentRef.current) {
+      // @ts-ignore - React Native Windows accessibility focus
+      mainContentRef.current.focus?.();
+      AccessibilityInfo.announceForAccessibility('Navigated to main content');
+    }
+  };
+
+  const handleSkipToNavigation = () => {
+    navigation.dispatch(DrawerActions.openDrawer());
+    AccessibilityInfo.announceForAccessibility('Navigation menu opened');
+  };
 
   return (
     <View style={styles.container}>
+      {/* Screen reader instructions */}
       <View
-        // accessibilityRole="button"
-        accessibilityLabel="Navigation bar"
+        accessible={true}
+        accessibilityRole="none"
+        accessibilityLabel="Navigation instructions: Press M to open menu, use H key to navigate headers, or Tab to move through controls"
+        accessibilityLiveRegion="polite"
+        style={{position: 'absolute', left: -1000, top: -1000, width: 1, height: 1}}
+      />
+      
+      <AccessibilityNavigationHelper
+        onSkipToMain={handleSkipToMain}
+        onSkipToNavigation={handleSkipToNavigation}
+      />
+      <View
+        ref={navigationRef}
+        accessibilityLabel="Navigation toolbar"
         accessibilityState={{ expanded: isDrawerOpen }}
         accessibilityLiveRegion='assertive'
-        role="banner"
+        accessible={true}
+        accessibilityRole="toolbar"
+        focusable={true}
+        importantForAccessibility="yes"
         style={styles.navBar}
        >
         <View>
@@ -96,9 +139,14 @@ export function ScreenWrapper({
         </View>
       </View>
       <View 
+        ref={mainContentRef}
         style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}
-        role="main"
-        accessibilityLabel="Main content">
+        accessible={true}
+        accessibilityRole="none"
+        accessibilityLabel="Main content"
+        nativeID="main-content-landmark"
+        focusable={true}
+        importantForAccessibility="yes">
         {children}
       </View>
     </View>

@@ -38,7 +38,11 @@ export const Example = React.forwardRef<any, {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   return (
-    <View>
+    <View 
+      accessible={true}
+      accessibilityRole="none"
+      accessibilityLabel={`${props.title} example`}
+      importantForAccessibility="yes">
       <Text accessibilityRole={'header'} style={styles.title}>
         {props.title}
       </Text>

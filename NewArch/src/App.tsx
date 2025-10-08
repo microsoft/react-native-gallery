@@ -354,8 +354,12 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   return (
     <View 
       style={styles.drawer}
-      role="navigation"
-      accessibilityLabel="Main navigation menu">
+      accessible={true}
+      accessibilityRole="menubar"
+      accessibilityLabel="Navigation menu"
+      nativeID="navigation-landmark"
+      focusable={true}
+      importantForAccessibility="yes">
       <Pressable
         ref={hamburgerRef}
         accessibilityRole="button"

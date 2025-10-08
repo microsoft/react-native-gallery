@@ -60,8 +60,8 @@ const ListOfComponents = ({
     <View
       accessibilityLabel={heading + ' components'}
       accessible={true}
-      accessibilityRole="none"
-      role="region">
+      accessibilityRole="list"
+      importantForAccessibility="yes">
       <Text accessibilityRole="header" style={styles.heading}>
         {heading}
       </Text>

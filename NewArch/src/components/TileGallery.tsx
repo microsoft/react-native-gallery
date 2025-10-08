@@ -175,14 +175,20 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
   // https://github.com/microsoft/WinUI-Gallery/blob/main/WinUIGallery/Controls/TileGallery.xaml
   // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/TileGallery.xaml#L137
   return (
-    <HorizontalListWithPageNavigation
-      spacing={12}
-      data={items}
-      renderItem={({item}) => item}
-      style={{paddingBottom: 20}}
-      ListHeaderComponent={() => <View style={{width: 36}} />}
-      ListFooterComponent={() => <View style={{width: 36}} />}
-    />
+    <View 
+      accessible={true}
+      accessibilityRole="list" 
+      accessibilityLabel="Featured resources and links"
+      importantForAccessibility="yes">
+      <HorizontalListWithPageNavigation
+        spacing={12}
+        data={items}
+        renderItem={({item}) => item}
+        style={{paddingBottom: 20}}
+        ListHeaderComponent={() => <View style={{width: 36}} />}
+        ListFooterComponent={() => <View style={{width: 36}} />}
+      />
+    </View>
   );
 };
 
