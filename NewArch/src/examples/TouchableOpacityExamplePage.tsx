@@ -1,5 +1,5 @@
 'use strict';
-import {Text, TouchableOpacity, Platform, PlatformColor} from 'react-native';
+import {Text, TouchableOpacity, Platform, PlatformColor, View, AccessibilityInfo} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -11,6 +11,10 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{navigation?: 
   const [title, setTitle] = useState(0);
   const [focus, setFocus] = useState(false);
   const {colors} = useTheme();
+
+  const announceCounterChange = (newValue: number, action: string) => {
+    AccessibilityInfo.announceForAccessibility(`Counter ${action} to ${newValue}`);
+  };
 
   const example1jsx = `<TouchableOpacity
   style={{
@@ -181,31 +185,76 @@ onAccessibilityTap={() => {}}>
         </TouchableOpacity>
       </Example>
       <Example title="A TouchableOpacity counter." code={example4jsx}>
-        <TouchableOpacity
-          accessibilityRole="button"
-          accessibilityLabel={`${title}`}
-          accessibilityHint={'click me to increase the example counter'}
-          accessibilityValue={{text: `${title}`}}
-          style={{
-            height: 40,
-            width: 150,
-            backgroundColor:
-              Platform.OS === 'windows'
-                ? PlatformColor('SystemColorButtonFaceColor')
-                : 'silver',
-            borderRadius: 3,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => {
-            setTitle(title + 1);
-          }}
-          onAccessibilityTap={() => {
-            setTitle(title + 1);
-          }}
-          activeOpacity={0.8}>
-          <Text style={{color: colors.text}}>{String(title)}</Text>
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel={`Decrease counter. Current value is ${title}`}
+            accessibilityHint="Decreases the counter by 1"
+            style={{
+              height: 40,
+              width: 50,
+              backgroundColor:
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemColorButtonFaceColor')
+                  : 'silver',
+              borderRadius: 3,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              const newValue = Math.max(0, title - 1);
+              setTitle(newValue);
+              announceCounterChange(newValue, 'decreased');
+            }}
+            activeOpacity={0.8}>
+            <Text style={{color: colors.text, fontSize: 20}}>-</Text>
+          </TouchableOpacity>
+          <Text
+            accessible={true}
+            accessibilityRole="text"
+            accessibilityLabel={`Counter value: ${title}`}
+            accessibilityHint="Counter display"
+            style={{
+              minWidth: 80,
+              height: 40,
+              textAlign: 'center',
+              lineHeight: 40,
+              fontSize: 18,
+              borderWidth: 1,
+              borderColor: colors.border,
+              borderRadius: 3,
+              backgroundColor:
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemColorButtonFaceColor')
+                  : 'silver',
+              marginHorizontal: 5,
+            }}>
+            {title}
+          </Text>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel={`Increase counter. Current value is ${title}`}
+            accessibilityHint="Increases the counter by 1"
+            style={{
+              height: 40,
+              width: 50,
+              backgroundColor:
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemColorButtonFaceColor')
+                  : 'silver',
+              borderRadius: 3,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              const newValue = title + 1;
+              setTitle(newValue);
+              announceCounterChange(newValue, 'increased');
+            }}
+            activeOpacity={0.8}>
+            <Text style={{color: colors.text, fontSize: 20}}>+</Text>
+          </TouchableOpacity>
+        </View>
       </Example>
       <Example
         title="A TouchableOpacity responsive to focus."

@@ -1,5 +1,5 @@
 'use strict';
-import {Text} from 'react-native';
+import {Text, View, AccessibilityInfo} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -13,6 +13,32 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
     const firstTouchableWithoutFeedbackRef = usePageFocusManagement(navigation);
     const [title, setTitle] = useState(0);
     const {colors} = useTheme();
+    const announceCounterChange = (newValue: number, action: string) => {
+      AccessibilityInfo.announceForAccessibility(`Counter ${action} to ${newValue}`);
+    };
+
+    const counterButtonStyle = {
+      color: colors.text,
+      fontSize: 20,
+      padding: 10,
+      minWidth: 40,
+      textAlign: 'center' as const,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 3
+    };
+
+    const counterDisplayStyle = {
+      color: colors.text,
+      fontSize: 18,
+      padding: 10,
+      minWidth: 60,
+      textAlign: 'center' as const,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 3,
+      marginHorizontal: 5
+    };
 
     const example1jsx = `<TouchableWithoutFeedback>
     <Text style={{color: colors.text}}>TouchableWithoutFeedback</Text>
@@ -108,18 +134,38 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           </TouchableWithoutFeedback>
         </Example>
         <Example title="A TouchableWithoutFeedback counter." code={example4jsx}>
-          <TouchableWithoutFeedback
-            accessibilityRole="button"
-            accessibilityLabel={`${title}`}
-            accessibilityHint={'click me to increase the example counter'}
-          onPress={() => {
-              setTitle(title + 1);
-            }}
-            onAccessibilityTap={() => {
-              setTitle(title + 1);
-            }}>
-            <Text style={{color: colors.text}}>{String(title)}</Text>
-          </TouchableWithoutFeedback>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <TouchableWithoutFeedback
+              accessibilityRole="button"
+              accessibilityLabel={`Decrease counter. Current value is ${title}`}
+              accessibilityHint="Decreases the counter by 1"
+              onPress={() => {
+                const newValue = Math.max(0, title - 1);
+                setTitle(newValue);
+                announceCounterChange(newValue, 'decreased');
+              }}>
+              <Text style={counterButtonStyle}>-</Text>
+            </TouchableWithoutFeedback>
+            <Text
+              accessible={true}
+              accessibilityRole="text"
+              accessibilityLabel={`Counter value: ${title}`}
+              accessibilityHint="Counter display"
+              style={counterDisplayStyle}>
+              {title}
+            </Text>
+            <TouchableWithoutFeedback
+              accessibilityRole="button"
+              accessibilityLabel={`Increase counter. Current value is ${title}`}
+              accessibilityHint="Increases the counter by 1"
+              onPress={() => {
+                const newValue = title + 1;
+                setTitle(newValue);
+                announceCounterChange(newValue, 'increased');
+              }}>
+              <Text style={counterButtonStyle}>+</Text>
+            </TouchableWithoutFeedback>
+          </View>
         </Example>
       </Page>
     );
