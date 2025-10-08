@@ -174,6 +174,8 @@ type DrawerCollapsibleCategoryProps = {
   navigation: any;
   currentRoute: string;
   containsCurrentRoute: boolean;
+  positionInSet?: number;
+  setSize?: number;
 };
 const DrawerCollapsibleCategory = ({
   categoryLabel,
@@ -182,6 +184,8 @@ const DrawerCollapsibleCategory = ({
   navigation,
   currentRoute,
   containsCurrentRoute,
+  positionInSet,
+  setSize,
 }: DrawerCollapsibleCategoryProps) => {
   const categoryRoute = `Category: ${categoryLabel}`;
   const isCurrentRoute = currentRoute === categoryRoute;
@@ -231,14 +235,15 @@ const DrawerCollapsibleCategory = ({
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
         accessibilityRole="button"
-        accessibilityLabel={categoryLabel}
+        accessibilityLabel={`${categoryLabel}, ${isExpanded ? 'expanded' : 'collapsed'}`}
         accessibilityState={{expanded: isExpanded}}
+        {...(positionInSet && setSize ? {accessibilityPosInSet: positionInSet, accessibilitySetSize: setSize} : {})}
         accessibilityActions={[
           {name: isExpanded ? 'collapse' : 'expand', label: isExpanded ? 'Collapse' : 'Expand'},
         ]}
         onAccessibilityAction={(event) => {
           if (event.nativeEvent.actionName === 'expand' || event.nativeEvent.actionName === 'collapse') {
-        setIsExpanded(!isExpanded);
+            setIsExpanded(!isExpanded);
           }
         }}
         onAccessibilityTap={() => onPress()}
@@ -304,7 +309,7 @@ const DrawerListView = (props: {
 
   return (
     <View>
-      {RNGalleryCategories.map((category) => (
+      {RNGalleryCategories.map((category, index) => (
         <DrawerCollapsibleCategory
           key={category.label}
           categoryLabel={category.label}
@@ -313,6 +318,8 @@ const DrawerListView = (props: {
           navigation={props.navigation}
           currentRoute={props.currentRoute}
           containsCurrentRoute={categoryWithCurrentRoute === category.label}
+          positionInSet={index + 1}
+          setSize={RNGalleryCategories.length}
         />
       ))}
     </View>
