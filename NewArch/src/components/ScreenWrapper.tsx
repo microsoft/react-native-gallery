@@ -8,6 +8,7 @@ import {
   AccessibilityInfo,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
+import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
 
 const createStyles = () =>
   StyleSheet.create({
@@ -56,13 +57,28 @@ type ScreenWrapperProps = React.PropsWithChildren<{
 export function ScreenWrapper({
   children,
   doNotInset,
-}: ScreenWrapperProps): JSX.Element {
+}: ScreenWrapperProps): React.JSX.Element {
   const navigation = useNavigation();
   const styles = createStyles();
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
 
+  const handleSkipToMain = () => {
+    // Focus management for skip to main content
+    AccessibilityInfo.announceForAccessibility('Navigated to main content');
+  };
+
+  const handleSkipToNavigation = () => {
+    navigation.dispatch(DrawerActions.openDrawer());
+    AccessibilityInfo.announceForAccessibility('Navigation menu opened');
+  };
+
   return (
     <View style={styles.container}>
+      
+      <AccessibilityNavigationHelper
+        onSkipToMain={handleSkipToMain}
+        onSkipToNavigation={handleSkipToNavigation}
+      />
       <View
         // accessibilityRole="button"
         accessibilityLabel="Navigation bar"
