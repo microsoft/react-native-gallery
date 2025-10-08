@@ -1,1 +1,0 @@
-   3:7>C:\.tools\.nuget\packages\microsoft.windows.cppwinrt\2.0.230706.1\build\native\Microsoft.Windows.CppWinRT.targets(228,13): error MSB4006: There is a circular dependency in the target dependency graph involving target "CppWinRTComputeGetResolvedWinMD". [C:\work\react-native-gallery\NewArch\windows\NewArch\NewArch.vcxproj]
