@@ -61,63 +61,35 @@ export function ScreenWrapper({
   const navigation = useNavigation();
   const styles = createStyles();
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
-  
-  const navigationRef = useRef<View>(null);
-  const mainContentRef = useRef<View>(null);
-
-  // Announce page structure to screen readers
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      AccessibilityInfo.announceForAccessibility(
-        'Page loaded. Press M to open navigation menu. Use heading navigation to move between sections.'
-      );
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleSkipToMain = () => {
-    if (mainContentRef.current) {
-      // @ts-ignore - React Native Windows accessibility focus
-      mainContentRef.current.focus?.();
-      AccessibilityInfo.announceForAccessibility('Navigated to main content');
-    }
-  };
-
-  const handleSkipToNavigation = () => {
-    navigation.dispatch(DrawerActions.openDrawer());
-    AccessibilityInfo.announceForAccessibility('Navigation menu opened');
-  };
 
   return (
     <View style={styles.container}>
-      {/* Screen reader instructions */}
-      <View
-        accessible={true}
-        accessibilityRole="none"
-        accessibilityLabel="Navigation instructions: Press M to open menu, use H key to navigate headers, or Tab to move through controls"
-        accessibilityLiveRegion="polite"
-        style={{position: 'absolute', left: -1000, top: -1000, width: 1, height: 1}}
-      />
       
       <AccessibilityNavigationHelper
         onSkipToMain={handleSkipToMain}
         onSkipToNavigation={handleSkipToNavigation}
       />
       <View
-        ref={navigationRef}
-        accessibilityLabel="Navigation toolbar"
+        // accessibilityRole="button"
+        accessibilityLabel="Navigation bar"
         accessibilityState={{ expanded: isDrawerOpen }}
-        accessibilityLiveRegion='assertive'
-        accessible={true}
-        accessibilityRole="toolbar"
-        focusable={true}
-        importantForAccessibility="yes"
+        // accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
+        // tooltip={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
+        // requires react-native-gesture-handler to be imported in order to pass testing.
+        // blocked by #125
+        /*accessibilityState={{
+          expanded: useIsDrawerOpen(),
+        }}*/
         style={styles.navBar}
        >
         <View>
           <TouchableHighlight
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
+            tooltip={'Expand navigation menu'}
+            // requires react-native-gesture-handler to be imported in order to pass testing.
+            // blocked by #125
+            //accessibilityState={{expanded: useIsDrawerOpen()}}
             style={styles.menu}
             accessibilityHint={'Tap to expand navigation menu'}
             onPress={() => {
@@ -138,15 +110,7 @@ export function ScreenWrapper({
           </TouchableHighlight>
         </View>
       </View>
-      <View 
-        ref={mainContentRef}
-        style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}
-        accessible={true}
-        accessibilityRole="none"
-        accessibilityLabel="Main content"
-        nativeID="main-content-landmark"
-        focusable={true}
-        importantForAccessibility="yes">
+      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}> 
         {children}
       </View>
     </View>

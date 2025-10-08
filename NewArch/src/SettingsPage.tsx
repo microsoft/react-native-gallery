@@ -53,11 +53,7 @@ const SettingContainer = (props: {
   const {colors} = useTheme();
   const styles = createStyles(colors);
   return (
-    <View 
-      accessible={true}
-      accessibilityRole="none"
-      accessibilityLabel={`${props.heading} settings`}
-      importantForAccessibility="yes">
+    <View>
       <Text style={styles.heading} accessibilityRole="header">
         {props.heading}
       </Text>
@@ -77,12 +73,11 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
     setTheme(value);
   };*/
   return isScreenFocused ? (
-    <ScreenWrapper>
-      <View style={styles.container}>
-        <Text accessibilityRole="header" style={styles.title}>
-          Settings
-        </Text>
-        <ScrollView style={styles.scrollView}>
+    <ScreenWrapper style={styles.container}>
+      <Text accessibilityRole="header" style={styles.title}>
+        Settings
+      </Text>
+      <ScrollView style={styles.scrollView}>
         {/* Tracking Issue: #17
         <SettingContainer heading="Theme Mode">
           <Picker
@@ -131,8 +126,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
             rights reserved.
           </Text>
         </SettingContainer>
-        </ScrollView>
-      </View>
+      </ScrollView>
     </ScreenWrapper>
   ) : (
     <View />
