@@ -326,9 +326,9 @@ const createDrawerNavigator = () => {
         </DrawerNavigator>
       );
     },
-    Screen: ({component, name, key}: DrawerScreenProps) => {
+    Screen: ({component, name, ...props}: DrawerScreenProps) => {
       return (
-        <DrawerScreen key={key} name={name} component={component} />
+        <DrawerScreen {...props} name={name} component={component} />
       );
     },
   };

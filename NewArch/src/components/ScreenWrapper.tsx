@@ -57,10 +57,20 @@ type ScreenWrapperProps = React.PropsWithChildren<{
 export function ScreenWrapper({
   children,
   doNotInset,
-}: ScreenWrapperProps): JSX.Element {
+}: ScreenWrapperProps): React.JSX.Element {
   const navigation = useNavigation();
   const styles = createStyles();
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
+
+  const handleSkipToMain = () => {
+    // Focus management for skip to main content
+    AccessibilityInfo.announceForAccessibility('Navigated to main content');
+  };
+
+  const handleSkipToNavigation = () => {
+    navigation.dispatch(DrawerActions.openDrawer());
+    AccessibilityInfo.announceForAccessibility('Navigation menu opened');
+  };
 
   return (
     <View style={styles.container}>
@@ -86,7 +96,6 @@ export function ScreenWrapper({
           <TouchableHighlight
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
-            tooltip={'Expand navigation menu'}
             // requires react-native-gesture-handler to be imported in order to pass testing.
             // blocked by #125
             //accessibilityState={{expanded: useIsDrawerOpen()}}
