@@ -57,7 +57,7 @@ type ScreenWrapperProps = React.PropsWithChildren<{
 export function ScreenWrapper({
   children,
   doNotInset,
-}: ScreenWrapperProps): React.JSX.Element {
+}: ScreenWrapperProps): JSX.Element {
   const navigation = useNavigation();
   const styles = createStyles();
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
