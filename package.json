@@ -9,7 +9,8 @@
     "test:update": "react-native rnx-test --platform windows -u",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "windows": "npx @react-native-community/cli run-windows",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "test:windows": "jest --config jest.config.windows.js"
   },
   "dependencies": {
     "@react-native-clipboard/clipboard": "^1.14.0",
@@ -83,7 +84,7 @@
     "init-windows": {
       "name": "rngallery",
       "namespace": "rngallery",
-      "template": "old/uwp-cpp-app"
+      "template": "cpp-app"
     }
   }
 }
