@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -110,7 +110,7 @@ export function ScreenWrapper({
           </TouchableHighlight>
         </View>
       </View>
-      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}> 
+      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
         {children}
       </View>
     </View>

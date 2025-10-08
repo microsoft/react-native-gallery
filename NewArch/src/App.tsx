@@ -352,18 +352,12 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
   }, [isDrawerOpen]);
 
   return (
-    <View 
-      style={styles.drawer}
-      accessible={true}
-      accessibilityRole="menubar"
-      accessibilityLabel="Navigation menu"
-      nativeID="navigation-landmark"
-      focusable={true}
-      importantForAccessibility="yes">
+      <View style={styles.drawer}>
       <Pressable
         ref={hamburgerRef}
         accessibilityRole="button"
         accessibilityLabel="Navigation menu"
+        accessibilityHint={'Tap to collapse navigation menu'}
         style={styles.menu}
         onPress={() => {
           if (isDrawerOpen) {
