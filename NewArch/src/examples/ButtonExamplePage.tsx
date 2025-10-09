@@ -1,5 +1,5 @@
 'use strict';
-import {Button, Platform, PlatformColor} from 'react-native';
+import {Button, Platform, PlatformColor, View, Text, AccessibilityInfo} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -9,7 +9,9 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
   const [title, setTitle] = useState(0);
 
   const firstButtonRef = usePageFocusManagement(navigation);
-
+  const announceCounterChange = (newValue: number, action: string) => {
+    AccessibilityInfo.announceForAccessibility(`Counter ${action} to ${newValue}`);
+  };
   const example1jsx = '<Button title="Button" onPress={() => {}} />';
   const example2jsx =
     '<Button title="Button" color={colors.primary} onPress={() => {}} />';
@@ -70,17 +72,45 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
         />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
-        <Button
-          accessibilityLabel={'example button4 counter'}
-          accessibilityHint={`${title}`}
-          title={String(title)}
-          onPress={() => {
-            setTitle(title + 1);
-          }}
-          onAccessibilityTap={() => {
-            setTitle(title + 1);
-          }}
-        />
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Button
+            title="-"
+            accessibilityLabel={`Decrease counter. Current value is ${title}`}
+            accessibilityHint="Decreases the counter by 1"
+            onPress={() => {
+              const newValue = Math.max(0, title - 1);
+              setTitle(newValue);
+              announceCounterChange(newValue, 'decreased');
+            }}
+          />
+          <Text
+            accessible={true}
+            accessibilityRole="text"
+            accessibilityLabel={`Counter value: ${title}`}
+            accessibilityHint="Counter display"
+            style={{
+              minWidth: 60,
+              textAlign: 'center',
+              fontSize: 18,
+              padding: 10,
+              borderWidth: 1,
+              borderColor: 'gray',
+              borderRadius: 5,
+              marginHorizontal: 5
+            }}>
+            {String(title)}
+          </Text>
+          <Button
+            title="+"
+            accessibilityLabel={`Increase counter. Current value is ${title}`}
+            accessibilityHint="Increases the counter by 1"
+            onPress={() => {
+              const newValue = title + 1;
+              setTitle(newValue);
+              announceCounterChange(newValue, 'increased');
+            }}
+          />
+        </View>
       </Example>
     </Page>
   );

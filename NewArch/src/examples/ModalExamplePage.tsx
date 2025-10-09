@@ -1,5 +1,5 @@
 'use strict';
-import {Modal, Button, View, Text, StyleSheet, Dimensions, PlatformColor} from 'react-native';
+import {Modal, Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -11,12 +11,15 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
   const changeModal1 = () => {
+    AccessibilityInfo.announceForAccessibility("This is a simple modal")
     setModal1(!modal1);
   };
   const changeModal2 = () => {
+    AccessibilityInfo.announceForAccessibility("This is a modal with more complex styling")
     setModal2(!modal2);
   };
   const changeModal3 = () => {
+    AccessibilityInfo.announceForAccessibility("Modal Events onShow onDismiss events count close Modal")
     setModal3(!modal3);
   };
 

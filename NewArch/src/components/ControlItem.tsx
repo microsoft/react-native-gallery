@@ -99,7 +99,7 @@ const HomeComponentTile = React.forwardRef<any, HomeComponentTileProps>(
       accessibilityLabel={
         item.key === 'Button' ? 'Button1 control' : item.key + ' control'
       }
-      accessibilityHint={'click to view the ' + item.key + ' sample page'}
+      accessibilityHint={item.subtitle ? item.subtitle + '. Click to view the ' + item.key + ' sample page' : 'Click to view the ' + item.key + ' sample page'}
       style={styles.controlItem}
       onPress={() => {
         navigation.navigate(item.key);
