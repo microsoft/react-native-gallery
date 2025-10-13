@@ -6,7 +6,7 @@ const HighContrastTheme: Theme = {
   colors: {
     primary: AppTheme.currentHighContrastColors.HighlightColor,
     background: AppTheme.currentHighContrastColors.WindowColor,
-    card: AppTheme.currentHighContrastColors.WindowColor,
+    card: AppTheme.currentHighContrastColors.ButtonFaceColor,
     text: AppTheme.currentHighContrastColors.WindowTextColor,
     border: AppTheme.currentHighContrastColors.ButtonTextColor,
     notification: AppTheme.currentHighContrastColors.HotlightColor,
