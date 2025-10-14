@@ -261,7 +261,11 @@ onAccessibilityTap={() => {}}>
         code={example5jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'example TouchableOpacity responsive to focus'}
+          accessibilityLabel={
+            focus
+              ? 'TouchableOpacity Focused'
+              : 'TouchableOpacity Not Focused'
+          }
           style={{
             height: 40,
             width: 250,

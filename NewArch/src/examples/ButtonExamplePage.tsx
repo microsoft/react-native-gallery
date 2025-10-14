@@ -44,7 +44,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
         <Button
           ref={firstButtonRef}
           title="Simple Button"
-          accessibilityLabel={'simple button'}
+          accessibilityLabel={'Simple Button'}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
         />
@@ -57,7 +57,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
               ? PlatformColor('SystemChromeMediumLowColor')
               : 'silver'
           }
-          accessibilityLabel={'colored button'}
+          accessibilityLabel={'Colored Button'}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
         />
@@ -65,7 +65,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
       <Example title="A disabled Button." code={example3jsx}>
         <Button
           title="Disabled Button"
-          accessibilityLabel={'disabled button'}
+          accessibilityLabel={'Disabled Button'}
           disabled={true}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
