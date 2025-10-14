@@ -1,39 +1,44 @@
-import React from 'react';
-import {PlatformColor, ScrollView, StyleSheet, Text, View} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {PlatformColor, ScrollView, StyleSheet, Text, View, Dimensions} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
 import {ScreenWrapper} from './ScreenWrapper';
 
-const styles = StyleSheet.create({
-  container: {
-    paddingBottom: 10,
-    alignSelf: 'stretch',
-    height: '100%',
-  },
-  title: {
-    color: PlatformColor('TextControlForeground'),
-    fontWeight: '600',
-    fontSize: 28,
-  },
-  titlePane: {
-    marginTop: 24,
-    marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingRight: 20,
-  },
-  description: {
-    paddingTop: 10,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  scrollView: {
-    paddingRight: 20,
-  },
-});
+const createStyles = (windowWidth: number) => {
+  const isSmallScreen = windowWidth < 600;
+  const padding = isSmallScreen ? 10 : 20;
+  
+  return StyleSheet.create({
+    container: {
+      paddingBottom: 10,
+      alignSelf: 'stretch',
+      height: '100%',
+    },
+    title: {
+      color: PlatformColor('TextControlForeground'),
+      fontWeight: '600',
+      fontSize: isSmallScreen ? 24 : 28,
+    },
+    titlePane: {
+      marginTop: isSmallScreen ? 16 : 24,
+      marginBottom: 10,
+      flexDirection: isSmallScreen ? 'column' : 'row',
+      justifyContent: 'space-between',
+      alignItems: isSmallScreen ? 'flex-start' : 'center',
+      paddingRight: padding,
+    },
+    description: {
+      paddingTop: 10,
+      paddingRight: padding,
+      paddingBottom: 20,
+    },
+    scrollView: {
+      paddingRight: padding,
+    },
+  });
+};
 
 const DisplayNativeControlBadge = (
   wrappedNativeControl: {control: string; url: string} | undefined,
@@ -91,8 +96,18 @@ export function Page(props: {
   documentation: {label: string; url: string}[];
   children: React.ReactNode;
 }) {
-  //const {colors} = useTheme();
-  //const isScreenFocused = useIsFocused();
+  const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
+
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({window}) => {
+      setWindowDimensions(window);
+    });
+
+    return () => subscription?.remove();
+  }, []);
+
+  const styles = createStyles(windowDimensions.width);
+  
   return (
     <ScreenWrapper>
       <View style={styles.titlePane}>

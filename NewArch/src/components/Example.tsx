@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Code} from './Code';
-import {StyleSheet, PlatformColor, Text, View} from 'react-native';
+import {StyleSheet, PlatformColor, Text, View, Dimensions} from 'react-native';
 import {CopyToClipboardButton} from './CopyToClipboard';
 import {useTheme} from '../Navigation';
 
-const createStyles = (colors: any) =>
-  StyleSheet.create({
+const createStyles = (colors: any, windowWidth: number) => {
+  const isSmallScreen = windowWidth < 600;
+  const padding = isSmallScreen ? 8 : 15;
+  
+  return StyleSheet.create({
     title: {
-      marginTop: 30,
+      marginTop: isSmallScreen ? 20 : 30,
       marginBottom: 10,
-      fontSize: 20,
+      fontSize: isSmallScreen ? 18 : 20,
       color: PlatformColor('TextControlForeground'),
     },
     box: {
@@ -18,17 +21,21 @@ const createStyles = (colors: any) =>
       borderColor: colors.border,
     },
     exampleContainer: {
-      padding: 15,
+      padding: padding,
       backgroundColor: PlatformColor('Background'),
+      minHeight: isSmallScreen ? 40 : 50,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     codeContainer: {
       borderWidth: 0,
       borderTopWidth: 1,
       borderColor: colors.border,
-      padding: 12,
+      padding: isSmallScreen ? 8 : 12,
       backgroundColor: PlatformColor('Background'),
     },
   });
+};
 
 export const Example = React.forwardRef<any, {
   title: string;
@@ -36,7 +43,17 @@ export const Example = React.forwardRef<any, {
   children: React.ReactNode;
 }>((props, ref) => {
   const {colors} = useTheme();
-  const styles = createStyles(colors);
+  const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
+
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({window}) => {
+      setWindowDimensions(window);
+    });
+
+    return () => subscription?.remove();
+  }, []);
+
+  const styles = createStyles(colors, windowDimensions.width);
   return (
     <View>
       <Text accessibilityRole={'header'} style={styles.title}>
