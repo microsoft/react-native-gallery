@@ -38,7 +38,7 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Button." code={example1jsx}>
         <Button
           title="Button"
-          accessibilityLabel={'example simple button1'}
+          accessibilityLabel={'Button'}
           onPress={() => {}}
         />
       </Example>
@@ -50,22 +50,22 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
               ? PlatformColor('SystemBaseLowColor')
               : 'silver'
           }
-          accessibilityLabel={'example colored button2'}
+          accessibilityLabel={'Button'}
           onPress={() => {}}
         />
       </Example>
       <Example title="A disabled Button." code={example3jsx}>
         <Button
           title="Button"
-          accessibilityLabel={'example disabled button3'}
+          accessibilityLabel={'Button'}
           disabled={true}
           onPress={() => {}}
         />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
         <Button
-          accessibilityLabel={'example button4 counter'}
-          accessibilityHint={'click me to increase the example counter'}
+          accessibilityLabel={`Counter: ${title}`}
+          accessibilityHint={'Tap to increase the counter'}
           title={String(title)}
           onPress={() => {
             setTitle(title + 1);
