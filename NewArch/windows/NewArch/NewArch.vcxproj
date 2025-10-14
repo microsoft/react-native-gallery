@@ -6,7 +6,7 @@
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <MinimalCoreWin>true</MinimalCoreWin>
     <ProjectGuid>{8481B8D7-6300-4DDF-9104-C7A4F1CAA241}</ProjectGuid>
-    <ProjectName>NewArch</ProjectName>
+    <ProjectName>rngallery</ProjectName>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>NewArch</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
