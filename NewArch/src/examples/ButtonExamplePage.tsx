@@ -4,9 +4,11 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
+import {useTheme} from '../Navigation';
 
 export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const [title, setTitle] = useState(0);
+  const {colors} = useTheme();
 
   const firstButtonRef = usePageFocusManagement(navigation);
   const announceCounterChange = (newValue: number, action: string) => {
@@ -46,20 +48,14 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           title="Simple Button"
           accessibilityLabel={'simple button'}
           onPress={() => {}}
-          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A colored Button." code={example2jsx}>
         <Button
           title="Colored Button"
-          color={
-            Platform.OS === 'windows'
-              ? PlatformColor('SystemChromeMediumLowColor')
-              : 'silver'
-          }
+          color={colors.primary}
           accessibilityLabel={'colored button'}
           onPress={() => {}}
-          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A disabled Button." code={example3jsx}>
@@ -68,7 +64,6 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           accessibilityLabel={'disabled button'}
           disabled={true}
           onPress={() => {}}
-          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
@@ -76,7 +71,6 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           <Button
             title="-"
             accessibilityLabel={`Decrease counter. Current value is ${title}`}
-            accessibilityHint="Decreases the counter by 1"
             onPress={() => {
               const newValue = Math.max(0, title - 1);
               setTitle(newValue);
@@ -103,7 +97,6 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           <Button
             title="+"
             accessibilityLabel={`Increase counter. Current value is ${title}`}
-            accessibilityHint="Increases the counter by 1"
             onPress={() => {
               const newValue = title + 1;
               setTitle(newValue);
