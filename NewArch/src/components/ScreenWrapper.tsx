@@ -67,7 +67,7 @@ export function ScreenWrapper({
         // accessibilityRole="button"
         accessibilityLabel="Navigation bar"
         accessibilityState={{ expanded: isDrawerOpen }}
-        accessibilityLiveRegion='assertive'        
+        accessibilityLiveRegion='assertive'  
         // accessibilityHint={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         // tooltip={isDrawerOpen ? 'Tap to collapse navigation menu' : 'Tap to expand navigation menu'}
         // requires react-native-gesture-handler to be imported in order to pass testing.
