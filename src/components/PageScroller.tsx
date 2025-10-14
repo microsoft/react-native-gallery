@@ -24,7 +24,6 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
       accessibilityRole="button"
       accessibilityLabel={tooltip}
       tooltip={tooltip}
-      tooltipProperties={{MaxWidth: 500}}
       onPress={() => onPress()}
       onHoverIn={() => setHover(true)}
       onHoverOut={() => setHover(false)}>

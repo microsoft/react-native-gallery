@@ -31,8 +31,7 @@ export function Badge(props: {
   return (
     <View
       style={[styles.badgeContainer, {backgroundColor: props.badgeColor}]}
-      tooltip={props.description}
-      tooltipProperties={{MaxWidth: 500}}>
+      tooltip={props.description}>
       <Text style={[styles.badgeText, {color: props.textColor}]}>
         {props.badgeTitle}
       </Text>
