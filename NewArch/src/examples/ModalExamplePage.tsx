@@ -29,7 +29,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
   const example1jsx = `
   const [modal1, setModal1] = React.useState(false);
   <Button title='Open Modal' accessibilityLabel='Open Modal' onPress={()=>{setModal1(!modal1)}} onAccessibilityTap={()=>{setModal1(!modal1)}}/>
-  <Modal visible={modal1}>
+  <Modal visible={modal1} onRequestClose={()=>{setModal1(!modal1)}}>
     <View style={{width: 500, height: 200}}>
       <Text>This is a Modal Screen</Text>
       <Button title='Close Modal' accessibilityLabel='Close Modal' onPress={()=>{setModal1(!modal1)}} onAccessibilityTap={()=>{setModal1(!modal1)}}/>
@@ -38,7 +38,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
   const example2jsx = `
   const [modal2, setModal2] = React.useState(false);
   <Button title='Open Modal' accessibilityLabel='Open Modal' onPress={()=>{setModal2(!modal2)}} onAccessibilityTap={()=>{setModal2(!modal2)}}/>
-   <Modal visible={modal2}>
+   <Modal visible={modal2} onRequestClose={()=>{setModal2(!modal2)}}>
      <View style={[styles.centeredView, styles.modalBackdrop]}>
       <View style={styles.modalView}>
        <Text style={styles.textStyle}>This is a Modal with more complex styling</Text>
@@ -51,6 +51,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
   <Button title='Open Modal' accessibilityLabel='Open Modal' onPress={()=>{setModal3(!modal3)}} onAccessibilityTap={()=>{setModal3(!modal3)}}/>
     <Modal
       visible={modal3}
+      onRequestClose={()=>{setModal3(!modal3)}}
       onDismiss={() => {
       setOnDismissCount(onDismissCount + 1);
       }}
@@ -125,7 +126,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           accessibilityLabel="Open Modal"
           onPress={changeModal1}
           onAccessibilityTap={changeModal1}/>
-        <Modal visible={modal1}>
+        <Modal visible={modal1} onRequestClose={changeModal1}>
             <View style={styles.simpleModalView}>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
               <Button
@@ -146,7 +147,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           accessibilityLabel="Open Modal"
           onPress={changeModal2}
           onAccessibilityTap={changeModal2}/>
-        <Modal visible={modal2}>
+        <Modal visible={modal2} onRequestClose={changeModal2}>
           <View style={[styles.centeredView, styles.modalBackdrop]}>
             <View style={styles.modalView}>
               <Text style={styles.textStyle}>
@@ -176,6 +177,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
             </View>
         <Modal
           visible={modal3}
+          onRequestClose={changeModal3}
           onDismiss={() => {
             setOnDismissCount(onDismissCount + 1);
           }}
