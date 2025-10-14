@@ -22,7 +22,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
     but you can add any type of ReactNode inside of of a ScrollView.
   </Text>
 </ScrollView>`;
-  const example2jsx = `<ScrollView style={{height: 40}} horizontal={true} focusable={true}>
+  const example2jsx = `<ScrollView style={{height: 40}} horizontal={true}>
   <Text>
     Here is a very long snippet of text. The goal is for this text to be
     too long to fit inside this view which has a height restriction.
@@ -117,7 +117,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
         </ScrollView>
       </Example>
       <Example title="A horizontal ScrollView." code={example2jsx}>
-        <ScrollView style={{height: 40}} horizontal={true} {...({focusable: true} as any)}>
+        <ScrollView style={{height: 40}} horizontal={true}>
           <Text style={{color: colors.text}}>
             Here is a very long snippet of text. The goal is for this text to be
             too long to fit inside this view which has a height restriction.
