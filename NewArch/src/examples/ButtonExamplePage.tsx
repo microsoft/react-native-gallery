@@ -56,6 +56,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           color={colors.primary}
           accessibilityLabel={'colored button'}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A disabled Button." code={example3jsx}>
@@ -64,6 +65,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           accessibilityLabel={'disabled button'}
           disabled={true}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
@@ -71,6 +73,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           <Button
             title="-"
             accessibilityLabel={`Decrease counter. Current value is ${title}`}
+            accessibilityHint="Decreases the counter by 1"
             onPress={() => {
               const newValue = Math.max(0, title - 1);
               setTitle(newValue);
@@ -97,6 +100,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           <Button
             title="+"
             accessibilityLabel={`Increase counter. Current value is ${title}`}
+            accessibilityHint="Increases the counter by 1"
             onPress={() => {
               const newValue = title + 1;
               setTitle(newValue);
