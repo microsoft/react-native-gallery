@@ -90,9 +90,9 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Pressable component." code={example1jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Press Me'}
+          accessibilityLabel={'example pressable'}
           accessibilityHint={
-            'Tap to change text from Pressed to Press Me'
+            'click me to change text from Pressed to Press Me'
           }>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
@@ -104,7 +104,7 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A disabled Pressable component." code={example2jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Disabled Pressable'}
+          accessibilityLabel={'example disabled pressable'}
           style={{
             width: 140,
             height: 50,
@@ -131,8 +131,8 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A Pressable component with counter." code={example3jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Press Me'}
-          accessibilityHint={`Tap to increase the counter. Pressed ${timesPressed} times`}
+          accessibilityLabel={'example pressable with a counter'}
+          accessibilityHint={'click me to increase the example counter'}
           onPress={() => {
             setTimesPressed((current) => current + 1);
           }}
@@ -167,9 +167,9 @@ export const PressableExamplePage: React.FunctionComponent<{}> = () => {
         code={example4jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Press Me'}
+          accessibilityLabel={'example pressable with event feedback'}
           accessibilityHint={
-            'Tap to see the different events (press, pressIn, pressOut, longPress)'
+            'click me to see the diffrent events (press, pressIn, pressOut, longPress)'
           }
           style={{
             borderRadius: 2,

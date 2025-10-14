@@ -73,7 +73,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         <Example title="A simple TouchableHighlight." code={example1jsx}>
           <TouchableHighlight
             accessibilityRole="button"
-            accessibilityLabel={'TouchableHighlight'}
+            accessibilityLabel={'example TouchableHighlight'}
             style={{
               height: 40,
               backgroundColor:
@@ -93,7 +93,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         <Example title="A colored TouchableHighlight." code={example2jsx}>
           <TouchableHighlight
             accessibilityRole="button"
-            accessibilityLabel={'TouchableHighlight'}
+            accessibilityLabel={'example colored TouchableHighlight'}
             style={{
               height: 40,
               backgroundColor: colors.primary,
@@ -110,8 +110,9 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         <Example title="A TouchableHighlight counter." code={example3jsx}>
           <TouchableHighlight
             accessibilityRole="button"
-            accessibilityLabel={`Counter: ${title}`}
-            accessibilityHint={'Tap to increase the counter'}
+            accessibilityLabel={'example TouchableHighlight counter'}
+            accessibilityHint={'click me to increase the example counter'}
+            accessibilityValue={{text: `${title}`}}
             style={{
               height: 40,
               backgroundColor:

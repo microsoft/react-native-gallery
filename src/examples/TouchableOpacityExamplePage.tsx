@@ -112,7 +112,7 @@ onPress={() => {}}>
       <Example title="A simple TouchableOpacity." code={example1jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'simple example touchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -132,7 +132,7 @@ onPress={() => {}}>
       <Example title="A colored TouchableOpacity." code={example2jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'colored example TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -149,7 +149,7 @@ onPress={() => {}}>
       <Example title="A disabled TouchableOpacity." code={example3jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'TouchableOpacity'}
+          accessibilityLabel={'disabled example TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -170,8 +170,9 @@ onPress={() => {}}>
       <Example title="A TouchableOpacity counter." code={example4jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={`Counter: ${title}`}
-          accessibilityHint={'Tap to increase the counter'}
+          accessibilityLabel={'example TouchableOpacity counter'}
+          accessibilityHint={'click me to increase the example counter'}
+          accessibilityValue={{text: `${title}`}}
           style={{
             height: 40,
             width: 150,
@@ -195,11 +196,7 @@ onPress={() => {}}>
         code={example5jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={
-            focus
-              ? 'TouchableOpacity Focused'
-              : 'TouchableOpacity Not Focused'
-          }
+          accessibilityLabel={'example TouchableOpacity responsive to focus'}
           style={{
             height: 40,
             width: 250,
