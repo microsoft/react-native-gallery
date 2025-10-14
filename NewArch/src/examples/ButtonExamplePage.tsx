@@ -48,6 +48,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           title="Simple Button"
           accessibilityLabel={'simple button'}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A colored Button." code={example2jsx}>
