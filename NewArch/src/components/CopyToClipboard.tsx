@@ -45,6 +45,7 @@ const CopyToClipboardButton = React.forwardRef<any, CopyToClipboardButtonProps>(
       accessibilityRole="button"
       accessibilityLabel={helpText}
       tooltip={helpText}
+      tooltipProperties={{MaxWidth: 500}}
       style={styles.background}
       onPress={() => {
         Clipboard.setString(content);

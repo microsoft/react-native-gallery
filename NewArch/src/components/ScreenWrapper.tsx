@@ -82,6 +82,7 @@ export function ScreenWrapper({
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
             tooltip={'Expand navigation menu'}
+            tooltipProperties={{MaxWidth: 500}}
             // requires react-native-gesture-handler to be imported in order to pass testing.
             // blocked by #125
             //accessibilityState={{expanded: useIsDrawerOpen()}}
