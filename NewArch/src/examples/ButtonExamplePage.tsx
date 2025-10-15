@@ -90,7 +90,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
         <Button
           ref={firstButtonRef}
           title="Simple Button"
-          accessibilityLabel={'simple button'}
+          accessibilityLabel={'Simple Button'}
           onPress={() => {}}
         />
       </Example>
@@ -105,7 +105,7 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
       <Example title="A disabled Button." code={example3jsx}>
         <Button
           title="Disabled Button"
-          accessibilityLabel={'disabled button'}
+          accessibilityLabel={'Disabled Button'}
           disabled={true}
           onPress={() => {}}
         />
