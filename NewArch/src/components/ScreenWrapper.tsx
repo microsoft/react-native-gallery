@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 
+
 const createStyles = (windowWidth: number) => {
   const isSmallScreen = windowWidth < 600;
   const navBarWidth = isSmallScreen ? 40 : 48;
