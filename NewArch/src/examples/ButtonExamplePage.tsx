@@ -1,6 +1,6 @@
 'use strict';
-import {Button, View, Text, AccessibilityInfo} from 'react-native';
-import React, {useState} from 'react';
+import {Button, View, Text, AccessibilityInfo, Dimensions} from 'react-native';
+import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
@@ -8,12 +8,56 @@ import {useTheme} from '../Navigation';
 
 export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const [title, setTitle] = useState(0);
+  const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
   const {colors} = useTheme();
 
   const firstButtonRef = usePageFocusManagement(navigation);
+
+  // Handle window resize for responsive layout
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({window}) => {
+      setWindowDimensions(window);
+    });
+
+    return () => subscription?.remove();
+  }, []);
+
   const announceCounterChange = (newValue: number, action: string) => {
     AccessibilityInfo.announceForAccessibility(`Counter ${action} to ${newValue}`);
   };
+
+  // Calculate responsive spacing based on window width
+  const getResponsiveSpacing = () => {
+    const { width } = windowDimensions;
+    if (width < 500) {
+      return {
+        containerPadding: 5,
+        textPadding: 5,
+        minWidth: 40,
+        fontSize: 16,
+        marginHorizontal: 2,
+      };
+    } else if (width < 800) {
+      return {
+        containerPadding: 8,
+        textPadding: 8,
+        minWidth: 50,
+        fontSize: 17,
+        marginHorizontal: 3,
+      };
+    } else {
+      return {
+        containerPadding: 10,
+        textPadding: 10,
+        minWidth: 60,
+        fontSize: 18,
+        marginHorizontal: 5,
+      };
+    }
+  };
+
+  const spacing = getResponsiveSpacing();
+
   const example1jsx = '<Button title="Button" onPress={() => {}} />';
   const example2jsx =
     '<Button title="Button" color={colors.primary} onPress={() => {}} />';
@@ -48,7 +92,6 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           title="Simple Button"
           accessibilityLabel={'Simple Button'}
           onPress={() => {}}
-          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A colored Button." code={example2jsx}>
@@ -57,7 +100,6 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           color={colors.primary}
           accessibilityLabel={'colored button'}
           onPress={() => {}}
-          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A disabled Button." code={example3jsx}>
@@ -66,15 +108,19 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           accessibilityLabel={'Disabled Button'}
           disabled={true}
           onPress={() => {}}
-          onAccessibilityTap={() => {}}
         />
       </Example>
       <Example title="A counter Button." code={example4jsx}>
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <View style={{ 
+          flexDirection: 'row', 
+          alignItems: 'center',
+          paddingHorizontal: spacing.containerPadding,
+          justifyContent: 'center',
+          flexWrap: 'wrap'
+        }}>
           <Button
             title="-"
             accessibilityLabel={`Decrease counter. Current value is ${title}`}
-            accessibilityHint="Decreases the counter by 1"
             onPress={() => {
               const newValue = Math.max(0, title - 1);
               setTitle(newValue);
@@ -85,23 +131,22 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
             accessible={true}
             accessibilityRole="text"
             accessibilityLabel={`Counter value: ${title}`}
-            accessibilityHint="Counter display"
             style={{
-              minWidth: 60,
+              minWidth: spacing.minWidth,
               textAlign: 'center',
-              fontSize: 18,
-              padding: 10,
+              fontSize: spacing.fontSize,
+              padding: spacing.textPadding,
               borderWidth: 1,
-              borderColor: 'gray',
+              borderColor: colors.border,
               borderRadius: 5,
-              marginHorizontal: 5
+              marginHorizontal: spacing.marginHorizontal,
+              color: colors.text
             }}>
             {String(title)}
           </Text>
           <Button
             title="+"
             accessibilityLabel={`Increase counter. Current value is ${title}`}
-            accessibilityHint="Increases the counter by 1"
             onPress={() => {
               const newValue = title + 1;
               setTitle(newValue);

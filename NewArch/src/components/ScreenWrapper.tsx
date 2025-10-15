@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   StyleSheet,
@@ -6,12 +6,17 @@ import {
   Text,
   PlatformColor,
   AccessibilityInfo,
+  Dimensions,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
 
-const createStyles = () =>
-  StyleSheet.create({
+
+const createStyles = (windowWidth: number) => {
+  const isSmallScreen = windowWidth < 600;
+  const navBarWidth = isSmallScreen ? 40 : 48;
+  
+  return StyleSheet.create({
     container: {
       flexDirection: 'row',
       width: '100%',
@@ -20,7 +25,7 @@ const createStyles = () =>
     },
     navBar: {
       backgroundColor: PlatformColor('Background'),
-      width: 48,
+      width: navBarWidth,
       height: '100%',
       paddingBottom: 20,
     },
@@ -34,32 +39,44 @@ const createStyles = () =>
       borderLeftWidth: 1,
     },
     insetNavItem: {
-      paddingLeft: 36,
+      paddingLeft: isSmallScreen ? 20 : 36,
     },
     menu: {
-      margin: 5,
-      height: 34,
-      width: 38,
+      margin: isSmallScreen ? 3 : 5,
+      height: isSmallScreen ? 30 : 34,
+      width: isSmallScreen ? 34 : 38,
       borderRadius: 3,
       alignItems: 'center',
       justifyContent: 'center',
     },
     icon: {
       fontFamily: 'Segoe MDL2 Assets',
-      fontSize: 16,
+      fontSize: isSmallScreen ? 14 : 16,
       color: PlatformColor('TextControlForeground'),
     },
   });
+};
 
 type ScreenWrapperProps = React.PropsWithChildren<{
   doNotInset?: boolean;
 }>;
+
 export function ScreenWrapper({
   children,
   doNotInset,
-}: ScreenWrapperProps): React.JSX.Element {
+}: ScreenWrapperProps) {
   const navigation = useNavigation();
-  const styles = createStyles();
+  const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
+
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({window}) => {
+      setWindowDimensions(window);
+    });
+
+    return () => subscription?.remove();
+  }, []);
+
+  const styles = createStyles(windowDimensions.width);
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
 
   const handleSkipToMain = () => {
@@ -97,10 +114,6 @@ export function ScreenWrapper({
           <TouchableHighlight
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
-            tooltip={'Expand navigation menu'}
-            // requires react-native-gesture-handler to be imported in order to pass testing.
-            // blocked by #125
-            //accessibilityState={{expanded: useIsDrawerOpen()}}
             style={styles.menu}
             accessibilityHint={'Tap to expand navigation menu'}
             onPress={() => {
