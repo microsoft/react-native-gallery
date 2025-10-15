@@ -1,12 +1,14 @@
 'use strict';
-import {Button, Platform, PlatformColor, View, Text, AccessibilityInfo} from 'react-native';
+import {Button, View, Text, AccessibilityInfo} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
+import {useTheme} from '../Navigation';
 
 export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const [title, setTitle] = useState(0);
+  const {colors} = useTheme();
 
   const firstButtonRef = usePageFocusManagement(navigation);
   const announceCounterChange = (newValue: number, action: string) => {
@@ -52,12 +54,8 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
       <Example title="A colored Button." code={example2jsx}>
         <Button
           title="Colored Button"
-          color={
-            Platform.OS === 'windows'
-              ? PlatformColor('SystemChromeMediumLowColor')
-              : 'silver'
-          }
-          accessibilityLabel={'Colored Button'}
+          color={colors.primary}
+          accessibilityLabel={'colored button'}
           onPress={() => {}}
           onAccessibilityTap={() => {}}
         />
