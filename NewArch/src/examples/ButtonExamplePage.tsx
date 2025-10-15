@@ -1,5 +1,5 @@
 'use strict';
-import {Button View, Text, AccessibilityInfo, Dimensions} from 'react-native';
+import {Button, View, Text, AccessibilityInfo, Dimensions} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
