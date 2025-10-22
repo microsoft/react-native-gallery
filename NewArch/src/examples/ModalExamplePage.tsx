@@ -184,7 +184,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           onShow={() => {
             setOnShowCount(onShowCount + 1);
           }}>
-          <View style={{width: 500, height: 400}}>
+          <View style={styles.eventsModalView}>
             <View style={styles.container}>
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
@@ -205,12 +205,12 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
 
 const styles = StyleSheet.create({
   container: {
-    //display: 'flex',
+    flex: 1,
     alignItems: 'center',
     padding: 10,
   },
   centeredView: {
-    //flex: 1,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: Dimensions.get('window').width, // can remove when bumped to 78
@@ -249,6 +249,7 @@ const styles = StyleSheet.create({
   },
   simpleModalView: {
     width: 500,
+    backgroundColor: PlatformColor('ControlFillColorDefaultBrush'),
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
@@ -261,7 +262,18 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   simpleModalText: {
-    color: 'black',
+    color: PlatformColor('TextControlForeground'),
     marginBottom: 20,
+  },
+  eventsModalView: {
+    flex: 1,
+    backgroundColor: PlatformColor('ControlFillColorDefaultBrush'),
+    borderRadius: 10,
+    padding: 15,
+    margin: 20,
+    maxWidth: 500,
+    maxHeight: 400,
+    alignSelf: 'center',
+    justifyContent: 'center',
   },
 });
