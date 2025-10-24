@@ -84,6 +84,7 @@ const PageTitle = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) =>
           <Text
             accessible
             accessibilityRole={'header'}
+            accessibilityLevel={1}
             style={styles.pageTitle}>
             React Native Gallery
           </Text>
