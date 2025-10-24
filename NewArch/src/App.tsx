@@ -7,6 +7,7 @@ import {
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
   AccessibilityInfo,
+  ScrollView,
 } from 'react-native';
 import {NavigationContainer} from './Navigation';
 import {
@@ -390,48 +391,54 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
       </Pressable>
 
       {isDrawerOpen && (
-        <>
-          <DrawerListItem
-            ref={homeRef}
-            route="Home"
-            label="Home"
-            icon="&#xE80F;"
-            navigation={navigation}
-            currentRoute={currentRoute}
-            onKeyDown={handleKeyDown}
-            keyboardEvents={['keyDown']}
-            focusable={true}
-          />
-          <DrawerListItem
-            ref={allSamplesRef}
-            route="All samples"
-            label="All samples"
-            icon="&#xE71D;"
-            navigation={navigation}
-            currentRoute={currentRoute}
-            onKeyDown={handleKeyDown}
-            keyboardEvents={['keyDown']}
-            focusable={true}
-          />
-          <View style={styles.drawerDivider} />
-          <DrawerListView 
-            navigation={navigation} 
-            currentRoute={currentRoute}
-          />
-          <View style={styles.drawerDivider} />
+        <View style={{ flex: 1 }}>
+          <ScrollView
+            style={{ flex: 1, maxHeight: '85%' }}
+            contentContainerStyle={{ paddingBottom: 20 }}
+            showsVerticalScrollIndicator={true}
+            persistentScrollbar={true}>
+            <DrawerListItem
+              ref={homeRef}
+              route="Home"
+              label="Home"
+              icon="&#xE80F;"
+              navigation={navigation}
+              currentRoute={currentRoute}
+              onKeyDown={handleKeyDown}
+              keyboardEvents={['keyDown']}
+              focusable={true}
+            />
+            <DrawerListItem
+              ref={allSamplesRef}
+              route="All samples"
+              label="All samples"
+              icon="&#xE71D;"
+              navigation={navigation}
+              currentRoute={currentRoute}
+              onKeyDown={handleKeyDown}
+              keyboardEvents={['keyDown']}
+              focusable={true}
+            />
+            <View style={styles.drawerDivider} />
+            <DrawerListView 
+              navigation={navigation} 
+              currentRoute={currentRoute}
+            />
+            <View style={styles.drawerDivider} />
 
-          <DrawerListItem
-            ref={settingsRef}
-            route="Settings"
-            label="Settings"
-            icon="&#xE713;"
-            navigation={navigation}
-            currentRoute={currentRoute}
-            onKeyDown={handleKeyDown}
-            keyboardEvents={['keyDown']}
-            focusable={true}
-          />
-        </>
+            <DrawerListItem
+              ref={settingsRef}
+              route="Settings"
+              label="Settings"
+              icon="&#xE713;"
+              navigation={navigation}
+              currentRoute={currentRoute}
+              onKeyDown={handleKeyDown}
+              keyboardEvents={['keyDown']}
+              focusable={true}
+            />
+          </ScrollView>
+        </View>
       )}
     </View>
   );
