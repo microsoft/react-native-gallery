@@ -54,7 +54,7 @@ const SettingContainer = (props: {
   const styles = createStyles(colors);
   return (
     <View>
-      <Text style={styles.heading} accessibilityRole="header">
+      <Text style={styles.heading} accessibilityRole="header" accessibilityLevel={2}>
         {props.heading}
       </Text>
       <View style={styles.settingContainer}>{props.children}</View>
@@ -74,7 +74,7 @@ export const SettingsPage: React.FunctionComponent<{}> = () => {
   };*/
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
-      <Text accessibilityRole="header" style={styles.title}>
+      <Text accessibilityRole="header" accessibilityLevel={1} style={styles.title}>
         Settings
       </Text>
       <ScrollView style={styles.scrollView}>

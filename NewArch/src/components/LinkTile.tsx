@@ -27,7 +27,7 @@ export function LinkTile(props: {
   const styles = createStyles(colors);
   return (
     <View style={styles.hyperlinkTile}>
-      <Text accessibilityRole="header" style={styles.hyperlinkTileTitle}>
+      <Text accessibilityRole="header" accessibilityLevel={2} style={styles.hyperlinkTileTitle}>
         {props.title}
       </Text>
       {props.links.map((hyp) => (

@@ -56,7 +56,7 @@ export const Example = React.forwardRef<any, {
   const styles = createStyles(colors, windowDimensions.width);
   return (
     <View>
-      <Text accessibilityRole={'header'} style={styles.title}>
+      <Text accessibilityRole={'header'} accessibilityLevel={3} style={styles.title}>
         {props.title}
       </Text>
       {props.code ? (

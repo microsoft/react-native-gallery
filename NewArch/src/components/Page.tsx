@@ -111,7 +111,7 @@ export function Page(props: {
   return (
     <ScreenWrapper>
       <View style={styles.titlePane}>
-        <Text accessible accessibilityRole={'header'} style={styles.title}>
+        <Text accessible accessibilityRole={'header'} accessibilityLevel={1} style={styles.title}>
           {props.title}
         </Text>
         <View>
