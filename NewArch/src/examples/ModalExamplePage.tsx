@@ -219,12 +219,12 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //display: 'flex',
     alignItems: 'center',
     padding: 10,
   },
   centeredView: {
-    flex: 1,
+    //flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: Dimensions.get('window').width, // can remove when bumped to 78
@@ -247,23 +247,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
-    position: 'relative',
-  },
-  closeButton: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: PlatformColor('ControlStrokeColorDefaultBrush'),
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  closeButtonText: {
-    color: PlatformColor('TextControlForeground'),
-    fontSize: 16,
-    fontWeight: 'bold',
   },
   button: {
     borderRadius: 20,
@@ -280,7 +263,6 @@ const styles = StyleSheet.create({
   },
   simpleModalView: {
     width: 500,
-    backgroundColor: PlatformColor('ControlFillColorDefaultBrush'),
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
@@ -294,19 +276,7 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   simpleModalText: {
-    color: PlatformColor('TextControlForeground'),
+    color: 'black',
     marginBottom: 20,
-  },
-  eventsModalView: {
-    flex: 1,
-    backgroundColor: PlatformColor('ControlFillColorDefaultBrush'),
-    borderRadius: 10,
-    padding: 15,
-    margin: 20,
-    maxWidth: 500,
-    maxHeight: 400,
-    alignSelf: 'center',
-    justifyContent: 'center',
-    position: 'relative',
   },
 });
