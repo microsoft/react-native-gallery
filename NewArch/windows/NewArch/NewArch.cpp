@@ -70,7 +70,7 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
 
   // Get the AppWindow so we can configure its initial title and size
   auto appWindow{reactNativeWin32App.AppWindow()};
-  appWindow.Title(L"React Native Gallery - Preview");
+  appWindow.Title(L"React Native Gallery");
   appWindow.Resize({1000, 1000});
 
   // Configure title bar to respect system theme (dark mode support)
