@@ -331,8 +331,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     ) : (
       <TouchableHighlight
         ref={(ref) => (itemRefs2.current[item.index] = ref)}
-        accessibilityLabel={item.title}
-        
+        accessibilityLabel={item.title}        
         accessibilityRole="listitem"
         accessible={true}
         focusable={true}
