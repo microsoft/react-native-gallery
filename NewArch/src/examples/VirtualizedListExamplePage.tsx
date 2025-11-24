@@ -10,7 +10,7 @@ import {
   Platform,
   PlatformColor,
 } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 // import CheckBox from '@react-native-community/checkbox';
@@ -184,6 +184,32 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const [selectedSupport, setSelectedSupport] = useState('Multiple');
   const [getList, setList] = useState([]);
 
+  // Refs for focus management
+  const itemRefs = useRef({});
+  const itemRefs2 = useRef({});
+  const itemRefs3 = useRef({});
+
+  // Focus management for renderItem2
+  useEffect(() => {
+    if (selectedIndex !== undefined && itemRefs.current[selectedIndex]) {
+      itemRefs.current[selectedIndex].focus();
+    }
+  }, [selectedIndex]);
+
+  // Focus management for renderItem3 single selection
+  useEffect(() => {
+    if (selectedIndex2 !== undefined && itemRefs2.current[selectedIndex2]) {
+      itemRefs2.current[selectedIndex2].focus();
+    }
+  }, [selectedIndex2]);
+
+  // Focus management for renderItem3 multiple selection
+  useEffect(() => {
+    if (getList.length > 0 && itemRefs3.current[getList[getList.length - 1]]) {
+      itemRefs3.current[getList[getList.length - 1]].focus();
+    }
+  }, [getList]);
+
   const getItem = (data, index) => ({
     id: Math.random().toString(12).substring(0),
     title: `Item ${index + 1}`,
@@ -249,12 +275,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         accessible={true}
         focusable={true}
         style={styles.item}
-        onPress={() => {
-          setSelectedIndex(item.index);
-        }}
-        onAccessibilityTap={() => {
-          setSelectedIndex(item.index);
-        }}>
+      >
         <Text style={styles.title}>{item.title}</Text>
       </TouchableHighlight>
     );
@@ -263,15 +284,18 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem2 = ({item}) => {
     return (
       <TouchableHighlight
+        ref={(ref) => (itemRefs.current[item.index] = ref)}
         accessibilityLabel={item.title}
         accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
+        accessibilityState={{selected: item.index === selectedIndex}}
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex(item.index);
+      
         }}
         onAccessibilityTap={() => {
           setSelectedIndex(item.index);
@@ -284,11 +308,13 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem3 = ({item}) => {
     return selectedSupport === 'Multiple' ? (
       <TouchableHighlight
+        ref={(ref) => (itemRefs3.current[item.index] = ref)}
         accessibilityLabel={item.title}
         accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
+        accessibilityState={{selected: getList.includes(item.index)}}
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
@@ -304,13 +330,15 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       </TouchableHighlight>
     ) : (
       <TouchableHighlight
-        accessibilityLabel={item.title}
+        ref={(ref) => (itemRefs2.current[item.index] = ref)}
+        accessibilityLabel={item.title}        
         accessibilityRole="listitem"
         accessible={true}
         focusable={true}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
+        accessibilityState={{selected: item.index === selectedIndex2}}
         activeOpacity={0.6}
         underlayColor={colors.border}
         onPress={() => {
