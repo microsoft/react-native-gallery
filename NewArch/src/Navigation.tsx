@@ -257,44 +257,42 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
 
   return (
     <NavigationContext.Provider value={navigation}>
-      <View>
-          <View>
-            { drawerIsOpen &&
-              <Animated.View
-                style={{opacity: fadeAnim}}>
-                <Pressable
-                  style={{
-                    backgroundColor: PlatformColor('Background'),
-                    maxWidth: DEFAULT_DRAWER_WIDTH,
-                    height: '100%',
-                    width: '100%'}}
-                    onPress={() => setDrawerDesiredOpen(false)}
-                    onAccessibilityTap={() => setDrawerDesiredOpen(false)}
-                    />
-              </Animated.View>
-            }
-            <Animated.View
-              style={{
-                position: 'absolute',
-                maxWidth: DEFAULT_DRAWER_WIDTH,
-                height: '100%',
-                width: '100%',
-                transform: [{translateX: slideAnim}]}}
-              >
-              {drawer}
-            </Animated.View>
-          </View>
+      <View style={{flex: 1}}>
         {React.Children.map(children, child => {
           const name = child.props.name;
           if (name !== navigationContext.currentScreen) {
             return null;
           }
           return (
-            <View key={name} style={{alignItems: 'stretch'}}>
+            <View key={name} style={{flex: 1}}>
               {child}
             </View>
           );
         })}
+        { drawerIsOpen &&
+          <Animated.View
+            style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: fadeAnim}}>
+            <Pressable
+              style={{
+                flex: 1,
+                backgroundColor: PlatformColor('Background')}}
+                onPress={() => setDrawerDesiredOpen(false)}
+                onAccessibilityTap={() => setDrawerDesiredOpen(false)}
+                />
+          </Animated.View>
+        }
+        <Animated.View
+          style={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            left: 0,
+            maxWidth: DEFAULT_DRAWER_WIDTH,
+            width: '100%',
+            transform: [{translateX: slideAnim}]}}
+          >
+          {drawer}
+        </Animated.View>
       </View>
     </NavigationContext.Provider>
   );
