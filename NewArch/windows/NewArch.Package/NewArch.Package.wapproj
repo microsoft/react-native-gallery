@@ -141,9 +141,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\x64\Release\Clipboard\Clipboard.dll">
-      <PackagePath>Clipboard.dll</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="..\x64\$(Configuration)\Clipboard\Clipboard.dll">
+      <Link>Clipboard\Clipboard.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />

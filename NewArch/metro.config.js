@@ -18,9 +18,9 @@ const rnwPath = fs.realpathSync(
  */
 
 const config = {
-  //
+  watchFolders: [__dirname],
   resolver: {
-    blockList: exclusionList([
+    blockList: [
       // This stops "npx @react-native-community/cli run-windows" from causing the metro server to crash if its already running
       new RegExp(
         `${path.resolve(__dirname, 'windows').replace(/[/\\]/g, '/')}.*`,
@@ -29,7 +29,7 @@ const config = {
       new RegExp(`${rnwPath}/build/.*`),
       new RegExp(`${rnwPath}/target/.*`),
       /.*\.ProjectImports\.zip/,
-    ]),
+    ],
     //
   },
   transformer: {
