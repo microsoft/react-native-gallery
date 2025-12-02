@@ -2,8 +2,6 @@ const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
 
 const fs = require('fs');
 const path = require('path');
-const exclusionList = require('metro-config/src/defaults/exclusionList');
-
 const rnwPath = fs.realpathSync(
   path.resolve(require.resolve('react-native-windows/package.json'), '..'),
 );
