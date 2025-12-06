@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-device-info/windows/RNDeviceInfoCPP/RNDeviceInfoCPP.vcxproj b/node_modules/react-native-device-info/windows/RNDeviceInfoCPP/RNDeviceInfoCPP.vcxproj
+index 3c4735c..7ecafff 100644
+--- a/node_modules/react-native-device-info/windows/RNDeviceInfoCPP/RNDeviceInfoCPP.vcxproj
++++ b/node_modules/react-native-device-info/windows/RNDeviceInfoCPP/RNDeviceInfoCPP.vcxproj
+@@ -86,6 +86,7 @@
+       <DisableSpecificWarnings>28204</DisableSpecificWarnings>
+       <PreprocessorDefinitions>_WINRT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
++      <LanguageStandard>stdcpp17</LanguageStandard>
+     </ClCompile>
+     <Link>
+       <SubSystem>Console</SubSystem>
