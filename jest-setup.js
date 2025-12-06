@@ -57,6 +57,16 @@ jest.mock('@react-navigation/native', () => {
     useIsFocused: () => {
       return true;
     },
+    useTheme: () => ({
+      colors: {
+        primary: '#007AFF',
+        background: '#F2F2F7',
+        card: '#FFFFFF',
+        text: '#000000',
+        border: '#C6C6C8',
+        notification: '#FF3B30',
+      },
+    }),
   };
 });
 

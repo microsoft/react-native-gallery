@@ -80,7 +80,7 @@
       "<rootDir>/lib/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts|react-native-gesture-handler)/)"
+      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts|react-native-gesture-handler|@react-navigation)/)"
     ],
     "setupFiles": [
       "<rootDir>/jest-setup.js"
