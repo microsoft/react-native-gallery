@@ -9,7 +9,7 @@
     "test:update": "react-native rnx-test --platform windows -u",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "windows": "npx @react-native-community/cli run-windows",
-    "postinstall": "patch-package && pwsh -ExecutionPolicy Bypass -File scripts/replace-base-h.ps1"
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@fluentui-react-native/experimental-expander": "^0.6.1",
