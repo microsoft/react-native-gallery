@@ -16,17 +16,17 @@
       },
       "Microsoft.ReactNative": {
         "type": "Direct",
-        "requested": "[0.81.0-preview.6, )",
-        "resolved": "0.81.0-preview.6",
-        "contentHash": "/KumdWCD0bYXB1pgKylAyBMnTDtWDhy49ZaLxYT0tH2uniZJFPQJvWX9x8+Yqf58+WrrcXzYMJ6etJzxJ5KrVA=="
+        "requested": "[0.81.0-preview.8, )",
+        "resolved": "0.81.0-preview.8",
+        "contentHash": "BVUbSbBOrCo0BpL114YzYjfvIiHscgi514oLXPl/hSV3TfMfk/Ux3uR4WUSW2uhqBOpBwEQL4VOKJiFH4WX/EA=="
       },
       "Microsoft.ReactNative.Cxx": {
         "type": "Direct",
-        "requested": "[0.81.0-preview.6, )",
-        "resolved": "0.81.0-preview.6",
-        "contentHash": "tAnpOr0sypxkpoDrMg7sWrxybH/IevFnB04e+AAmOptPdnICoiHXMtKnDX4YHZM+6l/ZgQ3fCrrNlkrFwtxmKA==",
+        "requested": "[0.81.0-preview.8, )",
+        "resolved": "0.81.0-preview.8",
+        "contentHash": "ZmMhB0E7KAKkqDd3+MNZcBentThYxLa+jmWDUA6H+nXjAniCW+Vx7wo4ZC3UXUIdEp9yUn5Jx6YJdyE6/5uDPw==",
         "dependencies": {
-          "Microsoft.ReactNative": "0.81.0-preview.6"
+          "Microsoft.ReactNative": "0.81.0-preview.8"
         }
       },
       "Microsoft.VCRTForwarders.140": {
@@ -64,8 +64,8 @@
       "clipboard": {
         "type": "Project",
         "dependencies": {
-          "Microsoft.ReactNative": "[0.81.0-preview.6, )",
-          "Microsoft.ReactNative.Cxx": "[0.81.0-preview.6, )",
+          "Microsoft.ReactNative": "[0.81.0-preview.8, )",
+          "Microsoft.ReactNative.Cxx": "[0.81.0-preview.8, )",
           "Microsoft.VCRTForwarders.140": "[1.0.2-rc, )",
           "Microsoft.WindowsAppSDK": "[1.7.250401001, )",
           "boost": "[1.83.0, )"
@@ -75,9 +75,9 @@
     "native,Version=v0.0/win": {
       "Microsoft.ReactNative": {
         "type": "Direct",
-        "requested": "[0.81.0-preview.6, )",
-        "resolved": "0.81.0-preview.6",
-        "contentHash": "/KumdWCD0bYXB1pgKylAyBMnTDtWDhy49ZaLxYT0tH2uniZJFPQJvWX9x8+Yqf58+WrrcXzYMJ6etJzxJ5KrVA=="
+        "requested": "[0.81.0-preview.8, )",
+        "resolved": "0.81.0-preview.8",
+        "contentHash": "BVUbSbBOrCo0BpL114YzYjfvIiHscgi514oLXPl/hSV3TfMfk/Ux3uR4WUSW2uhqBOpBwEQL4VOKJiFH4WX/EA=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
@@ -104,9 +104,9 @@
     "native,Version=v0.0/win-arm64": {
       "Microsoft.ReactNative": {
         "type": "Direct",
-        "requested": "[0.81.0-preview.6, )",
-        "resolved": "0.81.0-preview.6",
-        "contentHash": "/KumdWCD0bYXB1pgKylAyBMnTDtWDhy49ZaLxYT0tH2uniZJFPQJvWX9x8+Yqf58+WrrcXzYMJ6etJzxJ5KrVA=="
+        "requested": "[0.81.0-preview.8, )",
+        "resolved": "0.81.0-preview.8",
+        "contentHash": "BVUbSbBOrCo0BpL114YzYjfvIiHscgi514oLXPl/hSV3TfMfk/Ux3uR4WUSW2uhqBOpBwEQL4VOKJiFH4WX/EA=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
@@ -133,9 +133,9 @@
     "native,Version=v0.0/win-x64": {
       "Microsoft.ReactNative": {
         "type": "Direct",
-        "requested": "[0.81.0-preview.6, )",
-        "resolved": "0.81.0-preview.6",
-        "contentHash": "/KumdWCD0bYXB1pgKylAyBMnTDtWDhy49ZaLxYT0tH2uniZJFPQJvWX9x8+Yqf58+WrrcXzYMJ6etJzxJ5KrVA=="
+        "requested": "[0.81.0-preview.8, )",
+        "resolved": "0.81.0-preview.8",
+        "contentHash": "BVUbSbBOrCo0BpL114YzYjfvIiHscgi514oLXPl/hSV3TfMfk/Ux3uR4WUSW2uhqBOpBwEQL4VOKJiFH4WX/EA=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
@@ -162,9 +162,9 @@
     "native,Version=v0.0/win-x86": {
       "Microsoft.ReactNative": {
         "type": "Direct",
-        "requested": "[0.81.0-preview.6, )",
-        "resolved": "0.81.0-preview.6",
-        "contentHash": "/KumdWCD0bYXB1pgKylAyBMnTDtWDhy49ZaLxYT0tH2uniZJFPQJvWX9x8+Yqf58+WrrcXzYMJ6etJzxJ5KrVA=="
+        "requested": "[0.81.0-preview.8, )",
+        "resolved": "0.81.0-preview.8",
+        "contentHash": "BVUbSbBOrCo0BpL114YzYjfvIiHscgi514oLXPl/hSV3TfMfk/Ux3uR4WUSW2uhqBOpBwEQL4VOKJiFH4WX/EA=="
       },
       "Microsoft.VCRTForwarders.140": {
         "type": "Direct",
