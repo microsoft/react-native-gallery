@@ -186,11 +186,12 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           }}>
           <View style={styles.eventsModalView}>
             <View style={styles.container}>
-              <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
-              <Text>onShow event Count = {onShowCount}</Text>
-              <Text>onDismiss event Count = {onDismissCount}</Text>
+              <Text style={styles.modalTextBold}>Modal Events</Text>
+              <Text style={styles.modalText}>onShow event Count = {onShowCount}</Text>
+              <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>
             <Button
+              color={'#8D8383'}
               ref={modal3FirstButtonRef}
               title="Close Modal"
               accessibilityLabel="Close Modal"
@@ -249,9 +250,12 @@ const styles = StyleSheet.create({
   },
   simpleModalView: {
     width: 500,
+    height: 200,
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -263,5 +267,21 @@ const styles = StyleSheet.create({
   simpleModalText: {
     color: 'black',
     marginBottom: 20,
+  },
+  eventsModalView: {
+    width: 500,
+    height: 300,
+    borderRadius: 10,
+    padding: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+  },
+  modalText: {
+    color: 'black',
+  },
+  modalTextBold: {
+    color: 'black',
+    fontWeight: 'bold',
   },
 });
