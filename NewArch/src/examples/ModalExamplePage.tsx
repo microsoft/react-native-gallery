@@ -128,13 +128,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           onAccessibilityTap={changeModal1}/>
         <Modal visible={modal1} onRequestClose={changeModal1}>
             <View style={styles.simpleModalView}>
-              <Pressable
-                style={styles.closeButton}
-                onPress={changeModal1}
-                accessibilityRole="button"
-                accessibilityLabel="Close Modal">
-                <Text style={styles.closeButtonText}>×</Text>
-              </Pressable>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
               <Button
                 color={'#8D8383'}
@@ -192,13 +185,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
             setOnShowCount(onShowCount + 1);
           }}>
           <View style={styles.eventsModalView}>
-            <Pressable
-              style={styles.closeButton}
-              onPress={changeModal3}
-              accessibilityRole="button"
-              accessibilityLabel="Close Modal">
-              <Text style={styles.closeButtonText}>×</Text>
-            </Pressable>
             <View style={styles.container}>
               <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
               <Text>onShow event Count = {onShowCount}</Text>
