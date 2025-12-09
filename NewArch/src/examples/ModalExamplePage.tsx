@@ -1,5 +1,5 @@
 'use strict';
-import {Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo, Pressable} from 'react-native';
+import {Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo} from 'react-native';
 import {Modal} from 'react-native-windows'
 import React from 'react';
 import {Example} from '../components/Example';
