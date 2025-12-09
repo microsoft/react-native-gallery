@@ -1,5 +1,5 @@
 diff --git a/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj b/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
-index b682596..4f52dcf 100644
+index b682596..24747b2 100644
 --- a/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
 +++ b/node_modules/react-native-svg/windows/RNSVG/RNSVG.vcxproj
 @@ -26,12 +26,10 @@
@@ -16,3 +16,11 @@ index b682596..4f52dcf 100644
      <WindowsTargetPlatformMinVersion Condition=" '$(WindowsTargetPlatformMinVersion)' == '' ">10.0.16299.0</WindowsTargetPlatformMinVersion>
    </PropertyGroup>
    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+@@ -103,6 +101,7 @@
+       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+       <PreprocessorDefinitions>_WINRT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
++      <LanguageStandard>stdcpp17</LanguageStandard>
+     </ClCompile>
+     <Link>
+       <SubSystem>Console</SubSystem>

@@ -3,4 +3,45 @@
   <PropertyGroup Label="NuGet" Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
     <ResolveNuGetPackages>false</ResolveNuGetPackages>
   </PropertyGroup>
+
+  <!-- Replace Base.h with original React Native version for all vcxproj projects -->
+  <Target Name="ReplaceBaseHeader" BeforeTargets="Build" Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
+    <PropertyGroup>
+      <SourceUrl>https://raw.githubusercontent.com/facebook/react-native/e6848ba5ba997d102cbaf6181c7c8c73e25a0827/packages/react-native/ReactCommon/react/bridging/Base.h</SourceUrl>
+      <TargetPath>$(ReactNativeWindowsDir)Microsoft.ReactNative.Cxx\ReactCommon\react\bridging\Base.h</TargetPath>
+      <BackupPath>$(TargetPath).backup</BackupPath>
+    </PropertyGroup>
+    
+    <!-- Check if target directory exists -->
+    <Error Condition="!Exists('$([System.IO.Path]::GetDirectoryName($(TargetPath)))')" 
+           Text="Target directory does not exist. This should run after react-native-windows is installed." />
+    
+    <!-- Create backup if original exists -->
+    <Copy SourceFiles="$(TargetPath)" 
+          DestinationFiles="$(BackupPath)" 
+          Condition="Exists('$(TargetPath)')" 
+          SkipUnchangedFiles="true" />
+    
+    <!-- Download and replace Base.h directly -->
+    <Message Text="Downloading and replacing Base.h file..." Importance="high" />
+    <DownloadFile SourceUrl="$(SourceUrl)" 
+                  DestinationFolder="$([System.IO.Path]::GetDirectoryName($(TargetPath)))" 
+                  DestinationFileName="$([System.IO.Path]::GetFileName($(TargetPath)))" 
+                  ContinueOnError="true">
+      <Output TaskParameter="DownloadedFile" PropertyName="DownloadedFile" />
+    </DownloadFile>
+    
+    <!-- If download failed, restore backup -->
+    <Copy SourceFiles="$(BackupPath)" 
+          DestinationFiles="$(TargetPath)" 
+          Condition="'$(DownloadedFile)' == '' AND Exists('$(BackupPath)')" />
+    <Error Condition="'$(DownloadedFile)' == ''" 
+           Text="Failed to download Base.h and backup restoration attempted." />
+    
+    <!-- If download succeeded, clean up backup -->
+    <Delete Files="$(BackupPath)" 
+            Condition="'$(DownloadedFile)' != '' AND Exists('$(BackupPath)')" />
+    
+    <Message Text="Base.h replacement completed successfully!" Importance="high" />
+  </Target>
 </Project>
