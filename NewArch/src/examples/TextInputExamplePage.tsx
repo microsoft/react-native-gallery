@@ -102,14 +102,15 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
-            height: 120,
             paddingHorizontal: 8,
             paddingVertical: 8,
             textAlignVertical: 'top',
+            minHeight: 100,
           }}
           onChangeText={onChangeText2}
           value={text2}
           multiline
+          scrollEnabled={false}
           placeholder="Enter multiline text input here..."
         />
       </Example>
