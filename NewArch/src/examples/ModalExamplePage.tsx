@@ -130,7 +130,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
             <View style={styles.simpleModalView}>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
               <Button
-                color={'#8D8383'}
+                color={'black'}
                 ref={modal1FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
@@ -150,10 +150,11 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         <Modal visible={modal2} onRequestClose={changeModal2}>
           <View style={[styles.centeredView, styles.modalBackdrop]}>
             <View style={styles.modalView}>
-              <Text style={styles.textStyle}>
+              <Text style={styles.complexModalText}>
                 This is a Modal with more complex styling
               </Text>
               <Button
+                color={'black'}
                 ref={modal2FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
@@ -191,7 +192,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>
             <Button
-              color={'#8D8383'}
+              color={'black'}
               ref={modal3FirstButtonRef}
               title="Close Modal"
               accessibilityLabel="Close Modal"
@@ -243,6 +244,13 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: PlatformColor('TextControlForeground'),
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingTop: 5,
+    marginBottom: 20,
+  },
+  complexModalText: {
+    color: 'black',
     fontWeight: 'bold',
     textAlign: 'center',
     paddingTop: 5,
