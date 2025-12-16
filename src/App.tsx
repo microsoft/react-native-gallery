@@ -144,7 +144,7 @@ const DrawerListItem = ({
           {icon}
         </Text>
       </View>
-      <Text accessible={false} style={styles.drawerText}>
+      <Text accessible={false} style={styles.drawerText} allowFontScaling={true}>
         {label}
       </Text>
     </Pressable>
@@ -212,7 +212,7 @@ const DrawerCollapsibleCategory = ({
             {categoryIcon}
           </Text>
         </View>
-        <Text accessible={false} style={styles.drawerText}>
+        <Text accessible={false} style={styles.drawerText} allowFontScaling={true}>
           {categoryLabel}
         </Text>
         <View style={styles.expandedChevron}>
