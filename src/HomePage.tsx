@@ -99,7 +99,8 @@ const PageTitle = () => {
           <Text
             accessible
             accessibilityRole={'header'}
-            style={styles.pageTitle}>
+            style={styles.pageTitle}
+            allowFontScaling={true}>
             React Native Gallery
           </Text>
         </View>
