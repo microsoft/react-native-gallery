@@ -47,7 +47,7 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
           title="Button"
           color={
             Platform.OS === 'windows'
-              ? PlatformColor('SystemBaseLowColor')
+              ? PlatformColor('SystemAccentColor')
               : 'silver'
           }
           accessibilityLabel={'example colored button2'}
