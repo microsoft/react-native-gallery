@@ -16,7 +16,7 @@ const rnwPath = fs.realpathSync(
  */
 
 const config = {
-  watchFolders: [__dirname],
+  //
   resolver: {
     blockList: [
       // This stops "npx @react-native-community/cli run-windows" from causing the metro server to crash if its already running
