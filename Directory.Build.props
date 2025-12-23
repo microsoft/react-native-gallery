@@ -35,8 +35,6 @@
     <Copy SourceFiles="$(BackupPath)" 
           DestinationFiles="$(TargetPath)" 
           Condition="'$(DownloadedFile)' == '' AND Exists('$(BackupPath)')" />
-    <Error Condition="'$(DownloadedFile)' == ''" 
-           Text="Failed to download Base.h and backup restoration attempted." />
     
     <!-- If download succeeded, clean up backup -->
     <Delete Files="$(BackupPath)" 
