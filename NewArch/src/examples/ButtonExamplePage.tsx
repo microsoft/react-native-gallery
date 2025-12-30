@@ -9,7 +9,7 @@ import {useTheme} from '../Navigation';
 export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation?: any}> = ({navigation}) => {
   const [title, setTitle] = useState(0);
   const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
-  const {colors} = useTheme();
+  const {colors, dark} = useTheme();
 
   const firstButtonRef = usePageFocusManagement(navigation);
 
@@ -97,7 +97,8 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
       <Example title="A colored Button." code={example2jsx}>
         <Button
           title="Colored Button"
-          color={colors.primary}
+          color={dark ? colors.primary : '#63ce6cff'}
+          
           accessibilityLabel={'colored button'}
           onPress={() => {}}
         />
