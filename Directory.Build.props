@@ -15,13 +15,7 @@
     <!-- Check if target directory exists -->
     <Error Condition="!Exists('$([System.IO.Path]::GetDirectoryName($(TargetPath)))')" 
            Text="Target directory does not exist. This should run after react-native-windows is installed." />
-    
-    <!-- Create backup if original exists -->
-    <Copy SourceFiles="$(TargetPath)" 
-          DestinationFiles="$(BackupPath)" 
-          Condition="Exists('$(TargetPath)')" 
-          SkipUnchangedFiles="true" />
-    
+        
     <!-- Download and replace Base.h directly -->
     <Message Text="Downloading and replacing Base.h file..." Importance="high" />
     <DownloadFile SourceUrl="$(SourceUrl)" 
@@ -30,16 +24,7 @@
                   ContinueOnError="true">
       <Output TaskParameter="DownloadedFile" PropertyName="DownloadedFile" />
     </DownloadFile>
-    
-    <!-- If download failed, restore backup -->
-    <Copy SourceFiles="$(BackupPath)" 
-          DestinationFiles="$(TargetPath)" 
-          Condition="'$(DownloadedFile)' == '' AND Exists('$(BackupPath)')" />
-    
-    <!-- If download succeeded, clean up backup -->
-    <Delete Files="$(BackupPath)" 
-            Condition="'$(DownloadedFile)' != '' AND Exists('$(BackupPath)')" />
-    
+        
     <Message Text="Base.h replacement completed successfully!" Importance="high" />
   </Target>
 </Project>

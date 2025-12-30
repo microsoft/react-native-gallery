@@ -1,5 +1,5 @@
 'use strict';
-import {Text, Pressable, Platform, PlatformColor} from 'react-native';
+import {Text, Pressable, Platform, PlatformColor, AccessibilityInfo} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -11,6 +11,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
   const {colors} = useTheme();
 
   const [timesPressed, setTimesPressed] = useState(1);
+  const [pressed1, setPressed1] = useState(1);
   const [currEvent, setCurrEvent] = useState('');
 
   const example1jsx = `<Pressable>
@@ -98,14 +99,16 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
             'Tap to change text from Pressed to Press Me'
           }
           onPress={() => {
-            setTimesPressed((current) => current + 1);
+            setPressed1((current) => current + 1);
+            AccessibilityInfo.announceForAccessibility('Pressed');
           }}
           onAccessibilityTap={() => {
-            setTimesPressed((current) => current + 1);
+            setPressed1((current) => current + 1);
+            AccessibilityInfo.announceForAccessibility('Pressed');
           }}>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
-              {pressed ? 'Pressed!' : 'Press Me'}
+              {(pressed1 || pressed) ? 'Pressed!' : 'Press Me'}
             </Text>
           )}
         </Pressable>
