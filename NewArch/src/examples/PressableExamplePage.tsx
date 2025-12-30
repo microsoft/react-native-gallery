@@ -11,7 +11,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
   const {colors} = useTheme();
 
   const [timesPressed, setTimesPressed] = useState(1);
-  const [pressed, setPressed] = useState(1);
+  const [pressed1, setPressed1] = useState(1);
   const [currEvent, setCurrEvent] = useState('');
 
   const example1jsx = `<Pressable>
@@ -99,16 +99,16 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
             'Tap to change text from Pressed to Press Me'
           }
           onPress={() => {
-            setPressed((current) => current + 1);
+            setPressed1((current) => current + 1);
             AccessibilityInfo.announceForAccessibility('Pressed');
           }}
           onAccessibilityTap={() => {
-            setPressed((current) => current + 1);
+            setPressed1((current) => current + 1);
             AccessibilityInfo.announceForAccessibility('Pressed');
           }}>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
-              {pressed ? 'Pressed!' : 'Press Me'}
+              {(pressed1 || pressed) ? 'Pressed!' : 'Press Me'}
             </Text>
           )}
         </Pressable>
