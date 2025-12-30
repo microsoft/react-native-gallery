@@ -124,7 +124,8 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{navigation?
             accessibilityHint={'Tap to increase the counter'}
             style={{
               height: 40,
-              backgroundColor: colors.text,
+              width:80,
+              backgroundColor: colors.primary,
               borderRadius: 3,
               justifyContent: 'center',
               alignItems: 'center',
