@@ -31,63 +31,7 @@ const Data = [
   {
     id: '5',
     title: 'Item 6',
-  },
-  {
-    id: '6',
-    title: 'Item 7',
-  },
-  {
-    id: '7',
-    title: 'Item 8',
-  },
-  {
-    id: '8',
-    title: 'Item 9',
-  },
-  {
-    id: '9',
-    title: 'Item 10',
-  },
-  {
-    id: '10',
-    title: 'Item 11',
-  },
-  {
-    id: '11',
-    title: 'Item 12',
-  },
-  {
-    id: '12',
-    title: 'Item 13',
-  },
-  {
-    id: '13',
-    title: 'Item 14',
-  },
-  {
-    id: '14',
-    title: 'Item 15',
-  },
-  {
-    id: '15',
-    title: 'Item 16',
-  },
-  {
-    id: '16',
-    title: 'Item 17',
-  },
-  {
-    id: '17',
-    title: 'Item 18',
-  },
-  {
-    id: '18',
-    title: 'Item 19',
-  },
-  {
-    id: '19',
-    title: 'Item 20',
-  },
+  }
 ];
 
 export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
@@ -142,8 +86,10 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
   const renderAccessibleItem = ({item}: {item: any}) => (
     <Pressable
       style={{
+        width: 75,
         padding: 10,
-        marginVertical: 2,
+        margin: 4,
+        alignItems:'center',
         backgroundColor: colors.background,
         borderWidth: 1,
         borderColor: colors.border,
@@ -175,7 +121,7 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
         },
         {
           label: 'Flat List Source Code',
-          url: 'https://github.com/facebook/react-native/blob/f638aff434760aafc2bb9622c0c18d81485a82e2/Libraries/Lists/FlatList.js',
+          url: 'https://github.com/facebook/react-native/blob/main/packages/react-native/Libraries/Lists/FlatList.js',
         },
       ]}>
       <Example ref={firstFlatListRef} title="A simple FlatList." code={example1jsx}>
@@ -183,6 +129,7 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
           data={Data}
           renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
+          contentContainerStyle={{alignItems: 'center'}}
         />
       </Example>
       <Example title="A FlatList with header and footer." code={example2jsx}>
@@ -190,27 +137,31 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
           data={Data}
           renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
+          contentContainerStyle={{alignItems: 'center'}}
           ListHeaderComponent={
-            <Text style={{fontStyle: 'italic', color: colors.text}}>
+            <Text style={{fontStyle: 'italic', color: colors.text,fontSize:20}}>
               This is a header at the start of the list.
             </Text>
           }
           ListFooterComponent={
-            <Text style={{fontStyle: 'italic', color: colors.text}}>
+            <Text style={{fontStyle: 'italic', color: colors.text,fontSize:20}}>
               This is a footer at the end of the list.
             </Text>
-          }
+          } 
         />
       </Example>
       <Example
-        title="An inverted order FlatList with horizontal layout."
+        // title="An inverted order FlatList with horizontal layout." // Revert once RNW #15510 is fixed
+        title="A FlatList with horizontal layout." 
         code={example3jsx}>
         <FlatList
           data={Data}
           renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
           horizontal={true}
-          inverted={true}
+          // inverted={true}  // Revert once RNW #15510 is fixed
+
+          contentContainerStyle={{ paddingHorizontal: 10}}
         />
       </Example>
       <Example
@@ -224,7 +175,7 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
             initialNumToRender={10}
             showsVerticalScrollIndicator={true}
             style={{flex: 1}}
-            contentContainerStyle={{paddingVertical: 5}}
+            contentContainerStyle={{paddingVertical: 5, alignItems: 'center'}}
             accessible={true}
             accessibilityLabel="Scrollable list of items in a fixed height container"
             accessibilityHint="Use arrow keys to navigate through the list items"
@@ -237,6 +188,7 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
           renderItem={renderAccessibleItem}
           keyExtractor={(item) => item.id}
           numColumns={3}
+          contentContainerStyle={{alignItems: 'center'}}
         />
       </Example>
     </Page>
