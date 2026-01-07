@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {
   View,
   StyleSheet,
@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
+import {FocusScreenWrapperContext, FocusScreenWrapperSetterContext} from '../App';
 
 
 const createStyles = (windowWidth: number) => {
@@ -66,7 +67,11 @@ export function ScreenWrapper({
   doNotInset,
 }: ScreenWrapperProps) {
   const navigation = useNavigation();
+  const focusTimestamp = React.useContext(FocusScreenWrapperContext);
+  const setFocusTimestamp = React.useContext(FocusScreenWrapperSetterContext);
   const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
+  const hamburgerRef = useRef<TouchableHighlight>(null);
+  const lastProcessedTimestamp = useRef<number | null>(null);
 
   useEffect(() => {
     const subscription = Dimensions.addEventListener('change', ({window}) => {
@@ -78,6 +83,21 @@ export function ScreenWrapper({
 
   const styles = createStyles(windowDimensions.width);
   const isDrawerOpen = getDrawerStatusFromState(navigation.getState()) === 'open';
+
+  // Focus hamburger menu button when signaled via context (only once per timestamp)
+  useEffect(() => {
+    if (focusTimestamp && focusTimestamp !== lastProcessedTimestamp.current) {
+      lastProcessedTimestamp.current = focusTimestamp;
+      const timeoutId = setTimeout(() => {
+        if (hamburgerRef.current) {
+          hamburgerRef.current.focus();
+        }
+        // Reset the context so it doesn't trigger again
+        setFocusTimestamp(null);
+      }, 100);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [focusTimestamp, setFocusTimestamp]);
 
   const handleSkipToMain = () => {
     // Focus management for skip to main content
@@ -112,6 +132,7 @@ export function ScreenWrapper({
        >
         <View>
           <TouchableHighlight
+            ref={hamburgerRef}
             accessibilityRole="button"
             accessibilityLabel="Navigation menu"
             style={styles.menu}
