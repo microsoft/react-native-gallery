@@ -28,6 +28,10 @@ import HighContrastTheme from './themes/HighContrastTheme';
 import useHighContrastState from './hooks/useHighContrastState';
 import {InteractionManager} from 'react-native';
 
+// Context for signaling focus to ScreenWrapper hamburger
+export const FocusScreenWrapperContext = React.createContext<number | null>(null);
+export const FocusScreenWrapperSetterContext = React.createContext<React.Dispatch<React.SetStateAction<number | null>>>(() => {});
+
 const styles = StyleSheet.create({
   menu: {
     margin: 5,
@@ -333,6 +337,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
 
   const navigationState = navigation.getState();
   const currentRoute = navigationState.routeNames[navigationState.index];
+  const setFocusTimestamp = React.useContext(FocusScreenWrapperSetterContext);
 
   // Refs for main navigation items
   const hamburgerRef = useRef<View>(null);
@@ -368,6 +373,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         style={styles.menu}
         onPress={() => {
           if (isDrawerOpen) {
+            setFocusTimestamp(Date.now());
             navigation.closeDrawer();
             AccessibilityInfo.announceForAccessibility('Navigation menu collapsed');
           } else {
@@ -376,6 +382,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         }}
         onAccessibilityTap={() => {
           if (isDrawerOpen) {
+            setFocusTimestamp(Date.now());
             navigation.closeDrawer();
             AccessibilityInfo.announceForAccessibility('Navigation menu collapsed');
           } else {
@@ -468,25 +475,30 @@ export default function App() {
   const [rawtheme, setRawTheme] = React.useState<ThemeMode>('system');
   const colorScheme = useColorScheme();
   const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
+  const [focusScreenWrapperTimestamp, setFocusScreenWrapperTimestamp] = React.useState<number | null>(null);
 
   const isHighContrast = useHighContrastState();
 
   return (
-    <ThemeSetterContext.Provider value={setRawTheme}>
-      <RawThemeContext.Provider value={rawtheme}>
-        <ThemeContext.Provider value={theme}>
-          <NavigationContainer
-            theme={
-              isHighContrast
-                ? HighContrastTheme
-                : theme === 'dark'
-                ? DarkTheme
-                : LightTheme
-            }>
-            <MyDrawer />
-          </NavigationContainer>
-        </ThemeContext.Provider>
-      </RawThemeContext.Provider>
-    </ThemeSetterContext.Provider>
+    <FocusScreenWrapperSetterContext.Provider value={setFocusScreenWrapperTimestamp}>
+      <FocusScreenWrapperContext.Provider value={focusScreenWrapperTimestamp}>
+        <ThemeSetterContext.Provider value={setRawTheme}>
+          <RawThemeContext.Provider value={rawtheme}>
+            <ThemeContext.Provider value={theme}>
+              <NavigationContainer
+                theme={
+                  isHighContrast
+                    ? HighContrastTheme
+                    : theme === 'dark'
+                    ? DarkTheme
+                    : LightTheme
+                }>
+                <MyDrawer />
+              </NavigationContainer>
+            </ThemeContext.Provider>
+          </RawThemeContext.Provider>
+        </ThemeSetterContext.Provider>
+      </FocusScreenWrapperContext.Provider>
+    </FocusScreenWrapperSetterContext.Provider>
   );
 }
