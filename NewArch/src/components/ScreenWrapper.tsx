@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
-import {InteractionManager} from 'react-native';
 import {FocusScreenWrapperContext, FocusScreenWrapperSetterContext} from '../App';
 
 
@@ -89,13 +88,14 @@ export function ScreenWrapper({
   useEffect(() => {
     if (focusTimestamp && focusTimestamp !== lastProcessedTimestamp.current) {
       lastProcessedTimestamp.current = focusTimestamp;
-      InteractionManager.runAfterInteractions(() => {
+      const timeoutId = setTimeout(() => {
         if (hamburgerRef.current) {
           hamburgerRef.current.focus();
         }
         // Reset the context so it doesn't trigger again
         setFocusTimestamp(null);
-      });
+      }, 100);
+      return () => clearTimeout(timeoutId);
     }
   }, [focusTimestamp, setFocusTimestamp]);
 
