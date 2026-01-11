@@ -185,21 +185,59 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const [getList, setList] = useState([]);
 
   // Refs for focus management
-  const itemRefs = useRef({});
-  const itemRefs2 = useRef({});
-  const itemRefs3 = useRef({});
+  const itemRefs = useRef<{[key: number]: any}>({});
+  const itemRefs2 = useRef<{[key: number]: any}>({});
+  const itemRefs3 = useRef<{[key: number]: any}>({});
 
-  // Focus management for renderItem2
+  // Track focused index for arrow key navigation
+  const [focusedIndex1, setFocusedIndex1] = useState<number | null>(null);
+  const [focusedIndex2, setFocusedIndex2] = useState<number | null>(null);
+  const [focusedIndex3, setFocusedIndex3] = useState<number | null>(null);
+
+  const ITEM_COUNT = 50;
+
+  // Arrow key navigation handler factory
+  const createKeyDownHandler = (
+    focusedIndex: number | null,
+    setFocusedIndex: (index: number) => void,
+    refs: React.MutableRefObject<{[key: number]: any}>,
+  ) => {
+    return (e: any, currentIndex: number) => {
+      if (e.nativeEvent.key === 'ArrowDown') {
+        e.preventDefault();
+        e.stopPropagation?.();
+        const nextIndex = Math.min(currentIndex + 1, ITEM_COUNT - 1);
+        if (refs.current[nextIndex]) {
+          refs.current[nextIndex].focus();
+          setFocusedIndex(nextIndex);
+        }
+      } else if (e.nativeEvent.key === 'ArrowUp') {
+        e.preventDefault();
+        e.stopPropagation?.();
+        const prevIndex = Math.max(currentIndex - 1, 0);
+        if (refs.current[prevIndex]) {
+          refs.current[prevIndex].focus();
+          setFocusedIndex(prevIndex);
+        }
+      }
+    };
+  };
+
+  const handleKeyDown1 = createKeyDownHandler(focusedIndex1, setFocusedIndex1, itemRefs);
+  const handleKeyDown2 = createKeyDownHandler(focusedIndex2, setFocusedIndex2, itemRefs2);
+  const handleKeyDown3 = createKeyDownHandler(focusedIndex3, setFocusedIndex3, itemRefs3);
+
+  // Focus management for renderItem2 - focus selected item after selection
   useEffect(() => {
-    if (selectedIndex !== undefined && itemRefs.current[selectedIndex]) {
-      itemRefs.current[selectedIndex].focus();
+    if (selectedIndex !== undefined && itemRefs2.current[selectedIndex]) {
+      itemRefs2.current[selectedIndex].focus();
     }
   }, [selectedIndex]);
 
   // Focus management for renderItem3 single selection
   useEffect(() => {
-    if (selectedIndex2 !== undefined && itemRefs2.current[selectedIndex2]) {
-      itemRefs2.current[selectedIndex2].focus();
+    if (selectedIndex2 !== undefined && itemRefs3.current[selectedIndex2]) {
+      itemRefs3.current[selectedIndex2].focus();
     }
   }, [selectedIndex2]);
 
@@ -267,88 +305,103 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     },
   });
 
-  const renderItem = ({item}) => {
+  const renderItem = ({item}: {item: any}) => {
     return (
-      <TouchableHighlight
-        accessibilityLabel={item.title}
-        accessibilityRole="listitem"
-        accessible={true}
-        focusable={true}
-        style={styles.item}
-      >
-        <Text style={styles.title}>{item.title}</Text>
-      </TouchableHighlight>
-    );
-  };
-
-  const renderItem2 = ({item}) => {
-    return (
-      <TouchableHighlight
+      <Pressable
         ref={(ref) => (itemRefs.current[item.index] = ref)}
         accessibilityLabel={item.title}
         accessibilityRole="listitem"
         accessible={true}
-        focusable={true}
+        style={styles.item}
+        onFocus={() => setFocusedIndex1(item.index)}
+        {...({
+          onKeyDown: (e: any) => handleKeyDown1(e, item.index),
+          keyboardEvents: ['keyDown'],
+          focusable: true,
+        } as any)}
+      >
+        <Text style={styles.title}>{item.title}</Text>
+      </Pressable>
+    );
+  };
+
+  const renderItem2 = ({item}: {item: any}) => {
+    return (
+      <Pressable
+        ref={(ref) => (itemRefs2.current[item.index] = ref)}
+        accessibilityLabel={item.title}
+        accessibilityRole="listitem"
+        accessible={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         accessibilityState={{selected: item.index === selectedIndex}}
-        activeOpacity={0.6}
-        underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex(item.index);
       
         }}
         onAccessibilityTap={() => {
           setSelectedIndex(item.index);
-        }}>
+        }}
+        onFocus={() => setFocusedIndex2(item.index)}
+        {...({
+          onKeyDown: (e: any) => handleKeyDown2(e, item.index),
+          keyboardEvents: ['keyDown'],
+          focusable: true,
+        } as any)}>
         <Text style={item.index === selectedIndex ? styles.titleSelected : styles.title}>{item.title}</Text>
-      </TouchableHighlight>
+      </Pressable>
     );
   };
 
-  const renderItem3 = ({item}) => {
+  const renderItem3 = ({item}: {item: any}) => {
     return selectedSupport === 'Multiple' ? (
-      <TouchableHighlight
+      <Pressable
         ref={(ref) => (itemRefs3.current[item.index] = ref)}
         accessibilityLabel={item.title}
         accessibilityRole="listitem"
         accessible={true}
-        focusable={true}
         style={getList.includes(item.index) ? styles.itemSelected : styles.item}
         accessibilityState={{selected: getList.includes(item.index)}}
-        activeOpacity={0.6}
-        underlayColor={colors.border}
         onPress={() => {
           if (getList.includes(item.index)) {
             setList(getList.filter((value) => value !== item.index));
           } else {
             setList(getList.concat([item.index]));
           }
-        }}>
+        }}
+        onFocus={() => setFocusedIndex3(item.index)}
+        {...({
+          onKeyDown: (e: any) => handleKeyDown3(e, item.index),
+          keyboardEvents: ['keyDown'],
+          focusable: true,
+        } as any)}>
         <View style={styles.item}>
           <Text style={getList.includes(item.index) ? styles.titleSelected : styles.title}>{item.title}</Text>
         </View>
-      </TouchableHighlight>
+      </Pressable>
     ) : (
-      <TouchableHighlight
-        ref={(ref) => (itemRefs2.current[item.index] = ref)}
+      <Pressable
+        ref={(ref) => (itemRefs3.current[item.index] = ref)}
         accessibilityLabel={item.title}        
         accessibilityRole="listitem"
         accessible={true}
-        focusable={true}
         style={
           item.index === selectedIndex2 ? styles.itemSelected : styles.item
         }
         accessibilityState={{selected: item.index === selectedIndex2}}
-        activeOpacity={0.6}
-        underlayColor={colors.border}
         onPress={() => {
           setSelectedIndex2(item.index);
         }}
         onAccessibilityTap={() => {
           setSelectedIndex2(item.index);
-        }}>
+        }}
+        onFocus={() => setFocusedIndex3(item.index)}
+        {...({
+          onKeyDown: (e: any) => handleKeyDown3(e, item.index),
+          keyboardEvents: ['keyDown'],
+          focusable: true,
+        } as any)}>
         <Text style={item.index === selectedIndex2 ? styles.titleSelected : styles.title}>{item.title}</Text>
-      </TouchableHighlight>
+      </Pressable>
     );
   };
 
