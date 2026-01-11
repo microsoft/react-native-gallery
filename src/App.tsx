@@ -194,6 +194,7 @@ const DrawerCollapsibleCategory = ({
       accessible={true}
       accessibilityRole="button"
       accessibilityLabel={categoryLabel}
+      accessibilityState={{expanded: isExpanded}}
       onAccessibilityTap={() => setIsExpanded(!isExpanded)}>
       <Pressable
         style={localStyles.drawerListItem}

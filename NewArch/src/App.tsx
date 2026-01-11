@@ -240,7 +240,7 @@ const DrawerCollapsibleCategory = ({
         onHoverIn={() => setIsHovered(true)}
         onHoverOut={() => setIsHovered(false)}
         accessibilityRole="button"
-        accessibilityLabel={`${categoryLabel}, ${isExpanded ? 'expanded' : 'collapsed'}`}
+        accessibilityLabel={categoryLabel}
         accessibilityState={{expanded: isExpanded}}
         {...(positionInSet && setSize ? {accessibilityPosInSet: positionInSet, accessibilitySetSize: setSize} : {})}
         accessibilityActions={[
