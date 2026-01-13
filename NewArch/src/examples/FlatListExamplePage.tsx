@@ -95,9 +95,8 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
         borderColor: colors.border,
         borderRadius: 4,
       }}
-      accessibilityRole="button"
-      accessibilityLabel={`List item ${item.id}: ${item.title}`}
-      accessibilityHint="Tap to select this item"
+      accessibilityRole="text"
+      accessibilityLabel={`${item.title}`}
       onPress={() => {
         console.log(`Selected: ${item.title}`);
       }}
