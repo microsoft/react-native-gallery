@@ -355,6 +355,34 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
     }
   };
 
+  // Handler for Settings button - cycles focus back to hamburger on Tab
+  const handleSettingsKeyDown = (e: any) => {
+    if (e.nativeEvent.key === 'Tab' && !e.nativeEvent.shiftKey) {
+      // Prevent default Tab behavior and cycle focus to hamburger
+      e.preventDefault();
+      if (hamburgerRef.current) {
+        hamburgerRef.current.focus();
+      }
+    } else if (e.nativeEvent.key === 'ArrowDown' || e.nativeEvent.key === 'ArrowUp') {
+      // Allow default focus management for arrow keys
+      return;
+    }
+  };
+
+  // Handler for hamburger button - cycles focus to Settings on Shift+Tab
+  const handleHamburgerKeyDown = (e: any) => {
+    if (e.nativeEvent.key === 'Tab' && e.nativeEvent.shiftKey) {
+      // Prevent default Shift+Tab behavior and cycle focus to Settings
+      e.preventDefault();
+      if (settingsRef.current) {
+        settingsRef.current.focus();
+      }
+    } else if (e.nativeEvent.key === 'ArrowDown' || e.nativeEvent.key === 'ArrowUp') {
+      // Allow default focus management for arrow keys
+      return;
+    }
+  };
+
   // When drawer opens, focus the Home menu item
   useEffect(() => {
     if (isDrawerOpen && homeRef.current) {
@@ -390,7 +418,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
           }
         }}
         {...({
-          onKeyDown: handleKeyDown,
+          onKeyDown: handleHamburgerKeyDown,
           keyboardEvents: ['keyDown'],
           focusable: true,
         } as any)}>
@@ -440,7 +468,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
               icon="&#xE713;"
               navigation={navigation}
               currentRoute={currentRoute}
-              onKeyDown={handleKeyDown}
+              onKeyDown={handleSettingsKeyDown}
               keyboardEvents={['keyDown']}
               focusable={true}
             />
