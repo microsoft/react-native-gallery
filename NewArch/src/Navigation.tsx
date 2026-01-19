@@ -247,7 +247,6 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
       style={{
         flex: 1,
         maxWidth: DEFAULT_DRAWER_WIDTH,
-        height: '100%',
         paddingLeft: 16,
         paddingRight: 6,
       }}
@@ -262,33 +261,22 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
 
   return (
     <NavigationContext.Provider value={navigation}>
-      <View style={{flex: 1, height: '100%'}}>
-        {React.Children.map(children, child => {
-          const name = child.props.name;
-          if (name !== navigationContext.currentScreen) {
-            return null;
-          }
-          return (
-            <View key={name} style={{flex: 1, alignItems: 'stretch'}}>
-              {child}
-            </View>
-          );
-        })}
-        { drawerIsOpen &&
-          <View 
-            style={{position: 'absolute', height: '100%', width: '100%', zIndex: 1}}
-          >
-            <Animated.View
-              style={{opacity: fadeAnim, height: '100%', width: '100%'}}>
-              <Pressable
-                style={{
-                  backgroundColor: PlatformColor('Background'),
-                  height: '100%',
-                  width: '100%'}}
-                  onPress={() => setDrawerDesiredOpen(false)}
-                  onAccessibilityTap={() => setDrawerDesiredOpen(false)}
-                  />
-            </Animated.View>
+      <View>
+          <View>
+            { drawerIsOpen &&
+              <Animated.View
+                style={{opacity: fadeAnim}}>
+                <Pressable
+                  style={{
+                    backgroundColor: PlatformColor('Background'),
+                    maxWidth: DEFAULT_DRAWER_WIDTH,
+                    height: '100%',
+                    width: '100%'}}
+                    onPress={() => setDrawerDesiredOpen(false)}
+                    onAccessibilityTap={() => setDrawerDesiredOpen(false)}
+                    />
+              </Animated.View>
+            }
             <Animated.View
               style={{
                 position: 'absolute',
@@ -300,7 +288,17 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
               {drawer}
             </Animated.View>
           </View>
-        }
+        {React.Children.map(children, child => {
+          const name = child.props.name;
+          if (name !== navigationContext.currentScreen) {
+            return null;
+          }
+          return (
+            <View key={name} style={{alignItems: 'stretch'}}>
+              {child}
+            </View>
+          );
+        })}
       </View>
     </NavigationContext.Provider>
   );
