@@ -54,6 +54,7 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
   onChangeText={onChangeText4}
   value={text4}
   editable={false}
+  focusable={false}
   placeholder="Disabled TextInput..."
   placeholderTextColor={colors.primary}/>`;
 
@@ -140,6 +141,7 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
           onChangeText={onChangeText4}
           value={text4}
           editable={false}
+          focusable={false}
           placeholder="Disabled TextInput..."
           placeholderTextColor={colors.primary}
         />
