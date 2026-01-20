@@ -74,7 +74,7 @@ steps:
   - task: CmdLine@2
     displayName: Lint and Type Checks
     inputs:
-      script: yarn tsc | yarn lint
+      script: yarn tsc && yarn lint
 
   - task: DownloadSecureFile@1
     name: signingCert
