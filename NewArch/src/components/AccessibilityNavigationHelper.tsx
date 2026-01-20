@@ -47,19 +47,18 @@ export const AccessibilityNavigationHelper: React.FC<{
 
 const styles = StyleSheet.create({
   container: {
+    // Visually hidden but accessible to screen readers
     position: 'absolute',
-    top: -1000, // Hidden visually but accessible to screen readers
-    left: 0,
-    zIndex: 9999,
+    width: 1,
+    height: 1,
+    overflow: 'hidden',
+    opacity: 0,
   },
   skipLink: {
-    backgroundColor: '#000',
-    color: '#fff',
     padding: 8,
     margin: 2,
   },
   skipLinkText: {
-    color: '#fff',
     fontSize: 14,
   },
 });

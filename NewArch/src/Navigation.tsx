@@ -253,7 +253,6 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
       contentContainerStyle={{
         flexGrow: 1,
       }}
-      showsVerticalScrollIndicator={true}
     >
       {drawerContent({navigation})}
     </ScrollView>
