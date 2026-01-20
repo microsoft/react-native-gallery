@@ -7,6 +7,7 @@ import {
   Linking,
   PlatformColor,
   Image,
+  useColorScheme,
 } from 'react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -95,6 +96,7 @@ const HeaderTile = React.forwardRef<any, HeaderTileType>((props, ref) => {
 });
 
 const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) => {
+  const colorScheme = useColorScheme();
   const items = [
     <HeaderTile
       ref={firstTileRef}
@@ -156,8 +158,15 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
       title="Code samples"
       description="Find samples that demonstrate specific tasks, features, and APIs."
       link="https://github.com/microsoft/react-native-windows-samples">
-      <View style={{ height: 60, justifyContent: 'center', alignItems: 'center' }}>
-        <Text allowFontScaling style={{ fontFamily: 'Segoe MDL2 Assets', fontSize: 42, textAlign: 'center' }}>&#xE943;</Text>
+      <View style={{height: 60, justifyContent: 'center', alignItems: 'center'}}>
+        <Text
+          style={{
+            fontFamily: 'Segoe MDL2 Assets',
+            fontSize: 42,
+            color: PlatformColor('TextFillColorPrimary'),
+          }}>
+          {''}
+        </Text>
       </View>
     </HeaderTile>,
     <HeaderTile
@@ -165,9 +174,14 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
       description="Upload your app to the Store."
       link="https://developer.microsoft.com/windows/">
       <Image
+        key={colorScheme}
         accessible={true}
         accessibilityRole="image"
-        source={require('../../assets/HomeHeaderTiles/Header-Store.light.png')}
+        source={
+          colorScheme === 'dark'
+            ? require('../../assets/HomeHeaderTiles/Header-Store.dark.png')
+            : require('../../assets/HomeHeaderTiles/Header-Store.light.png')
+        }
         style={{width: 64, height: 64}}
       />
     </HeaderTile>,
