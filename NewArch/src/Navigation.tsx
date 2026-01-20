@@ -257,7 +257,7 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
 
   return (
     <NavigationContext.Provider value={navigation}>
-      <View>
+      <View style={{backgroundColor: PlatformColor('Background'), flex: 1}}>
           <View>
             { drawerIsOpen &&
               <Animated.View
@@ -290,7 +290,7 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
             return null;
           }
           return (
-            <View key={name} style={{alignItems: 'stretch'}}>
+            <View key={name} style={{alignItems: 'stretch', backgroundColor: PlatformColor('Background')}}>
               {child}
             </View>
           );
@@ -301,17 +301,16 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
 };
 
 type DrawerScreenProps = {
-  key: string,
   name: string,
   component: ({ navigation, route }: { navigation: any; route: any; }) => JSX.Element,
 };
-const DrawerScreen = ({key, component}: DrawerScreenProps) => {
+const DrawerScreen = ({name, component}: DrawerScreenProps) => {
   const navigationContext = React.useContext(NavigationContext);
 
   const content = component({navigation: navigationContext, route: navigationContext});
 
   return (
-    <View key={key}>
+    <View key={name}>
       {content}
     </View>
   );
@@ -326,9 +325,9 @@ const createDrawerNavigator = () => {
         </DrawerNavigator>
       );
     },
-    Screen: ({component, name, key}: DrawerScreenProps) => {
+    Screen: ({component, name}: DrawerScreenProps) => {
       return (
-        <DrawerScreen key={key} name={name} component={component} />
+        <DrawerScreen key={name} name={name} component={component} />
       );
     },
   };
