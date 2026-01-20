@@ -38,6 +38,7 @@ const createStyles = (windowWidth: number) => {
       borderTopLeftRadius: 8,
       borderColor: 'rgba(233, 233, 233, 0.47)',
       borderLeftWidth: 1,
+      backgroundColor: PlatformColor('Background'),
     },
     insetNavItem: {
       paddingLeft: isSmallScreen ? 20 : 36,

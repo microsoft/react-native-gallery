@@ -37,9 +37,9 @@
       },
       "Microsoft.Windows.CppWinRT": {
         "type": "Direct",
-        "requested": "[2.0.230706.1, )",
-        "resolved": "2.0.230706.1",
-        "contentHash": "l0D7oCw/5X+xIKHqZTi62TtV+1qeSz7KVluNFdrJ9hXsst4ghvqQ/Yhura7JqRdZWBXAuDS0G0KwALptdoxweQ=="
+        "requested": "[2.0.240405.15, )",
+        "resolved": "2.0.240405.15",
+        "contentHash": "3ny3Z7ONWMzn+lQZn6UVjM6w4c4HHfBFtk7JqsbDTwK/lGOvM8ZIil5/ok9D9qF59qdhMe6UWUWzP/6CiUXw0Q=="
       },
       "Microsoft.WindowsAppSDK": {
         "type": "Direct",
