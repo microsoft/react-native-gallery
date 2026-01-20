@@ -7,6 +7,7 @@ import {
   Linking,
   PlatformColor,
   Image,
+  useColorScheme,
 } from 'react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -93,6 +94,7 @@ const HeaderTile = (props: HeaderTileType): JSX.Element => {
 };
 
 const TileGallery = () => {
+  const colorScheme = useColorScheme();
   const items = [
     <HeaderTile
       title="Getting started"
@@ -147,16 +149,30 @@ const TileGallery = () => {
       title="Code samples"
       description="Find samples that demonstrate specific tasks, features, and APIs."
       link="https://github.com/microsoft/react-native-windows-samples">
-      <FontIcon xamlMargin="0,8,0,0" fontSize={44} glyph="&#xE943;" />
+      <View style={{height: 60, justifyContent: 'center', alignItems: 'center'}}>
+        <Text
+          style={{
+            fontFamily: 'Segoe MDL2 Assets',
+            fontSize: 44,
+            color: PlatformColor('TextFillColorPrimaryBrush'),
+          }}>
+          {'\uE943'}
+        </Text>
+      </View>
     </HeaderTile>,
     <HeaderTile
       title="Partner Center"
       description="Upload your app to the Store."
       link="https://developer.microsoft.com/windows/">
       <Image
+        key={colorScheme}
         accessible={true}
         accessibilityRole="image"
-        source={require('../../assets/HomeHeaderTiles/Header-Store.light.png')}
+        source={
+          colorScheme === 'dark'
+            ? require('../../assets/HomeHeaderTiles/Header-Store.dark.png')
+            : require('../../assets/HomeHeaderTiles/Header-Store.light.png')
+        }
         style={{width: 64, height: 64}}
       />
     </HeaderTile>,
