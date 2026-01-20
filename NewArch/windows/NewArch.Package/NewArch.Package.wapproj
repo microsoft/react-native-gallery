@@ -141,8 +141,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\x64\$(Configuration)\Clipboard\Clipboard.dll">
-      <Link>Clipboard\Clipboard.dll</Link>
+    <Content Include="$(SolutionDir)\x64\$(Configuration)\Clipboard.dll">
+      <Link>Clipboard.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
