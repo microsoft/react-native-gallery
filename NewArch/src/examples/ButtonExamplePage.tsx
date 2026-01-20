@@ -121,7 +121,9 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
         }}>
           <Button
             title="-"
+            disabled={title === 0}
             accessibilityLabel={`Decrease counter. Current value is ${title}`}
+            accessibilityState={{disabled: title === 0}}
             onPress={() => {
               const newValue = Math.max(0, title - 1);
               setTitle(newValue);
