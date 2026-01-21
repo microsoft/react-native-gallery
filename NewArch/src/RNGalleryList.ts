@@ -48,7 +48,6 @@ import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage'
 let RNGalleryCategories = [
   {label: 'Basic Input', icon: '\uE73A'},
   {label: 'Collections', icon: '\uE80A'},
-  {label: 'Date & time', icon: '\uEC92'},
   {label: 'Dialogs & flyouts', icon: '\uE8BD'},
   {label: 'Layout', icon: '\uE8A1'},
   {label: 'Media', icon: '\uE786'},
