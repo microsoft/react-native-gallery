@@ -250,6 +250,9 @@ const DrawerNavigator = ({drawerContent, defaultStatus, children} : DrawerNaviga
         paddingLeft: 16,
         paddingRight: 6,
       }}
+      contentContainerStyle={{
+        flexGrow: 1,
+      }}
     >
       {drawerContent({navigation})}
     </ScrollView>

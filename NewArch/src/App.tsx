@@ -428,7 +428,7 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
       {isDrawerOpen && (
         <View style={{ flex: 1 }}>
           <ScrollView
-            style={{ flex: 1, maxHeight: '85%' }}
+            style={{ flex: 1, maxHeight: '50%' }}
             contentContainerStyle={{ paddingBottom: 20 }}
             showsVerticalScrollIndicator={true}
             persistentScrollbar={true}>
