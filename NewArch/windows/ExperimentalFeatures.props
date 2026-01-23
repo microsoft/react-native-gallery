@@ -22,6 +22,9 @@
     <UseExperimentalNuget>true</UseExperimentalNuget>
 
     <ReactExperimentalFeaturesSet>true</ReactExperimentalFeaturesSet>
+
+    <!-- Suppress Windows App SDK transitive dependency verification -->
+    <WindowsAppSDKVerifyTransitiveDependencies>false</WindowsAppSDKVerifyTransitiveDependencies>
   </PropertyGroup>
 
 </Project>
