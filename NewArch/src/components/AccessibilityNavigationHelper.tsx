@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     width: 1,
     height: 1,
     overflow: 'hidden',
-    opacity: 0,
+    top: -9999,
   },
   skipLink: {
     backgroundColor: '#000',
