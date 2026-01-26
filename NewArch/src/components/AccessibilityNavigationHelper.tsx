@@ -48,10 +48,9 @@ export const AccessibilityNavigationHelper: React.FC<{
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    width: 1,
-    height: 1,
-    overflow: 'hidden',
-    top: -9999,
+    bottom: -1000, // Hidden visually but accessible to screen readers
+    left: 0,
+    zIndex: 9999,
   },
   skipLink: {
     backgroundColor: '#000',
