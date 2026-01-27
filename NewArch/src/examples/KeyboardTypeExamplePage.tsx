@@ -1,5 +1,5 @@
 'use strict';
-import {TextInput, Text, View, StyleSheet, ScrollView} from 'react-native';
+import {TextInput, Text, View, StyleSheet} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
