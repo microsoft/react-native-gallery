@@ -143,6 +143,27 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
           direction and background color.
         </Text>
       </Example>
+      <Example
+        title="Selectable Text"
+        code={`<Text selectable={true}>
+  Selectable text - click and drag to select.
+</Text>`}>
+        <Text selectable={true} style={{color: colors.text}}>
+          This text is selectable. Click and drag to select, or double-click for word selection.
+        </Text>
+      </Example>
+      <Example
+        title="Selection Color"
+        code={`<Text selectable={true} selectionColor="red">
+  Custom selection highlight color.
+</Text>`}>
+        <Text selectable={true} selectionColor="red" style={{color: colors.text, marginBottom: 8}}>
+          Red selection color - select this text!
+        </Text>
+        <Text selectable={true} selectionColor="#00FF00" style={{color: colors.text}}>
+          Green selection color - select this text!
+        </Text>
+      </Example>
     </Page>
   );
 };

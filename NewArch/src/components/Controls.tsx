@@ -1,28 +1,23 @@
 import React from 'react';
-import {Linking, Pressable, StyleSheet, Text} from 'react-native';
+import {Linking, Pressable, Text, useColorScheme} from 'react-native';
 
 type HyperlinkProps = {
   url: string;
   text?: string;
 };
 function Hyperlink({url, text}: HyperlinkProps): JSX.Element {
-  const styles = StyleSheet.create({
-    hyperlinkIdle: {
-      color: 'blue',
-      textDecorationLine: 'underline',
-    },
-    hyperlinkHovering: {
-      color: 'darkblue',
-      textDecorationLine: 'underline',
-    },
-    hyperlinkPressing: {
-      color: 'black',
-      textDecorationLine: 'underline',
-    },
-  });
   const [hovering, setHovering] = React.useState(false);
   const [pressing, setPressing] = React.useState(false);
+  const colorScheme = useColorScheme();
+  const isDark = colorScheme === 'dark';
 
+  const colors = {
+    idle: isDark ? '#6CB6FF' : '#0066CC',
+    hover: isDark ? '#8ECAFF' : '#004499',
+    press: isDark ? '#A8D8FF' : '#003366',
+  };
+
+  const linkColor = pressing ? colors.press : hovering ? colors.hover : colors.idle;
   let displayText = text ?? url;
 
   return (
@@ -36,14 +31,7 @@ function Hyperlink({url, text}: HyperlinkProps): JSX.Element {
       onPressOut={() => setPressing(false)}
       onHoverIn={() => setHovering(true)}
       onHoverOut={() => setHovering(false)}>
-      <Text
-        style={
-          pressing
-            ? styles.hyperlinkPressing
-            : hovering
-            ? styles.hyperlinkHovering
-            : styles.hyperlinkIdle
-        }>
+      <Text style={{color: linkColor, textDecorationLine: 'underline'}}>
         {displayText}
       </Text>
     </Pressable>
