@@ -35,9 +35,10 @@ export const ProgressViewExamplePage: React.FunctionComponent<{}> = () => {
       </Example>
       <Example title="An indeterminate ProgressView." code={example2jsx}>
         <ProgressView
-          accessibilityLabel="Indeterminate ProgressView"
-          isIndeterminate="true"
+              accessibilityLabel="Indeterminate progress bar"
+              isIndeterminate={true}
         />
+
       </Example>
       <Example
         title="A colored ProgressView with 70% progress."
