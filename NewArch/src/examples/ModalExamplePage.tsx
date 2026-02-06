@@ -1,5 +1,5 @@
 'use strict';
-import {Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo} from 'react-native';
+import {Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo, Pressable} from 'react-native';
 import {Modal} from 'react-native-windows'
 import React from 'react';
 import {Example} from '../components/Example';
@@ -129,13 +129,15 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         <Modal visible={modal1} onRequestClose={changeModal1}>
             <View style={styles.simpleModalView}>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
-              <Button
-                color={'black'}
+              <Pressable
                 ref={modal1FirstButtonRef}
-                title="Close Modal"
+                style={styles.modalButton}
+                accessibilityRole="button"
                 accessibilityLabel="Close Modal"
                 onPress={changeModal1}
-                onAccessibilityTap={changeModal1}/>
+                onAccessibilityTap={changeModal1}>
+                <Text style={styles.modalButtonText}>Close Modal</Text>
+              </Pressable>
             </View>
         </Modal>
       </Example>
@@ -153,13 +155,15 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.complexModalText}>
                 This is a Modal with more complex styling
               </Text>
-              <Button
-                color={'black'}
+              <Pressable
                 ref={modal2FirstButtonRef}
-                title="Close Modal"
+                style={styles.modalButton}
+                accessibilityRole="button"
                 accessibilityLabel="Close Modal"
                 onPress={changeModal2}
-                onAccessibilityTap={changeModal2}/>
+                onAccessibilityTap={changeModal2}>
+                <Text style={styles.modalButtonText}>Close Modal</Text>
+              </Pressable>
             </View>
           </View>
         </Modal>
@@ -191,13 +195,15 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.modalText}>onShow event Count = {onShowCount}</Text>
               <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>
-            <Button
-              color={'black'}
+            <Pressable
               ref={modal3FirstButtonRef}
-              title="Close Modal"
+              style={styles.modalButton}
+              accessibilityRole="button"
               accessibilityLabel="Close Modal"
               onPress={changeModal3}
-              onAccessibilityTap={changeModal3}/>
+              onAccessibilityTap={changeModal3}>
+              <Text style={styles.modalButtonText}>Close Modal</Text>
+            </Pressable>
           </View>
         </Modal>
       </Example>
@@ -291,5 +297,17 @@ const styles = StyleSheet.create({
   modalTextBold: {
     color: 'black',
     fontWeight: 'bold',
+  },
+  modalButton: {
+    backgroundColor: '#0078D4',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  modalButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
