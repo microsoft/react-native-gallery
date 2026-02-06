@@ -134,7 +134,8 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
                 style={styles.modalButton}
                 accessibilityRole="button"
                 accessibilityLabel="Close Modal"
-                onPress={changeModal1}>
+                onPress={changeModal1}
+                onAccessibilityTap={changeModal1}>
                 <Text style={styles.modalButtonText}>Close Modal</Text>
               </Pressable>
             </View>
@@ -159,7 +160,8 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
                 style={styles.modalButton}
                 accessibilityRole="button"
                 accessibilityLabel="Close Modal"
-                onPress={changeModal2}>
+                onPress={changeModal2}
+                onAccessibilityTap={changeModal2}>
                 <Text style={styles.modalButtonText}>Close Modal</Text>
               </Pressable>
             </View>
@@ -198,7 +200,8 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               style={styles.modalButton}
               accessibilityRole="button"
               accessibilityLabel="Close Modal"
-              onPress={changeModal3}>
+              onPress={changeModal3}
+              onAccessibilityTap={changeModal3}>
               <Text style={styles.modalButtonText}>Close Modal</Text>
             </Pressable>
           </View>
