@@ -130,7 +130,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
             <View style={styles.simpleModalView}>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
               <Button
-                color={'black'}
                 ref={modal1FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
@@ -154,7 +153,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
                 This is a Modal with more complex styling
               </Text>
               <Button
-                color={'black'}
                 ref={modal2FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
@@ -192,7 +190,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>
             <Button
-              color={'black'}
               ref={modal3FirstButtonRef}
               title="Close Modal"
               accessibilityLabel="Close Modal"
