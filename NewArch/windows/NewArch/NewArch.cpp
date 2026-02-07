@@ -74,16 +74,22 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
   appWindow.Resize({1000, 1000});
 
   // Configure title bar to respect system theme (dark mode support)
+  // Keep uiSettings alive for the lifetime of the app so the ColorValuesChanged
+  // event subscription is not destroyed when the variable goes out of scope.
+  static winrt::Windows::UI::ViewManagement::UISettings s_uiSettings;
   try {
     auto titleBar = appWindow.TitleBar();
     if (titleBar) {
       // Enable title bar theming to follow system theme
       titleBar.ExtendsContentIntoTitleBar(false);
+
+      // Capture the DispatcherQueue so we can marshal theme updates to the UI thread
+      auto dispatcherQueue = winrt::Microsoft::UI::Dispatching::DispatcherQueue::GetForCurrentThread();
       
       // Function to apply current system theme colors
       auto applySystemTheme = [titleBar]() {
         try {
-          auto uiSettings = winrt::Windows::UI::ViewManagement::UISettings();
+          winrt::Windows::UI::ViewManagement::UISettings uiSettings;
           auto foreground = uiSettings.GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType::Foreground);
           auto background = uiSettings.GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType::Background);
           
@@ -110,10 +116,16 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
       // Apply initial theme
       applySystemTheme();
       
-      // Listen for system theme changes
-      auto uiSettings = winrt::Windows::UI::ViewManagement::UISettings();
-      uiSettings.ColorValuesChanged([applySystemTheme](auto const&, auto const&) {
-        applySystemTheme();
+      // Listen for system theme changes using the static uiSettings so the
+      // event registration persists for the lifetime of the application.
+      s_uiSettings.ColorValuesChanged([applySystemTheme, dispatcherQueue](auto const&, auto const&) {
+        // ColorValuesChanged fires on a background thread, so dispatch
+        // the title bar update back to the UI thread.
+        if (dispatcherQueue) {
+          dispatcherQueue.TryEnqueue([applySystemTheme]() {
+            applySystemTheme();
+          });
+        }
       });
     }
   } catch (...) {
