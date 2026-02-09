@@ -32,6 +32,7 @@ const createStyles = (windowWidth: number) => {
 /**
  * A theme-aware back button that navigates through the custom history stack.
  * When history is exhausted, it navigates to Home.
+ * Matches the existing nav-bar button style used by the hamburger menu.
  */
 export function BackButton() {
   const navigation = useNavigation();
@@ -56,12 +57,14 @@ export function BackButton() {
     navigation.navigate(target, {});
   };
 
+  // Dynamic background: mirrors the hover/press pattern in DrawerListItem (App.tsx)
   const dynamicBackground = isPressed
     ? PlatformColor('ControlAltFillColorSecondaryBrush')
     : isHovered
       ? PlatformColor('ControlAltFillColorTertiaryBrush')
       : 'transparent';
 
+  // Icon color: use system foreground, dim when disabled
   const iconColor = canGoBack
     ? PlatformColor('TextControlForeground')
     : PlatformColor('TextFillColorDisabledBrush');
@@ -76,6 +79,7 @@ export function BackButton() {
       accessibilityState={{disabled: !canGoBack}}
       style={[styles.button, {backgroundColor: dynamicBackground}]}
       onPress={handlePress}
+      onAccessibilityTap={handlePress}
       onPressIn={() => setIsPressed(true)}
       onPressOut={() => setIsPressed(false)}
       onHoverIn={() => setIsHovered(true)}
