@@ -11,6 +11,7 @@ import {
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
 import {FocusScreenWrapperContext, FocusScreenWrapperSetterContext} from '../App';
+import {BackButton} from './BackButton';
 
 
 const createStyles = (windowWidth: number) => {
@@ -154,6 +155,7 @@ export function ScreenWrapper({
             underlayColor="rgba(0, 0, 0, 0.0241);">
             <Text style={styles.icon} accessibilityLabel="Navigation bar hamburger icon text">&#xE700;</Text>
           </TouchableHighlight>
+          <BackButton />
         </View>
       </View>
       <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
