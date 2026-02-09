@@ -1,16 +1,18 @@
 'use strict';
-import {Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo, Pressable} from 'react-native';
+import {Button, View, Text, StyleSheet, Dimensions, PlatformColor, AccessibilityInfo} from 'react-native';
 import {Modal} from 'react-native-windows'
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
+import {useTheme} from '../Navigation';
 
 export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
   const firstModalExampleRef = usePageFocusManagement(navigation);
   const [modal1, setModal1] = React.useState(false);
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
+  const {colors, dark} = useTheme();
   const changeModal1 = () => {
     AccessibilityInfo.announceForAccessibility("This is a simple modal")
     setModal1(!modal1);
@@ -129,15 +131,13 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         <Modal visible={modal1} onRequestClose={changeModal1}>
             <View style={styles.simpleModalView}>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
-              <Pressable
+              <Button
+                color={dark ? colors.primary : '#63ce6cff'}
                 ref={modal1FirstButtonRef}
-                style={styles.modalButton}
-                accessibilityRole="button"
+                title="Close Modal"
                 accessibilityLabel="Close Modal"
                 onPress={changeModal1}
-                onAccessibilityTap={changeModal1}>
-                <Text style={styles.modalButtonText}>Close Modal</Text>
-              </Pressable>
+                onAccessibilityTap={changeModal1}/>
             </View>
         </Modal>
       </Example>
@@ -155,15 +155,13 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.complexModalText}>
                 This is a Modal with more complex styling
               </Text>
-              <Pressable
+              <Button
+                color={dark ? colors.primary : '#63ce6cff'}
                 ref={modal2FirstButtonRef}
-                style={styles.modalButton}
-                accessibilityRole="button"
+                title="Close Modal"
                 accessibilityLabel="Close Modal"
                 onPress={changeModal2}
-                onAccessibilityTap={changeModal2}>
-                <Text style={styles.modalButtonText}>Close Modal</Text>
-              </Pressable>
+                onAccessibilityTap={changeModal2}/>
             </View>
           </View>
         </Modal>
@@ -195,15 +193,13 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.modalText}>onShow event Count = {onShowCount}</Text>
               <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>
-            <Pressable
+            <Button
+              color={dark ? colors.primary : '#63ce6cff'}
               ref={modal3FirstButtonRef}
-              style={styles.modalButton}
-              accessibilityRole="button"
+              title="Close Modal"
               accessibilityLabel="Close Modal"
               onPress={changeModal3}
-              onAccessibilityTap={changeModal3}>
-              <Text style={styles.modalButtonText}>Close Modal</Text>
-            </Pressable>
+              onAccessibilityTap={changeModal3}/>
           </View>
         </Modal>
       </Example>
@@ -297,17 +293,5 @@ const styles = StyleSheet.create({
   modalTextBold: {
     color: 'black',
     fontWeight: 'bold',
-  },
-  modalButton: {
-    backgroundColor: '#0078D4',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    marginTop: 10,
-  },
-  modalButtonText: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
