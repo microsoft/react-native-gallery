@@ -10,10 +10,10 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
   const firstTextInputExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
-  const [text1, setText1] = React.useState('');
-  const [text2, setText2] = React.useState('');
-  const [text3, setText3] = React.useState('');
-  const [text4, setText4] = React.useState('');
+  const [_text1, setText1] = React.useState('');
+  const [_text2, setText2] = React.useState('');
+  const [_text3, setText3] = React.useState('');
+  const [_text4, setText4] = React.useState('');
 
   const onChangeText1 = (text: string) => {
     setText1(text);
