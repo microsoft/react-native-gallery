@@ -5,12 +5,14 @@ import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
+import {useTheme} from '../Navigation';
 
 export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
   const firstModalExampleRef = usePageFocusManagement(navigation);
   const [modal1, setModal1] = React.useState(false);
   const [modal2, setModal2] = React.useState(false);
   const [modal3, setModal3] = React.useState(false);
+  const {colors, dark} = useTheme();
   const changeModal1 = () => {
     AccessibilityInfo.announceForAccessibility("This is a simple modal")
     setModal1(!modal1);
@@ -130,7 +132,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
             <View style={styles.simpleModalView}>
               <Text style={styles.simpleModalText}>This is a simple Modal</Text>
               <Button
-                color={'black'}
+                color={dark ? colors.primary : '#63ce6cff'}
                 ref={modal1FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
@@ -154,7 +156,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
                 This is a Modal with more complex styling
               </Text>
               <Button
-                color={'black'}
+                color={dark ? colors.primary : '#63ce6cff'}
                 ref={modal2FirstButtonRef}
                 title="Close Modal"
                 accessibilityLabel="Close Modal"
@@ -192,7 +194,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
               <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>
             <Button
-              color={'black'}
+              color={dark ? colors.primary : '#63ce6cff'}
               ref={modal3FirstButtonRef}
               title="Close Modal"
               accessibilityLabel="Close Modal"
