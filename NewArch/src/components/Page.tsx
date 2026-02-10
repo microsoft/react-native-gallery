@@ -107,7 +107,7 @@ export function Page(props: {
   }, []);
 
   const styles = createStyles(windowDimensions.width);
-  
+
   return (
     <ScreenWrapper>
       <View style={styles.titlePane}>

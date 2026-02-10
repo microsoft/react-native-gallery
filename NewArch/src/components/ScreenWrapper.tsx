@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {
+  Animated,
   View,
   StyleSheet,
   TouchableHighlight,
@@ -7,6 +8,8 @@ import {
   PlatformColor,
   AccessibilityInfo,
   Dimensions,
+  Easing,
+  useAnimatedValue,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
 import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
@@ -158,9 +161,28 @@ export function ScreenWrapper({
           <BackButton />
         </View>
       </View>
-      <View style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
+      <FadeInContent style={[styles.navItem, doNotInset ? {} : styles.insetNavItem]}>
         {children}
-      </View>
+      </FadeInContent>
     </View>
+  );
+}
+
+function FadeInContent({style, children}: {style: any; children: React.ReactNode}) {
+  const fadeAnim = useAnimatedValue(0);
+
+  useEffect(() => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 750,
+      easing: Easing.out(Easing.ease),
+      useNativeDriver: true,
+    }).start();
+  }, [fadeAnim]);
+
+  return (
+    <Animated.View style={[style, {opacity: fadeAnim}]}>
+      {children}
+    </Animated.View>
   );
 }
