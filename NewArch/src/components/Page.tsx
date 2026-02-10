@@ -1,11 +1,10 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 import {PlatformColor, ScrollView, StyleSheet, Text, View, Dimensions} from 'react-native';
 import {NativeControlBadge} from './NativeControlBadge';
 import {CoreComponentBadge} from './CoreComponentBadge';
 import {CommunityModuleBadge} from './CommunityModuleBadge';
 import {LinkContainer} from './LinkContainer';
 import {ScreenWrapper} from './ScreenWrapper';
-import {PageLoadingAnimation} from './PageLoadingAnimation';
 
 const createStyles = (windowWidth: number) => {
   const isSmallScreen = windowWidth < 600;
@@ -98,7 +97,6 @@ export function Page(props: {
   children: React.ReactNode;
 }) {
   const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const subscription = Dimensions.addEventListener('change', ({window}) => {
@@ -108,19 +106,7 @@ export function Page(props: {
     return () => subscription?.remove();
   }, []);
 
-  const handleAnimationFinish = useCallback(() => {
-    setIsLoading(false);
-  }, []);
-
   const styles = createStyles(windowDimensions.width);
-
-  if (isLoading) {
-    return (
-      <ScreenWrapper>
-        <PageLoadingAnimation size={100} duration={200} onFinish={handleAnimationFinish} />
-      </ScreenWrapper>
-    );
-  }
 
   return (
     <ScreenWrapper>
