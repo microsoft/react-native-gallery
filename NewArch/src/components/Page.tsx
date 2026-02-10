@@ -117,7 +117,7 @@ export function Page(props: {
   if (isLoading) {
     return (
       <ScreenWrapper>
-        <PageLoadingAnimation size={100} duration={150} onFinish={handleAnimationFinish} />
+        <PageLoadingAnimation size={100} duration={200} onFinish={handleAnimationFinish} />
       </ScreenWrapper>
     );
   }
