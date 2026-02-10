@@ -8,6 +8,7 @@ import {
   PlatformColor,
   Image,
   useColorScheme,
+  Animated,
 } from 'react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -69,29 +70,52 @@ type HeaderTileType = PropsWithChildren<{
 const HeaderTile = React.forwardRef<any, HeaderTileType>((props, ref) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressing, setIsPressing] = React.useState(false);
+  const scaleAnim = React.useRef(new Animated.Value(1)).current;
   const styles = createStyles(isHovered, isPressing);
+
+  const handleHoverIn = () => {
+    setIsHovered(true);
+    Animated.spring(scaleAnim, {
+      toValue: 1.04,
+      friction: 8,
+      tension: 80,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const handleHoverOut = () => {
+    setIsHovered(false);
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      friction: 8,
+      tension: 60,
+      useNativeDriver: true,
+    }).start();
+  };
 
   const openInNewWindowIcon = '\uE8A7';
   return (
-    <Pressable
-      ref={ref}
-      style={styles.headerTile}
-      onPress={() => Linking.openURL(props.link)}
-      onAccessibilityTap={() => Linking.openURL(props.link)}
-      onPressIn={() => setIsPressing(true)}
-      onPressOut={() => setIsPressing(false)}
-      onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}
-      accessibilityRole="button"
-      accessibilityLabel={props.title}
-      accessibilityHint={props.description}>
-      <View style={styles.tileIconContent}>{props.children}</View>
-      <Text style={styles.tileTitle}>{props.title}</Text>
-      <Text style={styles.tileDescription}>{props.description}</Text>
-      <Text style={styles.tileLinkIcon} accessible={false}>
-        {openInNewWindowIcon}
-      </Text>
-    </Pressable>
+    <Animated.View style={{transform: [{scale: scaleAnim}]}}>
+      <Pressable
+        ref={ref}
+        style={styles.headerTile}
+        onPress={() => Linking.openURL(props.link)}
+        onAccessibilityTap={() => Linking.openURL(props.link)}
+        onPressIn={() => setIsPressing(true)}
+        onPressOut={() => setIsPressing(false)}
+        onHoverIn={handleHoverIn}
+        onHoverOut={handleHoverOut}
+        accessibilityRole="button"
+        accessibilityLabel={props.title}
+        accessibilityHint={props.description}>
+        <View style={styles.tileIconContent}>{props.children}</View>
+        <Text style={styles.tileTitle}>{props.title}</Text>
+        <Text style={styles.tileDescription}>{props.description}</Text>
+        <Text style={styles.tileLinkIcon} accessible={false}>
+          {openInNewWindowIcon}
+        </Text>
+      </Pressable>
+    </Animated.View>
   );
 });
 
