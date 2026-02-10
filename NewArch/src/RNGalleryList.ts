@@ -18,7 +18,6 @@ import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
 // import {DeviceInfoExamplePage} from './examples/DeviceInfoExamplePage';
 import {TextExamplePage} from './examples/TextExamplePage';
 import {TextInputExamplePage} from './examples/TextInputExamplePage';
-import {NewParityPropsPage} from './examples/NewParityPropsPage';
 // import {TTSExamplePage} from './examples/TTSExamplePage';
 import {TouchableHighlightExamplePage} from './examples/TouchableHighlightExamplePage';
 import {TouchableOpacityExamplePage} from './examples/TouchableOpacityExamplePage';
@@ -296,14 +295,6 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle: 'A single-line or multi-line plain text field.',
     type: 'Text',
     recentlyUpdated: true,
-  },
-  {
-    key: 'New Parity Props',
-    component: NewParityPropsPage,
-    textIcon: '\uE7C3',
-    subtitle: 'New Fabric parity props: selectable and selectionColor for Text.',
-    type: 'Text',
-    new: true,
   },
   // {
   //   key: 'TimePicker',
