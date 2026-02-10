@@ -172,7 +172,7 @@ function FadeInContent({style, children}: {style: any; children: React.ReactNode
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 250,
+      duration: 750,
       easing: Easing.out(Easing.ease),
       useNativeDriver: true,
     }).start();
