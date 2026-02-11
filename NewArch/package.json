@@ -9,13 +9,15 @@
     "start": "react-native start",
     "test": "jest",
     "windows": "npx @react-native-community/cli run-windows",
-    "test:windows": "jest --config jest.config.windows.js"
+    "test:windows": "jest --config jest.config.windows.js",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-clipboard/clipboard": "^1.16.1",
     "lowlight": "^1.17.0",
     "react": "19.1.1",
     "react-native": "0.82.0-rc.0",
+    "react-native-config": "^1.6.1",
     "react-native-windows": "0.82.0-preview.8"
   },
   "devDependencies": {

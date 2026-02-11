@@ -7,7 +7,7 @@ import {ComponentListPage} from './ComponentListPage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 // import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
-// import {ConfigExamplePage} from './examples/ConfigExamplePage';
+import {ConfigExamplePage} from './examples/ConfigExamplePage';
 // import {DatePickerExamplePage} from './examples/DatePickerExamplePage';
 // import {TimePickerExamplePage} from './examples/TimePickerExamplePage';
 // import {SketchExamplePage} from './examples/SketchExamplePage';
@@ -113,12 +113,12 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     type: 'System',
     new: true,
   },
-  // {
-  //   key: 'Config',
-  //   component: ConfigExamplePage,
-  //   textIcon: '\uE753',
-  //   type: 'Status and Info',
-  // },
+  {
+    key: 'Config',
+    component: ConfigExamplePage,
+    textIcon: '\uE753',
+    type: 'Status and Info',
+  },
   // {
   //   key: 'DatePicker',
   //   component: DatePickerExamplePage,

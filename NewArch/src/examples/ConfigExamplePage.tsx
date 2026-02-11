@@ -24,7 +24,7 @@ export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
       documentation={[
         {
           label: 'Config',
-          url: 'https://github.com/luggit/react-native-config',
+          url: 'https://github.com/react-native-config/react-native-config',
         },
       ]}>
       <Example title="Config Information" code={example}>
