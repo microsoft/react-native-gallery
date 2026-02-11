@@ -4,7 +4,6 @@ import {
   VirtualizedList,
   StyleSheet,
   Text,
-  TouchableHighlight,
   ScrollView,
   Pressable,
   Platform,
@@ -44,9 +43,9 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   };
 
   const Item = ({ title, index }) => (
-    <TouchableHighlight style={styles.item}>
+    <Pressable style={styles.item}>
       <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
+    </Pressable>
   );
 
   <VirtualizedList
@@ -74,10 +73,10 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   };
 
   const Item = ({ title, index }) => (
-    <TouchableHighlight style={index === selectedIndex? styles.itemSelected : styles.item} activeOpacity={0.6}
-    underlayColor={colors.border} onPress={() => {setSelectedIndex(index)}}>
+    <Pressable style={index === selectedIndex? styles.itemSelected : styles.item}
+    onPress={() => {setSelectedIndex(index)}}>
       <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
+    </Pressable>
   );
 
   return (
@@ -105,22 +104,18 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const getItemCount = (data) => 50;
 
   const Item3 = ({title, index}) => (
-    <TouchableHighlight
+    <Pressable
       style={index === selectedIndex2 ? styles.itemSelected : styles.item}
-      activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
-      underlayColor={selectedSupport === 'None' ? '' : colors.border}
       onPress={() => {
         onPressSupport({index});
       }}>
       <Text style={styles.title}>{title}</Text>
-    </TouchableHighlight>
+    </Pressable>
   );
 
   const Item3CheckBox = ({title, index}) => (
-    <TouchableHighlight
+    <Pressable
       style={getList.includes(index) ? styles.itemSelected : styles.item}
-      activeOpacity={selectedSupport === 'None' ? 1 : 0.6}
-      underlayColor={selectedSupport === 'None' ? '' : colors.border}
       onPress={() => {
         onPressSupport({index});
       }}>
@@ -133,7 +128,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         />
         <Text style={styles.title}>{title}</Text>
       </View>
-    </TouchableHighlight>
+    </Pressable>
   );
 
   const onPressSupport = ({index}) => {
