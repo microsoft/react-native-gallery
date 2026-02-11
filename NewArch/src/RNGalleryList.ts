@@ -52,7 +52,7 @@ let RNGalleryCategories = [
   {label: 'Layout', icon: '\uE8A1'},
   {label: 'Media', icon: '\uE786'},
   {label: 'Scrolling', icon: '\uE8CB'},
-  {label: 'Status and Info', icon: '\uE8F2'},
+  // {label: 'Status and Info', icon: '\uE8F2'},
   {label: 'Text', icon: '\uE8D2'},
   {label: 'System', icon: '\uE7F8'},
   {label: 'Legacy', icon: '\uE96A'},
