@@ -6,5 +6,9 @@
     <ProjectReference Include="$(ProjectDir)..\..\node_modules\@react-native-clipboard\clipboard\windows\Clipboard\Clipboard.vcxproj">
       <Project>{90BFF18B-474B-445D-9847-B065853288D8}</Project>
     </ProjectReference>
+    <!-- Projects from react-native-config -->
+    <ProjectReference Include="$(ProjectDir)..\..\node_modules\react-native-config\windows\RNCConfig\RNCConfig.vcxproj">
+      <Project>{f1f427c9-66a2-4ed5-b482-3d583b6b20c7}</Project>
+    </ProjectReference>
   </ItemGroup>
 </Project>

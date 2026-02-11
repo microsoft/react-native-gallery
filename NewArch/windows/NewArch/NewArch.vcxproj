@@ -5,6 +5,7 @@
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <MinimalCoreWin>true</MinimalCoreWin>
+    <WindowsAppSDKVerifyTransitiveDependencies>false</WindowsAppSDKVerifyTransitiveDependencies>
     <ProjectGuid>{8481B8D7-6300-4DDF-9104-C7A4F1CAA241}</ProjectGuid>
     <ProjectName>rngallery</ProjectName>
     <Keyword>Win32Proj</Keyword>

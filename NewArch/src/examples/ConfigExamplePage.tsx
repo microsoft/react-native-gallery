@@ -3,14 +3,8 @@ import {Text} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
+import Config from 'react-native-config';
 import {useTheme} from '../Navigation';
-
-// Fallback config values when react-native-config is not installed
-const Config = {
-  SERVICE_URL: 'https://example.com',
-  SERVICE_PORT: '8080',
-  SERVICE_API_KEY: '74970b3d-0bfb-4611-ba1d-dff7209ecc39',
-};
 
 export const ConfigExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
