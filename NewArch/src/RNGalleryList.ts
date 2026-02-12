@@ -4,6 +4,7 @@ import type {ImageSourcePropType} from 'react-native';
 import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
 import {ComponentListPage} from './ComponentListPage';
+import {BlobUtilExamplePage} from './examples/BlobUtilExamplePage';
 import {ButtonExamplePage} from './examples/ButtonExamplePage';
 // import {CheckBoxExamplePage} from './examples/CheckBoxExamplePage';
 import {ClipboardExamplePage} from './examples/ClipboardExamplePage';
@@ -52,7 +53,7 @@ let RNGalleryCategories = [
   {label: 'Layout', icon: '\uE8A1'},
   {label: 'Media', icon: '\uE786'},
   {label: 'Scrolling', icon: '\uE8CB'},
-  // {label: 'Status and Info', icon: '\uE8F2'},
+  {label: 'Status and Info', icon: '\uE8F2'},
   {label: 'Text', icon: '\uE8D2'},
   {label: 'System', icon: '\uE7F8'},
   {label: 'Legacy', icon: '\uE96A'},
@@ -87,6 +88,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     component: ComponentListPage,
     textIcon: '\uE71D',
     type: '',
+  },
+  {
+    key: 'BlobUtil',
+    component: BlobUtilExamplePage,
+    textIcon: '\uE8B7',
+    subtitle: 'Perform file system operations using React Native Blob Util.',
+    type: 'Status and Info',
+    new: true,
   },
   {
     key: 'Button',
