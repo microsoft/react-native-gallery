@@ -10,8 +10,8 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
   const firstPressableRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
-  const [timesPressed, setTimesPressed] = useState(1);
-  const [pressed1, setPressed1] = useState(1);
+  const [timesPressed, setTimesPressed] = useState(0);
+  const [pressed1, setPressed1] = useState(0);
   const [currEvent, setCurrEvent] = useState('');
 
   const example1jsx = `<Pressable>
