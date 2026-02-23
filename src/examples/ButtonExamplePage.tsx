@@ -32,7 +32,7 @@ export const ButtonExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'Button Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Button.windows.js',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Button.windows.js',
         },
       ]}>
       <Example title="A simple Button." code={example1jsx}>

@@ -55,7 +55,7 @@ export const SwitchExamplePage: React.FunctionComponent<{route?: any; navigation
         },
         {
           label: 'Switch Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/SwitchViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Switch/Switch.windows.js',
         },
       ]}>
       <Example title="A simple Switch." code={example1jsx}>

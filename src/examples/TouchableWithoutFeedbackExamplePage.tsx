@@ -57,7 +57,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{}> =
           },
           {
             label: 'TouchableWithoutFeedback Source Code',
-            url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Touchable/TouchableWithoutFeedback.windows.js',
+            url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Touchable/TouchableWithoutFeedback.windows.js',
           },
         ]}>
         <Text style={{fontWeight: 'bold'}}>{pressableMsg}</Text>

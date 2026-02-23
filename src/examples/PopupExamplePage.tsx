@@ -177,7 +177,7 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'Popup Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Popup/Popup.js',
         },
       ]}>
       <Example title="A simple Popup." code={example1jsx}>

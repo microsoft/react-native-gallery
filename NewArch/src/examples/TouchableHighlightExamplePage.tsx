@@ -74,7 +74,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{navigation?
           },
           {
             label: 'TouchableHighlight Source Code',
-            url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Touchable/TouchableHighlight.windows.js',
+            url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Touchable/TouchableHighlight.windows.js',
           },
         ]}>
         <Example title="A simple TouchableHighlight." code={example1jsx}>
