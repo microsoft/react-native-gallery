@@ -179,7 +179,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> 
     </Text>
   </ScrollView>
 </View>`}>
-        <View>
+        <View style={{alignSelf: 'stretch'}}>
           <Text style={{marginBottom: 8, color: colors.text, fontSize: 12}}>
             Focus this ScrollView with Tab, then use Arrow Left/Right keys to scroll
           </Text>
@@ -194,7 +194,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> 
             } as any)}
             onScroll={(event: any) => setScrollOffset(event.nativeEvent.contentOffset.x)}
             scrollEventThrottle={16}>
-            <Text style={{color: colors.text}}>
+            <Text style={{color: colors.text, width: 2000}}>
               Here is a very long snippet of text. The goal is for this text to be
               too long to fit inside this view which has a width restriction, so you
               can use the arrow keys to scroll horizontally when this ScrollView is focused.
