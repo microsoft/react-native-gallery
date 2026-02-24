@@ -106,7 +106,7 @@ onPress={() => {}}>
         },
         {
           label: 'TouchableOpacity Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Touchable/TouchableOpacity.windows.js',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Touchable/TouchableOpacity.windows.js',
         },
       ]}>
       <Example title="A simple TouchableOpacity." code={example1jsx}>
