@@ -40,6 +40,7 @@ import {ExpanderExamplePage} from './examples/ExpanderExamplePage';
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 import {NetworkExamplePage} from './examples/NetworkExamplePage';
+import {PlatformColorExamplePage} from './examples/PlatformColorExamplePage';
 import {SvgExamplePage} from './examples/SvgExamplePage';
 import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage';
 
@@ -196,6 +197,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/ComboBox.png'),
     subtitle: 'A drop-down list of items a user can select from.',
     type: 'Basic Input',
+  },
+  {
+    key: 'PlatformColor',
+    component: PlatformColorExamplePage,
+    textIcon: '\uE790',
+    subtitle: 'Reference platform-specific colors that adapt to user themes and accessibility settings.',
+    type: 'System',
+    new: true,
   },
   {
     key: 'Popup',
