@@ -96,7 +96,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{}> = () => {
         },
         {
           label: 'ScrollView Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ScrollViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/ScrollView/ScrollView.windows.js',
         },
       ]}>
       <Example title="A simple ScrollView with text." code={example1jsx}>

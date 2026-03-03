@@ -118,7 +118,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         },
         {
           label: 'Modal Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/tree/main/vnext/Microsoft.ReactNative/Fabric/Composition/Modal',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Modal/Modal.windows.js',
         },
       ]}>
       <Example title="A simple Modal." code={example1jsx}>

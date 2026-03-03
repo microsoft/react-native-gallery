@@ -71,7 +71,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
         },
         {
           label: 'Text Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Text/Text.windows.js',
         },
       ]}>
       <Example ref={firstTextExampleRef} title="A simple line of Text." code={example1jsx}>

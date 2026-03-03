@@ -1552,7 +1552,7 @@ exports[`Button Example Page 1`] = `
                   "string": "Button Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Button.windows.js"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Button.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
           </View>
@@ -13072,7 +13072,7 @@ exports[`Flyout Example Page 1`] = `
                   "string": "Flyout",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/FlyoutViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Flyout/Flyout.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -16699,7 +16699,7 @@ exports[`Image Example Page 1`] = `
                   "string": "Image Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Image/Image.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -26508,7 +26508,7 @@ exports[`Popup Example Page 1`] = `
                   "string": "Popup Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/PopupViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Popup/Popup.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -29083,7 +29083,7 @@ exports[`Pressable Example Page 1`] = `
                   "string": "Pressable Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/src/Libraries/Components/Pressable/Pressable.windows.js"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Pressable/Pressable.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
           </View>
@@ -33950,7 +33950,7 @@ exports[`ScrollView Example Page 1`] = `
                   "string": "ScrollView Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ScrollViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/ScrollView/ScrollView.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -38705,7 +38705,7 @@ exports[`Switch Example Page 1`] = `
                   "string": "Switch Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/SwitchViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Switch/Switch.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -41278,7 +41278,7 @@ Here is a line
                   "string": "Text Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Text/Text.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -42807,7 +42807,7 @@ exports[`TextInput Example Page 1`] = `
                   "string": "TextInput Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextInputViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/TextInput/TextInput.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -45490,7 +45490,7 @@ exports[`TouchableHighlight Example Page 1`] = `
                   "string": "TouchableHighlight Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Touchable/TouchableHighlight.windows.js"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Touchable/TouchableHighlight.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
           </View>
@@ -48744,7 +48744,7 @@ onPress={
                   "string": "TouchableOpacity Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src/Libraries/Components/Touchable/TouchableOpacity.windows.js"
+              navigateUri="https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Touchable/TouchableOpacity.windows.js"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
           </View>
@@ -53815,7 +53815,7 @@ style={{
                   "string": "View Source Code",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewViewManager.h"
+              navigateUri="https://github.com/microsoft/react-native-windows/tree/main/vnext/src-win/Libraries/Components/View"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
             <XamlControl
@@ -53824,7 +53824,7 @@ style={{
                   "string": "Wrapped XAML Control: ViewPanel",
                 }
               }
-              navigateUri="https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/ViewPanel."
+              navigateUri="https://github.com/microsoft/react-native-windows/tree/main/vnext/src-win/Libraries/Components/View"
               type="Windows.UI.Xaml.Controls.HyperlinkButton"
             />
           </View>

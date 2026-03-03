@@ -10,8 +10,8 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
   const firstPressableRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
-  const [timesPressed, setTimesPressed] = useState(1);
-  const [pressed1, setPressed1] = useState(1);
+  const [timesPressed, setTimesPressed] = useState(0);
+  const [pressed1, setPressed1] = useState(0);
   const [currEvent, setCurrEvent] = useState('');
 
   const example1jsx = `<Pressable>
@@ -87,7 +87,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
         },
         {
           label: 'Pressable Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/src/Libraries/Components/Pressable/Pressable.windows.js',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/Pressable/Pressable.windows.js',
         },
       ]}>
       <Example title="A simple Pressable component." code={example1jsx}>

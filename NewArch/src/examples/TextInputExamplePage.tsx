@@ -75,7 +75,7 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
         },
         {
           label: 'TextInput Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/TextInputViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Components/TextInput/TextInput.windows.js',
         },
         {
           label: 'Wrapped XAML Control: PasswordBox',

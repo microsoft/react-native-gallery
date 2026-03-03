@@ -58,7 +58,7 @@ export const ImageExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         },
         {
           label: 'Image Source Code',
-          url: 'https://github.com/microsoft/react-native-windows/blob/master/vnext/Microsoft.ReactNative/Views/Image/ImageViewManager.h',
+          url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Image/Image.windows.js',
         },
       ]}>
       <Example ref={firstImageExampleRef} title="A simple Image from web source." code={example1jsx}>
