@@ -163,14 +163,11 @@ const DrawerListItem = React.forwardRef<Pressable, DrawerListItemProps>(
           </Text>
         </View>
         <Text
-        accessible={false}
-        style={styles.drawerText}
-        maxFontSizeMultiplier={1.5}
-        numberOfLines={1}
-        ellipsizeMode="tail"
-      >
-        {label}
-      </Text>
+          accessible={false}
+          style={[styles.drawerText, {flexShrink: 1}]}
+        >
+          {label}
+        </Text>
       </Pressable>
     );
   },
