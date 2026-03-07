@@ -41,6 +41,7 @@ import { ModalExamplePage } from './examples/ModalExamplePage'; // Fabric only
 import {VirtualizedListExamplePage} from './examples/VirtualizedListExamplePage';
 // import {LinearGradientExamplePage} from './examples/LinearGradientExamplePage';
 // import {NetworkExamplePage} from './examples/NetworkExamplePage';
+import {PlatformColorExamplePage} from './examples/PlatformColorExamplePage';
 // import {SvgExamplePage} from './examples/SvgExamplePage';
 // import {LottieAnimationsExamplePage} from './examples/LottieAnimationsExamplePage';
 
@@ -206,6 +207,14 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
   //   subtitle: 'Displays content on top of existing content.',
   //   type: 'Dialogs & flyouts',
   // },
+  {
+    key: 'PlatformColor',
+    component: PlatformColorExamplePage,
+    textIcon: '\uE790',
+    subtitle: 'Reference platform-specific colors that adapt to user themes and accessibility settings.',
+    type: 'System',
+    new: true,
+  },
   {
     key: 'Pressable',
     component: PressableExamplePage,
