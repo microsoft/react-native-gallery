@@ -173,9 +173,9 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           onPress={changeModal3}
           onAccessibilityTap={changeModal3}/>
           <View style={styles.container}>
-              <Text style={{fontWeight: 'bold'}}>Modal Events</Text>
-              <Text>onShow event Count = {onShowCount}</Text>
-              <Text>onDismiss event Count = {onDismissCount}</Text>
+              <Text style={{fontWeight: 'bold', color: colors.text}}>Modal Events</Text>
+              <Text style={{color: colors.text}}>onShow event Count = {onShowCount}</Text>
+              <Text style={{color: colors.text}}>onDismiss event Count = {onDismissCount}</Text>
               <Text style={styles.textStyle}> </Text>
             </View>
         <Modal
