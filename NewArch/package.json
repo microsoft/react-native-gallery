@@ -1,6 +1,6 @@
 {
   "name": "NewArch",
-  "version": "2.1.0.0",
+  "version": "2.1.2.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -15,8 +15,8 @@
     "@react-native-clipboard/clipboard": "^1.16.1",
     "lowlight": "^1.17.0",
     "react": "19.1.1",
-    "react-native": "0.82.0-rc.0",
-    "react-native-windows": "1.0.0"
+    "react-native": "0.82.1",
+    "react-native-windows": "0.82.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
