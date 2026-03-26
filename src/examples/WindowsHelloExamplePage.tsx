@@ -82,6 +82,22 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
                   Alert.alert(error.message);
                 });
             }}
+            onAccessibilityTap={() => {
+              SignIn.getDeviceStatus()
+                .then((result) => {
+                  if (result === availabilityStatus.Available) {
+                    Alert.alert('Biometric device available!', result.message);
+                  } else {
+                    Alert.alert(
+                      `Biometric device status: ${result.value}`,
+                      result.message,
+                    );
+                  }
+                })
+                .catch((error) => {
+                  Alert.alert(error.message);
+                });
+            }}
           />
         </View>
       </Example>
@@ -91,6 +107,22 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
             accessibilityLabel="Request user verification"
             title="Request user verification"
             onPress={() => {
+              SignIn.requestConsentVerification()
+                .then((result) => {
+                  if (result === verificationResult.Verified) {
+                    Alert.alert('User verified SUCCESSFULLY!', result.message);
+                  } else {
+                    Alert.alert(
+                      `User verification failed: ${result.value}`,
+                      result.message,
+                    );
+                  }
+                })
+                .catch((error) => {
+                  Alert.alert(error);
+                });
+            }}
+            onAccessibilityTap={() => {
               SignIn.requestConsentVerification()
                 .then((result) => {
                   if (result === verificationResult.Verified) {
@@ -117,6 +149,24 @@ export const WindowsHelloExamplePage: React.FunctionComponent<{}> = () => {
             accessibilityLabel="Request user verification"
             title="Request user verification"
             onPress={() => {
+              SignIn.requestConsentVerification(
+                'Custom message displayed in verification prompt.',
+              )
+                .then((result) => {
+                  if (result === verificationResult.Verified) {
+                    Alert.alert('User verified SUCCESSFULLY!', result.message);
+                  } else {
+                    Alert.alert(
+                      `User verification failed: ${result.value}`,
+                      result.message,
+                    );
+                  }
+                })
+                .catch((error) => {
+                  Alert.alert(error);
+                });
+            }}
+            onAccessibilityTap={() => {
               SignIn.requestConsentVerification(
                 'Custom message displayed in verification prompt.',
               )

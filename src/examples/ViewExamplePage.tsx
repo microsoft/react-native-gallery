@@ -3,9 +3,11 @@ import {View} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const ViewExamplePage: React.FunctionComponent<{}> = () => {
+export const ViewExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstViewExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = '<View />';
@@ -156,7 +158,7 @@ style={{
           url: 'https://github.com/microsoft/react-native-windows/tree/main/vnext/src-win/Libraries/Components/View',
         },
       ]}>
-      <Example title="A simple View." code={example1jsx}>
+      <Example ref={firstViewExampleRef} title="A simple View." code={example1jsx}>
         <View />
       </Example>
       <Example

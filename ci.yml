@@ -24,7 +24,7 @@ strategy:
     publish:
       UPGRADE: false
       PUBLISH_APP: true
-      VERSION_NAME: react-native-windows@0.71.0
+      VERSION_NAME: react-native-windows@1.0.0
 
 variables:
   - group: rngallery_Variables

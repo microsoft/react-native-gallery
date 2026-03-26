@@ -1,5 +1,5 @@
 import React from 'react';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
 import {Badge} from './Badge';
 import {Platform, PlatformColor} from 'react-native';
 
@@ -7,10 +7,10 @@ export function CommunityModuleBadge() {
   const {colors} = useTheme();
   return (
     <Badge
-      badgeColor={PlatformColor('AccentFillColorDefaultBrush')}
+      badgeColor={PlatformColor('AccentFillColorDefault')}
       textColor={
         Platform.OS === 'windows'
-          ? PlatformColor('TextOnAccentFillColorPrimaryBrush')
+          ? PlatformColor('TextOnAccentFillColorPrimary')
           : colors.border
       }
       badgeTitle="Community Module"

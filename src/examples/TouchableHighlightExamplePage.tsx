@@ -3,10 +3,12 @@ import {Text, TouchableHighlight, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
-  () => {
+export const TouchableHighlightExamplePage: React.FunctionComponent<{navigation?: any}> =
+  ({navigation}) => {
+    const firstTouchableHighlightRef = usePageFocusManagement(navigation);
     const [title, setTitle] = useState(0);
     const {colors} = useTheme();
 
@@ -19,6 +21,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.2}
   underlayColor={colors.border}>
   <Text style={{color: colors.text}}>TouchableHighlight</Text>
@@ -33,6 +36,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.6}
   underlayColor={colors.text}>
   <Text style={{color: 'white'}}>TouchableHighlight</Text>
@@ -47,6 +51,9 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
     alignItems: 'center',
   }}
   onPress={() => {
+    setTitle(title + 1);
+  }}
+  onAccessibilityTap={() => {
     setTitle(title + 1);
   }}
   activeOpacity={0.2}
@@ -72,8 +79,9 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         ]}>
         <Example title="A simple TouchableHighlight." code={example1jsx}>
           <TouchableHighlight
+            ref={firstTouchableHighlightRef}
             accessibilityRole="button"
-            accessibilityLabel={'example TouchableHighlight'}
+            accessibilityLabel={'TouchableHighlight'}
             style={{
               height: 40,
               backgroundColor:
@@ -85,6 +93,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
               alignItems: 'center',
             }}
             onPress={() => {}}
+            onAccessibilityTap={() => {}}
             activeOpacity={0.2}
             underlayColor={colors.border}>
             <Text style={{color: colors.text}}>TouchableHighlight</Text>
@@ -93,7 +102,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         <Example title="A colored TouchableHighlight." code={example2jsx}>
           <TouchableHighlight
             accessibilityRole="button"
-            accessibilityLabel={'example colored TouchableHighlight'}
+            accessibilityLabel={'TouchableHighlight'}
             style={{
               height: 40,
               backgroundColor: colors.primary,
@@ -102,6 +111,7 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
               alignItems: 'center',
             }}
             onPress={() => {}}
+            onAccessibilityTap={() => {}}
             activeOpacity={0.6}
             underlayColor={colors.text}>
             <Text style={{color: 'white'}}>TouchableHighlight</Text>
@@ -110,15 +120,12 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
         <Example title="A TouchableHighlight counter." code={example3jsx}>
           <TouchableHighlight
             accessibilityRole="button"
-            accessibilityLabel={'example TouchableHighlight counter'}
-            accessibilityHint={'click me to increase the example counter'}
-            accessibilityValue={{text: `${title}`}}
+            accessibilityLabel={`Counter: ${title}`}
+            accessibilityHint={'Tap to increase the counter'}
             style={{
               height: 40,
-              backgroundColor:
-                Platform.OS === 'windows'
-                  ? PlatformColor('SystemColorButtonFaceColor')
-                  : 'silver',
+              width:80,
+              backgroundColor: colors.primary,
               borderRadius: 3,
               justifyContent: 'center',
               alignItems: 'center',
@@ -126,9 +133,12 @@ export const TouchableHighlightExamplePage: React.FunctionComponent<{}> =
             onPress={() => {
               setTitle(title + 1);
             }}
+            onAccessibilityTap={() => {
+              setTitle(title + 1);
+            }}
             activeOpacity={0.2}
-            underlayColor={colors.text}>
-            <Text style={{color: colors.text}}>{String(title)}</Text>
+            underlayColor={'white'}>
+            <Text style={{color: 'white'}}>{String(title)}</Text>
           </TouchableHighlight>
         </Example>
       </Page>

@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <PropertyGroup Label="NuGet" Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
-    <ResolveNuGetPackages>false</ResolveNuGetPackages>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- Fix for circular dependency bug in CppWinRT -->
+    <!-- See: https://github.com/microsoft/cppwinrt/issues/1389 -->
+    <CppWinRTVersion>2.0.240405.15</CppWinRTVersion>
+    <!-- Workaround for MSB4006 circular dependency in CppWinRTComputeGetResolvedWinMD -->
+    <CppWinRTEnableComponentProjection>false</CppWinRTEnableComponentProjection>
   </PropertyGroup>
-
-  <!-- Replace Base.h with original React Native version for all vcxproj projects -->
-  <Target Name="ReplaceBaseHeader" BeforeTargets="Build" Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
-    <PropertyGroup>
-      <SourceUrl>https://raw.githubusercontent.com/facebook/react-native/e6848ba5ba997d102cbaf6181c7c8c73e25a0827/packages/react-native/ReactCommon/react/bridging/Base.h</SourceUrl>
-      <TargetPath>$(ReactNativeWindowsDir)Microsoft.ReactNative.Cxx\ReactCommon\react\bridging\Base.h</TargetPath>
-      <BackupPath>$(TargetPath).backup</BackupPath>
-    </PropertyGroup>
-    
-    <!-- Check if target directory exists -->
-    <Error Condition="!Exists('$([System.IO.Path]::GetDirectoryName($(TargetPath)))')" 
-           Text="Target directory does not exist. This should run after react-native-windows is installed." />
-        
-    <!-- Download and replace Base.h directly -->
-    <Message Text="Downloading and replacing Base.h file..." Importance="high" />
-    <DownloadFile SourceUrl="$(SourceUrl)" 
-                  DestinationFolder="$([System.IO.Path]::GetDirectoryName($(TargetPath)))" 
-                  DestinationFileName="$([System.IO.Path]::GetFileName($(TargetPath)))" 
-                  ContinueOnError="true">
-      <Output TaskParameter="DownloadedFile" PropertyName="DownloadedFile" />
-    </DownloadFile>
-        
-    <Message Text="Base.h replacement completed successfully!" Importance="high" />
-  </Target>
 </Project>

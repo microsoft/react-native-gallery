@@ -11,7 +11,7 @@ import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {Popup} from 'react-native-windows';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
 
 export const PopupExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();
@@ -183,8 +183,8 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A simple Popup." code={example1jsx}>
         <TouchableHighlight
           accessibilityRole="button"
-          accessibilityLabel={'example simple popup'}
-          accessibilityHint={'click me to open the popup'}
+          accessibilityLabel={'Open Popup'}
+          accessibilityHint={'Tap to open the popup'}
           style={{
             height: 40,
             width: 150,
@@ -197,6 +197,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             alignItems: 'center',
           }}
           onPress={() => {
+            setShowPopup1(true);
+          }}
+          onAccessibilityTap={() => {
             setShowPopup1(true);
           }}
           activeOpacity={0.2}
@@ -310,8 +313,8 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="A Popup with offset position." code={example3jsx}>
         <TouchableHighlight
           accessibilityRole="button"
-          accessibilityLabel={'example popup with offset position'}
-          accessibilityHint={'click me to open the popup'}
+          accessibilityLabel={'Open Popup'}
+          accessibilityHint={'Tap to open the popup'}
           style={{
             height: 40,
             width: 150,
@@ -324,6 +327,9 @@ export const PopupExamplePage: React.FunctionComponent<{}> = () => {
             alignItems: 'center',
           }}
           onPress={() => {
+            setShowPopup3(true);
+          }}
+          onAccessibilityTap={() => {
             setShowPopup3(true);
           }}
           activeOpacity={0.2}

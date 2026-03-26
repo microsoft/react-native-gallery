@@ -4,8 +4,12 @@ import {AccessibilityInfo, Button, Text, TextInput, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import Clipboard from '@react-native-clipboard/clipboard';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
+import {useTheme} from '../Navigation';
 
-export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
+export const ClipboardExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstClipboardButtonRef = usePageFocusManagement(navigation);
+  const {colors} = useTheme();
   const [textToCopy, setTextToCopy] = useState(
     'This text will be copied to the clipboard',
   );
@@ -43,9 +47,16 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
       <Example title="Copy text to the Clipboard." code={example1jsx}>
         <View style={{alignItems: 'flex-start', gap: 12}}>
           <Button
+            ref={firstClipboardButtonRef}
             accessibilityLabel="Copy text to the Clipboard"
             title="Copy text to the Clipboard"
             onPress={() => {
+              Clipboard.setString(textToCopy);
+              AccessibilityInfo.announceForAccessibility(
+                'Text copied to clipboard',
+              );
+            }}
+            onAccessibilityTap={() => {
               Clipboard.setString(textToCopy);
               AccessibilityInfo.announceForAccessibility(
                 'Text copied to clipboard',
@@ -56,6 +67,15 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
             accessibilityLabel="Example set text to copy"
             value={textToCopy}
             onChangeText={setTextToCopy}
+            style={{
+              backgroundColor: colors.card,
+              color: colors.text,
+              borderColor: colors.border,
+              borderWidth: 1,
+              padding: 8,
+              minHeight: 40,
+              borderRadius: 4,
+            }}
           />
         </View>
       </Example>
@@ -71,8 +91,14 @@ export const ClipboardExamplePage: React.FunctionComponent<{}> = () => {
                 'Text pasted from clipboard',
               );
             }}
+            onAccessibilityTap={() => {
+              getClipboardText();
+              AccessibilityInfo.announceForAccessibility(
+                'Text pasted from clipboard',
+              );
+            }}
           />
-          <Text>{textFromClipboard}</Text>
+          <Text style={{color: colors.text}}>{textFromClipboard}</Text>
         </View>
       </Example>
     </Page>

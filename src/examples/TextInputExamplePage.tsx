@@ -3,15 +3,17 @@ import {TextInput} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
+export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstTextInputExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
-  const [text1, setText1] = React.useState('');
-  const [text2, setText2] = React.useState('');
-  const [text3, setText3] = React.useState('');
-  const [text4, setText4] = React.useState('');
+  const [_text1, setText1] = React.useState('');
+  const [_text2, setText2] = React.useState('');
+  const [_text3, setText3] = React.useState('');
+  const [_text4, setText4] = React.useState('');
 
   const onChangeText1 = (text: string) => {
     setText1(text);
@@ -52,6 +54,7 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
   onChangeText={onChangeText4}
   value={text4}
   editable={false}
+  focusable={false}
   placeholder="Disabled TextInput..."
   placeholderTextColor={colors.primary}/>`;
 
@@ -81,13 +84,13 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
       ]}>
       <Example title="A simple TextInput." code={example1jsx}>
         <TextInput
+          ref={firstTextInputExampleRef}
           style={{
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
           }}
           onChangeText={onChangeText1}
-          value={text1}
           placeholder="A simple TextInput..."
         />
       </Example>
@@ -99,10 +102,14 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
+            paddingHorizontal: 8,
+            paddingVertical: 8,
+            textAlignVertical: 'top',
+            minHeight: 100,
           }}
           onChangeText={onChangeText2}
-          value={text2}
           multiline
+          scrollEnabled={false}
           placeholder="Enter multiline text input here..."
         />
       </Example>
@@ -119,7 +126,6 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
             color: colors.card,
           }}
           onChangeText={onChangeText3}
-          value={text3}
           placeholder="A colored TextInput with bolded and italicized text..."
           placeholderTextColor="rgb(0,0,0)"
         />
@@ -128,10 +134,10 @@ export const TextInputExamplePage: React.FunctionComponent<{}> = () => {
         title="A disabled TextInput with colored placeholder text."
         code={example4jsx}>
         <TextInput
-          style={{borderColor: colors.border, borderWidth: 1}}
+          style={{borderColor: colors.border, borderWidth: 1, color: colors.text}}
           onChangeText={onChangeText4}
-          value={text4}
           editable={false}
+          focusable={false}
           placeholder="Disabled TextInput..."
           placeholderTextColor={colors.primary}
         />

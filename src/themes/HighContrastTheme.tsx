@@ -1,4 +1,4 @@
-import {Theme} from '@react-navigation/native';
+import {Theme} from '../Navigation';
 import {AppTheme} from 'react-native-windows';
 
 const HighContrastTheme: Theme = {

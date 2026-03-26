@@ -31,7 +31,7 @@ const createButtonStyles = (isHovered: boolean, isPressing: boolean) =>
 type CopyToClipboardButtonProps = {
   content: string;
 };
-const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
+const CopyToClipboardButton = React.forwardRef<any, CopyToClipboardButtonProps>(({content}, ref) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const [isPressing, setIsPressing] = React.useState(false);
   const styles = createButtonStyles(isHovered, isPressing);
@@ -41,6 +41,7 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
 
   return (
     <Pressable
+      ref={ref}
       accessibilityRole="button"
       accessibilityLabel={helpText}
       tooltip={helpText}
@@ -52,12 +53,16 @@ const CopyToClipboardButton = ({content}: CopyToClipboardButtonProps) => {
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}
       onHoverIn={() => setIsHovered(true)}
-      onHoverOut={() => setIsHovered(false)}>
+      onHoverOut={() => setIsHovered(false)}
+      onAccessibilityTap={() => {
+        Clipboard.setString(content);
+        AccessibilityInfo.announceForAccessibility('Text copied to clipboard');
+      }}>
       <Text accessible={false} style={styles.text}>
         {copyIcon}
       </Text>
     </Pressable>
   );
-};
+});
 
 export {CopyToClipboardButton};

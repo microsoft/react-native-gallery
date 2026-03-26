@@ -145,14 +145,15 @@ const Player = () => {
       <View style={styles.container}>
         <ProgressBar />
         <View style={styles.controls}>
-          <Button accessibilityLabel="Play" title="Play" onPress={onPlay} />
-          <Button accessibilityLabel="Pause" title="Pause" onPress={onPause} />
-          <Button accessibilityLabel="Stop" title="Stop" onPress={onStop} />
-          <Button accessibilityLabel="Next" title="Next" onPress={onNext} />
+          <Button accessibilityLabel="Play" title="Play" onPress={onPlay} onAccessibilityTap={onPlay} />
+          <Button accessibilityLabel="Pause" title="Pause" onPress={onPause} onAccessibilityTap={onPause} />
+          <Button accessibilityLabel="Stop" title="Stop" onPress={onStop} onAccessibilityTap={onStop} />
+          <Button accessibilityLabel="Next" title="Next" onPress={onNext} onAccessibilityTap={onNext} />
           <Button
             accessibilityLabel="Previous"
             title="Previous"
             onPress={onPrevious}
+            onAccessibilityTap={onPrevious}
           />
         </View>
       </View>
