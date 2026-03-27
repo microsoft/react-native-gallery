@@ -122,7 +122,7 @@ const HomeComponentTile = React.forwardRef<any, HomeComponentTileProps>(
       ) : (
         <View>
           <Image
-            source={require('../../assets/ControlImages/Placeholder.png')}
+            source={require('../assets/ControlImages/Placeholder.png')}
             style={styles.controlItemIcon}
             accessible={true}
             accessibilityRole="image"

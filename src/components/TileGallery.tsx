@@ -130,7 +130,7 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
       <Image
         accessible={true}
         accessibilityRole="image"
-        source={require('../../assets/HomeHeaderTiles/Header-WinUIGallery.png')}
+        source={require('../assets/HomeHeaderTiles/Header-WinUIGallery.png')}
         style={{width: 56, height: 56}}
       />
     </HeaderTile>,
@@ -141,7 +141,7 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
       <Image
         accessible={true}
         accessibilityRole="image"
-        source={require('../../assets/HomeHeaderTiles/tiny_logo.png')}
+        source={require('../assets/HomeHeaderTiles/tiny_logo.png')}
         style={{width: 64, height: 64}}
       />
     </HeaderTile>,
@@ -152,7 +152,7 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
       <Image
         accessible={true}
         accessibilityRole="image"
-        source={require('../../assets/HomeHeaderTiles/Header-WindowsDesign.png')}
+        source={require('../assets/HomeHeaderTiles/Header-WindowsDesign.png')}
         style={{width: 64, height: 64}}
       />
     </HeaderTile>,
@@ -163,7 +163,7 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
       <Image
         accessible={true}
         accessibilityRole="image"
-        source={require('../../assets/HomeHeaderTiles/github-mark.png')}
+        source={require('../assets/HomeHeaderTiles/github-mark.png')}
         style={{width: 64, height: 64}}
       />
     </HeaderTile>,
@@ -203,8 +203,8 @@ const TileGallery = ({ firstTileRef }: { firstTileRef?: React.RefObject<any> }) 
         accessibilityRole="image"
         source={
           colorScheme === 'dark'
-            ? require('../../assets/HomeHeaderTiles/Header-Store.dark.png')
-            : require('../../assets/HomeHeaderTiles/Header-Store.light.png')
+            ? require('../assets/HomeHeaderTiles/Header-Store.dark.png')
+            : require('../assets/HomeHeaderTiles/Header-Store.light.png')
         }
         style={{width: 64, height: 64}}
       />

@@ -9,7 +9,7 @@
 
       See https://microsoft.github.io/react-native-windows/docs/new-architecture
     -->
-    <Rnwrngallery>true</Rnwrngallery>
+    <RnwNewArch>true</RnwNewArch>
 
     <!--
       Changes compilation to assume use of Microsoft.ReactNative NuGet packages
@@ -22,9 +22,6 @@
     <UseExperimentalNuget>true</UseExperimentalNuget>
 
     <ReactExperimentalFeaturesSet>true</ReactExperimentalFeaturesSet>
-
-    <!-- Suppress Windows App SDK transitive dependency verification -->
-    <WindowsAppSDKVerifyTransitiveDependencies>false</WindowsAppSDKVerifyTransitiveDependencies>
   </PropertyGroup>
 
 </Project>
