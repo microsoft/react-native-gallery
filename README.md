@@ -1,6 +1,6 @@
 # React Native Gallery
 
-Welcome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support. React Native Gallery uses the Fabric (New Architecture) renderer with `react-native-windows`. React Native Gallery is currently live in the Microsoft Store! Follow the link to [download](https://www.microsoft.com/en-us/p/react-native-gallery/9npg0b292h4r).
+Welcome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support. React Native Gallery uses the Fabric (New Architecture) renderer with `react-native-windows`. React Native Gallery is currently live in the Microsoft Store! Follow the link to [download](https://apps.microsoft.com/detail/9NSQT9WCCMBD?hl=en-us&gl=US&ocid=pdpshare).
 
 ![gallery_welcome](./assets/GallerySnapshot.png)
 
