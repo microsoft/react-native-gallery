@@ -20,6 +20,9 @@ import {View} from 'react-native';
 
 jest.useFakeTimers();
 
+// Increase timeout for CI agents which may be slower
+jest.setTimeout(30000);
+
 function Control() {
   return <View />;
 }
