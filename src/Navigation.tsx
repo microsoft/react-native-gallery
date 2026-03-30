@@ -337,7 +337,7 @@ const createDrawerNavigator = () => {
 };
 
 const getDrawerStatusFromState = (state: any) => {
-  return state.drawerIsOpen ? 'open' : 'closed';
+  return state?.drawerIsOpen ? 'open' : 'closed';
 };
 
 const useIsFocused = () => {
