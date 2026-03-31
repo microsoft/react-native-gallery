@@ -1,0 +1,194 @@
+{
+  "TotalTests": 17,
+  "TotalErrors": 16,
+  "Results": [
+    {
+      "TestName": "TestNavigateToClipboardAndValidate",
+      "ErrorCount": 1,
+      "Errors": [
+        {
+          "RuleId": 2,
+          "Description": "An on-screen element must not have a null BoundingRectangle property.",
+          "HowToFix": "If the element is off-screen, set its IsOffscreen property to true.\r\nIf the element is on-screen, provide a BoundingRectangle property.",
+          "Element": "RuntimeId: [2A,40CF8,4,88CE], ProcessId: 26036, ControlType: Text(50020), LocalizedControlType: text, HasKeyboardFocus: False, IsKeyboardFocusable: False, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=0,h=0]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToTouchableWithoutFeedbackAndValidate",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "RuntimeId: [2A,40CF8,4,D128], BoundingRectangle: [l=-1322,t=1279,r=-1282,b=1329], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Decrease counter. Current value is 0, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, HelpText: Decreases the counter by 1, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=40,h=50]"
+        },
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "RuntimeId: [2A,40CF8,4,D130], BoundingRectangle: [l=-1212,t=1279,r=-1172,b=1329], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Increase counter. Current value is 0, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, HelpText: Increases the counter by 1, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=40,h=50]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToTextAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToButtonAndValidate",
+      "ErrorCount": 6,
+      "Errors": [
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "RuntimeId: [2A,40CF8,4,848A], BoundingRectangle: [l=-1300,t=226,r=-1195,b=264], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Simple Button, HasKeyboardFocus: True, IsKeyboardFocusable: True, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=105,h=38]"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "RuntimeId: [2A,40CF8,4,848A], BoundingRectangle: [l=-1300,t=226,r=-1195,b=264], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Simple Button, HasKeyboardFocus: True, IsKeyboardFocusable: True, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=105,h=38]"
+        },
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "RuntimeId: [2A,40CF8,4,84C4], BoundingRectangle: [l=-1304,t=413,r=-1191,b=450], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: colored button, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=113,h=37]"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "RuntimeId: [2A,40CF8,4,84C4], BoundingRectangle: [l=-1304,t=413,r=-1191,b=450], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: colored button, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=113,h=37]"
+        },
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "RuntimeId: [2A,40CF8,4,84FE], BoundingRectangle: [l=-1306,t=600,r=-1189,b=637], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Disabled Button, HasKeyboardFocus: False, IsKeyboardFocusable: False, IsEnabled: False, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=117,h=37]"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "RuntimeId: [2A,40CF8,4,84FE], BoundingRectangle: [l=-1306,t=600,r=-1189,b=637], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Disabled Button, HasKeyboardFocus: False, IsKeyboardFocusable: False, IsEnabled: False, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=117,h=37]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToScrollViewAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToImageAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToFlatListAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToTouchableOpacityAndValidate",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "RuntimeId: [2A,40CF8,4,C9DC], BoundingRectangle: [l=-1342,t=1452,r=-1292,b=1492], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Decrease counter. Current value is 0, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, HelpText: Decreases the counter by 1, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=50,h=40]"
+        },
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "RuntimeId: [2A,40CF8,4,C9E6], BoundingRectangle: [l=-1202,t=1452,r=-1152,b=1492], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Increase counter. Current value is 0, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, HelpText: Increases the counter by 1, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=50,h=40]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToSettingsAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestZNavigation",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "RuntimeId: [2A,40CF8,4,E118], BoundingRectangle: [l=-2544,t=-26,r=-2206,b=8], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Button, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=338,h=34]"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "RuntimeId: [2A,40CF8,4,E118], BoundingRectangle: [l=-2544,t=-26,r=-2206,b=8], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Button, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=338,h=34]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToViewAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToPressableAndValidate",
+      "ErrorCount": 1,
+      "Errors": [
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "RuntimeId: [2A,40CF8,4,A468], BoundingRectangle: [l=-1317,t=429,r=-1177,b=479], ProcessId: 26036, ControlType: Button(50000), LocalizedControlType: button, Name: Disabled Pressable, HasKeyboardFocus: False, IsKeyboardFocusable: True, IsEnabled: False, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=140,h=50]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToTouchableHighlightAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToTextInputAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToSwitchAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToModalAndValidate",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 2,
+          "Description": "An on-screen element must not have a null BoundingRectangle property.",
+          "HowToFix": "If the element is off-screen, set its IsOffscreen property to true.\r\nIf the element is on-screen, provide a BoundingRectangle property.",
+          "Element": "RuntimeId: [2A,40CF8,4,9E76], ProcessId: 26036, ControlType: Text(50020), LocalizedControlType: text, Name:  , HasKeyboardFocus: False, IsKeyboardFocusable: False, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=0,h=0]"
+        },
+        {
+          "RuleId": 133,
+          "Description": "The Name property must not contain only whitespace.",
+          "HowToFix": "Provide a UI Automation Name property that concisely identifies the element.",
+          "Element": "RuntimeId: [2A,40CF8,4,9E76], ProcessId: 26036, ControlType: Text(50020), LocalizedControlType: text, Name:  , HasKeyboardFocus: False, IsKeyboardFocusable: False, IsEnabled: True, Culture: 0, IsControlElement: True, IsContentElement: True, IsPassword: False, NativeWindowHandle: 0, IsOffscreen: False, Orientation: None(0), IsRequiredForForm: False, IsDataValidForForm: False, ProviderDescription: [pid:26036,providerId:0x0 Main(parent link):Unidentified Provider (unmanaged:Microsoft.ReactNative.dll)], OptimizeForVisualContent: False, LiveSetting: 0, IsPeripheral: False, FillType: 0, VisualEffects: 0, HeadingLevel: HeadingLevel_None (80050), IsDialog: False, LogicalSize: [w=0,h=0]"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToHomeAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    }
+  ]
+}
