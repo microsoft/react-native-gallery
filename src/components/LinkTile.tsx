@@ -1,9 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {PlatformColor, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {useTheme} from '@react-navigation/native';
-import {HyperlinkButton} from 'react-native-xaml';
+import {useTheme} from '../Navigation';
+// import {HyperlinkButton} from 'react-native-xaml';
+import { Hyperlink } from './Controls';
 
-const createStyles = (colors: any) =>
+const createStyles = () =>
   StyleSheet.create({
     hyperlinkTile: {
       marginTop: 30,
@@ -14,7 +15,7 @@ const createStyles = (colors: any) =>
     hyperlinkTileTitle: {
       marginBottom: 10,
       fontSize: 20,
-      color: colors.text,
+      color: PlatformColor('TextControlForeground'),
     },
   });
 
@@ -26,14 +27,14 @@ export function LinkTile(props: {
   const styles = createStyles(colors);
   return (
     <View style={styles.hyperlinkTile}>
-      <Text accessibilityRole="header" style={styles.hyperlinkTileTitle}>
+      <Text accessibilityRole="header" accessibilityLevel={2} style={styles.hyperlinkTileTitle}>
         {props.title}
       </Text>
       {props.links.map((hyp) => (
-        <HyperlinkButton
+        <Hyperlink
           key={hyp.label}
-          content={{string: hyp.label}}
-          navigateUri={hyp.url}
+          text={hyp.label}
+          url={hyp.url}
         />
       ))}
     </View>

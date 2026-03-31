@@ -1,12 +1,13 @@
 'use strict';
 import {StyleSheet, View, Text, ScrollView, PlatformColor} from 'react-native';
 import React from 'react';
-import {useIsFocused} from '@react-navigation/native';
+import {useIsFocused, useTheme} from './Navigation';
 import RNGalleryList, {RNGalleryCategories} from './RNGalleryList';
 import {ScreenWrapper} from './components/ScreenWrapper';
 import {HomeComponentTile} from './components/ControlItem';
+import {usePageFocusManagement} from './hooks/usePageFocusManagement';
 
-const createStyles = () =>
+const createStyles = (colors: any) =>
   StyleSheet.create({
     container: {
       padding: 10,
@@ -25,13 +26,14 @@ const createStyles = () =>
       marginTop: 30,
       marginBottom: 10,
       fontSize: 20,
+      color: colors.text,
     },
     heading: {
       marginTop: 30,
       marginBottom: 10,
       fontSize: 20,
       fontWeight: '600',
-      color: PlatformColor('TextFillColorPrimaryBrush'),
+      color: PlatformColor('TextFillColorPrimary'),
     },
     homeContainer: {
       alignItems: 'flex-start',
@@ -44,25 +46,29 @@ type ListOfComponentsProps = {
   navigation: any;
   heading: string;
   items: any[];
+  firstTileRef?: React.RefObject<View>;
 };
 const ListOfComponents = ({
   navigation,
   heading,
   items,
+  firstTileRef,
 }: ListOfComponentsProps) => {
-  const styles = createStyles();
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   return (
     <View
       accessibilityLabel={heading + 'components'}
       accessible={true}
-      accessibilityRole="none">
-      <Text accessibilityRole="header" style={styles.heading}>
+      accessibilityRole="group">
+      <Text accessibilityRole="header" accessibilityLevel={2} style={styles.heading}>
         {heading}
       </Text>
       <View style={styles.controlItems}>
-        {items.map((item) => (
+        {items.map((item, index) => (
           <HomeComponentTile
             key={item.key}
+            ref={index === 0 ? firstTileRef : undefined}
             item={item}
             navigation={navigation}
           />
@@ -73,23 +79,31 @@ const ListOfComponents = ({
 };
 
 type GroupedListOfAllComponentsProps = {
-  route: any;
   navigation: any;
+  firstTileRef?: React.RefObject<View>;
 };
 const GroupedListOfAllComponents = ({
-  route,
   navigation,
+  firstTileRef,
 }: GroupedListOfAllComponentsProps) => {
   return (
     <View>
-      {RNGalleryCategories.map((category) => (
-        <ListOfComponents
-          key={category.label}
-          navigation={navigation}
-          heading={category.label}
-          items={RNGalleryList.filter((item) => item.type === category.label)}
-        />
-      ))}
+      {RNGalleryCategories.map((category, categoryIndex) => {
+        const items = RNGalleryList.filter((item) => item.type === category.label);
+        if (items.length === 0) {
+          return null;
+        }
+        
+        return (
+          <ListOfComponents
+            key={category.label}
+            navigation={navigation}
+            heading={category.label}
+            items={items}
+            firstTileRef={categoryIndex === 0 ? firstTileRef : undefined}
+          />
+        );
+      })}
     </View>
   );
 };
@@ -99,7 +113,9 @@ type ComponentListPageProps = {
   navigation: any;
 };
 const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
-  const styles = createStyles();
+  const firstTileRef = usePageFocusManagement(navigation);
+  const {colors} = useTheme();
+  const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
 
   const category = route.params?.category;
@@ -114,16 +130,18 @@ const ComponentListPage = ({route, navigation}: ComponentListPageProps) => {
                 navigation={navigation}
                 heading={category}
                 items={RNGalleryList.filter((item) => item.type === category)}
+                firstTileRef={firstTileRef}
               />
             </View>
           ) : (
             <View style={styles.container}>
-              <Text accessibilityRole={'header'} style={styles.title}>
+              <Text accessibilityRole={'header'} accessibilityLevel={1} style={styles.title}>
                 All samples
               </Text>
               <GroupedListOfAllComponents
                 route={route}
                 navigation={navigation}
+                firstTileRef={firstTileRef}
               />
             </View>
           )}

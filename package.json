@@ -1,100 +1,63 @@
 {
   "name": "rngallery",
-  "version": "2.0.2.0",
+  "version": "2.1.2.0",
+  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "lint": "eslint .",
     "start": "react-native start",
-    "test": "react-native rnx-test --platform windows",
-    "test:update": "react-native rnx-test --platform windows -u",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest",
     "windows": "npx @react-native-community/cli run-windows",
-    "postinstall": "patch-package"
+    "test:windows": "jest --config jest.config.windows.js"
   },
   "dependencies": {
-    "@fluentui-react-native/experimental-expander": "^0.6.1",
-    "@react-native-clipboard/clipboard": "^1.14.0",
-    "@react-native-community/checkbox": "^0.5.16",
-    "@react-native-community/datetimepicker": "^7.6.0",
-    "@react-native-community/masked-view": "^0.1.11",
-    "@react-native-community/progress-view": "^1.5.0",
-    "@react-native-community/slider": "^4.4.2",
-    "@react-native-picker/picker": "2.4.10",
-    "@react-native/metro-config": "0.81.5",
-    "@react-navigation/drawer": "7.7.7",
-    "@react-navigation/native": "7.1.23",
-    "@react-navigation/stack": "^6.3.12",
-    "@rnx-kit/metro-config": "^2.1.2",
-    "@types/jest": "^29.5.3",
-    "@wwimmo/react-native-sketch-canvas": "^0.8.5",
-    "eslint-plugin-ft-flow": "^3.0.11",
-    "lottie-react-native": "^5.1.6",
+    "@react-native-clipboard/clipboard": "^1.16.1",
     "lowlight": "^1.17.0",
-    "patch-package": "^7.0.0",
-    "postinstall-postinstall": "^2.1.0",
-    "react": "19.1.0",
-    "react-native": "0.81.5",
-    "react-native-config": "^1.5.2",
-    "react-native-device-info": "10.7.0",
-    "react-native-gesture-handler": "2.9.0",
-    "react-native-linear-gradient": "3.0.0-alpha.1",
-    "react-native-permissions": "^3.8.1",
-    "react-native-print": "0.8.0",
-    "react-native-reanimated": "3.8.1",
-    "react-native-safe-area-context": "^4.2.4",
-    "react-native-screens": "^2.9.0",
-    "react-native-sensitive-info": "6.0.0-alpha.9",
-    "react-native-svg": "15.3.0",
-    "react-native-track-player": "JaneaSystems/react-native-track-player#windows_cpp2",
-    "react-native-tts": "ak1394/react-native-tts",
-    "react-native-webview": "^13.2.2",
-    "react-native-windows": "0.81.0",
-    "react-native-xaml": "^0.0.78"
+    "react": "19.1.1",
+    "react-native": "0.82.1",
+    "react-native-windows": "0.82.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
-    "@babel/runtime": "^7.20.0",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "20.1.2",
+    "@react-native-community/cli-platform-android": "20.1.2",
+    "@react-native-community/cli-platform-ios": "20.1.2",
     "@react-native/babel-preset": "0.81.5",
     "@react-native/eslint-config": "0.81.5",
     "@react-native/metro-config": "0.81.5",
     "@react-native/typescript-config": "0.81.5",
-    "@rnx-kit/cli": "^0.18.10",
-    "@rnx-kit/jest-preset": "^0.3.0",
-    "@rnx-kit/metro-plugin-duplicates-checker": "^3.0.2",
-    "@rnx-kit/metro-serializer": "^2.0.3",
-    "@types/lowlight": "^0.0.1",
-    "@types/metro-config": "^0.76.3",
-    "@types/react": "^19.1.0",
-    "@types/react-test-renderer": "^19.0.0",
-    "babel-jest": "^29.6.3",
+    "@rnx-kit/jest-preset": "^0.1.17",
+    "@types/jest": "^29.5.13",
+    "@types/react": "19.1.0",
+    "@types/react-test-renderer": "19.1.0",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
-    "metro-config": "^0.83.3",
     "prettier": "2.8.8",
-    "react-native-windows-hello": "^1.1.0",
     "react-test-renderer": "19.1.0",
     "typescript": "5.0.4"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "jest": {
-    "preset": "@rnx-kit/jest-preset",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/lib/"
-    ],
+    "preset": "react-native",
+    "globals": {
+      "__DEV__": true
+    },
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|react-native-xaml|@react-native|react-native-windows|react-native-config|@react-native-community|react-native-print|react-native-webview|react-native-windows-hello|react-native-permissions|react-native-tts|react-native-gesture-handler|@react-navigation)/)"
+      "node_modules/(?!(react-native|@react-native|react-native-windows|@react-native-clipboard)/)"
     ],
+    "moduleNameMapper": {
+      "^react-native-windows$": "<rootDir>/jest-mocks/react-native-windows.js",
+      "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/jest-mocks/fileMock.js"
+    },
     "setupFiles": [
       "<rootDir>/jest-setup.js"
     ]
   },
-  "main": "src/index.js",
-  "module": "lib/module/index.js",
-  "types": "lib\\typescript\\src\\index.d.ts",
-  "files": [
-    "src",
-    "lib"
-  ],
   "eslintIgnore": [
     "node_modules/",
     "lib/"
@@ -104,7 +67,7 @@
     "init-windows": {
       "name": "rngallery",
       "namespace": "rngallery",
-      "template": "old/uwp-cpp-app"
+      "template": "cpp-app"
     }
   }
 }

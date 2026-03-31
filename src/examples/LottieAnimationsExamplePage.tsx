@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {Button, Platform, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import LottieView, {AnimatedLottieViewProps} from 'lottie-react-native';
+import LottieView from 'lottie-react-native';
 
 export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
   const [loop, setLoop] = useState(true);
@@ -100,18 +100,15 @@ export const LottieAnimationsExamplePage: React.FunctionComponent<{}> = () => {
           }}
         />
         <View style={{flexDirection: 'row', gap: 12}}>
-          <Button onPress={onPlay} title="play" accessibilityLabel="Play" />
-          <Button onPress={onPause} title="pause" accessibilityLabel="Pause" />
-          <Button
-            onPress={onResume}
-            title="resume"
-            accessibilityLabel="Resume"
-          />
-          <Button onPress={onReset} title="reset" accessibilityLabel="Reset" />
+          <Button onPress={onPlay} title="play" accessibilityLabel="Play" onAccessibilityTap={onPlay} />
+          <Button onPress={onPause} title="pause" accessibilityLabel="Pause" onAccessibilityTap={onPause} />
+          <Button onPress={onResume} title="resume" accessibilityLabel="Resume" onAccessibilityTap={onResume} />
+          <Button onPress={onReset} title="reset" accessibilityLabel="Reset" onAccessibilityTap={onReset} />
           <Button
             onPress={handlerChangeLoop}
             title={loop ? 'Disable loop' : 'Resume loop'}
             accessibilityLabel={loop ? 'Disable loop' : 'Resume loop'}
+            onAccessibilityTap={handlerChangeLoop}
           />
         </View>
       </Example>

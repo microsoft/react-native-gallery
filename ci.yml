@@ -24,7 +24,7 @@ strategy:
     publish:
       UPGRADE: false
       PUBLISH_APP: true
-      VERSION_NAME: react-native-windows@0.71.0
+      VERSION_NAME: react-native-windows@1.0.0
 
 variables:
   - group: rngallery_Variables
@@ -33,7 +33,7 @@ variables:
 
 pool:
   name: rnw-pool-4
-  demands: ImageOverride -equals rnw-img-vs2022-node18
+  demands: ImageOverride -equals rnw-img-vs2022-node22
 
 steps:
   - checkout: self
@@ -46,7 +46,7 @@ steps:
   - task: NodeTool@0
     displayName: Installing Node
     inputs:
-      versionSpec: '18.x'
+      versionSpec: '22.x'
 
   - task: CmdLine@2
     displayName: Upgrade react-native-windows Version
@@ -59,17 +59,17 @@ steps:
     inputs:
       script: npm install -g yarn
 
+  - task: CmdLine@2
+    displayName: yarn
+    inputs:
+      script: yarn install --immutable
+
   - task: NuGetCommand@2
     displayName: NuGet restore
     inputs:
       command: restore
       restoreSolution: windows/rngallery.sln
       verbosityRestore: Detailed
-
-  - task: CmdLine@2
-    displayName: yarn
-    inputs:
-      script: yarn install --immutable
 
   - task: CmdLine@2
     displayName: Lint and Type Checks

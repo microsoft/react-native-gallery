@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import SInfo, {RNSensitiveInfoOptions} from 'react-native-sensitive-info';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
 
 const SensitiveCredentials: RNSensitiveInfoOptions = {
   sharedPreferencesName: 'mySharedPrefs',
@@ -98,6 +98,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             color={colors.primary}
             onPress={setItem}
             title="Set Item"
+            onAccessibilityTap={setItem}
           />
         </View>
         <View style={{flex: 1, flexDirection: 'row', margin: 10}}>
@@ -117,6 +118,7 @@ export const SensitiveInfoExamplePage: React.FunctionComponent<{}> = () => {
             color={colors.primary}
             onPress={getItem}
             title="Get Item"
+            onAccessibilityTap={getItem}
           />
         </View>
       </Example>

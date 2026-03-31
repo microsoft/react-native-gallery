@@ -1,6 +1,6 @@
 # React Native Gallery
 
-Welcome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support. React Native Gallery is currently live in the Microsoft Store! Follow the link to [download](https://www.microsoft.com/en-us/p/react-native-gallery/9npg0b292h4r).
+Welcome to React Native Gallery. A React Native Windows application which displays the range of React Native components with Windows support. React Native Gallery uses the Fabric (New Architecture) renderer with `react-native-windows`. React Native Gallery is currently live in the Microsoft Store! Follow the link to [download](https://apps.microsoft.com/detail/9NSQT9WCCMBD?hl=en-us&gl=US&ocid=pdpshare).
 
 ![gallery_welcome](./assets/GallerySnapshot.png)
 
@@ -11,8 +11,6 @@ If you wish to build React Native Gallery on your computer locally, follow the f
 1. Clone the repository.
 2. In the root directory of the repository on your device, run `yarn`.
 3. In the same directory run `npx react-native run-windows`.
-
-**Note: First builds will take considerably longer than subsequent builds due to the number of community modules consumed by the React Native Gallery**
 
 # Contributing
 

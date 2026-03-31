@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Code} from './Code';
-import {StyleSheet, PlatformColor, Text, View} from 'react-native';
+import {StyleSheet, PlatformColor, Text, View, Dimensions} from 'react-native';
 import {CopyToClipboardButton} from './CopyToClipboard';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
 
-const createStyles = (colors: any) =>
-  StyleSheet.create({
+const createStyles = (colors: any, windowWidth: number) => {
+  const isSmallScreen = windowWidth < 600;
+  const padding = isSmallScreen ? 8 : 15;
+  
+  return StyleSheet.create({
     title: {
-      marginTop: 30,
+      marginTop: isSmallScreen ? 20 : 30,
       marginBottom: 10,
-      fontSize: 20,
-      color: colors.text,
+      fontSize: isSmallScreen ? 18 : 20,
+      color: PlatformColor('TextControlForeground'),
     },
     box: {
       borderRadius: 8,
@@ -18,28 +21,42 @@ const createStyles = (colors: any) =>
       borderColor: colors.border,
     },
     exampleContainer: {
-      padding: 15,
-      backgroundColor: PlatformColor('SolidBackgroundFillColorSecondaryBrush'),
+      padding: padding,
+      backgroundColor: PlatformColor('Background'),
+      minHeight: isSmallScreen ? 40 : 50,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     codeContainer: {
       borderWidth: 0,
       borderTopWidth: 1,
       borderColor: colors.border,
-      padding: 12,
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      padding: isSmallScreen ? 8 : 12,
+      backgroundColor: PlatformColor('Background'),
     },
   });
+};
 
-export function Example(props: {
+export const Example = React.forwardRef<any, {
   title: string;
   code: string;
   children: React.ReactNode;
-}) {
+}>((props, ref) => {
   const {colors} = useTheme();
-  const styles = createStyles(colors);
+  const [windowDimensions, setWindowDimensions] = useState(Dimensions.get('window'));
+
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({window}) => {
+      setWindowDimensions(window);
+    });
+
+    return () => subscription?.remove();
+  }, []);
+
+  const styles = createStyles(colors, windowDimensions.width);
   return (
     <View>
-      <Text accessibilityRole={'header'} style={styles.title}>
+      <Text accessibilityRole={'header'} accessibilityLevel={3} style={styles.title}>
         {props.title}
       </Text>
       {props.code ? (
@@ -52,7 +69,7 @@ export function Example(props: {
             accessibilityLabel="Source code">
             <Code>{props.code}</Code>
             <View style={{position: 'absolute', right: 12, top: 12}}>
-              <CopyToClipboardButton content={props.code} />
+              <CopyToClipboardButton ref={ref} content={props.code} />
             </View>
           </View>
         </View>
@@ -63,4 +80,4 @@ export function Example(props: {
       )}
     </View>
   );
-}
+});

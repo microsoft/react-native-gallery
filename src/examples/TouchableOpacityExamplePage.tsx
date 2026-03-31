@@ -1,14 +1,20 @@
 'use strict';
-import {Text, TouchableOpacity, Platform, PlatformColor} from 'react-native';
+import {Text, TouchableOpacity, Platform, PlatformColor, View, AccessibilityInfo} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
+export const TouchableOpacityExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstTouchableOpacityRef = usePageFocusManagement(navigation);
   const [title, setTitle] = useState(0);
   const [focus, setFocus] = useState(false);
   const {colors} = useTheme();
+
+  const announceCounterChange = (newValue: number, action: string) => {
+    AccessibilityInfo.announceForAccessibility(`Counter ${action} to ${newValue}`);
+  };
 
   const example1jsx = `<TouchableOpacity
   style={{
@@ -20,6 +26,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.5}>
   <Text style={{color: colors.text}}>TouchableOpacity</Text>
 </TouchableOpacity>`;
@@ -34,6 +41,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.8}>
   <Text style={{color: 'white'}}>TouchableOpacity</Text>
 </TouchableOpacity>`;
@@ -48,6 +56,7 @@ export const TouchableOpacityExamplePage: React.FunctionComponent<{}> = () => {
     alignItems: 'center',
   }}
   onPress={() => {}}
+  onAccessibilityTap={() => {}}
   activeOpacity={0.8}
   disabled={true}>
   <Text style={{color: colors.text}}>TouchableOpacity</Text>
@@ -63,6 +72,9 @@ style={{
   alignItems: 'center',
 }}
 onPress={() => {
+  setTitle(title + 1);
+}}
+onAccessibilityTap={() => {
   setTitle(title + 1);
 }}
 activeOpacity={0.8}>
@@ -85,7 +97,8 @@ onBlur={() => {
   setFocus(false);
 }}
 activeOpacity={0.2}
-onPress={() => {}}>
+onPress={() => {}}
+onAccessibilityTap={() => {}}>
 <Text style={{color: colors.text}}>
   {focus
     ? 'TouchableOpacity Focused'
@@ -111,8 +124,9 @@ onPress={() => {}}>
       ]}>
       <Example title="A simple TouchableOpacity." code={example1jsx}>
         <TouchableOpacity
+          ref={firstTouchableOpacityRef}
           accessibilityRole="button"
-          accessibilityLabel={'simple example touchableOpacity'}
+          accessibilityLabel={'TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -125,6 +139,7 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
           activeOpacity={0.5}>
           <Text style={{color: colors.text}}>TouchableOpacity</Text>
         </TouchableOpacity>
@@ -132,7 +147,7 @@ onPress={() => {}}>
       <Example title="A colored TouchableOpacity." code={example2jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'colored example TouchableOpacity'}
+          accessibilityLabel={'TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -142,6 +157,7 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
           activeOpacity={0.8}>
           <Text style={{color: 'white'}}>TouchableOpacity</Text>
         </TouchableOpacity>
@@ -149,7 +165,7 @@ onPress={() => {}}>
       <Example title="A disabled TouchableOpacity." code={example3jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'disabled example TouchableOpacity'}
+          accessibilityLabel={'TouchableOpacity'}
           style={{
             height: 40,
             width: 150,
@@ -162,41 +178,94 @@ onPress={() => {}}>
             alignItems: 'center',
           }}
           onPress={() => {}}
+          onAccessibilityTap={() => {}}
           activeOpacity={0.8}
           disabled={true}>
           <Text style={{color: colors.text}}>TouchableOpacity</Text>
         </TouchableOpacity>
       </Example>
       <Example title="A TouchableOpacity counter." code={example4jsx}>
-        <TouchableOpacity
-          accessibilityRole="button"
-          accessibilityLabel={'example TouchableOpacity counter'}
-          accessibilityHint={'click me to increase the example counter'}
-          accessibilityValue={{text: `${title}`}}
-          style={{
-            height: 40,
-            width: 150,
-            backgroundColor:
-              Platform.OS === 'windows'
-                ? PlatformColor('SystemColorButtonFaceColor')
-                : 'silver',
-            borderRadius: 3,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => {
-            setTitle(title + 1);
-          }}
-          activeOpacity={0.8}>
-          <Text style={{color: colors.text}}>{String(title)}</Text>
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel={`Decrease counter. Current value is ${title}`}
+            accessibilityHint="Decreases the counter by 1"
+            style={{
+              height: 40,
+              width: 50,
+              backgroundColor:
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemColorButtonFaceColor')
+                  : 'silver',
+              borderRadius: 3,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              const newValue = Math.max(0, title - 1);
+              setTitle(newValue);
+              announceCounterChange(newValue, 'decreased');
+            }}
+            activeOpacity={0.8}>
+            <Text style={{color: colors.text, fontSize: 20}}>-</Text>
+          </TouchableOpacity>
+          <Text
+            accessible={true}
+            accessibilityRole="text"
+            accessibilityLabel={`Counter value: ${title}`}
+            accessibilityHint="Counter display"
+            style={{
+              minWidth: 80,
+              height: 40,
+              textAlign: 'center',
+              lineHeight: 40,
+              fontSize: 18,
+              borderWidth: 1,
+              borderColor: colors.border,
+              borderRadius: 3,
+              backgroundColor:
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemColorButtonFaceColor')
+                  : 'silver',
+              marginHorizontal: 5,
+            }}>
+            {title}
+          </Text>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel={`Increase counter. Current value is ${title}`}
+            accessibilityHint="Increases the counter by 1"
+            style={{
+              height: 40,
+              width: 50,
+              backgroundColor:
+                Platform.OS === 'windows'
+                  ? PlatformColor('SystemColorButtonFaceColor')
+                  : 'silver',
+              borderRadius: 3,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            onPress={() => {
+              const newValue = title + 1;
+              setTitle(newValue);
+              announceCounterChange(newValue, 'increased');
+            }}
+            activeOpacity={0.8}>
+            <Text style={{color: colors.text, fontSize: 20}}>+</Text>
+          </TouchableOpacity>
+        </View>
       </Example>
       <Example
         title="A TouchableOpacity responsive to focus."
         code={example5jsx}>
         <TouchableOpacity
           accessibilityRole="button"
-          accessibilityLabel={'example TouchableOpacity responsive to focus'}
+          accessibilityLabel={
+            focus
+              ? 'TouchableOpacity Focused'
+              : 'TouchableOpacity Not Focused'
+          }
           style={{
             height: 40,
             width: 250,
@@ -215,7 +284,8 @@ onPress={() => {}}>
             setFocus(false);
           }}
           activeOpacity={0.2}
-          onPress={() => {}}>
+          onPress={() => {}}
+          onAccessibilityTap={() => {}}>
           <Text style={{color: colors.text}}>
             {focus
               ? 'TouchableOpacity Focused'

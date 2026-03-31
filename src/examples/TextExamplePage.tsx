@@ -3,9 +3,11 @@ import {Text} from 'react-native';
 import React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
+import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 
-export const TextExamplePage: React.FunctionComponent<{}> = () => {
+export const TextExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
+  const firstTextExampleRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = '<Text>Here is a line of text.</Text>';
@@ -72,7 +74,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
           url: 'https://github.com/microsoft/react-native-windows/blob/main/vnext/src-win/Libraries/Text/Text.windows.js',
         },
       ]}>
-      <Example title="A simple line of Text." code={example1jsx}>
+      <Example ref={firstTextExampleRef} title="A simple line of Text." code={example1jsx}>
         <Text style={{color: colors.text}}>Here is a line of text.</Text>
       </Example>
       <Example title="A line of bolded and italicized Text." code={example2jsx}>
@@ -111,7 +113,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
         </Text>
       </Example>
       <Example title="An line of enlarged Consolas Text." code={example6jsx}>
-        <Text style={{fontSize: 30, fontFamily: 'Consolas'}}>
+        <Text style={{fontSize: 30, fontFamily: 'Consolas', color: colors.text}}>
           Here is a line of enlarged Consolas text.
         </Text>
       </Example>
@@ -122,6 +124,7 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
           style={{
             lineHeight: 100,
             textAlign: 'right',
+            color: colors.text,
           }}>
           Here is a right-aligned line of Text with customized line height.
         </Text>
@@ -134,9 +137,31 @@ Here is a line of capitalized text with Right-to-Left writing direction and back
             textTransform: 'uppercase',
             backgroundColor: colors.border,
             writingDirection: 'rtl',
+            color: colors.text,
           }}>
           Here is a line of capitalized text with Right-to-Left writing
           direction and background color.
+        </Text>
+      </Example>
+      <Example
+        title="Selectable Text"
+        code={`<Text selectable={true}>
+  Selectable text - click and drag to select.
+</Text>`}>
+        <Text selectable={true} style={{color: colors.text}}>
+          This text is selectable. Click and drag to select, or double-click for word selection.
+        </Text>
+      </Example>
+      <Example
+        title="Selection Color"
+        code={`<Text selectable={true} selectionColor="red">
+  Custom selection highlight color.
+</Text>`}>
+        <Text selectable={true} selectionColor="red" style={{color: colors.text, marginBottom: 8}}>
+          Red selection color - select this text!
+        </Text>
+        <Text selectable={true} selectionColor="#00FF00" style={{color: colors.text}}>
+          Green selection color - select this text!
         </Text>
       </Example>
     </Page>

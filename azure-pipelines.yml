@@ -7,7 +7,7 @@ variables:
 
 pool:
   name: rnw-pool-4
-  demands: ImageOverride -equals rnw-img-vs2022-node18
+  demands: ImageOverride -equals rnw-img-vs2022-node22
 
 steps:
   - checkout: self
@@ -20,12 +20,17 @@ steps:
   - task: NodeTool@0
     displayName: Installing Node
     inputs:
-      versionSpec: '18.x'
+      versionSpec: '22.x'
 
   - task: CmdLine@2
-    displayName: Installing Yarm
+    displayName: Installing Yarn
     inputs:
       script: npm install -g yarn
+
+  - task: CmdLine@2
+    displayName: yarn
+    inputs:
+      script: yarn install --immutable
 
   - task: NuGetCommand@2
     displayName: NuGet restore
@@ -33,11 +38,6 @@ steps:
       command: restore
       restoreSolution: windows/rngallery.sln
       verbosityRestore: Detailed
-
-  - task: CmdLine@2
-    displayName: yarn
-    inputs:
-      script: yarn install --immutable
 
   - task: CmdLine@2
     displayName: Lint and Type Checks

@@ -7,7 +7,7 @@ import DeviceInfo, {
   getIpAddress,
   useDeviceName,
 } from 'react-native-device-info';
-import {useTheme} from '@react-navigation/native';
+import {useTheme} from '../Navigation';
 
 export const DeviceInfoExamplePage: React.FunctionComponent<{}> = () => {
   const {colors} = useTheme();

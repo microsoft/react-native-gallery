@@ -3,7 +3,6 @@ import {
   FlatList,
   FlatListProps,
   Image,
-  PlatformColor,
   Pressable,
   View,
 } from 'react-native';
@@ -26,17 +25,16 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
       tooltip={tooltip}
       onPress={() => onPress()}
       onHoverIn={() => setHover(true)}
-      onHoverOut={() => setHover(false)}>
+      onHoverOut={() => setHover(false)}
+      onAccessibilityTap={() => onPress()}>
       <View
         style={{
           backgroundColor: hover
-            ? PlatformColor('ControlFillColorSecondaryBrush')
-            : PlatformColor('ControlFillColorDefaultBrush'),
+            ? 'white'
+            : 'transparent',
           borderRadius: 24,
           borderWidth: 1,
-          borderColor: hover
-            ? PlatformColor('ControlElevationBorderBrush')
-            : PlatformColor('CircleElevationBorderBrush'),
+          borderColor: 'transparent',
           alignItems: 'center',
           justifyContent: 'center',
           minWidth: 48,
@@ -101,6 +99,13 @@ const HorizontalListWithPageNavigation = (
                 viewPosition: 0,
               });
             }}
+            onAccessibilityTap={() => {
+              listRef.current?.scrollToIndex({
+                animated: true,
+                index: scrollLeftTarget,
+                viewPosition: 0,
+              });
+            }}
           />
         </View>
       )}
@@ -116,6 +121,13 @@ const HorizontalListWithPageNavigation = (
           <PagingButton
             left={false}
             onPress={() => {
+              listRef.current?.scrollToIndex({
+                animated: true,
+                index: scrollRightTarget,
+                viewPosition: 0,
+              });
+            }}
+            onAccessibilityTap={() => {
               listRef.current?.scrollToIndex({
                 animated: true,
                 index: scrollRightTarget,
