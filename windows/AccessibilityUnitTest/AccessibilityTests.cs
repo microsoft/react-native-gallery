@@ -23,27 +23,6 @@ namespace AccessibilityUnitTest
         }
 
         [TestMethod]
-        public void TestZNavigation()
-        {
-            // Navigate home first to reset UI state when running after other tests
-            FindAndInvokeElement(GalleryWindow, "Navigation menu", waitMs: 2000);
-            FindAndInvokeElement(GalleryWindow, "Home", waitMs: 1000);
-            FindAndInvokeElement(GalleryWindow, "Navigation menu", waitMs: 2000);
-            var navMenu = FindElement(GalleryWindow, "Navigation menu");
-            var parent = GetParentElement(navMenu);
-            FindAndExpandElement(GalleryWindow, "Basic Input");
-            FindAndExpandElement(GalleryWindow, "Collections");
-            FindAndExpandElement(GalleryWindow, "Dialogs & flyouts");
-            FindAndExpandElement(GalleryWindow, "Layout");
-            FindAndExpandElement(GalleryWindow, "Media");
-            FindAndExpandElement(GalleryWindow, "Scrolling");
-            FindAndExpandElement(GalleryWindow, "Text");
-            FindAndExpandElement(GalleryWindow, "System");
-            FindAndExpandElement(GalleryWindow, "Legacy");
-            AddTestSnapshot(TestContext.TestName, GetScanResults(GetTestScanner(), parent));
-        }
-
-        [TestMethod]
         public void TestNavigateToHomeAndValidate()
         {
             FindAndInvokeElement(GalleryWindow, "Navigation menu", waitMs: 2000);
@@ -162,6 +141,27 @@ namespace AccessibilityUnitTest
         {
             NavigateToComponent(GalleryWindow, "TouchableWithoutFeedback control");
             AddTestSnapshot(TestContext.TestName, GetScanResults(GetTestScanner()));
+        }
+
+        [TestMethod]
+        public void TestZNavigation()
+        {
+            // Navigate home first to reset UI state when running after other tests
+            FindAndInvokeElement(GalleryWindow, "Navigation menu", waitMs: 2000);
+            FindAndInvokeElement(GalleryWindow, "Home", waitMs: 1000);
+            FindAndInvokeElement(GalleryWindow, "Navigation menu", waitMs: 2000);
+            var navMenu = FindElement(GalleryWindow, "Navigation menu");
+            var parent = GetParentElement(navMenu);
+            FindAndExpandElement(GalleryWindow, "Basic Input");
+            FindAndExpandElement(GalleryWindow, "Collections");
+            FindAndExpandElement(GalleryWindow, "Dialogs & flyouts");
+            FindAndExpandElement(GalleryWindow, "Layout");
+            FindAndExpandElement(GalleryWindow, "Media");
+            FindAndExpandElement(GalleryWindow, "Scrolling");
+            FindAndExpandElement(GalleryWindow, "Text");
+            FindAndExpandElement(GalleryWindow, "System");
+            FindAndExpandElement(GalleryWindow, "Legacy");
+            AddTestSnapshot(TestContext.TestName, GetScanResults(GetTestScanner(), parent));
         }
 
         [ClassInitialize]

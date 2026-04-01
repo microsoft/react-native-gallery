@@ -89,9 +89,7 @@ steps:
     inputs:
       testSelector: testAssemblies
       testAssemblyVer2: |
-        **\AccessibilityUnitTest.dll
-        !**\obj\**
-        !**\ref\**
+        **\bin\Debug\AccessibilityUnitTest.dll
       searchFolder: $(System.DefaultWorkingDirectory)\windows\AccessibilityUnitTest
       resultsFolder: $(Build.ArtifactStagingDirectory)\TestResults
 
