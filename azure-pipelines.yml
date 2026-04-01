@@ -67,7 +67,7 @@ steps:
     displayName: Deploy App
     timeoutInMinutes: 5
     inputs:
-      script: npx react-native run-windows --arch x64 --no-build --no-launch --release
+      script: npx react-native run-windows --arch x64 --no-build --no-launch
 
   - task: PowerShell@2
     displayName: Launch App from Start Menu
