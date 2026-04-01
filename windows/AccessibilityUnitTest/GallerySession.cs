@@ -98,7 +98,9 @@ namespace AccessibilityUnitTest
                         Description = error.Rule.Description,
                         HowToFix = error.Rule.HowToFix,
                         Element = error.Element?.Properties != null
-                            ? string.Join(", ", error.Element.Properties.Select(p => $"{p.Key}: {p.Value}"))
+                            ? string.Join(", ", error.Element.Properties
+                                .Where(p => p.Key == "ControlType" || p.Key == "LocalizedControlType" || p.Key == "Name" || p.Key == "HelpText" || p.Key == "IsEnabled" || p.Key == "IsOffscreen")
+                                .Select(p => $"{p.Key}: {p.Value}"))
                             : null
                     });
                 }
