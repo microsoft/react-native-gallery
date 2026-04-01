@@ -45,10 +45,10 @@ steps:
       script: yarn tsc | yarn lint
 
   - task: CmdLine@2
-    displayName: Build project (Debug)
+    displayName: Build project (Release)
     timeoutInMinutes: 60
     inputs:
-      script: npx react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Debug
+      script: npx react-native run-windows --arch x64 --no-deploy --logging --release --buildLogDirectory $BuildLogDirectory\Debug
 
   - task: CmdLine@2
     displayName: Snapshot Tests
@@ -67,7 +67,7 @@ steps:
     displayName: Deploy App
     timeoutInMinutes: 5
     inputs:
-      script: npx react-native run-windows --arch x64 --no-build --no-launch
+      script: npx react-native run-windows --arch x64 --no-build --no-launch --release
 
   - task: PowerShell@2
     displayName: Launch App from Start Menu
