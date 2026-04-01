@@ -55,10 +55,13 @@ steps:
     inputs:
       script: yarn test
 
-  - task: CmdLine@2
+  - task: MSBuild@1
     displayName: Build AccessibilityUnitTest
     inputs:
-      script: msbuild windows\AccessibilityUnitTest\AccessibilityUnitTest.csproj /p:Configuration=Debug /p:Platform=AnyCPU /restore
+      solution: windows\AccessibilityUnitTest\AccessibilityUnitTest.csproj
+      configuration: Debug
+      platform: AnyCPU
+      msbuildArguments: /restore
 
   - task: CmdLine@2
     displayName: Deploy App

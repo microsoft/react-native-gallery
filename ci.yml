@@ -100,11 +100,14 @@ steps:
     inputs:
       script: del /f .\windows\rngallery\rngallery_Key.pfx
 
-  - task: CmdLine@2
+  - task: MSBuild@1
     displayName: Build AccessibilityUnitTest
     condition: eq(variables['PUBLISH_APP'], 'true')
     inputs:
-      script: msbuild windows\AccessibilityUnitTest\AccessibilityUnitTest.csproj /p:Configuration=Release /p:Platform=AnyCPU /restore
+      solution: windows\AccessibilityUnitTest\AccessibilityUnitTest.csproj
+      configuration: Release
+      platform: AnyCPU
+      msbuildArguments: /restore
 
   - task: CmdLine@2
     displayName: Deploy App
