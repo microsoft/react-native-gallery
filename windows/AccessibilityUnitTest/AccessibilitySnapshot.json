@@ -1,0 +1,194 @@
+{
+  "TotalTests": 17,
+  "TotalErrors": 16,
+  "Results": [
+    {
+      "TestName": "TestZNavigation",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Button, IsEnabled: True, IsOffscreen: False"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Button, IsEnabled: True, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToTouchableOpacityAndValidate",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Decrease counter. Current value is 0, IsEnabled: True, HelpText: Decreases the counter by 1, IsOffscreen: False"
+        },
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Increase counter. Current value is 0, IsEnabled: True, HelpText: Increases the counter by 1, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToSwitchAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToTouchableHighlightAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToTextInputAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToViewAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToPressableAndValidate",
+      "ErrorCount": 1,
+      "Errors": [
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Disabled Pressable, IsEnabled: False, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToHomeAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToTouchableWithoutFeedbackAndValidate",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Decrease counter. Current value is 0, IsEnabled: True, HelpText: Decreases the counter by 1, IsOffscreen: False"
+        },
+        {
+          "RuleId": 11,
+          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
+          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Increase counter. Current value is 0, IsEnabled: True, HelpText: Increases the counter by 1, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToFlatListAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToButtonAndValidate",
+      "ErrorCount": 6,
+      "Errors": [
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Simple Button, IsEnabled: True, IsOffscreen: False"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Simple Button, IsEnabled: True, IsOffscreen: False"
+        },
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: colored button, IsEnabled: True, IsOffscreen: False"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: colored button, IsEnabled: True, IsOffscreen: False"
+        },
+        {
+          "RuleId": 123,
+          "Description": "The Name property must not include the element's control type.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the control type.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Disabled Button, IsEnabled: False, IsOffscreen: False"
+        },
+        {
+          "RuleId": 124,
+          "Description": "The Name must not include the same text as the LocalizedControlType.",
+          "HowToFix": "Provide a UI Automation Name property for the element that:\r\n · Concisely identifies the element, AND\r\n · Does not include the same text as the element's LocalizedControlType property.",
+          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Disabled Button, IsEnabled: False, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToSettingsAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToTextAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToModalAndValidate",
+      "ErrorCount": 2,
+      "Errors": [
+        {
+          "RuleId": 2,
+          "Description": "An on-screen element must not have a null BoundingRectangle property.",
+          "HowToFix": "If the element is off-screen, set its IsOffscreen property to true.\r\nIf the element is on-screen, provide a BoundingRectangle property.",
+          "Element": "ControlType: Text(50020), LocalizedControlType: text, Name:  , IsEnabled: True, IsOffscreen: False"
+        },
+        {
+          "RuleId": 133,
+          "Description": "The Name property must not contain only whitespace.",
+          "HowToFix": "Provide a UI Automation Name property that concisely identifies the element.",
+          "Element": "ControlType: Text(50020), LocalizedControlType: text, Name:  , IsEnabled: True, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToClipboardAndValidate",
+      "ErrorCount": 1,
+      "Errors": [
+        {
+          "RuleId": 2,
+          "Description": "An on-screen element must not have a null BoundingRectangle property.",
+          "HowToFix": "If the element is off-screen, set its IsOffscreen property to true.\r\nIf the element is on-screen, provide a BoundingRectangle property.",
+          "Element": "ControlType: Text(50020), LocalizedControlType: text, IsEnabled: True, IsOffscreen: False"
+        }
+      ]
+    },
+    {
+      "TestName": "TestNavigateToScrollViewAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    },
+    {
+      "TestName": "TestNavigateToImageAndValidate",
+      "ErrorCount": 0,
+      "Errors": []
+    }
+  ]
+}

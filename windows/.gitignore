@@ -44,3 +44,9 @@ Ankh.NoLoad
 *.binlog
 *.err
 *.wrn
+
+# Accessibility scan results
+AccessibilityUnitTest/ScanResults/
+
+# NuGet packages
+packages/
