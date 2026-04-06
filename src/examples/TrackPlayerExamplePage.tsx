@@ -1,6 +1,7 @@
 'use strict';
 import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
+import * as React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import TrackPlayer from 'react-native-track-player';

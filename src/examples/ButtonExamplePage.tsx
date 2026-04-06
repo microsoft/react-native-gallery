@@ -1,6 +1,7 @@
 'use strict';
 import {Button, View, Text, AccessibilityInfo, Dimensions} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import * as React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {usePageFocusManagement} from '../hooks/usePageFocusManagement';

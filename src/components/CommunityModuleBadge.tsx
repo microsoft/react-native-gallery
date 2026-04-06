@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {useTheme} from '../Navigation';
 import {Badge} from './Badge';
 import {Platform, PlatformColor} from 'react-native';

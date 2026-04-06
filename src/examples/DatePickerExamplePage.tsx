@@ -1,5 +1,6 @@
 'use strict';
-import React, {useState} from 'react';
+import {useState} from 'react';
+import * as React from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';

@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import * as React from 'react';
 import {Code} from './Code';
 import {StyleSheet, PlatformColor, Text, View, Dimensions} from 'react-native';
 import {CopyToClipboardButton} from './CopyToClipboard';

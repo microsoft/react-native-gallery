@@ -2,7 +2,7 @@
  * @format
  */
 
-import React from 'react';
+import * as React from 'react';
 import {create, act} from 'react-test-renderer';
 import {ButtonExamplePage} from '../src/examples/ButtonExamplePage';
 import {ClipboardExamplePage} from '../src/examples/ClipboardExamplePage';

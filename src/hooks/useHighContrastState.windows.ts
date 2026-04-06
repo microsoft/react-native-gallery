@@ -1,7 +1,7 @@
 'use strict';
 
 import {AppTheme} from 'react-native-windows';
-import React from 'react';
+import * as React from 'react';
 
 export default function useHighContrastState() {
   const [isHighContrast, setHighContrast] = React.useState(

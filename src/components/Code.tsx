@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import low from 'lowlight';
-import React from 'react';
+import * as React from 'react';
 import {PlatformColor, StyleSheet, Text, View} from 'react-native';
 import {ThemeContext} from '../themes/Theme';
 

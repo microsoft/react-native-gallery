@@ -1,6 +1,6 @@
 'use strict';
 import {Text, FlatList, View, Pressable} from 'react-native';
-import React from 'react';
+import * as React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';

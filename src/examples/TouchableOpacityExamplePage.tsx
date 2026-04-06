@@ -1,6 +1,7 @@
 'use strict';
 import {Text, TouchableOpacity, Platform, PlatformColor, View, AccessibilityInfo} from 'react-native';
-import React, {useState} from 'react';
+import {useState} from 'react';
+import * as React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import {useTheme} from '../Navigation';

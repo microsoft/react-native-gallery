@@ -9,7 +9,8 @@ import {
   Platform,
   PlatformColor,
 } from 'react-native';
-import React, {useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
+import * as React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 // import CheckBox from '@react-native-community/checkbox';

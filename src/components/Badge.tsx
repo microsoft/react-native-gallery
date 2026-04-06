@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {StyleSheet, View, Text, OpaqueColorValue} from 'react-native';
 // import {SymbolIcon} from 'react-native-xaml';
 

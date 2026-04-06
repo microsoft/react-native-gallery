@@ -1,5 +1,5 @@
 'use strict';
-import React from 'react';
+import * as React from 'react';
 import type {ImageSourcePropType} from 'react-native';
 import {HomePage} from './HomePage';
 import {SettingsPage} from './SettingsPage';
