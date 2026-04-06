@@ -1,5 +1,6 @@
 'use strict';
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import {useState, useEffect, useRef, useCallback} from 'react';
+import * as React from 'react';
 import {Button, Platform, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';

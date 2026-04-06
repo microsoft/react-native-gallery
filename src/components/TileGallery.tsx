@@ -10,7 +10,7 @@ import {
   useColorScheme,
   Animated,
 } from 'react-native';
-import React from 'react';
+import * as React from 'react';
 import type {PropsWithChildren} from 'react';
 //import {PathIcon, FontIcon} from 'react-native-xaml';
 import {HorizontalListWithPageNavigation} from './PageScroller';

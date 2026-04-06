@@ -1,6 +1,6 @@
 'use strict';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
-import React from 'react';
+import * as React from 'react';
 //import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
 //import {Picker} from '@react-native-picker/picker';
 // import {

@@ -1,5 +1,6 @@
 'use strict';
-import React, {useState} from 'react';
+import {useState} from 'react';
+import * as React from 'react';
 import {AccessibilityInfo, Button, Text, TextInput, View} from 'react-native';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';

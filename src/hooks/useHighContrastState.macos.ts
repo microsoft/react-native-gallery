@@ -1,7 +1,7 @@
 'use strict';
 
 import {AccessibilityInfo} from 'react-native-macos';
-import React from 'react';
+import * as React from 'react';
 
 export default function useHighContrastState() {
   const [isHighContrast, setHighContrast] = React.useState(false);

@@ -1,5 +1,5 @@
 import {PlatformColor, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import * as React from 'react';
 import {useTheme} from '../Navigation';
 // import {HyperlinkButton} from 'react-native-xaml';
 import { Hyperlink } from './Controls';

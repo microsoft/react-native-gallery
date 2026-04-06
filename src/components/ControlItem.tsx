@@ -7,7 +7,7 @@ import {
   Pressable,
   Image,
 } from 'react-native';
-import React from 'react';
+import * as React from 'react';
 import type {IRNGalleryExample} from '../RNGalleryList';
 //import {useTheme} from '@react-navigation/native';
 

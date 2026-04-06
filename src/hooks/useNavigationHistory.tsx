@@ -1,5 +1,6 @@
 'use strict';
-import React, {createContext, useContext, useCallback, useRef} from 'react';
+import {createContext, useContext, useCallback, useRef} from 'react';
+import * as React from 'react';
 
 const MAX_HISTORY_DEPTH = 10;
 const HOME_ROUTE = 'Home';

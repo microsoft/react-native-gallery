@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {Linking, Pressable, Text, useColorScheme} from 'react-native';
 
 type HyperlinkProps = {

@@ -1,6 +1,6 @@
 'use strict';
 import {Button} from 'react-native';
-import React from 'react';
+import * as React from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 import RNPrint from 'react-native-print';

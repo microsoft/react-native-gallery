@@ -1,5 +1,5 @@
 'use strict';
-import React from 'react';
+import * as React from 'react';
 import {
   StyleSheet,
   Text,
@@ -48,7 +48,7 @@ export function BackButton() {
       setWindowWidth(window.width);
     });
     return () => subscription?.remove();
-  }, []);
+  }, [setWindowWidth]);
 
   const styles = createStyles(windowWidth);
 

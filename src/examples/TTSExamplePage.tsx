@@ -8,7 +8,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import React from 'react';
+import * as React from 'react';
 import Tts, {Voice} from 'react-native-tts';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
