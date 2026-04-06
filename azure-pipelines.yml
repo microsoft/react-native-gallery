@@ -45,15 +45,15 @@ steps:
       script: yarn tsc | yarn lint
 
   - task: CmdLine@2
+    displayName: Snapshot Tests
+    inputs:
+      script: yarn test
+
+  - task: CmdLine@2
     displayName: Build project (Release)
     timeoutInMinutes: 60
     inputs:
       script: npx react-native run-windows --arch x64 --no-deploy --logging --release --buildLogDirectory $BuildLogDirectory\Debug
-
-  - task: CmdLine@2
-    displayName: Snapshot Tests
-    inputs:
-      script: yarn test
 
   - task: MSBuild@1
     displayName: Build AccessibilityUnitTest
