@@ -48,7 +48,7 @@ export function BackButton() {
       setWindowWidth(window.width);
     });
     return () => subscription?.remove();
-  }, []);
+  }, [setWindowWidth]);
 
   const styles = createStyles(windowWidth);
 
