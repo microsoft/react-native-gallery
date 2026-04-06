@@ -11,7 +11,7 @@ pool:
 
 steps:
   - checkout: self
-    clean: false
+    clean: true
 
   - task: NuGetToolInstaller@0
     inputs:
