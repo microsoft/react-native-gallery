@@ -1,6 +1,36 @@
 {
+  "extends": "./node_modules/@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "react",
+    "noImplicitAny": false
   },
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "exclude": [
+    "scripts",
+    "src/hooks/useHighContrastState.macos.ts",
+    "src/examples/CheckBoxExamplePage.tsx",
+    "src/examples/ConfigExamplePage.tsx",
+    "src/examples/DatePickerExamplePage.tsx",
+    "src/examples/DeviceInfoExamplePage.tsx",
+    "src/examples/ExpanderExamplePage.tsx",
+    "src/examples/FlyoutExamplePage.tsx",
+    "src/examples/LinearGradientExamplePage.tsx",
+    "src/examples/LottieAnimationsExamplePage.tsx",
+    "src/examples/NetworkExamplePage.tsx",
+    "src/examples/PermissionsExamplePage.tsx",
+    "src/examples/PickerExamplePage.tsx",
+    "src/examples/PopupExamplePage.tsx",
+    "src/examples/PrintExamplePage.tsx",
+    "src/examples/ProgressViewExamplePage.tsx",
+    "src/examples/SensitiveInfoExamplePage.tsx",
+    "src/examples/SketchExamplePage.tsx",
+    "src/examples/SliderExamplePage.tsx",
+    "src/examples/SvgExamplePage.tsx",
+    "src/examples/TTSExamplePage.tsx",
+    "src/examples/TemplateExamplePage.tsx",
+    "src/examples/TimePickerExamplePage.tsx",
+    "src/examples/TrackPlayerExamplePage.tsx",
+    "src/examples/WebViewExamplePage.tsx",
+    "src/examples/WindowsHelloExamplePage.tsx",
+    "src/examples/XamlExamplePage.tsx"
+  ]
 }

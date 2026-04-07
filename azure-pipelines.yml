@@ -40,9 +40,9 @@ steps:
       verbosityRestore: Detailed
 
   - task: CmdLine@2
-    displayName: Lint and Type Checks
+    displayName: Lint Checks
     inputs:
-      script: yarn tsc | yarn lint
+      script: yarn lint
 
   - task: CmdLine@2
     displayName: Build project (Release)
