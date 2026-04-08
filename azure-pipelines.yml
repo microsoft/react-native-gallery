@@ -74,7 +74,7 @@ steps:
     inputs:
       targetType: inline
       script: |
-        Start-Process "shell:AppsFolder\Microsoft.ReactNativeGallery_8wekyb3d8bbwe!App"
+        Start-Process "shell:AppsFolder\Microsoft.ReactNativeGallery-Experimental_8wekyb3d8bbwe!App"
         Start-Sleep -Seconds 10
 
         $process = Get-Process -Name "rngallery" -ErrorAction SilentlyContinue
