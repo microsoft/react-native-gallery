@@ -60,6 +60,7 @@ const createStyles = () =>
       fontSize: 40,
       fontWeight: '600', // SemiBold
       paddingLeft: 36,
+      color: 'black',
     },
   });
 
