@@ -89,6 +89,8 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
+            paddingHorizontal: 8,
+            paddingVertical: 8,
           }}
           onChangeText={onChangeText1}
           placeholder="A simple TextInput..."
