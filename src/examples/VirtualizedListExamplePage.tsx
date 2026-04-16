@@ -36,7 +36,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     index: index,
   });
 
-  const getItemCount = (data) => 50;
+  const getItemCount = (data) => 10;
 
   const renderItem = ({item}) => {
     return (<Item title={item.title} index={item.index}/>);
@@ -50,7 +50,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
 
   <VirtualizedList
     data={DATA}
-    initialNumToRender={30}
+    initialNumToRender={10}
     renderItem={renderItem}
     keyExtractor={item => item.title}
     getItemCount={getItemCount}
@@ -66,7 +66,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     index: index,
   });
 
-  const getItemCount = (data) => 50;
+  const getItemCount = (data) => 10;
 
   const renderItem = ({item}) => {
     return (<Item title={item.title} index={item.index}/>);
@@ -82,7 +82,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   return (
   <VirtualizedList
     data={DATA}
-    initialNumToRender={30}
+    initialNumToRender={10}
     renderItem={renderItem}
     keyExtractor={item => item.title}
     getItemCount={getItemCount}
@@ -101,7 +101,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     index: index,
   });
 
-  const getItemCount = (data) => 50;
+  const getItemCount = (data) => 10;
 
   const Item3 = ({title, index}) => (
     <Pressable
@@ -189,7 +189,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const [focusedIndex2, setFocusedIndex2] = useState<number | null>(null);
   const [focusedIndex3, setFocusedIndex3] = useState<number | null>(null);
 
-  const ITEM_COUNT = 50;
+  const ITEM_COUNT = 10;
 
   // Arrow key navigation handler factory
   const createKeyDownHandler = (
@@ -249,7 +249,7 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
     index: index,
   });
 
-  const getItemCount = () => 50;
+  const getItemCount = () => 10;
 
   const styles = StyleSheet.create({
     container: {
