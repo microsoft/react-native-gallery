@@ -11271,7 +11271,7 @@ exports[`ScrollView Example Page 1`] = `
                 onResponderTerminate={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
-                tooltip="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ScrollViewExamplePage.tsx"
+                tooltip="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ScrollViewExample.tsx"
               >
                 <Text
                   style={
@@ -17141,7 +17141,7 @@ exports[`TextInput Example Page 1`] = `
               <TextInput
                 onChangeText={[Function]}
                 placeholder="A colored TextInput with bolded and italicized text..."
-                placeholderTextColor="rgb(0,0,0)"
+                placeholderTextColor="#FFFFFF"
                 style={
                   {
                     "backgroundColor": "rgb(52, 122, 226)",
