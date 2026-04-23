@@ -11271,7 +11271,7 @@ exports[`ScrollView Example Page 1`] = `
                 onResponderTerminate={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
-                tooltip="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ScrollViewExamplePage.tsx"
+                tooltip="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ScrollViewExample.tsx"
               >
                 <Text
                   style={
@@ -16644,6 +16644,8 @@ exports[`TextInput Example Page 1`] = `
                     "borderColor": "#E6E6E6",
                     "borderWidth": 1,
                     "color": "#505050",
+                    "paddingHorizontal": 8,
+                    "paddingVertical": 8,
                   }
                 }
               />
@@ -17139,7 +17141,7 @@ exports[`TextInput Example Page 1`] = `
               <TextInput
                 onChangeText={[Function]}
                 placeholder="A colored TextInput with bolded and italicized text..."
-                placeholderTextColor="rgb(0,0,0)"
+                placeholderTextColor="#FFFFFF"
                 style={
                   {
                     "backgroundColor": "rgb(52, 122, 226)",
@@ -30460,13 +30462,6 @@ exports[`VirtualizedList Example Page 1`] = `
                             </Text>
                           </View>
                         </View>
-                        <View
-                          style={
-                            {
-                              "height": 0,
-                            }
-                          }
-                        />
                       </View>
                     </RCTScrollView>
                   </View>
@@ -30772,7 +30767,7 @@ exports[`VirtualizedList Example Page 1`] = `
                     }
                   >
                     <Text>
-                      50
+                      10
                     </Text>
                   </Text>
                   <Text>
@@ -31247,7 +31242,7 @@ exports[`VirtualizedList Example Page 1`] = `
                         }
                       >
                         <Text>
-                          {30}
+                          {10}
                         </Text>
                       </Text>
                       <Text>
@@ -32150,13 +32145,6 @@ exports[`VirtualizedList Example Page 1`] = `
                             </Text>
                           </View>
                         </View>
-                        <View
-                          style={
-                            {
-                              "height": 0,
-                            }
-                          }
-                        />
                       </View>
                     </RCTScrollView>
                   </View>
@@ -32481,7 +32469,7 @@ exports[`VirtualizedList Example Page 1`] = `
                     }
                   >
                     <Text>
-                      50
+                      10
                     </Text>
                   </Text>
                   <Text>
@@ -33076,7 +33064,7 @@ exports[`VirtualizedList Example Page 1`] = `
                         }
                       >
                         <Text>
-                          {30}
+                          {10}
                         </Text>
                       </Text>
                       <Text>
@@ -34089,13 +34077,6 @@ exports[`VirtualizedList Example Page 1`] = `
                             </View>
                           </View>
                         </View>
-                        <View
-                          style={
-                            {
-                              "height": 0,
-                            }
-                          }
-                        />
                       </View>
                     </RCTScrollView>
                   </View>
@@ -34556,7 +34537,7 @@ exports[`VirtualizedList Example Page 1`] = `
                     }
                   >
                     <Text>
-                      50
+                      10
                     </Text>
                   </Text>
                   <Text>
