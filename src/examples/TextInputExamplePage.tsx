@@ -89,6 +89,8 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
             borderColor: colors.border,
             borderWidth: 1,
             color: colors.text,
+            paddingHorizontal: 8,
+            paddingVertical: 8,
           }}
           onChangeText={onChangeText1}
           placeholder="A simple TextInput..."
@@ -127,7 +129,7 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
           }}
           onChangeText={onChangeText3}
           placeholder="A colored TextInput with bolded and italicized text..."
-          placeholderTextColor="rgb(0,0,0)"
+          placeholderTextColor={colors.card}
         />
       </Example>
       <Example

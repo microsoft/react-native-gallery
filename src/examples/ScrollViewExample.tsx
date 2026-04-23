@@ -121,7 +121,7 @@ export const ScrollViewExamplePage: React.FunctionComponent<{navigation?: any}> 
         url: 'https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.scrollviewer?view=winrt-19041',
       }}
       componentType="Core"
-      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ScrollViewExamplePage.tsx"
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ScrollViewExample.tsx"
       documentation={[
         {
           label: 'ScrollView',
