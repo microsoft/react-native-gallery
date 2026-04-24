@@ -7,7 +7,7 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="Microsoft.ReactNativeGallery"
+    Name="Microsoft.ReactNativeGallery-Experimental"
     Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
     Version="2.1.3.0" />
 
