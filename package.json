@@ -15,7 +15,7 @@
     "@react-native-clipboard/clipboard": "^1.16.1",
     "lowlight": "^1.17.0",
     "react": "19.2.3",
-    "react-native": "0.84.1",
+    "react-native": "0.83.4",
     "react-native-windows": "0.83.0-preview.3"
   },
   "devDependencies": {
