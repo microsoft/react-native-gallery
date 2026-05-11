@@ -1,6 +1,6 @@
 {
   "TotalTests": 17,
-  "TotalErrors": 16,
+  "TotalErrors": 14,
   "Results": [
     {
       "TestName": "TestZNavigation",
@@ -22,21 +22,8 @@
     },
     {
       "TestName": "TestNavigateToTouchableOpacityAndValidate",
-      "ErrorCount": 2,
-      "Errors": [
-        {
-          "RuleId": 11,
-          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
-          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
-          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Decrease counter. Current value is 0, IsEnabled: True, HelpText: Decreases the counter by 1, IsOffscreen: False"
-        },
-        {
-          "RuleId": 11,
-          "Description": "A button must support one of these patterns: Invoke, Toggle, or ExpandCollapse.",
-          "HowToFix": "Modify the button to support exactly one of the following patterns:\r\n · Support the Invoke pattern if the button performs a command at the request of the user.\r\n · Support the Toggle pattern if the button can cycle through a series of up to three states.\r\n · Support the ExpandCollapse pattern if the button shows or hides additional content.",
-          "Element": "ControlType: Button(50000), LocalizedControlType: button, Name: Increase counter. Current value is 0, IsEnabled: True, HelpText: Increases the counter by 1, IsOffscreen: False"
-        }
-      ]
+      "ErrorCount": 0,
+      "Errors": []
     },
     {
       "TestName": "TestNavigateToSwitchAndValidate",
