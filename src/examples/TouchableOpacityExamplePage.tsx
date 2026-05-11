@@ -206,6 +206,11 @@ onAccessibilityTap={() => {}}>
               setTitle(newValue);
               announceCounterChange(newValue, 'decreased');
             }}
+            onAccessibilityTap={() => {
+              const newValue = Math.max(0, title - 1);
+              setTitle(newValue);
+              announceCounterChange(newValue, 'decreased');
+            }}
             activeOpacity={0.8}>
             <Text style={{color: colors.text, fontSize: 20}}>-</Text>
           </TouchableOpacity>
@@ -228,6 +233,7 @@ onAccessibilityTap={() => {}}>
                   ? PlatformColor('SystemColorButtonFaceColor')
                   : 'silver',
               marginHorizontal: 5,
+              color: colors.text,
             }}>
             {title}
           </Text>
@@ -247,6 +253,11 @@ onAccessibilityTap={() => {}}>
               alignItems: 'center',
             }}
             onPress={() => {
+              const newValue = title + 1;
+              setTitle(newValue);
+              announceCounterChange(newValue, 'increased');
+            }}
+            onAccessibilityTap={() => {
               const newValue = title + 1;
               setTitle(newValue);
               announceCounterChange(newValue, 'increased');

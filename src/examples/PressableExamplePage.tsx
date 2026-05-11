@@ -117,6 +117,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={'Disabled Pressable'}
+          focusable={false}
           style={{
             width: 140,
             height: 50,
