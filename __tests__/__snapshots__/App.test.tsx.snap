@@ -104,6 +104,11 @@ exports[`Button Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -1919,6 +1924,11 @@ exports[`Clipboard Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -3281,6 +3291,11 @@ exports[`Image Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -5632,6 +5647,11 @@ exports[`Pressable Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -8446,6 +8466,11 @@ exports[`ScrollView Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -11650,6 +11675,11 @@ exports[`Switch Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -12995,6 +13025,11 @@ exports[`Text Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -16333,6 +16368,11 @@ exports[`TextInput Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -18237,6 +18277,11 @@ exports[`TouchableHighlight Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -20459,6 +20504,11 @@ exports[`TouchableOpacity Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -24096,6 +24146,11 @@ exports[`View Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
@@ -29515,6 +29570,11 @@ exports[`VirtualizedList Example Page 1`] = `
         accessibilityHint="Tap to expand navigation menu"
         accessibilityLabel="Navigation menu"
         accessibilityRole="button"
+        accessibilityState={
+          {
+            "expanded": false,
+          }
+        }
         accessibilityValue={
           {
             "max": undefined,
