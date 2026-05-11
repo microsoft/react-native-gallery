@@ -121,18 +121,20 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
           justifyContent: 'center',
           flexWrap: 'wrap'
         }}>
-          <Button
-            title="-"
-            disabled={title === 0}
-            accessibilityLabel={`Decrease counter. Current value is ${title}`}
-            accessibilityState={{disabled: title === 0}}
-            onPress={() => {
-              const newValue = Math.max(0, title - 1);
-              setTitle(newValue);
-              announceCounterChange(newValue, 'decreased');
-            }}
-            onAccessibilityTap={() => {}}
-          />
+          <View tooltip="Decrease counter">
+            <Button
+              title="-"
+              disabled={title === 0}
+              accessibilityLabel={`Decrease counter. Current value is ${title}`}
+              accessibilityState={{disabled: title === 0}}
+              onPress={() => {
+                const newValue = Math.max(0, title - 1);
+                setTitle(newValue);
+                announceCounterChange(newValue, 'decreased');
+              }}
+              onAccessibilityTap={() => {}}
+            />
+          </View>
           <Text
             accessible={true}
             accessibilityRole="text"
@@ -150,16 +152,18 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
             }}>
             {String(title)}
           </Text>
-          <Button
-            title="+"
-            accessibilityLabel={`Increase counter. Current value is ${title}`}
-            onPress={() => {
-              const newValue = title + 1;
-              setTitle(newValue);
-              announceCounterChange(newValue, 'increased');
-            }}
-            onAccessibilityTap={() => {}}
-          />
+          <View tooltip="Increase counter">
+            <Button
+              title="+"
+              accessibilityLabel={`Increase counter. Current value is ${title}`}
+              onPress={() => {
+                const newValue = title + 1;
+                setTitle(newValue);
+                announceCounterChange(newValue, 'increased');
+              }}
+              onAccessibilityTap={() => {}}
+            />
+          </View>
         </View>
       </Example>
     </Page>

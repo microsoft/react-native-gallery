@@ -14,7 +14,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
   const [modal3, setModal3] = React.useState(false);
   const {colors, dark} = useTheme();
   const changeModal1 = () => {
-    AccessibilityInfo.announceForAccessibility("This is a simple modal")
+    //AccessibilityInfo.announceForAccessibility("This is a simple modal")
     setModal1(!modal1);
   };
   const changeModal2 = () => {
@@ -128,9 +128,9 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           accessibilityLabel="Open Modal"
           onPress={changeModal1}
           onAccessibilityTap={changeModal1}/>
-        <Modal visible={modal1} onRequestClose={changeModal1}>
+        <Modal visible={modal1} title='This is a simple Modal'  >
             <View style={styles.simpleModalView}>
-              <Text style={styles.simpleModalText}>This is a simple Modal</Text>
+              {/* <Text style={styles.simpleModalText}></Text> */}
               <Button
                 color={dark ? colors.primary : '#63ce6cff'}
                 ref={modal1FirstButtonRef}
@@ -149,12 +149,9 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           accessibilityLabel="Open Modal"
           onPress={changeModal2}
           onAccessibilityTap={changeModal2}/>
-        <Modal visible={modal2} onRequestClose={changeModal2}>
+        <Modal visible={modal2} onRequestClose={changeModal2} title='This is a Modal with more complex styling'>
           <View style={[styles.centeredView, styles.modalBackdrop]}>
             <View style={styles.modalView}>
-              <Text style={styles.complexModalText}>
-                This is a Modal with more complex styling
-              </Text>
               <Button
                 color={dark ? colors.primary : '#63ce6cff'}
                 ref={modal2FirstButtonRef}
@@ -173,7 +170,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           onPress={changeModal3}
           onAccessibilityTap={changeModal3}/>
           <View style={styles.container}>
-              <Text style={{fontWeight: 'bold', color: colors.text}}>Modal Events</Text>
               <Text style={{color: colors.text}}>onShow event Count = {onShowCount}</Text>
               <Text style={{color: colors.text}}>onDismiss event Count = {onDismissCount}</Text>
               <Text style={styles.textStyle}> </Text>
@@ -181,6 +177,7 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
         <Modal
           visible={modal3}
           onRequestClose={changeModal3}
+          title='Modal Events'
           onDismiss={() => {
             setOnDismissCount(onDismissCount + 1);
           }}
@@ -189,7 +186,6 @@ export const ModalExamplePage: React.FunctionComponent<{navigation?: any}> = ({n
           }}>
           <View style={styles.eventsModalView}>
             <View style={styles.container}>
-              <Text style={styles.modalTextBold}>Modal Events</Text>
               <Text style={styles.modalText}>onShow event Count = {onShowCount}</Text>
               <Text style={styles.modalText}>onDismiss event Count = {onDismissCount}</Text>
             </View>

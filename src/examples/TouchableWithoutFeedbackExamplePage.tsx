@@ -122,6 +122,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
             ref={firstTouchableWithoutFeedbackRef}
             accessibilityRole="button"
             accessibilityLabel={'simple example TouchableWithoutFeedback'}
+            // focusable={false}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
             <Text 
@@ -136,6 +137,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
           <TouchableWithoutFeedback
             accessibilityRole="button"
             accessibilityLabel={'colored example TouchableWithoutFeedback'}
+            focusable={false}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
             <Text 
@@ -154,6 +156,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
             onPress={() => {}}
             onAccessibilityTap={() => {}}
             disabled={true}
+            // focusable={false}
             style={{
               height: 40,
               width: 150,
@@ -175,6 +178,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
               accessibilityRole="button"
               accessibilityLabel={`Decrease counter. Current value is ${title}`}
               accessibilityHint="Decreases the counter by 1"
+              // focusable={false}
               onPress={() => {
                 const newValue = Math.max(0, title - 1);
                 setTitle(newValue);
@@ -194,6 +198,7 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
               accessibilityRole="button"
               accessibilityLabel={`Increase counter. Current value is ${title}`}
               accessibilityHint="Increases the counter by 1"
+              // focusable={false}
               onPress={() => {
                 const newValue = title + 1;
                 setTitle(newValue);

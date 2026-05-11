@@ -441,9 +441,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         title="A VirtualizedList with single selection support"
         code={example2jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container}>
+          <View
+            style={styles.container}
+            accessibilityState={{multiselectable: false, required: false}}>
             <VirtualizedList
               accessibilityRole="list"
+              accessibilityState={{multiselectable: false, required: false}}
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem2}
@@ -463,9 +466,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         title="A VirtualizedList with multiple selection support."
         code={example3jsx}>
         <ScrollView horizontal={true}>
-          <View style={styles.container}>
+          <View
+            style={styles.container}
+            accessibilityState={{multiselectable: selectedSupport === 'Multiple', required: false}}>
             <VirtualizedList
               accessibilityRole="list"
+              accessibilityState={{multiselectable: selectedSupport === 'Multiple', required: false}}
               data={DATA}
               initialNumToRender={10}
               renderItem={renderItem3}

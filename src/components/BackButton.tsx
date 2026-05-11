@@ -77,6 +77,7 @@ export function BackButton() {
         canGoBack ? 'Go back to previous page' : 'No history to go back'
       }
       accessibilityState={{disabled: !canGoBack}}
+      tooltip={canGoBack ? 'Go back' : 'No history to go back'}
       style={[styles.button, {backgroundColor: dynamicBackground}]}
       onPress={handlePress}
       onAccessibilityTap={handlePress}

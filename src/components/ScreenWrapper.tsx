@@ -142,6 +142,7 @@ export function ScreenWrapper({
             accessibilityLabel="Navigation menu"
             style={styles.menu}
             accessibilityHint={'Tap to expand navigation menu'}
+            tooltip={isDrawerOpen ? 'Close navigation menu' : 'Open navigation menu'}
             onPress={() => {
               navigation.dispatch(DrawerActions.toggleDrawer());
               if (!isDrawerOpen) {
