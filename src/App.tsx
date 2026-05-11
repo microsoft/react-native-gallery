@@ -399,12 +399,13 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
         ref={hamburgerRef}
         accessibilityRole="button"
         accessibilityLabel="Navigation menu"
+        accessibilityState={{expanded: isDrawerOpen}}
+        accessibilityHint={'Tap to collapse navigation menu'}
         style={styles.menu}
         onPress={() => {
           if (isDrawerOpen) {
             setFocusTimestamp(Date.now());
             navigation.closeDrawer();
-            AccessibilityInfo.announceForAccessibility('Navigation menu collapsed');
           } else {
             navigation.openDrawer();
           }
@@ -413,7 +414,6 @@ function CustomDrawerContent({ navigation }: { navigation: any }) {
           if (isDrawerOpen) {
             setFocusTimestamp(Date.now());
             navigation.closeDrawer();
-            AccessibilityInfo.announceForAccessibility('Navigation menu collapsed');
           } else {
             navigation.openDrawer();
           }
