@@ -198,6 +198,7 @@ exports[`Button Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -1192,67 +1193,71 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <View
-                  accessibilityLabel="Decrease counter. Current value is 0"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": true,
-                      "expanded": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  collapsable={false}
-                  focusable={false}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "opacity": 1,
-                    }
-                  }
+                  tooltip="Decrease counter"
                 >
                   <View
+                    accessibilityLabel="Decrease counter. Current value is 0"
+                    accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": true,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={false}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
-                      [
-                        {},
-                        {},
-                      ]
+                      {
+                        "opacity": 1,
+                      }
                     }
                   >
-                    <Text
-                      disabled={true}
+                    <View
                       style={
                         [
-                          {
-                            "color": "#007AFF",
-                            "fontSize": 18,
-                            "margin": 8,
-                            "textAlign": "center",
-                          },
-                          {
-                            "color": "#cdcdcd",
-                          },
+                          {},
+                          {},
                         ]
                       }
                     >
-                      -
-                    </Text>
+                      <Text
+                        disabled={true}
+                        style={
+                          [
+                            {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            {
+                              "color": "#cdcdcd",
+                            },
+                          ]
+                        }
+                      >
+                        -
+                      </Text>
+                    </View>
                   </View>
                 </View>
                 <Text
@@ -1276,62 +1281,66 @@ exports[`Button Example Page 1`] = `
                   0
                 </Text>
                 <View
-                  accessibilityLabel="Increase counter. Current value is 0"
-                  accessibilityRole="button"
-                  accessibilityState={
-                    {
-                      "busy": undefined,
-                      "checked": undefined,
-                      "disabled": undefined,
-                      "expanded": undefined,
-                      "selected": undefined,
-                    }
-                  }
-                  accessibilityValue={
-                    {
-                      "max": undefined,
-                      "min": undefined,
-                      "now": undefined,
-                      "text": undefined,
-                    }
-                  }
-                  accessible={true}
-                  collapsable={false}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    {
-                      "opacity": 1,
-                    }
-                  }
+                  tooltip="Increase counter"
                 >
                   <View
+                    accessibilityLabel="Increase counter. Current value is 0"
+                    accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
-                      [
-                        {},
-                      ]
+                      {
+                        "opacity": 1,
+                      }
                     }
                   >
-                    <Text
+                    <View
                       style={
                         [
-                          {
-                            "color": "#007AFF",
-                            "fontSize": 18,
-                            "margin": 8,
-                            "textAlign": "center",
-                          },
+                          {},
                         ]
                       }
                     >
-                      +
-                    </Text>
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                          ]
+                        }
+                      >
+                        +
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </View>
@@ -2004,6 +2013,7 @@ exports[`Clipboard Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -3365,6 +3375,7 @@ exports[`Image Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -5715,6 +5726,7 @@ exports[`Pressable Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -6225,7 +6237,7 @@ exports[`Pressable Example Page 1`] = `
                 }
                 accessible={true}
                 collapsable={false}
-                focusable={true}
+                focusable={false}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -8528,6 +8540,7 @@ exports[`ScrollView Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -11731,6 +11744,7 @@ exports[`Switch Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -13075,6 +13089,7 @@ exports[`Text Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -16412,6 +16427,7 @@ exports[`TextInput Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -18315,6 +18331,7 @@ exports[`TouchableHighlight Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -20536,6 +20553,7 @@ exports[`TouchableOpacity Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -22496,6 +22514,7 @@ exports[`TouchableOpacity Example Page 1`] = `
                       "borderColor": "#E6E6E6",
                       "borderRadius": 3,
                       "borderWidth": 1,
+                      "color": "#505050",
                       "fontSize": 18,
                       "height": 40,
                       "lineHeight": 40,
@@ -24171,6 +24190,7 @@ exports[`View Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -29589,6 +29609,7 @@ exports[`VirtualizedList Example Page 1`] = `
             },
           ]
         }
+        tooltip="No history to go back"
       >
         <Text
           style={
@@ -31454,6 +31475,12 @@ exports[`VirtualizedList Example Page 1`] = `
               >
                 <View>
                   <View
+                    accessibilityState={
+                      {
+                        "multiselectable": false,
+                        "required": false,
+                      }
+                    }
                     style={
                       {
                         "borderColor": "#8D8D8D",
@@ -31467,6 +31494,12 @@ exports[`VirtualizedList Example Page 1`] = `
                     <RCTScrollView
                       accessibilityLabel="A VirtualizedList with single selection support"
                       accessibilityRole="list"
+                      accessibilityState={
+                        {
+                          "multiselectable": false,
+                          "required": false,
+                        }
+                      }
                       data={[]}
                       focusable={true}
                       getItem={[Function]}
@@ -33276,6 +33309,12 @@ exports[`VirtualizedList Example Page 1`] = `
               >
                 <View>
                   <View
+                    accessibilityState={
+                      {
+                        "multiselectable": true,
+                        "required": false,
+                      }
+                    }
                     style={
                       {
                         "borderColor": "#8D8D8D",
@@ -33289,6 +33328,12 @@ exports[`VirtualizedList Example Page 1`] = `
                     <RCTScrollView
                       accessibilityLabel="A VirtualizedList with multiple selection support"
                       accessibilityRole="list"
+                      accessibilityState={
+                        {
+                          "multiselectable": true,
+                          "required": false,
+                        }
+                      }
                       data={[]}
                       focusable={true}
                       getItem={[Function]}
