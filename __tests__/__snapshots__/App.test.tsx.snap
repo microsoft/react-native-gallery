@@ -16695,6 +16695,7 @@ exports[`TextInput Example Page 1`] = `
               <TextInput
                 onChangeText={[Function]}
                 placeholder="A simple TextInput..."
+                placeholderTextColor="#505050"
                 style={
                   {
                     "borderColor": "#E6E6E6",
@@ -16937,6 +16938,7 @@ exports[`TextInput Example Page 1`] = `
                 multiline={true}
                 onChangeText={[Function]}
                 placeholder="Enter multiline text input here..."
+                placeholderTextColor="#505050"
                 scrollEnabled={false}
                 style={
                   {
