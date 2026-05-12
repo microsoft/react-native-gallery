@@ -94,6 +94,7 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
           }}
           onChangeText={onChangeText1}
           placeholder="A simple TextInput..."
+          placeholderTextColor={colors.text}
         />
       </Example>
       <Example
@@ -113,6 +114,7 @@ export const TextInputExamplePage: React.FunctionComponent<{navigation?: any}> =
           multiline
           scrollEnabled={false}
           placeholder="Enter multiline text input here..."
+          placeholderTextColor={colors.text}
         />
       </Example>
       <Example
