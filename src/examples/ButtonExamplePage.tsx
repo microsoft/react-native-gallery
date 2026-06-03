@@ -132,7 +132,11 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
                 setTitle(newValue);
                 announceCounterChange(newValue, 'decreased');
               }}
-              onAccessibilityTap={() => {}}
+              onAccessibilityTap={() => {
+                const newValue = Math.max(0, title - 1);
+                setTitle(newValue);
+                announceCounterChange(newValue, 'decreased');
+              }}
             />
           </View>
           <Text
@@ -161,7 +165,11 @@ export const ButtonExamplePage: React.FunctionComponent<{route?: any; navigation
                 setTitle(newValue);
                 announceCounterChange(newValue, 'increased');
               }}
-              onAccessibilityTap={() => {}}
+              onAccessibilityTap={() => {
+                const newValue = title + 1;
+                setTitle(newValue);
+                announceCounterChange(newValue, 'increased');
+              }}
             />
           </View>
         </View>
