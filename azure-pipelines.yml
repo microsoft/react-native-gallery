@@ -7,7 +7,7 @@ variables:
 
 pool:
   name: rnw-pool-4
-  demands: ImageOverride -equals rnw-img-vs2022-node22
+  demands: ImageOverride -equals rnw-img-vs2026-node24
 
 steps:
   - checkout: self
@@ -20,7 +20,7 @@ steps:
   - task: NodeTool@0
     displayName: Installing Node
     inputs:
-      versionSpec: '22.x'
+      versionSpec: '24.x'
 
   - task: CmdLine@2
     displayName: Installing Yarn
@@ -92,6 +92,9 @@ steps:
         Copy-Item "windows\AccessibilityUnitTest\AccessibilitySnapshot.json" "$(Build.ArtifactStagingDirectory)\AccessibilitySnapshot.baseline.json"
         Write-Host "Baseline snapshot saved"
 
+  - task: VisualStudioTestPlatformInstaller@1
+    displayName: Install VSTest Platform
+
   - task: VSTest@2
     displayName: Run Accessibility Tests
     inputs:
@@ -100,6 +103,7 @@ steps:
         **\bin\Debug\AccessibilityUnitTest.dll
       searchFolder: $(System.DefaultWorkingDirectory)\windows\AccessibilityUnitTest
       resultsFolder: $(Build.ArtifactStagingDirectory)\TestResults
+      vsTestVersion: toolsInstaller
 
   - task: PowerShell@2
     displayName: Validate Accessibility Snapshot
