@@ -33,7 +33,7 @@ variables:
 
 pool:
   name: rnw-pool-4
-  demands: ImageOverride -equals rnw-img-vs2022-node22
+  demands: ImageOverride -equals rnw-img-vs2026-node24
 
 steps:
   - checkout: self
@@ -46,7 +46,7 @@ steps:
   - task: NodeTool@0
     displayName: Installing Node
     inputs:
-      versionSpec: '22.x'
+      versionSpec: '24.x'
 
   - task: CmdLine@2
     displayName: Upgrade react-native-windows Version
