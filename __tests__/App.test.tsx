@@ -16,7 +16,7 @@ import {TouchableHighlightExamplePage} from '../src/examples/TouchableHighlightE
 import {TouchableOpacityExamplePage} from '../src/examples/TouchableOpacityExamplePage';
 import {ViewExamplePage} from '../src/examples/ViewExamplePage';
 import {VirtualizedListExamplePage} from '../src/examples/VirtualizedListExamplePage';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 
 jest.useFakeTimers();
 
@@ -90,6 +90,10 @@ test('ScrollView Example Page', async () => {
   await act(async () => {
     tree = create(<ScrollViewExamplePage />);
   });
+  const horizontalScrollViews = tree.root.findAll(
+    node => node.type === ScrollView && node.props.horizontal === true,
+  );
+  expect(horizontalScrollViews[0].props.focusable).toBe(true);
   expect(tree.toJSON()).toMatchSnapshot();
 });
 
