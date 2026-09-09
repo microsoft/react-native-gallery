@@ -16,69 +16,6 @@ exports[`Button Example Page 1`] = `
   }
 >
   <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
-  <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
     accessibilityState={
@@ -1836,69 +1773,6 @@ exports[`Clipboard Example Page 1`] = `
   }
 >
   <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
-  <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
     accessibilityState={
@@ -3202,69 +3076,6 @@ exports[`Image Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
@@ -5558,69 +5369,6 @@ exports[`Pressable Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
@@ -8378,69 +8126,6 @@ exports[`ScrollView Example Page 1`] = `
   }
 >
   <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
-  <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
     accessibilityState={
@@ -10729,69 +10414,6 @@ exports[`Switch Example Page 1`] = `
   }
 >
   <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
-  <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
     accessibilityState={
@@ -12078,69 +11700,6 @@ exports[`Text Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
@@ -15422,69 +14981,6 @@ exports[`TextInput Example Page 1`] = `
   }
 >
   <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
-  <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
     accessibilityState={
@@ -17332,69 +16828,6 @@ exports[`TouchableHighlight Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
@@ -19559,69 +18992,6 @@ exports[`TouchableOpacity Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
@@ -23201,69 +22571,6 @@ exports[`View Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"
@@ -28625,69 +27932,6 @@ exports[`VirtualizedList Example Page 1`] = `
     }
   }
 >
-  <View
-    style={
-      {
-        "bottom": -1000,
-        "left": 0,
-        "position": "absolute",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to main content"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to main content
-      </Text>
-    </View>
-    <View
-      accessibilityHint="Activate to skip to content"
-      accessibilityLabel="Skip to navigation"
-      accessibilityRole="button"
-      accessible={true}
-      onAccessibilityTap={[Function]}
-      style={
-        {
-          "backgroundColor": "#000",
-          "color": "#fff",
-          "margin": 2,
-          "padding": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          {
-            "color": "#fff",
-            "fontSize": 14,
-          }
-        }
-      >
-        Skip to navigation
-      </Text>
-    </View>
-  </View>
   <View
     accessibilityLabel="Navigation bar"
     accessibilityLiveRegion="assertive"

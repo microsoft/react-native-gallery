@@ -6,13 +6,11 @@ import {
   TouchableHighlight,
   Text,
   PlatformColor,
-  AccessibilityInfo,
   Dimensions,
   Easing,
   useAnimatedValue,
 } from 'react-native';
 import {useNavigation, DrawerActions, getDrawerStatusFromState} from '../Navigation';
-import {AccessibilityNavigationHelper} from './AccessibilityNavigationHelper';
 import {FocusScreenWrapperContext, FocusScreenWrapperSetterContext} from '../App';
 import {BackButton} from './BackButton';
 
@@ -104,23 +102,8 @@ export function ScreenWrapper({
     }
   }, [focusTimestamp, setFocusTimestamp]);
 
-  const handleSkipToMain = () => {
-    // Focus management for skip to main content
-    AccessibilityInfo.announceForAccessibility('Navigated to main content');
-  };
-
-  const handleSkipToNavigation = () => {
-    navigation.dispatch(DrawerActions.openDrawer());
-    AccessibilityInfo.announceForAccessibility('Navigation menu opened');
-  };
-
   return (
     <View style={styles.container}>
-      
-      <AccessibilityNavigationHelper
-        onSkipToMain={handleSkipToMain}
-        onSkipToNavigation={handleSkipToNavigation}
-      />
       <View
         // accessibilityRole="button"
         accessibilityLabel="Navigation bar"
