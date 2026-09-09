@@ -85,6 +85,7 @@ export function BackButton() {
       onPressOut={() => setIsPressed(false)}
       onHoverIn={() => setIsHovered(true)}
       onHoverOut={() => setIsHovered(false)}
+      focusable={canGoBack}
       disabled={!canGoBack}>
       {/* E72B = ChevronLeft / Back arrow in Segoe MDL2 Assets */}
       <Text style={[styles.icon, {color: iconColor}]}>{'\uE72B'}</Text>

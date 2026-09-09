@@ -177,7 +177,7 @@ exports[`Button Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1997,7 +1997,7 @@ exports[`Clipboard Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -3364,7 +3364,7 @@ exports[`Image Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -5720,7 +5720,7 @@ exports[`Pressable Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -8539,7 +8539,7 @@ exports[`ScrollView Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -10890,7 +10890,7 @@ exports[`Switch Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -12240,7 +12240,7 @@ exports[`Text Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -15583,7 +15583,7 @@ exports[`TextInput Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -17494,7 +17494,7 @@ exports[`TouchableHighlight Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -19721,7 +19721,7 @@ exports[`TouchableOpacity Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -23363,7 +23363,7 @@ exports[`View Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
@@ -28787,7 +28787,7 @@ exports[`VirtualizedList Example Page 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         onAccessibilityTap={[Function]}
         onBlur={[Function]}
         onClick={[Function]}
