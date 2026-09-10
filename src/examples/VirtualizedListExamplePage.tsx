@@ -18,15 +18,8 @@ import {usePageFocusManagement} from '../hooks/usePageFocusManagement';
 // import {Picker} from '@react-native-picker/picker';
 
 export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
-  const firstVirtualizedListRef = usePageFocusManagement(navigation);
+  const firstVirtualizedListItemRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
-
-  // Focus the first VirtualizedList when component mounts
-  useEffect(() => {
-    if (firstVirtualizedListRef?.current) {
-      firstVirtualizedListRef.current.focus();
-    }
-  }, [firstVirtualizedListRef]);
 
   const example1jsx = `
   var DATA: INT[] = [];
@@ -303,7 +296,12 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
   const renderItem = ({item}: {item: any}) => {
     return (
       <Pressable
-        ref={(ref) => (itemRefs.current[item.index] = ref)}
+        ref={ref => {
+          itemRefs.current[item.index] = ref;
+          if (item.index === 0) {
+            firstVirtualizedListItemRef.current = ref;
+          }
+        }}
         accessibilityLabel={item.title}
         accessibilityRole="listitem"
         accessible={true}
@@ -419,7 +417,6 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
       <Example title="A simple VirtualizedList." code={example1jsx}>
         <ScrollView horizontal={true}>
           <View
-            ref={firstVirtualizedListRef}
             style={styles.container}
             accessibilityLabel="VirtualizedList container">
             <VirtualizedList
