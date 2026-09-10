@@ -34,8 +34,10 @@ const Data = [
   }
 ];
 
+type FlatListItem = (typeof Data)[number];
+
 export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = ({navigation}) => {
-  const firstFlatListRef = usePageFocusManagement(navigation);
+  const firstFlatListItemRef = usePageFocusManagement(navigation);
   const {colors} = useTheme();
 
   const example1jsx = `<FlatList
@@ -83,8 +85,9 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
   numColumns={3}/>`;
 
   // Create a specialized render function for the fixed-height example to improve accessibility
-  const renderAccessibleItem = ({item}: {item: any}) => (
+  const renderItem = (item: FlatListItem, itemRef?: React.Ref<Pressable>) => (
     <Pressable
+      ref={itemRef}
       style={{
         width: 75,
         padding: 10,
@@ -107,6 +110,18 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
     </Pressable>
   );
 
+  const renderAccessibleItem = ({item}: {item: FlatListItem}) =>
+    renderItem(item);
+
+  const renderFirstFlatListItem = ({
+    item,
+    index,
+  }: {
+    item: FlatListItem;
+    index: number;
+  }) =>
+    renderItem(item, index === 0 ? firstFlatListItemRef : undefined);
+
   return (
     <Page
       title="FlatList"
@@ -123,10 +138,10 @@ export const FlatListExamplePage: React.FunctionComponent<{navigation?: any}> = 
           url: 'https://github.com/facebook/react-native/blob/main/packages/react-native/Libraries/Lists/FlatList.js',
         },
       ]}>
-      <Example ref={firstFlatListRef} title="A simple FlatList." code={example1jsx}>
+      <Example title="A simple FlatList." code={example1jsx}>
         <FlatList
           data={Data}
-          renderItem={renderAccessibleItem}
+          renderItem={renderFirstFlatListItem}
           keyExtractor={(item) => item.id}
           contentContainerStyle={{alignItems: 'center'}}
         />
