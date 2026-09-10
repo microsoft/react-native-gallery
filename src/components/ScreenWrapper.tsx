@@ -6,6 +6,7 @@ import {
   TouchableHighlight,
   Text,
   PlatformColor,
+  AccessibilityInfo,
   Dimensions,
   Easing,
   useAnimatedValue,
