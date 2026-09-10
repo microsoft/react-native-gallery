@@ -40,6 +40,12 @@ test('Button Example Page', async () => {
   await act(async () => {
     tree = create(<ButtonExamplePage />);
   });
+  const hiddenSkipControls = tree.root.findAll(node =>
+    ['Skip to main content', 'Skip to navigation'].includes(
+      node.props.accessibilityLabel,
+    ),
+  );
+  expect(hiddenSkipControls).toHaveLength(0);
   expect(tree.toJSON()).toMatchSnapshot();
 });
 
