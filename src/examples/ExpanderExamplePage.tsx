@@ -61,7 +61,7 @@ export const ExpanderExamplePage: React.FunctionComponent<{}> = () => {
         url: 'https://docs.microsoft.com/en-us/windows/winui/api/microsoft.ui.xaml.controls.expander?view=winui-2.6',
       }}
       componentType="Community"
-      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ExperimentalExpanderExamplePage.tsx"
+      pageCodeUrl="https://github.com/microsoft/react-native-gallery/blob/main/src/examples/ExpanderExamplePage.tsx"
       documentation={[
         {
           label: 'Expander',
