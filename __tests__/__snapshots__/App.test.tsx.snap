@@ -5682,7 +5682,7 @@ exports[`Pressable Example Page 1`] = `
               }
             >
               <View
-                accessibilityHint="Tap to change text from Pressed to Press Me"
+                accessibilityHint="Tap to change text from Press Me to Pressed"
                 accessibilityLabel="Press Me"
                 accessibilityRole="button"
                 accessibilityState={
@@ -6553,7 +6553,7 @@ exports[`Pressable Example Page 1`] = `
               }
             >
               <View
-                accessibilityHint="Tap to increase the counter. Pressed 0 times"
+                accessibilityHint="Tap to increase the counter"
                 accessibilityLabel="Press Me"
                 accessibilityRole="button"
                 accessibilityState={
