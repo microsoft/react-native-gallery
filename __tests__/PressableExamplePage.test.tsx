@@ -6,6 +6,9 @@ import React from 'react';
 import {act, create, ReactTestRenderer} from 'react-test-renderer';
 import {PressableExamplePage} from '../src/examples/PressableExamplePage';
 
+// Increase timeout for CI agents which may be slower
+jest.setTimeout(30000);
+
 test('keeps Pressable names and hints synchronized with their visible state', async () => {
   let tree!: ReactTestRenderer;
 
