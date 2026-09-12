@@ -7,6 +7,7 @@ import {
   useColorScheme,
   KeyboardEvent as RNKeyboardEvent,
   AccessibilityInfo,
+  Platform,
   ScrollView,
 } from 'react-native';
 import {NavigationContainer, useNavigation} from './Navigation';
@@ -31,12 +32,19 @@ import {
   NavigationHistoryProvider,
   useNavigationHistory,
 } from './hooks/useNavigationHistory';
+import {AppTitleBar} from './components/AppTitleBar';
 
 // Context for signaling focus to ScreenWrapper hamburger
 export const FocusScreenWrapperContext = React.createContext<number | null>(null);
 export const FocusScreenWrapperSetterContext = React.createContext<React.Dispatch<React.SetStateAction<number | null>>>(() => {});
 
 const styles = StyleSheet.create({
+  appContainer: {
+    flex: 1,
+  },
+  navigationContainer: {
+    flex: 1,
+  },
   menu: {
     margin: 5,
     height: 34,
@@ -541,16 +549,21 @@ export default function App() {
           <ThemeSetterContext.Provider value={setRawTheme}>
             <RawThemeContext.Provider value={rawtheme}>
               <ThemeContext.Provider value={theme}>
-                <NavigationContainer
-                  theme={
-                    isHighContrast
-                      ? HighContrastTheme
-                      : theme === 'dark'
-                      ? DarkTheme
-                      : LightTheme
-                  }>
-                  <NavigationAwareDrawer />
-                </NavigationContainer>
+                <View style={styles.appContainer}>
+                  {Platform.OS === 'windows' && <AppTitleBar />}
+                  <View style={styles.navigationContainer}>
+                    <NavigationContainer
+                      theme={
+                        isHighContrast
+                          ? HighContrastTheme
+                          : theme === 'dark'
+                          ? DarkTheme
+                          : LightTheme
+                      }>
+                      <NavigationAwareDrawer />
+                    </NavigationContainer>
+                  </View>
+                </View>
               </ThemeContext.Provider>
             </RawThemeContext.Provider>
           </ThemeSetterContext.Provider>

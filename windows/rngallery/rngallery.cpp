@@ -85,22 +85,25 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
     auto titleBar = appWindow.TitleBar();
     if (titleBar)
     {
-      // Enable title bar theming to follow system theme
-      titleBar.ExtendsContentIntoTitleBar(false);
+      // Render the app title in React Native so it follows the system text scale.
+      // The system continues to provide the caption buttons and drag region.
+      titleBar.ExtendsContentIntoTitleBar(true);
 
       // Capture the DispatcherQueue so we can marshal theme updates to the UI thread
       auto dispatcherQueue = winrt::Microsoft::UI::Dispatching::DispatcherQueue::GetForCurrentThread();
 
-      // Function to apply current system theme colors
-      auto applySystemTheme = [titleBar]()
+      auto applyTitleBarSettings = [titleBar]()
       {
         try
         {
           winrt::Windows::UI::ViewManagement::UISettings uiSettings;
           auto foreground = uiSettings.GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType::Foreground);
           auto background = uiSettings.GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType::Background);
+          auto heightOption = uiSettings.TextScaleFactor() > 1
+              ? winrt::Microsoft::UI::Windowing::TitleBarHeightOption::Tall
+              : winrt::Microsoft::UI::Windowing::TitleBarHeightOption::Standard;
 
-          // Apply system theme colors to title bar
+          titleBar.PreferredHeightOption(heightOption);
           titleBar.ForegroundColor(foreground);
           titleBar.BackgroundColor(background);
           titleBar.ButtonForegroundColor(foreground);
@@ -122,18 +125,24 @@ _Use_decl_annotations_ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE, PSTR 
         }
       };
 
-      // Apply initial theme
-      applySystemTheme();
+      applyTitleBarSettings();
 
       // Listen for system theme changes using the static uiSettings so the
       // event registration persists for the lifetime of the application.
-      s_uiSettings.ColorValuesChanged([applySystemTheme, dispatcherQueue](auto const &, auto const &)
+      s_uiSettings.ColorValuesChanged([applyTitleBarSettings, dispatcherQueue](auto const &, auto const &)
                                       {
         // ColorValuesChanged fires on a background thread, so dispatch
         // the title bar update back to the UI thread.
         if (dispatcherQueue) {
-          dispatcherQueue.TryEnqueue([applySystemTheme]() {
-            applySystemTheme();
+          dispatcherQueue.TryEnqueue([applyTitleBarSettings]() {
+            applyTitleBarSettings();
+          });
+        } });
+      s_uiSettings.TextScaleFactorChanged([applyTitleBarSettings, dispatcherQueue](auto const &, auto const &)
+                                         {
+        if (dispatcherQueue) {
+          dispatcherQueue.TryEnqueue([applyTitleBarSettings]() {
+            applyTitleBarSettings();
           });
         } });
     }
