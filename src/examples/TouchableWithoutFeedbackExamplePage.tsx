@@ -18,14 +18,17 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
     };
 
     const counterButtonStyle = {
-      color: colors.text,
-      fontSize: 20,
       padding: 10,
       minWidth: 40,
-      textAlign: 'center' as const,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: 3
+      borderRadius: 3,
+    };
+
+    const counterButtonTextStyle = {
+      color: colors.text,
+      fontSize: 20,
+      textAlign: 'center' as const,
     };
 
     const counterDisplayStyle = {
@@ -44,12 +47,11 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
   accessibilityRole="button"
   onPress={() => {}}
   onAccessibilityTap={() => {}}>
-  <Text 
-    accessible={true}
-    accessibilityLabel="TouchableWithoutFeedback"
-    style={{color: colors.text}}>
-    TouchableWithoutFeedback
-  </Text>
+  <View>
+    <Text style={{color: colors.text}}>
+      TouchableWithoutFeedback
+    </Text>
+  </View>
 </TouchableWithoutFeedback>`;
 
     const example2jsx = `<TouchableWithoutFeedback
@@ -89,12 +91,11 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
   onAccessibilityTap={() => {
     setTitle(title + 1);
   }}>
-  <Text
-    accessible={true}
-    accessibilityLabel="TouchableWithoutFeedback"
-    style={{color: colors.text}}>
-    {String(title)}
-  </Text>
+  <View style={counterButtonStyle}>
+    <Text style={counterButtonTextStyle}>
+      {String(title)}
+    </Text>
+  </View>
 </TouchableWithoutFeedback>`;
 
     const pressableMsg =
@@ -125,12 +126,11 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
             // focusable={false}
             onPress={() => {}}
             onAccessibilityTap={() => {}}>
-            <Text 
-              accessible={true}
-              accessibilityLabel="TouchableWithoutFeedback"
-              style={{color: colors.text}}>
-              TouchableWithoutFeedback
-            </Text>
+            <View>
+              <Text style={{color: colors.text}}>
+                TouchableWithoutFeedback
+              </Text>
+            </View>
           </TouchableWithoutFeedback>
         </Example>
         <Example title="A colored TouchableWithoutFeedback." code={example2jsx}>
@@ -184,7 +184,9 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
                 setTitle(newValue);
                 announceCounterChange(newValue, 'decreased');
               }}>
-              <Text style={counterButtonStyle}>-</Text>
+              <View style={counterButtonStyle}>
+                <Text style={counterButtonTextStyle}>-</Text>
+              </View>
             </TouchableWithoutFeedback>
             <Text
               accessible={true}
@@ -204,7 +206,9 @@ export const TouchableWithoutFeedbackExamplePage: React.FunctionComponent<{
                 setTitle(newValue);
                 announceCounterChange(newValue, 'increased');
               }}>
-              <Text style={counterButtonStyle}>+</Text>
+              <View style={counterButtonStyle}>
+                <Text style={counterButtonTextStyle}>+</Text>
+              </View>
             </TouchableWithoutFeedback>
           </View>
         </Example>
