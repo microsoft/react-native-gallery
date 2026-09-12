@@ -1,5 +1,5 @@
 'use strict';
-import {Text, Pressable, Platform, PlatformColor, AccessibilityInfo} from 'react-native';
+import {Text, Pressable, Platform, PlatformColor} from 'react-native';
 import React, {useState} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
@@ -11,8 +11,18 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
   const {colors} = useTheme();
 
   const [timesPressed, setTimesPressed] = useState(0);
-  const [pressed1, setPressed1] = useState(0);
+  const [isPressed, setIsPressed] = useState(false);
   const [currEvent, setCurrEvent] = useState('');
+  const pressableLabel = isPressed ? 'Pressed' : 'Press Me';
+  const pressableHint = isPressed
+    ? 'Tap to change text from Pressed to Press Me'
+    : 'Tap to change text from Press Me to Pressed';
+  const counterLabel =
+    timesPressed === 0
+      ? 'Press Me'
+      : `Pressed ${timesPressed} ${timesPressed === 1 ? 'time' : 'times'}`;
+  const feedbackLabel =
+    currEvent === '' ? 'Press Me' : `Most recent event: ${currEvent}`;
 
   const example1jsx = `<Pressable>
   {({pressed}) => <Text>{pressed ? 'Pressed!' : 'Press Me'}</Text>}
@@ -94,21 +104,13 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
         <Pressable
           ref={firstPressableRef}
           accessibilityRole="button"
-          accessibilityLabel={'Press Me'}
-          accessibilityHint={
-            'Tap to change text from Pressed to Press Me'
-          }
-          onPress={() => {
-            setPressed1((current) => current + 1);
-            AccessibilityInfo.announceForAccessibility('Pressed');
-          }}
-          onAccessibilityTap={() => {
-            setPressed1((current) => current + 1);
-            AccessibilityInfo.announceForAccessibility('Pressed');
-          }}>
+          accessibilityLabel={pressableLabel}
+          accessibilityHint={pressableHint}
+          onPress={() => setIsPressed(current => !current)}
+          onAccessibilityTap={() => setIsPressed(current => !current)}>
           {({pressed}) => (
             <Text style={{color: colors.text}}>
-              {(pressed1 || pressed) ? 'Pressed!' : 'Press Me'}
+              {isPressed || pressed ? 'Pressed!' : 'Press Me'}
             </Text>
           )}
         </Pressable>
@@ -144,8 +146,8 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
       <Example title="A Pressable component with counter." code={example3jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Press Me'}
-          accessibilityHint={`Tap to increase the counter. Pressed ${timesPressed} times`}
+          accessibilityLabel={counterLabel}
+          accessibilityHint="Tap to increase the counter"
           onPress={() => {
             setTimesPressed((current) => current + 1);
           }}
@@ -174,7 +176,13 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
                 flexWrap: 'wrap',
                 color: pressed ? '#FFFFFF' : colors.text,
               }}>
-              {pressed ? `Pressed ${timesPressed} times!` : 'Press Me'}
+              {timesPressed > 0
+                ? `Pressed ${timesPressed} ${
+                    timesPressed === 1 ? 'time' : 'times'
+                  }!`
+                : pressed
+                ? 'Pressed!'
+                : 'Press Me'}
             </Text>
           )}
         </Pressable>
@@ -184,7 +192,7 @@ export const PressableExamplePage: React.FunctionComponent<{navigation?: any}> =
         code={example4jsx}>
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel={'Press Me'}
+          accessibilityLabel={feedbackLabel}
           accessibilityHint={
             'Tap to see the different events (press, pressIn, pressOut, longPress)'
           }
