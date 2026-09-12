@@ -11,6 +11,7 @@ import React from 'react';
 // } from 'react-native-xaml';
 import {useTheme, useIsFocused} from './Navigation';
 import {ScreenWrapper} from './components/ScreenWrapper';
+import {usePageFocusManagement} from './hooks/usePageFocusManagement';
 var pkg = require('../package.json');
 const createStyles = (colors: any) =>
   StyleSheet.create({
@@ -62,19 +63,27 @@ const SettingContainer = (props: {
   );
 };
 
-export const SettingsPage: React.FunctionComponent<{}> = () => {
+export const SettingsPage: React.FunctionComponent<{navigation?: any}> = ({
+  navigation,
+}) => {
   //const theme = React.useContext(RawThemeContext);
   //const setTheme = React.useContext(ThemeSetterContext);
   const {colors} = useTheme();
   const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
+  const titleRef = usePageFocusManagement(navigation);
   /*const PickerValueChanged = (value: ThemeMode) => {
     console.log('Setting theme to: ' + value);
     setTheme(value);
   };*/
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
-      <Text accessibilityRole="header" accessibilityLevel={1} style={styles.title}>
+      <Text
+        ref={titleRef}
+        accessibilityRole="header"
+        accessibilityLevel={1}
+        focusable={true}
+        style={styles.title}>
         Settings
       </Text>
       <ScrollView style={styles.scrollView}>
