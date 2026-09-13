@@ -419,7 +419,6 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -680,7 +679,6 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -943,7 +941,6 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -1319,7 +1316,6 @@ exports[`Button Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -2205,7 +2201,6 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -2481,7 +2476,6 @@ exports[`Clipboard Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -3476,7 +3470,6 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -3765,7 +3758,6 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -4065,7 +4057,6 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -4364,7 +4355,6 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -4697,7 +4687,6 @@ exports[`Image Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -5759,7 +5748,6 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -6070,7 +6058,6 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -6645,7 +6632,6 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -7349,7 +7335,6 @@ exports[`Pressable Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -8527,7 +8512,6 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -8829,7 +8813,6 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -9153,7 +9136,6 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -9491,7 +9473,6 @@ exports[`ScrollView Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -10809,7 +10790,6 @@ exports[`Switch Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -11000,7 +10980,6 @@ exports[`Switch Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -11194,7 +11173,6 @@ exports[`Switch Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -12092,7 +12070,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -12296,7 +12273,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -12565,7 +12541,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -12789,7 +12764,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -13134,7 +13108,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -13410,7 +13383,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -13681,7 +13653,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -13974,7 +13945,6 @@ exports[`Text Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -14284,7 +14254,6 @@ Here is a line
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -14498,7 +14467,6 @@ Here is a line
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -15377,7 +15345,6 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -15623,7 +15590,6 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -15882,7 +15848,6 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -16231,7 +16196,6 @@ exports[`TextInput Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -17213,7 +17177,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -17731,7 +17694,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -18251,7 +18213,6 @@ exports[`TouchableHighlight Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -19389,7 +19350,6 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -19951,7 +19911,6 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -20513,7 +20472,6 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -21178,7 +21136,6 @@ exports[`TouchableOpacity Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -21772,7 +21729,6 @@ activeOpacity={
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -22955,7 +22911,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -23140,7 +23095,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -23462,7 +23416,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -24045,7 +23998,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -24720,7 +24672,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -25753,7 +25704,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -26592,7 +26542,6 @@ exports[`View Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -26986,7 +26935,6 @@ style={{
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -27378,7 +27326,6 @@ style={{
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -28969,7 +28916,6 @@ exports[`VirtualizedList Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -30664,7 +30610,6 @@ exports[`VirtualizedList Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
@@ -32691,7 +32636,6 @@ exports[`VirtualizedList Example Page 1`] = `
                 }
               >
                 <Text
-                  selectable={true}
                   style={
                     {
                       "color": {
