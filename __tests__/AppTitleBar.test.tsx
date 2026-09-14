@@ -27,6 +27,8 @@ test('allows the visible app title to follow the system text scale', async () =>
   expect(title.props.children).toBe('React Native Gallery');
   expect(title.props.allowFontScaling).toBe(true);
   expect(title.props.accessibilityRole).toBe('header');
+  expect(title.props.numberOfLines).toBe(1);
+  expect(title.props.ellipsizeMode).toBe('tail');
 });
 
 test('updates the title bar height when the rendered title scale changes', async () => {

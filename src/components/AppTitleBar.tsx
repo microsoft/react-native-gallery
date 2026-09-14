@@ -46,6 +46,8 @@ export function AppTitleBar() {
       <Text
         accessibilityRole="header"
         allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
         onLayout={onTitleLayout}
         style={styles.title}>
         React Native Gallery
