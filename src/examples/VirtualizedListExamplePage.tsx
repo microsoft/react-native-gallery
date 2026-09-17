@@ -324,6 +324,8 @@ export const VirtualizedListExamplePage: React.FunctionComponent<{navigation?: a
         ref={(ref) => (itemRefs2.current[item.index] = ref)}
         accessibilityLabel={item.title}
         accessibilityRole="listitem"
+        accessibilityPosInSet={item.index + 1}
+        accessibilitySetSize={ITEM_COUNT}
         accessible={true}
         style={item.index === selectedIndex ? styles.itemSelected : styles.item}
         accessibilityState={{selected: item.index === selectedIndex}}

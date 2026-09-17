@@ -45,3 +45,21 @@ test('uses the first item in the first VirtualizedList as the page focus target'
     false,
   ]);
 });
+
+test('provides set position metadata for single-selection items', async () => {
+  let tree!: ReactTestRenderer;
+
+  await act(async () => {
+    tree = create(<VirtualizedListExamplePage />);
+  });
+
+  const singleSelectionList = tree.root.findAllByType(VirtualizedList)[1];
+  const item2 = singleSelectionList.find(
+    node =>
+      node.props.accessibilityLabel === 'Item 2' &&
+      node.props.accessibilityRole === 'listitem',
+  );
+
+  expect(item2.props.accessibilityPosInSet).toBe(2);
+  expect(item2.props.accessibilitySetSize).toBe(10);
+});
