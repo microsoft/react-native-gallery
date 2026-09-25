@@ -203,7 +203,7 @@ steps:
 
   - task: PublishBuildArtifacts@1
     displayName: Upload App
-    condition: and(succeededOrFailed(), eq(${{ matrix.reactNativeWindowsVersion }}, "current"))
+    condition: and(succeededOrFailed(), eq(variables['PUBLISH_APP'], 'true'))
     inputs:
-      pathtoPublish: .\windows\AppPackages\rngallery
+      pathtoPublish: .\windows\rngallery.Package\AppPackages
       artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
