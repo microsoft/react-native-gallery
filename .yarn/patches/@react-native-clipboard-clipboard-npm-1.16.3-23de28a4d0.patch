@@ -1,0 +1,13 @@
+diff --git a/windows/Clipboard/Clipboard.vcxproj b/windows/Clipboard/Clipboard.vcxproj
+index aedd0734823d0a7233deae7ee808b1704c133593..59d044ec8819678538e631b4f2bd43038cc6e16d 100644
+--- a/windows/Clipboard/Clipboard.vcxproj
++++ b/windows/Clipboard/Clipboard.vcxproj
+@@ -69,7 +69,7 @@
+   <PropertyGroup Label="Configuration">
+     <ConfigurationType>DynamicLibrary</ConfigurationType>
+     <CharacterSet>Unicode</CharacterSet>
+-    <PlatformToolset>v143</PlatformToolset>
++    <PlatformToolset Condition="'$(PlatformToolset)' == ''">$(DefaultPlatformToolset)</PlatformToolset>
+     <GenerateManifest>false</GenerateManifest>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
