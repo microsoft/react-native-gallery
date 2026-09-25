@@ -1,6 +1,6 @@
 {
   "name": "rngallery",
-  "version": "2.1.7.0",
+  "version": "2.1.8.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -12,23 +12,23 @@
     "test:windows": "jest --config jest.config.windows.js"
   },
   "dependencies": {
-    "@react-native-clipboard/clipboard": "^1.16.1",
+    "@react-native-clipboard/clipboard": "patch:@react-native-clipboard/clipboard@npm%3A1.16.3#~/.yarn/patches/@react-native-clipboard-clipboard-npm-1.16.3-23de28a4d0.patch",
     "lowlight": "^1.17.0",
     "react": "19.2.3",
-    "react-native": "0.84.1",
-    "react-native-windows": "0.84.0"
+    "react-native": "0.85.3",
+    "react-native-windows": "0.85.0-preview.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
-    "@react-native-community/cli": "20.0.0",
-    "@react-native-community/cli-platform-android": "20.0.0",
-    "@react-native-community/cli-platform-ios": "20.0.0",
-    "@react-native/babel-preset": "0.84.1",
-    "@react-native/eslint-config": "0.84.1",
-    "@react-native/metro-config": "0.84.1",
-    "@react-native/typescript-config": "0.84.1",
+    "@react-native-community/cli": "20.2.0",
+    "@react-native-community/cli-platform-android": "20.2.0",
+    "@react-native-community/cli-platform-ios": "20.2.0",
+    "@react-native/babel-preset": "0.85.3",
+    "@react-native/eslint-config": "0.85.3",
+    "@react-native/metro-config": "0.85.3",
+    "@react-native/typescript-config": "0.85.3",
     "@rnx-kit/jest-preset": "^0.1.17",
     "@types/jest": "^29.5.13",
     "@types/react": "19.2.3",
@@ -40,7 +40,7 @@
     "typescript": "5.0.4"
   },
   "engines": {
-    "node": ">=18"
+    "node": "^22.13.0 || ^24.3.0 || >=25.0.0"
   },
   "jest": {
     "preset": "react-native",
