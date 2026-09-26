@@ -60,7 +60,14 @@ steps:
       script: npm install -g yarn
 
   - task: CmdLine@2
-    displayName: yarn
+    displayName: yarn (upgrade matrix)
+    condition: eq(variables['UPGRADE'], 'true')
+    inputs:
+      script: yarn install
+
+  - task: CmdLine@2
+    displayName: yarn (publish candidate)
+    condition: ne(variables['UPGRADE'], 'true')
     inputs:
       script: yarn install --immutable
 
