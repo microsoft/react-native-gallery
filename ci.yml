@@ -63,7 +63,7 @@ steps:
     displayName: yarn (upgrade matrix)
     condition: eq(variables['UPGRADE'], 'true')
     inputs:
-      script: yarn install
+      script: yarn install --no-immutable
 
   - task: CmdLine@2
     displayName: yarn (publish candidate)
