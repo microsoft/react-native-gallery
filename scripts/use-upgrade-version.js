@@ -24,7 +24,9 @@ function fetchPackageInfo(pkg) {
     const result = [];
 
     const npm = os.platform() === 'win32' ? 'npm.cmd' : 'npm';
-    const fetch = spawn(npm, ['view', '--json', pkg]);
+    const fetch = spawn(npm, ['view', '--json', pkg], {
+      shell: os.platform() === 'win32',
+    });
     fetch.stdout.on('data', (data) => result.push(data));
     fetch.on('close', (code) => {
       if (code !== 0 || result.length === 0) {

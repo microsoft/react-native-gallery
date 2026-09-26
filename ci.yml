@@ -122,7 +122,7 @@ steps:
     inputs:
       targetType: inline
       script: |
-        Start-Process "shell:AppsFolder\Microsoft.ReactNativeGallery_8wekyb3d8bbwe!App"
+        Start-Process "shell:AppsFolder\Microsoft.ReactNativeGallery-Experimental_8wekyb3d8bbwe!App"
         Start-Sleep -Seconds 10
 
         $process = Get-Process -Name "rngallery" -ErrorAction SilentlyContinue
@@ -141,6 +141,10 @@ steps:
         Copy-Item "windows\AccessibilityUnitTest\AccessibilitySnapshot.json" "$(Build.ArtifactStagingDirectory)\AccessibilitySnapshot.baseline.json"
         Write-Host "Baseline snapshot saved"
 
+  - task: VisualStudioTestPlatformInstaller@1
+    displayName: Install VSTest Platform
+    condition: eq(variables['PUBLISH_APP'], 'true')
+
   - task: VSTest@2
     displayName: Run Accessibility Tests
     condition: eq(variables['PUBLISH_APP'], 'true')
@@ -150,6 +154,7 @@ steps:
         **\bin\Release\AccessibilityUnitTest.dll
       searchFolder: $(System.DefaultWorkingDirectory)\windows\AccessibilityUnitTest
       resultsFolder: $(Build.ArtifactStagingDirectory)\TestResults
+      vsTestVersion: toolsInstaller
 
   - task: PowerShell@2
     displayName: Validate Accessibility Snapshot
