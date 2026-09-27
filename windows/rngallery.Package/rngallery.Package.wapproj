@@ -92,7 +92,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(SolutionDir)\x64\$(Configuration)\Clipboard\Clipboard.dll">
+    <Content Include="$(SolutionDir)\$(Platform)\$(Configuration)\Clipboard\Clipboard.dll">
       <Link>rngallery\Clipboard.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
