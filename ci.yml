@@ -97,10 +97,17 @@ steps:
       TargetFolder: '.\windows\rngallery\'
 
   - task: CmdLine@2
-    displayName: Build project (Release)
+    displayName: Build project (Release x64)
     timeoutInMinutes: 60
     inputs:
       script: npx --no-install react-native run-windows --arch x64 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release --msbuildprops PackageCertificateKeyFile=$(signingCert.secureFilePath) --release
+
+  - task: CmdLine@2
+    displayName: Build project (Release x86 Store package)
+    condition: eq(variables['PUBLISH_APP'], 'true')
+    timeoutInMinutes: 60
+    inputs:
+      script: npx --no-install react-native run-windows --arch x86 --no-deploy --logging --buildLogDirectory $BuildLogDirectory\Release-x86 --msbuildprops PackageCertificateKeyFile=$(signingCert.secureFilePath) --release
 
   - task: CmdLine@2
     displayName: Remove the Pfx
