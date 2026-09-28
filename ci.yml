@@ -60,7 +60,14 @@ steps:
       script: npm install -g yarn
 
   - task: CmdLine@2
-    displayName: yarn
+    displayName: yarn (upgrade matrix)
+    condition: eq(variables['UPGRADE'], 'true')
+    inputs:
+      script: yarn install --no-immutable
+
+  - task: CmdLine@2
+    displayName: yarn (publish candidate)
+    condition: ne(variables['UPGRADE'], 'true')
     inputs:
       script: yarn install --immutable
 
@@ -122,7 +129,7 @@ steps:
     inputs:
       targetType: inline
       script: |
-        Start-Process "shell:AppsFolder\Microsoft.ReactNativeGallery_8wekyb3d8bbwe!App"
+        Start-Process "shell:AppsFolder\Microsoft.ReactNativeGallery-Experimental_8wekyb3d8bbwe!App"
         Start-Sleep -Seconds 10
 
         $process = Get-Process -Name "rngallery" -ErrorAction SilentlyContinue
@@ -141,6 +148,10 @@ steps:
         Copy-Item "windows\AccessibilityUnitTest\AccessibilitySnapshot.json" "$(Build.ArtifactStagingDirectory)\AccessibilitySnapshot.baseline.json"
         Write-Host "Baseline snapshot saved"
 
+  - task: VisualStudioTestPlatformInstaller@1
+    displayName: Install VSTest Platform
+    condition: eq(variables['PUBLISH_APP'], 'true')
+
   - task: VSTest@2
     displayName: Run Accessibility Tests
     condition: eq(variables['PUBLISH_APP'], 'true')
@@ -150,6 +161,7 @@ steps:
         **\bin\Release\AccessibilityUnitTest.dll
       searchFolder: $(System.DefaultWorkingDirectory)\windows\AccessibilityUnitTest
       resultsFolder: $(Build.ArtifactStagingDirectory)\TestResults
+      vsTestVersion: toolsInstaller
 
   - task: PowerShell@2
     displayName: Validate Accessibility Snapshot
@@ -203,7 +215,7 @@ steps:
 
   - task: PublishBuildArtifacts@1
     displayName: Upload App
-    condition: and(succeededOrFailed(), eq(${{ matrix.reactNativeWindowsVersion }}, "current"))
+    condition: and(succeededOrFailed(), eq(variables['PUBLISH_APP'], 'true'))
     inputs:
-      pathtoPublish: .\windows\AppPackages\rngallery
+      pathtoPublish: .\windows\rngallery.Package\AppPackages
       artifactName: 'React Native Gallery - $(Agent.JobName)-$(System.JobAttempt)'
