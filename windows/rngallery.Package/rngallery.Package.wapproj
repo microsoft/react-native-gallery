@@ -7,6 +7,8 @@
     <EntryPointProjectUniqueName>..\rngallery\rngallery.vcxproj</EntryPointProjectUniqueName>
     <DebuggerType>NativeOnly</DebuggerType>
     <BackgroundTaskDebugEngines>NativeOnly</BackgroundTaskDebugEngines>
+    <ClipboardOutputPlatform Condition="'$(Platform)' == 'x86'"></ClipboardOutputPlatform>
+    <ClipboardOutputPlatform Condition="'$(Platform)' != 'x86'">$(Platform)\</ClipboardOutputPlatform>
   </PropertyGroup>
   <PropertyGroup Label="ReactNativeWindowsProps">
     <ReactNativeWindowsDir Condition="'$(ReactNativeWindowsDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\react-native-windows\package.json'))\node_modules\react-native-windows\</ReactNativeWindowsDir>
@@ -92,7 +94,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(SolutionDir)\$(Platform)\$(Configuration)\Clipboard\Clipboard.dll">
+    <Content Include="$(SolutionDir)\$(ClipboardOutputPlatform)$(Configuration)\Clipboard\Clipboard.dll">
       <Link>rngallery\Clipboard.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
