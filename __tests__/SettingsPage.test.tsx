@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 import {
   act,
   create,
@@ -41,12 +41,16 @@ test('uses the Settings heading as the page focus target', async () => {
 
   const settingsHeading = tree.root.find(
     (node: ReactTestInstance) =>
-      node.type === Text &&
+      node.type === View &&
       node.props.accessibilityRole === 'header' &&
       node.props.accessibilityLevel === 1,
   );
+  const settingsHeadingText = settingsHeading.findByType(Text);
 
   expect(receivedNavigation).toBe(navigation);
+  expect(settingsHeading.props.accessibilityLabel).toBe('Settings');
   expect(settingsHeading.props.focusable).toBe(true);
   expect(mockPageFocusRef.current).toBe(settingsHeading.instance);
+  expect(settingsHeadingText.props.accessible).toBe(false);
+  expect(settingsHeadingText.props.children).toBe('Settings');
 });
