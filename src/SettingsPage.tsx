@@ -35,9 +35,12 @@ const createStyles = (colors: any) =>
     title: {
       fontWeight: '200',
       fontSize: 26,
+      color: colors.text,
+    },
+    titleFocusTarget: {
+      alignSelf: 'flex-start',
       marginTop: 20,
       marginBottom: 10,
-      color: colors.text,
     },
     scrollView: {
       paddingRight: 20,
@@ -78,14 +81,19 @@ export const SettingsPage: React.FunctionComponent<{navigation?: any}> = ({
   };*/
   return isScreenFocused ? (
     <ScreenWrapper style={styles.container}>
-      <Text
+      <View
         ref={titleRef}
+        accessible={true}
         accessibilityRole="header"
         accessibilityLevel={1}
+        accessibilityLabel="Settings"
         focusable={true}
-        style={styles.title}>
-        Settings
-      </Text>
+        style={styles.titleFocusTarget}
+      >
+        <Text accessible={false} style={styles.title}>
+          Settings
+        </Text>
+      </View>
       <ScrollView style={styles.scrollView}>
         {/* Tracking Issue: #17
         <SettingContainer heading="Theme Mode">
