@@ -60,7 +60,7 @@ test('uses the Settings heading as the page focus target', async () => {
     StyleSheet.flatten(settingsHeading.props.style).outlineWidth,
   ).toBeUndefined();
 
-  await act(async () => {
+  act(() => {
     settingsHeading.props.onFocus();
   });
 
@@ -71,7 +71,7 @@ test('uses the Settings heading as the page focus target', async () => {
     outlineWidth: 2,
   });
 
-  await act(async () => {
+  act(() => {
     settingsHeading.props.onBlur();
   });
 
