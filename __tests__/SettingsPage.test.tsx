@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {
   act,
   create,
@@ -39,18 +39,44 @@ test('uses the Settings heading as the page focus target', async () => {
     tree = create(<SettingsPage navigation={navigation} />);
   });
 
-  const settingsHeading = tree.root.find(
-    (node: ReactTestInstance) =>
-      node.type === View &&
-      node.props.accessibilityRole === 'header' &&
-      node.props.accessibilityLevel === 1,
-  );
+  const findSettingsHeading = () =>
+    tree.root.find(
+      (node: ReactTestInstance) =>
+        node.type === View &&
+        node.props.accessibilityRole === 'header' &&
+        node.props.accessibilityLevel === 1,
+    );
+  let settingsHeading = findSettingsHeading();
   const settingsHeadingText = settingsHeading.findByType(Text);
 
   expect(receivedNavigation).toBe(navigation);
   expect(settingsHeading.props.accessibilityLabel).toBe('Settings');
   expect(settingsHeading.props.focusable).toBe(true);
+  expect(settingsHeading.props.enableFocusRing).toBe(false);
   expect(mockPageFocusRef.current).toBe(settingsHeading.instance);
   expect(settingsHeadingText.props.accessible).toBe(false);
   expect(settingsHeadingText.props.children).toBe('Settings');
+  expect(
+    StyleSheet.flatten(settingsHeading.props.style).outlineWidth,
+  ).toBeUndefined();
+
+  act(() => {
+    settingsHeading.props.onFocus();
+  });
+
+  settingsHeading = findSettingsHeading();
+  expect(StyleSheet.flatten(settingsHeading.props.style)).toMatchObject({
+    outlineOffset: 2,
+    outlineStyle: 'solid',
+    outlineWidth: 2,
+  });
+
+  act(() => {
+    settingsHeading.props.onBlur();
+  });
+
+  settingsHeading = findSettingsHeading();
+  expect(
+    StyleSheet.flatten(settingsHeading.props.style).outlineWidth,
+  ).toBeUndefined();
 });
