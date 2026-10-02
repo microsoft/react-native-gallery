@@ -1,5 +1,5 @@
 'use strict';
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {PlatformColor, StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 //import {ThemeMode, RawThemeContext, ThemeSetterContext} from './themes/Theme';
 //import {Picker} from '@react-native-picker/picker';
@@ -42,6 +42,12 @@ const createStyles = (colors: any) =>
       marginTop: 20,
       marginBottom: 10,
     },
+    titleFocusTargetFocused: {
+      outlineColor: PlatformColor('FocusVisualPrimary'),
+      outlineOffset: 2,
+      outlineStyle: 'solid',
+      outlineWidth: 2,
+    },
     scrollView: {
       paddingRight: 20,
     },
@@ -75,6 +81,7 @@ export const SettingsPage: React.FunctionComponent<{navigation?: any}> = ({
   const styles = createStyles(colors);
   const isScreenFocused = useIsFocused();
   const titleRef = usePageFocusManagement(navigation);
+  const [isTitleFocused, setIsTitleFocused] = React.useState(false);
   /*const PickerValueChanged = (value: ThemeMode) => {
     console.log('Setting theme to: ' + value);
     setTheme(value);
@@ -88,7 +95,13 @@ export const SettingsPage: React.FunctionComponent<{navigation?: any}> = ({
         accessibilityLevel={1}
         accessibilityLabel="Settings"
         focusable={true}
-        style={styles.titleFocusTarget}
+        enableFocusRing={false}
+        onFocus={() => setIsTitleFocused(true)}
+        onBlur={() => setIsTitleFocused(false)}
+        style={[
+          styles.titleFocusTarget,
+          isTitleFocused && styles.titleFocusTargetFocused,
+        ]}
       >
         <Text accessible={false} style={styles.title}>
           Settings
