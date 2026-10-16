@@ -1,6 +1,18 @@
+trigger: none
+
 pr:
   - main
   - 'v*'
+
+# Monthly keep-alive run so ADO does not disable the pipeline for inactivity.
+# It is not used for real releases and its time is not significant.
+schedules:
+- cron: '0 9 1 * *'
+  displayName: Monthly keep-alive
+  branches:
+    include:
+    - main
+  always: true
 
 variables:
   BuildLogDirectory: $(Build.BinariesDirectory)\x64\BuildLogs
