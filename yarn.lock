@@ -4694,15 +4694,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-windows/cli@npm:0.85.0-preview.2":
-  version: 0.85.0-preview.2
-  resolution: "@react-native-windows/cli@npm:0.85.0-preview.2::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Fcli%2F-%2Fcli-0.85.0-preview.2.tgz"
+"@react-native-windows/cli@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/cli@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Fcli%2F-%2Fcli-0.85.0.tgz"
   dependencies:
-    "@react-native-windows/codegen": "npm:0.85.0-preview.1"
-    "@react-native-windows/find-dotnet-tools": "npm:0.85.0-preview.1"
-    "@react-native-windows/fs": "npm:0.85.0-preview.1"
-    "@react-native-windows/package-utils": "npm:0.85.0-preview.1"
-    "@react-native-windows/telemetry": "npm:0.85.0-preview.1"
+    "@react-native-windows/codegen": "npm:0.85.0"
+    "@react-native-windows/find-dotnet-tools": "npm:0.85.0"
+    "@react-native-windows/fs": "npm:0.85.0"
+    "@react-native-windows/package-utils": "npm:0.85.0"
+    "@react-native-windows/telemetry": "npm:0.85.0"
     "@xmldom/xmldom": "npm:^0.8.13"
     chalk: "npm:^4.1.0"
     cli-spinners: "npm:^2.2.0"
@@ -4722,15 +4722,15 @@ __metadata:
     xpath: "npm:^0.0.27"
   peerDependencies:
     react-native: "*"
-  checksum: 10c0/657f9a026337a57ecbe8a4535776bb8a1c80d9f8a0b7e922469fc8b00341de3d29562b48c3dab296f11bdae8b2b360e92d036b1d225a81e278a3c90a7b38bf6b
+  checksum: 10c0/b2223d990b8ec9c2d7e81489c04d8af2c9f65089a4b312085b18afeea1611de1ccedb3abfd0618e45c577e006a75e72190c858bd7caf33d34e6c553c45035ee5
   languageName: node
   linkType: hard
 
-"@react-native-windows/codegen@npm:0.85.0-preview.1":
-  version: 0.85.0-preview.1
-  resolution: "@react-native-windows/codegen@npm:0.85.0-preview.1::__archiveUrl=https%3A%2F%2Fms-feed-17.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Fcodegen%2F-%2Fcodegen-0.85.0-preview.1.tgz"
+"@react-native-windows/codegen@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/codegen@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Fcodegen%2F-%2Fcodegen-0.85.0.tgz"
   dependencies:
-    "@react-native-windows/fs": "npm:0.85.0-preview.1"
+    "@react-native-windows/fs": "npm:0.85.0"
     chalk: "npm:^4.1.0"
     globby: "npm:^11.1.0"
     minimatch: "npm:^10.0.3"
@@ -4741,60 +4741,60 @@ __metadata:
     react-native: "*"
   bin:
     react-native-windows-codegen: bin.js
-  checksum: 10c0/15128e58fe224cdd912ca2956c504d1cdd06955804b19cbc1e9f570b53d7d10916efbcf75d4a44facac4925108e951cfbfeb36f4f78306f956e1f94a9fd994b5
+  checksum: 10c0/7b4dfe585e88046329171929615154506c81aeeb9b96900aecb792aae7f6fc9c0cbf7c25d0adc6871da3204c51e7d54561714daa0bd7bcc19c284d5ce1482d02
   languageName: node
   linkType: hard
 
-"@react-native-windows/find-dotnet-tools@npm:0.85.0-preview.1":
-  version: 0.85.0-preview.1
-  resolution: "@react-native-windows/find-dotnet-tools@npm:0.85.0-preview.1::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ffind-dotnet-tools%2F-%2Ffind-dotnet-tools-0.85.0-preview.1.tgz"
+"@react-native-windows/find-dotnet-tools@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/find-dotnet-tools@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ffind-dotnet-tools%2F-%2Ffind-dotnet-tools-0.85.0.tgz"
   dependencies:
-    "@react-native-windows/fs": "npm:0.85.0-preview.1"
-  checksum: 10c0/da077b1fea115d4be7de30905a87c83e4db2224873d28c8a417813d6b320205cce075f2b9e72623c5baba75bbcc98b375b9256da23691fa54c02f4caa5d89d27
+    "@react-native-windows/fs": "npm:0.85.0"
+  checksum: 10c0/eaa086d5e04e65f39ab74a2177c92d8b263f00ba4668ebf32476ea1ac1f42e7315a295613ab8ba552f4b38dc55fc00ff072ffda8382a8d84c97f1d323cdf9a03
   languageName: node
   linkType: hard
 
-"@react-native-windows/find-repo-root@npm:0.85.0-preview.1":
-  version: 0.85.0-preview.1
-  resolution: "@react-native-windows/find-repo-root@npm:0.85.0-preview.1::__archiveUrl=https%3A%2F%2Fms-feed-2.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ffind-repo-root%2F-%2Ffind-repo-root-0.85.0-preview.1.tgz"
+"@react-native-windows/find-repo-root@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/find-repo-root@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ffind-repo-root%2F-%2Ffind-repo-root-0.85.0.tgz"
   dependencies:
-    "@react-native-windows/fs": "npm:0.85.0-preview.1"
+    "@react-native-windows/fs": "npm:0.85.0"
     find-up: "npm:^4.1.0"
     minimatch: "npm:^10.0.3"
-  checksum: 10c0/d760a80f3b66692f8abfc3891a4871b94cbeaee8869f310dc5a922dc34423bcf04fee4a47e0a72775aacc690659c3d77ca670692ba38db986273ac994fc8f438
+  checksum: 10c0/c45481f82e527b9badb1406b3d572be8d2908fe61b237a864cf6dade8a607c30244caf1bcfeef1584806681f66370c004f31b53f85bc7217321865154e04a19c
   languageName: node
   linkType: hard
 
-"@react-native-windows/fs@npm:0.85.0-preview.1":
-  version: 0.85.0-preview.1
-  resolution: "@react-native-windows/fs@npm:0.85.0-preview.1::__archiveUrl=https%3A%2F%2Fms-feed-2.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ffs%2F-%2Ffs-0.85.0-preview.1.tgz"
+"@react-native-windows/fs@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/fs@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ffs%2F-%2Ffs-0.85.0.tgz"
   dependencies:
     graceful-fs: "npm:^4.2.8"
     minimatch: "npm:^10.0.3"
-  checksum: 10c0/aee1ee63589b3f8543c3ef4dfc400e26b5da7ee5b9a81f3ffeb5af5564077e11cf6bec30da6f1d665d44fe6af719c258438ed64aa3fa1e05662208eb5a1c8948
+  checksum: 10c0/52b5ec64bdc70c586a40b069efd998622f21021d36008e0d795bb1799db2c1853bb08f2e09ce4bda9c7f4dd0ed5991af9392be1103bc3f942e242aa71518038e
   languageName: node
   linkType: hard
 
-"@react-native-windows/package-utils@npm:0.85.0-preview.1":
-  version: 0.85.0-preview.1
-  resolution: "@react-native-windows/package-utils@npm:0.85.0-preview.1::__archiveUrl=https%3A%2F%2Fms-feed-17.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Fpackage-utils%2F-%2Fpackage-utils-0.85.0-preview.1.tgz"
+"@react-native-windows/package-utils@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/package-utils@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Fpackage-utils%2F-%2Fpackage-utils-0.85.0.tgz"
   dependencies:
-    "@react-native-windows/find-repo-root": "npm:0.85.0-preview.1"
-    "@react-native-windows/fs": "npm:0.85.0-preview.1"
+    "@react-native-windows/find-repo-root": "npm:0.85.0"
+    "@react-native-windows/fs": "npm:0.85.0"
     get-monorepo-packages: "npm:^1.2.0"
     lodash: "npm:^4.17.15"
     minimatch: "npm:^10.0.3"
-  checksum: 10c0/338461aa8380f134f74c1268bf7fd61ac656b98e71bb069d33eaebbe371fa6adddb38bec450e45be39e0a427cb79ac56b37d65bae1e5693ab720af54ee0423b5
+  checksum: 10c0/59d96fc943b70e12131db692841d17867f0a4db0a2ed2ea767ee18989592e7bc609774c4ad652eba75d84d98a7b775daf257f024d090eb9a82fab13438b815dd
   languageName: node
   linkType: hard
 
-"@react-native-windows/telemetry@npm:0.85.0-preview.1":
-  version: 0.85.0-preview.1
-  resolution: "@react-native-windows/telemetry@npm:0.85.0-preview.1::__archiveUrl=https%3A%2F%2Fms-feed-2.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ftelemetry%2F-%2Ftelemetry-0.85.0-preview.1.tgz"
+"@react-native-windows/telemetry@npm:0.85.0":
+  version: 0.85.0
+  resolution: "@react-native-windows/telemetry@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2F%40react-native-windows%2Ftelemetry%2F-%2Ftelemetry-0.85.0.tgz"
   dependencies:
     "@microsoft/1ds-core-js": "npm:^4.3.0"
     "@microsoft/1ds-post-js": "npm:^4.3.0"
-    "@react-native-windows/fs": "npm:0.85.0-preview.1"
+    "@react-native-windows/fs": "npm:0.85.0"
     "@xmldom/xmldom": "npm:^0.8.13"
     ci-info: "npm:^3.2.0"
     envinfo: "npm:^7.8.1"
@@ -4802,7 +4802,7 @@ __metadata:
     minimatch: "npm:^10.0.3"
     os-locale: "npm:^5.0.0"
     xpath: "npm:^0.0.27"
-  checksum: 10c0/d523fed9fd70ef0eb2968ce1bda7cae62c1b9e4d383ffbbe9ff8fe41518f535509e1858ec12fe828b679ec2e4b283c5c6c56da5c50c1f6b0229720577fda10fa
+  checksum: 10c0/85c1d0b8907f5b02d4f1c8a1223ac9a22b28bfd46a4660db82b415d3cf2a794610f5d0dbd3be769455dc8db6cb9faa6d76550d8badf090f97c3d8b6834d8bd30
   languageName: node
   linkType: hard
 
@@ -11933,16 +11933,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-windows@npm:0.85.0-preview.2":
-  version: 0.85.0-preview.2
-  resolution: "react-native-windows@npm:0.85.0-preview.2::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2Freact-native-windows%2F-%2Freact-native-windows-0.85.0-preview.2.tgz"
+"react-native-windows@npm:0.85.0":
+  version: 0.85.0
+  resolution: "react-native-windows@npm:0.85.0::__archiveUrl=https%3A%2F%2Fms-feed-25.pkgs.visualstudio.com%2F1es-public%2F_packaging%2Fnpm-public%2Fnpm%2Fregistry%2Freact-native-windows%2F-%2Freact-native-windows-0.85.0.tgz"
   dependencies:
     "@babel/runtime": "npm:^7.0.0"
     "@jest/create-cache-key-function": "npm:^29.7.0"
     "@react-native-community/cli": "npm:20.0.0"
     "@react-native-community/cli-platform-android": "npm:20.0.0"
     "@react-native-community/cli-platform-ios": "npm:20.0.0"
-    "@react-native-windows/cli": "npm:0.85.0-preview.2"
+    "@react-native-windows/cli": "npm:0.85.0"
     "@react-native/assets": "npm:1.0.0"
     "@react-native/assets-registry": "npm:0.85.3"
     "@react-native/codegen": "npm:0.85.3"
@@ -11990,7 +11990,7 @@ __metadata:
     "@types/react": ^19.1.1
     react: ^19.2.3
     react-native: ^0.85.0
-  checksum: 10c0/ae2ef1dcbe7c423002736453db9e9aa00bcc4444c547d230202b3a65c18232b6aa9225f32af8f2e410ff79d6b429713ecd46a1df5fbd1a9e647bf4b5b1d2e06f
+  checksum: 10c0/623282fbeb4bf8e8604b35f7c5006fa1c4adc7e06d086bbe199344bb847c1a2b56850483c4d6c47f250bd59901baa5bc3c8bf99f7bf1e85a7fe9f19574a01686
   languageName: node
   linkType: hard
 
@@ -12439,7 +12439,7 @@ __metadata:
     prettier: "npm:2.8.8"
     react: "npm:19.2.3"
     react-native: "npm:0.85.3"
-    react-native-windows: "npm:0.85.0-preview.2"
+    react-native-windows: "npm:0.85.0"
     react-test-renderer: "npm:19.2.3"
     typescript: "npm:5.0.4"
   languageName: unknown
