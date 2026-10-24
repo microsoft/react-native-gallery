@@ -4,23 +4,23 @@ import React, {useState, useEffect} from 'react';
 import {Example} from '../components/Example';
 import {Page} from '../components/Page';
 
-type Movie = {
+type transaction = {
   id: string;
-  title: string;
-  releaseYear: string;
+  agent: string;
+  montant: string; commission: string;
 };
 
-const FetchMovieExample = () => {
+const FetchtransactionExample = () => {
   const [isLoading, setLoading] = useState(true);
   const [responseText, setResponseText] = useState('');
-  const [data, setData] = useState<Movie[]>([]);
+  const [data, setData] = useState<any[]>([]);
 
-  const getMovies = async () => {
+  const gettransactions = async () => {
     try {
-      const response = await fetch('https://reactnative.dev/movies.json');
+      const response = await fetch('http://172.20.10.2:8000/transactions');
       const json = await response.json();
       setResponseText(JSON.stringify(json));
-      setData(json.movies);
+      setData(json);
     } catch (error) {
       console.error(error);
     } finally {
@@ -29,7 +29,7 @@ const FetchMovieExample = () => {
   };
 
   useEffect(() => {
-    getMovies();
+    gettransactions();
   }, []);
 
   return (
@@ -44,7 +44,7 @@ const FetchMovieExample = () => {
           <Text style={{fontWeight: 'bold'}}>Formatted</Text>
           {data.map((item) => (
             <Text key={item.id}>
-              {item.title}, {item.releaseYear}
+              {item.agent} - {item.montant} FC (Com: {item.commission})
             </Text>
           ))}
         </View>
