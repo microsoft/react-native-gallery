@@ -12,6 +12,24 @@ If you wish to build React Native Gallery on your computer locally, follow the f
 2. In the root directory of the repository on your device, run `yarn`.
 3. In the same directory run `npx react-native run-windows`.
 
+## Dependency updates
+
+Dependabot resolves update metadata through the anonymous, approved
+[PackageFeedProxy](https://packagefeedproxy.microsoft.io/npm/). Its registry and
+download-host settings are configured in
+[.github/dependabot.yml](./.github/dependabot.yml). This configuration is scoped to
+Dependabot; normal Yarn installs and builds keep their existing registry settings.
+
+The proxy returns package archives hosted on separate `ms-feed-*.pkgs.visualstudio.com`
+feeds, including URLs already recorded in the lockfile. Dependabot must declare
+and reference each required download registry, even though it allows anonymous
+access, or its network policy blocks the download.
+
+The proxy's package-availability delay still applies to dependency updates.
+Versions that are not available must be supplied through the approved feed process
+or become eligible before Dependabot can select them. No dependency versions or
+application build settings are changed by this configuration.
+
 # Contributing
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a

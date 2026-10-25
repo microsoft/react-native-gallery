@@ -1,7 +1,32 @@
 version: 2
+registries:
+  package-feed-proxy:
+    type: npm-registry
+    url: https://packagefeedproxy.microsoft.io/npm/
+    replaces-base: true
+  # Proxy tarballs and existing lockfile entries use these separate download hosts.
+  # Declaring and referencing each registry also allows Dependabot's network access.
+  npm-public-2:
+    type: npm-registry
+    url: https://ms-feed-2.pkgs.visualstudio.com/1es-public/_packaging/npm-public/npm/registry/
+  npm-public-12:
+    type: npm-registry
+    url: https://ms-feed-12.pkgs.visualstudio.com/1es-public/_packaging/npm-public/npm/registry/
+  npm-public-17:
+    type: npm-registry
+    url: https://ms-feed-17.pkgs.visualstudio.com/1es-public/_packaging/npm-public/npm/registry/
+  npm-public-25:
+    type: npm-registry
+    url: https://ms-feed-25.pkgs.visualstudio.com/1es-public/_packaging/npm-public/npm/registry/
 updates:
 - package-ecosystem: npm
   directory: "/"
+  registries:
+    - package-feed-proxy
+    - npm-public-2
+    - npm-public-12
+    - npm-public-17
+    - npm-public-25
   # No target-branch: when it is set, the options below stop applying to
   # security updates, and those open one PR per package.
   cooldown:
