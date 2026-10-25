@@ -14,21 +14,21 @@ If you wish to build React Native Gallery on your computer locally, follow the f
 
 ## Dependency updates
 
-Yarn and Dependabot resolve npm packages through the anonymous, approved
-[PackageFeedProxy](https://packagefeedproxy.microsoft.io/npm/). The registry is
-configured in [.yarnrc.yml](./.yarnrc.yml) and
-[.github/dependabot.yml](./.github/dependabot.yml); public npm feeds are not a
-fallback.
+Dependabot resolves update metadata through the anonymous, approved
+[PackageFeedProxy](https://packagefeedproxy.microsoft.io/npm/). Its registry and
+download-host settings are configured in
+[.github/dependabot.yml](./.github/dependabot.yml). This configuration is scoped to
+Dependabot; normal Yarn installs and builds keep their existing registry settings.
 
 The proxy returns package archives hosted on separate `ms-feed-*.pkgs.visualstudio.com`
 feeds, including URLs already recorded in the lockfile. Dependabot must declare
 and reference each required download registry, even though it allows anonymous
 access, or its network policy blocks the download.
 
-Feed configuration does not bypass the proxy's package-availability delay. If a
-locked version is not available, it must be populated through the approved feed
-process or become available before the restore or update can succeed. Do not
-work around missing versions by adding a public npm fallback.
+The proxy's package-availability delay still applies to dependency updates.
+Versions that are not available must be supplied through the approved feed process
+or become eligible before Dependabot can select them. No dependency versions or
+application build settings are changed by this configuration.
 
 # Contributing
 
